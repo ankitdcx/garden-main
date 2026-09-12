@@ -1,0 +1,18 @@
+{
+  "profile": "GSL-SEED-JSON-0.1",
+  "nodes": [
+    {"id":"CTX1","kind":"CONTEXT","fields":{"domain":{"type":"String","value":"Garden bootstrap"}}},
+    {"id":"OBS1","kind":"EVENT","fields":{"description":{"type":"String","value":"reference test executed"}}}
+  ],
+  "claims": [
+    {"id":"CL1","proposition":"The seed parser preserves explicit claim status","status":"HYPOTHESIS","context_ref":"CTX1","evidence_refs":["OBS1"],"scope":"WP-001"}
+  ],
+  "dependencies": [],
+  "obligations": [
+    {"id":"OB1","proposition":"Unsupported semantic profiles fail closed","owner":"Engine.Compile","status":"PENDING","dependency_refs":[]}
+  ],
+  "tests": [
+    {"id":"TEST1","obligation_ref":"OB1","description":"parse unsupported profile","expected":"GSLSeedError"}
+  ],
+  "receipts": []
+}

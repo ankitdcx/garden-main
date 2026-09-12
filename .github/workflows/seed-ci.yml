@@ -14,8 +14,7 @@ jobs:
         run: python scripts/validate_work_packages.py
       - name: Run SCEP reference tests
         run: |
-          if [ -d bootstrap/scep_v1_1/tests ]; then
-            PYTHONPATH=bootstrap/scep_v1_1 python -m unittest discover -s bootstrap/scep_v1_1/tests -v
-          else
-            echo "SCEP tests not present"
-          fi
+          PYTHONPATH=bootstrap/scep_v1_1 python -m unittest discover -s bootstrap/scep_v1_1/tests -v
+      - name: Run WP-001 GSL seed tests
+        run: |
+          PYTHONPATH=src python -m unittest discover -s tests -v
