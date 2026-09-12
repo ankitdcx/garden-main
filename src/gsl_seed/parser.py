@@ -140,6 +140,7 @@ def validate_document(doc: Document) -> None:
             raise GSLSeedError("self-dependency only allowed for explicit RUNTIME feedback")
 
     _validate_build_dag(doc.dependencies)
+    _validate_feedback_cycles(doc.dependencies)
 
     obligation_ids = {o.id for o in doc.obligations}
     for t in doc.tests:
@@ -168,3 +169,72 @@ def _validate_build_dag(deps):
         visiting.remove(n); done.add(n)
     for n in graph:
         dfs(n)
+
+def _validate_feedback_cycles(deps):
+    # LOGICAL cycles are rejected. SEMANTIC/RUNTIME cycles are allowed only
+    # when every internal cycle edge declares the same non-empty feedback_group.
+    nonbuild = [d for d in deps if d.kind is not DependencyKind.BUILD]
+
+    logical = [d for d in nonbuild if d.kind is DependencyKind.LOGICAL]
+    if logical:
+        graph = {}
+        for d in logical:
+            graph.setdefault(d.source_ref, set()).add(d.target_ref)
+            graph.setdefault(d.target_ref, set())
+        visiting, done = set(), set()
+        def dfs(n):
+            if n in visiting:
+                raise GSLSeedError("LOGICAL dependency cycle")
+            if n in done:
+                return
+            visiting.add(n)
+            for m in graph.get(n, ()):
+                dfs(m)
+            visiting.remove(n); done.add(n)
+        for n in graph:
+            dfs(n)
+
+    feedback_edges = [d for d in nonbuild if d.kind in {DependencyKind.SEMANTIC, DependencyKind.RUNTIME}]
+    graph = {}
+    for d in feedback_edges:
+        graph.setdefault(d.source_ref, set()).add(d.target_ref)
+        graph.setdefault(d.target_ref, set())
+
+    index = 0
+    stack = []
+    on_stack = set()
+    indices = {}
+    low = {}
+    sccs = []
+
+    def strongconnect(v):
+        nonlocal index
+        indices[v] = index
+        low[v] = index
+        index += 1
+        stack.append(v); on_stack.add(v)
+        for w in graph.get(v, ()):
+            if w not in indices:
+                strongconnect(w); low[v] = min(low[v], low[w])
+            elif w in on_stack:
+                low[v] = min(low[v], indices[w])
+        if low[v] == indices[v]:
+            comp = set()
+            while True:
+                w = stack.pop(); on_stack.remove(w); comp.add(w)
+                if w == v:
+                    break
+            sccs.append(comp)
+
+    for v in graph:
+        if v not in indices:
+            strongconnect(v)
+
+    for comp in sccs:
+        internal = [d for d in feedback_edges if d.source_ref in comp and d.target_ref in comp]
+        is_cycle = len(comp) > 1 or any(d.source_ref == d.target_ref for d in internal)
+        if not is_cycle:
+            continue
+        groups = {d.feedback_group for d in internal}
+        if None in groups or "" in groups or len(groups) != 1:
+            raise GSLSeedError("SEMANTIC/RUNTIME dependency cycle requires one shared non-empty feedback_group")

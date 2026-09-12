@@ -1,8 +1,28 @@
 import unittest
-from gsl_seed import PROFILE, CoreObject, ClaimStatus, DependencyKind, GSLSeedError, parse_obj, TransitionEvidence, transition_claim, EpistemicTransitionError
+from gsl_seed import (
+    PROFILE, CoreObject, ClaimStatus, DependencyKind, GSLSeedError,
+    parse_obj, TransitionEvidence, transition_claim, EpistemicTransitionError
+)
 
 def base():
-    return {"profile":PROFILE,"nodes":[{"id":"CTX1","kind":"CONTEXT","fields":{"domain":{"type":"String","value":"bootstrap"}}},{"id":"EV1","kind":"EVENT","fields":{"description":{"type":"String","value":"observed fixture"}}}],"claims":[{"id":"C1","proposition":"Parser preserves claim status","status":"HYPOTHESIS","context_ref":"CTX1","evidence_refs":["EV1"],"scope":"seed"}],"dependencies":[],"obligations":[{"id":"O1","proposition":"Preserve status","owner":"Engine.Compile","status":"PENDING","dependency_refs":[]}],"tests":[{"id":"T1","obligation_ref":"O1","description":"round trip","expected":"status unchanged"}],"receipts":[]}
+    return {
+        "profile": PROFILE,
+        "nodes": [
+            {"id":"CTX1","kind":"CONTEXT","fields":{"domain":{"type":"String","value":"bootstrap"}}},
+            {"id":"EV1","kind":"EVENT","fields":{"description":{"type":"String","value":"observed fixture"}}}
+        ],
+        "claims": [
+            {"id":"C1","proposition":"Parser preserves claim status","status":"HYPOTHESIS","context_ref":"CTX1","evidence_refs":["EV1"],"scope":"seed"}
+        ],
+        "dependencies": [],
+        "obligations": [
+            {"id":"O1","proposition":"Preserve status","owner":"Engine.Compile","status":"PENDING","dependency_refs":[]}
+        ],
+        "tests": [
+            {"id":"T1","obligation_ref":"O1","description":"round trip","expected":"status unchanged"}
+        ],
+        "receipts": []
+    }
 
 class SeedKernelTests(unittest.TestCase):
     def test_ten_core_objects_exact(self):
@@ -48,5 +68,17 @@ class SeedKernelTests(unittest.TestCase):
     def test_direct_hypothesis_to_qualified_knowledge_rejected(self):
         claim=parse_obj(base()).claims[0]
         with self.assertRaises(EpistemicTransitionError): transition_claim(claim,ClaimStatus.QUALIFIED_KNOWLEDGE,TransitionEvidence("EMPIRICAL",("EV1",),"seed"))
+    def test_runtime_two_node_cycle_requires_feedback_group(self):
+        x=base(); x["obligations"].append({"id":"O2","proposition":"x","owner":"Engine.Reason","status":"PENDING","dependency_refs":[]}); x["dependencies"]=[{"source_ref":"O1","target_ref":"O2","kind":"RUNTIME"},{"source_ref":"O2","target_ref":"O1","kind":"RUNTIME"}]
+        with self.assertRaises(GSLSeedError): parse_obj(x)
+    def test_runtime_two_node_cycle_with_shared_feedback_group_allowed(self):
+        x=base(); x["obligations"].append({"id":"O2","proposition":"x","owner":"Engine.Reason","status":"PENDING","dependency_refs":[]}); x["dependencies"]=[{"source_ref":"O1","target_ref":"O2","kind":"RUNTIME","feedback_group":"FG1"},{"source_ref":"O2","target_ref":"O1","kind":"RUNTIME","feedback_group":"FG1"}]
+        self.assertEqual(len(parse_obj(x).dependencies),2)
+    def test_runtime_cycle_mismatched_feedback_groups_fails(self):
+        x=base(); x["obligations"].append({"id":"O2","proposition":"x","owner":"Engine.Reason","status":"PENDING","dependency_refs":[]}); x["dependencies"]=[{"source_ref":"O1","target_ref":"O2","kind":"RUNTIME","feedback_group":"FG1"},{"source_ref":"O2","target_ref":"O1","kind":"RUNTIME","feedback_group":"FG2"}]
+        with self.assertRaises(GSLSeedError): parse_obj(x)
+    def test_logical_cycle_fails(self):
+        x=base(); x["obligations"].append({"id":"O2","proposition":"x","owner":"Engine.Reason","status":"PENDING","dependency_refs":[]}); x["dependencies"]=[{"source_ref":"O1","target_ref":"O2","kind":"LOGICAL"},{"source_ref":"O2","target_ref":"O1","kind":"LOGICAL"}]
+        with self.assertRaises(GSLSeedError): parse_obj(x)
 
 if __name__=="__main__": unittest.main()
