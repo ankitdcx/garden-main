@@ -1,0 +1,14 @@
+{
+  "base": "Garden v15.2",
+  "merge": "SCEP v1.1",
+  "date": "2026-09-12",
+  "files": {
+    "User": {"name":"Garden_User_v15.2_SCEP1.1_MERGED_CANDIDATE_2026-09-12.txt","bytes":95276,"sha256":"78711b4a805a766cc5492e17384d1f4d78532072c5ceee034cfc26c5842f28b7","base_sha256":"c01c56767c214ced6391b4fe9691e164b63a095c2944ff1b86659a4155ebfd78"},
+    "System": {"name":"Garden_System_v15.2_SCEP1.1_MERGED_CANDIDATE_2026-09-12.txt","bytes":203247,"sha256":"12ed62b8b4f7c0069d143587e723e11051e8b5a4a49b828573e9b65bf77ce657","base_sha256":"145a8d041a5d0ed39a364c8a9a8c9c0f9c5ca54d69772ae9485db67e1ffb4982"},
+    "Technical": {"name":"Garden_Technical_v15.2_SCEP1.1_MERGED_CANDIDATE_2026-09-12.txt","bytes":716816,"sha256":"d443bcf767366e0255e19fec5ce4d5676673e2cd591bb71d47be9e6fba46213a","base_sha256":"c6e0e7f3f77bf447b97c728daab7975c3e42a350417b07166ca58e53f92b7870"},
+    "Theories": {"name":"Garden_Theories_v15.2_SCEP1.1_MERGED_CANDIDATE_2026-09-12.txt","bytes":138400,"sha256":"fb30b6dbf0ef7bdc73118bc8bb5e98ff1ceae6292ac8e6fd69cd1d055a33a476","base_sha256":"75f5f8c7214cfb1af04e13cd7812ac7e89a42262d7ff6631a2ec451a70c7d939"},
+    "Annexure": {"name":"Garden_Annexure_v15.2_SCEP1.1_MERGED_CANDIDATE_2026-09-12.txt","bytes":630509,"sha256":"da0593592fb53db61279426f1324ba0e9d81974f6baef28c85ef89d0ca204d09","base_sha256":"7354e719d40c3da9391ecca8d0d595abd3a67d2662393d0d219c9506bd6bc56e"}
+  },
+  "no_loss":{"User":true,"System":true,"Technical":true,"Theories":true,"Annexure":true},
+  "all_static_checks_pass":true
+}
