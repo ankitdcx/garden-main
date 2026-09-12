@@ -1,0 +1,24 @@
+SCEP v1.1 MERGE REVIEW — other-chat Swarm Genesis v0.1
+
+ACCEPTED/REPAIRED:
+- Genesis trusted root -> accepted with versioned protected evolution.
+- Privilege rings -> accepted.
+- BountyBoard/LineageLedger -> accepted as roles; local-first implementation.
+- Stigmergic self-selection -> accepted under protected scheduler/dedup/budgets.
+- Adversarial rewards -> accepted, targeting sandboxed replicas/candidates.
+- Seed work packages -> accepted after reclassification/repair.
+
+REJECTED AS WRITTEN:
+- Placeholder hashes and hard-coded old tool versions as roots of trust.
+- `execute_hermetic` stub that always returns exit_code 0.
+- Generic verifier exit code treated as correctness/truth.
+- Technical credits converted to voting/authority.
+- Mandatory decentralized/IPFS/Filecoin/CRDT ledger at Stage 0.
+- Universal no-internet rule for agents.
+- Penalty for honest BLOCKED reports.
+- `rustc` compilation as verifier of design correctness.
+- Z3 abstract memory-isolation proof as proof of real process isolation.
+- Invented “~10,000 GapRecords” count before an extractor exists.
+
+CURRENT TOOL NOTE (informational, not trust pins):
+The pasted examples Lean 4.2.0 / Z3 4.12.0 / Rust 1.75.0 should not be retained. At merge time, public project pages showed much newer releases; however SCEP pins exact installed artifacts, not whatever version is newest on the internet.
