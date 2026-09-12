@@ -1,0 +1,14 @@
+{
+  "garden_source": "Garden v15.2 + SCEP v1.1 merged candidate (2026-09-12)",
+  "status": "OPEN",
+  "cmur_roles": ["PROPOSER", "SKEPTIC", "FORMAL", "IMPLEMENTATION", "EVIDENCE"],
+  "automatic_admission": false,
+  "work_package_id": "WP-004",
+  "priority": 4,
+  "title": "Typed verifier bridge",
+  "gap_class": "DESIGN",
+  "dependencies": ["WP-001"],
+  "objective": "Implement a verifier registry/adapter layer that records exactly what each checker establishes and refuses to treat compile success, formal proof, empirical evidence, or security tests as interchangeable.",
+  "required_outputs": ["verifier registry", "artifact/version/hash pinning", "typed PASS/FAIL/UNKNOWN receipts", "protected-verifier ownership boundary", "stale receipt invalidation", "test adapters using local deterministic fixtures", "tests"],
+  "acceptance": "A checker result is scoped to its verifier class and assumptions; unpinned or candidate-owned protected verifiers cannot produce admission receipts."
+}

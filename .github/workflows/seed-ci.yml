@@ -1,0 +1,21 @@
+name: Garden Seed CI
+on:
+  push:
+  pull_request:
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate work packages
+        run: python scripts/validate_work_packages.py
+      - name: Run SCEP reference tests
+        run: |
+          if [ -d bootstrap/scep_v1_1/tests ]; then
+            PYTHONPATH=bootstrap/scep_v1_1 python -m unittest discover -s bootstrap/scep_v1_1/tests -v
+          else
+            echo "SCEP tests not present"
+          fi

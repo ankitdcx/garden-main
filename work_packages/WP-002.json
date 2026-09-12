@@ -1,0 +1,14 @@
+{
+  "garden_source": "Garden v15.2 + SCEP v1.1 merged candidate (2026-09-12)",
+  "status": "OPEN",
+  "cmur_roles": ["PROPOSER", "SKEPTIC", "FORMAL", "IMPLEMENTATION", "EVIDENCE"],
+  "automatic_admission": false,
+  "work_package_id": "WP-002",
+  "priority": 2,
+  "title": "Garden source to OCF obligation extractor",
+  "gap_class": "DESIGN",
+  "dependencies": ["WP-001"],
+  "objective": "Read the five Garden text sources and emit machine-readable obligations, source anchors, owners, dependencies, gap classes, and an explicit unresolved frontier.",
+  "required_outputs": ["source parser/extractor", "ClosureManifest representation", "GapRecord representation", "stable source anchors/hashes", "deduplication rules", "coverage/frontier report", "tests with known source fixtures"],
+  "acceptance": "Extractor never claims full coverage when it cannot parse/classify a material section; omissions are reported as frontier items."
+}

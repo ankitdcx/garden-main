@@ -1,0 +1,13 @@
+{
+  "garden_source": "Garden v15.2 + SCEP v1.1 merged candidate (2026-09-12)",
+  "status": "OPEN",
+  "cmur_roles": ["PROPOSER", "SKEPTIC", "FORMAL", "IMPLEMENTATION", "EVIDENCE"],
+  "automatic_admission": false,
+  "work_package_id": "WP-001",
+  "priority": 1,
+  "title": "Minimal executable GSL semantic kernel",
+  "gap_class": "DESIGN",
+  "objective": "Implement the smallest executable GSL subset needed to represent CLAIM, CONTEXT, typed values, dependencies, obligations, tests, and receipts while preserving epistemic status.",
+  "required_outputs": ["parser or typed AST for the selected minimal subset", "explicit claim-status representation", "context and dependency representation", "unsupported/malformed input behavior", "reference positive/negative corpus", "unit tests"],
+  "acceptance": "Tests demonstrate semantic/status preservation for the declared subset; unsupported semantics fail explicitly; candidate does not self-certify."
+}

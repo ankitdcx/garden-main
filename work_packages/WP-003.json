@@ -1,0 +1,14 @@
+{
+  "garden_source": "Garden v15.2 + SCEP v1.1 merged candidate (2026-09-12)",
+  "status": "OPEN",
+  "cmur_roles": ["PROPOSER", "SKEPTIC", "FORMAL", "IMPLEMENTATION", "EVIDENCE"],
+  "automatic_admission": false,
+  "work_package_id": "WP-003",
+  "priority": 3,
+  "title": "Minimal GSL-KR claim/evidence/dependency store",
+  "gap_class": "DESIGN",
+  "dependencies": ["WP-001"],
+  "objective": "Implement a local persistent store for claims, evidence, epistemic states, dependencies, corrections, counterexamples, and supersession without laundering assertions into truth.",
+  "required_outputs": ["SQLite schema", "claim/evidence APIs", "dependency and revalidation traversal", "correction/supersession records", "negative-result storage", "query frontier behavior", "tests"],
+  "acceptance": "Storage/retrieval/repetition cannot upgrade epistemic status without an explicit admitted evidence transition."
+}
