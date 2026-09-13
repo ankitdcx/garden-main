@@ -1,0 +1,36 @@
+{
+  "schema": "GardenEvolutionProductionAction/v1",
+  "design_epoch": "v15.5",
+  "dependencies": {
+    "canonical_source_root": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598"
+  },
+  "action": {
+    "action_id": "GARDEN-HOURLY-2026-09-13-WP009C-PROPOSE-001",
+    "verb": "PROPOSE",
+    "actor_ref": "agent:garden-integrator-build",
+    "subject_ref": "repo:ankitdcx/garden-main",
+    "input_refs": [
+      "work_packages/WP-009.md#WP-009C",
+      "canonical/current/Garden_System_v15.5_FULL_2026-09-12.txt:FunctionContract",
+      "user:Garden-Integrator-and-Build:FunctionContract-coverage-priority"
+    ],
+    "provenance_refs": [
+      "work_packages/WP-009.md",
+      "canonical/current/Garden_System_v15.5_FULL_2026-09-12.txt",
+      "user:Garden-Integrator-and-Build:repo-wide-GSL-instruction"
+    ],
+    "satisfied_preconditions": [
+      "ACTOR_IDENTIFIED",
+      "SUBJECT_IDENTIFIED",
+      "PROVENANCE_PRESENT",
+      "INPUT_REFS_TYPED"
+    ],
+    "claimed_postconditions": [
+      "CANDIDATE_RECORDED",
+      "NO_AUTHORITY_EXPANSION",
+      "CANONICAL_POINTER_UNCHANGED"
+    ]
+  },
+  "authority_ref": "AUTH-GARDEN-HOURLY-REVIEWER-v15.5",
+  "bound_inputs": []
+}
