@@ -135,6 +135,19 @@
       "effect_semantics": "Pure conformance validation; grants no authority and does not mutate Garden v15.5, ActionGate, policy, proof or evidence state.",
       "proof_obligations": ["undeclared-laws-rejected", "unregistered-operators-rejected", "frontier-not-compliance", "required-algebra-not-hidden", "bridge-conditional", "authorization-not-evaluated-here"],
       "test_refs": ["implementation/tests/test_evolution_algebra.py"]
+    },
+    {
+      "contract_id": "FC-EVOL-AAP-001",
+      "path": "implementation/garden_kernel/evolution_assurance.py",
+      "function": "validate_assurance_selection",
+      "affects": ["ASSURANCE", "CONFORMANCE", "ORCHESTRATION"],
+      "input_semantics": "Action/DesignEpoch/source-root-bound AAP selection receipt plus conservative repository AAP profile over consequence, irreversibility, authority, novelty, uncertainty, sensitivity, dependency impact, disagreement and hard-policy/safety triggers.",
+      "output_semantics": "GardenEvolutionAAPValidationReceipt/v1 with independently derived minimum R/V/S tiers, required module subset and resource-budget disposition.",
+      "error_semantics": "Stale identity, understated tier, omitted required module, self-asserted trust/authorization or unsafe budget degradation raises SemanticError.",
+      "unknown_semantics": "Insufficient assurance budget cannot silently lower a mandatory floor; it must reduce authority, transfer control or escalate.",
+      "effect_semantics": "Pure assurance selection validation; grants no authority, approval, proof, certification or canonical promotion.",
+      "proof_obligations": ["smallest-sufficient-floor-derived", "mandatory-floor-not-lowered-by-budget", "trust-not-minted", "authorization-not-evaluated-here", "epoch-root-bound"],
+      "test_refs": ["implementation/tests/test_evolution_assurance.py"]
     }
   ]
 }
