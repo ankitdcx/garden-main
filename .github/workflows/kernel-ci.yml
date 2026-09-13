@@ -6,12 +6,14 @@ on:
       - 'implementation/**'
       - 'scripts/gate_hourly_evolution.py'
       - 'reviews/evolution/**'
+      - 'governance/**'
       - '.github/workflows/kernel-ci.yml'
   pull_request:
     paths:
       - 'implementation/**'
       - 'scripts/gate_hourly_evolution.py'
       - 'reviews/evolution/**'
+      - 'governance/**'
       - '.github/workflows/kernel-ci.yml'
   workflow_dispatch:
 
@@ -19,7 +21,7 @@ permissions:
   contents: read
 
 jobs:
-  wp-001-007-reference:
+  wp-001-008-reference:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:

@@ -7,14 +7,24 @@ from typing import Any, Mapping
 
 from .core import SemanticError
 from .evolution_actions import Condition, EvolutionAction, EvolutionVerb
-from .evolution_authority import EvolutionAgentRole, make_role_envelope
+from .evolution_authority import (
+    EvolutionAgentRole,
+    EvolutionAuthorityEnvelope,
+    make_role_envelope,
+)
 from .evolution_constitution import GovernanceTier
 from .evolution_epoch import EvolutionArtifactBinding, EvolutionArtifactKind
-from .evolution_gate import EvolutionGateContext, EvolutionGateLog, GateDecision, evaluate_evolution_action
+from .evolution_gate import (
+    EvolutionGateContext,
+    EvolutionGateLog,
+    GateDecision,
+    evaluate_evolution_action,
+)
 
 
 RECEIPT_SCHEMA = "GardenEvolutionProductionGateReceipt/v1"
 REQUEST_SCHEMA = "GardenEvolutionProductionAction/v1"
+AUTHORITY_REGISTRY_SCHEMA = "GardenEvolutionAuthorityRegistry/v1"
 
 
 @dataclass(frozen=True)
@@ -46,6 +56,58 @@ def load_source_identity(path: str | Path) -> CanonicalSourceIdentity:
     return source_identity_from_manifest(manifest)
 
 
+def authority_registry_from_payload(
+    payload: Mapping[str, Any],
+    identity: CanonicalSourceIdentity,
+) -> dict[str, EvolutionAuthorityEnvelope]:
+    if payload.get("schema") != AUTHORITY_REGISTRY_SCHEMA:
+        raise SemanticError("evolution authority registry schema is not recognized")
+    if str(payload.get("design_epoch", "")) != identity.design_epoch:
+        raise SemanticError("evolution authority registry is stale for current DesignEpoch")
+    if str(payload.get("canonical_source_root_sha256", "")) != identity.source_root_sha256:
+        raise SemanticError("evolution authority registry is stale for current source root")
+
+    grants: dict[str, EvolutionAuthorityEnvelope] = {}
+    allowed_fields = {
+        "authority_id",
+        "subject",
+        "role",
+        "granted_by",
+        "resources",
+        "max_delegation_depth",
+    }
+    for raw_value in payload.get("grants") or []:
+        raw = dict(raw_value)
+        extras = set(raw) - allowed_fields
+        if extras:
+            raise SemanticError(
+                "authority registry grant contains unsupported fields: "
+                + ",".join(sorted(extras))
+            )
+        authority_id = str(raw.get("authority_id", "")).strip()
+        if not authority_id or authority_id in grants:
+            raise SemanticError("authority registry ids must be non-empty and unique")
+        envelope = make_role_envelope(
+            subject=str(raw["subject"]),
+            role=EvolutionAgentRole(str(raw["role"])),
+            granted_by=str(raw["granted_by"]),
+            resources=tuple(str(x) for x in raw.get("resources", ())),
+            max_delegation_depth=int(raw.get("max_delegation_depth", 0)),
+        )
+        grants[authority_id] = envelope
+    if not grants:
+        raise SemanticError("evolution authority registry contains no grants")
+    return grants
+
+
+def load_authority_registry(
+    path: str | Path,
+    identity: CanonicalSourceIdentity,
+) -> dict[str, EvolutionAuthorityEnvelope]:
+    payload = json.loads(Path(path).read_text(encoding="utf-8"))
+    return authority_registry_from_payload(payload, identity)
+
+
 def _conditions(values: list[str] | tuple[str, ...]) -> frozenset[Condition]:
     try:
         return frozenset(Condition(value) for value in values)
@@ -66,7 +128,19 @@ def _binding(raw: Mapping[str, Any]) -> EvolutionArtifactBinding:
     )
 
 
-def _receipt(*, request: Mapping[str, Any], identity: CanonicalSourceIdentity, decision: str, reasons: list[str] | tuple[str, ...], action_id: str, verb: str, authority: Mapping[str, Any] | None = None) -> dict[str, Any]:
+def _receipt(
+    *,
+    request: Mapping[str, Any],
+    identity: CanonicalSourceIdentity,
+    decision: str,
+    reasons: list[str] | tuple[str, ...],
+    action_id: str,
+    verb: str,
+    authority_ref: str | None = None,
+    authority: Mapping[str, Any] | None = None,
+    trusted_human_signoff: bool = False,
+    trusted_independent_review: bool = False,
+) -> dict[str, Any]:
     return {
         "schema": RECEIPT_SCHEMA,
         "request_schema": request.get("schema"),
@@ -78,30 +152,62 @@ def _receipt(*, request: Mapping[str, Any], identity: CanonicalSourceIdentity, d
         "current_dependencies": {"canonical_source_root": identity.source_root_sha256},
         "canonical_release": identity.release,
         "gsl": identity.gsl,
+        "authority_ref": authority_ref,
         "authority": dict(authority or {}),
+        "trusted_attestations": {
+            "human_signoff": trusted_human_signoff,
+            "independent_review": trusted_independent_review,
+            "source": "TRUSTED_CALLER_NOT_ACTION_REQUEST",
+        },
+        "governance_classification_boundary": (
+            "Current v1 transport still consumes a declared governance_tier; "
+            "repo-diff-bound constitutional classification remains a required WP-009 hardening."
+        ),
         "canonical_pointer_changed": False,
         "materialization_candidate_only": verb == EvolutionVerb.MATERIALIZE.value,
         "receipt_visibility": "PRESERVE_ALLOW_REJECT_ESCALATE",
     }
 
 
-def evaluate_production_request(request: Mapping[str, Any], identity: CanonicalSourceIdentity) -> dict[str, Any]:
+def evaluate_production_request(
+    request: Mapping[str, Any],
+    identity: CanonicalSourceIdentity,
+    trusted_authorities: Mapping[str, EvolutionAuthorityEnvelope],
+    *,
+    trusted_human_signoff: bool = False,
+    trusted_independent_review: bool = False,
+) -> dict[str, Any]:
     action_raw = dict(request.get("action") or {})
     action_id = str(action_raw.get("action_id", "UNKNOWN"))
     verb_text = str(action_raw.get("verb", "UNKNOWN"))
+    authority_ref = str(request.get("authority_ref", "")).strip() or None
     try:
         if request.get("schema") != REQUEST_SCHEMA:
             raise SemanticError("production request schema is not recognized")
+        forbidden_self_assertions = {
+            key for key in ("authority", "human_signoff", "independent_review")
+            if key in request
+        }
+        if forbidden_self_assertions:
+            raise SemanticError(
+                "production request may not self-assert trusted fields: "
+                + ",".join(sorted(forbidden_self_assertions))
+            )
 
         explicit_epoch = str(request.get("design_epoch", ""))
-        explicit_dependencies = {str(k): str(v) for k, v in dict(request.get("dependencies", {})).items()}
+        explicit_dependencies = {
+            str(k): str(v)
+            for k, v in dict(request.get("dependencies", {})).items()
+        }
         if explicit_epoch != identity.design_epoch:
             raise SemanticError(
                 f"request DesignEpoch is not current: {explicit_epoch!r} != {identity.design_epoch!r}"
             )
         expected_dependencies = {"canonical_source_root": identity.source_root_sha256}
         if explicit_dependencies != expected_dependencies:
-            raise SemanticError("request dependency binding does not equal current canonical source identity")
+            raise SemanticError(
+                "request dependency binding does not equal current canonical source identity"
+            )
 
         verb = EvolutionVerb(verb_text)
         action = EvolutionAction(
@@ -111,41 +217,47 @@ def evaluate_production_request(request: Mapping[str, Any], identity: CanonicalS
             subject_ref=str(action_raw["subject_ref"]),
             input_refs=tuple(str(x) for x in action_raw.get("input_refs", ())),
             provenance_refs=tuple(str(x) for x in action_raw.get("provenance_refs", ())),
-            satisfied_preconditions=_conditions(list(action_raw.get("satisfied_preconditions", ()))),
-            claimed_postconditions=_conditions(list(action_raw.get("claimed_postconditions", ()))),
+            satisfied_preconditions=_conditions(
+                list(action_raw.get("satisfied_preconditions", ()))
+            ),
+            claimed_postconditions=_conditions(
+                list(action_raw.get("claimed_postconditions", ()))
+            ),
         )
 
-        authority_raw = dict(request.get("authority") or {})
-        envelope = make_role_envelope(
-            subject=str(authority_raw["subject"]),
-            role=EvolutionAgentRole(str(authority_raw["role"])),
-            granted_by=str(authority_raw["granted_by"]),
-            resources=tuple(str(x) for x in authority_raw.get("resources", ())),
-            max_delegation_depth=int(authority_raw.get("max_delegation_depth", 0)),
-        )
+        if authority_ref is None:
+            raise SemanticError("authority_ref is required")
+        envelope = trusted_authorities.get(authority_ref)
+        if envelope is None:
+            raise SemanticError("authority_ref does not resolve in the trusted registry")
         if envelope.subject != action.actor_ref:
-            raise SemanticError("authority subject must equal action actor_ref")
+            raise SemanticError("trusted authority subject must equal action actor_ref")
 
-        bound_inputs = tuple(_binding(dict(item)) for item in request.get("bound_inputs", ()))
+        bound_inputs = tuple(
+            _binding(dict(item)) for item in request.get("bound_inputs", ())
+        )
         for binding in bound_inputs:
             if binding.dependencies.get("canonical_source_root") != identity.source_root_sha256:
                 raise SemanticError(
                     f"artifact {binding.artifact_id} is not bound to the current canonical source root"
                 )
 
+        governance_tier = GovernanceTier(str(request["governance_tier"]))
         context = EvolutionGateContext(
             current_design_epoch=identity.design_epoch,
             current_dependencies=expected_dependencies,
             authority_envelopes=(envelope,),
             bound_inputs=bound_inputs,
-            independent_review=bool(request.get("independent_review", False)),
-            human_signoff=bool(request.get("human_signoff", False)),
-            governance_tier=GovernanceTier(str(request.get("governance_tier", "ORDINARY"))),
+            independent_review=trusted_independent_review,
+            human_signoff=trusted_human_signoff,
+            governance_tier=governance_tier,
         )
         gate_log = EvolutionGateLog()
         gate = evaluate_evolution_action(action, context, gate_log)
         if len(gate_log.receipts) != 1 or gate_log.receipts[0] != gate:
-            raise SemanticError("gate decision was not preserved in the append-only receipt log")
+            raise SemanticError(
+                "gate decision was not preserved in the append-only receipt log"
+            )
         return _receipt(
             request=request,
             identity=identity,
@@ -153,6 +265,7 @@ def evaluate_production_request(request: Mapping[str, Any], identity: CanonicalS
             reasons=gate.reasons,
             action_id=gate.action_id,
             verb=gate.verb.value,
+            authority_ref=authority_ref,
             authority={
                 "subject": envelope.subject,
                 "role": envelope.role.value,
@@ -163,6 +276,8 @@ def evaluate_production_request(request: Mapping[str, Any], identity: CanonicalS
                 "can_mint_envelopes": envelope.can_mint_envelopes,
                 "can_promote_canon": envelope.can_promote_canon,
             },
+            trusted_human_signoff=trusted_human_signoff,
+            trusted_independent_review=trusted_independent_review,
         )
     except (KeyError, TypeError, ValueError, SemanticError) as exc:
         return _receipt(
@@ -172,11 +287,15 @@ def evaluate_production_request(request: Mapping[str, Any], identity: CanonicalS
             reasons=(f"TRANSPORT_INVALID:{exc}",),
             action_id=action_id,
             verb=verb_text,
-            authority=dict(request.get("authority") or {}),
+            authority_ref=authority_ref,
+            trusted_human_signoff=trusted_human_signoff,
+            trusted_independent_review=trusted_independent_review,
         )
 
 
 def require_allowed(receipt: Mapping[str, Any]) -> None:
     decision = receipt.get("decision")
     if decision != GateDecision.ALLOW.value:
-        raise SemanticError(f"production evolution transition blocked by ActionGate: {decision}")
+        raise SemanticError(
+            f"production evolution transition blocked by ActionGate: {decision}"
+        )

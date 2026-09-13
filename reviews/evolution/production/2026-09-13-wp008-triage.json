@@ -8,7 +8,7 @@
     "action_id": "GARDEN-HOURLY-2026-09-13-WP008-TRIAGE-001",
     "verb": "TRIAGE",
     "actor_ref": "agent:garden-integrator-build",
-    "subject_ref": "repo:ankitdcx/garden-main:wp-008-evolution-transport",
+    "subject_ref": "repo:ankitdcx/garden-main",
     "input_refs": [
       "reviews/evolution/production/2026-09-13-wp008-propose.json",
       "ci:garden-main:run:34740228574",
@@ -33,17 +33,7 @@
       "CANONICAL_POINTER_UNCHANGED"
     ]
   },
-  "authority": {
-    "subject": "agent:garden-integrator-build",
-    "role": "INTEGRATOR",
-    "granted_by": "human:garden-originator:hourly-production-migration-instruction",
-    "resources": [
-      "repo:ankitdcx/garden-main:wp-008-evolution-transport"
-    ],
-    "max_delegation_depth": 0
-  },
+  "authority_ref": "AUTH-GARDEN-HOURLY-INTEGRATOR-v15.5",
   "bound_inputs": [],
-  "governance_tier": "ORDINARY",
-  "human_signoff": false,
-  "independent_review": false
+  "governance_tier": "ORDINARY"
 }

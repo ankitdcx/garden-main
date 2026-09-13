@@ -1,0 +1,24 @@
+{
+  "schema": "GardenEvolutionAuthorityRegistry/v1",
+  "design_epoch": "v15.5",
+  "canonical_source_root_sha256": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+  "authority_boundary": "Action requests can reference but cannot mint or modify trusted authority. Canonical promotion authority is absent.",
+  "grants": [
+    {
+      "authority_id": "AUTH-GARDEN-HOURLY-REVIEWER-v15.5",
+      "subject": "agent:garden-integrator-build",
+      "role": "REVIEWER",
+      "granted_by": "human:garden-originator:hourly-integration-instruction",
+      "resources": ["repo:ankitdcx/garden-main"],
+      "max_delegation_depth": 0
+    },
+    {
+      "authority_id": "AUTH-GARDEN-HOURLY-INTEGRATOR-v15.5",
+      "subject": "agent:garden-integrator-build",
+      "role": "INTEGRATOR",
+      "granted_by": "human:garden-originator:hourly-integration-instruction",
+      "resources": ["repo:ankitdcx/garden-main"],
+      "max_delegation_depth": 0
+    }
+  ]
+}
