@@ -1,0 +1,39 @@
+{
+  "schema": "GardenEvolutionProductionAction/v1",
+  "design_epoch": "v15.5",
+  "dependencies": {
+    "canonical_source_root": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598"
+  },
+  "action": {
+    "action_id": "GARDEN-HOURLY-2026-09-13-WP009D-PROPOSE-001",
+    "verb": "PROPOSE",
+    "actor_ref": "agent:garden-integrator-build",
+    "subject_ref": "repo:ankitdcx/garden-main",
+    "input_refs": [
+      "work_packages/WP-009.md#WP-009D",
+      "reviews/evolution/reasoning/2026-09-13-wp009d-propose.json",
+      "canonical/current/Garden_User_v15.5_FULL_2026-09-12.txt:SAFE_EVOLUTION_LOOP",
+      "canonical/current/Garden_System_v15.5_FULL_2026-09-12.txt:BIND_EVIDENCE+BIND_PROOF",
+      "garden-swarm:run:34744806704:NO_MODEL_FINDING"
+    ],
+    "provenance_refs": [
+      "user:Garden-Integrator-and-Build:repo-wide-GSL-instruction",
+      "work_packages/WP-009.md#WP-009D",
+      "git:ankitdcx/garden-main@2755c44ae04d6b92d1464310acf6edcf693043de",
+      "ci:garden-main:34743403881:PASS"
+    ],
+    "satisfied_preconditions": [
+      "ACTOR_IDENTIFIED",
+      "SUBJECT_IDENTIFIED",
+      "PROVENANCE_PRESENT",
+      "INPUT_REFS_TYPED"
+    ],
+    "claimed_postconditions": [
+      "CANDIDATE_RECORDED",
+      "NO_AUTHORITY_EXPANSION",
+      "CANONICAL_POINTER_UNCHANGED"
+    ]
+  },
+  "authority_ref": "AUTH-GARDEN-HOURLY-REVIEWER-v15.5",
+  "bound_inputs": []
+}
