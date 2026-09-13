@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 from enum import Enum
 from typing import Mapping
 
@@ -37,7 +37,18 @@ class EvolutionGateReceipt:
     design_epoch: str
 
 
-def evaluate_evolution_action(action: EvolutionAction, context: EvolutionGateContext) -> EvolutionGateReceipt:
+@dataclass
+class EvolutionGateLog:
+    """Append-only reference receipt sink for all evolution gate decisions."""
+
+    receipts: list[EvolutionGateReceipt] = field(default_factory=list)
+
+    def record(self, receipt: EvolutionGateReceipt) -> EvolutionGateReceipt:
+        self.receipts.append(receipt)
+        return receipt
+
+
+def _decide_evolution_action(action: EvolutionAction, context: EvolutionGateContext) -> EvolutionGateReceipt:
     reasons: list[str] = []
 
     try:
@@ -105,3 +116,15 @@ def evaluate_evolution_action(action: EvolutionAction, context: EvolutionGateCon
         action.action_id, action.verb, GateDecision.ALLOW,
         tuple(reasons), context.current_design_epoch,
     )
+
+
+def evaluate_evolution_action(
+    action: EvolutionAction,
+    context: EvolutionGateContext,
+    audit_log: EvolutionGateLog,
+) -> EvolutionGateReceipt:
+    """Evaluate and necessarily record the resulting gate receipt."""
+
+    if audit_log is None:
+        raise SemanticError("evolution gate requires an audit log")
+    return audit_log.record(_decide_evolution_action(action, context))
