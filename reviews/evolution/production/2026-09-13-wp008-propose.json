@@ -32,6 +32,5 @@
     ]
   },
   "authority_ref": "AUTH-GARDEN-HOURLY-REVIEWER-v15.5",
-  "bound_inputs": [],
-  "governance_tier": "ORDINARY"
+  "bound_inputs": []
 }
