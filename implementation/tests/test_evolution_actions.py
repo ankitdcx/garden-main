@@ -8,6 +8,13 @@ from garden_kernel.evolution_actions import (
     EvolutionVerb,
     validate_action_shape,
 )
+from garden_kernel.evolution_epoch import (
+    BindingStatus,
+    EvolutionArtifactBinding,
+    EvolutionArtifactKind,
+    require_current_for_accumulation,
+    validate_evolution_binding,
+)
 
 
 class EvolutionActionContractTests(unittest.TestCase):
@@ -95,6 +102,78 @@ class EvolutionActionContractTests(unittest.TestCase):
                 satisfied_preconditions=contract.preconditions,
                 claimed_postconditions=contract.postconditions,
             )
+
+
+class EvolutionEpochTests(unittest.TestCase):
+    def binding(self, *, artifact_id="F1", kind=EvolutionArtifactKind.FINDING, epoch="v15.5", dep="abc", declare_closure=True):
+        return EvolutionArtifactBinding(
+            artifact_id=artifact_id,
+            kind=kind,
+            design_epoch=epoch,
+            dependencies={"canonical_root": dep},
+            required_dependencies=frozenset({"canonical_root"}) if declare_closure else None,
+            derived_from_refs=("source:review",),
+        )
+
+    def test_current_binding_passes(self):
+        result = validate_evolution_binding(
+            self.binding(),
+            current_design_epoch="v15.5",
+            current_dependencies={"canonical_root": "abc"},
+        )
+        self.assertEqual(result.status, BindingStatus.CURRENT)
+
+    def test_epoch_change_marks_finding_stale(self):
+        result = validate_evolution_binding(
+            self.binding(epoch="v15.5"),
+            current_design_epoch="v15.6",
+            current_dependencies={"canonical_root": "abc"},
+        )
+        self.assertEqual(result.status, BindingStatus.STALE)
+
+    def test_dependency_change_marks_test_stale(self):
+        result = validate_evolution_binding(
+            self.binding(artifact_id="T1", kind=EvolutionArtifactKind.TEST, dep="old"),
+            current_design_epoch="v15.5",
+            current_dependencies={"canonical_root": "new"},
+        )
+        self.assertEqual(result.status, BindingStatus.STALE)
+
+    def test_undeclared_closure_is_unknown(self):
+        result = validate_evolution_binding(
+            self.binding(declare_closure=False),
+            current_design_epoch="v15.5",
+            current_dependencies={"canonical_root": "abc"},
+        )
+        self.assertEqual(result.status, BindingStatus.UNKNOWN)
+
+    def test_stale_or_unknown_artifact_cannot_accumulate(self):
+        for binding, epoch, deps in (
+            (self.binding(epoch="v15.5"), "v15.6", {"canonical_root": "abc"}),
+            (self.binding(declare_closure=False), "v15.5", {"canonical_root": "abc"}),
+        ):
+            with self.subTest(binding=binding.artifact_id, epoch=epoch):
+                with self.assertRaises(SemanticError):
+                    require_current_for_accumulation(
+                        (binding,),
+                        current_design_epoch=epoch,
+                        current_dependencies=deps,
+                    )
+
+    def test_rederived_current_artifact_can_accumulate(self):
+        rederived = EvolutionArtifactBinding(
+            artifact_id="F1-R1",
+            kind=EvolutionArtifactKind.FINDING,
+            design_epoch="v15.6",
+            dependencies={"canonical_root": "new"},
+            required_dependencies=frozenset({"canonical_root"}),
+            derived_from_refs=("F1",),
+        )
+        require_current_for_accumulation(
+            (rederived,),
+            current_design_epoch="v15.6",
+            current_dependencies={"canonical_root": "new"},
+        )
 
 
 if __name__ == "__main__":
