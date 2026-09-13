@@ -148,6 +148,32 @@
       "effect_semantics": "Pure assurance selection validation; grants no authority, approval, proof, certification or canonical promotion.",
       "proof_obligations": ["smallest-sufficient-floor-derived", "mandatory-floor-not-lowered-by-budget", "trust-not-minted", "authorization-not-evaluated-here", "epoch-root-bound"],
       "test_refs": ["implementation/tests/test_evolution_assurance.py"]
+    },
+    {
+      "contract_id": "FC-EVOL-AUDIT-001",
+      "path": "implementation/garden_kernel/evolution_audit.py",
+      "function": "build_audit_chain",
+      "affects": ["AUDIT", "EVIDENCE", "CONFORMANCE"],
+      "input_semantics": "Ordered receipt descriptors bound to one DesignEpoch/source-root identity; each descriptor carries record ref/hash/schema/action/disposition and cannot carry trust-grant fields.",
+      "output_semantics": "GardenEvolutionAuditChainReceipt/v1 with SHA-256 content hashes, contiguous sequence and predecessor linkage from a fixed genesis hash.",
+      "error_semantics": "Empty records, malformed hashes, missing identity or trust-minting descriptor fields raise SemanticError.",
+      "unknown_semantics": "Unknown audit content remains a hashed record descriptor; audit persistence does not infer proof, authorization or semantic compliance.",
+      "effect_semantics": "Constructs tamper-evident evidence only; it cannot authorize, approve, certify or promote canon.",
+      "proof_obligations": ["content-tamper-detected", "order-linked", "deletion-detectable-by-count-or-link", "no-trust-minting", "epoch-root-bound"],
+      "test_refs": ["implementation/tests/test_evolution_audit.py"]
+    },
+    {
+      "contract_id": "FC-EVOL-AUDIT-002",
+      "path": "implementation/garden_kernel/evolution_audit.py",
+      "function": "validate_audit_chain",
+      "affects": ["AUDIT", "EVIDENCE", "CONFORMANCE"],
+      "input_semantics": "GardenEvolutionAuditChainReceipt/v1 plus optional expected current DesignEpoch/source root.",
+      "output_semantics": "GardenEvolutionAuditValidationReceipt/v1 confirming deterministic entry hashes, contiguous sequence, predecessor linkage and head hash with authorization_result NOT_EVALUATED_HERE.",
+      "error_semantics": "Stale identity, entry mutation, reorder, deletion/count mismatch, broken predecessor/head hash or trust-minting fields raise SemanticError.",
+      "unknown_semantics": "Validation cannot turn missing persistence, unknown evidence or bounded CI retention into permanent archival assurance.",
+      "effect_semantics": "Pure verification; grants no authority and changes no canonical state.",
+      "proof_obligations": ["recompute-every-entry-hash", "verify-predecessor-linkage", "verify-head", "reject-stale-identity", "authorization-not-evaluated-here"],
+      "test_refs": ["implementation/tests/test_evolution_audit.py"]
     }
   ]
 }
