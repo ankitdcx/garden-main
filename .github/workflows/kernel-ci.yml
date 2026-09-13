@@ -9,12 +9,14 @@ on:
       - 'scripts/audit_evolution_reasoning.py'
       - 'scripts/audit_evolution_algebra.py'
       - 'scripts/audit_evolution_assurance.py'
+      - 'scripts/audit_duplicate_semantics.py'
       - 'scripts/build_evolution_audit_chain.py'
       - 'reviews/evolution/**'
       - 'governance/**'
       - 'gsl/FUNCTION_CONTRACTS.json'
       - 'gsl/EVOLUTION_ALGEBRA_PROFILE.json'
       - 'gsl/EVOLUTION_AAP_PROFILE.json'
+      - 'gsl/SHARED_CONFORMANCE_VECTORS.json'
       - '.github/workflows/kernel-ci.yml'
   pull_request:
     paths:
@@ -24,12 +26,14 @@ on:
       - 'scripts/audit_evolution_reasoning.py'
       - 'scripts/audit_evolution_algebra.py'
       - 'scripts/audit_evolution_assurance.py'
+      - 'scripts/audit_duplicate_semantics.py'
       - 'scripts/build_evolution_audit_chain.py'
       - 'reviews/evolution/**'
       - 'governance/**'
       - 'gsl/FUNCTION_CONTRACTS.json'
       - 'gsl/EVOLUTION_ALGEBRA_PROFILE.json'
       - 'gsl/EVOLUTION_AAP_PROFILE.json'
+      - 'gsl/SHARED_CONFORMANCE_VECTORS.json'
       - '.github/workflows/kernel-ci.yml'
   workflow_dispatch:
 
@@ -47,6 +51,13 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
+      - name: Check out public Garden reference
+        uses: actions/checkout@v4
+        with:
+          repository: ankitdcx/garden-swarm
+          ref: main
+          path: .external/garden-swarm
+          persist-credentials: false
       - name: Compile reference kernel
         run: python -m compileall -q implementation/garden_kernel
       - name: Run deterministic reference tests
@@ -81,9 +92,17 @@ jobs:
           mkdir -p /tmp/wp009-conformance
           python scripts/audit_evolution_assurance.py \
             --output /tmp/wp009-conformance/evolution-aap-conformance.json
+      - name: Audit duplicate semantics against public prototype
+        id: duplicate_semantics
+        continue-on-error: true
+        run: |
+          mkdir -p /tmp/wp009-conformance
+          python scripts/audit_duplicate_semantics.py \
+            --public-root .external/garden-swarm \
+            --output /tmp/wp009-conformance/duplicate-semantics-conformance.json
       - name: Gate every production hourly evolution action
         id: production_gate
-        if: steps.function_contracts.outcome == 'success' && steps.reasoning.outcome == 'success' && steps.algebra.outcome == 'success' && steps.assurance.outcome == 'success'
+        if: steps.function_contracts.outcome == 'success' && steps.reasoning.outcome == 'success' && steps.algebra.outcome == 'success' && steps.assurance.outcome == 'success' && steps.duplicate_semantics.outcome == 'success'
         continue-on-error: true
         run: |
           set -uo pipefail
@@ -145,7 +164,7 @@ jobs:
           echo 'WP-009 durable audit chain could not be constructed or verified; available receipts were uploaded before this fail-closed step.'
           exit 1
       - name: Enforce conformance before ActionGate admission
-        if: always() && (steps.function_contracts.outcome == 'failure' || steps.reasoning.outcome == 'failure' || steps.algebra.outcome == 'failure' || steps.assurance.outcome == 'failure')
+        if: always() && (steps.function_contracts.outcome == 'failure' || steps.reasoning.outcome == 'failure' || steps.algebra.outcome == 'failure' || steps.assurance.outcome == 'failure' || steps.duplicate_semantics.outcome == 'failure')
         run: |
           echo 'WP-009 conformance blocked ActionGate admission; conformance receipts were persisted.'
           exit 1
@@ -155,4 +174,4 @@ jobs:
           echo 'Production ActionGate blocked one or more actions; receipts and durable audit evidence were persisted before this fail-closed step.'
           exit 1
       - name: Boundary reminder
-        run: echo 'Reference tests and declaration/reasoning/algebra/AAP/audit conformance PASS != Garden certification, semantic proof, authorization, canonical promotion, permanent archival, or deployment permission; FRONTIER is non-compliance and ActionGate remains the admission owner.'
+        run: echo 'Reference tests and declaration/reasoning/algebra/AAP/audit/duplicate-semantics conformance PASS != Garden certification, semantic proof, authorization, canonical promotion, permanent archival, or deployment permission; FRONTIER is non-compliance, SCEP convergence remains FRONTIER, and ActionGate remains the admission owner.'
