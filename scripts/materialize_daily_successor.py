@@ -41,22 +41,54 @@ def safe_version_token(release: str) -> str:
     return m.group(1)
 
 
-def validate_review_manifest(payload: dict[str, Any], predecessor_root: str, today: str) -> tuple[str, list[str]]:
+def version_tuple(release: str) -> tuple[int, ...]:
+    token = safe_version_token(release)
+    return tuple(int(x) for x in token[1:].split("."))
+
+
+def lineage_state(root: Path) -> tuple[dict[str, Any], dict[str, Any] | None, dict[str, Any]]:
+    canonical = load_json(root / "canonical" / "current" / "SOURCE_MANIFEST.json")
+    candidate_path = root / "canonical" / "candidates" / "current" / "SOURCE_MANIFEST.json"
+    candidate = load_json(candidate_path) if candidate_path.is_file() else None
+    immediate = candidate if candidate is not None else canonical
+    return canonical, candidate, immediate
+
+
+def validate_review_manifest(
+    payload: dict[str, Any],
+    *,
+    canonical_manifest: dict[str, Any],
+    immediate_predecessor: dict[str, Any],
+    today: str,
+) -> tuple[str, list[str]]:
     failures: list[str] = []
     if payload.get("schema") != "GardenDailyAdmittedDeltaManifest/v1":
         failures.append("REVIEW_MANIFEST_SCHEMA_INVALID")
-    if payload.get("predecessor_source_root_sha256") != predecessor_root:
+
+    canonical_root = str(canonical_manifest["source_root_sha256"])
+    immediate_root = str(immediate_predecessor["source_root_sha256"])
+    if payload.get("canonical_baseline_source_root_sha256") != canonical_root:
+        failures.append("CANONICAL_BASELINE_SOURCE_ROOT_MISMATCH")
+    if payload.get("predecessor_source_root_sha256") != immediate_root:
         failures.append("PREDECESSOR_SOURCE_ROOT_MISMATCH")
+    if payload.get("predecessor_release") != immediate_predecessor.get("release"):
+        failures.append("PREDECESSOR_RELEASE_MISMATCH")
     if payload.get("date") != today:
         failures.append("DAILY_MANIFEST_DATE_MISMATCH")
+
     release = str(payload.get("candidate_release", ""))
     try:
-        safe_version_token(release)
+        candidate_version = version_tuple(release)
+        predecessor_version = version_tuple(str(immediate_predecessor.get("release", "")))
+        if candidate_version <= predecessor_version:
+            failures.append("CANDIDATE_VERSION_NOT_SUCCESSOR")
     except ValueError:
         failures.append("CANDIDATE_RELEASE_INVALID")
+
     deltas = payload.get("deltas") or []
     if not deltas:
         return release, failures + ["NO_SEMANTIC_RELEASE"]
+
     ids: set[str] = set()
     for row in deltas:
         delta_id = str(row.get("delta_id", ""))
@@ -119,33 +151,60 @@ def archive_current_candidate(root: Path) -> str | None:
 
 
 def materialize(root: Path, staging: Path, review_manifest_path: Path, *, apply: bool) -> dict[str, Any]:
-    canonical_manifest = load_json(root / "canonical" / "current" / "SOURCE_MANIFEST.json")
-    predecessor_root = str(canonical_manifest["source_root_sha256"])
+    canonical_manifest, previous_candidate, immediate_predecessor = lineage_state(root)
+    canonical_root = str(canonical_manifest["source_root_sha256"])
+    predecessor_root = str(immediate_predecessor["source_root_sha256"])
+    predecessor_release = str(immediate_predecessor["release"])
+    predecessor_kind = "SUCCESSOR_CANDIDATE" if previous_candidate is not None else "CANONICAL"
+
     review = load_json(review_manifest_path)
     release_date = str(review.get("date") or date.today().isoformat())
-    release, failures = validate_review_manifest(review, predecessor_root, release_date)
+    release, failures = validate_review_manifest(
+        review,
+        canonical_manifest=canonical_manifest,
+        immediate_predecessor=immediate_predecessor,
+        today=release_date,
+    )
     if "NO_SEMANTIC_RELEASE" in failures:
         return {
             "schema":"GardenDailyMaterializationReceipt/v1",
             "result":"NO_SEMANTIC_RELEASE",
             "date":release_date,
+            "canonical_baseline_source_root_sha256":canonical_root,
+            "predecessor_release":predecessor_release,
             "predecessor_source_root_sha256":predecessor_root,
+            "predecessor_kind":predecessor_kind,
             "failures":[x for x in failures if x != "NO_SEMANTIC_RELEASE"],
             "wrote_files":False,
         }
+
     rows, file_failures = candidate_rows(staging, release, release_date)
     failures.extend(file_failures)
     if failures:
-        return {"schema":"GardenDailyMaterializationReceipt/v1","result":"REJECT","date":release_date,"candidate_release":release,"predecessor_source_root_sha256":predecessor_root,"failures":failures,"wrote_files":False}
+        return {
+            "schema":"GardenDailyMaterializationReceipt/v1",
+            "result":"REJECT",
+            "date":release_date,
+            "candidate_release":release,
+            "canonical_baseline_source_root_sha256":canonical_root,
+            "predecessor_release":predecessor_release,
+            "predecessor_source_root_sha256":predecessor_root,
+            "predecessor_kind":predecessor_kind,
+            "failures":failures,
+            "wrote_files":False,
+        }
 
     candidate_root = source_root(rows)
     manifest = {
-        "schema":"GardenCandidateSourceManifest/v1",
+        "schema":"GardenCandidateSourceManifest/v2",
         "release":release,
         "gsl":canonical_manifest.get("gsl"),
         "date":release_date,
-        "predecessor_release":canonical_manifest.get("release"),
+        "canonical_baseline_release":canonical_manifest.get("release"),
+        "canonical_baseline_source_root_sha256":canonical_root,
+        "predecessor_release":predecessor_release,
         "predecessor_source_root_sha256":predecessor_root,
+        "predecessor_kind":predecessor_kind,
         "files":{r["role"]:{"name":r["name"],"bytes":r["bytes"],"sha256":r["sha256"]} for r in rows},
         "source_root_algorithm":"sha256(canonical-json(sorted role/name/bytes/sha256 rows))",
         "source_root_sha256":candidate_root,
@@ -158,7 +217,10 @@ def materialize(root: Path, staging: Path, review_manifest_path: Path, *, apply:
         "result":"READY_TO_MATERIALIZE" if not apply else "MATERIALIZED_CANDIDATE",
         "date":release_date,
         "candidate_release":release,
+        "canonical_baseline_source_root_sha256":canonical_root,
+        "predecessor_release":predecessor_release,
         "predecessor_source_root_sha256":predecessor_root,
+        "predecessor_kind":predecessor_kind,
         "candidate_source_root_sha256":candidate_root,
         "admitted_delta_ids":[str(x["delta_id"]) for x in review["deltas"]],
         "review_family_floor":MIN_REVIEW_FAMILIES,
@@ -191,7 +253,10 @@ def materialize(root: Path, staging: Path, review_manifest_path: Path, *, apply:
         "date":release_date,
         "status":"SUCCESSOR_CANDIDATE_NOT_CANONICAL",
         "source_root_sha256":candidate_root,
+        "canonical_baseline_source_root_sha256":canonical_root,
+        "predecessor_release":predecessor_release,
         "predecessor_source_root_sha256":predecessor_root,
+        "predecessor_kind":predecessor_kind,
         "archived_previous_candidate":archived,
         "canonical_promotion_authorized":False,
     })
