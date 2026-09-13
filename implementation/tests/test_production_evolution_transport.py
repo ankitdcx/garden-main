@@ -14,6 +14,11 @@ from garden_kernel.evolution_transport import (
     evaluate_production_request,
     require_allowed,
 )
+from garden_kernel.evolution_trust import (
+    AttestationKind,
+    governance_receipt_from_changed_paths,
+    make_attestation_receipt,
+)
 
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -104,58 +109,158 @@ def base_request(*, verb: str, authority_ref: str) -> dict:
         },
         "authority_ref": authority_ref,
         "bound_inputs": [],
-        "governance_tier": "ORDINARY",
     }
 
 
+def governance_for(request: dict, *paths: str) -> dict:
+    return governance_receipt_from_changed_paths(
+        action_id=request["action"]["action_id"],
+        design_epoch=IDENTITY.design_epoch,
+        source_root_sha256=IDENTITY.source_root_sha256,
+        changed_paths=paths or ("implementation/garden_kernel/evolution_transport.py",),
+        base_ref="base",
+        head_ref="head",
+    )
+
+
+def evaluate(request: dict, *, paths: tuple[str, ...] = (), attestations=(), attestors=None):
+    return evaluate_production_request(
+        request,
+        IDENTITY,
+        trusted_authorities(),
+        trusted_governance_receipt=governance_for(request, *paths),
+        trusted_attestation_receipts=attestations,
+        trusted_attestors=attestors or {},
+    )
+
+
 class ProductionEvolutionTransportTests(unittest.TestCase):
-    def test_valid_proposal_uses_trusted_registry_and_cannot_promote_canon(self):
-        receipt = evaluate_production_request(
-            base_request(verb="PROPOSE", authority_ref="AUTH-REVIEWER"),
-            IDENTITY,
-            trusted_authorities(),
-        )
+    def test_valid_proposal_uses_trusted_registry_and_derived_governance(self):
+        request = base_request(verb="PROPOSE", authority_ref="AUTH-REVIEWER")
+        receipt = evaluate(request)
         self.assertEqual(receipt["decision"], "ALLOW")
         self.assertFalse(receipt["canonical_pointer_changed"])
         self.assertEqual(receipt["authority_ref"], "AUTH-REVIEWER")
         self.assertFalse(receipt["authority"]["can_mint_envelopes"])
         self.assertFalse(receipt["authority"]["can_promote_canon"])
         self.assertFalse(receipt["trusted_attestations"]["human_signoff"])
+        self.assertTrue(receipt["governance"]["verified"])
+        self.assertEqual(receipt["governance"]["tier"], "ORDINARY")
         require_allowed(receipt)
 
-    def test_request_cannot_self_assert_authority(self):
+    def test_request_cannot_self_assert_authority_or_governance(self):
         request = base_request(verb="PROPOSE", authority_ref="AUTH-REVIEWER")
-        request["authority"] = {
-            "subject": "agent:hourly",
-            "role": "REVIEWER",
-            "granted_by": "agent:hourly",
-            "resources": [RESOURCE],
-        }
-        receipt = evaluate_production_request(request, IDENTITY, trusted_authorities())
+        request["authority"] = {"role": "REVIEWER"}
+        request["governance_tier"] = "ORDINARY"
+        receipt = evaluate(request)
         self.assertEqual(receipt["decision"], "REJECT")
-        self.assertIn("self-assert trusted fields: authority", receipt["reasons"][0])
+        self.assertIn("authority", receipt["reasons"][0])
+        self.assertIn("governance_tier", receipt["reasons"][0])
 
     def test_request_cannot_self_assert_human_signoff_or_review(self):
         request = base_request(verb="PROPOSE", authority_ref="AUTH-REVIEWER")
         request["human_signoff"] = True
         request["independent_review"] = True
-        receipt = evaluate_production_request(request, IDENTITY, trusted_authorities())
+        receipt = evaluate(request)
         self.assertEqual(receipt["decision"], "REJECT")
         self.assertIn("human_signoff", receipt["reasons"][0])
         self.assertIn("independent_review", receipt["reasons"][0])
 
+    def test_missing_trusted_governance_receipt_fails_closed(self):
+        request = base_request(verb="PROPOSE", authority_ref="AUTH-REVIEWER")
+        receipt = evaluate_production_request(
+            request,
+            IDENTITY,
+            trusted_authorities(),
+            trusted_governance_receipt=None,
+        )
+        self.assertEqual(receipt["decision"], "REJECT")
+        self.assertIn("trusted governance classification receipt is required", receipt["reasons"][0])
+
+    def test_tampered_governance_receipt_fails_closed(self):
+        request = base_request(verb="PROPOSE", authority_ref="AUTH-REVIEWER")
+        governance = governance_for(request)
+        governance["tier"] = "CONSTITUTIONAL"
+        receipt = evaluate_production_request(
+            request,
+            IDENTITY,
+            trusted_authorities(),
+            trusted_governance_receipt=governance,
+        )
+        self.assertEqual(receipt["decision"], "REJECT")
+        self.assertIn("governance classification receipt hash mismatch", receipt["reasons"][0])
+
+    def test_protected_policy_change_is_derived_constitutional_and_escalates(self):
+        request = base_request(verb="PROPOSE", authority_ref="AUTH-REVIEWER")
+        receipt = evaluate(
+            request,
+            paths=("implementation/garden_kernel/evolution_gate.py",),
+        )
+        self.assertEqual(receipt["decision"], "ESCALATE")
+        self.assertEqual(receipt["governance"]["tier"], "CONSTITUTIONAL")
+        self.assertIn("ACTION_GATE_RULES", receipt["governance"]["domains"])
+        self.assertIn("CONSTITUTIONAL_CHANGE_REQUIRES_HUMAN_SIGNOFF", receipt["reasons"])
+
+    def test_constitutional_human_approval_requires_verified_receipt(self):
+        request = base_request(verb="PROPOSE", authority_ref="AUTH-REVIEWER")
+        attestation = make_attestation_receipt(
+            receipt_id="H-1",
+            kind=AttestationKind.HUMAN_SIGNOFF,
+            action_id=request["action"]["action_id"],
+            design_epoch=IDENTITY.design_epoch,
+            source_root_sha256=IDENTITY.source_root_sha256,
+            issuer_ref="human:operator",
+            evidence_refs=("approval:explicit",),
+        )
+        receipt = evaluate(
+            request,
+            paths=("implementation/garden_kernel/evolution_gate.py",),
+            attestations=(attestation,),
+            attestors={"human:operator": frozenset({AttestationKind.HUMAN_SIGNOFF})},
+        )
+        self.assertEqual(receipt["decision"], "ALLOW")
+        self.assertTrue(receipt["trusted_attestations"]["human_signoff"])
+        self.assertEqual(receipt["trusted_attestations"]["verified_receipt_ids"], ["H-1"])
+
+    def test_untrusted_or_tampered_attestation_cannot_enable_signoff(self):
+        request = base_request(verb="PROPOSE", authority_ref="AUTH-REVIEWER")
+        attestation = make_attestation_receipt(
+            receipt_id="H-1",
+            kind=AttestationKind.HUMAN_SIGNOFF,
+            action_id=request["action"]["action_id"],
+            design_epoch=IDENTITY.design_epoch,
+            source_root_sha256=IDENTITY.source_root_sha256,
+            issuer_ref="agent:hourly",
+            evidence_refs=("self-claim",),
+        )
+        receipt = evaluate(
+            request,
+            paths=("implementation/garden_kernel/evolution_gate.py",),
+            attestations=(attestation,),
+            attestors={},
+        )
+        self.assertEqual(receipt["decision"], "REJECT")
+        self.assertIn("attestation issuer is not trusted", receipt["reasons"][0])
+
+        attestation["issuer_ref"] = "human:operator"
+        receipt = evaluate(
+            request,
+            paths=("implementation/garden_kernel/evolution_gate.py",),
+            attestations=(attestation,),
+            attestors={"human:operator": frozenset({AttestationKind.HUMAN_SIGNOFF})},
+        )
+        self.assertEqual(receipt["decision"], "REJECT")
+        self.assertIn("trusted attestation receipt hash mismatch", receipt["reasons"][0])
+
     def test_unknown_authority_reference_fails_closed(self):
         request = base_request(verb="PROPOSE", authority_ref="AUTH-FABRICATED")
-        receipt = evaluate_production_request(request, IDENTITY, trusted_authorities())
+        receipt = evaluate(request)
         self.assertEqual(receipt["decision"], "REJECT")
         self.assertIn("does not resolve in the trusted registry", receipt["reasons"][0])
 
     def test_role_mismatch_cannot_bypass_gate(self):
-        receipt = evaluate_production_request(
-            base_request(verb="PROPOSE", authority_ref="AUTH-INTEGRATOR"),
-            IDENTITY,
-            trusted_authorities(),
-        )
+        request = base_request(verb="PROPOSE", authority_ref="AUTH-INTEGRATOR")
+        receipt = evaluate(request)
         self.assertEqual(receipt["decision"], "REJECT")
         self.assertIn("AUTHORITY_SCOPE_DENIED", receipt["reasons"])
         with self.assertRaises(SemanticError):
@@ -178,7 +283,7 @@ class ProductionEvolutionTransportTests(unittest.TestCase):
             "derived_from_refs": ["FINDING-1"],
             "source_obligation_refs": ["Garden_System:DesignEpoch"],
         }]
-        receipt = evaluate_production_request(request, IDENTITY, trusted_authorities())
+        receipt = evaluate(request)
         self.assertEqual(receipt["decision"], "REJECT")
         self.assertTrue(any(reason.startswith("STALE_OR_UNKNOWN_INPUT:") for reason in receipt["reasons"]))
         with self.assertRaises(SemanticError):
@@ -194,26 +299,11 @@ class ProductionEvolutionTransportTests(unittest.TestCase):
             "required_dependencies": ["canonical_source_root"],
             "source_obligation_refs": [],
         }]
-        receipt = evaluate_production_request(request, IDENTITY, trusted_authorities())
+        receipt = evaluate(request)
         self.assertEqual(receipt["decision"], "REJECT")
         self.assertTrue(receipt["reasons"][0].startswith("TRANSPORT_INVALID:DELTA requires"))
 
-    def test_constitutional_change_cannot_use_request_signoff(self):
-        request = base_request(verb="PROPOSE", authority_ref="AUTH-REVIEWER")
-        request["governance_tier"] = "CONSTITUTIONAL"
-        receipt = evaluate_production_request(request, IDENTITY, trusted_authorities())
-        self.assertEqual(receipt["decision"], "ESCALATE")
-        self.assertIn("CONSTITUTIONAL_CHANGE_REQUIRES_HUMAN_SIGNOFF", receipt["reasons"])
-
-        trusted_receipt = evaluate_production_request(
-            request,
-            IDENTITY,
-            trusted_authorities(),
-            trusted_human_signoff=True,
-        )
-        self.assertEqual(trusted_receipt["decision"], "ALLOW")
-
-    def test_materialize_is_candidate_only_and_requires_trusted_review(self):
+    def test_materialize_is_candidate_only_and_requires_verified_review(self):
         request = base_request(verb="MATERIALIZE", authority_ref="AUTH-MATERIALIZER")
         request["bound_inputs"] = [{
             "artifact_id": "DELTA-1",
@@ -223,16 +313,24 @@ class ProductionEvolutionTransportTests(unittest.TestCase):
             "required_dependencies": ["canonical_source_root"],
             "source_obligation_refs": ["Garden_System:SuccessorMaterialization"],
         }]
-        receipt = evaluate_production_request(request, IDENTITY, trusted_authorities())
+        receipt = evaluate(request)
         self.assertEqual(receipt["decision"], "ESCALATE")
         self.assertTrue(receipt["materialization_candidate_only"])
         self.assertFalse(receipt["canonical_pointer_changed"])
 
-        reviewed = evaluate_production_request(
+        review = make_attestation_receipt(
+            receipt_id="R-1",
+            kind=AttestationKind.INDEPENDENT_REVIEW,
+            action_id=request["action"]["action_id"],
+            design_epoch=IDENTITY.design_epoch,
+            source_root_sha256=IDENTITY.source_root_sha256,
+            issuer_ref="reviewer:independent",
+            evidence_refs=("review:receipt:1",),
+        )
+        reviewed = evaluate(
             request,
-            IDENTITY,
-            trusted_authorities(),
-            trusted_independent_review=True,
+            attestations=(review,),
+            attestors={"reviewer:independent": frozenset({AttestationKind.INDEPENDENT_REVIEW})},
         )
         self.assertEqual(reviewed["decision"], "ALLOW")
         self.assertTrue(reviewed["trusted_attestations"]["independent_review"])
@@ -262,15 +360,18 @@ class ProductionEvolutionTransportTests(unittest.TestCase):
                     "--output", str(receipt_path),
                     "--manifest", str(manifest_path),
                     "--authority-registry", str(registry_path),
+                    "--base-ref", "HEAD^",
+                    "--head-ref", "HEAD",
                 ],
                 cwd=ROOT,
                 text=True,
                 capture_output=True,
             )
-            self.assertEqual(proc.returncode, 2)
+            self.assertEqual(proc.returncode, 2, proc.stdout + proc.stderr)
             self.assertTrue(receipt_path.exists())
             receipt = json.loads(receipt_path.read_text(encoding="utf-8"))
             self.assertEqual(receipt["decision"], "REJECT")
+            self.assertTrue(receipt["governance"]["verified"])
             self.assertEqual(receipt["receipt_visibility"], "PRESERVE_ALLOW_REJECT_ESCALATE")
 
 
