@@ -109,7 +109,7 @@ def evaluate_pr(
             continue
         other_data = extract_json_block(pr.get("body"), INTENT_MARKER)
         if other_data is None:
-            if direct_path_overlap(current_changed_paths, list(pr.get("changed_paths") or [])):
+            if direct_path_overlap(list(current.target_paths), list(pr.get("changed_paths") or [])):
                 unknown_direct.append(int(pr["number"]))
             else:
                 warnings.append(f"PR#{pr['number']}:NO_DECLARED_INTENT_SEMANTIC_OVERLAP_UNKNOWN")
@@ -141,7 +141,7 @@ def evaluate_pr(
         "warnings": warnings,
         "authority_effect": "NONE_PROPOSAL_ONLY",
         "canonical_effect": "NONE",
-        "uncertainty": "Legacy/concurrent PRs without a valid AgentWorkIntent/v1 can only be checked for direct path overlap. Cross-file semantic absence is not inferred.",
+        "uncertainty": "Legacy/concurrent PRs without a valid AgentWorkIntent/v1 are checked against the current declared target paths. Cross-file semantic absence outside that evidence is not inferred.",
     }
 
 
