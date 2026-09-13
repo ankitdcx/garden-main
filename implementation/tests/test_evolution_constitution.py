@@ -4,7 +4,7 @@ from garden_kernel.evolution_actions import CONTRACTS, EvolutionAction, Evolutio
 from garden_kernel.evolution_authority import EvolutionAgentRole, make_role_envelope
 from garden_kernel.evolution_config import PipelineConfigClass, PipelineConfigSnapshot, derive_config_delta
 from garden_kernel.evolution_constitution import GovernanceTier, classify_config_delta
-from garden_kernel.evolution_gate import EvolutionGateContext, GateDecision, evaluate_evolution_action
+from garden_kernel.evolution_gate import EvolutionGateContext, EvolutionGateLog, GateDecision, evaluate_evolution_action
 
 
 class ConstitutionalTierTests(unittest.TestCase):
@@ -65,8 +65,12 @@ class ConstitutionalTierTests(unittest.TestCase):
             authority_envelopes=(env,), governance_tier=GovernanceTier.CONSTITUTIONAL,
             human_signoff=True,
         )
-        self.assertEqual(evaluate_evolution_action(action, no_human).decision, GateDecision.ESCALATE)
-        self.assertEqual(evaluate_evolution_action(action, with_human).decision, GateDecision.ALLOW)
+        log = EvolutionGateLog()
+        denied = evaluate_evolution_action(action, no_human, log)
+        allowed = evaluate_evolution_action(action, with_human, log)
+        self.assertEqual(denied.decision, GateDecision.ESCALATE)
+        self.assertEqual(allowed.decision, GateDecision.ALLOW)
+        self.assertEqual(log.receipts, [denied, allowed])
 
 
 if __name__ == "__main__":
