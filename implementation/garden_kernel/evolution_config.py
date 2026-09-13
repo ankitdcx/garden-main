@@ -85,6 +85,7 @@ class PipelineConfigDelta:
             dependencies={"pipeline_config_before": self.before_hash},
             required_dependencies=frozenset({"pipeline_config_before"}),
             derived_from_refs=self.provenance_refs,
+            source_obligation_refs=self.source_obligation_refs,
         )
 
 
