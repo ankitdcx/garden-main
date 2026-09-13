@@ -1,0 +1,159 @@
+{
+  "schema": "GardenEvolutionReasoningBundle/v1",
+  "bundle_id": "GARDEN-HOURLY-2026-09-13-WP009E-REASONING-PROPOSE-001",
+  "action_id": "GARDEN-HOURLY-2026-09-13-WP009E-PROPOSE-001",
+  "design_epoch": "v15.5",
+  "canonical_source_root_sha256": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+  "source_obligation_refs": [
+    "work_packages/WP-009.md#WP-009E",
+    "canonical/current/Garden_System_v15.5_FULL_2026-09-12.txt:REG-ALGEBRA-001",
+    "canonical/current/Garden_System_v15.5_FULL_2026-09-12.txt:[S-PROCESS]#5.1",
+    "canonical/current/Garden_System_v15.5_FULL_2026-09-12.txt:#5.4",
+    "canonical/current/Garden_System_v15.5_FULL_2026-09-12.txt:#5.5A"
+  ],
+  "compare": {
+    "schema": "GardenEvolutionCompareReceipt/v1",
+    "action_id": "GARDEN-HOURLY-2026-09-13-WP009E-PROPOSE-001",
+    "design_epoch": "v15.5",
+    "canonical_source_root_sha256": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+    "predecessor_ref": "git:ankitdcx/garden-main@dba1d7123baf530659ddae3a090eed5d743fff6d",
+    "alternatives": [
+      {
+        "alternative_id": "DO_NOTHING",
+        "description": "Leave algebra applicability and non-law boundaries as prose/frontier only.",
+        "projected_effect": "No machine check prevents future evolution code from naming unregistered operators or assuming undeclared algebra laws.",
+        "risk": "Decorative or mathematically invalid algebra claims can enter repository conformance records without deterministic rejection."
+      },
+      {
+        "alternative_id": "WP009E_BOUNDED_ALGEBRA",
+        "description": "Bind the real evolution path to a source-root-bound six-algebra profile and validate only actually used operators while preserving explicit FRONTIER/NOT_APPLICABLE states.",
+        "projected_effect": "Process and Conformance use become machine-checkable; Policy, Decision and Evidence stay visible frontier; Bridge remains conditional unless actually invoked.",
+        "risk": "The bounded profile deliberately leaves unresolved Level-3 signatures as FRONTIER and therefore does not prove full algebra or GSL compliance."
+      }
+    ],
+    "bidirectional_gaps": [
+      {
+        "from": "DO_NOTHING",
+        "to": "WP009E_BOUNDED_ALGEBRA",
+        "gap": "DO_NOTHING cannot reject undeclared law/operator claims or distinguish required FRONTIER from conditional NOT_APPLICABLE algebra modules."
+      },
+      {
+        "from": "WP009E_BOUNDED_ALGEBRA",
+        "to": "DO_NOTHING",
+        "gap": "The candidate adds profile/validator maintenance and still requires later Policy/Decision/Evidence executable bindings plus AAP and durable audit closure."
+      }
+    ]
+  },
+  "reason": {
+    "schema": "GardenEvolutionReasonReceipt/v1",
+    "action_id": "GARDEN-HOURLY-2026-09-13-WP009E-PROPOSE-001",
+    "design_epoch": "v15.5",
+    "canonical_source_root_sha256": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+    "strategy": "BOUNDED_CANONICAL_ALGEBRA_BINDING",
+    "tier": "WP009E_REFERENCE",
+    "assumptions": [
+      "Garden v15.5 and its five-file source root remain immutable.",
+      "REG-ALGEBRA-001 is the canonical registry owner; this repository profile may bind but may not invent omitted laws.",
+      "ActionGate remains the sole admission owner and algebra validation cannot mint authority.",
+      "A module is marked APPLIED only when the current pipeline actually invokes semantics supported by an explicit canonical operator set."
+    ],
+    "uncertainty": "The bounded source available to this implementation does not reproduce exact Level-3 executable Decision or Evidence operator signatures; those remain FRONTIER rather than guessed. Policy is also FRONTIER until a concrete Policy Algebra operation is executed by the production path.",
+    "counterexamples": [
+      "A Process receipt claiming universal commutativity must be rejected.",
+      "A required algebra cannot be marked NOT_APPLICABLE simply to improve coverage.",
+      "A Decision/Evidence algebra marked APPLIED without registered executable operators must be rejected.",
+      "A Bridge activation based merely on JSON serialization or Python objects must not be inferred.",
+      "An algebra receipt that supplies authority or gate disposition must be rejected."
+    ],
+    "dependency_refs": [
+      "work_packages/WP-009.md#WP-009E",
+      "gsl/EVOLUTION_ALGEBRA_PROFILE.json",
+      "gsl/FUNCTION_CONTRACTS.json",
+      "implementation/garden_kernel/evolution_reasoning.py",
+      "governance/evolution_authority_registry.json",
+      "git:ankitdcx/garden-main@dba1d7123baf530659ddae3a090eed5d743fff6d"
+    ],
+    "conclusion": "Implement the bounded algebra binding and admit it only if deterministic tests, reasoning/algebra conformance audits, FunctionContract coverage, and the existing trusted production ActionGate all pass without authority expansion or canonical mutation.",
+    "authorization_effect": "NONE"
+  },
+  "proof": {
+    "schema": "GardenEvolutionProofReceipt/v1",
+    "action_id": "GARDEN-HOURLY-2026-09-13-WP009E-PROPOSE-001",
+    "design_epoch": "v15.5",
+    "canonical_source_root_sha256": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+    "obligations": [
+      {
+        "obligation_id": "PO-WP009E-001",
+        "statement": "The validator rejects operators and algebra laws not registered by the bounded canonical profile.",
+        "verifier_class": "UNIT_TEST",
+        "result": "UNKNOWN",
+        "evidence_refs": []
+      },
+      {
+        "obligation_id": "PO-WP009E-002",
+        "statement": "Required algebra modules cannot be hidden as NOT_APPLICABLE and FRONTIER never counts as semantic compliance.",
+        "verifier_class": "UNIT_TEST",
+        "result": "UNKNOWN",
+        "evidence_refs": []
+      },
+      {
+        "obligation_id": "PO-WP009E-003",
+        "statement": "Each material governed change carries one action-bound algebra usage receipt validated against current DesignEpoch/source root.",
+        "verifier_class": "CI_CONFORMANCE_AUDIT",
+        "result": "UNKNOWN",
+        "evidence_refs": []
+      },
+      {
+        "obligation_id": "PO-WP009E-004",
+        "statement": "Algebra validation does not mint authority and the trusted WP-007/WP-008 ActionGate remains the admission owner.",
+        "verifier_class": "WP007_PRODUCTION_GATE",
+        "result": "UNKNOWN",
+        "evidence_refs": []
+      }
+    ],
+    "overall_result": "UNKNOWN",
+    "authorization_effect": "NONE"
+  },
+  "evidence": {
+    "schema": "GardenEvolutionEvidenceReceipt/v1",
+    "action_id": "GARDEN-HOURLY-2026-09-13-WP009E-PROPOSE-001",
+    "design_epoch": "v15.5",
+    "canonical_source_root_sha256": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+    "items": [
+      {
+        "kind": "SOURCE_REFERENCE",
+        "ref": "work_packages/WP-009.md#WP-009E",
+        "claim_scope": "Requires Process, Policy, Decision, Conformance, Evidence and Bridge algebra conformance without undeclared laws."
+      },
+      {
+        "kind": "CANONICAL_SOURCE_REFERENCE",
+        "ref": "canonical/current/Garden_System_v15.5_FULL_2026-09-12.txt:REG-ALGEBRA-001",
+        "claim_scope": "Canonical source requires concrete AlgebraSignature instances and says omitted laws are not assumed."
+      },
+      {
+        "kind": "CANONICAL_SOURCE_REFERENCE",
+        "ref": "canonical/current/Garden_System_v15.5_FULL_2026-09-12.txt:#5.1-5.5A",
+        "claim_scope": "Supplies the bounded operator/non-law semantics used to construct this profile."
+      },
+      {
+        "kind": "PREDECESSOR",
+        "ref": "git:ankitdcx/garden-main@dba1d7123baf530659ddae3a090eed5d743fff6d",
+        "claim_scope": "WP-009D predecessor with typed Compare/Reason/Proof/Evidence separation."
+      },
+      {
+        "kind": "PUBLIC_AGENT_AVAILABILITY",
+        "ref": "garden-swarm:run:34747319858:NO_MODEL_FINDING",
+        "claim_scope": "Latest public zero-cost review supplied no admissible model finding and is not proof or authorization."
+      }
+    ],
+    "proof_effect": "NONE",
+    "authorization_effect": "NONE"
+  },
+  "separation_assertions": {
+    "compare_is_not_decision": true,
+    "reason_is_not_authorization": true,
+    "evidence_is_not_proof": true,
+    "proof_is_not_authorization": true,
+    "actiongate_owns_authorization": true
+  }
+}
