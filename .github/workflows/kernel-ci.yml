@@ -7,9 +7,11 @@ on:
       - 'scripts/gate_hourly_evolution.py'
       - 'scripts/audit_function_contract_coverage.py'
       - 'scripts/audit_evolution_reasoning.py'
+      - 'scripts/audit_evolution_algebra.py'
       - 'reviews/evolution/**'
       - 'governance/**'
       - 'gsl/FUNCTION_CONTRACTS.json'
+      - 'gsl/EVOLUTION_ALGEBRA_PROFILE.json'
       - '.github/workflows/kernel-ci.yml'
   pull_request:
     paths:
@@ -17,9 +19,11 @@ on:
       - 'scripts/gate_hourly_evolution.py'
       - 'scripts/audit_function_contract_coverage.py'
       - 'scripts/audit_evolution_reasoning.py'
+      - 'scripts/audit_evolution_algebra.py'
       - 'reviews/evolution/**'
       - 'governance/**'
       - 'gsl/FUNCTION_CONTRACTS.json'
+      - 'gsl/EVOLUTION_ALGEBRA_PROFILE.json'
       - '.github/workflows/kernel-ci.yml'
   workflow_dispatch:
 
@@ -53,6 +57,11 @@ jobs:
           mkdir -p /tmp/wp009-conformance
           python scripts/audit_evolution_reasoning.py \
             --output /tmp/wp009-conformance/evolution-reasoning-conformance.json
+      - name: Audit changed production algebra receipts
+        run: |
+          mkdir -p /tmp/wp009-conformance
+          python scripts/audit_evolution_algebra.py \
+            --output /tmp/wp009-conformance/evolution-algebra-conformance.json
       - name: Gate every production hourly evolution action
         run: |
           set -euo pipefail
@@ -82,4 +91,4 @@ jobs:
           if-no-files-found: error
           retention-days: 30
       - name: Boundary reminder
-        run: echo 'Reference tests and declaration/reasoning conformance PASS != Garden certification, semantic proof, authorization, canonical promotion, or deployment permission; ActionGate remains the admission owner.'
+        run: echo 'Reference tests and declaration/reasoning/algebra conformance PASS != Garden certification, semantic proof, authorization, canonical promotion, or deployment permission; FRONTIER is non-compliance and ActionGate remains the admission owner.'

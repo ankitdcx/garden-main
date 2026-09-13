@@ -1,0 +1,111 @@
+{
+  "schema": "GardenEvolutionAlgebraProfile/v1",
+  "profile_id": "GARDEN-MAIN-WP009E-EVOLUTION-ALGEBRA-v1",
+  "design_epoch": "v15.5",
+  "canonical_source_root_sha256": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+  "registry_ref": "REG-ALGEBRA-001",
+  "semantic_compliance_proved": false,
+  "boundary": "This profile binds only algebra semantics actually used or explicitly frontiered by the private evolution pipeline. Omitted laws are never assumed and FRONTIER never counts as semantic compliance.",
+  "algebras": {
+    "Process": {
+      "applicability": "REQUIRED",
+      "canonical_refs": [
+        "canonical/current/Garden_System_v15.5_FULL_2026-09-12.txt:[S-PROCESS]#5.1",
+        "canonical/current/Garden_System_v15.5_FULL_2026-09-12.txt:[S-PROCESS]#5.1B"
+      ],
+      "operator_registration": "LEVEL2_EXPLICIT",
+      "registered_operators": [
+        "SEQUENCE", "BRANCH", "PARALLEL", "COMPOSE", "RETRY", "ROLLBACK",
+        "COMPENSATE", "RECONSTRUCT", "ITERATE", "RECURSE", "TERMINATE", "DO_NOTHING"
+      ],
+      "registered_laws": [],
+      "registered_non_laws": [
+        "PARALLEL_EFFECT_COMMUTATIVITY_NOT_UNIVERSAL"
+      ],
+      "frontier_note": "Exact valid-law set resolves through REG-ALGEBRA-001; no associativity, commutativity, idempotence, distributivity or ordering law is inferred here."
+    },
+    "Policy": {
+      "applicability": "REQUIRED",
+      "canonical_refs": [
+        "canonical/current/Garden_System_v15.5_FULL_2026-09-12.txt:#5.2"
+      ],
+      "operator_registration": "LEVEL2_EXPLICIT",
+      "registered_operators": ["AND_D", "OR_D", "NOT_D", "RESOLVE_D", "precedence_D"],
+      "registered_laws": [],
+      "registered_non_laws": [
+        "AND_D_OR_D_NOT_INTERCHANGEABLE",
+        "REQUIRED_APPROVALS_MUST_NOT_BE_DROPPED",
+        "SAFE_FALLBACK_IS_CONDITIONAL"
+      ],
+      "frontier_note": "The current evolution ActionGate is not silently relabeled as Engine.Policy. A concrete Policy Algebra operator binding remains FRONTIER until the pipeline actually executes it."
+    },
+    "Decision": {
+      "applicability": "REQUIRED",
+      "canonical_refs": [
+        "canonical/current/Garden_System_v15.5_FULL_2026-09-12.txt:#5.3"
+      ],
+      "operator_registration": "LEVEL3_FRONTIER",
+      "registered_operators": [],
+      "registered_laws": [],
+      "registered_non_laws": [
+        "DECISION_ALGEBRA_DOES_NOT_OWN_POLICY_AUTHORITY"
+      ],
+      "frontier_note": "Garden v15.5 identifies Decision as a typed effect/result sub-algebra but the exact executable operator signatures are not reproduced in this bounded repository profile."
+    },
+    "Conformance": {
+      "applicability": "REQUIRED",
+      "canonical_refs": [
+        "canonical/current/Garden_System_v15.5_FULL_2026-09-12.txt:#5.4"
+      ],
+      "operator_registration": "LEVEL2_EXPLICIT",
+      "registered_operators": [
+        "REQUIREMENT_UNION", "REQUIREMENT_INTERSECTION", "SCOPE_PROJECT", "MAP_STANDARD",
+        "PROPAGATE_OBLIGATION", "BIND_EVIDENCE", "BIND_PROOF", "INVALIDATE_BY_DEPENDENCY",
+        "COVERAGE", "GAP", "DIFF", "COMPOSE_CONFORMANCE"
+      ],
+      "registered_laws": [],
+      "registered_non_laws": [
+        "CONFORMANCE_IS_NOT_BINARY_ONLY",
+        "AUDIT_IS_NOT_A_SEPARATE_ALGEBRA"
+      ],
+      "frontier_note": "Result lattice details remain owner-qualified; this profile preserves UNKNOWN/INCONCLUSIVE/NOT_APPLICABLE/BLOCKED/STALE rather than collapsing them to Bool."
+    },
+    "Evidence": {
+      "applicability": "REQUIRED",
+      "canonical_refs": [
+        "canonical/current/Garden_System_v15.5_FULL_2026-09-12.txt:#5.5"
+      ],
+      "operator_registration": "LEVEL3_FRONTIER",
+      "registered_operators": [],
+      "registered_laws": [],
+      "registered_non_laws": [
+        "EVIDENCE_IS_NOT_PROOF",
+        "SHARED_SOURCE_IS_NOT_INDEPENDENT_EVIDENCE",
+        "CONFIDENCE_REQUIRES_CALIBRATED_MODEL"
+      ],
+      "frontier_note": "The Level-2 source defines dependence-aware corroborate/contradict/condition flow while Level 3 owns executable operation signatures; those signatures remain explicit FRONTIER here."
+    },
+    "Bridge": {
+      "applicability": "CONDITIONAL",
+      "canonical_refs": [
+        "canonical/current/Garden_System_v15.5_FULL_2026-09-12.txt:[S-BRIDGE]",
+        "canonical/current/Garden_System_v15.5_FULL_2026-09-12.txt:#5.5A"
+      ],
+      "operator_registration": "LEVEL2_READER_EXPLICIT",
+      "registered_operators": [
+        "encode", "decode", "project", "apply", "compose", "align", "transform",
+        "approximate", "analyze_recursion"
+      ],
+      "registered_laws": [],
+      "registered_non_laws": [
+        "REPRESENTATION_IS_NOT_IDENTITY",
+        "SIMILARITY_IS_NOT_TRUTH",
+        "REACHABILITY_IS_NOT_CAUSALITY",
+        "FIXED_POINT_EXISTENCE_IS_NOT_CONVERGENCE_STABILITY_OR_TERMINATION",
+        "OPTIMIZATION_IS_NOT_ADMISSIBILITY"
+      ],
+      "condition": "Applicable only when a semantic-to-representation/operator transformation is actually invoked by the governed evolution path.",
+      "frontier_note": "Bridge is not activated merely because software uses JSON, hashes or ordinary Python data structures."
+    }
+  }
+}

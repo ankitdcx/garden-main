@@ -122,6 +122,19 @@
       "effect_semantics": "Pure conformance validation; grants no authority, approval, proof from evidence, or canonical promotion.",
       "proof_obligations": ["do-nothing-explicit", "bidirectional-gaps", "evidence-not-proof", "proof-not-authorization", "reason-not-authorization", "epoch-root-bound"],
       "test_refs": ["implementation/tests/test_evolution_reasoning.py"]
+    },
+    {
+      "contract_id": "FC-EVOL-ALGEBRA-001",
+      "path": "implementation/garden_kernel/evolution_algebra.py",
+      "function": "validate_algebra_usage",
+      "affects": ["CONFORMANCE", "ORCHESTRATION", "EVIDENCE"],
+      "input_semantics": "Action/DesignEpoch/source-root-bound algebra usage receipt plus bounded REG-ALGEBRA-001 profile for Process, Policy, Decision, Conformance, Evidence and Bridge.",
+      "output_semantics": "GardenEvolutionAlgebraValidationReceipt/v1 separating APPLIED, FRONTIER and conditional NOT_APPLICABLE algebra instances while preserving required frontier count.",
+      "error_semantics": "Stale identity, self-asserted trust, unregistered operator, undeclared law, hidden required applicability, or missing non-law acknowledgement raises SemanticError.",
+      "unknown_semantics": "Missing executable signatures remain FRONTIER and never become semantic compliance; conditional Bridge may be NOT_APPLICABLE only with an explicit reason.",
+      "effect_semantics": "Pure conformance validation; grants no authority and does not mutate Garden v15.5, ActionGate, policy, proof or evidence state.",
+      "proof_obligations": ["undeclared-laws-rejected", "unregistered-operators-rejected", "frontier-not-compliance", "required-algebra-not-hidden", "bridge-conditional", "authorization-not-evaluated-here"],
+      "test_refs": ["implementation/tests/test_evolution_algebra.py"]
     }
   ]
 }
