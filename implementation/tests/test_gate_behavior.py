@@ -3,7 +3,12 @@ import unittest
 from garden_kernel.evolution_actions import CONTRACTS, EvolutionAction, EvolutionVerb
 from garden_kernel.evolution_authority import EvolutionAgentRole, make_role_envelope
 from garden_kernel.evolution_epoch import EvolutionArtifactBinding, EvolutionArtifactKind
-from garden_kernel.evolution_gate import EvolutionGateContext, GateDecision, evaluate_evolution_action
+from garden_kernel.evolution_gate import (
+    EvolutionGateContext,
+    EvolutionGateLog,
+    GateDecision,
+    evaluate_evolution_action,
+)
 
 
 def make_action(verb, subject):
@@ -25,29 +30,43 @@ def delta(epoch="v15.5"):
     return EvolutionArtifactBinding(
         artifact_id="D1", kind=EvolutionArtifactKind.DELTA, design_epoch=epoch,
         dependencies={"canonical_root": "abc"},
-        required_dependencies=frozenset({"canonical_root"}), derived_from_refs=("F1",),
+        required_dependencies=frozenset({"canonical_root"}),
+        derived_from_refs=("F1",),
+        source_obligation_refs=("Garden_System:DesignEpoch",),
     )
 
 
+def decide(action, context):
+    log = EvolutionGateLog()
+    receipt = evaluate_evolution_action(action, context, log)
+    return receipt, log
+
+
 class GateBehaviorTests(unittest.TestCase):
-    def test_authorized_proposal_allows(self):
+    def test_authorized_proposal_allows_and_is_logged(self):
         a = make_action(EvolutionVerb.PROPOSE, "mechanism:A")
         ctx = EvolutionGateContext("v15.5", {"canonical_root": "abc"}, (envelope(EvolutionAgentRole.REVIEWER, "mechanism:A"),))
-        self.assertEqual(evaluate_evolution_action(a, ctx).decision, GateDecision.ALLOW)
+        receipt, log = decide(a, ctx)
+        self.assertEqual(receipt.decision, GateDecision.ALLOW)
+        self.assertEqual(log.receipts, [receipt])
 
-    def test_missing_authority_escalates(self):
+    def test_missing_authority_escalates_and_is_logged(self):
         a = make_action(EvolutionVerb.PROPOSE, "mechanism:A")
         ctx = EvolutionGateContext("v15.5", {"canonical_root": "abc"}, ())
-        self.assertEqual(evaluate_evolution_action(a, ctx).decision, GateDecision.ESCALATE)
+        receipt, log = decide(a, ctx)
+        self.assertEqual(receipt.decision, GateDecision.ESCALATE)
+        self.assertEqual(log.receipts, [receipt])
 
-    def test_stale_delta_rejects_accumulation(self):
+    def test_stale_delta_rejects_accumulation_and_is_logged(self):
         a = make_action(EvolutionVerb.ACCUMULATE, "successor:v15.6")
         ctx = EvolutionGateContext(
             "v15.6", {"canonical_root": "abc"},
             (envelope(EvolutionAgentRole.ACCUMULATOR, "successor:v15.6"),),
             bound_inputs=(delta("v15.5"),),
         )
-        self.assertEqual(evaluate_evolution_action(a, ctx).decision, GateDecision.REJECT)
+        receipt, log = decide(a, ctx)
+        self.assertEqual(receipt.decision, GateDecision.REJECT)
+        self.assertEqual(log.receipts, [receipt])
 
     def test_materialization_requires_fresh_review_or_human_signoff(self):
         a = make_action(EvolutionVerb.MATERIALIZE, "successor:v15.6")
@@ -57,8 +76,10 @@ class GateBehaviorTests(unittest.TestCase):
             authority_envelopes=(envelope(EvolutionAgentRole.MATERIALIZER, "successor:v15.6"),),
             bound_inputs=(delta(),),
         )
-        self.assertEqual(evaluate_evolution_action(a, EvolutionGateContext(**base)).decision, GateDecision.ESCALATE)
-        self.assertEqual(evaluate_evolution_action(a, EvolutionGateContext(**base, independent_review=True)).decision, GateDecision.ALLOW)
+        denied, _ = decide(a, EvolutionGateContext(**base))
+        allowed, _ = decide(a, EvolutionGateContext(**base, independent_review=True))
+        self.assertEqual(denied.decision, GateDecision.ESCALATE)
+        self.assertEqual(allowed.decision, GateDecision.ALLOW)
 
 
 if __name__ == "__main__":
