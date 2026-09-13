@@ -1,0 +1,124 @@
+{
+  "schema": "GardenDesignDeltaSet/v1",
+  "delta_set_id": "DELTASET-2026-09-13-GSL-GAP-CLOSURE",
+  "predecessor_release": "Garden v15.5",
+  "predecessor_source_root_sha256": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+  "candidate_release": "Garden v15.6",
+  "status": "CANDIDATE_IMPLEMENTATION_AND_CROSS_REFERENCE_IN_PROGRESS",
+  "human_authorization": "User explicitly requested review and closure of all nine supplied findings; canonical promotion remains a separate human act after full propagation/verification.",
+  "canonical_predecessor_immutable": true,
+  "topology_change": false,
+  "new_core_objects": 0,
+  "new_core_relations": 0,
+  "new_top_level_engines": 0,
+  "new_gsl_primitives": 0,
+  "deltas": [
+    {
+      "delta_id": "V156-GAP-001",
+      "title": "Bootstrap trust root for first accepted DesignEpoch",
+      "severity": "HIGH",
+      "source_refs": ["[T-ARCH] §8.11", "[T-IMPLEMENT] §12.35.15", "SAP-008", "P24", "DCC-018", "GSL-SELF-009", "DEPOCH-002", "DEPOCH-006", "DEPOCH-007"],
+      "disposition": "STRENGTHEN_EXISTING_TRUST_ROOT_CEREMONY",
+      "change": "Define a BootstrapTrustRootCeremony profile over the existing TrustRootCeremonyReceipt and add FrozenVerifierBinding. The first accepted DesignEpoch must bind a content-addressed ceremony transcript, named independent verifier implementations/checker roots, immutable test corpus/root, participants/witnesses/authority and explicit bootstrap scope. Before this receipt passes, a source may be SPECIFIED_DESIGNEPOCH_CANDIDATE but not ACCEPTED.",
+      "schema_ids": ["SCHEMA-977CD6ABF7", "SCHEMA-B45623B44B"],
+      "do_nothing": "Leaving bootstrap independence implicit permits the first verifier trust root to be selected without a machine-checkable non-self-verification ceremony; this is incompatible with P24/GSL-SELF-009 at the initial epoch boundary.",
+      "tests": ["TEST-DEPOCH-BOOT-001", "test_first_epoch_requires_ceremony_transcript"]
+    },
+    {
+      "delta_id": "V156-GAP-002",
+      "title": "Shared-state-mediated authority composition",
+      "severity": "HIGH",
+      "source_refs": ["MAC-001", "AGT-013", "AGT-008", "UPA-007", "UPA-010", "PROC-002", "PROC-005", "REL-ALG-001"],
+      "disposition": "FORMALIZE_EXISTING_CONTAINMENT_RULE",
+      "change": "Action-eligible Claims/artifacts carry an AuthorityProvenanceChain. If actor B executes action a because of artifact x produced/authorized through principal/agent A, effective authority is intersection(B action authority, every controlling authority in x.authority_provenance). Shared-state handoff is an authority composition edge, not an authority reset. Empty intersection rejects execution.",
+      "schema_ids": ["SCHEMA-29C6CEDD2A", "SCHEMA-8A6F0B6EA4"],
+      "do_nothing": "MAC-001 states the non-amplification property but does not currently make knowledge-mediated causal reachability an explicit authority-composition input, leaving implementation latitude for A-write/B-act amplification.",
+      "tests": ["TEST-MAC-007", "test_shared_state_authority_amplification"]
+    },
+    {
+      "delta_id": "V156-GAP-003",
+      "title": "Deterministic let binding grammar",
+      "severity": "MEDIUM",
+      "source_refs": ["[T-GSL] §12.4", "LANG-001", "GSL-SELF-002"],
+      "disposition": "GRAMMAR_REPAIR",
+      "change": "Replace optional-expression LetExpr ambiguity with LetExpr ::= let Pattern (: Type)? = Expr in Expr and introduce LetStmt ::= let Pattern (: Type)? = Expr ;?. LetStmt is valid only in BlockExpr/module statement scope, introduces a lexical binding in that enclosing scope and has Unit result; a bare let is no longer parsed as an expression.",
+      "schema_ids": ["SCHEMA-DB03DABC62"],
+      "do_nothing": "The current optional 'in Expr' permits a complete expression with no specified result/scope and forces compilers to invent semantics.",
+      "tests": ["TEST-LANG-LET-001", "test_let_without_in_has_defined_scope"]
+    },
+    {
+      "delta_id": "V156-GAP-004",
+      "title": "Deterministic QueryStmt result semantics",
+      "severity": "MEDIUM",
+      "source_refs": ["[T-GSL] §12.4", "FUNC-001..010", "GSL-SELF-006"],
+      "disposition": "GRAMMAR_SEMANTIC_REPAIR",
+      "change": "QueryStmt resolves a QueryResultBinding. `query Expr into ID` binds the typed query result to ID in the enclosing lexical scope. A query without `into` must target a declared module/process output sink in the active FunctionContract; otherwise compilation fails QUERY_RESULT_UNCONSUMED. Query does not implicitly mutate Knowledge or create Evidence.",
+      "schema_ids": ["SCHEMA-D17BC951EC"],
+      "do_nothing": "Current grammar admits a result without specifying destination, scope or distinction from eval, defeating deterministic compilation and FunctionContract closure.",
+      "tests": ["TEST-LANG-QUERY-001", "test_query_result_destination_is_explicit"]
+    },
+    {
+      "delta_id": "V156-GAP-005",
+      "title": "Causal-level-qualified causes relation",
+      "severity": "MEDIUM",
+      "source_refs": ["[T-GSL] §2.2", "[T-GSL] §2.3 Causality", "RSN-010", "INF-013", "GXE-003", "REP-009"],
+      "disposition": "TYPE_REFINEMENT_WITHOUT_NEW_CORE_RELATION",
+      "change": "The existing Core Relation `causes` remains one relation identity but every operational causes edge carries CausalRelationLevelBinding(level:C0..C4, model/assumption/evidence/identification refs as applicable). Consumers declare a minimum causal level; consuming a lower-level edge as a stronger level returns CAUSAL_LEVEL_UNDERFLOW. C2+ requires a declared causal/mechanistic model; C3/C4 additionally require the applicable intervention/counterfactual identification obligations.",
+      "schema_ids": ["SCHEMA-897FB2274E"],
+      "do_nothing": "Existing non-amplification rules protect causal Claims but the raw relation type does not itself prevent a C0/C1 edge from being consumed as C2+ by an implementation.",
+      "tests": ["TEST-CAUSAL-LEVEL-001", "test_causes_requires_explicit_level"]
+    },
+    {
+      "delta_id": "V156-GAP-006",
+      "title": "R0 Sanity Gate separated from Reason modes",
+      "severity": "MEDIUM",
+      "source_refs": ["[S-REASON] R0..R4", "PROC-020", "INF-010", "RSN-019"],
+      "disposition": "SEMANTIC_REFINEMENT",
+      "change": "R0 remains the historical assurance-depth label for transition sanity but is typed as SanityGate, a terminating deterministic/total predicate over available transition type/scope/abstraction/obvious contradiction inputs with PASS|FAIL|UNKNOWN. Engine.Reason modes are R1..R4. Invoking R1..R4 may require SanityGate first; SanityGate does not recursively invoke Engine.Reason, closing the self-reference at the minimum tier.",
+      "schema_ids": ["SCHEMA-29A1A917BC"],
+      "do_nothing": "Calling R0 a Reason tier while Reason is logically present at every meaningful transition leaves a semantic self-reference whose practical TerminationContract does not define the base case.",
+      "tests": ["TEST-REASON-R0-001", "test_r0_is_not_reason_mode"]
+    },
+    {
+      "delta_id": "V156-GAP-007",
+      "title": "Rights registry ordering clarification",
+      "severity": "LOW",
+      "source_refs": ["[A-RIGHTS]", "CON-RT-001..003", "RIGHT-001..027"],
+      "disposition": "NON_SEMANTIC_PRESENTATION_REPAIR",
+      "change": "Generated/readable rights views order active RIGHT-001..025 first and then explicit non-active RIGHT-026 RESERVED and RIGHT-027 ON_HOLD. Canonical identifiers and definitions do not change. Add a note that identifier order is not semantic and reserved/on-hold slots may remain historically interleaved in immutable source history.",
+      "schema_ids": [],
+      "do_nothing": "Current owner text is semantically clear but the 026/027-before-024/025 layout is unnecessarily confusing to human readers and generated views.",
+      "tests": ["TEST-RIGHTS-VIEW-001"]
+    },
+    {
+      "delta_id": "V156-GAP-008",
+      "title": "Committed provenance class manifest distinguishes redaction from absence",
+      "severity": "MEDIUM",
+      "source_refs": ["PROV-001..006", "GXE-006", "EXP-017..021", "P14", "AUD-011"],
+      "disposition": "PROVENANCE_STRENGTHENING",
+      "change": "High-assurance provenance views carry a ProvenanceClassManifest committed by Merkle/content root. The manifest declares expected node classes and edge kinds without exposing protected payloads. For an authorized view, an expected-but-undisclosed class is REDACTED/PROTECTED with a commitment; an expected class with no valid committed node/edge is PROVENANCE_GAP; a class outside the declared applicable manifest is NOT_APPLICABLE. Redaction metadata remains privacy-minimized.",
+      "schema_ids": ["SCHEMA-1A6E45501B", "SCHEMA-30D7E367A8"],
+      "do_nothing": "PROV-005 requires protected gaps to be declared but the returned lineage view lacks a machine-checkable way to distinguish redaction from true absence without inspecting hidden graph state.",
+      "tests": ["TEST-PROV-MANIFEST-001", "test_redaction_distinct_from_absence"]
+    },
+    {
+      "delta_id": "V156-GAP-009",
+      "title": "Catalogue closure for AuthorityDecl and EffectDecl",
+      "severity": "LOW",
+      "source_refs": ["[T-GSL] §12.4", "[A-CATALOG]", "TYPE-COMP-001", "REF-CLOSE-002", "GSL-SELF-004"],
+      "disposition": "CATALOGUE_REPAIR",
+      "change": "Register AuthorityDecl and EffectDecl as FOUNDATIONAL_CONTRACT catalogue entries with stable SchemaIDs and generated machine layouts. Their grammar productions remain unchanged. This avoids inventing a second semantic identity or folding away useful explicit declarations.",
+      "schema_ids": ["SCHEMA-A8447C581A", "SCHEMA-D1DD528992"],
+      "do_nothing": "The grammar exposes machine-facing declaration forms whose catalogue/schema targets are not independently resolvable, leaving a type/reference-closure gap.",
+      "tests": ["TEST-CATALOG-LANG-001"]
+    }
+  ],
+  "required_cross_document_propagation": [
+    "Garden_User v15.6 explanation/backlinks where reader-visible",
+    "Garden_System v15.6 flow/tier/authority composition bindings",
+    "Garden_Technical v15.6 grammar/type/provenance/DesignEpoch contracts",
+    "Garden_Annexure v15.6 SchemaIDs/invariants/tests/catalogue/rights-view note",
+    "Garden_Theories v15.6 only where causal-level/provenance analytical boundaries need a reference note; no theory topology change"
+  ],
+  "promotion_boundary": "This delta set does not itself create Garden v15.6 canon. Materialization requires WP-006 consistency, exact-diff/drift, reference closure, applicable proof/conformance receipts and separate human canonical promotion."
+}

@@ -1,0 +1,163 @@
+{
+  "schema": "GardenRepoConformanceProfile/v1",
+  "profile_id": "GARDEN-MAIN-GSL-CONFORMANCE-v0.1",
+  "design_epoch": "Garden v15.5:63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+  "canonical_source_root_sha256": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+  "semantic_compliance_proved": false,
+  "coverage_boundary": "Rules classify repository artifacts and declare change-time module applicability. Classification does not prove semantic conformance, proof validity, implementation completeness, empirical validation, authorization, or certification.",
+  "rules": [
+    {
+      "rule_id": "CANONICAL-FIVE-FILE-SOURCE",
+      "pattern": "canonical/current/Garden_*_FULL_*.txt",
+      "artifact_class": "CANONICAL_SOURCE",
+      "coverage_state": "DECLARED",
+      "required_change_modules": ["SOURCE_IDENTITY", "GSL_TYPING", "DESIGN_EPOCH", "COMPARE", "REASON", "PROOF", "AAP", "AUTHORITY", "ACTION_GATE", "PROCESS_ALGEBRA", "POLICY_ALGEBRA", "DECISION_ALGEBRA", "CONFORMANCE_ALGEBRA", "EVIDENCE_ALGEBRA", "BRIDGE_ALGEBRA", "AUDIT", "COMPLIANCE", "HUMAN_SOVEREIGNTY"],
+      "conditional_change_modules": ["SECURITY", "PRIVACY", "SAFETY", "THEORY_PROFILE"],
+      "note": "Published predecessor source is immutable. These requirements apply to governed successor materialization/promotion, not in-place edits."
+    },
+    {
+      "rule_id": "CANONICAL-METADATA",
+      "pattern": "canonical/current/*",
+      "artifact_class": "CONFIGURATION",
+      "coverage_state": "DECLARED",
+      "required_change_modules": ["SOURCE_IDENTITY", "DESIGN_EPOCH", "SOURCE_OBLIGATION", "PIPELINE_CONFIG_DELTA", "AUTHORITY", "ACTION_GATE", "CONFORMANCE_ALGEBRA", "AUDIT", "COMPLIANCE", "HUMAN_SOVEREIGNTY"],
+      "conditional_change_modules": ["COMPARE", "REASON", "PROOF"],
+      "note": "Canonical identity metadata is load-bearing and cannot drift independently of the five-file source."
+    },
+    {
+      "rule_id": "IMPLEMENTATION-TEST",
+      "pattern": "implementation/tests/*.py",
+      "artifact_class": "TEST",
+      "coverage_state": "DECLARED",
+      "required_change_modules": ["SOURCE_IDENTITY", "DESIGN_EPOCH", "SOURCE_OBLIGATION", "DEPENDENCY", "CONFORMANCE_ALGEBRA", "EVIDENCE_ALGEBRA", "AUDIT"],
+      "conditional_change_modules": ["COMPARE", "REASON", "PROOF", "SECURITY", "PRIVACY", "SAFETY"],
+      "note": "Tests are evidence producers; a passing test does not by itself establish proof, authorization or certification."
+    },
+    {
+      "rule_id": "IMPLEMENTATION-KERNEL",
+      "pattern": "implementation/garden_kernel/*.py",
+      "artifact_class": "IMPLEMENTATION",
+      "coverage_state": "DECLARED",
+      "required_change_modules": ["SOURCE_IDENTITY", "GSL_TYPING", "DESIGN_EPOCH", "SOURCE_OBLIGATION", "DEPENDENCY", "FUNCTION_CONTRACT", "CONFORMANCE_ALGEBRA", "AUDIT", "COMPLIANCE"],
+      "conditional_change_modules": ["COMPARE", "REASON", "PROOF", "AAP", "AUTHORITY", "ACTION_GATE", "PROCESS_ALGEBRA", "POLICY_ALGEBRA", "DECISION_ALGEBRA", "EVIDENCE_ALGEBRA", "BRIDGE_ALGEBRA", "HUMAN_SOVEREIGNTY", "SECURITY", "PRIVACY", "SAFETY", "THEORY_PROFILE"],
+      "note": "Executable semantic code requires FunctionContract closure; consequential modules apply according to effects."
+    },
+    {
+      "rule_id": "GITHUB-WORKFLOW-YML",
+      "pattern": ".github/workflows/*.yml",
+      "artifact_class": "WORKFLOW",
+      "coverage_state": "DECLARED",
+      "required_change_modules": ["SOURCE_IDENTITY", "DESIGN_EPOCH", "SOURCE_OBLIGATION", "PIPELINE_CONFIG_DELTA", "AAP", "AUTHORITY", "ACTION_GATE", "PROCESS_ALGEBRA", "POLICY_ALGEBRA", "DECISION_ALGEBRA", "CONFORMANCE_ALGEBRA", "EVIDENCE_ALGEBRA", "AUDIT", "COMPLIANCE", "HUMAN_SOVEREIGNTY", "SECURITY"],
+      "conditional_change_modules": ["COMPARE", "REASON", "PROOF", "PRIVACY", "SAFETY", "BRIDGE_ALGEBRA"],
+      "note": "Automation configuration encodes operating policy and is governed as pipeline configuration."
+    },
+    {
+      "rule_id": "GITHUB-WORKFLOW-YAML",
+      "pattern": ".github/workflows/*.yaml",
+      "artifact_class": "WORKFLOW",
+      "coverage_state": "DECLARED",
+      "required_change_modules": ["SOURCE_IDENTITY", "DESIGN_EPOCH", "SOURCE_OBLIGATION", "PIPELINE_CONFIG_DELTA", "AAP", "AUTHORITY", "ACTION_GATE", "PROCESS_ALGEBRA", "POLICY_ALGEBRA", "DECISION_ALGEBRA", "CONFORMANCE_ALGEBRA", "EVIDENCE_ALGEBRA", "AUDIT", "COMPLIANCE", "HUMAN_SOVEREIGNTY", "SECURITY"],
+      "conditional_change_modules": ["COMPARE", "REASON", "PROOF", "PRIVACY", "SAFETY", "BRIDGE_ALGEBRA"],
+      "note": "Automation configuration encodes operating policy and is governed as pipeline configuration."
+    },
+    {
+      "rule_id": "WORK-PACKAGES",
+      "pattern": "work_packages/*",
+      "artifact_class": "WORK_PACKAGE",
+      "coverage_state": "DECLARED",
+      "required_change_modules": ["SOURCE_IDENTITY", "GSL_TYPING", "DESIGN_EPOCH", "SOURCE_OBLIGATION", "DEPENDENCY", "COMPARE", "REASON", "AUDIT", "COMPLIANCE"],
+      "conditional_change_modules": ["PROOF", "AAP", "AUTHORITY", "ACTION_GATE", "HUMAN_SOVEREIGNTY", "SECURITY", "PRIVACY", "SAFETY", "THEORY_PROFILE"],
+      "note": "Work packages are derived plans and must not silently create canonical obligations or authority."
+    },
+    {
+      "rule_id": "REVIEWS",
+      "pattern": "reviews/*",
+      "artifact_class": "REVIEW",
+      "coverage_state": "DECLARED",
+      "required_change_modules": ["SOURCE_IDENTITY", "DESIGN_EPOCH", "COMPARE", "REASON", "EVIDENCE_ALGEBRA", "AUDIT"],
+      "conditional_change_modules": ["SOURCE_OBLIGATION", "PROOF", "CONFORMANCE_ALGEBRA", "SECURITY", "PRIVACY", "SAFETY", "THEORY_PROFILE"],
+      "note": "Review conclusions remain claims/evidence until separately admitted and authorized."
+    },
+    {
+      "rule_id": "SCRIPTS",
+      "pattern": "scripts/*.py",
+      "artifact_class": "TOOLING",
+      "coverage_state": "DECLARED",
+      "required_change_modules": ["SOURCE_IDENTITY", "GSL_TYPING", "DESIGN_EPOCH", "SOURCE_OBLIGATION", "DEPENDENCY", "FUNCTION_CONTRACT", "CONFORMANCE_ALGEBRA", "AUDIT", "COMPLIANCE"],
+      "conditional_change_modules": ["COMPARE", "REASON", "PROOF", "AAP", "AUTHORITY", "ACTION_GATE", "PROCESS_ALGEBRA", "POLICY_ALGEBRA", "DECISION_ALGEBRA", "EVIDENCE_ALGEBRA", "SECURITY", "PRIVACY", "SAFETY"],
+      "note": "Tooling that affects evidence/admission/source identity is executable Garden infrastructure."
+    },
+    {
+      "rule_id": "BOOTSTRAP",
+      "pattern": "bootstrap/*",
+      "artifact_class": "BOOTSTRAP",
+      "coverage_state": "DECLARED",
+      "required_change_modules": ["SOURCE_IDENTITY", "DESIGN_EPOCH", "SOURCE_OBLIGATION", "DEPENDENCY", "CONFORMANCE_ALGEBRA", "AUDIT"],
+      "conditional_change_modules": ["GSL_TYPING", "FUNCTION_CONTRACT", "COMPARE", "REASON", "PROOF", "AAP", "AUTHORITY", "ACTION_GATE", "PROCESS_ALGEBRA", "POLICY_ALGEBRA", "DECISION_ALGEBRA", "EVIDENCE_ALGEBRA", "SECURITY"],
+      "note": "Bootstrap/SCEP artifacts are historical or bounded implementations and must not silently override the current kernel."
+    },
+    {
+      "rule_id": "GSL-PROFILE",
+      "pattern": "gsl/*",
+      "artifact_class": "CONFIGURATION",
+      "coverage_state": "DECLARED",
+      "required_change_modules": ["SOURCE_IDENTITY", "DESIGN_EPOCH", "SOURCE_OBLIGATION", "PIPELINE_CONFIG_DELTA", "COMPARE", "REASON", "AUTHORITY", "ACTION_GATE", "CONFORMANCE_ALGEBRA", "AUDIT", "COMPLIANCE", "HUMAN_SOVEREIGNTY"],
+      "conditional_change_modules": ["PROOF", "SECURITY", "PRIVACY", "SAFETY"],
+      "note": "Changing the conformance profile changes how future work is governed and therefore requires governed config-delta treatment."
+    },
+    {
+      "rule_id": "ROOT-JSON-DATA",
+      "pattern": "*.json",
+      "artifact_class": "DATA",
+      "coverage_state": "DECLARED",
+      "required_change_modules": ["SOURCE_IDENTITY", "DESIGN_EPOCH", "AUDIT"],
+      "conditional_change_modules": ["SOURCE_OBLIGATION", "PIPELINE_CONFIG_DELTA", "EVIDENCE_ALGEBRA", "CONFORMANCE_ALGEBRA", "AUTHORITY", "ACTION_GATE", "SECURITY", "PRIVACY"],
+      "note": "Root JSON may be config, evidence or metadata; effect-specific modules remain conditional."
+    },
+    {
+      "rule_id": "ROOT-MARKDOWN-DOC",
+      "pattern": "*.md",
+      "artifact_class": "DOCUMENTATION",
+      "coverage_state": "DECLARED",
+      "required_change_modules": ["SOURCE_IDENTITY", "AUDIT"],
+      "conditional_change_modules": ["DESIGN_EPOCH", "SOURCE_OBLIGATION", "COMPARE", "REASON", "BRIDGE_ALGEBRA", "COMPLIANCE"],
+      "note": "Documentation is not automatically normative. Normative/translation effects trigger stronger bindings."
+    },
+    {
+      "rule_id": "ROOT-TEXT-DOC",
+      "pattern": "*.txt",
+      "artifact_class": "DOCUMENTATION",
+      "coverage_state": "DECLARED",
+      "required_change_modules": ["SOURCE_IDENTITY", "AUDIT"],
+      "conditional_change_modules": ["DESIGN_EPOCH", "SOURCE_OBLIGATION", "COMPARE", "REASON", "BRIDGE_ALGEBRA", "COMPLIANCE"],
+      "note": "Non-canonical text is documentation unless a more specific rule applies."
+    },
+    {
+      "rule_id": "GITHUB-METADATA",
+      "pattern": ".github/*",
+      "artifact_class": "CONFIGURATION",
+      "coverage_state": "DECLARED",
+      "required_change_modules": ["SOURCE_IDENTITY", "AUDIT", "COMPLIANCE"],
+      "conditional_change_modules": ["DESIGN_EPOCH", "SOURCE_OBLIGATION", "PIPELINE_CONFIG_DELTA", "AUTHORITY", "ACTION_GATE", "SECURITY", "PRIVACY"],
+      "note": "Repository governance metadata is configuration; effect-specific controls apply when it changes authority/policy/execution."
+    },
+    {
+      "rule_id": "REPO-MISC-CONFIG",
+      "pattern": ".gitignore",
+      "artifact_class": "CONFIGURATION",
+      "coverage_state": "DECLARED",
+      "required_change_modules": ["SOURCE_IDENTITY", "AUDIT"],
+      "conditional_change_modules": ["SECURITY", "PRIVACY"],
+      "note": "Repository-local configuration."
+    },
+    {
+      "rule_id": "UNCLASSIFIED-FRONTIER",
+      "pattern": "*",
+      "artifact_class": "FRONTIER",
+      "coverage_state": "FRONTIER",
+      "required_change_modules": [],
+      "conditional_change_modules": ["GSL_TYPING", "SOURCE_IDENTITY", "DESIGN_EPOCH", "SOURCE_OBLIGATION", "DEPENDENCY", "FUNCTION_CONTRACT", "COMPARE", "REASON", "PROOF", "AAP", "AUTHORITY", "ACTION_GATE", "PROCESS_ALGEBRA", "POLICY_ALGEBRA", "DECISION_ALGEBRA", "CONFORMANCE_ALGEBRA", "EVIDENCE_ALGEBRA", "BRIDGE_ALGEBRA", "AUDIT", "COMPLIANCE", "HUMAN_SOVEREIGNTY", "SECURITY", "PRIVACY", "SAFETY", "PIPELINE_CONFIG_DELTA", "THEORY_PROFILE"],
+      "note": "Explicit frontier. No semantic compliance claim is permitted until a specific rule classifies this artifact."
+    }
+  ]
+}
