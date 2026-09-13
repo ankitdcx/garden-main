@@ -1,0 +1,34 @@
+{
+  "work_package_id": "WP-007",
+  "priority": "P0",
+  "title": "Garden-governed evolution pipeline",
+  "gap_class": "DERIVATION",
+  "objective": "Apply existing Garden/GSL mechanisms to the pipeline that evolves Garden itself, in strict order: typed actions, DesignEpoch binding, authority envelopes, ActionGate routing, config-as-delta, constitutional tier, and Level-2 falsifiability.",
+  "required_outputs": [
+    "Step 1: typed PROPOSE/TRIAGE/TEST/ACCUMULATE/MATERIALIZE action contracts with explicit pre/post conditions",
+    "Step 2: DesignEpoch binding for findings, tests, and deltas with stale re-derivation rules",
+    "Step 3: bounded agent authority envelopes with no self-minting, delegation expansion, or canonical-promotion authority",
+    "Step 4: ActionGate routing and receipts for every evolution action",
+    "Step 5: pipeline configuration represented as governed delta objects",
+    "Step 6: constitutional tier for gate/envelope/epoch-rule changes with human approval",
+    "Step 7: Level-2 falsifiability attacks on Garden governance of its own evolution"
+  ],
+  "acceptance": [
+    "No throughput scaling, integrator challenger, or findings ledger is activated before Steps 1-4 pass deterministic tests",
+    "No code delta lacks a source-obligation/provenance link",
+    "No agent can promote canon, mint its own authority, or expand authority through delegation",
+    "Published v15.5 remains immutable and successor materialization remains candidate-only until human promotion"
+  ],
+  "completed_steps": [
+    "STEP_1_TYPED_ACTIONS",
+    "STEP_2_DESIGN_EPOCH_BINDING",
+    "STEP_3_AUTHORITY_ENVELOPES",
+    "STEP_4_ACTION_GATE_ROUTING",
+    "STEP_5_CONFIG_AS_DELTA",
+    "STEP_6_CONSTITUTIONAL_TIER",
+    "STEP_7_LEVEL_2_FALSIFIABILITY"
+  ],
+  "status": "REFERENCE_IMPLEMENTATION_COMPLETE_PENDING_INTEGRATION",
+  "public_level2_reference": "garden-swarm ATTACK_SURFACE.md section 8; merged via PR #41",
+  "cmur_roles": ["FORMAL", "IMPLEMENTATION", "SKEPTIC", "EVIDENCE"]
+}
