@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import argparse
+import hashlib
 import json
 from pathlib import Path
 import sys
@@ -9,7 +10,7 @@ import sys
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "implementation"))
 
-from garden_kernel.evolution_audit import build_audit_chain, record_descriptor, validate_audit_chain  # noqa: E402
+from garden_kernel.evolution_audit import build_audit_chain, validate_audit_chain  # noqa: E402
 from garden_kernel.evolution_transport import load_source_identity  # noqa: E402
 
 
@@ -26,6 +27,31 @@ def _record_paths(values: list[str]) -> list[Path]:
     return sorted(paths, key=lambda p: p.as_posix())
 
 
+def _sha256(path: Path) -> str:
+    digest = hashlib.sha256()
+    with path.open("rb") as handle:
+        for block in iter(lambda: handle.read(65536), b""):
+            digest.update(block)
+    return digest.hexdigest()
+
+
+def _descriptor(path: Path) -> dict[str, str]:
+    payload = json.loads(path.read_text(encoding="utf-8"))
+    try:
+        record_ref = path.resolve().relative_to(ROOT.resolve()).as_posix()
+    except ValueError:
+        record_ref = path.resolve().as_posix()
+    action_id = str(payload.get("action_id") or (payload.get("action") or {}).get("action_id") or "CI-CONFORMANCE")
+    disposition = str(payload.get("decision") or payload.get("status") or payload.get("admission_status") or "RECORDED")
+    return {
+        "record_ref": record_ref,
+        "record_sha256": _sha256(path),
+        "record_schema": str(payload.get("schema", "UNKNOWN")),
+        "action_id": action_id,
+        "disposition": disposition,
+    }
+
+
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--output", required=True)
@@ -39,7 +65,7 @@ def main() -> int:
     if not paths:
         raise SystemExit("durable audit chain requires at least one receipt record")
 
-    descriptors = [record_descriptor(path, root=ROOT) for path in paths]
+    descriptors = [_descriptor(path) for path in paths]
     chain = build_audit_chain(
         descriptors,
         chain_id=args.chain_id,
