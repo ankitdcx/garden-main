@@ -19,6 +19,12 @@
     "No agent can promote canon, mint its own authority, or expand authority through delegation",
     "Published v15.5 remains immutable and successor materialization remains candidate-only until human promotion"
   ],
-  "status": "IN_PROGRESS_STEP_1",
+  "completed_steps": [
+    "STEP_1_TYPED_ACTIONS",
+    "STEP_2_DESIGN_EPOCH_BINDING",
+    "STEP_3_AUTHORITY_ENVELOPES",
+    "STEP_4_ACTION_GATE_ROUTING"
+  ],
+  "status": "IN_PROGRESS_STEP_5",
   "cmur_roles": ["FORMAL", "IMPLEMENTATION", "SKEPTIC", "EVIDENCE"]
 }
