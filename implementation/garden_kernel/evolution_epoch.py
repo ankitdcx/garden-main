@@ -27,12 +27,15 @@ class EvolutionArtifactBinding:
     dependencies: Mapping[str, str]
     required_dependencies: frozenset[str] | None
     derived_from_refs: tuple[str, ...] = ()
+    source_obligation_refs: tuple[str, ...] = ()
 
     def __post_init__(self) -> None:
         if not self.artifact_id.strip():
             raise SemanticError("artifact_id is required")
         if not self.design_epoch.strip():
             raise SemanticError("design_epoch is required")
+        if self.kind is EvolutionArtifactKind.DELTA and not self.source_obligation_refs:
+            raise SemanticError("DELTA requires at least one source obligation reference")
 
 
 @dataclass(frozen=True)
