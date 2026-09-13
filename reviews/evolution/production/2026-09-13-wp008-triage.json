@@ -34,6 +34,5 @@
     ]
   },
   "authority_ref": "AUTH-GARDEN-HOURLY-INTEGRATOR-v15.5",
-  "bound_inputs": [],
-  "governance_tier": "ORDINARY"
+  "bound_inputs": []
 }
