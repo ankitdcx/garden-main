@@ -335,8 +335,7 @@ class ProductionEvolutionTransportTests(unittest.TestCase):
         self.assertEqual(reviewed["decision"], "ALLOW")
         self.assertTrue(reviewed["trusted_attestations"]["independent_review"])
 
-    def test_real_cli_blocks_fabricated_authority_but_writes_receipt(self):
-        request = base_request(verb="PROPOSE", authority_ref="AUTH-FABRICATED")
+    def _run_cli(self, request: dict) -> tuple[subprocess.CompletedProcess[str], dict]:
         manifest = {
             "schema": "GardenCanonicalSourceManifest/v1",
             "release": "Garden v15.5",
@@ -367,12 +366,29 @@ class ProductionEvolutionTransportTests(unittest.TestCase):
                 text=True,
                 capture_output=True,
             )
-            self.assertEqual(proc.returncode, 2, proc.stdout + proc.stderr)
-            self.assertTrue(receipt_path.exists())
-            receipt = json.loads(receipt_path.read_text(encoding="utf-8"))
-            self.assertEqual(receipt["decision"], "REJECT")
-            self.assertTrue(receipt["governance"]["verified"])
-            self.assertEqual(receipt["receipt_visibility"], "PRESERVE_ALLOW_REJECT_ESCALATE")
+            self.assertTrue(receipt_path.exists(), proc.stdout + proc.stderr)
+            return proc, json.loads(receipt_path.read_text(encoding="utf-8"))
+
+    def test_real_cli_blocks_fabricated_authority_but_writes_receipt(self):
+        proc, receipt = self._run_cli(
+            base_request(verb="PROPOSE", authority_ref="AUTH-FABRICATED")
+        )
+        self.assertEqual(proc.returncode, 2, proc.stdout + proc.stderr)
+        self.assertEqual(receipt["decision"], "REJECT")
+        self.assertFalse(receipt["governance"]["verified"])
+        self.assertEqual(receipt["receipt_visibility"], "PRESERVE_ALLOW_REJECT_ESCALATE")
+
+    def test_real_cli_valid_authority_derives_and_verifies_governance(self):
+        proc, receipt = self._run_cli(
+            base_request(verb="PROPOSE", authority_ref="AUTH-REVIEWER")
+        )
+        self.assertEqual(proc.returncode, 0, proc.stdout + proc.stderr)
+        self.assertEqual(receipt["decision"], "ALLOW")
+        self.assertTrue(receipt["governance"]["verified"])
+        self.assertEqual(receipt["governance"]["evidence_source"], "TRUSTED_GIT_DIFF")
+        self.assertFalse(receipt["trusted_attestations"]["human_signoff"])
+        self.assertFalse(receipt["trusted_attestations"]["independent_review"])
+        self.assertFalse(receipt["canonical_pointer_changed"])
 
 
 if __name__ == "__main__":
