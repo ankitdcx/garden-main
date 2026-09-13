@@ -20,9 +20,12 @@ jobs:
         with:
           python-version: '3.12'
 
+      - name: Compile integration-provenance code
+        run: python -m compileall -q implementation/garden_kernel/integration_provenance.py scripts/check_multi_agent_pr.py
+
       - name: Run integration-provenance regression tests
         run: |
-          python -m pytest -q implementation/tests/test_integration_provenance.py implementation/tests/test_multi_agent_pr_check.py
+          python -m unittest implementation.tests.test_integration_provenance implementation.tests.test_multi_agent_pr_check -v
 
       - name: Check PR work intent and concurrent composition
         env:
