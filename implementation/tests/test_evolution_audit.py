@@ -1,10 +1,13 @@
 from __future__ import annotations
 
 import copy
+from pathlib import Path
+import tempfile
 import unittest
 
 from garden_kernel.core import SemanticError
 from garden_kernel.evolution_audit import GENESIS_HASH, build_audit_chain, validate_audit_chain
+from scripts.build_evolution_audit_chain import _record_paths
 
 
 EPOCH = "v15.5"
@@ -70,6 +73,19 @@ class EvolutionAuditTests(unittest.TestCase):
         bad[0]["human_signoff"] = True
         with self.assertRaisesRegex(SemanticError, "may not mint trust fields"):
             build_audit_chain(bad, chain_id="RUN-1", design_epoch=EPOCH, canonical_source_root_sha256=ROOT)
+
+    def test_record_paths_accept_missing_absolute_receipt_source(self):
+        with tempfile.TemporaryDirectory() as temp:
+            root = Path(temp)
+            existing = root / "conformance"
+            existing.mkdir()
+            receipt = existing / "receipt.json"
+            receipt.write_text("{}\n", encoding="utf-8")
+            missing = root / "gate-receipts-that-do-not-exist"
+
+            found = _record_paths([str(existing), str(missing)])
+
+            self.assertEqual(found, [receipt])
 
 
 if __name__ == "__main__":
