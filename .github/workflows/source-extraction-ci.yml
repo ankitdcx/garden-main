@@ -5,12 +5,14 @@ on:
     paths:
       - 'implementation/garden_kernel/extractor.py'
       - 'scripts/extract_obligations.py'
+      - 'scripts/build_source_manifest.py'
       - 'canonical/current/**'
       - '.github/workflows/source-extraction-ci.yml'
   pull_request:
     paths:
       - 'implementation/garden_kernel/extractor.py'
       - 'scripts/extract_obligations.py'
+      - 'scripts/build_source_manifest.py'
       - 'canonical/current/**'
       - '.github/workflows/source-extraction-ci.yml'
   workflow_dispatch:
@@ -27,6 +29,8 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
+      - name: Verify current canonical source manifest
+        run: python scripts/build_source_manifest.py --check
       - name: Extract obligations from current five-file source
         run: python scripts/extract_obligations.py --output /tmp/garden-obligation-extraction.json
       - name: Verify useful partial coverage without false completeness

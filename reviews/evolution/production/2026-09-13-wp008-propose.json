@@ -1,0 +1,47 @@
+{
+  "schema": "GardenEvolutionProductionAction/v1",
+  "design_epoch": "v15.5",
+  "dependencies": {
+    "canonical_source_root": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598"
+  },
+  "action": {
+    "action_id": "GARDEN-HOURLY-2026-09-13-WP008-PROPOSE-001",
+    "verb": "PROPOSE",
+    "actor_ref": "agent:garden-integrator-build",
+    "subject_ref": "repo:ankitdcx/garden-main:wp-008-evolution-transport",
+    "input_refs": [
+      "work_packages/WP-007.md",
+      "canonical/current/SOURCE_MANIFEST.json",
+      "pull:ankitdcx/garden-main#9"
+    ],
+    "provenance_refs": [
+      "user:Garden-Integrator-and-Build:production-migration-instruction",
+      "work_packages/WP-007.md",
+      "canonical/current/Garden_System_v15.5_FULL_2026-09-12.txt"
+    ],
+    "satisfied_preconditions": [
+      "ACTOR_IDENTIFIED",
+      "SUBJECT_IDENTIFIED",
+      "PROVENANCE_PRESENT",
+      "INPUT_REFS_TYPED"
+    ],
+    "claimed_postconditions": [
+      "CANDIDATE_RECORDED",
+      "NO_AUTHORITY_EXPANSION",
+      "CANONICAL_POINTER_UNCHANGED"
+    ]
+  },
+  "authority": {
+    "subject": "agent:garden-integrator-build",
+    "role": "REVIEWER",
+    "granted_by": "human:garden-originator:hourly-production-migration-instruction",
+    "resources": [
+      "repo:ankitdcx/garden-main:wp-008-evolution-transport"
+    ],
+    "max_delegation_depth": 0
+  },
+  "bound_inputs": [],
+  "governance_tier": "ORDINARY",
+  "human_signoff": false,
+  "independent_review": false
+}
