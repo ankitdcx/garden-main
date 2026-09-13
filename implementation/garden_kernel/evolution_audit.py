@@ -2,8 +2,7 @@ from __future__ import annotations
 
 import hashlib
 import json
-from pathlib import Path
-from typing import Any, Iterable, Mapping, Sequence
+from typing import Any, Mapping, Sequence
 
 from .core import SemanticError
 
@@ -22,19 +21,11 @@ def _canonical_bytes(value: Mapping[str, Any]) -> bytes:
     return json.dumps(value, sort_keys=True, separators=(",", ":"), ensure_ascii=False).encode("utf-8")
 
 
-def sha256_json(value: Mapping[str, Any]) -> str:
+def _sha256_json(value: Mapping[str, Any]) -> str:
     return hashlib.sha256(_canonical_bytes(value)).hexdigest()
 
 
-def sha256_file(path: str | Path) -> str:
-    digest = hashlib.sha256()
-    with Path(path).open("rb") as handle:
-        for block in iter(lambda: handle.read(65536), b""):
-            digest.update(block)
-    return digest.hexdigest()
-
-
-def make_audit_entry(
+def _make_audit_entry(
     *,
     sequence: int,
     previous_entry_hash: str,
@@ -76,7 +67,7 @@ def make_audit_entry(
         "disposition": str(disposition),
         "authorization_effect": "NONE",
     }
-    body["entry_hash"] = sha256_json(body)
+    body["entry_hash"] = _sha256_json(body)
     return body
 
 
@@ -89,13 +80,15 @@ def build_audit_chain(
 ) -> dict[str, Any]:
     if not chain_id.strip():
         raise SemanticError("audit chain_id must be non-empty")
+    if not records:
+        raise SemanticError("audit chain requires at least one record")
     entries: list[dict[str, Any]] = []
     previous = GENESIS_HASH
     for sequence, record in enumerate(records):
         forbidden = sorted(FORBIDDEN_TRUST_FIELDS.intersection(record))
         if forbidden:
             raise SemanticError("audit record descriptor may not mint trust fields: " + ",".join(forbidden))
-        entry = make_audit_entry(
+        entry = _make_audit_entry(
             sequence=sequence,
             previous_entry_hash=previous,
             record_ref=str(record.get("record_ref", "")),
@@ -147,8 +140,8 @@ def validate_audit_chain(
     if chain.get("semantic_compliance_proved") is not False:
         raise SemanticError("audit chain must not claim semantic compliance")
     entries = chain.get("entries")
-    if not isinstance(entries, list):
-        raise SemanticError("audit chain entries must be a list")
+    if not isinstance(entries, list) or not entries:
+        raise SemanticError("audit chain entries must be a non-empty list")
     if chain.get("entry_count") != len(entries):
         raise SemanticError("audit chain entry_count mismatch")
     previous = GENESIS_HASH
@@ -169,7 +162,7 @@ def validate_audit_chain(
             raise SemanticError("audit entry may not mint trust fields: " + ",".join(forbidden_entry))
         if entry.get("authorization_effect") != "NONE":
             raise SemanticError("audit entry must declare authorization_effect NONE")
-        derived_hash = sha256_json(entry)
+        derived_hash = _sha256_json(entry)
         if observed_hash != derived_hash:
             raise SemanticError("audit entry content hash mismatch")
         previous = observed_hash
@@ -187,20 +180,4 @@ def validate_audit_chain(
         "tamper_evident": True,
         "authorization_result": "NOT_EVALUATED_HERE",
         "semantic_compliance_proved": False,
-    }
-
-
-def record_descriptor(path: str | Path, *, root: str | Path, default_action_id: str = "CI-CONFORMANCE") -> dict[str, Any]:
-    path = Path(path)
-    root = Path(root)
-    payload = json.loads(path.read_text(encoding="utf-8"))
-    rel = path.resolve().relative_to(root.resolve()).as_posix() if path.resolve().is_relative_to(root.resolve()) else path.as_posix()
-    action_id = str(payload.get("action_id") or (payload.get("action") or {}).get("action_id") or default_action_id)
-    disposition = str(payload.get("decision") or payload.get("status") or payload.get("admission_status") or "RECORDED")
-    return {
-        "record_ref": rel,
-        "record_sha256": sha256_file(path),
-        "record_schema": str(payload.get("schema", "UNKNOWN")),
-        "action_id": action_id,
-        "disposition": disposition,
     }
