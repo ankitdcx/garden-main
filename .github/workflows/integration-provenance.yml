@@ -1,0 +1,33 @@
+name: Multi-agent integration provenance
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, edited, ready_for_review]
+
+permissions:
+  contents: read
+  pull-requests: read
+
+jobs:
+  integration-provenance:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Compile integration-provenance code
+        run: python -m compileall -q implementation/garden_kernel/integration_provenance.py scripts/check_multi_agent_pr.py
+
+      - name: Run integration-provenance regression tests
+        run: |
+          python -m unittest implementation.tests.test_integration_provenance implementation.tests.test_multi_agent_pr_check -v
+
+      - name: Check PR work intent and concurrent composition
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python scripts/check_multi_agent_pr.py
