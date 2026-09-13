@@ -26,7 +26,7 @@ from .evolution_constitution import (
     classify_config_delta, require_human_approval,
 )
 from .evolution_gate import (
-    EvolutionGateContext, EvolutionGateReceipt, GateDecision,
+    EvolutionGateContext, EvolutionGateLog, EvolutionGateReceipt, GateDecision,
     evaluate_evolution_action,
 )
 from .extractor import ClosureManifest, GapRecord, ObligationExtractor
@@ -48,7 +48,7 @@ __all__ = [
     "config_hash", "derive_config_delta",
     "ConstitutionalDomain", "GovernanceClassification", "GovernanceTier",
     "classify_config_delta", "require_human_approval",
-    "EvolutionGateContext", "EvolutionGateReceipt", "GateDecision",
+    "EvolutionGateContext", "EvolutionGateLog", "EvolutionGateReceipt", "GateDecision",
     "evaluate_evolution_action",
     "ClosureManifest", "GapRecord", "ObligationExtractor", "KnowledgeStore",
     "VerifierClass", "VerifierRegistry", "VerificationReceipt",
