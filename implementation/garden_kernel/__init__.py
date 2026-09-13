@@ -1,4 +1,4 @@
-"""Minimal non-certified Garden implementation kernel for WP-001..007."""
+"""Minimal non-certified Garden implementation kernel for WP-001..009."""
 from .core import (
     Claim, Context, Dependency, EpistemicStatus, EvidenceRef, Obligation,
     ReceiptStatus, TypedValue, parse_claim,
@@ -30,6 +30,11 @@ from .evolution_gate import (
     evaluate_evolution_action,
 )
 from .extractor import ClosureManifest, GapRecord, ObligationExtractor
+from .repo_conformance import (
+    GardenModule, RepoArtifactClass, RepoArtifactRecord, RepoConformanceProfile,
+    RepoConformanceReport, RepoProfileRule, audit_repo, classify_repo_path,
+    load_repo_profile, validate_profile_against_manifest,
+)
 from .store import KnowledgeStore
 from .verifier import VerifierClass, VerifierRegistry, VerificationReceipt
 
@@ -52,4 +57,8 @@ __all__ = [
     "evaluate_evolution_action",
     "ClosureManifest", "GapRecord", "ObligationExtractor", "KnowledgeStore",
     "VerifierClass", "VerifierRegistry", "VerificationReceipt",
+    "GardenModule", "RepoArtifactClass", "RepoArtifactRecord",
+    "RepoConformanceProfile", "RepoConformanceReport", "RepoProfileRule",
+    "audit_repo", "classify_repo_path", "load_repo_profile",
+    "validate_profile_against_manifest",
 ]
