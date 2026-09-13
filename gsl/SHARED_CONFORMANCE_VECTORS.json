@@ -1,0 +1,76 @@
+{
+  "schema": "GardenSharedConformanceVectors/v1",
+  "vector_set_id": "GARDEN-MAIN-WP009H-DESIGN-EPOCH-v1",
+  "design_epoch_ref": "Garden-v15.5@63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+  "scope": "DESIGN_EPOCH_FRESHNESS",
+  "purpose": "Shared semantic vectors for current public prototype and private evolution kernel. Passing is scoped conformance evidence only. SCEP/bootstrap remains explicit FRONTIER until it consumes the same vectors.",
+  "vector_set_sha256": "260183399b648af0f9d2acc96b75dbb01c923f7eacfc416b78079320d7695384",
+  "semantic_compliance_proved": false,
+  "implementations": {
+    "public": "ankitdcx/garden-swarm:prototype/design_epoch.py",
+    "private": "implementation/garden_kernel/evolution_epoch.py",
+    "scep": "FRONTIER"
+  },
+  "vectors": [
+    {
+      "vector_id": "DESIGN-EPOCH-CURRENT-001",
+      "mechanism": "DesignEpoch freshness",
+      "input": {
+        "binding_epoch": "v15.5",
+        "current_epoch": "v15.5",
+        "bound_dependencies": {
+          "canonical_source_root": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+          "policy": "p1"
+        },
+        "required_dependencies": ["canonical_source_root", "policy"],
+        "current_dependencies": {
+          "canonical_source_root": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+          "policy": "p1"
+        }
+      },
+      "expected": {"status": "CURRENT", "reason_prefixes": ["BINDING_CURRENT"]}
+    },
+    {
+      "vector_id": "DESIGN-EPOCH-STALE-001",
+      "mechanism": "DesignEpoch freshness",
+      "input": {
+        "binding_epoch": "E1",
+        "current_epoch": "E2",
+        "bound_dependencies": {"consent-definition": "v1", "policy": "p1"},
+        "required_dependencies": ["consent-definition", "policy"],
+        "current_dependencies": {"consent-definition": "v2", "policy": "p1"}
+      },
+      "expected": {
+        "status": "STALE",
+        "reason_prefixes": ["DESIGN_EPOCH_CHANGED", "DEPENDENCY_CHANGED:consent-definition"]
+      }
+    },
+    {
+      "vector_id": "DESIGN-EPOCH-UNKNOWN-CLOSURE-001",
+      "mechanism": "DesignEpoch freshness",
+      "input": {
+        "binding_epoch": "v15.5",
+        "current_epoch": "v15.5",
+        "bound_dependencies": {"canonical_source_root": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598"},
+        "required_dependencies": null,
+        "current_dependencies": {"canonical_source_root": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598"}
+      },
+      "expected": {"status": "UNKNOWN", "reason_prefixes": ["DEPENDENCY_CLOSURE_NOT_DECLARED"]}
+    },
+    {
+      "vector_id": "DESIGN-EPOCH-UNKNOWN-DEPENDENCY-001",
+      "mechanism": "DesignEpoch freshness",
+      "input": {
+        "binding_epoch": "v15.5",
+        "current_epoch": "v15.5",
+        "bound_dependencies": {
+          "canonical_source_root": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+          "external-policy": "p1"
+        },
+        "required_dependencies": ["canonical_source_root", "external-policy"],
+        "current_dependencies": {"canonical_source_root": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598"}
+      },
+      "expected": {"status": "UNKNOWN", "reason_prefixes": ["DEPENDENCY_STATE_UNKNOWN:external-policy"]}
+    }
+  ]
+}
