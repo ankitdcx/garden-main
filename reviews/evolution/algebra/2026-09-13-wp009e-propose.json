@@ -1,0 +1,67 @@
+{
+  "schema": "GardenEvolutionAlgebraUsageReceipt/v1",
+  "action_id": "GARDEN-HOURLY-2026-09-13-WP009E-PROPOSE-001",
+  "design_epoch": "v15.5",
+  "canonical_source_root_sha256": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+  "source_obligation_refs": [
+    "work_packages/WP-009.md#WP-009E",
+    "canonical/current/Garden_System_v15.5_FULL_2026-09-12.txt:REG-ALGEBRA-001",
+    "canonical/current/Garden_System_v15.5_FULL_2026-09-12.txt:[S-PROCESS]#5.1",
+    "canonical/current/Garden_System_v15.5_FULL_2026-09-12.txt:#5.4",
+    "canonical/current/Garden_System_v15.5_FULL_2026-09-12.txt:#5.5A"
+  ],
+  "entries": [
+    {
+      "algebra": "Process",
+      "status": "APPLIED",
+      "operators": ["SEQUENCE", "DO_NOTHING"],
+      "law_claims": [],
+      "non_law_acknowledgements": ["PARALLEL_EFFECT_COMMUTATIVITY_NOT_UNIVERSAL"],
+      "applicability_reason": "The governed evolution path sequences typed action, validation, ActionGate, receipt and candidate effect; Compare explicitly carries DO_NOTHING."
+    },
+    {
+      "algebra": "Policy",
+      "status": "FRONTIER",
+      "operators": [],
+      "law_claims": [],
+      "non_law_acknowledgements": [],
+      "applicability_reason": "Policy semantics constrain admission, but the existing evolution ActionGate is not silently reclassified as Engine.Policy or a Policy Algebra operator.",
+      "frontier_reason": "No concrete Policy Algebra operator invocation is yet bound into the private evolution production path."
+    },
+    {
+      "algebra": "Decision",
+      "status": "FRONTIER",
+      "operators": [],
+      "law_claims": [],
+      "non_law_acknowledgements": [],
+      "applicability_reason": "The path emits typed gate/verifier/conformance result states, so Decision semantics are relevant.",
+      "frontier_reason": "The exact executable Decision Algebra operator signatures are not reproduced or bound in this bounded repository profile."
+    },
+    {
+      "algebra": "Conformance",
+      "status": "APPLIED",
+      "operators": ["BIND_EVIDENCE", "BIND_PROOF", "GAP", "COVERAGE"],
+      "law_claims": [],
+      "non_law_acknowledgements": ["CONFORMANCE_IS_NOT_BINARY_ONLY", "AUDIT_IS_NOT_A_SEPARATE_ALGEBRA"],
+      "applicability_reason": "WP-009D reasoning receipts bind Evidence and Proof separately while WP-009 coverage audits preserve explicit GAP/COVERAGE and non-binary frontier states."
+    },
+    {
+      "algebra": "Evidence",
+      "status": "FRONTIER",
+      "operators": [],
+      "law_claims": [],
+      "non_law_acknowledgements": [],
+      "applicability_reason": "Evidence receipts are consumed by the evolution path but no dependence-aware Evidence Algebra composition operator is executed by this bounded slice.",
+      "frontier_reason": "Level-3 executable Evidence Algebra operation signatures remain unbound in the private evolution kernel."
+    },
+    {
+      "algebra": "Bridge",
+      "status": "NOT_APPLICABLE",
+      "operators": [],
+      "law_claims": [],
+      "non_law_acknowledgements": [],
+      "applicability_reason": "This change validates semantic JSON artifacts and ordinary Python structures; it invokes no semantic-to-vector/operator representation transformation."
+    }
+  ],
+  "semantic_compliance_proved": false
+}
