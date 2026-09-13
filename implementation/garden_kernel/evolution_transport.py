@@ -3,7 +3,7 @@ from __future__ import annotations
 from dataclasses import dataclass
 from pathlib import Path
 import json
-from typing import Any, Mapping
+from typing import Any, Iterable, Mapping
 
 from .core import SemanticError
 from .evolution_actions import Condition, EvolutionAction, EvolutionVerb
@@ -12,13 +12,18 @@ from .evolution_authority import (
     EvolutionAuthorityEnvelope,
     make_role_envelope,
 )
-from .evolution_constitution import GovernanceTier
 from .evolution_epoch import EvolutionArtifactBinding, EvolutionArtifactKind
 from .evolution_gate import (
     EvolutionGateContext,
     EvolutionGateLog,
     GateDecision,
     evaluate_evolution_action,
+)
+from .evolution_trust import (
+    AttestationKind,
+    VerifiedAttestationState,
+    verify_attestation_receipts,
+    verify_governance_receipt,
 )
 
 
@@ -138,9 +143,11 @@ def _receipt(
     verb: str,
     authority_ref: str | None = None,
     authority: Mapping[str, Any] | None = None,
-    trusted_human_signoff: bool = False,
-    trusted_independent_review: bool = False,
+    governance_receipt: Mapping[str, Any] | None = None,
+    attestations: VerifiedAttestationState | None = None,
 ) -> dict[str, Any]:
+    attestation_state = attestations or VerifiedAttestationState()
+    governance = dict(governance_receipt or {})
     return {
         "schema": RECEIPT_SCHEMA,
         "request_schema": request.get("schema"),
@@ -155,14 +162,22 @@ def _receipt(
         "authority_ref": authority_ref,
         "authority": dict(authority or {}),
         "trusted_attestations": {
-            "human_signoff": trusted_human_signoff,
-            "independent_review": trusted_independent_review,
-            "source": "TRUSTED_CALLER_NOT_ACTION_REQUEST",
+            "human_signoff": attestation_state.human_signoff,
+            "independent_review": attestation_state.independent_review,
+            "verified_receipt_ids": list(attestation_state.receipt_ids),
+            "source": "VERIFIED_TRUSTED_RECEIPTS_ONLY",
         },
-        "governance_classification_boundary": (
-            "Current v1 transport still consumes a declared governance_tier; "
-            "repo-diff-bound constitutional classification remains a required WP-009 hardening."
-        ),
+        "governance": {
+            "verified": bool(governance),
+            "schema": governance.get("schema"),
+            "tier": governance.get("tier"),
+            "domains": list(governance.get("domains", ())),
+            "reasons": list(governance.get("reasons", ())),
+            "receipt_sha256": governance.get("receipt_sha256"),
+            "evidence_source": governance.get("evidence_source"),
+            "base_ref": governance.get("base_ref"),
+            "head_ref": governance.get("head_ref"),
+        },
         "canonical_pointer_changed": False,
         "materialization_candidate_only": verb == EvolutionVerb.MATERIALIZE.value,
         "receipt_visibility": "PRESERVE_ALLOW_REJECT_ESCALATE",
@@ -174,18 +189,31 @@ def evaluate_production_request(
     identity: CanonicalSourceIdentity,
     trusted_authorities: Mapping[str, EvolutionAuthorityEnvelope],
     *,
-    trusted_human_signoff: bool = False,
-    trusted_independent_review: bool = False,
+    trusted_governance_receipt: Mapping[str, Any] | None,
+    trusted_attestation_receipts: Iterable[Mapping[str, Any]] = (),
+    trusted_attestors: Mapping[str, frozenset[AttestationKind]] | None = None,
 ) -> dict[str, Any]:
     action_raw = dict(request.get("action") or {})
     action_id = str(action_raw.get("action_id", "UNKNOWN"))
     verb_text = str(action_raw.get("verb", "UNKNOWN"))
     authority_ref = str(request.get("authority_ref", "")).strip() or None
+    governance_receipt: Mapping[str, Any] | None = None
+    attestation_state = VerifiedAttestationState()
     try:
         if request.get("schema") != REQUEST_SCHEMA:
             raise SemanticError("production request schema is not recognized")
         forbidden_self_assertions = {
-            key for key in ("authority", "human_signoff", "independent_review")
+            key
+            for key in (
+                "authority",
+                "human_signoff",
+                "independent_review",
+                "governance_tier",
+                "governance_classification",
+                "changed_paths",
+                "change_manifest",
+                "trusted_attestations",
+            )
             if key in request
         }
         if forbidden_self_assertions:
@@ -242,14 +270,31 @@ def evaluate_production_request(
                     f"artifact {binding.artifact_id} is not bound to the current canonical source root"
                 )
 
-        governance_tier = GovernanceTier(str(request["governance_tier"]))
+        if trusted_governance_receipt is None:
+            raise SemanticError("trusted governance classification receipt is required")
+        governance_receipt = dict(trusted_governance_receipt)
+        governance_tier = verify_governance_receipt(
+            governance_receipt,
+            action_id=action.action_id,
+            design_epoch=identity.design_epoch,
+            source_root_sha256=identity.source_root_sha256,
+        )
+
+        attestation_state = verify_attestation_receipts(
+            trusted_attestation_receipts,
+            action_id=action.action_id,
+            design_epoch=identity.design_epoch,
+            source_root_sha256=identity.source_root_sha256,
+            trusted_attestors=trusted_attestors or {},
+        )
+
         context = EvolutionGateContext(
             current_design_epoch=identity.design_epoch,
             current_dependencies=expected_dependencies,
             authority_envelopes=(envelope,),
             bound_inputs=bound_inputs,
-            independent_review=trusted_independent_review,
-            human_signoff=trusted_human_signoff,
+            independent_review=attestation_state.independent_review,
+            human_signoff=attestation_state.human_signoff,
             governance_tier=governance_tier,
         )
         gate_log = EvolutionGateLog()
@@ -276,8 +321,8 @@ def evaluate_production_request(
                 "can_mint_envelopes": envelope.can_mint_envelopes,
                 "can_promote_canon": envelope.can_promote_canon,
             },
-            trusted_human_signoff=trusted_human_signoff,
-            trusted_independent_review=trusted_independent_review,
+            governance_receipt=governance_receipt,
+            attestations=attestation_state,
         )
     except (KeyError, TypeError, ValueError, SemanticError) as exc:
         return _receipt(
@@ -288,8 +333,8 @@ def evaluate_production_request(
             action_id=action_id,
             verb=verb_text,
             authority_ref=authority_ref,
-            trusted_human_signoff=trusted_human_signoff,
-            trusted_independent_review=trusted_independent_review,
+            governance_receipt=governance_receipt,
+            attestations=attestation_state,
         )
 
 
