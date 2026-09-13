@@ -11,6 +11,7 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "implementation"))
 
 from garden_kernel.extractor import ObligationExtractor  # noqa: E402
+from garden_kernel.source_binding import build_source_bindings  # noqa: E402
 
 DEFAULT_FILES = [
     "Garden_User_v15.5_FULL_2026-09-12.txt",
@@ -22,8 +23,9 @@ DEFAULT_FILES = [
 
 
 def serialize_manifest(manifest) -> dict:
+    bindings = build_source_bindings(manifest.obligations)
     return {
-        "schema": "GardenObligationExtraction/v0.1",
+        "schema": "GardenObligationExtraction/v0.2",
         "source_hashes": manifest.source_hashes,
         "coverage_complete": manifest.coverage_complete,
         "coverage_note": manifest.coverage_note,
@@ -35,7 +37,9 @@ def serialize_manifest(manifest) -> dict:
         "parsed_schema_names": sorted(manifest.parsed_schema_names),
         "obligation_count": len(manifest.obligations),
         "gap_count": len(manifest.gaps),
+        "source_binding_count": len(bindings),
         "obligations": [asdict(x) for x in manifest.obligations],
+        "source_bindings": [asdict(x) for x in bindings],
         "gaps": [asdict(x) for x in manifest.gaps],
     }
 
@@ -63,6 +67,7 @@ def main() -> int:
             {
                 "source_files": len(payload["source_hashes"]),
                 "obligation_count": payload["obligation_count"],
+                "source_binding_count": payload["source_binding_count"],
                 "gap_count": payload["gap_count"],
                 "classified_lines": payload["classified_lines"],
                 "unclassified_lines": payload["unclassified_lines"],
