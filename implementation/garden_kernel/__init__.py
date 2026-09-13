@@ -17,6 +17,14 @@ from .evolution_authority import (
     can_execute, compose_authority, delegate_within_envelope,
     make_role_envelope,
 )
+from .evolution_config import (
+    PipelineConfigClass, PipelineConfigDelta, PipelineConfigSnapshot,
+    config_hash, derive_config_delta,
+)
+from .evolution_constitution import (
+    ConstitutionalDomain, GovernanceClassification, GovernanceTier,
+    classify_config_delta, require_human_approval,
+)
 from .evolution_gate import (
     EvolutionGateContext, EvolutionGateReceipt, GateDecision,
     evaluate_evolution_action,
@@ -36,6 +44,10 @@ __all__ = [
     "EvolutionAgentRole", "EvolutionAuthorityEnvelope", "ROLE_ACTIONS",
     "can_execute", "compose_authority", "delegate_within_envelope",
     "make_role_envelope",
+    "PipelineConfigClass", "PipelineConfigDelta", "PipelineConfigSnapshot",
+    "config_hash", "derive_config_delta",
+    "ConstitutionalDomain", "GovernanceClassification", "GovernanceTier",
+    "classify_config_delta", "require_human_approval",
     "EvolutionGateContext", "EvolutionGateReceipt", "GateDecision",
     "evaluate_evolution_action",
     "ClosureManifest", "GapRecord", "ObligationExtractor", "KnowledgeStore",
