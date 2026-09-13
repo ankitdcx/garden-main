@@ -5,19 +5,20 @@
     "canonical_source_root": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598"
   },
   "action": {
-    "action_id": "GARDEN-HOURLY-2026-09-13-WP008-PROPOSE-001",
+    "action_id": "GARDEN-HOURLY-2026-09-13-WP009B-PROPOSE-001",
     "verb": "PROPOSE",
     "actor_ref": "agent:garden-integrator-build",
     "subject_ref": "repo:ankitdcx/garden-main",
     "input_refs": [
+      "user:Garden-Integrator-and-Build:trusted-governance-boundary-instruction",
+      "pull:ankitdcx/garden-main#9:issuecomment-5651389351",
       "work_packages/WP-007.md",
-      "canonical/current/SOURCE_MANIFEST.json",
-      "pull:ankitdcx/garden-main#9"
+      "work_packages/WP-009.md"
     ],
     "provenance_refs": [
-      "user:Garden-Integrator-and-Build:production-migration-instruction",
-      "work_packages/WP-007.md",
-      "canonical/current/Garden_System_v15.5_FULL_2026-09-12.txt"
+      "user:Garden-Integrator-and-Build:trusted-governance-boundary-instruction",
+      "pull:ankitdcx/garden-main#11",
+      "canonical/current/SOURCE_MANIFEST.json"
     ],
     "satisfied_preconditions": [
       "ACTOR_IDENTIFIED",
