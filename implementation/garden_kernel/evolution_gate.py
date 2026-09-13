@@ -7,6 +7,7 @@ from typing import Mapping
 from .core import SemanticError
 from .evolution_actions import EvolutionAction, EvolutionVerb, validate_action_shape
 from .evolution_authority import EvolutionAuthorityEnvelope, can_execute
+from .evolution_constitution import GovernanceTier
 from .evolution_epoch import EvolutionArtifactBinding, require_current_for_accumulation
 
 
@@ -24,6 +25,7 @@ class EvolutionGateContext:
     bound_inputs: tuple[EvolutionArtifactBinding, ...] = ()
     independent_review: bool = False
     human_signoff: bool = False
+    governance_tier: GovernanceTier = GovernanceTier.ORDINARY
 
 
 @dataclass(frozen=True)
@@ -62,6 +64,13 @@ def evaluate_evolution_action(action: EvolutionAction, context: EvolutionGateCon
             ("AUTHORITY_SCOPE_DENIED",), context.current_design_epoch,
         )
 
+    if context.governance_tier is GovernanceTier.CONSTITUTIONAL and not context.human_signoff:
+        return EvolutionGateReceipt(
+            action.action_id, action.verb, GateDecision.ESCALATE,
+            ("CONSTITUTIONAL_CHANGE_REQUIRES_HUMAN_SIGNOFF",),
+            context.current_design_epoch,
+        )
+
     if action.verb in {EvolutionVerb.ACCUMULATE, EvolutionVerb.MATERIALIZE}:
         try:
             require_current_for_accumulation(
@@ -86,6 +95,8 @@ def evaluate_evolution_action(action: EvolutionAction, context: EvolutionGateCon
 
     reasons.append("ACTION_CONTRACT_PASS")
     reasons.append("AUTHORITY_PASS")
+    if context.governance_tier is GovernanceTier.CONSTITUTIONAL:
+        reasons.append("CONSTITUTIONAL_HUMAN_SIGNOFF_PRESENT")
     if action.verb in {EvolutionVerb.ACCUMULATE, EvolutionVerb.MATERIALIZE}:
         reasons.append("EPOCH_BINDINGS_CURRENT")
     if action.verb is EvolutionVerb.MATERIALIZE:
