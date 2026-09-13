@@ -20,6 +20,7 @@ class VerifierClass(str, Enum):
 class VerificationReceipt:
     verifier_id: str
     verifier_class: VerifierClass
+    verifier_version: str
     verifier_hash: str
     artifact_ref: str
     artifact_hash: str
@@ -53,6 +54,8 @@ class VerifierRegistry:
                  implementation_bytes: bytes, protected_owner: str, fn: VerifierFn) -> None:
         if protected_owner not in self.protected_owners:
             raise SemanticError("candidate/unprotected owner cannot register an admission verifier")
+        if not version.strip():
+            raise SemanticError("verifier version is required")
         digest = hashlib.sha256(implementation_bytes).hexdigest()
         self._verifiers[verifier_id] = _Verifier(
             verifier_id, verifier_class, version, digest, protected_owner, fn
@@ -67,6 +70,7 @@ class VerifierRegistry:
         return VerificationReceipt(
             verifier_id=verifier.verifier_id,
             verifier_class=verifier.verifier_class,
+            verifier_version=verifier.version,
             verifier_hash=verifier.implementation_hash,
             artifact_ref=artifact_ref,
             artifact_hash=hashlib.sha256(artifact).hexdigest(),
@@ -79,11 +83,14 @@ class VerifierRegistry:
 
     def invalidate_if_changed(self, receipt: VerificationReceipt, *, artifact: bytes | None = None,
                               design_epoch: str | None = None,
+                              verifier_version: str | None = None,
                               verifier_implementation_bytes: bytes | None = None) -> VerificationReceipt:
         stale = receipt.stale
         if artifact is not None and hashlib.sha256(artifact).hexdigest() != receipt.artifact_hash:
             stale = True
         if design_epoch is not None and receipt.design_epoch is not None and design_epoch != receipt.design_epoch:
+            stale = True
+        if verifier_version is not None and verifier_version != receipt.verifier_version:
             stale = True
         if verifier_implementation_bytes is not None and hashlib.sha256(verifier_implementation_bytes).hexdigest() != receipt.verifier_hash:
             stale = True
