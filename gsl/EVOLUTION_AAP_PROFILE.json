@@ -1,0 +1,53 @@
+{
+  "schema": "GardenEvolutionAAPProfile/v1",
+  "profile_id": "GARDEN-MAIN-WP009F-AAP-v1",
+  "design_epoch": "v15.5",
+  "canonical_source_root_sha256": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+  "canonical_refs": [
+    "canonical/current/Garden_System_v15.5_FULL_2026-09-12.txt:AAP v1.0",
+    "canonical/current/Garden_System_v15.5_FULL_2026-09-12.txt:R0-R4",
+    "canonical/current/Garden_System_v15.5_FULL_2026-09-12.txt:V0-V4",
+    "canonical/current/Garden_System_v15.5_FULL_2026-09-12.txt:S0-S4"
+  ],
+  "baseline_modules": [
+    "SOURCE_IDENTITY",
+    "GSL_TYPING",
+    "DESIGN_EPOCH",
+    "SOURCE_OBLIGATION",
+    "COMPARE",
+    "REASON",
+    "PROOF",
+    "EVIDENCE",
+    "AAP",
+    "AUTHORITY",
+    "ACTION_GATE",
+    "PROCESS_ALGEBRA",
+    "CONFORMANCE_ALGEBRA"
+  ],
+  "module_triggers": {
+    "high_or_critical": ["INDEPENDENT_REVIEW_REQUIREMENT"],
+    "high_novelty_or_uncertainty": ["DEEPER_FALSIFICATION"],
+    "hard_policy": ["POLICY_CHECK"],
+    "constitutional": ["HUMAN_SOVEREIGNTY", "CONSTITUTIONAL_APPROVAL_BOUNDARY"],
+    "physical_safety": ["PHYSICAL_SAFETY_ASSURANCE"]
+  },
+  "tier_semantics": {
+    "R0": "transition sanity",
+    "R1": "local reasoning",
+    "R2": "structured reasoning",
+    "R3": "deeper/independent reasoning",
+    "R4": "critical bounded reasoning",
+    "V0": "structural/type/invariant sanity",
+    "V1": "ordinary validation",
+    "V2": "evidence/dependency/assumption checking",
+    "V3": "independent/deeper verification",
+    "V4": "formal/high-assurance verification appropriate to critical scope",
+    "S0": "fast boundary/sanity guard",
+    "S1": "local constraint check",
+    "S2": "environment and consequence verification",
+    "S3": "independent/deeper trajectory or human/domain safety validation where applicable",
+    "S4": "maximum bounded K0P/emergency/high-criticality assurance"
+  },
+  "policy_boundary": "This repository profile is a conservative executable AAP reference mapping, not a new canonical formula. It may raise assurance floors but cannot grant authority, human approval, proof, certification, or canonical promotion. Resource pressure never lowers a mandatory constitutional or physical-safety floor.",
+  "semantic_compliance_proved": false
+}
