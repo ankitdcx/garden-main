@@ -1,0 +1,49 @@
+{
+  "schema": "GardenEvolutionProductionAction/v1",
+  "design_epoch": "v15.5",
+  "dependencies": {
+    "canonical_source_root": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598"
+  },
+  "action": {
+    "action_id": "GARDEN-HOURLY-2026-09-13-WP008-TRIAGE-001",
+    "verb": "TRIAGE",
+    "actor_ref": "agent:garden-integrator-build",
+    "subject_ref": "repo:ankitdcx/garden-main:wp-008-evolution-transport",
+    "input_refs": [
+      "reviews/evolution/production/2026-09-13-wp008-propose.json",
+      "ci:garden-main:run:34740228574",
+      "artifact:wp007-production-gate:10311588791"
+    ],
+    "provenance_refs": [
+      "user:Garden-Integrator-and-Build:production-migration-instruction",
+      "work_packages/WP-007.md",
+      "ci:garden-main:run:34740228574:53-tests-pass",
+      "artifact:10311588791:proposal-gate-ALLOW"
+    ],
+    "satisfied_preconditions": [
+      "ACTOR_IDENTIFIED",
+      "PROPOSAL_EXISTS",
+      "EVIDENCE_AVAILABLE",
+      "PROVENANCE_PRESENT"
+    ],
+    "claimed_postconditions": [
+      "DISPOSITION_RECORDED",
+      "RATIONALE_RECORDED",
+      "NO_AUTHORITY_EXPANSION",
+      "CANONICAL_POINTER_UNCHANGED"
+    ]
+  },
+  "authority": {
+    "subject": "agent:garden-integrator-build",
+    "role": "INTEGRATOR",
+    "granted_by": "human:garden-originator:hourly-production-migration-instruction",
+    "resources": [
+      "repo:ankitdcx/garden-main:wp-008-evolution-transport"
+    ],
+    "max_delegation_depth": 0
+  },
+  "bound_inputs": [],
+  "governance_tier": "ORDINARY",
+  "human_signoff": false,
+  "independent_review": false
+}
