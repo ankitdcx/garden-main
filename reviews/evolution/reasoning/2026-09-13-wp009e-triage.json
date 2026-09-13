@@ -1,0 +1,150 @@
+{
+  "schema": "GardenEvolutionReasoningBundle/v1",
+  "bundle_id": "GARDEN-HOURLY-2026-09-13-WP009E-REASONING-TRIAGE-001",
+  "action_id": "GARDEN-HOURLY-2026-09-13-WP009E-TRIAGE-001",
+  "design_epoch": "v15.5",
+  "canonical_source_root_sha256": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+  "source_obligation_refs": [
+    "work_packages/WP-009.md#WP-009E",
+    "canonical/current/Garden_System_v15.5_FULL_2026-09-12.txt:REG-ALGEBRA-001",
+    "canonical/current/Garden_System_v15.5_FULL_2026-09-12.txt:#5.1-5.5A"
+  ],
+  "compare": {
+    "schema": "GardenEvolutionCompareReceipt/v1",
+    "action_id": "GARDEN-HOURLY-2026-09-13-WP009E-TRIAGE-001",
+    "design_epoch": "v15.5",
+    "canonical_source_root_sha256": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+    "predecessor_ref": "reviews/evolution/production/2026-09-13-wp009e-algebra-propose.json",
+    "alternatives": [
+      {
+        "alternative_id": "DO_NOTHING",
+        "description": "Do not admit the tested WP-009E algebra-conformance slice.",
+        "projected_effect": "Keep repository behavior at WP-009D with no deterministic operator/law/applicability algebra audit.",
+        "risk": "Future algebra claims remain less mechanically constrained."
+      },
+      {
+        "alternative_id": "TRIAGE_WP009E_CANDIDATE",
+        "description": "Accept the tested bounded implementation candidate for merge while retaining Policy/Decision/Evidence as FRONTIER and Bridge as conditional.",
+        "projected_effect": "Material changes gain machine-checkable algebra usage receipts without claiming full semantic compliance.",
+        "risk": "The candidate still leaves required algebra frontier and later AAP/audit/source-closure work unresolved."
+      }
+    ],
+    "bidirectional_gaps": [
+      {
+        "from": "DO_NOTHING",
+        "to": "TRIAGE_WP009E_CANDIDATE",
+        "gap": "DO_NOTHING lacks the tested algebra profile, validator, CI audit and FunctionContract added by PR #15."
+      },
+      {
+        "from": "TRIAGE_WP009E_CANDIDATE",
+        "to": "DO_NOTHING",
+        "gap": "The candidate adds bounded conformance machinery and preserves three required algebra FRONTIER entries rather than claiming closure."
+      }
+    ]
+  },
+  "reason": {
+    "schema": "GardenEvolutionReasonReceipt/v1",
+    "action_id": "GARDEN-HOURLY-2026-09-13-WP009E-TRIAGE-001",
+    "design_epoch": "v15.5",
+    "canonical_source_root_sha256": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+    "strategy": "EVIDENCE_BACKED_TRIAGE",
+    "tier": "WP009E_REFERENCE",
+    "assumptions": [
+      "PR #15 CI run 34747748837 evaluated the complete candidate against origin/main.",
+      "The trusted production gate derived ORDINARY governance from the Git diff rather than accepting request classification.",
+      "Passing tests and conformance audits are evidence/proof inputs, not authorization; ActionGate remains authoritative.",
+      "Garden v15.5 canonical source remains unchanged."
+    ],
+    "uncertainty": "Policy, Decision and Evidence executable algebra bindings remain required FRONTIER; Bridge is conditionally not applicable in this slice. No full GSL compliance or certification is established.",
+    "counterexamples": [
+      "If the next CI run fails or governance reclassifies the actual diff as constitutional, this triage must not be treated as merge authorization.",
+      "If a required algebra is hidden as NOT_APPLICABLE or an undeclared law/operator appears, the candidate is invalid.",
+      "If ActionGate does not ALLOW the TRIAGE action under protected integrator authority, the candidate must remain unmerged."
+    ],
+    "dependency_refs": [
+      "reviews/evolution/production/2026-09-13-wp009e-algebra-propose.json",
+      "reviews/evolution/algebra/2026-09-13-wp009e-propose.json",
+      "ci:garden-main:34747748837:PASS",
+      "artifact:wp009-conformance:10314673268",
+      "artifact:wp007-production-gate:10314264321",
+      "gsl/EVOLUTION_ALGEBRA_PROFILE.json"
+    ],
+    "conclusion": "Triage the bounded WP-009E candidate for merge only through the existing trusted production gate; preserve explicit FRONTIER and continue to WP-009F only after post-merge CI remains green.",
+    "authorization_effect": "NONE"
+  },
+  "proof": {
+    "schema": "GardenEvolutionProofReceipt/v1",
+    "action_id": "GARDEN-HOURLY-2026-09-13-WP009E-TRIAGE-001",
+    "design_epoch": "v15.5",
+    "canonical_source_root_sha256": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+    "obligations": [
+      {
+        "obligation_id": "PO-WP009E-001",
+        "statement": "Validator rejects operators and algebra laws not registered by the bounded canonical profile.",
+        "verifier_class": "UNIT_TEST",
+        "result": "PASS",
+        "evidence_refs": ["ci:garden-main:34747748837:97_TESTS_PASS"]
+      },
+      {
+        "obligation_id": "PO-WP009E-002",
+        "statement": "Required algebra modules cannot be hidden as NOT_APPLICABLE and FRONTIER never counts as semantic compliance.",
+        "verifier_class": "UNIT_TEST",
+        "result": "PASS",
+        "evidence_refs": ["ci:garden-main:34747748837:97_TESTS_PASS", "artifact:wp009-conformance:10314673268"]
+      },
+      {
+        "obligation_id": "PO-WP009E-003",
+        "statement": "The changed production action carries an action/epoch/source-root-bound algebra usage receipt and reasoning bundle.",
+        "verifier_class": "CI_CONFORMANCE_AUDIT",
+        "result": "PASS",
+        "evidence_refs": ["artifact:wp009-conformance:10314673268"]
+      },
+      {
+        "obligation_id": "PO-WP009E-004",
+        "statement": "Trusted Git-diff governance and the protected WP-007/WP-008 ActionGate remain the admission owner for the candidate action.",
+        "verifier_class": "WP007_PRODUCTION_GATE",
+        "result": "PASS",
+        "evidence_refs": ["artifact:wp007-production-gate:10314264321", "ci:garden-main:34747748837:ACTIONGATE_ALLOW_PROPOSE"]
+      }
+    ],
+    "overall_result": "PASS",
+    "authorization_effect": "NONE"
+  },
+  "evidence": {
+    "schema": "GardenEvolutionEvidenceReceipt/v1",
+    "action_id": "GARDEN-HOURLY-2026-09-13-WP009E-TRIAGE-001",
+    "design_epoch": "v15.5",
+    "canonical_source_root_sha256": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+    "items": [
+      {
+        "kind": "CI_RUN",
+        "ref": "ci:garden-main:34747748837:PASS",
+        "claim_scope": "PR #15 private kernel CI completed successfully with 97 deterministic tests."
+      },
+      {
+        "kind": "CONFORMANCE_ARTIFACT",
+        "ref": "artifact:wp009-conformance:10314673268",
+        "claim_scope": "Reasoning and algebra conformance audits passed; FunctionContract declaration coverage was 10/25 and semantic_compliance_proved remained false."
+      },
+      {
+        "kind": "GATE_ARTIFACT",
+        "ref": "artifact:wp007-production-gate:10314264321",
+        "claim_scope": "Trusted Git-diff governance classified the candidate ORDINARY and the PROPOSE ActionGate receipt was ALLOW."
+      },
+      {
+        "kind": "PUBLIC_AGENT_AVAILABILITY",
+        "ref": "garden-swarm:run:34747319858:NO_MODEL_FINDING",
+        "claim_scope": "Latest zero-cost public agent cycle contributed no admissible model finding."
+      }
+    ],
+    "proof_effect": "NONE",
+    "authorization_effect": "NONE"
+  },
+  "separation_assertions": {
+    "compare_is_not_decision": true,
+    "reason_is_not_authorization": true,
+    "evidence_is_not_proof": true,
+    "proof_is_not_authorization": true,
+    "actiongate_owns_authorization": true
+  }
+}
