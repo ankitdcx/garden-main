@@ -1,0 +1,116 @@
+{
+  "schema": "GardenFunctionContractRegistry/v1",
+  "registry_id": "GARDEN-MAIN-WP009C-FUNCTION-CONTRACTS-v1",
+  "design_epoch": "v15.5",
+  "canonical_source_root_sha256": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+  "scope_globs": [
+    "implementation/garden_kernel/evolution_*.py"
+  ],
+  "semantic_compliance_proved": false,
+  "contracts": [
+    {
+      "contract_id": "FC-EVOL-GATE-001",
+      "path": "implementation/garden_kernel/evolution_gate.py",
+      "function": "evaluate_evolution_action",
+      "affects": ["ADMISSION", "AUTHORITY", "AUDIT"],
+      "input_semantics": "Typed EvolutionAction + EvolutionGateContext + mandatory append-only gate log.",
+      "output_semantics": "Exactly one EvolutionGateReceipt with ALLOW, REJECT, or ESCALATE.",
+      "error_semantics": "Missing audit log raises SemanticError; action/policy failures become explicit gate receipts.",
+      "unknown_semantics": "Unknown authority or insufficient assurance escalates or rejects; it never becomes implicit ALLOW.",
+      "effect_semantics": "Appends the decision receipt to the supplied audit log; does not promote canon.",
+      "proof_obligations": ["decision-is-closed", "receipt-is-recorded", "no-authority-minting", "constitutional-change-requires-human-signoff"],
+      "test_refs": ["implementation/tests/test_gate_behavior.py", "implementation/tests/test_production_evolution_transport.py"]
+    },
+    {
+      "contract_id": "FC-EVOL-TRANSPORT-001",
+      "path": "implementation/garden_kernel/evolution_transport.py",
+      "function": "evaluate_production_request",
+      "affects": ["ADMISSION", "AUTHORITY", "AUDIT", "ORCHESTRATION"],
+      "input_semantics": "Untrusted production action request plus current canonical identity and trusted external authority/governance/attestation context.",
+      "output_semantics": "Machine-checkable GardenEvolutionProductionGateReceipt/v1 preserving gate disposition and trusted-context provenance.",
+      "error_semantics": "Malformed or self-asserted trusted fields fail closed as visible REJECT receipts.",
+      "unknown_semantics": "Missing/unresolvable trusted authority or governance context cannot become ALLOW.",
+      "effect_semantics": "Evaluates only; canonical_pointer_changed is always false and MATERIALIZE remains candidate-only.",
+      "proof_obligations": ["request-cannot-self-mint-trust", "epoch-and-source-root-current", "delta-source-obligation-present", "gate-receipt-visible"],
+      "test_refs": ["implementation/tests/test_production_evolution_transport.py"]
+    },
+    {
+      "contract_id": "FC-EVOL-AUTH-001",
+      "path": "implementation/garden_kernel/evolution_authority.py",
+      "function": "can_execute",
+      "affects": ["AUTHORITY", "ADMISSION"],
+      "input_semantics": "One or more typed EvolutionAuthorityEnvelope values, requested verb/resource, and delegation depth.",
+      "output_semantics": "Boolean authorization result after conservative authority intersection.",
+      "error_semantics": "Empty/incompatible authority composition raises SemanticError rather than granting authority.",
+      "unknown_semantics": "Unknown or absent authority is not authorization.",
+      "effect_semantics": "Pure authority check; mints no envelope and changes no state.",
+      "proof_obligations": ["intersection-never-expands-actions", "intersection-never-expands-resources", "depth-bounded"],
+      "test_refs": ["implementation/tests/test_evolution_authority.py", "implementation/tests/test_production_evolution_transport.py"]
+    },
+    {
+      "contract_id": "FC-EVOL-AUTH-002",
+      "path": "implementation/garden_kernel/evolution_authority.py",
+      "function": "compose_authority",
+      "affects": ["AUTHORITY"],
+      "input_semantics": "Non-empty compatible authority-envelope sequence.",
+      "output_semantics": "A derived envelope equal to conservative action/resource intersection and minimum delegation depth.",
+      "error_semantics": "Empty or role-incompatible sets raise SemanticError.",
+      "unknown_semantics": "No authority is inferred from missing envelopes.",
+      "effect_semantics": "Pure derivation; cannot mint broader authority or canonical-promotion rights.",
+      "proof_obligations": ["derived-authority-is-subset", "role-profile-preserved"],
+      "test_refs": ["implementation/tests/test_evolution_authority.py"]
+    },
+    {
+      "contract_id": "FC-EVOL-EPOCH-001",
+      "path": "implementation/garden_kernel/evolution_epoch.py",
+      "function": "require_current_for_accumulation",
+      "affects": ["ADMISSION", "EVIDENCE"],
+      "input_semantics": "DesignEpoch/dependency-bound evolution artifacts plus current epoch/dependency closure.",
+      "output_semantics": "Successful return only when every required input is current and admissible for accumulation.",
+      "error_semantics": "STALE/UNKNOWN or dependency mismatch raises SemanticError.",
+      "unknown_semantics": "UNKNOWN artifacts never accumulate.",
+      "effect_semantics": "Validation only; does not mutate artifacts or canonical state.",
+      "proof_obligations": ["stale-never-accumulates", "unknown-never-accumulates", "dependency-closure-checked"],
+      "test_refs": ["implementation/tests/test_evolution_actions.py", "implementation/tests/test_production_evolution_transport.py"]
+    },
+    {
+      "contract_id": "FC-EVOL-GOV-001",
+      "path": "implementation/garden_kernel/evolution_trust.py",
+      "function": "governance_receipt_from_changed_paths",
+      "affects": ["ADMISSION", "HUMAN_SOVEREIGNTY", "AUDIT"],
+      "input_semantics": "Action/epoch/source-root identity plus trusted base/head change paths.",
+      "output_semantics": "Hashed governance-classification receipt derived from protected-path rules.",
+      "error_semantics": "Non-serializable trusted evidence fails closed.",
+      "unknown_semantics": "Classification is derived only from supplied trusted diff evidence; request declarations are irrelevant.",
+      "effect_semantics": "Produces evidence receipt only; grants no authority or approval.",
+      "proof_obligations": ["constitutional-paths-cannot-downgrade", "classification-hash-covers-evidence"],
+      "test_refs": ["implementation/tests/test_production_evolution_transport.py"]
+    },
+    {
+      "contract_id": "FC-EVOL-GOV-002",
+      "path": "implementation/garden_kernel/evolution_trust.py",
+      "function": "verify_governance_receipt",
+      "affects": ["ADMISSION", "HUMAN_SOVEREIGNTY"],
+      "input_semantics": "Governance receipt plus expected action/DesignEpoch/source-root identity.",
+      "output_semantics": "Verified derived GovernanceTier.",
+      "error_semantics": "Schema, identity, hash, evidence-source, or re-derived classification mismatch raises SemanticError.",
+      "unknown_semantics": "Unverified governance state cannot be used as an ordinary classification.",
+      "effect_semantics": "Pure verification; grants no approval or authority.",
+      "proof_obligations": ["tier-rederived", "receipt-hash-verified", "epoch-root-bound"],
+      "test_refs": ["implementation/tests/test_production_evolution_transport.py"]
+    },
+    {
+      "contract_id": "FC-EVOL-ATTEST-001",
+      "path": "implementation/garden_kernel/evolution_trust.py",
+      "function": "verify_attestation_receipts",
+      "affects": ["AUTHORITY", "HUMAN_SOVEREIGNTY", "EVIDENCE"],
+      "input_semantics": "Action/epoch/source-root-bound attestation receipts plus external trusted-attestor capability map.",
+      "output_semantics": "VerifiedAttestationState derived only from valid APPROVED receipts issued for authorized attestation kinds.",
+      "error_semantics": "Unknown issuer/kind, tamper, stale binding, duplicate identity, or malformed evidence raises SemanticError.",
+      "unknown_semantics": "Missing or unverified attestation yields false approval/review state, never implicit approval.",
+      "effect_semantics": "Pure verification; cannot create trust roots or expand issuer authority.",
+      "proof_obligations": ["self-attestation-cannot-enable-signoff", "tamper-detected", "issuer-kind-authorized", "epoch-root-bound"],
+      "test_refs": ["implementation/tests/test_production_evolution_transport.py"]
+    }
+  ]
+}
