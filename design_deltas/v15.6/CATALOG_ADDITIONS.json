@@ -1,0 +1,20 @@
+{
+  "schema": "GardenCandidateCatalogueDelta/v1",
+  "predecessor_release": "Garden v15.5",
+  "candidate_release": "Garden v15.6",
+  "status": "CANDIDATE_NOT_CANONICAL",
+  "entries": [
+    {"schema_id": "SCHEMA-977CD6ABF7", "class": "FOUNDATIONAL_CONTRACT", "name": "BootstrapTrustRootCeremonyProfile", "owner": "Engine.Evolve/Engine.Proof/HumanCore.Constitution", "delta_id": "V156-GAP-001"},
+    {"schema_id": "SCHEMA-B45623B44B", "class": "FOUNDATIONAL_CONTRACT", "name": "FrozenVerifierBinding", "owner": "Engine.Proof/Engine.Compliance", "delta_id": "V156-GAP-001"},
+    {"schema_id": "SCHEMA-29C6CEDD2A", "class": "FOUNDATIONAL_CONTRACT", "name": "AuthorityProvenanceChain", "owner": "Capability.Authority/Engine.Policy", "delta_id": "V156-GAP-002"},
+    {"schema_id": "SCHEMA-8A6F0B6EA4", "class": "FOUNDATIONAL_CONTRACT", "name": "ActionEligibleClaimBinding", "owner": "Capability.Knowledge/Capability.Authority", "delta_id": "V156-GAP-002"},
+    {"schema_id": "SCHEMA-DB03DABC62", "class": "FOUNDATIONAL_CONTRACT", "name": "LetStmt", "owner": "GardenCore.Semantics.GSL/Engine.Compile", "delta_id": "V156-GAP-003"},
+    {"schema_id": "SCHEMA-D17BC951EC", "class": "FOUNDATIONAL_CONTRACT", "name": "QueryResultBinding", "owner": "GardenCore.Semantics.GSL/Engine.Compile", "delta_id": "V156-GAP-004"},
+    {"schema_id": "SCHEMA-897FB2274E", "class": "FOUNDATIONAL_CONTRACT", "name": "CausalRelationLevelBinding", "owner": "GardenCore.Semantics.GSL/Engine.Reason/Engine.Research", "delta_id": "V156-GAP-005"},
+    {"schema_id": "SCHEMA-29A1A917BC", "class": "FOUNDATIONAL_CONTRACT", "name": "SanityGateResult", "owner": "Engine.Orchestrate/Engine.Reason", "delta_id": "V156-GAP-006"},
+    {"schema_id": "SCHEMA-1A6E45501B", "class": "FOUNDATIONAL_CONTRACT", "name": "ProvenanceClassManifest", "owner": "Capability.Knowledge/Engine.Explanation", "delta_id": "V156-GAP-008"},
+    {"schema_id": "SCHEMA-30D7E367A8", "class": "GENERATED_RECEIPT_OR_RECORD", "name": "ProvenanceGapDisposition", "owner": "Capability.Knowledge/Engine.Explanation", "delta_id": "V156-GAP-008"},
+    {"schema_id": "SCHEMA-A8447C581A", "class": "FOUNDATIONAL_CONTRACT", "name": "AuthorityDecl", "owner": "GardenCore.Semantics.GSL/Engine.Compile", "delta_id": "V156-GAP-009"},
+    {"schema_id": "SCHEMA-D1DD528992", "class": "FOUNDATIONAL_CONTRACT", "name": "EffectDecl", "owner": "GardenCore.Semantics.GSL/Engine.Compile", "delta_id": "V156-GAP-009"}
+  ]
+}
