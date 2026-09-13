@@ -8,10 +8,12 @@ on:
       - 'scripts/audit_function_contract_coverage.py'
       - 'scripts/audit_evolution_reasoning.py'
       - 'scripts/audit_evolution_algebra.py'
+      - 'scripts/audit_evolution_assurance.py'
       - 'reviews/evolution/**'
       - 'governance/**'
       - 'gsl/FUNCTION_CONTRACTS.json'
       - 'gsl/EVOLUTION_ALGEBRA_PROFILE.json'
+      - 'gsl/EVOLUTION_AAP_PROFILE.json'
       - '.github/workflows/kernel-ci.yml'
   pull_request:
     paths:
@@ -20,10 +22,12 @@ on:
       - 'scripts/audit_function_contract_coverage.py'
       - 'scripts/audit_evolution_reasoning.py'
       - 'scripts/audit_evolution_algebra.py'
+      - 'scripts/audit_evolution_assurance.py'
       - 'reviews/evolution/**'
       - 'governance/**'
       - 'gsl/FUNCTION_CONTRACTS.json'
       - 'gsl/EVOLUTION_ALGEBRA_PROFILE.json'
+      - 'gsl/EVOLUTION_AAP_PROFILE.json'
       - '.github/workflows/kernel-ci.yml'
   workflow_dispatch:
 
@@ -62,7 +66,14 @@ jobs:
           mkdir -p /tmp/wp009-conformance
           python scripts/audit_evolution_algebra.py \
             --output /tmp/wp009-conformance/evolution-algebra-conformance.json
+      - name: Audit changed production AAP receipts
+        run: |
+          mkdir -p /tmp/wp009-conformance
+          python scripts/audit_evolution_assurance.py \
+            --output /tmp/wp009-conformance/evolution-aap-conformance.json
       - name: Gate every production hourly evolution action
+        id: production_gate
+        continue-on-error: true
         run: |
           set -euo pipefail
           mkdir -p /tmp/wp007-production-gate-receipts
@@ -77,6 +88,7 @@ jobs:
           done
           test "$count" -gt 0
       - name: Upload immutable WP-007 production gate receipts
+        if: always()
         uses: actions/upload-artifact@v4
         with:
           name: wp007-production-gate-${{ github.run_id }}
@@ -84,11 +96,17 @@ jobs:
           if-no-files-found: error
           retention-days: 30
       - name: Upload WP-009 conformance evidence
+        if: always()
         uses: actions/upload-artifact@v4
         with:
           name: wp009-conformance-${{ github.run_id }}
           path: /tmp/wp009-conformance/*.json
           if-no-files-found: error
           retention-days: 30
+      - name: Enforce production gate after receipt persistence
+        if: steps.production_gate.outcome == 'failure'
+        run: |
+          echo 'Production ActionGate blocked one or more actions; receipts were persisted before this fail-closed step.'
+          exit 1
       - name: Boundary reminder
-        run: echo 'Reference tests and declaration/reasoning/algebra conformance PASS != Garden certification, semantic proof, authorization, canonical promotion, or deployment permission; FRONTIER is non-compliance and ActionGate remains the admission owner.'
+        run: echo 'Reference tests and declaration/reasoning/algebra/AAP conformance PASS != Garden certification, semantic proof, authorization, canonical promotion, or deployment permission; FRONTIER is non-compliance and ActionGate remains the admission owner.'
