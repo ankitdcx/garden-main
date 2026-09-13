@@ -3,9 +3,7 @@
   "registry_id": "GARDEN-MAIN-WP009C-FUNCTION-CONTRACTS-v1",
   "design_epoch": "v15.5",
   "canonical_source_root_sha256": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
-  "scope_globs": [
-    "implementation/garden_kernel/evolution_*.py"
-  ],
+  "scope_globs": ["implementation/garden_kernel/evolution_*.py"],
   "semantic_compliance_proved": false,
   "contracts": [
     {
@@ -111,6 +109,19 @@
       "effect_semantics": "Pure verification; cannot create trust roots or expand issuer authority.",
       "proof_obligations": ["self-attestation-cannot-enable-signoff", "tamper-detected", "issuer-kind-authorized", "epoch-root-bound"],
       "test_refs": ["implementation/tests/test_production_evolution_transport.py"]
+    },
+    {
+      "contract_id": "FC-EVOL-REASONING-001",
+      "path": "implementation/garden_kernel/evolution_reasoning.py",
+      "function": "validate_reasoning_bundle",
+      "affects": ["EVIDENCE", "CONFORMANCE", "ORCHESTRATION"],
+      "input_semantics": "DesignEpoch/source-root/action-bound typed Compare/Reason/Proof/Evidence bundle.",
+      "output_semantics": "GardenEvolutionReasoningValidationReceipt/v1 with derived Compare and proof summaries and authorization_result NOT_EVALUATED_HERE.",
+      "error_semantics": "Schema, identity, separation, DO_NOTHING, bidirectional-gap, or proof-derivation mismatch raises SemanticError.",
+      "unknown_semantics": "UNKNOWN proof remains UNKNOWN and cannot become authorization or PASS.",
+      "effect_semantics": "Pure conformance validation; grants no authority, approval, proof from evidence, or canonical promotion.",
+      "proof_obligations": ["do-nothing-explicit", "bidirectional-gaps", "evidence-not-proof", "proof-not-authorization", "reason-not-authorization", "epoch-root-bound"],
+      "test_refs": ["implementation/tests/test_evolution_reasoning.py"]
     }
   ]
 }

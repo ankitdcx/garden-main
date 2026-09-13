@@ -6,6 +6,7 @@ on:
       - 'implementation/**'
       - 'scripts/gate_hourly_evolution.py'
       - 'scripts/audit_function_contract_coverage.py'
+      - 'scripts/audit_evolution_reasoning.py'
       - 'reviews/evolution/**'
       - 'governance/**'
       - 'gsl/FUNCTION_CONTRACTS.json'
@@ -15,6 +16,7 @@ on:
       - 'implementation/**'
       - 'scripts/gate_hourly_evolution.py'
       - 'scripts/audit_function_contract_coverage.py'
+      - 'scripts/audit_evolution_reasoning.py'
       - 'reviews/evolution/**'
       - 'governance/**'
       - 'gsl/FUNCTION_CONTRACTS.json'
@@ -46,6 +48,11 @@ jobs:
           mkdir -p /tmp/wp009-conformance
           python scripts/audit_function_contract_coverage.py \
             --output /tmp/wp009-conformance/function-contract-coverage.json
+      - name: Audit changed production reasoning receipts
+        run: |
+          mkdir -p /tmp/wp009-conformance
+          python scripts/audit_evolution_reasoning.py \
+            --output /tmp/wp009-conformance/evolution-reasoning-conformance.json
       - name: Gate every production hourly evolution action
         run: |
           set -euo pipefail
@@ -75,4 +82,4 @@ jobs:
           if-no-files-found: error
           retention-days: 30
       - name: Boundary reminder
-        run: echo 'Reference tests and declaration coverage PASS != Garden certification, semantic FunctionContract proof, canonical promotion, or deployment permission.'
+        run: echo 'Reference tests and declaration/reasoning conformance PASS != Garden certification, semantic proof, authorization, canonical promotion, or deployment permission; ActionGate remains the admission owner.'

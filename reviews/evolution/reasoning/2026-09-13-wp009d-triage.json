@@ -1,0 +1,162 @@
+{
+  "schema": "GardenEvolutionReasoningBundle/v1",
+  "bundle_id": "GARDEN-HOURLY-2026-09-13-WP009D-REASONING-TRIAGE-001",
+  "action_id": "GARDEN-HOURLY-2026-09-13-WP009D-TRIAGE-001",
+  "design_epoch": "v15.5",
+  "canonical_source_root_sha256": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+  "source_obligation_refs": [
+    "work_packages/WP-009.md#WP-009D",
+    "canonical/current/Garden_User_v15.5_FULL_2026-09-12.txt:SAFE_EVOLUTION_LOOP",
+    "canonical/current/Garden_System_v15.5_FULL_2026-09-12.txt:BIND_EVIDENCE",
+    "canonical/current/Garden_System_v15.5_FULL_2026-09-12.txt:BIND_PROOF"
+  ],
+  "compare": {
+    "schema": "GardenEvolutionCompareReceipt/v1",
+    "action_id": "GARDEN-HOURLY-2026-09-13-WP009D-TRIAGE-001",
+    "design_epoch": "v15.5",
+    "canonical_source_root_sha256": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+    "predecessor_ref": "git:ankitdcx/garden-main@2755c44ae04d6b92d1464310acf6edcf693043de",
+    "alternatives": [
+      {
+        "alternative_id": "DO_NOTHING",
+        "description": "Leave WP-009D as prose/frontier only and do not merge the typed separation candidate.",
+        "projected_effect": "Current production gate remains strong, but Compare/Reason/Proof/Evidence separation is not machine-enforced for future changed actions.",
+        "risk": "A future material change can omit explicit DO_NOTHING reasoning or conflate evidence/proof/authorization without this conformance check."
+      },
+      {
+        "alternative_id": "MERGE_WP009D_TYPED_SEPARATION",
+        "description": "Admit the tested typed separation validator and changed-action conformance audit.",
+        "projected_effect": "Changed governed actions require action/epoch/source-root-bound reasoning bundles while ActionGate remains independent authorization owner.",
+        "risk": "Adds schema and CI maintenance and still leaves WP-009E-J unresolved."
+      }
+    ],
+    "bidirectional_gaps": [
+      {
+        "from": "DO_NOTHING",
+        "to": "MERGE_WP009D_TYPED_SEPARATION",
+        "gap": "DO_NOTHING lacks machine-enforced DO_NOTHING comparison, bidirectional gaps, proof-obligation derivation, and evidence/proof/authorization separation."
+      },
+      {
+        "from": "MERGE_WP009D_TYPED_SEPARATION",
+        "to": "DO_NOTHING",
+        "gap": "The candidate adds validation/CI surface and explicitly does not close algebra, AAP, durable audit, duplicate convergence, source-obligation closure, or full repo-wide GSL certification."
+      }
+    ]
+  },
+  "reason": {
+    "schema": "GardenEvolutionReasonReceipt/v1",
+    "action_id": "GARDEN-HOURLY-2026-09-13-WP009D-TRIAGE-001",
+    "design_epoch": "v15.5",
+    "canonical_source_root_sha256": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+    "strategy": "EVIDENCE_BACKED_TRIAGE",
+    "tier": "WP009D_REFERENCE",
+    "assumptions": [
+      "Garden v15.5 remains immutable and the canonical promotion boundary is unchanged.",
+      "The protected authority registry and trusted-diff ActionGate remain the sole admission/authorization owners.",
+      "Passing tests and proof obligations are conformance evidence, not authority or human approval."
+    ],
+    "uncertainty": "The candidate establishes executable separation and changed-action coverage for this governed kernel path, but does not prove full GSL semantic compliance or closure of WP-009E-J.",
+    "counterexamples": [
+      "A Reason or Proof receipt containing ALLOW/authority fields is rejected by deterministic tests.",
+      "Evidence cannot become Proof merely because it is cited; explicit proof obligations and verifier results are required.",
+      "If a future material change lacks a changed production action/reasoning bundle, the WP-009D CI audit fails.",
+      "If trusted git-diff classification becomes constitutional, ActionGate still escalates regardless of reasoning/proof results."
+    ],
+    "dependency_refs": [
+      "reviews/evolution/production/2026-09-13-wp009d-reasoning-propose.json",
+      "ci:garden-main:34745489949",
+      "artifact:wp007-production-gate:10314380605",
+      "artifact:wp009-conformance:10313669724",
+      "ci:garden-main:seed:34745490014"
+    ],
+    "conclusion": "The tested candidate is suitable for integrator TRIAGE/merge subject to the TRIAGE action itself receiving ActionGate ALLOW on the updated complete diff.",
+    "authorization_effect": "NONE"
+  },
+  "proof": {
+    "schema": "GardenEvolutionProofReceipt/v1",
+    "action_id": "GARDEN-HOURLY-2026-09-13-WP009D-TRIAGE-001",
+    "design_epoch": "v15.5",
+    "canonical_source_root_sha256": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+    "obligations": [
+      {
+        "obligation_id": "PO-WP009D-001",
+        "statement": "Typed validator rejects Compare/Reason/Proof/Evidence sections that attempt to mint trust or authorization.",
+        "verifier_class": "UNIT_TEST",
+        "result": "PASS",
+        "evidence_refs": ["ci:garden-main:34745489949:88-tests-pass"]
+      },
+      {
+        "obligation_id": "PO-WP009D-002",
+        "statement": "Compare requires explicit DO_NOTHING plus bidirectional candidate gaps.",
+        "verifier_class": "UNIT_TEST",
+        "result": "PASS",
+        "evidence_refs": ["ci:garden-main:34745489949:test_compare_requires_do_nothing+bidirectional_gaps"]
+      },
+      {
+        "obligation_id": "PO-WP009D-003",
+        "statement": "Changed production actions in the governed kernel path require exactly one DesignEpoch/source-root-bound reasoning bundle.",
+        "verifier_class": "CI_CONFORMANCE_AUDIT",
+        "result": "PASS",
+        "evidence_refs": ["artifact:wp009-conformance:10313669724:GardenEvolutionReasoningConformanceReport/v1:PASS"]
+      },
+      {
+        "obligation_id": "PO-WP009D-004",
+        "statement": "The trusted ActionGate remains the authorization/admission owner for the proposal.",
+        "verifier_class": "WP007_PRODUCTION_GATE",
+        "result": "PASS",
+        "evidence_refs": ["artifact:wp007-production-gate:10314380605:GARDEN-HOURLY-2026-09-13-WP009D-PROPOSE-001:ALLOW"]
+      },
+      {
+        "obligation_id": "PO-WP009D-005",
+        "statement": "The reference FunctionContract frontier remains explicit rather than being misreported as full semantic compliance.",
+        "verifier_class": "FUNCTION_CONTRACT_AUDIT",
+        "result": "PASS",
+        "evidence_refs": ["artifact:wp009-conformance:10313669724:9-of-24-declared:15-frontier:semantic-compliance-false"]
+      }
+    ],
+    "overall_result": "PASS",
+    "authorization_effect": "NONE"
+  },
+  "evidence": {
+    "schema": "GardenEvolutionEvidenceReceipt/v1",
+    "action_id": "GARDEN-HOURLY-2026-09-13-WP009D-TRIAGE-001",
+    "design_epoch": "v15.5",
+    "canonical_source_root_sha256": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+    "items": [
+      {
+        "kind": "DETERMINISTIC_TEST_RUN",
+        "ref": "ci:garden-main:34745489949:88-tests-pass",
+        "claim_scope": "All private reference tests including eight WP-009D adversarial/separation tests passed."
+      },
+      {
+        "kind": "CONFORMANCE_ARTIFACT",
+        "ref": "artifact:wp009-conformance:10313669724",
+        "claim_scope": "Reasoning conformance PASS and FunctionContract declaration coverage 9/24 with 15 explicit FRONTIER."
+      },
+      {
+        "kind": "ACTION_GATE_ARTIFACT",
+        "ref": "artifact:wp007-production-gate:10314380605",
+        "claim_scope": "Proposal received trusted-diff ORDINARY classification and ActionGate ALLOW under existing reviewer authority."
+      },
+      {
+        "kind": "SEED_CI",
+        "ref": "ci:garden-main:seed:34745490014:PASS",
+        "claim_scope": "SCEP/bootstrap seed validation remained green on the candidate."
+      },
+      {
+        "kind": "PUBLIC_AGENT_AVAILABILITY",
+        "ref": "garden-swarm:run:34744806704:NO_MODEL_FINDING",
+        "claim_scope": "Latest zero-cost public review supplied no admissible candidate finding; it is not proof or authorization."
+      }
+    ],
+    "proof_effect": "NONE",
+    "authorization_effect": "NONE"
+  },
+  "separation_assertions": {
+    "compare_is_not_decision": true,
+    "reason_is_not_authorization": true,
+    "evidence_is_not_proof": true,
+    "proof_is_not_authorization": true,
+    "actiongate_owns_authorization": true
+  }
+}
