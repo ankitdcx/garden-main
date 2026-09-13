@@ -14,7 +14,7 @@ def valid_bundle():
     ]
     finals = [dict(row) for row in independent]
     attempts = [
-        {"status": "CALLED", "model": f"example/{f}:free", "usage": {"cost": 0}, "phase": phase}
+        {"status": "CALLED", "family": f, "model": f"example/{f}:free", "usage": {"cost": 0}, "phase": phase}
         for phase in ("INDEPENDENT", "PEER_CROSS_EXAMINATION")
         for f in families
     ]
@@ -37,6 +37,11 @@ def valid_bundle():
     return bundle
 
 
+def rehash(bundle):
+    bundle["bundle_sha256"] = digest({k:v for k,v in bundle.items() if k != "bundle_sha256"})
+    return bundle
+
+
 class DesignReviewBundleIntakeTests(unittest.TestCase):
     def test_valid_bundle_is_candidate_evidence_only(self):
         receipt = validate(valid_bundle(), EPOCH, ROOT)
@@ -49,25 +54,30 @@ class DesignReviewBundleIntakeTests(unittest.TestCase):
         bundle = valid_bundle()
         bundle["independent_findings"] = bundle["independent_findings"][:2]
         bundle["final_dispositions"] = bundle["final_dispositions"][:2]
-        bundle["bundle_sha256"] = digest({k:v for k,v in bundle.items() if k != "bundle_sha256"})
-        receipt = validate(bundle, EPOCH, ROOT)
+        receipt = validate(rehash(bundle), EPOCH, ROOT)
         self.assertFalse(receipt["candidate_evidence_eligible"])
         self.assertIn("INSUFFICIENT_INDEPENDENT_REVIEW", receipt["failures"])
+        self.assertIn("INDEPENDENT_COUNT_MISMATCH", receipt["failures"])
 
     def test_public_bundle_cannot_self_admit(self):
         bundle = valid_bundle(); bundle["semantic_delta_admitted"] = True
-        bundle["bundle_sha256"] = digest({k:v for k,v in bundle.items() if k != "bundle_sha256"})
-        receipt = validate(bundle, EPOCH, ROOT)
+        receipt = validate(rehash(bundle), EPOCH, ROOT)
         self.assertFalse(receipt["candidate_evidence_eligible"])
         self.assertIn("SELF_ADMISSION_REFUSED", receipt["failures"])
 
     def test_missing_or_nonzero_cost_fails_closed(self):
         for bad_cost in (None, 0.01):
             bundle = valid_bundle(); bundle["provider_attempts"][0]["usage"]["cost"] = bad_cost
-            bundle["bundle_sha256"] = digest({k:v for k,v in bundle.items() if k != "bundle_sha256"})
-            receipt = validate(bundle, EPOCH, ROOT)
+            receipt = validate(rehash(bundle), EPOCH, ROOT)
             self.assertFalse(receipt["candidate_evidence_eligible"])
             self.assertIn("ZERO_COST_NOT_EXPLICIT", receipt["failures"])
+
+    def test_finding_without_matching_provider_call_fails_closed(self):
+        bundle = valid_bundle()
+        bundle["provider_attempts"] = [row for row in bundle["provider_attempts"] if not (row["phase"] == "INDEPENDENT" and row["family"] == "qwen")]
+        receipt = validate(rehash(bundle), EPOCH, ROOT)
+        self.assertFalse(receipt["candidate_evidence_eligible"])
+        self.assertIn("INDEPENDENT_FINDING_WITHOUT_MATCHING_CALL", receipt["failures"])
 
     def test_stale_epoch_or_source_root_fails_closed(self):
         bundle = valid_bundle()
