@@ -9,6 +9,7 @@ on:
       - 'scripts/audit_evolution_reasoning.py'
       - 'scripts/audit_evolution_algebra.py'
       - 'scripts/audit_evolution_assurance.py'
+      - 'scripts/build_evolution_audit_chain.py'
       - 'reviews/evolution/**'
       - 'governance/**'
       - 'gsl/FUNCTION_CONTRACTS.json'
@@ -23,6 +24,7 @@ on:
       - 'scripts/audit_evolution_reasoning.py'
       - 'scripts/audit_evolution_algebra.py'
       - 'scripts/audit_evolution_assurance.py'
+      - 'scripts/build_evolution_audit_chain.py'
       - 'reviews/evolution/**'
       - 'governance/**'
       - 'gsl/FUNCTION_CONTRACTS.json'
@@ -84,18 +86,35 @@ jobs:
         if: steps.function_contracts.outcome == 'success' && steps.reasoning.outcome == 'success' && steps.algebra.outcome == 'success' && steps.assurance.outcome == 'success'
         continue-on-error: true
         run: |
-          set -euo pipefail
+          set -uo pipefail
           mkdir -p /tmp/wp007-production-gate-receipts
           count=0
+          failed=0
           for input in reviews/evolution/production/*.json; do
             [ -e "$input" ] || continue
             count=$((count + 1))
             base="$(basename "$input" .json)"
             python scripts/gate_hourly_evolution.py \
               --input "$input" \
-              --output "/tmp/wp007-production-gate-receipts/${base}.receipt.json"
+              --output "/tmp/wp007-production-gate-receipts/${base}.receipt.json" || failed=1
           done
-          test "$count" -gt 0
+          test "$count" -gt 0 || failed=1
+          exit "$failed"
+      - name: Build WP-009 durable audit chain
+        id: durable_audit
+        if: always()
+        continue-on-error: true
+        run: |
+          mkdir -p /tmp/wp009-durable-audit
+          python scripts/build_evolution_audit_chain.py \
+            --chain-id "garden-main-${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}" \
+            --record reviews/evolution/production \
+            --record reviews/evolution/reasoning \
+            --record reviews/evolution/algebra \
+            --record reviews/evolution/assurance \
+            --record /tmp/wp009-conformance \
+            --record /tmp/wp007-production-gate-receipts \
+            --output /tmp/wp009-durable-audit/evolution-audit-chain.json
       - name: Upload immutable WP-007 production gate receipts
         if: always() && steps.production_gate.outcome != 'skipped'
         uses: actions/upload-artifact@v4
@@ -112,6 +131,19 @@ jobs:
           path: /tmp/wp009-conformance/*.json
           if-no-files-found: error
           retention-days: 30
+      - name: Upload WP-009 durable audit evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: wp009-durable-audit-${{ github.run_id }}
+          path: /tmp/wp009-durable-audit/*.json
+          if-no-files-found: error
+          retention-days: 30
+      - name: Enforce durable audit after receipt persistence
+        if: always() && steps.durable_audit.outcome == 'failure'
+        run: |
+          echo 'WP-009 durable audit chain could not be constructed or verified; available receipts were uploaded before this fail-closed step.'
+          exit 1
       - name: Enforce conformance before ActionGate admission
         if: always() && (steps.function_contracts.outcome == 'failure' || steps.reasoning.outcome == 'failure' || steps.algebra.outcome == 'failure' || steps.assurance.outcome == 'failure')
         run: |
@@ -120,7 +152,7 @@ jobs:
       - name: Enforce production gate after receipt persistence
         if: steps.production_gate.outcome == 'failure'
         run: |
-          echo 'Production ActionGate blocked one or more actions; receipts were persisted before this fail-closed step.'
+          echo 'Production ActionGate blocked one or more actions; receipts and durable audit evidence were persisted before this fail-closed step.'
           exit 1
       - name: Boundary reminder
-        run: echo 'Reference tests and declaration/reasoning/algebra/AAP conformance PASS != Garden certification, semantic proof, authorization, canonical promotion, or deployment permission; FRONTIER is non-compliance and ActionGate remains the admission owner.'
+        run: echo 'Reference tests and declaration/reasoning/algebra/AAP/audit conformance PASS != Garden certification, semantic proof, authorization, canonical promotion, permanent archival, or deployment permission; FRONTIER is non-compliance and ActionGate remains the admission owner.'
