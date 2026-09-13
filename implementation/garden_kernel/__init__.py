@@ -12,6 +12,11 @@ from .evolution_epoch import (
     EvolutionArtifactKind, require_current_for_accumulation,
     validate_evolution_binding,
 )
+from .evolution_authority import (
+    EvolutionAgentRole, EvolutionAuthorityEnvelope, ROLE_ACTIONS,
+    can_execute, compose_authority, delegate_within_envelope,
+    make_role_envelope,
+)
 from .extractor import ClosureManifest, GapRecord, ObligationExtractor
 from .store import KnowledgeStore
 from .verifier import VerifierClass, VerifierRegistry, VerificationReceipt
@@ -24,6 +29,9 @@ __all__ = [
     "BindingStatus", "BindingValidation", "EvolutionArtifactBinding",
     "EvolutionArtifactKind", "require_current_for_accumulation",
     "validate_evolution_binding",
+    "EvolutionAgentRole", "EvolutionAuthorityEnvelope", "ROLE_ACTIONS",
+    "can_execute", "compose_authority", "delegate_within_envelope",
+    "make_role_envelope",
     "ClosureManifest", "GapRecord", "ObligationExtractor", "KnowledgeStore",
     "VerifierClass", "VerifierRegistry", "VerificationReceipt",
 ]
