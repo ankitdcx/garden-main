@@ -8,7 +8,7 @@
     "action_id": "GARDEN-HOURLY-2026-09-13-WP009E-TRIAGE-001",
     "verb": "TRIAGE",
     "actor_ref": "agent:garden-integrator-build",
-    "subject_ref": "repo:ankitdcx/garden-main#pull/15",
+    "subject_ref": "repo:ankitdcx/garden-main",
     "input_refs": [
       "reviews/evolution/production/2026-09-13-wp009e-algebra-propose.json",
       "reviews/evolution/reasoning/2026-09-13-wp009e-triage.json",
