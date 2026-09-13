@@ -4,10 +4,14 @@ on:
   push:
     paths:
       - 'implementation/**'
+      - 'scripts/gate_hourly_evolution.py'
+      - 'reviews/evolution/**'
       - '.github/workflows/kernel-ci.yml'
   pull_request:
     paths:
       - 'implementation/**'
+      - 'scripts/gate_hourly_evolution.py'
+      - 'reviews/evolution/**'
       - '.github/workflows/kernel-ci.yml'
   workflow_dispatch:
 
@@ -15,7 +19,7 @@ permissions:
   contents: read
 
 jobs:
-  wp-001-004-reference:
+  wp-001-007-reference:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
@@ -29,5 +33,17 @@ jobs:
         env:
           PYTHONPATH: implementation
         run: python -m unittest discover -s implementation/tests -v
+      - name: Gate production hourly migration action
+        run: >-
+          python scripts/gate_hourly_evolution.py
+          --input reviews/evolution/production/2026-09-13-wp008-propose.json
+          --output /tmp/wp007-production-gate-receipt.json
+      - name: Upload immutable WP-007 production gate receipt
+        uses: actions/upload-artifact@v4
+        with:
+          name: wp007-production-gate-${{ github.run_id }}
+          path: /tmp/wp007-production-gate-receipt.json
+          if-no-files-found: error
+          retention-days: 30
       - name: Boundary reminder
-        run: echo 'Reference tests PASS != Garden certification or deployment permission.'
+        run: echo 'Reference tests PASS != Garden certification, canonical promotion, or deployment permission.'
