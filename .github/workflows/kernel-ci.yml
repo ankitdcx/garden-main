@@ -33,16 +33,25 @@ jobs:
         env:
           PYTHONPATH: implementation
         run: python -m unittest discover -s implementation/tests -v
-      - name: Gate production hourly migration action
-        run: >-
-          python scripts/gate_hourly_evolution.py
-          --input reviews/evolution/production/2026-09-13-wp008-propose.json
-          --output /tmp/wp007-production-gate-receipt.json
-      - name: Upload immutable WP-007 production gate receipt
+      - name: Gate every production hourly evolution action
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/wp007-production-gate-receipts
+          count=0
+          for input in reviews/evolution/production/*.json; do
+            [ -e "$input" ] || continue
+            count=$((count + 1))
+            base="$(basename "$input" .json)"
+            python scripts/gate_hourly_evolution.py \
+              --input "$input" \
+              --output "/tmp/wp007-production-gate-receipts/${base}.receipt.json"
+          done
+          test "$count" -gt 0
+      - name: Upload immutable WP-007 production gate receipts
         uses: actions/upload-artifact@v4
         with:
           name: wp007-production-gate-${{ github.run_id }}
-          path: /tmp/wp007-production-gate-receipt.json
+          path: /tmp/wp007-production-gate-receipts/*.json
           if-no-files-found: error
           retention-days: 30
       - name: Boundary reminder
