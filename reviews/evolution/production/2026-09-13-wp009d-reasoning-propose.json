@@ -20,7 +20,8 @@
       "user:Garden-Integrator-and-Build:repo-wide-GSL-instruction",
       "work_packages/WP-009.md#WP-009D",
       "git:ankitdcx/garden-main@2755c44ae04d6b92d1464310acf6edcf693043de",
-      "ci:garden-main:34743403881:PASS"
+      "ci:garden-main:34743403881:PASS",
+      "git:wp-009d-reason-proof-evidence@c7562aae5a862883f8b340f29c28c14541be8fcb:reasoning-ci-enforcement"
     ],
     "satisfied_preconditions": [
       "ACTOR_IDENTIFIED",
