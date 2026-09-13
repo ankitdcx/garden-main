@@ -1,0 +1,41 @@
+{
+  "schema": "GardenEvolutionProductionAction/v1",
+  "design_epoch": "v15.5",
+  "dependencies": {
+    "canonical_source_root": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598"
+  },
+  "action": {
+    "action_id": "GARDEN-HOURLY-2026-09-13-WP009E-TRIAGE-001",
+    "verb": "TRIAGE",
+    "actor_ref": "agent:garden-integrator-build",
+    "subject_ref": "repo:ankitdcx/garden-main#pull/15",
+    "input_refs": [
+      "reviews/evolution/production/2026-09-13-wp009e-algebra-propose.json",
+      "reviews/evolution/reasoning/2026-09-13-wp009e-triage.json",
+      "reviews/evolution/algebra/2026-09-13-wp009e-triage.json",
+      "ci:garden-main:34747748837:PASS",
+      "artifact:wp009-conformance:10314673268",
+      "artifact:wp007-production-gate:10314264321"
+    ],
+    "provenance_refs": [
+      "user:Garden-Integrator-and-Build:repo-wide-GSL-instruction",
+      "work_packages/WP-009.md#WP-009E",
+      "git:ankitdcx/garden-main@dba1d7123baf530659ddae3a090eed5d743fff6d",
+      "git:wp-009e-algebra-conformance@7387359ff9553d4f4c6563b6f1aae4e3229e3988",
+      "ci:garden-main:34747748837:PASS"
+    ],
+    "satisfied_preconditions": [
+      "ACTOR_IDENTIFIED",
+      "SUBJECT_IDENTIFIED",
+      "PROVENANCE_PRESENT",
+      "INPUT_REFS_TYPED"
+    ],
+    "claimed_postconditions": [
+      "FINDING_CLASSIFIED",
+      "PRIORITY_ASSIGNED",
+      "NO_CANONICAL_MUTATION"
+    ]
+  },
+  "authority_ref": "AUTH-GARDEN-HOURLY-INTEGRATOR-v15.5",
+  "bound_inputs": []
+}
