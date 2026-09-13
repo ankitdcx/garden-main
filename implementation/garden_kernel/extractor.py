@@ -33,14 +33,26 @@ class ClosureManifest:
     anchors_seen: set[str] = field(default_factory=set)
     parsed_definition_ids: set[str] = field(default_factory=set)
     parsed_schema_names: set[str] = field(default_factory=set)
+    total_nonempty_lines: int = 0
+    classified_lines: int = 0
+    unclassified_lines: int = 0
     coverage_complete: bool = False
+    coverage_note: str = (
+        "PARTIAL_EXTRACTOR: only recognized structured definitions/schemas and explicit normative text are classified; "
+        "unclassified material remains frontier and full source coverage is not claimed."
+    )
 
     def frontier(self) -> list[GapRecord]:
         return list(self.gaps)
 
 
 class ObligationExtractor:
-    """Conservative text extractor: recognized material is emitted; ambiguity stays frontier."""
+    """Conservative text extractor: recognized material is emitted; ambiguity stays frontier.
+
+    This reference extractor intentionally never claims complete source coverage.
+    A later WP-002 implementation may promote `coverage_complete` only after every
+    material source class is explicitly classified and tested.
+    """
 
     def extract_paths(self, paths: Iterable[Path]) -> ClosureManifest:
         manifest = ClosureManifest()
@@ -48,7 +60,7 @@ class ObligationExtractor:
             raw = path.read_bytes()
             manifest.source_hashes[path.name] = hashlib.sha256(raw).hexdigest()
             self._extract_text(path.name, raw.decode("utf-8"), manifest)
-        manifest.coverage_complete = len(manifest.gaps) == 0
+        manifest.coverage_complete = False
         return manifest
 
     def _extract_text(self, filename: str, text: str, manifest: ClosureManifest) -> None:
@@ -58,6 +70,9 @@ class ObligationExtractor:
             line = raw_line.strip()
             if not line:
                 continue
+            manifest.total_nonempty_lines += 1
+            classified = False
+
             full_anchors = ANCHOR_RE.findall(line)
             if full_anchors:
                 current_anchor = full_anchors[0]
@@ -75,36 +90,42 @@ class ObligationExtractor:
                     source_file=filename, source_anchor=current_anchor, owner=current_owner,
                     status="EXTRACTED_DEFINITION",
                 ))
-                continue
+                classified = True
 
-            sm = SCHEMA_RE.match(line)
-            if sm:
-                name, schema_id, fields = sm.groups()
-                manifest.parsed_schema_names.add(name)
-                manifest.obligations.append(Obligation(
-                    obligation_id=f"SCHEMA:{schema_id or name}",
-                    text=f"{name}: {fields}", source_file=filename,
-                    source_anchor=current_anchor, owner=current_owner,
-                    status="EXTRACTED_SCHEMA",
-                ))
-                continue
+            if not classified:
+                sm = SCHEMA_RE.match(line)
+                if sm:
+                    name, schema_id, fields = sm.groups()
+                    manifest.parsed_schema_names.add(name)
+                    manifest.obligations.append(Obligation(
+                        obligation_id=f"SCHEMA:{schema_id or name}",
+                        text=f"{name}: {fields}", source_file=filename,
+                        source_anchor=current_anchor, owner=current_owner,
+                        status="EXTRACTED_SCHEMA",
+                    ))
+                    classified = True
 
-            if NORMATIVE_RE.search(line):
+            if not classified and NORMATIVE_RE.search(line):
                 oid = hashlib.sha256(f"{filename}:{number}:{line}".encode()).hexdigest()[:16]
                 manifest.obligations.append(Obligation(
                     obligation_id=f"TEXT:{oid}", text=line, source_file=filename,
                     source_anchor=current_anchor, owner=current_owner,
                     status="EXTRACTED_NORMATIVE_TEXT",
                 ))
-                continue
+                classified = True
 
-            # Explicit structured records we do not understand must be frontier, not silently ignored.
-            if line.startswith("@") and not line.startswith("@N|"):
+            if not classified and line.startswith("@") and not line.startswith("@N|"):
                 gid = hashlib.sha256(f"{filename}:{number}:{line}".encode()).hexdigest()[:16]
                 manifest.gaps.append(GapRecord(
                     gap_id=f"GAP:{gid}", source_file=filename, line_number=number,
                     text=line, reason="UNSUPPORTED_STRUCTURED_RECORD", source_anchor=current_anchor,
                 ))
+                classified = True
+
+            if classified:
+                manifest.classified_lines += 1
+            else:
+                manifest.unclassified_lines += 1
 
     @staticmethod
     def stable_anchor_hash(source_file: str, anchor: str | None, text: str) -> str:
