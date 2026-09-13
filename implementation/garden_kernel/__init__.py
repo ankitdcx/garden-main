@@ -17,6 +17,10 @@ from .evolution_authority import (
     can_execute, compose_authority, delegate_within_envelope,
     make_role_envelope,
 )
+from .evolution_gate import (
+    EvolutionGateContext, EvolutionGateReceipt, GateDecision,
+    evaluate_evolution_action,
+)
 from .extractor import ClosureManifest, GapRecord, ObligationExtractor
 from .store import KnowledgeStore
 from .verifier import VerifierClass, VerifierRegistry, VerificationReceipt
@@ -32,6 +36,8 @@ __all__ = [
     "EvolutionAgentRole", "EvolutionAuthorityEnvelope", "ROLE_ACTIONS",
     "can_execute", "compose_authority", "delegate_within_envelope",
     "make_role_envelope",
+    "EvolutionGateContext", "EvolutionGateReceipt", "GateDecision",
+    "evaluate_evolution_action",
     "ClosureManifest", "GapRecord", "ObligationExtractor", "KnowledgeStore",
     "VerifierClass", "VerifierRegistry", "VerificationReceipt",
 ]
