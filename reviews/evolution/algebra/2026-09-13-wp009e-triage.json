@@ -1,0 +1,67 @@
+{
+  "schema": "GardenEvolutionAlgebraUsageReceipt/v1",
+  "action_id": "GARDEN-HOURLY-2026-09-13-WP009E-TRIAGE-001",
+  "design_epoch": "v15.5",
+  "canonical_source_root_sha256": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+  "source_obligation_refs": [
+    "work_packages/WP-009.md#WP-009E",
+    "canonical/current/Garden_System_v15.5_FULL_2026-09-12.txt:REG-ALGEBRA-001",
+    "canonical/current/Garden_System_v15.5_FULL_2026-09-12.txt:[S-PROCESS]#5.1",
+    "canonical/current/Garden_System_v15.5_FULL_2026-09-12.txt:#5.4",
+    "canonical/current/Garden_System_v15.5_FULL_2026-09-12.txt:#5.5A"
+  ],
+  "entries": [
+    {
+      "algebra": "Process",
+      "status": "APPLIED",
+      "operators": ["SEQUENCE", "DO_NOTHING"],
+      "law_claims": [],
+      "non_law_acknowledgements": ["PARALLEL_EFFECT_COMMUTATIVITY_NOT_UNIVERSAL"],
+      "applicability_reason": "Triage follows the governed sequence from candidate evidence through validation and ActionGate, with the predecessor Compare retaining explicit DO_NOTHING."
+    },
+    {
+      "algebra": "Policy",
+      "status": "FRONTIER",
+      "operators": [],
+      "law_claims": [],
+      "non_law_acknowledgements": [],
+      "applicability_reason": "Policy remains relevant to eventual admission but this triage does not pretend the existing ActionGate executes Policy Algebra.",
+      "frontier_reason": "No concrete Policy Algebra operator invocation is demonstrated by this bounded production path."
+    },
+    {
+      "algebra": "Decision",
+      "status": "FRONTIER",
+      "operators": [],
+      "law_claims": [],
+      "non_law_acknowledgements": [],
+      "applicability_reason": "Typed gate and conformance outcomes remain decision/result artifacts.",
+      "frontier_reason": "Exact executable Decision Algebra operator signatures remain unbound."
+    },
+    {
+      "algebra": "Conformance",
+      "status": "APPLIED",
+      "operators": ["BIND_EVIDENCE", "BIND_PROOF", "GAP", "COVERAGE"],
+      "law_claims": [],
+      "non_law_acknowledgements": ["CONFORMANCE_IS_NOT_BINARY_ONLY", "AUDIT_IS_NOT_A_SEPARATE_ALGEBRA"],
+      "applicability_reason": "Triage binds PR CI and immutable conformance/gate artifacts as evidence/proof refs while retaining remaining algebra FRONTIER explicitly."
+    },
+    {
+      "algebra": "Evidence",
+      "status": "FRONTIER",
+      "operators": [],
+      "law_claims": [],
+      "non_law_acknowledgements": [],
+      "applicability_reason": "CI and receipt evidence are referenced, but this triage performs no dependence-aware Evidence Algebra composition.",
+      "frontier_reason": "Level-3 executable Evidence Algebra operation signatures remain unbound."
+    },
+    {
+      "algebra": "Bridge",
+      "status": "NOT_APPLICABLE",
+      "operators": [],
+      "law_claims": [],
+      "non_law_acknowledgements": [],
+      "applicability_reason": "No semantic-to-vector/operator representation transformation is invoked by this triage."
+    }
+  ],
+  "semantic_compliance_proved": false
+}
