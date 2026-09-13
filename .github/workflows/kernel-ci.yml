@@ -5,15 +5,19 @@ on:
     paths:
       - 'implementation/**'
       - 'scripts/gate_hourly_evolution.py'
+      - 'scripts/audit_function_contract_coverage.py'
       - 'reviews/evolution/**'
       - 'governance/**'
+      - 'gsl/FUNCTION_CONTRACTS.json'
       - '.github/workflows/kernel-ci.yml'
   pull_request:
     paths:
       - 'implementation/**'
       - 'scripts/gate_hourly_evolution.py'
+      - 'scripts/audit_function_contract_coverage.py'
       - 'reviews/evolution/**'
       - 'governance/**'
+      - 'gsl/FUNCTION_CONTRACTS.json'
       - '.github/workflows/kernel-ci.yml'
   workflow_dispatch:
 
@@ -37,6 +41,11 @@ jobs:
         env:
           PYTHONPATH: implementation
         run: python -m unittest discover -s implementation/tests -v
+      - name: Audit FunctionContract declaration coverage
+        run: |
+          mkdir -p /tmp/wp009-conformance
+          python scripts/audit_function_contract_coverage.py \
+            --output /tmp/wp009-conformance/function-contract-coverage.json
       - name: Gate every production hourly evolution action
         run: |
           set -euo pipefail
@@ -58,5 +67,12 @@ jobs:
           path: /tmp/wp007-production-gate-receipts/*.json
           if-no-files-found: error
           retention-days: 30
+      - name: Upload WP-009 conformance evidence
+        uses: actions/upload-artifact@v4
+        with:
+          name: wp009-conformance-${{ github.run_id }}
+          path: /tmp/wp009-conformance/*.json
+          if-no-files-found: error
+          retention-days: 30
       - name: Boundary reminder
-        run: echo 'Reference tests PASS != Garden certification, canonical promotion, or deployment permission.'
+        run: echo 'Reference tests and declaration coverage PASS != Garden certification, semantic FunctionContract proof, canonical promotion, or deployment permission.'
