@@ -1,0 +1,43 @@
+name: Garden source extraction CI
+
+on:
+  push:
+    paths:
+      - 'implementation/garden_kernel/extractor.py'
+      - 'scripts/extract_obligations.py'
+      - 'canonical/current/**'
+      - '.github/workflows/source-extraction-ci.yml'
+  pull_request:
+    paths:
+      - 'implementation/garden_kernel/extractor.py'
+      - 'scripts/extract_obligations.py'
+      - 'canonical/current/**'
+      - '.github/workflows/source-extraction-ci.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  extract-current-source:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Extract obligations from current five-file source
+        run: python scripts/extract_obligations.py --output /tmp/garden-obligation-extraction.json
+      - name: Verify useful partial coverage without false completeness
+        run: |
+          python - <<'PY'
+          import json
+          p = json.load(open('/tmp/garden-obligation-extraction.json', encoding='utf-8'))
+          assert len(p['source_hashes']) == 5
+          assert p['obligation_count'] > 0
+          assert p['unclassified_lines'] > 0
+          assert p['coverage_complete'] is False
+          assert 'PARTIAL_EXTRACTOR' in p['coverage_note']
+          print({k: p[k] for k in ('obligation_count','gap_count','classified_lines','unclassified_lines','coverage_complete')})
+          PY
