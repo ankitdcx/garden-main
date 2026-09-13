@@ -1,0 +1,155 @@
+{
+  "schema": "GardenEvolutionReasoningBundle/v1",
+  "bundle_id": "GARDEN-HOURLY-2026-09-13-WP009D-REASONING-PROPOSE-001",
+  "action_id": "GARDEN-HOURLY-2026-09-13-WP009D-PROPOSE-001",
+  "design_epoch": "v15.5",
+  "canonical_source_root_sha256": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+  "source_obligation_refs": [
+    "work_packages/WP-009.md#WP-009D",
+    "canonical/current/Garden_User_v15.5_FULL_2026-09-12.txt:SAFE_EVOLUTION_LOOP",
+    "canonical/current/Garden_System_v15.5_FULL_2026-09-12.txt:BIND_EVIDENCE",
+    "canonical/current/Garden_System_v15.5_FULL_2026-09-12.txt:BIND_PROOF"
+  ],
+  "compare": {
+    "schema": "GardenEvolutionCompareReceipt/v1",
+    "action_id": "GARDEN-HOURLY-2026-09-13-WP009D-PROPOSE-001",
+    "design_epoch": "v15.5",
+    "canonical_source_root_sha256": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+    "predecessor_ref": "git:ankitdcx/garden-main@2755c44ae04d6b92d1464310acf6edcf693043de",
+    "alternatives": [
+      {
+        "alternative_id": "DO_NOTHING",
+        "description": "Keep Compare/Reason/Proof/Evidence separation as prose/frontier only.",
+        "projected_effect": "No new executable schema or CI enforcement.",
+        "risk": "Future material changes may conflate evidence, proof, reasoning, and authorization without machine detection."
+      },
+      {
+        "alternative_id": "WP009D_TYPED_SEPARATION",
+        "description": "Add typed reasoning-bundle validation plus changed-action CI enforcement.",
+        "projected_effect": "Future changed production actions in the governed kernel path carry machine-checkable Compare/Reason/Proof/Evidence records while authorization remains external.",
+        "risk": "Adds validation and CI surface that may initially expose more FRONTIER rather than proving full GSL compliance."
+      }
+    ],
+    "bidirectional_gaps": [
+      {
+        "from": "DO_NOTHING",
+        "to": "WP009D_TYPED_SEPARATION",
+        "gap": "DO_NOTHING lacks explicit DO_NOTHING comparison, proof-obligation typing, and machine-enforced evidence/proof/authorization separation."
+      },
+      {
+        "from": "WP009D_TYPED_SEPARATION",
+        "to": "DO_NOTHING",
+        "gap": "Candidate adds schema/validator maintenance burden and still leaves algebra/AAP/durable-audit closure for later WP-009 stages."
+      }
+    ]
+  },
+  "reason": {
+    "schema": "GardenEvolutionReasonReceipt/v1",
+    "action_id": "GARDEN-HOURLY-2026-09-13-WP009D-PROPOSE-001",
+    "design_epoch": "v15.5",
+    "canonical_source_root_sha256": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+    "strategy": "BOUNDED_REFERENCE_IMPLEMENTATION",
+    "tier": "WP009D_REFERENCE",
+    "assumptions": [
+      "Garden v15.5 and its five-file canonical source root remain immutable.",
+      "Authority and authorization continue to come only from the protected registry, trusted attestations, and ActionGate.",
+      "CI/test outcomes are evidence inputs and do not become authorization merely by passing."
+    ],
+    "uncertainty": "This slice proves typed separation and changed-action enforcement only; it does not prove semantic completeness, algebra conformance, AAP selection, durable audit, or repo-wide GSL certification.",
+    "counterexamples": [
+      "A Reason receipt that says ALLOW must be rejected.",
+      "An Evidence receipt that claims authority or proof effect must be rejected.",
+      "A Proof receipt whose overall result disagrees with its obligations must be rejected.",
+      "A future material kernel change without a changed typed production action/reasoning bundle must fail the WP-009D CI audit."
+    ],
+    "dependency_refs": [
+      "work_packages/WP-009.md#WP-009D",
+      "gsl/FUNCTION_CONTRACTS.json",
+      "scripts/gate_hourly_evolution.py",
+      "governance/evolution_authority_registry.json",
+      "git:ankitdcx/garden-main@2755c44ae04d6b92d1464310acf6edcf693043de"
+    ],
+    "conclusion": "Implement the typed separation as a bounded candidate and admit only after deterministic tests, FunctionContract audit, WP-009D conformance audit, and the existing production ActionGate all pass.",
+    "authorization_effect": "NONE"
+  },
+  "proof": {
+    "schema": "GardenEvolutionProofReceipt/v1",
+    "action_id": "GARDEN-HOURLY-2026-09-13-WP009D-PROPOSE-001",
+    "design_epoch": "v15.5",
+    "canonical_source_root_sha256": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+    "obligations": [
+      {
+        "obligation_id": "PO-WP009D-001",
+        "statement": "Typed validator rejects Compare/Reason/Proof/Evidence sections that attempt to mint trust or authorization.",
+        "verifier_class": "UNIT_TEST",
+        "result": "UNKNOWN",
+        "evidence_refs": []
+      },
+      {
+        "obligation_id": "PO-WP009D-002",
+        "statement": "Compare requires explicit DO_NOTHING plus bidirectional candidate gaps.",
+        "verifier_class": "UNIT_TEST",
+        "result": "UNKNOWN",
+        "evidence_refs": []
+      },
+      {
+        "obligation_id": "PO-WP009D-003",
+        "statement": "Future changed production actions in the governed kernel path require exactly one DesignEpoch/source-root-bound reasoning bundle.",
+        "verifier_class": "CI_CONFORMANCE_AUDIT",
+        "result": "UNKNOWN",
+        "evidence_refs": []
+      },
+      {
+        "obligation_id": "PO-WP009D-004",
+        "statement": "The trusted ActionGate remains the only authorization/admission owner for this action.",
+        "verifier_class": "WP007_PRODUCTION_GATE",
+        "result": "UNKNOWN",
+        "evidence_refs": []
+      }
+    ],
+    "overall_result": "UNKNOWN",
+    "authorization_effect": "NONE"
+  },
+  "evidence": {
+    "schema": "GardenEvolutionEvidenceReceipt/v1",
+    "action_id": "GARDEN-HOURLY-2026-09-13-WP009D-PROPOSE-001",
+    "design_epoch": "v15.5",
+    "canonical_source_root_sha256": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+    "items": [
+      {
+        "kind": "SOURCE_REFERENCE",
+        "ref": "work_packages/WP-009.md#WP-009D",
+        "claim_scope": "Defines the required separation frontier."
+      },
+      {
+        "kind": "CANONICAL_SOURCE_REFERENCE",
+        "ref": "canonical/current/Garden_User_v15.5_FULL_2026-09-12.txt:SAFE_EVOLUTION_LOOP",
+        "claim_scope": "Canonical user source places Reason/Compare/Proof inside the safe evolution loop."
+      },
+      {
+        "kind": "CANONICAL_SOURCE_REFERENCE",
+        "ref": "canonical/current/Garden_System_v15.5_FULL_2026-09-12.txt:BIND_EVIDENCE+BIND_PROOF",
+        "claim_scope": "Canonical system source distinguishes evidence and proof bindings."
+      },
+      {
+        "kind": "CI_BASELINE",
+        "ref": "ci:garden-main:34743403881:PASS",
+        "claim_scope": "Predecessor private kernel CI is green before this candidate."
+      },
+      {
+        "kind": "PUBLIC_AGENT_AVAILABILITY",
+        "ref": "garden-swarm:run:34744806704:NO_MODEL_FINDING",
+        "claim_scope": "Latest zero-cost public review supplied no admissible new finding; it is not proof or authorization."
+      }
+    ],
+    "proof_effect": "NONE",
+    "authorization_effect": "NONE"
+  },
+  "separation_assertions": {
+    "compare_is_not_decision": true,
+    "reason_is_not_authorization": true,
+    "evidence_is_not_proof": true,
+    "proof_is_not_authorization": true,
+    "actiongate_owns_authorization": true
+  }
+}
