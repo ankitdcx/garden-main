@@ -26,14 +26,15 @@
     ],
     "satisfied_preconditions": [
       "ACTOR_IDENTIFIED",
-      "SUBJECT_IDENTIFIED",
-      "PROVENANCE_PRESENT",
-      "INPUT_REFS_TYPED"
+      "PROPOSAL_EXISTS",
+      "EVIDENCE_AVAILABLE",
+      "PROVENANCE_PRESENT"
     ],
     "claimed_postconditions": [
-      "FINDING_CLASSIFIED",
-      "PRIORITY_ASSIGNED",
-      "NO_CANONICAL_MUTATION"
+      "DISPOSITION_RECORDED",
+      "RATIONALE_RECORDED",
+      "NO_AUTHORITY_EXPANSION",
+      "CANONICAL_POINTER_UNCHANGED"
     ]
   },
   "authority_ref": "AUTH-GARDEN-HOURLY-INTEGRATOR-v15.5",
