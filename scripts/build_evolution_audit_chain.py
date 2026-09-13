@@ -22,6 +22,11 @@ def _record_paths(values: list[str]) -> list[Path]:
             paths.update(p for p in path.rglob("*.json") if p.is_file())
         elif path.is_file():
             paths.add(path)
+        elif path.is_absolute():
+            # Optional CI receipt directories may legitimately be absent when an
+            # earlier gated stage was skipped. An absent absolute path contributes
+            # no records; it must never be reinterpreted as a repository glob.
+            continue
         else:
             paths.update(p for p in ROOT.glob(value) if p.is_file())
     return sorted(paths, key=lambda p: p.as_posix())
