@@ -38,6 +38,11 @@ class EvolutionAuditScriptTests(unittest.TestCase):
 
             self.assertEqual(found, [first, second])
 
+    def test_unmatched_absolute_receipt_glob_is_empty(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            pattern = str(Path(tmp) / "not-created" / "*.json")
+            self.assertEqual(_record_paths([pattern]), [])
+
 
 if __name__ == "__main__":
     unittest.main()
