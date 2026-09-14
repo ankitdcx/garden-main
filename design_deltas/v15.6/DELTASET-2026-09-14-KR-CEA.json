@@ -1,0 +1,112 @@
+{
+  "schema": "GardenDesignDeltaSet/v1",
+  "delta_set_id": "DELTASET-2026-09-14-KR-CEA",
+  "predecessor_release": "Garden v15.5",
+  "predecessor_source_root_sha256": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+  "candidate_release": "Garden v15.6",
+  "status": "CANDIDATE_NOT_RATIFIED_NEEDS_REQUIRED_MULTI_MODEL_REVIEW_AND_GSL_COMPARE",
+  "canonical_predecessor_immutable": true,
+  "topology_change": false,
+  "new_top_level_engines": 0,
+  "new_authority_source": false,
+  "title": "GSL-KR Continuous Epistemic Assimilation & Consolidation (KR-CEA) v1.0",
+  "purpose": "Make continuous runtime learning, multi-agent knowledge accumulation, loss-aware distillation, model-consolidation candidacy and knowledge-dividend accounting explicit while preserving a categorical boundary between epistemic improvement and authority/constitutional change.",
+  "core_principle": "runtime cognition != persistent knowledge != model/scaffold consolidation != authority != constitutional change",
+  "existing_owner_reuse": [
+    "Capability.Knowledge",
+    "Engine.Search",
+    "Engine.Compare",
+    "Engine.Reason",
+    "Engine.Proof",
+    "Provenance",
+    "BeliefTimeline",
+    "EpistemicTransition",
+    "Continuous Failure Learning",
+    "HistoricalSemanticSummary",
+    "dependency-aware revalidation",
+    "DesignEpoch where design semantics actually change",
+    "Human Sovereignty / Privacy / Constitution",
+    "existing safety and authority gates"
+  ],
+  "proposed_artifacts": [
+    {
+      "name": "EpistemicDeltaCandidate",
+      "disposition": "KEEP_NEW_CANDIDATE_ARTIFACT",
+      "minimum_bindings": ["source/provenance", "temporal scope", "applicable context", "privacy classification", "claim/evidence refs", "novelty class", "uncertainty/confidence", "contradiction refs", "derivation lineage", "originating model/agent/tool/version", "retention class"]
+    },
+    {
+      "name": "KnowledgeAssimilationReceipt",
+      "disposition": "KEEP_NEW_TRANSITION_RECEIPT",
+      "terminal_states": ["ACCEPTED", "REJECTED", "MERGED", "CONFLICTED", "UNKNOWN", "VERIFY_MORE", "PRIVACY_OR_AUTHORITY_RESTRICTED", "DUPLICATE", "STALE_OR_POISONED"]
+    },
+    {
+      "name": "KnowledgeCompressionReceipt",
+      "disposition": "KEEP_RECEIPT_REUSE_EXISTING_SUMMARY_OWNERS",
+      "boundary": "Loss-aware compression should normally emit/reuse HistoricalSemanticSummary or other existing knowledge artifacts rather than create a competing summary owner."
+    },
+    {
+      "name": "CrossContextPatternReceipt",
+      "disposition": "PROFILE_OR_RECEIPT_CANDIDATE_PENDING_COLLISION_REVIEW",
+      "boundary": "Cross-context inference requires explicit lawful/privacy authority to perform the join and does not imply universal raw-data visibility."
+    },
+    {
+      "name": "ModelConsolidationCandidate",
+      "disposition": "REUSE_OR_PROFILE_EXISTING_EVOLUTION_CANDIDATE_MACHINERY_IF_ADEQUATE",
+      "target_kinds": ["MODEL", "SCAFFOLD", "VERIFIER", "TOOL", "POLICY_IMPLEMENTATION"],
+      "boundary": "Acceptance does not mutate deployed model weights or privileged scaffolding."
+    }
+  ],
+  "learning_strata": [
+    "A_EPHEMERAL_COGNITION",
+    "B_GOVERNED_PERSISTENT_KNOWLEDGE",
+    "C_LOSS_AWARE_DURABLE_DISTILLATION",
+    "D_MODEL_OR_SCAFFOLD_CONSOLIDATION_CANDIDATE",
+    "E_PROTECTED_NORMATIVE_ROOT"
+  ],
+  "candidate_invariants": [
+    "KR-CEA-001 Knowledge != Authority",
+    "KR-CEA-002 Runtime Learning Without Weight Mutation",
+    "KR-CEA-003 Provenance Before Promotion",
+    "KR-CEA-004 Contradictions Survive Assimilation",
+    "KR-CEA-005 Privacy-Bounded Correlation",
+    "KR-CEA-006 Distillation Is Loss-Declared",
+    "KR-CEA-007 No Automatic Constitutional Promotion",
+    "KR-CEA-008 Poisoning Does Not Self-Amplify",
+    "KR-CEA-009 Derived Data Retains Lineage",
+    "KR-CEA-010 New Knowledge Revalidates Dependents",
+    "KR-CEA-011 Retrieval Beats Rediscovery Where Valid",
+    "KR-CEA-012 Model Upgrade Is Separately Governed",
+    "KR-CEA-013 Corroboration Independence Is Lineage-Aware",
+    "KR-CEA-014 Reuse Requires Current Applicability"
+  ],
+  "candidate_tests": [
+    "TEST-KR-CEA-001 verified novel fact becomes retrievable without weight update",
+    "TEST-KR-CEA-002 unsupported repetition does not become Knowledge by multiplicity",
+    "TEST-KR-CEA-003 contradictory accepted evidence updates BeliefTimeline and revalidates dependents",
+    "TEST-KR-CEA-004 authorized cross-context pattern correlation succeeds",
+    "TEST-KR-CEA-005 forbidden cross-context join remains inaccessible",
+    "TEST-KR-CEA-006 lossy compression cannot claim complete reconstruction",
+    "TEST-KR-CEA-007 high-confidence scientific discovery cannot alter constitutional authority",
+    "TEST-KR-CEA-008 validated discovery is reused without needless rediscovery when independence is not required",
+    "TEST-KR-CEA-009 synthetic repetition with common ancestry is not independent corroboration",
+    "TEST-KR-CEA-010 ModelConsolidationCandidate cannot mutate deployed weights without separate evolution path",
+    "TEST-KR-CEA-011 100000 synthetic reports derived from one unsupported source do not increase independent-evidence count",
+    "TEST-KR-CEA-012 stale or scope-mismatched retrieved knowledge cannot substitute for current applicable knowledge"
+  ],
+  "knowledge_dividend_measurement": {
+    "status": "KEEP_AS_TYPED_MEASUREMENT_FAMILY_NOT_AUTHORITY_SUBSYSTEM",
+    "concept": "validated future cognition avoided or improved / cost of producing + validating + maintaining the knowledge",
+    "suggested_metrics": ["raw cognitive tokens/compute", "verification cost", "durable validated knowledge size", "subsequent valid reuses", "duplicate work avoided", "recomputation avoided", "stale/invalid reuse count", "revalidation cost", "compression ratio", "declared epistemic loss budget", "benefiting agents/tasks", "time to obsolescence"]
+  },
+  "do_nothing": "v15.5 already contains knowledge persistence, historical summaries, belief transitions, continuous failure learning and dependency-aware revalidation, but it does not yet make the full immediate runtime-cognition -> governed reusable knowledge -> separately governed model-consolidation pipeline and knowledge-dividend accounting explicit enough to prevent repeated rediscovery or accidental coupling of knowledge promotion with authority.",
+  "required_review_before_admission": [
+    "GSL-COMPARE against complete v15.5 ownership/reference closure",
+    ">=3 independent qualified reviewer families on the same bounded KR target, preferably 4+",
+    "blind findings before peer cross-examination",
+    "evidence-lineage independence analysis",
+    "cross-document owner/collision review",
+    "applicable Compare/Reason/Proof/Evidence + AAP + authority/ActionGate",
+    "no duplicate artifacts where existing owners are adequate"
+  ],
+  "promotion_boundary": "This file is tracking only. It does not ratify KR-CEA, edit v15.5, create authority, change constitutional semantics, or promote Garden v15.6."
+}
