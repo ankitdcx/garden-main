@@ -4,8 +4,8 @@
   "predecessor_release": "Garden v15.5",
   "predecessor_source_root_sha256": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
   "candidate_release": "Garden v15.6",
-  "status": "CANDIDATE_ARCHIVE_RECOVERY_ONLY_NOT_RATIFIED",
-  "purpose": "Preserve distinct mechanisms recovered from literal exported ChatGPT, DeepSeek and Gemini histories after deduplication and comparison against Garden v15.5 plus the existing historical-chat recovery, KR-CEA and active v15.6 candidate sets. No private chat text is published.",
+  "status": "V15_6_CANDIDATES_REGISTERED_NOT_RATIFIED",
+  "purpose": "Preserve distinct mechanisms recovered from literal exported ChatGPT, DeepSeek and Gemini histories after deduplication and comparison against Garden v15.5 plus the existing historical-chat recovery, KR-CEA and active v15.6 candidate sets. No private chat text is published. All surviving mechanisms in this delta set are explicitly registered as Garden v15.6 candidates; registration is not canonical promotion.",
   "archive_audit_boundary": {
     "sources": ["ChatGPT export", "DeepSeek export", "Gemini Takeout"],
     "normalized_conversations": 373,
@@ -19,11 +19,16 @@
     "design_deltas/v15.6/DELTASET-2026-09-13-GSL-GAP-CLOSURE.json",
     "design_deltas/PENDING_PROJECT_WIDE_CANDIDATES_2026-09-14.md"
   ],
+  "candidate_registration": {
+    "target": "Garden v15.6",
+    "registration_state": "ALL_FIVE_SURVIVING_ARCHIVE_UPGRADES_REGISTERED_AS_V15_6_CANDIDATES",
+    "canonical_effect": "NONE_UNTIL_ORDINARY_GARDEN_PROMOTION_GATES_PASS"
+  },
   "candidates": [
     {
       "candidate_id": "MAA-001",
       "title": "Hazard-monotonic emergency action selection",
-      "status": "WORTHY_PENDING_EQUIVALENCE_AND_MULTI_MODEL_REVIEW",
+      "status": "V15_6_CANDIDATE_PENDING_EQUIVALENCE_AND_MULTI_MODEL_REVIEW",
       "historical_provenance": "Early GAIA safety-control lineage, February 2026, independently iterated across the exported agent histories.",
       "proposed_owners": ["GSL-PHYSICS", "EmergencyAdmissionContract", "Engine.Reason"],
       "current_overlap": "v15.5 already has HazardPredicate, SafetyEnvelope, EmergencyAdmissionContract, bounded SafeActionSet, authority/scope/expiry, recovery and audit. The residual is an explicit selection/dominance rule inside an already-authorized emergency action set.",
@@ -44,7 +49,7 @@
     {
       "candidate_id": "MAA-002",
       "title": "Versioned unsafe-region / infeasibility memory for planning reuse",
-      "status": "WORTHY_SUBCANDIDATE_OF_KR_CEA_PENDING_EQUIVALENCE_REVIEW",
+      "status": "V15_6_CANDIDATE_SUBCANDIDATE_OF_KR_CEA_PENDING_EQUIVALENCE_REVIEW",
       "historical_provenance": "Early GAIA iterations repeatedly introduced bounded memory of infeasible/dangerous control regions so later planning could avoid rediscovering the same failure.",
       "proposed_owners": ["Capability.Knowledge", "Engine.Search", "Engine.Reason"],
       "current_overlap": "Garden already stores counterexamples/corrections and KR-CEA preserves provenance, contradiction, lineage and revalidation. The residual is a typed state/action/trajectory-region representation usable as a scoped planning-pruning constraint rather than only a textual counterexample.",
@@ -64,7 +69,7 @@
     {
       "candidate_id": "MAA-003",
       "title": "Adversarial precedent revalidation for the pending justice workstream",
-      "status": "REFINEMENT_OF_HCA_007_NOT_SEPARATE_ENGINE",
+      "status": "V15_6_CANDIDATE_REFINEMENT_OF_HCA_007_NOT_SEPARATE_ENGINE",
       "historical_provenance": "May 2026 Digital Garden governance lineage proposed periodically re-testing settled normative precedents rather than allowing accumulated precedent to become self-sealing.",
       "proposed_owners": ["Pending justice-system expansion", "Engine.Compliance", "Capability.Knowledge"],
       "current_overlap": "HCA-007 already preserves the end-to-end justice pipeline and hard epistemic/due-process separations. HCA-002 covers behavioral/normative drift generally. This item specializes revalidation to precedent/case-law-like normative memory.",
@@ -84,7 +89,7 @@
     {
       "candidate_id": "MAA-004",
       "title": "Change-complexity and assurance-burden accounting for upgrades",
-      "status": "WORTHY_IMPLEMENTATION_METRIC_PROFILE_LIKELY_SUBSUMED_BY_GCL_RESOURCE_COMPARE",
+      "status": "V15_6_CANDIDATE_IMPLEMENTATION_METRIC_PROFILE_LIKELY_SUBSUMED_BY_GCL_RESOURCE_COMPARE",
       "historical_provenance": "From the earliest GAIA refinement loop onward, upgrades were repeatedly constrained by explicit size/complexity budgets while seeking maximum safety/function gain.",
       "proposed_owners": ["Engine.Compare", "GCL", "Resource/assurance metrics"],
       "current_overlap": "GCL already normalizes effect by intervention measure and Garden already checks lifecycle/cost/resource/testability. No new causal-leverage theory is needed.",
@@ -103,7 +108,7 @@
     {
       "candidate_id": "MAA-005",
       "title": "Temporal authority snapshot / anti-retroactive authorization binding",
-      "status": "WORTHY_PENDING_EQUIVALENCE_AND_MULTI_MODEL_REVIEW",
+      "status": "V15_6_CANDIDATE_PENDING_EQUIVALENCE_AND_MULTI_MODEL_REVIEW",
       "historical_provenance": "June-July 2026 Digital Garden transaction/event architecture: cross-agent review explicitly separated claim/event valid time from the authority snapshot used at actual acceptance/linearization, to prevent backdated records from gaining permissions retroactively.",
       "proposed_owners": ["GSL.AUTHORITY", "GSL.VALIDITY", "Engine.Policy", "Engine.Compliance"],
       "current_overlap": "v15.5 already distinguishes semantic Version from time/context/scope Validity and requires scoped, expiring, revocable authority with provenance. The residual is an explicit binding rule for consequential admission: the authority/policy state used to authorize an accepted transition must be tied to the declared authoritative acceptance/linearization boundary, rather than silently inferred from a backdated event/claim valid time.",
@@ -139,5 +144,5 @@
     "Claims of certification, regulatory compliance, economic savings or physical performance without supporting evidence.",
     "A new top-level module merely to preserve a historical name."
   ],
-  "promotion_boundary": "This file preserves candidates only. Admission requires current whole-source equivalence/collision review, GSL-COMPARE including DO_NOTHING and stronger alternatives, independent same-target review, rights/privacy/authority analysis, executable tests/proofs where applicable, reference closure, and explicit human canonical promotion."
+  "promotion_boundary": "These are Garden v15.6 candidates, not canonical v15.6 content. Admission requires current whole-source equivalence/collision review, GSL-COMPARE including DO_NOTHING and stronger alternatives, independent same-target review, rights/privacy/authority analysis, executable tests/proofs where applicable, reference closure, and explicit human canonical promotion."
 }
