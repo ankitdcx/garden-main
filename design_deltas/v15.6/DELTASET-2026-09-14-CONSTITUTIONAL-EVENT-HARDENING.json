@@ -5,7 +5,7 @@
   "predecessor_source_root_sha256": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
   "candidate_release": "Garden v15.6",
   "status": "CANDIDATE_PENDING_WHOLE_SOURCE_PROPAGATION_AND_REVIEW",
-  "origin": "Consolidated triage of repeated bounded hourly DRM-H01-CONSTITUTIONAL-EVENT-BOUNDARY findings after whole-source cross-reference.",
+  "origin": "Machine-readable companion to the whole-source hourly ConstitutionalEvent triage admitted to ankitdcx/garden-swarm NEXT_RELEASE_HARDENING.md at commit f34479d50f5e0b5d8bc9c94c2f56eb549c4fb103.",
   "human_authorization": "User explicitly delegated worthy hourly-finding triage and repository updates; this authorizes candidate integration work only. Canonical promotion remains a separate human act.",
   "canonical_predecessor_immutable": true,
   "topology_change": false,
@@ -17,7 +17,7 @@
   "deltas": [
     {
       "delta_id": "V156-CON-EVT-001",
-      "title": "ConstitutionalEvent cross-field coherence and non-PASS continuation",
+      "title": "ConstitutionalEvent cross-field coherence",
       "severity": "HIGH",
       "source_refs": [
         "[T-CONSTITUTIONAL-EVENTS]",
@@ -25,18 +25,17 @@
         "CON-EVT-001",
         "CON-EVT-002",
         "TEST-CON-EVT-001",
-        "TEST-CON-EVT-002",
-        "K-INT UNKNOWN discipline"
+        "TEST-CON-EVT-002"
       ],
       "disposition": "STRENGTHEN_EXISTING_SCHEMA_CONSTRAINTS",
-      "change": "Add machine-checkable cross-field constraints to the existing ConstitutionalEvent schema. check_result=PASS MUST imply kind=CHECK; kind=VIOLATION MUST NOT coexist with check_result=PASS. UNKNOWN and INCONCLUSIVE are non-PASS results and MUST NOT authorize consequential continuation; they route to the applicable review/escalation/safe terminal path. UNKNOWN/INCONCLUSIVE do not by themselves establish VIOLATION, guilt, intent, punishment or containment. Stronger mappings among VETO, INCONCLUSIVE, UNKNOWN and kind remain explicit owner semantics rather than inferred equivalences.",
+      "change": "Add machine-checkable cross-field constraints to the existing ConstitutionalEvent schema. check_result=PASS MUST imply kind=CHECK; kind=VIOLATION MUST NOT coexist with check_result=PASS. A recorded/observable event is not a blocking predicate by itself: PASS/CHECK remains eligible for ordinary flow when all other gates pass. Existing Constitution/Policy UNKNOWN and INCONCLUSIVE fail-closed semantics remain the owner; the ConstitutionalEvent binding must preserve them and MUST NOT locally guess stronger enum mappings or convert unresolved state to PASS.",
       "schema_ids_modified": ["SCHEMA-92D37B160F"],
       "schema_ids_added": [],
       "do_nothing": "The current schema independently enumerates kind and check_result while TEST-CON-EVT-001/002 imply a relationship. Leaving the relationship unenforced permits contradictory typed events and consumer-dependent interpretation.",
       "tests": [
         "TEST-CON-EVT-005: reject ConstitutionalEvent(kind=VIOLATION, check_result=PASS)",
-        "TEST-CON-EVT-006: PASS+CHECK remains valid",
-        "TEST-CON-EVT-007: UNKNOWN|INCONCLUSIVE cannot authorize consequential continuation"
+        "TEST-CON-EVT-006: PASS+CHECK recorded/observable remains eligible for ordinary flow when all other gates pass",
+        "TEST-CON-EVT-007: ConstitutionalEvent consumer cannot promote existing UNKNOWN|INCONCLUSIVE owner state to PASS"
       ]
     },
     {
@@ -52,72 +51,87 @@
         "Authority primitive"
       ],
       "disposition": "MAKE_EXISTING_AUTHORITY_SEPARATION_MACHINE_TRACEABLE",
-      "change": "A ConstitutionalEvent, VETO, VIOLATION classification, evidence_refs, containment_criteria_result, routing or severity metadata MUST NOT itself authorize containment/restriction. Any executed containment/restriction MUST be traceably bound to a separately verified applicable authority/admission decision. Preserve ConstitutionalEvent immutability: prefer a later immutable admission/link artifact that references the ConstitutionalEvent and the existing applicable authority/ExecutionAdmissionToken or decision artifact, rather than mutating the original event with a later authorization. The exact existing admission owner/type is selected during whole-source propagation; no competing authority source is introduced.",
+      "change": "A ConstitutionalEvent, VETO, VIOLATION classification, evidence_refs, containment_criteria_result, routing, severity or event existence MUST NOT itself authorize containment/restriction. Any executed containment/restriction MUST be traceably bound to a separately verified applicable authority/action/admission decision under existing scope, expiry, evidence, safety, privacy and freshness rules. Preserve ConstitutionalEvent immutability: prefer a later immutable link from the containment/action/admission artifact back to the event instead of writing later authority into the original event. Reuse the existing canonical authority/action/ContainmentAction/ExecutionAdmissionToken owner that is applicable during propagation; no competing authority source is introduced.",
       "schema_ids_modified": ["SCHEMA-92D37B160F"],
       "schema_ids_added": [],
-      "do_nothing": "CON-EVT-003 states the separation in prose, but the current ConstitutionalEvent contract contains containment criteria/evidence/routing fields without a machine-visible link to the separately required execution authority. An implementation can therefore conflate event metadata with authorization unless the separation is made traceable.",
+      "do_nothing": "CON-EVT-003 states the separation in prose, but the current ConstitutionalEvent contract contains containment criteria/evidence/routing fields without a machine-visible proof that an executed restriction was independently authorized. A consumer can therefore conflate event metadata with authorization unless the link is made traceable.",
       "tests": [
-        "TEST-CON-EVT-008: VETO/VIOLATION + containment criteria + no verified separate admission => transition remains blocked and containment does not execute",
-        "TEST-CON-EVT-009: containment admission bound to wrong event, stale DesignEpoch or invalid authority is rejected",
-        "TEST-CON-EVT-010: valid separately verified containment admission may authorize only its containment effect and does not mutate the original ConstitutionalEvent"
+        "TEST-CON-EVT-008: VETO/VIOLATION + containment criteria + no valid separate authorization/action receipt => offending transition remains blocked and containment does not execute",
+        "TEST-CON-EVT-009: stale/revoked/mismatched containment authorization => no containment execution; original constitutional block remains independently effective",
+        "TEST-CON-EVT-010: valid separately authorized containment action executes only within its own authority/scope and does not mutate the original ConstitutionalEvent"
       ]
     },
     {
       "delta_id": "V156-CON-EVT-003",
-      "title": "Containment lifecycle cannot release original constitutional veto",
-      "severity": "HIGH",
+      "title": "Non-amplifying ConstitutionalEvent observability binding",
+      "severity": "MEDIUM",
       "source_refs": [
-        "CON-EVT-002",
-        "CON-EVT-003",
-        "CON-EVT-004",
-        "[T-CONSTITUTIONAL-EVENTS]"
+        "Human CONSTITUTIONAL EVENTS observability requirement",
+        "SCHEMA-92D37B160F",
+        "Privacy/minimization/access-control owner",
+        "Security/Authority owner",
+        "Provenance privacy-aware disclosure",
+        "Event-Service query/route surface"
       ],
-      "disposition": "CLARIFY_INDEPENDENT_STATE_TRANSITIONS",
-      "change": "The original constitutional gate result and any later containment/restriction decision are independent state transitions. DENIED, UNKNOWN, delayed, expired, revoked or NOT_APPLICABLE containment disposition MUST NOT convert the already blocked offending transition into ALLOW. A later transition may proceed only after a fresh applicable constitutional/rights evaluation under current context/evidence/DesignEpoch or another already-defined valid resolution path. Linked resolution never rewrites the original event or retroactively changes its gate result.",
+      "disposition": "BIND_EVENT_PROJECTION_TO_EXISTING_PRIVACY_AUTHORITY",
+      "change": "ConstitutionalEvent observability is an authority-preserving projection, not payload-disclosure or dereference authority. Observing, routing, subscribing to or querying an event MUST NOT grant authority to read protected evidence_refs, rights context, identity data or other protected payloads. Referenced data retains its source consent, access-control, taint, minimization, confidentiality, redaction, retention and jurisdiction constraints. Event projections expose only fields authorized for the observer/purpose; separately authorized audit access remains separately scoped. Prefer an explicit Event-Service/Security/Privacy binding rather than a ConstitutionalEvent-specific duplicate privacy subsystem.",
       "schema_ids_modified": ["SCHEMA-92D37B160F"],
       "schema_ids_added": [],
-      "do_nothing": "The current source separately says a violation blocks the offending transition and containment needs independent authority, but it does not state the lifecycle coupling explicitly. A consumer could incorrectly treat containment denial/expiry as release of the constitutional block.",
+      "do_nothing": "The source already has privacy and authority owners, but the event observability/query boundary is not explicit enough for a machine checker to prove that event visibility cannot amplify evidence/context visibility.",
       "tests": [
-        "TEST-CON-EVT-011: VETO + containment DENIED|UNKNOWN|NOT_APPLICABLE => original transition remains blocked",
-        "TEST-CON-EVT-012: later fresh constitutional/rights evaluation may create a new transition decision without rewriting the original event"
+        "TEST-CON-EVT-013: unauthorized subscriber receives only permitted event projection and cannot dereference protected evidence/context",
+        "TEST-CON-EVT-014: authorized auditor receives only evidence permitted by its valid scope/purpose",
+        "TEST-CON-EVT-015: event subscription/query capability cannot be exchanged for evidence-read or containment capability"
       ]
     }
   ],
-  "hourly_findings_collapsed_as_already_covered_or_deferred": [
+  "hourly_findings_collapsed_as_existing_semantics_or_regression_probes": [
+    {
+      "topic": "INCONCLUSIVE/UNKNOWN fail-closed behavior",
+      "disposition": "EXISTING_OWNER_BINDING_AND_REGRESSION_PROBE",
+      "reason": "Existing Constitution/Policy semantics already route unresolved applicability to low-authority safe state/escalation and forbid optimistic permission. The successor should make the event binding machine-resolvable rather than create another owner rule."
+    },
     {
       "topic": "Event persistence failure must not release VETO",
-      "disposition": "NO_NEW_DESIGN_DELTA",
-      "reason": "Already enforced by the public hardening fixture: VETO remains BLOCK when persistence fails; existing adversarial tests cover store failure/exception. The canonical event contract already requires immutable provenance-bound history."
+      "disposition": "EXISTING_SEMANTICS_REGRESSION_PROBE",
+      "reason": "The public hardening fixture already keeps VETO BLOCK under store failure/exception. Preserve as fault-injection evidence; do not create a new owner invariant."
     },
     {
       "topic": "Pre-effect atomicity / irreversible side-effect ordering",
-      "disposition": "NO_NEW_DESIGN_DELTA",
-      "reason": "Existing execution contracts require authorized PREPARE, ExecutionAdmissionToken, prepare/commit barriers for external/irreversible effects, bounded partial-failure states and compensation. Constitutional-event text should not duplicate the Process/Execution owner."
+      "disposition": "EXISTING_EXECUTION_OWNER_REGRESSION_PROBE",
+      "reason": "Existing execution contracts require authorized PREPARE, ExecutionAdmissionToken, prepare/commit barriers for external/irreversible effects, bounded partial-failure states and compensation. ConstitutionalEvent must not duplicate Process/Execution ownership."
     },
     {
-      "topic": "Event observability as evidence/context disclosure authority",
-      "disposition": "DEFER_TO_PRIVACY_EVENT_SERVICE_CROSS_REFERENCE",
-      "reason": "The concern is plausible but belongs to existing privacy/minimization/access-control/provenance-disclosure owners. Do not duplicate those semantics into ConstitutionalEvent unless an executable cross-reference proves a real gap."
+      "topic": "Containment outcome must not release original constitutional block",
+      "disposition": "EXISTING_INDEPENDENT_VETO_AND_CONTAINMENT_REGRESSION_PROBE",
+      "reason": "Preserve as a test of the existing independent constitutional VETO and containment contracts rather than minting a separate state-machine owner."
     },
     {
       "topic": "Materially equivalent replay under fresh transition identifier",
-      "disposition": "DEFER_TO_TRANSITION_IDENTITY_AND_ADVERSARIAL_REPLAY_REVIEW",
-      "reason": "Potentially valuable but broader than the bounded H01 event schema. Existing security hardening already scans structural/causal/equivalent transition variants; the exact admission/re-evaluation rule needs a dedicated whole-source transition/replay target before semantic admission."
+      "disposition": "ADVERSARIAL_PROBE_PENDING_TRANSITION_IDENTITY_CROSS_REFERENCE",
+      "reason": "Existing security hardening already scans structural/causal/equivalent transition variants and existing idempotency/ActionHash/re-evaluation semantics may close the path. Add a new semantic rule only if an executable counterexample bypasses current gates."
     }
   ],
+  "rejected_interpretations": [
+    "Any recorded ConstitutionalEvent blocks: rejected because PASS/CHECK may continue when other gates pass.",
+    "Every violation automatically freezes the agent: rejected by CON-EVT-003 and the Human source.",
+    "A ConstitutionalEvent proves guilt or intent: rejected by the owner contract.",
+    "Create a new containment authority source: rejected; reuse existing authority/action/admission ownership."
+  ],
   "implementation_evidence": {
-    "public_reference_branch": "ankitdcx/garden-swarm:constitutional-event-hardening-20260914",
+    "public_successor_queue_commit": "ankitdcx/garden-swarm@f34479d50f5e0b5d8bc9c94c2f56eb549c4fb103:NEXT_RELEASE_HARDENING.md",
+    "public_reference_pr": "ankitdcx/garden-swarm#55",
     "public_reference_scope": [
       "prototype/hardening.py",
       "tests/adversarial/test_swarm_hardening.py"
     ],
-    "status": "NON_CERTIFIED_REFERENCE_FIXTURE_PENDING_PR_CI"
+    "status": "NON_CERTIFIED_REFERENCE_FIXTURE_UNDER_CI"
   },
   "required_cross_document_propagation": [
     "Garden_User v15.6: concise reader-visible clarification only if needed; preserve existing no-guilt/no-automatic-freeze language",
-    "Garden_System v15.6: bind non-PASS continuation and separate containment admission into the existing transition/authority flow",
-    "Garden_Technical v15.6: strengthen SCHEMA-92D37B160F owner contract and link to existing execution/authority admission owner",
-    "Garden_Annexure v15.6: add CON-EVT invariants/tests for coherence, separate admission and lifecycle independence",
+    "Garden_System v15.6: bind event coherence, existing unresolved-state behavior, privacy-preserving event projection and separate containment admission into existing flows",
+    "Garden_Technical v15.6: strengthen SCHEMA-92D37B160F owner contract and link to existing execution/authority and Event-Service/Privacy owners",
+    "Garden_Annexure v15.6: add CON-EVT invariants/tests for coherence, separate admission and non-amplifying observability; preserve lifecycle/persistence/atomicity/replay as applicable regression probes under existing owners",
     "Garden_Theories v15.6: NO_CHANGE unless later reference closure identifies an affected theory binding"
   ],
   "promotion_boundary": "This delta set is proposal/candidate evidence only. It does not modify Garden v15.5 canon, create a new authority source or promote Garden v15.6. Materialization requires whole-source propagation, reference closure, applicable Compare/Reason/Proof/Evidence/AAP/ActionGate receipts, required independent review, and separate human canonical promotion."
