@@ -30,6 +30,13 @@
       "summary": "Bounded historical-chat audit preserving only distinct residuals after whole-source comparison: cross-scale causal discovery, behavioral/normative/mechanism drift audit, Human Assurance Reliability/HITL workload profile, UCAS and Kindergarten definition recovery, SCEP implementation lineage, fuller justice scope, and outcome-based KR memory evaluation."
     },
     {
+      "candidate_id": "CAND-GAIA-NAMING-001",
+      "kind": "SOURCE_DESIGN_TERMINOLOGY_DELTA_SET",
+      "status": "CANDIDATE_USER_APPROVED_TERMINOLOGY_PENDING_REQUIRED_REVIEW",
+      "source": "design_deltas/v15.6/DELTASET-2026-09-14-GAIA-NAMING.json",
+      "summary": "Define GAIA as 'Garden Artificial Intelligence Architecture' for GAIA Titanium and GAIA Diamond. This is a terminology clarification only; it does not change GAIA behavior, safety/assurance contracts, authority or topology."
+    },
+    {
       "candidate_id": "CAND-EXTERNAL-HARDENING",
       "kind": "SOURCE_DESIGN_HARDENING_QUEUE",
       "status": "CANDIDATE_NOT_RATIFIED",
