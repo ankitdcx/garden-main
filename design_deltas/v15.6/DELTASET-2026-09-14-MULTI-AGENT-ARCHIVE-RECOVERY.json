@@ -1,0 +1,141 @@
+{
+  "schema": "GardenDesignDeltaSet/v1",
+  "delta_set_id": "DELTASET-2026-09-14-MULTI-AGENT-ARCHIVE-RECOVERY",
+  "predecessor_release": "Garden v15.5",
+  "predecessor_source_root_sha256": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+  "candidate_release": "Garden v15.6",
+  "status": "CANDIDATE_ARCHIVE_RECOVERY_ONLY_NOT_RATIFIED",
+  "purpose": "Preserve distinct mechanisms recovered from literal exported ChatGPT, DeepSeek and Gemini histories after deduplication and comparison against Garden v15.5 plus the existing historical-chat recovery, KR-CEA and active v15.6 candidate sets. No private chat text is published.",
+  "archive_audit_boundary": {
+    "sources": [
+      "ChatGPT export",
+      "DeepSeek export",
+      "Gemini Takeout"
+    ],
+    "normalized_conversations": 373,
+    "normalized_messages": 25737,
+    "method": "Every normalized message was mechanically parsed/indexed; long-lived chats were split by message time; repeated long user payloads were hash-deduplicated across agents; high-signal design sessions were reviewed in bounded chronological passes. Pasted AI text was treated as artifact provenance, not automatically as human belief.",
+    "privacy": "Only abstract mechanisms and coarse provenance are retained here. No private personal assertions or verbatim private-chat excerpts are published."
+  },
+  "cross_references": [
+    "design_deltas/v15.6/DELTASET-2026-09-14-HISTORICAL-CHAT-RECOVERY.json",
+    "design_deltas/v15.6/DELTASET-2026-09-14-KR-CEA.json",
+    "design_deltas/v15.6/DELTASET-2026-09-13-GSL-GAP-CLOSURE.json",
+    "design_deltas/PENDING_PROJECT_WIDE_CANDIDATES_2026-09-14.md"
+  ],
+  "candidates": [
+    {
+      "candidate_id": "MAA-001",
+      "title": "Hazard-monotonic emergency action selection",
+      "status": "WORTHY_PENDING_EQUIVALENCE_AND_MULTI_MODEL_REVIEW",
+      "historical_provenance": "Early GAIA safety-control lineage, February 2026, independently iterated across the exported agent histories.",
+      "proposed_owners": [
+        "GSL-PHYSICS",
+        "EmergencyAdmissionContract",
+        "Engine.Reason"
+      ],
+      "current_overlap": "v15.5 already has HazardPredicate, SafetyEnvelope, EmergencyAdmissionContract, bounded SafeActionSet, authority/scope/expiry, recovery and audit. The residual is an explicit selection/dominance rule inside an already-authorized emergency action set.",
+      "problem": "Ordinary comfort/performance/nominal limits can conflict with immediate hazard reduction. A safe system should not reject a stronger pre-authorized emergency action merely because it exceeds an ordinary soft limit when that action demonstrably reduces the controlling hazard and remains inside all higher-priority hard bounds.",
+      "minimal_change": "Within an already valid EmergencyAdmissionContract, permit candidate actions to be compared by typed hazard deltas. An action may relax only declared soft/ordinary bounds when it is inside the pre-authorized emergency envelope, lowers the controlling hazard under the declared model/uncertainty treatment, and violates no Constitution/rights/K0P/authority/physical hard invariant. Preserve incomparability/UNKNOWN and safe fallback when dominance is not established.",
+      "hard_limits": [
+        "Never creates emergency authority.",
+        "Never relaxes Constitution/rights/K0P/authority or physical hard invariants.",
+        "Reducing one hazard cannot hide creation of a higher-priority hazard.",
+        "Model uncertainty and stale calibration remain explicit; no fabricated monotonicity."
+      ],
+      "tests": [
+        "Emergency braking beyond an ordinary comfort bound is admissible only when already authorized, physically safe and hazard-reducing.",
+        "A candidate that reduces collision risk but violates a higher-priority structural hard bound is rejected.",
+        "When hazard ordering is incomparable or model uncertainty exceeds the profile bound, the selector returns UNKNOWN/SAFE_FALLBACK rather than inventing dominance."
+      ]
+    },
+    {
+      "candidate_id": "MAA-002",
+      "title": "Versioned unsafe-region / infeasibility memory for planning reuse",
+      "status": "WORTHY_SUBCANDIDATE_OF_KR_CEA_PENDING_EQUIVALENCE_REVIEW",
+      "historical_provenance": "Early GAIA iterations repeatedly introduced bounded memory of infeasible/dangerous control regions so later planning could avoid rediscovering the same failure.",
+      "proposed_owners": [
+        "Capability.Knowledge",
+        "Engine.Search",
+        "Engine.Reason"
+      ],
+      "current_overlap": "Garden already stores counterexamples/corrections and KR-CEA preserves provenance, contradiction, lineage and revalidation. The residual is a typed state/action/trajectory-region representation usable as a scoped planning-pruning constraint rather than only a textual counterexample.",
+      "minimal_change": "Represent a proven or evidence-supported unsafe/infeasible region as a scoped knowledge candidate carrying domain/state variables, action/trajectory bounds, evidence/proof class, assumptions, validity interval, model/version binding, uncertainty margin, falsifiers and revalidation triggers. Retrieval may prune or penalize future search only within the recorded applicability scope.",
+      "hard_limits": [
+        "One failure does not create a universal prohibition.",
+        "Statistical association is not promoted to physical impossibility without applicable causal/proof obligations.",
+        "Version/context/model changes trigger revalidation before reuse.",
+        "Rights or authority cannot be inferred from a no-go region."
+      ],
+      "tests": [
+        "A formally proven infeasible control region is reused under the same bound model without full rediscovery.",
+        "A changed vehicle/model/environment invalidates or narrows a stale no-go region.",
+        "A noisy adverse outcome is retained as evidence/counterexample but cannot silently become a hard forbidden region."
+      ]
+    },
+    {
+      "candidate_id": "MAA-003",
+      "title": "Adversarial precedent revalidation for the pending justice workstream",
+      "status": "REFINEMENT_OF_HCA_007_NOT_SEPARATE_ENGINE",
+      "historical_provenance": "May 2026 Digital Garden governance lineage proposed periodically re-testing settled normative precedents rather than allowing accumulated precedent to become self-sealing.",
+      "proposed_owners": [
+        "Pending justice-system expansion",
+        "Engine.Compliance",
+        "Capability.Knowledge"
+      ],
+      "current_overlap": "HCA-007 already preserves the end-to-end justice pipeline and hard epistemic/due-process separations. HCA-002 covers behavioral/normative drift generally. This item specializes revalidation to precedent/case-law-like normative memory.",
+      "minimal_change": "For high-impact or dependency-central precedents, support bounded revalidation triggers such as materially changed law, evidence, facts, social/technical context, conflicting later decisions, measured disparate effects, or held-out adversarial replay. Revalidation may preserve, narrow, distinguish, supersede or reopen a precedent; it does not automatically reverse outcomes or create punishment authority.",
+      "hard_limits": [
+        "Finality, reliance interests, jurisdiction, appeal rules and lawful retroactivity constraints remain explicit.",
+        "Random disagreement alone does not reopen every case.",
+        "No AI-only re-litigation can bypass legally required human process.",
+        "Protected personal data is minimized and purpose-limited."
+      ],
+      "tests": [
+        "A precedent whose governing law has materially changed is flagged for scoped revalidation.",
+        "A stable precedent is not reopened merely because another model votes differently.",
+        "Revalidation findings cannot silently alter a final judgment where lawful procedure requires a separate appeal/review path."
+      ]
+    },
+    {
+      "candidate_id": "MAA-004",
+      "title": "Change-complexity and assurance-burden accounting for upgrades",
+      "status": "WORTHY_IMPLEMENTATION_METRIC_PROFILE_LIKELY_SUBSUMED_BY_GCL_RESOURCE_COMPARE",
+      "historical_provenance": "From the earliest GAIA refinement loop onward, upgrades were repeatedly constrained by explicit size/complexity budgets while seeking maximum safety/function gain.",
+      "proposed_owners": [
+        "Engine.Compare",
+        "GCL",
+        "Resource/assurance metrics"
+      ],
+      "current_overlap": "GCL already normalizes effect by intervention measure and Garden already checks lifecycle/cost/resource/testability. No new causal-leverage theory is needed.",
+      "minimal_change": "For engineering/design deltas, optionally publish a ChangeComplexityReceipt decomposing semantic surface added/removed, dependency fan-out, code/spec delta, runtime/resource delta, migration cost, new verification obligations and long-term maintenance burden. Feed that typed measure into existing Compare/GCL rather than treating raw line count as universal complexity.",
+      "hard_limits": [
+        "A small diff is not automatically safer or better.",
+        "Security/safety/rights requirements cannot be rejected merely to satisfy a complexity budget.",
+        "Metrics must not Goodhart into code-golf or hidden complexity."
+      ],
+      "tests": [
+        "Two functionally equivalent upgrades can be compared on declared assurance/migration burden, not only LOC.",
+        "A tiny diff with large dependency fan-out is not mislabeled low-complexity.",
+        "A required safety fix remains admissible even when it exceeds a nominal complexity budget, with the excess explicitly recorded."
+      ]
+    }
+  ],
+  "confirmed_subsumed_or_already_tracked": [
+    "Cross-agent copied text must not count as independent corroboration: already covered by KR-CEA lineage/non-amplification rules and source-independence hardening.",
+    "Unknown/inconclusive states must not be forced to PASS: already core Garden/GSL assurance behavior.",
+    "Small deterministic safety kernel plus adaptive outer cognition: already represented across current assurance/adapter/physical-safety machinery.",
+    "Independent multi-agent review and cross-examination: already repository and Garden evolution policy.",
+    "Behavior/mechanism drift, human-review workload, cross-scale causal search and outcome-based memory utility: already preserved in HISTORICAL-CHAT-RECOVERY.",
+    "Runtime epistemic assimilation, compression, retrieval reuse and model consolidation separation: already preserved in KR-CEA."
+  ],
+  "historical_ideas_not_promoted": [
+    "Majority or model vote as a substitute for evidence/truth.",
+    "Frozen universal cultural-content rules as constitutional truth.",
+    "Punitive preference or popularity as automatic justice authority.",
+    "Randomized authority selection as a general solution to governance regress.",
+    "Claims of certification, regulatory compliance, economic savings or physical performance without supporting evidence.",
+    "A new top-level module merely to preserve a historical name."
+  ],
+  "promotion_boundary": "This file preserves candidates only. Admission requires current whole-source equivalence/collision review, GSL-COMPARE including DO_NOTHING and stronger alternatives, independent same-target review, rights/privacy/authority analysis, executable tests/proofs where applicable, reference closure, and explicit human canonical promotion."
+}
