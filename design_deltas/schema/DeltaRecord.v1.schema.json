@@ -1,0 +1,118 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "garden://schema/DeltaRecord/v1",
+  "title": "DeltaRecord/v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema",
+    "delta_id",
+    "record_kind",
+    "title",
+    "predecessor_release",
+    "candidate_release",
+    "design_epoch_ref",
+    "source",
+    "source_status",
+    "lifecycle_state",
+    "semantic_impact",
+    "review",
+    "challenger",
+    "provenance",
+    "admission_eligible",
+    "canonical_effect"
+  ],
+  "properties": {
+    "schema": {"const": "DeltaRecord/v1"},
+    "delta_id": {"type": "string", "minLength": 1},
+    "record_kind": {
+      "enum": [
+        "SOURCE_DESIGN_DELTA",
+        "SOURCE_DESIGN_CANDIDATE",
+        "RECONCILIATION_CANDIDATE",
+        "DEFERRED_RECOVERY",
+        "NON_SOURCE_REFERENCE"
+      ]
+    },
+    "title": {"type": "string", "minLength": 1},
+    "severity": {"enum": ["LOW", "MEDIUM", "HIGH", "CRITICAL", "UNSPECIFIED"]},
+    "predecessor_release": {"type": "string", "minLength": 1},
+    "candidate_release": {"type": "string", "minLength": 1},
+    "design_epoch_ref": {"type": "string", "minLength": 1},
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["path", "parent_set_id", "source_item_id"],
+      "properties": {
+        "path": {"type": "string", "minLength": 1},
+        "parent_set_id": {"type": "string", "minLength": 1},
+        "source_item_id": {"type": "string", "minLength": 1},
+        "source_blob_sha": {"type": ["string", "null"]}
+      }
+    },
+    "source_status": {"type": "string", "minLength": 1},
+    "lifecycle_state": {
+      "enum": [
+        "PROPOSED",
+        "REVIEWED",
+        "DISPUTED",
+        "ACCEPTED",
+        "ADMITTED_FOR_SUCCESSOR",
+        "REJECTED",
+        "DEFERRED",
+        "UNRESOLVED",
+        "IMPLEMENTED",
+        "VERIFIED",
+        "AUDITED",
+        "CLOSED",
+        "REOPENED",
+        "REVERTED"
+      ]
+    },
+    "semantic_impact": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status", "assessment_ref"],
+      "properties": {
+        "status": {"enum": ["NOT_ASSESSED", "YES", "NO", "UNCLEAR"]},
+        "assessment_ref": {"type": ["string", "null"]}
+      }
+    },
+    "review": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["blind_review_refs", "cross_exam_refs", "reviewer_families", "quorum_status", "evidence_conflict_status"],
+      "properties": {
+        "blind_review_refs": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+        "cross_exam_refs": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+        "reviewer_families": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+        "quorum_status": {"enum": ["NOT_ASSESSED", "INSUFFICIENT", "SATISFIED"]},
+        "evidence_conflict_status": {"enum": ["NONE_KNOWN", "UNRESOLVED", "RESOLVED"]}
+      }
+    },
+    "challenger": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status", "decision_ref"],
+      "properties": {
+        "status": {"enum": ["NOT_ASSESSED", "NOT_REQUIRED", "PENDING", "PASS", "CHALLENGE", "ESCALATE", "AUDIT_PENDING"]},
+        "decision_ref": {"type": ["string", "null"]}
+      }
+    },
+    "provenance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["origin", "migrated_from_legacy_set", "migration_date"],
+      "properties": {
+        "origin": {"type": "string", "minLength": 1},
+        "migrated_from_legacy_set": {"type": "boolean"},
+        "migration_date": {"type": "string", "format": "date"},
+        "finding_refs": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+        "integration_decision_refs": {"type": "array", "items": {"type": "string"}, "uniqueItems": true}
+      }
+    },
+    "admission_eligible": {"type": "boolean"},
+    "canonical_effect": {"const": false},
+    "notes": {"type": "string"}
+  }
+}
