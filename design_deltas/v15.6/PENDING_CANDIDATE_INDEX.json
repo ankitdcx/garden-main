@@ -3,6 +3,7 @@
   "release_line": "Garden v15.6 candidate",
   "predecessor_release": "Garden v15.5",
   "predecessor_source_root_sha256": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+  "design_epoch_ref": "Garden-v15.5@63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
   "status": "NON_CANONICAL_TRACKING_ONLY",
   "purpose": "Single machine-readable index for worthy post-v15.5 candidates so design work is not stranded in chats, issues, branches or implementation-only work packages.",
   "candidate_groups": [
