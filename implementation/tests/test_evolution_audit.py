@@ -87,6 +87,21 @@ class EvolutionAuditTests(unittest.TestCase):
 
             self.assertEqual(found, [receipt])
 
+    def test_record_paths_accept_absolute_receipt_glob(self):
+        with tempfile.TemporaryDirectory() as temp:
+            directory = Path(temp) / "receipts"
+            directory.mkdir()
+            first = directory / "a.json"
+            second = directory / "b.json"
+            ignored = directory / "notes.txt"
+            first.write_text("{}\n", encoding="utf-8")
+            second.write_text("{}\n", encoding="utf-8")
+            ignored.write_text("not a receipt\n", encoding="utf-8")
+
+            found = _record_paths([str(directory / "*.json")])
+
+            self.assertEqual(found, [first, second])
+
 
 if __name__ == "__main__":
     unittest.main()
