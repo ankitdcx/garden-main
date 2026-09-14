@@ -1,0 +1,54 @@
+{
+  "schema": "GardenCandidateDesignDeltaSet/v1",
+  "delta_set_id": "DELTASET-2026-09-14-GAIA-NAMING",
+  "predecessor_release": "Garden v15.5",
+  "predecessor_source_root_sha256": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+  "candidate_release": "Garden v15.6",
+  "design_epoch_ref": "Garden-v15.5@63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+  "status": "CANDIDATE_USER_APPROVED_TERMINOLOGY_PENDING_REQUIRED_REVIEW",
+  "semantic_class": "TERMINOLOGY_CLARIFICATION_WITHOUT_BEHAVIORAL_CHANGE",
+  "canonical_effect": false,
+  "deltas": [
+    {
+      "delta_id": "DELTA-GAIA-NAME-001",
+      "subject": "GAIA",
+      "current_state": "Garden v15.5 uses GAIA Titanium and GAIA Diamond as named reference architectures but does not define a canonical acronym expansion.",
+      "candidate_change": "Define GAIA as 'Garden Artificial Intelligence Architecture'.",
+      "normative_expansion": {
+        "G": "Garden",
+        "A": "Artificial",
+        "I": "Intelligence",
+        "A_final": "Architecture"
+      },
+      "rationale": "Artificial Intelligence describes the full architectural scope. 'Autonomous' would incorrectly narrow GAIA to autonomous behavior even though GAIA includes safety, assurance and other non-autonomous architectural components.",
+      "applies_to": [
+        "GAIA Titanium",
+        "GAIA Diamond"
+      ],
+      "non_goals": [
+        "No change to GAIA Titanium behavior, contracts, safety semantics or topology.",
+        "No change to GAIA Diamond behavior, contracts, assurance semantics or topology.",
+        "No change to authority, HSA, ActionGate, DesignEpoch or canonical promotion rules.",
+        "Do not rewrite published Garden v15.5 files in place."
+      ],
+      "successor_propagation": [
+        "Add the expansion at the first normative GAIA definition in the v15.6 Theories source.",
+        "Where useful for readability, render first references in User/System source as 'GAIA (Garden Artificial Intelligence Architecture)' while preserving GAIA Titanium and GAIA Diamond names.",
+        "Regenerate the complete five-file v15.6 successor candidate from the immutable v15.5 predecessor plus admitted deltas; do not patch only isolated text files.",
+        "Update glossary/catalog/reference-closure artifacts if GAIA is indexed there."
+      ],
+      "origin": {
+        "kind": "HUMAN_ORIGINATOR_DECISION",
+        "date": "2026-09-14",
+        "decision": "Use 'Garden Artificial Intelligence Architecture' rather than 'Garden Autonomous Intelligence Architecture'."
+      },
+      "review_requirements": [
+        "Same-target independent multi-model review",
+        "Cross-examination",
+        "GSL-COMPARE/equivalence check confirming no behavioral semantic drift",
+        "Reference-closure and predecessor-retention checks"
+      ],
+      "admission_eligible": false
+    }
+  ]
+}
