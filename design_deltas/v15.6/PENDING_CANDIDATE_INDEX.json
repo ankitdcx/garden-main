@@ -30,6 +30,14 @@
       "summary": "Bounded historical-chat audit preserving only distinct residuals after whole-source comparison: cross-scale causal discovery, behavioral/normative/mechanism drift audit, Human Assurance Reliability/HITL workload profile, UCAS and Kindergarten definition recovery, SCEP implementation lineage, fuller justice scope, and outcome-based KR memory evaluation."
     },
     {
+      "candidate_id": "CAND-MULTI-AGENT-ARCHIVE-RECOVERY-2026-09-14",
+      "kind": "LITERAL_EXPORT_RECOVERY_AND_RECONCILIATION_SET",
+      "status": "CANDIDATE_ARCHIVE_RECOVERY_ONLY_NOT_RATIFIED",
+      "source": "design_deltas/v15.6/DELTASET-2026-09-14-MULTI-AGENT-ARCHIVE-RECOVERY.json",
+      "audit_source": "reviews/MULTI_AGENT_ARCHIVE_AUDIT_2026-09-14.md",
+      "summary": "Literal ChatGPT/DeepSeek/Gemini export audit adds only residuals not already covered by v15.5 or prior recovery: hazard-monotonic emergency selection, scoped unsafe-region/infeasibility memory, adversarial precedent revalidation refinement, and change-complexity/assurance-burden accounting."
+    },
+    {
       "candidate_id": "CAND-GAIA-NAMING-001",
       "kind": "SOURCE_DESIGN_TERMINOLOGY_DELTA_SET",
       "status": "CANDIDATE_USER_APPROVED_TERMINOLOGY_PENDING_REQUIRED_REVIEW",
