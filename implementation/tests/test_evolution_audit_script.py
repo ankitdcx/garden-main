@@ -23,6 +23,21 @@ class EvolutionAuditScriptTests(unittest.TestCase):
             receipt.write_text("{}\n", encoding="utf-8")
             self.assertEqual(_record_paths([str(directory)]), [receipt])
 
+    def test_absolute_receipt_glob_collects_only_matching_files(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            directory = Path(tmp) / "receipts"
+            directory.mkdir()
+            first = directory / "a.json"
+            second = directory / "b.json"
+            ignored = directory / "notes.txt"
+            first.write_text("{}\n", encoding="utf-8")
+            second.write_text("{}\n", encoding="utf-8")
+            ignored.write_text("not a receipt\n", encoding="utf-8")
+
+            found = _record_paths([str(directory / "*.json")])
+
+            self.assertEqual(found, [first, second])
+
 
 if __name__ == "__main__":
     unittest.main()
