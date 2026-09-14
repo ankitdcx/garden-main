@@ -1,0 +1,38 @@
+name: Garden main publication readiness
+
+on:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Fetch all repository branches and tags for history audit
+        run: |
+          git fetch --force --prune origin '+refs/heads/*:refs/remotes/origin/*' '+refs/tags/*:refs/tags/*'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Audit all reachable history for publication blockers
+        run: |
+          set +e
+          python scripts/audit_publication_history.py --output /tmp/garden-main-publication-readiness.json
+          code=$?
+          cat /tmp/garden-main-publication-readiness.json
+          exit "$code"
+      - name: Upload publication-readiness receipt
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: garden-main-publication-readiness-${{ github.run_id }}
+          path: /tmp/garden-main-publication-readiness.json
+          if-no-files-found: error
+          retention-days: 30
