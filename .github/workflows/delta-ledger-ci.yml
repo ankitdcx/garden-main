@@ -22,13 +22,19 @@ jobs:
   validate-delta-ledger:
     runs-on: ubuntu-latest
     timeout-minutes: 5
+    env:
+      BOUND_REPOSITORY_COMMIT: ${{ github.event.pull_request.head.sha || github.sha }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
+      - name: Verify exact reviewed commit binding
+        run: |
+          test -n "$BOUND_REPOSITORY_COMMIT"
+          test "$(git rev-parse HEAD)" = "$BOUND_REPOSITORY_COMMIT"
       - name: Emit exact-commit DeltaAdmissionReadinessReceipt
-        run: python tools/validate_delta_ledger.py --repository-commit "$GITHUB_SHA" | tee delta-admission-readiness-receipt.json
+        run: python tools/validate_delta_ledger.py --repository-commit "$BOUND_REPOSITORY_COMMIT" | tee delta-admission-readiness-receipt.json
       - name: Run delta-ledger regression tests
         run: python -m unittest tests.test_delta_ledger -v
       - name: Upload readiness receipt
