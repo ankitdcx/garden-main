@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import argparse
+import glob
 import hashlib
 import json
 from pathlib import Path
@@ -23,10 +24,16 @@ def _record_paths(values: list[str]) -> list[Path]:
         elif path.is_file():
             paths.add(path)
         elif path.is_absolute():
-            # Optional CI receipt directories may legitimately be absent when an
-            # earlier gated stage was skipped. An absent absolute path contributes
-            # no records; it must never be reinterpreted as a repository glob.
-            continue
+            # pathlib.Path.glob rejects absolute patterns. Missing absolute
+            # receipt directories are legitimate after an earlier fail-closed
+            # stage, so treat an unmatched absolute path as an empty source
+            # rather than crashing the audit builder. Existing receipts from
+            # the other sources are still chained and persisted.
+            paths.update(
+                candidate
+                for match in glob.glob(value, recursive=True)
+                if (candidate := Path(match)).is_file()
+            )
         else:
             paths.update(p for p in ROOT.glob(value) if p.is_file())
     return sorted(paths, key=lambda p: p.as_posix())
