@@ -1,0 +1,171 @@
+{
+  "schema": "GardenDesignDeltaSet/v1",
+  "delta_set_id": "DELTASET-2026-09-14-HISTORICAL-CHAT-RECOVERY",
+  "predecessor_release": "Garden v15.5",
+  "predecessor_source_root_sha256": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+  "candidate_release": "Garden v15.6",
+  "status": "CANDIDATE_RECOVERY_ONLY_NOT_RATIFIED",
+  "purpose": "Preserve distinct worthy mechanisms recovered by bounded chronological/thematic audit of historical Garden conversations after comparing them against current v15.5 semantics. Do not duplicate concepts already integrated or explicitly rejected.",
+  "canonical_predecessor_immutable": true,
+  "topology_change": false,
+  "new_core_objects": 0,
+  "new_core_relations": 0,
+  "new_top_level_engines": 0,
+  "new_gsl_primitives": 0,
+  "candidates": [
+    {
+      "candidate_id": "HCA-001",
+      "title": "Cross-Scale Causal Discovery profile",
+      "status": "WORTHY_PENDING_EQUIVALENCE_AND_MULTI_MODEL_REVIEW",
+      "proposed_owners": ["Engine.Research", "Engine.Reason", "Capability.Knowledge"],
+      "cooperating_existing_mechanisms": ["CDDT", "GCL", "Algebra.Bridge", "Engine.Compare", "Engine.Proof"],
+      "problem": "Current causal typing and GCL can qualify and measure causal claims, but no explicit current contract was found for systematically changing scale when a causal explanation remains inadequate at the present abstraction.",
+      "minimal_change": "When material residuals, anomalies or unresolved causal obligations remain, permit a bounded research profile to compare down-scale variables/mechanisms, up-scale boundary conditions/controllers, temporal/history state, and cross-scale interactions. Candidate representations are compared by declared predictive/interventional adequacy where evidence permits. Causal level, identification limits, uncertainty, provenance and applicable authority remain explicit.",
+      "hard_limits": [
+        "No finer or coarser representation is promoted merely because it fits more data.",
+        "Causal influence does not imply agency, consciousness, moral status or authority.",
+        "Cross-scale search creates candidate Claims, not automatic Knowledge.",
+        "Physical experiments remain separately authorized and safety-gated."
+      ],
+      "tests": [
+        "A persistent residual at one scale causes bounded alternative-scale search rather than forced closure.",
+        "A lower-scale correlation cannot be consumed as a mechanistic/interventional claim without the existing causal obligations.",
+        "A high-leverage cross-scale variable cannot create authority or agency status."
+      ]
+    },
+    {
+      "candidate_id": "HCA-002",
+      "title": "Behavioral, normative and mechanism drift audit",
+      "status": "WORTHY_PENDING_EQUIVALENCE_AND_MULTI_MODEL_REVIEW",
+      "proposed_owners": ["Engine.Evolve", "Engine.Compliance", "Engine.Policy"],
+      "cooperating_existing_mechanisms": ["DesignEpoch", "DesignBinding", "ReviewerCalibration", "Engine.Compare", "Mechanistic Interpretability", "Continuous Failure Learning"],
+      "problem": "Garden strongly covers declared design/source drift and dependency invalidation. Historical discussions identified a narrower risk: deployed behavior, policy meaning, routing/retrieval patterns or effective enforcement may drift materially even when no obvious canonical source diff explains the change.",
+      "minimal_change": "Add a bounded drift-audit receipt/profile that compares version-bound canonical conformance vectors and declared behavioral/mechanism baselines against observed outputs, policy effects, routing/retrieval behavior and enforcement outcomes. Material unexplained drift becomes a revalidation/incident finding rather than a silent semantic change.",
+      "hard_limits": [
+        "Observed behavioral difference is not automatically proof of normative change or misalignment.",
+        "A drift detector cannot create policy, authority or rollback authority by itself.",
+        "Privacy-protected internal telemetry remains purpose-limited and minimized.",
+        "Legitimate context-dependent behavior must not be flattened into false invariance."
+      ],
+      "tests": [
+        "Same canonical policy and declared context with materially shifted enforcement distribution produces a drift finding.",
+        "A declared context/profile change with correct DesignEpoch/validity binding is not mislabeled as silent drift.",
+        "Unexplained routing/retrieval shift affecting consequential decisions reopens applicable assurance."
+      ]
+    },
+    {
+      "candidate_id": "HCA-003",
+      "title": "Human Assurance Reliability / HITL workload profile",
+      "status": "WORTHY_PENDING_EQUIVALENCE_AND_MULTI_MODEL_REVIEW",
+      "proposed_owners": ["Capability.Authority.Governance", "Engine.Orchestrate"],
+      "cooperating_existing_mechanisms": ["ReviewerCalibration", "AAP", "Scheduling", "Human Sovereignty", "Engine.Proof"],
+      "problem": "Current ReviewerCalibration covers reviewer false positives, misses, calibration, independence, model-family correlation and blind spots. Historical physical-safety work additionally identified human fatigue, workload, alert saturation, handoff and response-latency as operational assurance variables; exact current coverage was not found.",
+      "minimal_change": "Extend applicable high-consequence human-review profiles with operational-capacity evidence such as workload/queue pressure, alert saturation, fatigue/rest limits where lawfully measurable, response latency, handoff continuity, abstention/unavailability and common-mode staffing dependence. Degraded human assurance can require additional independent review, delay, safe fallback or narrower action admission according to the existing profile; it never reduces human worth or fundamental rights.",
+      "hard_limits": [
+        "No physiological or behavioral surveillance beyond valid purpose, consent/law and minimum necessary scope.",
+        "Human reliability scoring cannot create or remove constitutional worth, rights or political sovereignty.",
+        "The system cannot override a legally required human decision merely because an operator is scored poorly; it must follow the applicable safe escalation/substitution procedure.",
+        "Uncertainty about reviewer condition remains explicit."
+      ],
+      "tests": [
+        "High-consequence queue with demonstrated alert saturation triggers the profile's redundancy/escalation rule rather than pretending review quality is unchanged.",
+        "Reviewer workload metadata cannot be reused as reputation or unrelated employment scoring.",
+        "Two nominal reviewers subject to the same fatigue/common-mode condition do not count as fully independent when the profile requires independence."
+      ]
+    },
+    {
+      "candidate_id": "HCA-004",
+      "title": "UCAS / Universal Contract & Agreement Substrate definition recovery",
+      "status": "DEFERRED_CANDIDATE_EXPLICITLY_OUTSIDE_V15_5",
+      "problem": "v15.5 explicitly states that UCAS remains a separate candidate and is not part of the release, but the historical audit did not recover enough authoritative detail to safely reconstruct its full semantics.",
+      "required_next_step": "Recover the exact historical UCAS proposal/source, then compare it against current Contract, Policy, Law, Governance, Process Algebra, FunctionContract, Productive Finance and GSL type/effect/authority semantics. Prefer NO_CHANGE or a bounded profile if current owners already cover the need; do not invent UCAS semantics from the acronym.",
+      "hard_limits": ["No automatic new top-level engine/category.", "No contract text can manufacture lawful authority, consent, truth or enforceability."]
+    },
+    {
+      "candidate_id": "HCA-005",
+      "title": "Kindergarten deferred federation/branch design recovery",
+      "status": "DEFERRED_FUTURE_DESIGN_EXPLICITLY_OUTSIDE_V15_5",
+      "problem": "v15.5 explicitly groups Kindergarten with Federation/CFBR as future design work unless separately ratified. The historical audit did not recover a stable authoritative Kindergarten definition sufficient for semantic promotion.",
+      "required_next_step": "Recover exact historical intent and compare against current Branch/Earth/Federation/MAC/Context/Human Sovereignty machinery. Admit only a distinct surviving mechanism; otherwise mark subsumed/no-change.",
+      "hard_limits": ["No forced global synchronization or cultural convergence.", "No local branch or experimental profile may weaken constitutional rights or create authority by adoption alone."]
+    },
+    {
+      "candidate_id": "HCA-006",
+      "title": "SCEP / Swarm Construction & Epistemic Bounty implementation profile",
+      "status": "WORTHY_IMPLEMENTATION_PROFILE_NOT_SOURCE_DELTA_UNLESS_NEW_GAP_FOUND",
+      "proposed_scope": "Operational profile over OCF/CPI/TML/CMUR/Evolve/Orchestrate/GSL-KR rather than a new architecture object.",
+      "recovered_mechanisms": [
+        "bounded work packages tied to unresolved obligations/gaps",
+        "verified epistemic or construction progress rewarded rather than raw volume",
+        "technical credits/rewards remain separate from authority",
+        "independent reviewer/verifier/red-team roles and correlation/Sybil checks",
+        "privilege rings and frozen/independent verifier roots",
+        "local-first bootstrap with scoped network/resource caps and honest BLOCKED states",
+        "composition gate before integration"
+      ],
+      "current_overlap": "WP-009H already requires semantic convergence among public prototype, private evolution kernel and SCEP bootstrap implementations. Preserve SCEP as an implementation/profile lineage, not a duplicate semantic owner.",
+      "hard_limits": ["Bounty/credit cannot create governance authority or epistemic truth.", "No self-certification.", "No PASS-by-volume/majority."]
+    },
+    {
+      "candidate_id": "HCA-007",
+      "title": "Justice-system end-to-end expansion — recovered scope refinement",
+      "status": "ALREADY_PENDING_LEDGER_ITEM_D4_REFINE_NOT_DUPLICATE",
+      "recovered_scope": [
+        "complaint/intake",
+        "investigation",
+        "prosecution or civil claim",
+        "defense",
+        "evidence/chain of custody",
+        "trial/adjudication",
+        "judgment/remedy/sentence",
+        "appeal/constitutional review",
+        "enforcement",
+        "rehabilitation/restoration",
+        "systemic audit"
+      ],
+      "recovered_hard_separations": [
+        "investigator != prosecutor != judge != executioner where the legal system requires separated roles",
+        "allegation != observation != evidence != inference != finding != guilt/liability",
+        "no collective guilt",
+        "no automated punishment authority",
+        "standard of proof, provenance, jurisdiction, rights, appeal and explanation remain explicit"
+      ]
+    },
+    {
+      "candidate_id": "HCA-008",
+      "title": "Outcome-based memory utility evaluation",
+      "status": "SUBCANDIDATE_OF_KR_CEA_NOT_SEPARATE_ENGINE",
+      "proposed_owner": "Capability.Knowledge",
+      "minimal_change": "For retained non-mandatory memory/summary candidates, record whether later use improved prediction, decision quality, retrieval efficiency, error detection or reconstruction under declared metrics, while protecting mandatory evidence/history from utility-based deletion. Memory usefulness affects ranking/compression/retention proposals only; it does not promote truth or authority.",
+      "hard_limits": ["Legally/evidentially required history cannot be deleted merely because measured utility is low.", "Outcome correlation does not prove causal value without the applicable causal obligations."]
+    }
+  ],
+  "implementation_hardening_recovered_but_not_new_source_semantics": [
+    "Unpredictable/held-out retrospective audit sampling to reduce temporal overfitting; current Genesis replay/CMUR machinery should own this if admitted.",
+    "Matched incremental-value benchmark for expensive verification/assurance mechanisms; use existing Compare/Resource/assurance metrics rather than new authority.",
+    "Self-hosting/bootstrapping proof and migration harnesses; current WP-009, bootstrap trust-root and implementation frontiers own them unless a semantic counterexample appears."
+  ],
+  "confirmed_already_integrated_or_explicitly_present": [
+    "SRT cross-cutting theory",
+    "HRO-011 strategic counterfactual replay and DET-REPLAY-001",
+    "Adaptive Conformance Depth / VRR / DLR / RCS / PCCD and the current verification-optimization chain",
+    "Anti-Goodhart protection and deception/situational-awareness admission tests",
+    "CryptographicSuite agility/deprecation/compromise migration",
+    "EpistemicDebt and assumption-freshness revalidation",
+    "Intervention-aware evidence / EvidenceInfluenceClass",
+    "PoU v0.1 as an explicit bounded economic-design research candidate",
+    "JEEVIT/EKAKI contextual urban template family",
+    "Embodied Cognition/sensorimotor grounding",
+    "Continuous Failure Learning, historical replay and loss-aware summarization",
+    "F4-F12 implementation frontiers including concrete cognitive routing, world-model learning, skill induction, proof/check infrastructure, empirical harnesses and federation/update protocols"
+  ],
+  "historical_proposals_not_reintroduced_as_written": [
+    "Numeric/time-only proof half-life as a universal rule; current assumption/event/dependency freshness is preferred.",
+    "Tool->Assistant->Delegate->Sovereign ladder.",
+    "Universal hardware-attestation-before-Evidence.",
+    "Fixed five-year purge.",
+    "SymphonyConductor top-level engine.",
+    "Causal power or leverage implying agency/consciousness/authority."
+  ],
+  "promotion_boundary": "This recovery set is a preservation and reconciliation artifact only. Any semantic admission requires exact-source recovery where incomplete, whole-source equivalence/collision review, GSL-COMPARE with DO_NOTHING and stronger alternatives, privacy/rights/authority review, required independent multi-model review, tests/proofs/reference closure, and explicit human canonical promotion."
+}
