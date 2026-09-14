@@ -111,7 +111,11 @@
         "integration_decision_refs": {"type": "array", "items": {"type": "string"}, "uniqueItems": true}
       }
     },
-    "admission_eligible": {"type": "boolean"},
+    "admission_eligible": {
+      "type": "boolean",
+      "deprecated": true,
+      "description": "Legacy process-candidacy marker preserved for migration compatibility. It is non-authorizing and MUST NOT be interpreted as current successor-admission readiness. Current readiness is derived fail-closed by CHECK-DELTA-ADMISSION-READINESS and emitted in DeltaAdmissionReadinessReceipt/v1."
+    },
     "canonical_effect": {"const": false},
     "notes": {"type": "string"}
   }
