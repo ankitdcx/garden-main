@@ -1,0 +1,68 @@
+{
+  "schema": "GardenPendingSuccessorCandidateIndex/v1",
+  "release_line": "Garden v15.6 candidate",
+  "predecessor_release": "Garden v15.5",
+  "predecessor_source_root_sha256": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+  "design_epoch_ref": "Garden-v15.5@63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+  "status": "NON_CANONICAL_TRACKING_ONLY",
+  "purpose": "Single machine-readable index for worthy post-v15.5 candidates so design work is not stranded in chats, issues, branches or implementation-only work packages.",
+  "candidate_groups": [
+    {
+      "candidate_id": "CAND-GSL-GAP-CLOSURE-9",
+      "kind": "SOURCE_DESIGN_DELTA_SET",
+      "status": "CANDIDATE_IMPLEMENTATION_AND_CROSS_REFERENCE_IN_PROGRESS",
+      "source": "design_deltas/v15.6/DELTASET-2026-09-13-GSL-GAP-CLOSURE.json",
+      "summary": "Nine source-design gap closures: bootstrap trust root, shared-state authority provenance, deterministic let/query semantics, causal-level typing, R0 SanityGate separation, rights-view ordering, provenance redaction-vs-absence manifest, and catalogue closure for AuthorityDecl/EffectDecl."
+    },
+    {
+      "candidate_id": "CAND-KR-CEA-1.0",
+      "kind": "SOURCE_DESIGN_DELTA_SET",
+      "status": "CANDIDATE_NOT_RATIFIED_NEEDS_REQUIRED_MULTI_MODEL_REVIEW_AND_GSL_COMPARE",
+      "source": "design_deltas/v15.6/DELTASET-2026-09-14-KR-CEA.json",
+      "summary": "Continuous runtime epistemic assimilation, lineage-aware corroboration, loss-aware distillation, separately governed model consolidation and knowledge-dividend accounting without authority amplification."
+    },
+    {
+      "candidate_id": "CAND-EXTERNAL-HARDENING",
+      "kind": "SOURCE_DESIGN_HARDENING_QUEUE",
+      "status": "CANDIDATE_NOT_RATIFIED",
+      "public_source": "ankitdcx/garden-swarm:NEXT_RELEASE_HARDENING.md",
+      "summary": "Emergency-source independence normalization, typed consent-validity assessment, external regression bundle, and ConstitutionalEvent typed-boundary/observability hardening. Must be reconciled into the private candidate materialization before any daily successor release."
+    },
+    {
+      "candidate_id": "CAND-RATIONALIZATION-VERIFICATION-LEGACY",
+      "kind": "LEGACY_RATIFIED_DESIGN_PROPOSAL_RECONCILIATION",
+      "status": "NEEDS_EXPLICIT_V15_5_SUBSUMPTION_OR_REQUEUE_CHECK",
+      "summary": "Earlier Rationalization & Verification Hardening / ReasoningStrategyPortfolio proposal was recorded as a ratified design proposal with machine/empirical certification pending. Do not silently drop it: compare against v15.5 Reason/GSL-COMPARE/AAP/verification owners and either mark fully subsumed with evidence or requeue only surviving semantic gaps.",
+      "admission_boundary": "No assumption that the historical proposal is still needed in full; reconciliation must prefer existing v15.5 owners and NO_CHANGE where already covered."
+    }
+  ],
+  "implementation_or_conformance_hardening_not_source_design_deltas": [
+    {
+      "item": "WP-009H shared DesignEpoch semantic convergence vectors",
+      "status": "MERGED_IMPLEMENTATION_CONFORMANCE_HARDENING",
+      "reason": "Valuable federation/reproducibility infrastructure but not by itself a new Garden source semantic requirement."
+    },
+    {
+      "item": "WP-009D..G Compare/Reason/Proof/Evidence, algebra/AAP and tamper-evident evolution audit",
+      "status": "MERGED_IMPLEMENTATION_CONFORMANCE_HARDENING",
+      "reason": "Moves implementation toward existing Garden intent; any newly exposed semantic gap must enter this candidate index separately."
+    },
+    {
+      "item": "Multi-agent integration provenance / semantic collision checks",
+      "status": "MERGED_REPOSITORY_HARDENING",
+      "reason": "Repository build-safety mechanism; not automatically a five-file Garden semantic delta."
+    },
+    {
+      "item": "Hourly same-target 3-4+ reviewer matrix, daily repo review, one daily candidate, archive/version history",
+      "status": "EVOLUTION_PROCESS_IMPLEMENTATION_POLICY",
+      "reason": "Operational Garden-development governance. It may expose source-design requirements, but the workflow itself is not automatically a source semantic delta."
+    }
+  ],
+  "already_in_v15_5_or_reconciled_not_pending": [
+    "CPI/CLIC reconciliation already carried into the v15.x source lineage before v15.5",
+    "GCL executable ratio/authority-reduction hardening and algebra formalization already reconciled by v15.5",
+    "v15.5 banner/schema-dictionary/duplicate-registration repairs"
+  ],
+  "daily_materialization_rule": "A daily successor candidate may include only deltas that have passed the required >=3 independent same-target reviewer families with peer cross-examination, whole-source GSL-COMPARE/reason/proof/evidence, cross-delta consistency, reference closure and exact predecessor-retention checks. Tracking in this index is not admission.",
+  "canonical_promotion": "HUMAN_ONLY_SEPARATE_ACT"
+}
