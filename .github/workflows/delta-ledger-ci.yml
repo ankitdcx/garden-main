@@ -27,9 +27,16 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Validate DeltaRecord ledger structure and source bindings
-        run: python tools/validate_delta_ledger.py
+      - name: Emit exact-commit DeltaAdmissionReadinessReceipt
+        run: python tools/validate_delta_ledger.py --repository-commit "$GITHUB_SHA" | tee delta-admission-readiness-receipt.json
       - name: Run delta-ledger regression tests
         run: python -m unittest tests.test_delta_ledger -v
+      - name: Upload readiness receipt
+        uses: actions/upload-artifact@v4
+        with:
+          name: delta-admission-readiness-receipt
+          path: delta-admission-readiness-receipt.json
+          if-no-files-found: error
+          retention-days: 30
       - name: Boundary reminder
-        run: echo 'Delta ledger PASS proves structural traceability only; it does not ratify a delta, satisfy multi-model review, grant authority, or promote canonical Garden.'
+        run: echo 'Delta ledger PASS proves structural/readiness-check execution only; it does not ratify a delta, grant authority, promote canonical Garden, or lift an active freeze without the required Challenger evidence.'
