@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://garden.local/schemas/IntegrationDecisionReceipt-v1.json",
+  "title": "IntegrationDecisionReceipt/v1",
+  "type": "object",
+  "required": ["schema","decision_id","finding_id","created_at","source","severity","verdict","reason","evidence","affected","uncertainty","what_would_overturn","outcome"],
+  "properties": {
+    "schema": {"const": "IntegrationDecisionReceipt/v1"},
+    "decision_id": {"type": "string", "minLength": 1},
+    "finding_id": {"type": "string", "minLength": 1},
+    "created_at": {"type": "string", "minLength": 1},
+    "source": {"type": "object", "required": ["agent","agent_family","task_id"], "properties": {"agent":{"type":"string"},"agent_family":{"type":"string"},"task_id":{"type":"string"},"artifact_or_receipt":{"type":["string","null"]}}},
+    "severity": {"enum": ["INFO","LOW","MEDIUM","HIGH","CRITICAL"]},
+    "verdict": {"enum": ["ACCEPT_IMPLEMENTATION","ACCEPT_DESIGN_DELTA_CANDIDATE","ALREADY_COVERED","REJECT_INSUFFICIENT_EVIDENCE","REJECT_DUPLICATE","DEFER"]},
+    "reason": {"type":"string","minLength":1},
+    "evidence": {"type":"object","required":["supplied_search_trace","whole_source_search_trace","reproduction"],"properties":{"supplied_search_trace":{"type":"array"},"whole_source_search_trace":{"type":["object","null"]},"reproduction":{"type":"object","required":["required","status"],"properties":{"required":{"type":"boolean"},"status":{"enum":["NOT_REQUIRED","PENDING","REPRODUCED","NOT_REPRODUCED","UNAVAILABLE"]},"agent_family":{"type":["string","null"]},"receipt":{"type":["string","null"]}}}}},
+    "do_nothing_comparison": {"type":["object","null"]},
+    "affected": {"type":"object","required":["anchors","obligations","tests"],"properties":{"anchors":{"type":"array","items":{"type":"string"}},"obligations":{"type":"array","items":{"type":"string"}},"tests":{"type":"array","items":{"type":"string"}}}},
+    "uncertainty": {"type":"string"},
+    "what_would_overturn": {"type":"string"},
+    "outcome": {"type":"object","required":["test_ids","commit_ids","delta_ids"],"properties":{"test_ids":{"type":"array","items":{"type":"string"}},"commit_ids":{"type":"array","items":{"type":"string"}},"delta_ids":{"type":"array","items":{"type":"string"}}}}
+  },
+  "additionalProperties": true
+}
