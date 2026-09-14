@@ -22,6 +22,14 @@
       "summary": "Continuous runtime epistemic assimilation, lineage-aware corroboration, loss-aware distillation, separately governed model consolidation and knowledge-dividend accounting without authority amplification."
     },
     {
+      "candidate_id": "CAND-HISTORICAL-CHAT-RECOVERY-2026-09-14",
+      "kind": "SOURCE_DESIGN_RECOVERY_AND_RECONCILIATION_SET",
+      "status": "CANDIDATE_RECOVERY_ONLY_NOT_RATIFIED",
+      "source": "design_deltas/v15.6/DELTASET-2026-09-14-HISTORICAL-CHAT-RECOVERY.json",
+      "audit_source": "reviews/HISTORICAL_CHAT_UPGRADE_AUDIT_2026-09-14.md",
+      "summary": "Bounded historical-chat audit preserving only distinct residuals after whole-source comparison: cross-scale causal discovery, behavioral/normative/mechanism drift audit, Human Assurance Reliability/HITL workload profile, UCAS and Kindergarten definition recovery, SCEP implementation lineage, fuller justice scope, and outcome-based KR memory evaluation."
+    },
+    {
       "candidate_id": "CAND-EXTERNAL-HARDENING",
       "kind": "SOURCE_DESIGN_HARDENING_QUEUE",
       "status": "CANDIDATE_NOT_RATIFIED",
