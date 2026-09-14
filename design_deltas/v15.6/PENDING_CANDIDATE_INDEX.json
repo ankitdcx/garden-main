@@ -35,7 +35,7 @@
       "status": "CANDIDATE_ARCHIVE_RECOVERY_ONLY_NOT_RATIFIED",
       "source": "design_deltas/v15.6/DELTASET-2026-09-14-MULTI-AGENT-ARCHIVE-RECOVERY.json",
       "audit_source": "reviews/MULTI_AGENT_ARCHIVE_AUDIT_2026-09-14.md",
-      "summary": "Literal ChatGPT/DeepSeek/Gemini export audit adds only residuals not already covered by v15.5 or prior recovery: hazard-monotonic emergency selection, scoped unsafe-region/infeasibility memory, adversarial precedent revalidation refinement, and change-complexity/assurance-burden accounting."
+      "summary": "Literal ChatGPT/DeepSeek/Gemini export audit preserves five residuals not already explicit enough in v15.5 or prior recovery: hazard-monotonic emergency selection, scoped unsafe-region/infeasibility memory, adversarial precedent revalidation refinement, change-complexity/assurance-burden accounting, and temporal authority snapshot/anti-retroactive authorization binding."
     },
     {
       "candidate_id": "CAND-GAIA-NAMING-001",
