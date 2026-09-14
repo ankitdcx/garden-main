@@ -1,0 +1,35 @@
+name: Garden delta ledger CI
+
+on:
+  push:
+    paths:
+      - 'design_deltas/**'
+      - 'tools/validate_delta_ledger.py'
+      - 'tests/test_delta_ledger.py'
+      - '.github/workflows/delta-ledger-ci.yml'
+  pull_request:
+    paths:
+      - 'design_deltas/**'
+      - 'tools/validate_delta_ledger.py'
+      - 'tests/test_delta_ledger.py'
+      - '.github/workflows/delta-ledger-ci.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate-delta-ledger:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate DeltaRecord ledger structure and source bindings
+        run: python tools/validate_delta_ledger.py
+      - name: Run delta-ledger regression tests
+        run: python -m unittest tests.test_delta_ledger -v
+      - name: Boundary reminder
+        run: echo 'Delta ledger PASS proves structural traceability only; it does not ratify a delta, satisfy multi-model review, grant authority, or promote canonical Garden.'
