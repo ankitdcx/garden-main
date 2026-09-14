@@ -1,18 +1,26 @@
 #!/usr/bin/env python3
-"""Fail-closed structural validator for Garden DeltaRecord/v1 ledger.
+"""Fail-closed validator and typed readiness receipt for Garden DeltaRecord/v1.
 
-This intentionally uses only the Python standard library so CI can run it without
-network/package installation. It validates the closed fields Garden relies on for
-per-delta traceability; JSON Schema validation may be added as a separate layer.
+The legacy ``admission_eligible`` field is retained only as a process-candidacy
+marker for migration compatibility. It is never sufficient evidence of current
+successor-admission readiness. Readiness is derived from the governed review,
+semantic-impact, Challenger, conflict, and lifecycle state below.
 """
 from __future__ import annotations
 
+import argparse
+import hashlib
 import json
+import re
 import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 LEDGER = ROOT / "design_deltas" / "v15.6" / "DELTA_LEDGER.json"
+
+RULE_ID = "RULE-DELTA-ADMISSION-FAIL-CLOSED"
+CHECK_ID = "CHECK-DELTA-ADMISSION-READINESS"
+RECEIPT_SCHEMA = "DeltaAdmissionReadinessReceipt/v1"
 
 REQUIRED_RECORD_KEYS = {
     "schema", "delta_id", "record_kind", "title", "predecessor_release",
@@ -28,6 +36,8 @@ LIFECYCLE = {
 SEMANTIC = {"NOT_ASSESSED", "YES", "NO", "UNCLEAR"}
 QUORUM = {"NOT_ASSESSED", "INSUFFICIENT", "SATISFIED"}
 CHALLENGER = {"NOT_ASSESSED", "NOT_REQUIRED", "PENDING", "PASS", "CHALLENGE", "ESCALATE", "AUDIT_PENDING"}
+READY_LIFECYCLE = {"ACCEPTED", "ADMITTED_FOR_SUCCESSOR"}
+COMMIT_RE = re.compile(r"^[0-9a-f]{40}$")
 
 
 def fail(msg: str) -> None:
@@ -39,6 +49,10 @@ def load_json(path: Path):
         return json.load(f)
 
 
+def sha256_file(path: Path) -> str:
+    return hashlib.sha256(path.read_bytes()).hexdigest()
+
+
 def source_item_exists(source_doc: dict, item_id: str) -> bool:
     if source_doc.get("delta_set_id") == item_id:
         return True
@@ -46,12 +60,50 @@ def source_item_exists(source_doc: dict, item_id: str) -> bool:
         rows = source_doc.get(collection)
         if isinstance(rows, list) and any(isinstance(r, dict) and r.get(id_key) == item_id for r in rows):
             return True
-    # Some grouped candidate files describe one candidate at set level rather than
-    # carrying an inner delta_id. Those are traceable by the parent set itself.
     return not isinstance(source_doc.get("deltas"), list) and not isinstance(source_doc.get("candidates"), list)
 
 
-def validate() -> dict:
+def admission_readiness(rec: dict) -> tuple[bool, list[str]]:
+    """Return current successor-admission readiness and fail-closed reasons.
+
+    This is deliberately stricter than process candidacy. Unknown or unresolved
+    state is never treated as ready.
+    """
+    reasons: list[str] = []
+    review = rec.get("review", {})
+    semantic = rec.get("semantic_impact", {})
+    challenger = rec.get("challenger", {})
+
+    if rec.get("lifecycle_state") not in READY_LIFECYCLE:
+        reasons.append("LIFECYCLE_NOT_ACCEPTED")
+    if semantic.get("status") not in {"YES", "NO"}:
+        reasons.append("SEMANTIC_IMPACT_UNRESOLVED")
+    if not semantic.get("assessment_ref"):
+        reasons.append("SEMANTIC_IMPACT_RECEIPT_MISSING")
+    if review.get("quorum_status") != "SATISFIED":
+        reasons.append("INDEPENDENT_REVIEW_QUORUM_NOT_SATISFIED")
+    if len(set(review.get("reviewer_families", []))) < 3:
+        reasons.append("FEWER_THAN_THREE_REVIEWER_FAMILIES")
+    if len(set(review.get("blind_review_refs", []))) < 3:
+        reasons.append("BLIND_REVIEW_RECEIPTS_INSUFFICIENT")
+    if len(set(review.get("cross_exam_refs", []))) < 3:
+        reasons.append("CROSS_EXAM_RECEIPTS_INSUFFICIENT")
+    if review.get("evidence_conflict_status") == "UNRESOLVED":
+        reasons.append("EVIDENCE_CONFLICT_UNRESOLVED")
+    if challenger.get("status") != "PASS":
+        reasons.append("CHALLENGER_NOT_PASS")
+    if not challenger.get("decision_ref"):
+        reasons.append("CHALLENGER_RECEIPT_MISSING")
+    if rec.get("canonical_effect") is not False:
+        reasons.append("CANONICAL_EFFECT_NOT_FALSE")
+
+    return (not reasons, reasons)
+
+
+def validate(repository_commit: str) -> dict:
+    if not COMMIT_RE.fullmatch(repository_commit):
+        fail("exact 40-hex repository commit binding is required")
+
     ledger = load_json(LEDGER)
     if ledger.get("schema") != "GardenDeltaLedger/v1":
         fail("ledger schema must be GardenDeltaLedger/v1")
@@ -61,7 +113,8 @@ def validate() -> dict:
 
     ids: set[str] = set()
     source_cache: dict[Path, dict] = {}
-    admission_count = 0
+    legacy_candidate_count = 0
+    readiness: list[dict] = []
 
     for i, rec in enumerate(records):
         if not isinstance(rec, dict):
@@ -85,8 +138,10 @@ def validate() -> dict:
             fail(f"{did} invalid challenger status")
         if rec["canonical_effect"] is not False:
             fail(f"{did} ledger tracking cannot itself have canonical effect")
+        if not isinstance(rec["admission_eligible"], bool):
+            fail(f"{did} legacy admission_eligible marker must be boolean")
         if rec["admission_eligible"]:
-            admission_count += 1
+            legacy_candidate_count += 1
 
         src = rec["source"]
         for key in ("path", "parent_set_id", "source_item_id"):
@@ -106,27 +161,55 @@ def validate() -> dict:
         review = rec["review"]
         if review["quorum_status"] == "SATISFIED" and len(set(review.get("reviewer_families", []))) < 3:
             fail(f"{did} cannot claim SATISFIED quorum with fewer than 3 families")
-        if rec["lifecycle_state"] == "ADMITTED_FOR_SUCCESSOR":
-            if review["quorum_status"] != "SATISFIED":
-                fail(f"{did} admitted without review quorum")
-            if rec["semantic_impact"].get("status") not in {"YES", "NO"}:
-                fail(f"{did} admitted without resolved semantic impact")
-            if rec["challenger"].get("status") != "PASS":
-                fail(f"{did} admitted without Challenger PASS")
 
+        ready, reasons = admission_readiness(rec)
+        readiness.append({"delta_id": did, "ready": ready, "blocking_reasons": reasons})
+        if rec["lifecycle_state"] == "ADMITTED_FOR_SUCCESSOR" and not ready:
+            fail(f"{did} admitted while fail-closed readiness check is false: {reasons}")
+
+    ready_ids = [row["delta_id"] for row in readiness if row["ready"]]
     return {
-        "schema": ledger["schema"],
+        "schema": RECEIPT_SCHEMA,
+        "status": "PASS",
+        "rule_trace": {
+            "rule_id": RULE_ID,
+            "check_id": CHECK_ID,
+            "result": "PASS"
+        },
+        "repository_commit": repository_commit,
+        "canonical_version": ledger.get("predecessor_release", "Garden v15.5"),
+        "design_epoch_ref": ledger.get("design_epoch_ref"),
+        "evidence": {
+            "ledger_path": str(LEDGER.relative_to(ROOT)),
+            "ledger_sha256": sha256_file(LEDGER)
+        },
         "record_count": len(records),
         "unique_delta_ids": len(ids),
-        "admission_eligible_count": admission_count,
-        "status": "PASS",
+        "legacy_process_candidate_marker_count": legacy_candidate_count,
+        "admission_ready_count": len(ready_ids),
+        "admission_ready_delta_ids": ready_ids,
+        "readiness_by_delta": readiness
     }
 
 
-if __name__ == "__main__":
+def main() -> int:
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--repository-commit", required=True)
+    args = parser.parse_args()
     try:
-        result = validate()
+        result = validate(args.repository_commit)
     except Exception as exc:
-        print(json.dumps({"status": "FAIL", "error": str(exc)}, sort_keys=True))
-        sys.exit(1)
+        print(json.dumps({
+            "schema": RECEIPT_SCHEMA,
+            "status": "FAIL",
+            "rule_trace": {"rule_id": RULE_ID, "check_id": CHECK_ID, "result": "FAIL"},
+            "repository_commit": args.repository_commit,
+            "error": str(exc)
+        }, sort_keys=True))
+        return 1
     print(json.dumps(result, sort_keys=True))
+    return 0
+
+
+if __name__ == "__main__":
+    sys.exit(main())
