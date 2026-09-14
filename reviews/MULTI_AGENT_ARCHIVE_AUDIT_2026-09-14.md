@@ -47,6 +47,8 @@ ReliabilityOS/ARP, multi-model routing, Themis and TRAIN emphasize planner/execu
 
 The project changes character. Rather than accumulating standalone architectures, it starts defining a typed semantic substrate and claims/evidence/relations. The user increasingly asks whether old modules can be expressed through a common ontology instead of remaining separate. This is the key consolidation point that explains why many earlier names disappear without their useful mechanisms being lost.
 
+A narrower temporal-authority point also appears in the transaction/event architecture: claim/event valid time and the authority snapshot used for actual acceptance cannot be silently conflated. A backdated assertion may describe the past, but it must not borrow past permissions to authorize a present admission. Current v15.5 has the necessary authority/validity primitives but does not state this binding rule explicitly enough, so it is preserved below as MAA-005 pending equivalence review.
+
 ### August–September — canonicalization and governance of the design itself
 
 The archive shows rapid GSL/KR/AR/Garden versioning, then a move to immutable baselines, five-file canonical source, typed receipts, proof/evidence distinctions, policy/process algebra, per-step control, explicit provenance and repository-based multi-agent review. By September the process is less “invent a new theory” and more “compare against current owners, prove non-duplication, preserve lineage, test, and only then admit a delta.”
@@ -59,6 +61,7 @@ Machine-readable file: `design_deltas/v15.6/DELTASET-2026-09-14-MULTI-AGENT-ARCH
 2. **MAA-002 — Versioned unsafe-region/infeasibility memory.** A KR-CEA subcandidate for reusable, scoped state/action/trajectory no-go knowledge with provenance and revalidation.
 3. **MAA-003 — Adversarial precedent revalidation.** A refinement of the pending justice/drift workstream, not a new engine.
 4. **MAA-004 — Change-complexity / assurance-burden accounting.** An implementation metric profile feeding existing Compare/GCL; likely no source-level theory change.
+5. **MAA-005 — Temporal authority snapshot / anti-retroactive authorization binding.** Keep claim/event valid time separate from the authority/policy snapshot at actual admission. A backdated record cannot manufacture permission that did not exist at the declared acceptance/commit boundary; lawfully retroactive effects remain possible only through an explicitly authorized current rule/decision.
 
 ## Important NO_CHANGE conclusions
 
@@ -68,4 +71,4 @@ The archive also strengthens the rejection of several early ideas as written: vo
 
 ## Promotion boundary
 
-Nothing in this audit changes Garden v15.5. The four additions are preservation/review candidates only. They must pass the ordinary Garden successor process: whole-source equivalence/collision review, GSL-COMPARE, independent same-target review/cross-examination, rights/privacy/authority analysis, executable tests/proofs as applicable, reference closure, and explicit human canonical promotion.
+Nothing in this audit changes Garden v15.5. The five additions are preservation/review candidates only. They must pass the ordinary Garden successor process: whole-source equivalence/collision review, GSL-COMPARE, independent same-target review/cross-examination, rights/privacy/authority analysis, executable tests/proofs as applicable, reference closure, and explicit human canonical promotion.
