@@ -64,7 +64,7 @@
   "status": "NON_CANONICAL_TRACKING_ONLY",
   "draft_lineage": {
     "release": "Garden v15.6 working candidate",
-    "source_root_sha256": "e3ed83a6607a42d22b5bf3f3ceda425c0a2c807180ac6a69918216807077911b",
+    "source_root_sha256": "d4f054f21247948426abbe4c842ac65f4daa83f521f73bc3ac57e2d5860bdf6b",
     "canonical": false
   },
   "working_candidate": "canonical/candidates/v15.7/SOURCE_MANIFEST.json"

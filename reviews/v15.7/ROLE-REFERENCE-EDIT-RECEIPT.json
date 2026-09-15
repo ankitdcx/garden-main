@@ -1,0 +1,114 @@
+{
+  "status": "CONTENT_EDIT_APPLIED",
+  "scope": "Tracked current tree, candidate layers and archived packet copies; prior Git commits not rewritten",
+  "authorization": "User instruction to remove personal creation-role references throughout repository",
+  "authority_effect": "Role terminology only; grants, rights, licensing restrictions and human decision boundaries retained",
+  "historical_packet_disposition": "Edited archived packet copies are redacted derivatives. Embedded packet and object hashes refer to originals and MUST NOT validate or qualify these derivatives. Original signatures/reviews do not transfer.",
+  "files": [
+    {
+      "path": "CONTRIBUTING.md",
+      "before_sha256": "04846ebbbe36c8c01694b96bf8ffa5e83aba1c2c3c8a74614de24ddb3270e138",
+      "historical_evidence_invalidated": false,
+      "intermediate_after_edit_sha256": "55825e6b346dc00f0a3819db87a3d40af62799981873d860751fb8251a430586",
+      "final_after_regeneration_sha256": "55825e6b346dc00f0a3819db87a3d40af62799981873d860751fb8251a430586"
+    },
+    {
+      "path": "GARDEN_HITL.md",
+      "before_sha256": "708821f9672e69b137a0c5acf9337c7a51ff0eafd9ae252413f588b888744f49",
+      "historical_evidence_invalidated": false,
+      "intermediate_after_edit_sha256": "788563a87554f749b1214695b291390f8cff125082e3e6d6ebe420e577dc385b",
+      "final_after_regeneration_sha256": "788563a87554f749b1214695b291390f8cff125082e3e6d6ebe420e577dc385b"
+    },
+    {
+      "path": "IP_BOUNDARY.md",
+      "before_sha256": "fd7bf50af83c9025a2e47915a485c3772e313a89a606d9751c6ba8c683f92b70",
+      "historical_evidence_invalidated": false,
+      "intermediate_after_edit_sha256": "25046a78a5ff0b1927e0d567ec2516339247980443d85e02538f058bbc76c0cc",
+      "final_after_regeneration_sha256": "25046a78a5ff0b1927e0d567ec2516339247980443d85e02538f058bbc76c0cc"
+    },
+    {
+      "path": "README.md",
+      "before_sha256": "833f361e4021ee1267bc1edf5357bca53d76300619b80ff18decaebea4248abf",
+      "historical_evidence_invalidated": false,
+      "intermediate_after_edit_sha256": "9136ecf380a2f739a6a99ae79d9f020bb133883b3bd1b19a15b95b2422609a74",
+      "final_after_regeneration_sha256": "b9af434616ba383dc94029ffe5df274aebd79975d361d15a3a1220d58338ca74"
+    },
+    {
+      "path": "Read-me-steward-note",
+      "before_sha256": "3d294436c69f6cebcc0c70d80a385a6098f89664f9488fea934821ae1eed5e2f",
+      "historical_evidence_invalidated": false,
+      "intermediate_after_edit_sha256": "df059d5c7f027c18566719df1d991d726f700afed19eb7546001e13c9c03af51",
+      "final_after_regeneration_sha256": "df059d5c7f027c18566719df1d991d726f700afed19eb7546001e13c9c03af51"
+    },
+    {
+      "path": "canonical/candidates/v15.6/Garden_Annexure_v15.6_FULL_CANDIDATE_2026-09-15.txt",
+      "before_sha256": "dfb0caa4d880df80091409dc58c2e80689e91fae83e21422374ccb6f6c02a516",
+      "historical_evidence_invalidated": false,
+      "intermediate_after_edit_sha256": "e100ad35f6fb7829836810f0a735ee69d5cc330e19798dde6052c1ea47831b2e",
+      "final_after_regeneration_sha256": "e100ad35f6fb7829836810f0a735ee69d5cc330e19798dde6052c1ea47831b2e"
+    },
+    {
+      "path": "canonical/candidates/v15.6/Garden_Theories_v15.6_FULL_CANDIDATE_2026-09-15.txt",
+      "before_sha256": "3cd9232ba6ed02838ff6f9b1080ebe258b1e923032e5a2e1a3f1ba97d95c13f9",
+      "historical_evidence_invalidated": false,
+      "intermediate_after_edit_sha256": "723f3cefcf5f965a4024ec83d7e3739ad2c5f99daeaebc154afd687cc6e74492",
+      "final_after_regeneration_sha256": "723f3cefcf5f965a4024ec83d7e3739ad2c5f99daeaebc154afd687cc6e74492"
+    },
+    {
+      "path": "canonical/candidates/v15.7/Garden_Annexure_v15.7_FULL_CANDIDATE_2026-09-15.txt",
+      "before_sha256": "5a510cc0307c36523bd21423d5cdb651c6d31aefe53779e423939093c750f238",
+      "historical_evidence_invalidated": false,
+      "intermediate_after_edit_sha256": "63c8b92f681c27c7bc842c9fb7927203bdb71e25e0b47cadff4122148f0644cf",
+      "final_after_regeneration_sha256": "40bfad13812e022fa302ccb12ddbfb21f88913ba91e0d8f0f884e113604895fe"
+    },
+    {
+      "path": "canonical/candidates/v15.7/Garden_Theories_v15.7_FULL_CANDIDATE_2026-09-15.txt",
+      "before_sha256": "8dba8c471a040c590928e4605bcff90df9ddccae197b89482d5a176864d7e4aa",
+      "historical_evidence_invalidated": false,
+      "intermediate_after_edit_sha256": "0ec1458b58274f9c0f3ca065c9160a363da25dcc4f3b72f9a7949e85f81fd805",
+      "final_after_regeneration_sha256": "670997310d2b264dfdddcc89a05ffbb881426560ba2dc4a213ee655702555345"
+    },
+    {
+      "path": "design_deltas/v15.6/DELTASET-2026-09-14-GAIA-NAMING.json",
+      "before_sha256": "58ee551267e34ae6bc5b9aa21ce5a3c9306edd56620c868c8c45dff50b413e37",
+      "historical_evidence_invalidated": false,
+      "intermediate_after_edit_sha256": "77dde324226da3b712cf300d84a3d21911e8dc048b33d10c881cdc821e93ae6d",
+      "final_after_regeneration_sha256": "77dde324226da3b712cf300d84a3d21911e8dc048b33d10c881cdc821e93ae6d"
+    },
+    {
+      "path": "design_deltas/v15.6/PENDING-CONSOLIDATED-SPECIFICATION.txt",
+      "before_sha256": "24d52f94f71efe94b454d9f622e1db00db7b637558176d09cdc55144fbac8fee",
+      "historical_evidence_invalidated": false,
+      "intermediate_after_edit_sha256": "f2659b94db29babdd4b623a85fb295e73bcf6407fab0f2361fb2aade017da37a",
+      "final_after_regeneration_sha256": "f2659b94db29babdd4b623a85fb295e73bcf6407fab0f2361fb2aade017da37a"
+    },
+    {
+      "path": "design_deltas/v15.6/PENDING-RECONCILIATION-2026-09-15.json",
+      "before_sha256": "acd2549bef988f1108cde9cb24a4e5f65344d073799f5e5f149f339df2e77eea",
+      "historical_evidence_invalidated": false,
+      "intermediate_after_edit_sha256": "17454e1a46b7428cc6ab70055631cb38489c66cfefdf6003771b96cf22f782c7",
+      "final_after_regeneration_sha256": "17454e1a46b7428cc6ab70055631cb38489c66cfefdf6003771b96cf22f782c7"
+    },
+    {
+      "path": "docs/IP_PROVENANCE_AND_PATENT_CANDIDATE_REGISTER_2026-09-14.md",
+      "before_sha256": "2090d1298d66e91245a9b89c62bd45d40039d999425d0c684f57a4aa7e2424fb",
+      "historical_evidence_invalidated": false,
+      "intermediate_after_edit_sha256": "8379c2be575c9a2ff76eae916b3e08906c8c0f0a23eaf87f47671ef7b3cfa840",
+      "final_after_regeneration_sha256": "8379c2be575c9a2ff76eae916b3e08906c8c0f0a23eaf87f47671ef7b3cfa840"
+    },
+    {
+      "path": "governance/evolution_authority_registry.json",
+      "before_sha256": "0c8f6a5c0eab22629b3c6e746145cfbc585042faecbc796d4bac64e5caa33a53",
+      "historical_evidence_invalidated": false,
+      "intermediate_after_edit_sha256": "33c11d551cd46ce6ac7240dc7278a3f7f53eceb893a6ed61daeb72c5460dcf29",
+      "final_after_regeneration_sha256": "33c11d551cd46ce6ac7240dc7278a3f7f53eceb893a6ed61daeb72c5460dcf29"
+    },
+    {
+      "path": "reviews/branch_archive/2026-09-15/evidence__review-packet__GARDEN-CYCLE-9808F68B96C2B1AD7FA2/evidence/review-packets/GARDEN-CYCLE-9808F68B96C2B1AD7FA2/GardenReviewPacket.json.txt",
+      "before_sha256": "193e55783364ccd90c2c28c4e9bda136aecc5264e5011e1cc23142b49b178bc0",
+      "historical_evidence_invalidated": true,
+      "intermediate_after_edit_sha256": "a8716db33fe697829fcbdcc2cfc35f4de914036b09f46db09dffb2dddaf68be2",
+      "final_after_regeneration_sha256": "a8716db33fe697829fcbdcc2cfc35f4de914036b09f46db09dffb2dddaf68be2"
+    }
+  ]
+}

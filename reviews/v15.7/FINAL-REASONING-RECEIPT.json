@@ -1,0 +1,153 @@
+{
+  "schema": "GardenEvolutionReasoningConformanceReport/v1",
+  "design_epoch": "v15.5",
+  "canonical_source_root_sha256": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+  "base_ref": "9123fdd",
+  "head_ref": "HEAD",
+  "changed_paths": [
+    "CONTRIBUTING.md",
+    "GARDEN_HITL.md",
+    "IP_BOUNDARY.md",
+    "README.md",
+    "Read-me-steward-note",
+    "canonical/archive/v15.5/Garden_Annexure_v15.5_FULL_2026-09-12.txt",
+    "canonical/archive/v15.5/Garden_System_v15.5_FULL_2026-09-12.txt",
+    "canonical/archive/v15.5/Garden_Technical_v15.5_FULL_2026-09-12.txt",
+    "canonical/archive/v15.5/Garden_Theories_v15.5_FULL_2026-09-12.txt",
+    "canonical/archive/v15.5/Garden_User_v15.5_FULL_2026-09-12.txt",
+    "canonical/archive/v15.5/README.md",
+    "canonical/archive/v15.5/SOURCE_MANIFEST.json",
+    "canonical/candidates/CURRENT_CANDIDATE.json",
+    "canonical/candidates/v15.6/Garden_Annexure_v15.6_FULL_CANDIDATE_2026-09-15.txt",
+    "canonical/candidates/v15.6/Garden_System_v15.6_FULL_CANDIDATE_2026-09-15.txt",
+    "canonical/candidates/v15.6/Garden_Technical_v15.6_FULL_CANDIDATE_2026-09-15.txt",
+    "canonical/candidates/v15.6/Garden_Theories_v15.6_FULL_CANDIDATE_2026-09-15.txt",
+    "canonical/candidates/v15.6/Garden_User_v15.6_FULL_CANDIDATE_2026-09-15.txt",
+    "canonical/candidates/v15.6/README.md",
+    "canonical/candidates/v15.6/SOURCE_MANIFEST.json",
+    "canonical/candidates/v15.7/Garden_Annexure_v15.7_FULL_CANDIDATE_2026-09-15.txt",
+    "canonical/candidates/v15.7/Garden_System_v15.7_FULL_CANDIDATE_2026-09-15.txt",
+    "canonical/candidates/v15.7/Garden_Technical_v15.7_FULL_CANDIDATE_2026-09-15.txt",
+    "canonical/candidates/v15.7/Garden_Theories_v15.7_FULL_CANDIDATE_2026-09-15.txt",
+    "canonical/candidates/v15.7/Garden_User_v15.7_FULL_CANDIDATE_2026-09-15.txt",
+    "canonical/candidates/v15.7/README.md",
+    "canonical/candidates/v15.7/SOURCE_MANIFEST.json",
+    "design_deltas/v15.6/DELTASET-2026-09-14-GAIA-NAMING.json",
+    "design_deltas/v15.6/DELTASET-2026-09-15-ENGINEERING-HARDENING.json",
+    "design_deltas/v15.6/ENGINEERING-HARDENING-SPECIFICATION.txt",
+    "design_deltas/v15.6/PENDING-CONSOLIDATED-SPECIFICATION.txt",
+    "design_deltas/v15.6/PENDING-RECONCILIATION-2026-09-15.json",
+    "design_deltas/v15.6/PENDING_CANDIDATE_INDEX.json",
+    "design_deltas/v15.7/COGNITIVE-COMPARE-CANDIDATE.md",
+    "design_deltas/v15.7/COGNITIVE-CORE-CANDIDATE.md",
+    "design_deltas/v15.7/COGNITIVE-INCREMENT-CANDIDATE.md",
+    "design_deltas/v15.7/COGNITIVE-QUALIFICATION-COMPARISON-WORK-INTENT.json",
+    "design_deltas/v15.7/COGNITIVE-WORK-INTENT.json",
+    "design_deltas/v15.7/DESIGN-CLOSURE-CANDIDATE.md",
+    "design_deltas/v15.7/DESIGN-CLOSURE-WORK-INTENT.json",
+    "design_deltas/v15.7/PENDING_CANDIDATE_INDEX.json",
+    "design_deltas/v15.7/TRACE-CANDIDATE.md",
+    "design_deltas/v15.7/TRACE-WORK-INTENT.json",
+    "docs/IP_PROVENANCE_AND_PATENT_CANDIDATE_REGISTER_2026-09-14.md",
+    "governance/evolution_authority_registry.json",
+    "implementation/tests/test_successor_diff_scope.py",
+    "reviews/branch_archive/2026-09-15/evidence__review-packet__GARDEN-CYCLE-9808F68B96C2B1AD7FA2/evidence/review-packets/GARDEN-CYCLE-9808F68B96C2B1AD7FA2/GardenReviewPacket.json.txt",
+    "reviews/evolution/algebra/2026-09-15-v157-candidate-publication-propose.json",
+    "reviews/evolution/assurance/2026-09-15-v157-candidate-publication-propose.json",
+    "reviews/evolution/production/2026-09-15-v157-candidate-publication-propose.json",
+    "reviews/evolution/reasoning/2026-09-15-v157-candidate-publication-propose.json",
+    "reviews/v15.6/CYCLE-BINDING.json",
+    "reviews/v15.6/DIFF-IDENTITY-RECEIPT.json",
+    "reviews/v15.6/EXPECTED-CANDIDATE-DIFF.json",
+    "reviews/v15.6/REFERENCE-CLOSURE-RECEIPT.json",
+    "reviews/v15.6/REFERENCE-MIGRATION-INVENTORY.json",
+    "reviews/v15.6/RELEASE-STATUS.md",
+    "reviews/v15.6/RETENTION-RECEIPT.json",
+    "reviews/v15.6/SECTION-INVENTORY.json",
+    "reviews/v15.6/TEST-RECEIPT.json",
+    "reviews/v15.6/sol-blind-review.json",
+    "reviews/v15.6/sol-followup-review.json",
+    "reviews/v15.6/terra-blind-review.json",
+    "reviews/v15.6/terra-cross-examination.json",
+    "reviews/v15.7/FINAL-REFERENCE-CHECK.json",
+    "reviews/v15.7/REFERENCE-CLOSURE-RECEIPT.json",
+    "reviews/v15.7/RELEASE-STATUS.md",
+    "reviews/v15.7/RETENTION-RECEIPT.json",
+    "reviews/v15.7/REVIEW-RESOLUTION.json",
+    "reviews/v15.7/ROLE-REFERENCE-EDIT-RECEIPT.json",
+    "reviews/v15.7/SOURCE-INTEGRATION-RECEIPT.json",
+    "reviews/v15.7/sol-candidate-review.json",
+    "scripts/build_v15_6_candidate.py",
+    "scripts/build_v15_7_candidate.py",
+    "scripts/check_successor_drift.py",
+    "scripts/inventory_release_references.py"
+  ],
+  "material_changed_paths": [
+    "governance/evolution_authority_registry.json",
+    "implementation/tests/test_successor_diff_scope.py",
+    "reviews/evolution/production/2026-09-15-v157-candidate-publication-propose.json",
+    "scripts/build_v15_6_candidate.py",
+    "scripts/build_v15_7_candidate.py",
+    "scripts/check_successor_drift.py",
+    "scripts/inventory_release_references.py"
+  ],
+  "changed_production_actions": [
+    "reviews/evolution/production/2026-09-15-v157-candidate-publication-propose.json"
+  ],
+  "checked_actions": [
+    {
+      "production_action": "reviews/evolution/production/2026-09-15-v157-candidate-publication-propose.json",
+      "action_id": "GARDEN-2026-09-15-V157-CANDIDATE-PUBLICATION-PROPOSE-001",
+      "reasoning_bundle": "reviews/evolution/reasoning/2026-09-15-v157-candidate-publication-propose.json",
+      "validation": {
+        "schema": "GardenEvolutionReasoningValidationReceipt/v1",
+        "action_id": "GARDEN-2026-09-15-V157-CANDIDATE-PUBLICATION-PROPOSE-001",
+        "design_epoch": "v15.5",
+        "canonical_source_root_sha256": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+        "source_obligation_refs": [
+          "canonical/candidates/v15.7/SOURCE_MANIFEST.json",
+          "canonical/candidates/CURRENT_CANDIDATE.json",
+          "reviews/v15.7/RELEASE-STATUS.md",
+          "reviews/v15.7/ROLE-REFERENCE-EDIT-RECEIPT.json",
+          "governance/PROCESS_CURRENT.json"
+        ],
+        "compare": {
+          "alternative_ids": [
+            "DO_NOTHING",
+            "PUBLISH_BOUNDED_CANDIDATE"
+          ],
+          "gap_pair_count": 2
+        },
+        "reason": {
+          "dependency_refs": [
+            "canonical/candidates/v15.7/SOURCE_MANIFEST.json",
+            "canonical/candidates/CURRENT_CANDIDATE.json",
+            "reviews/v15.7/RELEASE-STATUS.md",
+            "reviews/v15.7/ROLE-REFERENCE-EDIT-RECEIPT.json",
+            "governance/PROCESS_CURRENT.json"
+          ]
+        },
+        "proof": {
+          "overall_result": "UNKNOWN",
+          "obligation_count": 2
+        },
+        "evidence": {
+          "evidence_refs": [
+            "canonical/candidates/v15.7/SOURCE_MANIFEST.json",
+            "canonical/candidates/CURRENT_CANDIDATE.json",
+            "reviews/v15.7/RELEASE-STATUS.md",
+            "reviews/v15.7/ROLE-REFERENCE-EDIT-RECEIPT.json",
+            "governance/PROCESS_CURRENT.json"
+          ],
+          "item_count": 5
+        },
+        "authorization_result": "NOT_EVALUATED_HERE",
+        "semantic_compliance_proved": false
+      }
+    }
+  ],
+  "failures": [],
+  "status": "PASS",
+  "semantic_compliance_proved": false,
+  "boundary": "Reasoning validation is conformance evidence only. It does not authorize actions; trusted authority and ActionGate remain the admission owners."
+}

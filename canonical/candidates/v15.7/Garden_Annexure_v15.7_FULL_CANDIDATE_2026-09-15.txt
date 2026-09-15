@@ -8231,7 +8231,7 @@ Existing SchemaIDs retain their owners. Patch-local names are not automatically 
           "Update glossary/catalog/reference-closure artifacts if GAIA is indexed there."
         ],
         "origin": {
-          "kind": "HUMAN_ORIGINATOR_DECISION",
+          "kind": "HUMAN_STEWARD_DECISION",
           "date": "2026-09-14",
           "decision": "Use 'Garden Artificial Intelligence Architecture' rather than 'Garden Autonomous Intelligence Architecture'."
         },
@@ -11197,7 +11197,7 @@ Existing SchemaIDs retain their owners. Patch-local names are not automatically 
       "source": "https://github.com/ankitdcx/garden-main/issues/29",
       "disposition": "PRESERVE_PRIVACY_MIGRATION_WORK",
       "candidate_admission": "NOT_ASSERTED",
-      "source_body": "Private-side work package for Garden identity anonymization and neutral-repository cutover.\n\nWorking neutral namespace candidate: `garden-ai-commons-27`; final availability must be confirmed at creation.\n\nRequirements:\n- Remove personal names, personal email addresses, personal GitHub handles, and personal owner-specific URLs from the current destination tree.\n- Replace identity-bearing founder references with anonymous governance roles (`Human Originator`, `Human Steward`, role IDs) without changing authority semantics.\n- Remove/replace identity-bearing founder notes and contact details.\n- Convert hard-coded owner/repository strings in scripts, governance records, conformance vectors, reviews, manifests, and receipts to neutral logical repository IDs or neutral destination refs.\n- Preserve evidentiary meaning through a private `RepositoryIdentityMigrationReceipt` binding old and new content/commit roots cryptographically without publishing natural-person identity in the neutral destination.\n- Sanitize retained Git author/committer/tagger metadata before import; do not copy identity-bearing PR/issue discussion history into the neutral repositories.\n- Recreate secrets, Actions, branch protections/rulesets, webhooks/connectors, Pages/reference bindings and automations under the neutral namespace.\n- Add an identity-privacy check to block future personal identity leakage without committing the forbidden personal strings to source.\n- Run whole-repo tests, Garden/GSL conformance, reference closure, DesignEpoch/canonical binding validation, and independent multi-model review before cutover.\n- Do not change canonical Garden semantics, HSA, governance authority, or protected human-control meaning merely to anonymize the operator identity.",
+      "source_body": "Private-side work package for Garden identity anonymization and neutral-repository cutover.\n\nWorking neutral namespace candidate: `garden-ai-commons-27`; final availability must be confirmed at creation.\n\nRequirements:\n- Remove personal names, personal email addresses, personal GitHub handles, and personal owner-specific URLs from the current destination tree.\n- Replace identity-bearing human steward references with anonymous governance roles (`Human Steward`, `Human Steward`, role IDs) without changing authority semantics.\n- Remove/replace identity-bearing human steward notes and contact details.\n- Convert hard-coded owner/repository strings in scripts, governance records, conformance vectors, reviews, manifests, and receipts to neutral logical repository IDs or neutral destination refs.\n- Preserve evidentiary meaning through a private `RepositoryIdentityMigrationReceipt` binding old and new content/commit roots cryptographically without publishing natural-person identity in the neutral destination.\n- Sanitize retained Git author/committer/tagger metadata before import; do not copy identity-bearing PR/issue discussion history into the neutral repositories.\n- Recreate secrets, Actions, branch protections/rulesets, webhooks/connectors, Pages/reference bindings and automations under the neutral namespace.\n- Add an identity-privacy check to block future personal identity leakage without committing the forbidden personal strings to source.\n- Run whole-repo tests, Garden/GSL conformance, reference closure, DesignEpoch/canonical binding validation, and independent multi-model review before cutover.\n- Do not change canonical Garden semantics, HSA, governance authority, or protected human-control meaning merely to anonymize the operator identity.",
       "updated_at": "2026-09-14T18:30:11Z",
       "reason": "Exact issue body inspected; work remains independently testable and open. Inclusion in the v15.6 work document neither completes the experiment nor changes product/admin settings."
     },
@@ -16386,15 +16386,15 @@ Next output: first-pass requirement-level design-decision rows linked to Candida
 
 
 ## Direct v15.7 release binding — 2026-09-15
-The user authorized carrying the prepared v15.6 draft directly into v15.7. The actual canonical predecessor remains Garden v15.5 at source root 63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598. The retained v15.6 working candidate is e3ed83a6607a42d22b5bf3f3ceda425c0a2c807180ac6a69918216807077911b. References to completing v15.6 mean qualifying the necessary inherited scope; no intermediate canonical promotion is required merely to construct v15.7. This binding corrects the earlier anticipated lineage, preserves requirement semantics and grants no execution or qualification authority.
+The user authorized carrying the prepared v15.6 draft directly into v15.7. The actual canonical predecessor remains Garden v15.5 at source root 63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598. The retained v15.6 working candidate is d4f054f21247948426abbe4c842ac65f4daa83f521f73bc3ac57e2d5860bdf6b. References to completing v15.6 mean qualifying the necessary inherited scope; no intermediate canonical promotion is required merely to construct v15.7. This binding corrects the earlier anticipated lineage, preserves requirement semantics and grants no execution or qualification authority.
 
 Source files and hashes:
 {
-  "TRACE-CANDIDATE.md": "9065930a2d470a2398a2603ddef38c48d3b6f4a560d8e99b6c2b6d5b75eaec74",
-  "COGNITIVE-INCREMENT-CANDIDATE.md": "97d10df0b90e0c91059ce962d23d3db76a34fa4c7f02fa6a03cf1a8d2c9ff5cb",
-  "COGNITIVE-CORE-CANDIDATE.md": "2d59b7b89f7f5ff13ef97d25e4c857ead4429b7c7738929111023c378b570eaa",
-  "COGNITIVE-COMPARE-CANDIDATE.md": "be02f9607aa8e3dc03ecdcc51770d5fadbe12bec900f97793f60e59daf51f47b",
-  "DESIGN-CLOSURE-CANDIDATE.md": "b292569808de81f67389b8a10302e8f76371789274bcb0a1eec2995f77aee35a"
+  "TRACE-CANDIDATE.md": "e7a441a6f30fca8f4c62e465a2ad8c01e88c347dad9179a4af8fd0296a7b4320",
+  "COGNITIVE-INCREMENT-CANDIDATE.md": "03a7127468afdb50fbd6bc9f9a97d01a9ae7e4dc7f89b0050cc69830675170a9",
+  "COGNITIVE-CORE-CANDIDATE.md": "1229f9c9dde63bb8eb2aff4545bb7ec726e5775b18bd2f7b4452211cba34bf32",
+  "COGNITIVE-COMPARE-CANDIDATE.md": "aa9d2d864d79888e4e9aaf5c23f75daab91e658a0359578a2efbd3e19bc326b6",
+  "DESIGN-CLOSURE-CANDIDATE.md": "f0e75e487fcffed030af1c3f02fe9aa64d1dd6562235ad087aac3813262dd824"
 }
 The five new programs are specified, not completed qualification or comparative findings. Earlier reviews apply only to their exact v15.6 inputs; they are not v15.7 approval.
 

@@ -8,31 +8,31 @@
   "new_programs": [
     {
       "path": "design_deltas/v15.7/TRACE-CANDIDATE.md",
-      "sha256": "9065930a2d470a2398a2603ddef38c48d3b6f4a560d8e99b6c2b6d5b75eaec74",
+      "sha256": "e7a441a6f30fca8f4c62e465a2ad8c01e88c347dad9179a4af8fd0296a7b4320",
       "incorporated_complete_text": true
     },
     {
       "path": "design_deltas/v15.7/COGNITIVE-INCREMENT-CANDIDATE.md",
-      "sha256": "97d10df0b90e0c91059ce962d23d3db76a34fa4c7f02fa6a03cf1a8d2c9ff5cb",
+      "sha256": "03a7127468afdb50fbd6bc9f9a97d01a9ae7e4dc7f89b0050cc69830675170a9",
       "incorporated_complete_text": true
     },
     {
       "path": "design_deltas/v15.7/COGNITIVE-CORE-CANDIDATE.md",
-      "sha256": "2d59b7b89f7f5ff13ef97d25e4c857ead4429b7c7738929111023c378b570eaa",
+      "sha256": "1229f9c9dde63bb8eb2aff4545bb7ec726e5775b18bd2f7b4452211cba34bf32",
       "incorporated_complete_text": true
     },
     {
       "path": "design_deltas/v15.7/COGNITIVE-COMPARE-CANDIDATE.md",
-      "sha256": "be02f9607aa8e3dc03ecdcc51770d5fadbe12bec900f97793f60e59daf51f47b",
+      "sha256": "aa9d2d864d79888e4e9aaf5c23f75daab91e658a0359578a2efbd3e19bc326b6",
       "incorporated_complete_text": true
     },
     {
       "path": "design_deltas/v15.7/DESIGN-CLOSURE-CANDIDATE.md",
-      "sha256": "b292569808de81f67389b8a10302e8f76371789274bcb0a1eec2995f77aee35a",
+      "sha256": "f0e75e487fcffed030af1c3f02fe9aa64d1dd6562235ad087aac3813262dd824",
       "incorporated_complete_text": true
     }
   ],
-  "carried_forward_draft": "e3ed83a6607a42d22b5bf3f3ceda425c0a2c807180ac6a69918216807077911b",
-  "candidate_source_root_sha256": "6b9fd084dfabc4fc65d6ad5faa809fdd41272f73307afd6df394eba1465522c0",
+  "carried_forward_draft": "d4f054f21247948426abbe4c842ac65f4daa83f521f73bc3ac57e2d5860bdf6b",
+  "candidate_source_root_sha256": "eb4d5306a8f7dcca75f8cf7d60f6441bdf5b35bccb86ac2362b33f241af1591a",
   "comparison": "Retain five programs independently; no-addition leaves agreed work scattered, standalone replacement loses inherited work. Full cumulative draft selected; no superiority or completion claims."
 }

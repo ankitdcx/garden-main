@@ -8,7 +8,7 @@
       "authority_id": "AUTH-GARDEN-HOURLY-REVIEWER-v15.5",
       "subject": "agent:garden-integrator-build",
       "role": "REVIEWER",
-      "granted_by": "human:garden-originator:hourly-integration-instruction",
+      "granted_by": "human:garden-steward:hourly-integration-instruction",
       "resources": ["repo:ankitdcx/garden-main"],
       "max_delegation_depth": 0
     },
@@ -16,7 +16,7 @@
       "authority_id": "AUTH-GARDEN-HOURLY-INTEGRATOR-v15.5",
       "subject": "agent:garden-integrator-build",
       "role": "INTEGRATOR",
-      "granted_by": "human:garden-originator:hourly-integration-instruction",
+      "granted_by": "human:garden-steward:hourly-integration-instruction",
       "resources": ["repo:ankitdcx/garden-main"],
       "max_delegation_depth": 0
     }

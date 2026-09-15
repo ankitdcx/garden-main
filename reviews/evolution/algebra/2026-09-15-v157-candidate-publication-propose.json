@@ -1,0 +1,78 @@
+{
+  "schema": "GardenEvolutionAlgebraUsageReceipt/v1",
+  "action_id": "GARDEN-2026-09-15-V157-CANDIDATE-PUBLICATION-PROPOSE-001",
+  "design_epoch": "v15.5",
+  "canonical_source_root_sha256": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+  "source_obligation_refs": [
+    "canonical/candidates/v15.7/SOURCE_MANIFEST.json",
+    "canonical/candidates/CURRENT_CANDIDATE.json",
+    "reviews/v15.7/RELEASE-STATUS.md",
+    "reviews/v15.7/ROLE-REFERENCE-EDIT-RECEIPT.json",
+    "governance/PROCESS_CURRENT.json"
+  ],
+  "entries": [
+    {
+      "algebra": "Process",
+      "status": "APPLIED",
+      "operators": [
+        "SEQUENCE",
+        "DO_NOTHING"
+      ],
+      "law_claims": [],
+      "non_law_acknowledgements": [
+        "PARALLEL_EFFECT_COMMUTATIVITY_NOT_UNIVERSAL"
+      ],
+      "applicability_reason": "Sequence candidate materialization, reference cleanup, validation and publication; consider DO_NOTHING."
+    },
+    {
+      "algebra": "Policy",
+      "status": "FRONTIER",
+      "operators": [],
+      "law_claims": [],
+      "non_law_acknowledgements": [],
+      "applicability_reason": "Current process authority constrains the repair, but no executable Policy Algebra operator is newly invoked.",
+      "frontier_reason": "ActionGate and HUMAN process authority remain owners and are not silently relabeled as Policy Algebra."
+    },
+    {
+      "algebra": "Decision",
+      "status": "FRONTIER",
+      "operators": [],
+      "law_claims": [],
+      "non_law_acknowledgements": [],
+      "applicability_reason": "CI and ActionGate produce typed outcomes, but the exact Level-3 Decision Algebra signatures remain outside this bounded implementation.",
+      "frontier_reason": "No executable Decision Algebra operator is claimed."
+    },
+    {
+      "algebra": "Conformance",
+      "status": "APPLIED",
+      "operators": [
+        "BIND_EVIDENCE",
+        "COVERAGE"
+      ],
+      "law_claims": [],
+      "non_law_acknowledgements": [
+        "CONFORMANCE_IS_NOT_BINARY_ONLY",
+        "AUDIT_IS_NOT_A_SEPARATE_ALGEBRA"
+      ],
+      "applicability_reason": "Bind generated artifacts to exact manifest hashes and bounded check coverage; no semantic compliance claim."
+    },
+    {
+      "algebra": "Evidence",
+      "status": "FRONTIER",
+      "operators": [],
+      "law_claims": [],
+      "non_law_acknowledgements": [],
+      "applicability_reason": "Typed evidence records are used, but no executable Evidence Algebra composition operator is claimed.",
+      "frontier_reason": "Evidence Algebra Level-3 executable signatures remain frontiered."
+    },
+    {
+      "algebra": "Bridge",
+      "status": "NOT_APPLICABLE",
+      "operators": [],
+      "law_claims": [],
+      "non_law_acknowledgements": [],
+      "applicability_reason": "Text packaging does not invoke a registered semantic-to-representation Bridge operation."
+    }
+  ],
+  "semantic_compliance_proved": false
+}

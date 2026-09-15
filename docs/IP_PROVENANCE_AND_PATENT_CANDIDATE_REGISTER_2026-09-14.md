@@ -19,7 +19,7 @@ A project label is not a patent claim. Patent analysis must be feature-by-featur
 
 The normalized ChatGPT + DeepSeek + Gemini archive currently available covers 2026-02-09 through 2026-09-14 and contains 373 conversations / 25,737 messages. It shows GAIA 2026 / GAIA Diamond already substantially formed on 2026-02-09. Therefore 2026-02-09 is only the earliest AVAILABLE archive evidence, not proof of the true invention date.
 
-The Human Originator/HITL also supplied a preserved public Reddit post for GAIA Diamond. The currently accessible page independently confirms public disclosure of the 5.5 kHz heartbeat, BFT framing, PB-CBF / 100 ms look-ahead framing, reputation/median handling, fail-closed termination and SHA-style certification, together with an earlier unauthorized-use term referring to up to 90% of savings. The page currently exposes only relative-age UI text through the available retrieval path, so the exact legal publication timestamp remains an evidence obligation and must not be guessed.
+The Human Steward/HITL also supplied a preserved public Reddit post for GAIA Diamond. The currently accessible page independently confirms public disclosure of the 5.5 kHz heartbeat, BFT framing, PB-CBF / 100 ms look-ahead framing, reputation/median handling, fail-closed termination and SHA-style certification, together with an earlier unauthorized-use term referring to up to 90% of savings. The page currently exposes only relative-age UI text through the available retrieval path, so the exact legal publication timestamp remains an evidence obligation and must not be guessed.
 
 ## 3. Chronology — earliest currently supported evidence
 

@@ -6,9 +6,9 @@ Status: private implementation workspace.
 
 [Garden v15.7](canonical/candidates/v15.7/README.md) carries the complete prepared v15.6 draft forward and adds five registered programs: TRACE, focused cognitive increment, cognitive qualification, comparative coverage and design closure. The user authorized a direct version jump. Its canonical predecessor remains v15.5; no intermediate v15.6 promotion is claimed. See [integration evidence](reviews/v15.7/SOURCE-INTEGRATION-RECEIPT.json) and [release status](reviews/v15.7/RELEASE-STATUS.md).
 
-## v15.6 working candidate
+## Retained v15.6 draft lineage
 
-The complete [five-file v15.6 candidate](canonical/candidates/v15.6/README.md) consolidates the pending upgrade queue, 15 corrected engineering patterns and 38 additional assurance work items. It is not yet canonical. See the [release status and remaining gates](reviews/v15.6/RELEASE-STATUS.md), [pending dispositions](design_deltas/v15.6/PENDING-RECONCILIATION-2026-09-15.json) and [reference migration inventory](reviews/v15.6/REFERENCE-MIGRATION-INVENTORY.json).
+The retained [five-file v15.6 candidate](canonical/candidates/v15.6/README.md) consolidates the pending upgrade queue, 15 corrected engineering patterns and 38 additional assurance work items. It is not yet canonical. See the [release status and remaining gates](reviews/v15.6/RELEASE-STATUS.md), [pending dispositions](design_deltas/v15.6/PENDING-RECONCILIATION-2026-09-15.json) and [reference migration inventory](reviews/v15.6/REFERENCE-MIGRATION-INVENTORY.json).
 
 An exact [v15.5 archival copy](canonical/archive/v15.5/SOURCE_MANIFEST.json) preserves predecessor bytes. Current canonical pointers and historical evidence bindings remain v15.5 until the existing promotion gates pass.
 
@@ -17,7 +17,7 @@ An exact [v15.5 archival copy](canonical/archive/v15.5/SOURCE_MANIFEST.json) pre
 - Garden v15.5 / GSL v45.1 five-file canonical source is pinned under `canonical/current/`.
 - SCEP v1.1 remains the recursive construction/bootstrap seed where applicable; it is not the current Garden release identifier.
 - OCF + CPI + TML + CMUR + SCEP remain construction/review machinery around the canonical source.
-- User remains Garden founder / Human-in-the-Loop for major Garden-level design decisions.
+- User remains Garden Human-in-the-Loop for major Garden-level design decisions.
 - No repository content grants an external licence or transfers Garden ownership/IP.
 - `described != proved != implemented != empirically validated != certified`
 

@@ -1,15 +1,15 @@
 {
   "schema": "CanonicalSectionInventory/v1",
   "release": "Garden v15.6",
-  "design_epoch": "Garden-v15.6@e3ed83a6607a42d22b5bf3f3ceda425c0a2c807180ac6a69918216807077911b",
-  "source_root_sha256": "e3ed83a6607a42d22b5bf3f3ceda425c0a2c807180ac6a69918216807077911b",
+  "design_epoch": "Garden-v15.6@d4f054f21247948426abbe4c842ac65f4daa83f521f73bc3ac57e2d5860bdf6b",
+  "source_root_sha256": "d4f054f21247948426abbe4c842ac65f4daa83f521f73bc3ac57e2d5860bdf6b",
   "process_version": "1.4",
   "source_hashes": {
     "Garden_User_v15.6_FULL_CANDIDATE_2026-09-15.txt": "bed327c387fdb72dc40a228fb56c2f1e5ef71fd61bfc9311e32139b21ca33466",
     "Garden_System_v15.6_FULL_CANDIDATE_2026-09-15.txt": "c2a4d72c1b445271737b6c136fcf01f2f490f89b006086d1c804d21b3ebbfde5",
     "Garden_Technical_v15.6_FULL_CANDIDATE_2026-09-15.txt": "dc2e3b46d83fc620973b861bc05578e250da2cdbba7d005305ea45ae96f5e5de",
-    "Garden_Annexure_v15.6_FULL_CANDIDATE_2026-09-15.txt": "dfb0caa4d880df80091409dc58c2e80689e91fae83e21422374ccb6f6c02a516",
-    "Garden_Theories_v15.6_FULL_CANDIDATE_2026-09-15.txt": "3cd9232ba6ed02838ff6f9b1080ebe258b1e923032e5a2e1a3f1ba97d95c13f9"
+    "Garden_Annexure_v15.6_FULL_CANDIDATE_2026-09-15.txt": "e100ad35f6fb7829836810f0a735ee69d5cc330e19798dde6052c1ea47831b2e",
+    "Garden_Theories_v15.6_FULL_CANDIDATE_2026-09-15.txt": "723f3cefcf5f965a4024ec83d7e3739ad2c5f99daeaebc154afd687cc6e74492"
   },
   "coverage_complete": true,
   "boundary_algorithm": "SectionUnit/v1-anchor-occurrence-v1: file frontmatter plus every explicit SemanticAnchor or unindented non-mapping canonical anchor declaration; ranges are contiguous through EOF; repeated anchors are occurrence-qualified; reference target hashes aggregate all declarations of the referenced anchor.",
@@ -19,7 +19,7 @@
     "TIER_B": 14,
     "TIER_C": 1
   },
-  "inventory_sha256": "e4cca76d1ea668925c7cde6e4f13f6e3ab76baf1c7c8d0ee8fbe213d3de3a872",
+  "inventory_sha256": "989046c68d2334f4e3246031c4ee53b8f49374692cd53197eb9aa83a99f9dee8",
   "units": [
     {
       "schema": "SectionUnit/v1",
@@ -705,7 +705,7 @@
       ],
       "reference_target_hashes": {
         "[H-V15-6]": "1ceb2997c35ea685d58ba22d9c4d0353b0b8e412494de5a3d62fa1ac771de204",
-        "[A-V15-6]": "cfdf07f13b34bb8c3af8f3716325f3fe9b93ca00aaf5ab2278e4c534a924b4ab",
+        "[A-V15-6]": "8860460250c87d6f0980a804131db76e4fee598a25561edf5a306ba7143c5e63",
         "[T-V15-6]": "5cb0c59351e7e906fea0ffeddd914f181544e8a3a39db6173a8eb8ad75d9aad2"
       },
       "unresolved_references": [],
@@ -4757,7 +4757,7 @@
       "reference_target_hashes": {
         "[S-V15-6]": "257df8159e43b6d11056b53a03ea85cf6495ba1591be2c7a99f766db3b734172",
         "[T-V15-6]": "5cb0c59351e7e906fea0ffeddd914f181544e8a3a39db6173a8eb8ad75d9aad2",
-        "[A-V15-6]": "cfdf07f13b34bb8c3af8f3716325f3fe9b93ca00aaf5ab2278e4c534a924b4ab"
+        "[A-V15-6]": "8860460250c87d6f0980a804131db76e4fee598a25561edf5a306ba7143c5e63"
       },
       "unresolved_references": [],
       "normative_semantics": true,
@@ -8709,7 +8709,7 @@
       "id": "Annexure:FRONTMATTER:1",
       "source_role": "Annexure",
       "source_file": "Garden_Annexure_v15.6_FULL_CANDIDATE_2026-09-15.txt",
-      "source_file_sha256": "dfb0caa4d880df80091409dc58c2e80689e91fae83e21422374ccb6f6c02a516",
+      "source_file_sha256": "e100ad35f6fb7829836810f0a735ee69d5cc330e19798dde6052c1ea47831b2e",
       "anchors": {
         "primary": null,
         "occurrence": 0,
@@ -8771,7 +8771,7 @@
       "id": "Annexure:A-DICT:1",
       "source_role": "Annexure",
       "source_file": "Garden_Annexure_v15.6_FULL_CANDIDATE_2026-09-15.txt",
-      "source_file_sha256": "dfb0caa4d880df80091409dc58c2e80689e91fae83e21422374ccb6f6c02a516",
+      "source_file_sha256": "e100ad35f6fb7829836810f0a735ee69d5cc330e19798dde6052c1ea47831b2e",
       "anchors": {
         "primary": "[A-DICT]",
         "occurrence": 1,
@@ -8800,7 +8800,7 @@
       "id": "Annexure:A-DICT:2",
       "source_role": "Annexure",
       "source_file": "Garden_Annexure_v15.6_FULL_CANDIDATE_2026-09-15.txt",
-      "source_file_sha256": "dfb0caa4d880df80091409dc58c2e80689e91fae83e21422374ccb6f6c02a516",
+      "source_file_sha256": "e100ad35f6fb7829836810f0a735ee69d5cc330e19798dde6052c1ea47831b2e",
       "anchors": {
         "primary": "[A-DICT]",
         "occurrence": 2,
@@ -8948,7 +8948,7 @@
       "id": "Annexure:A-GLOSSARY:1",
       "source_role": "Annexure",
       "source_file": "Garden_Annexure_v15.6_FULL_CANDIDATE_2026-09-15.txt",
-      "source_file_sha256": "dfb0caa4d880df80091409dc58c2e80689e91fae83e21422374ccb6f6c02a516",
+      "source_file_sha256": "e100ad35f6fb7829836810f0a735ee69d5cc330e19798dde6052c1ea47831b2e",
       "anchors": {
         "primary": "[A-GLOSSARY]",
         "occurrence": 1,
@@ -8988,7 +8988,7 @@
       "id": "Annexure:A-REG:1",
       "source_role": "Annexure",
       "source_file": "Garden_Annexure_v15.6_FULL_CANDIDATE_2026-09-15.txt",
-      "source_file_sha256": "dfb0caa4d880df80091409dc58c2e80689e91fae83e21422374ccb6f6c02a516",
+      "source_file_sha256": "e100ad35f6fb7829836810f0a735ee69d5cc330e19798dde6052c1ea47831b2e",
       "anchors": {
         "primary": "[A-REG]",
         "occurrence": 1,
@@ -9017,7 +9017,7 @@
       "id": "Annexure:A-RIGHTS:1",
       "source_role": "Annexure",
       "source_file": "Garden_Annexure_v15.6_FULL_CANDIDATE_2026-09-15.txt",
-      "source_file_sha256": "dfb0caa4d880df80091409dc58c2e80689e91fae83e21422374ccb6f6c02a516",
+      "source_file_sha256": "e100ad35f6fb7829836810f0a735ee69d5cc330e19798dde6052c1ea47831b2e",
       "anchors": {
         "primary": "[A-RIGHTS]",
         "occurrence": 1,
@@ -9054,7 +9054,7 @@
       "id": "Annexure:A-REG-ARCH-NAME:1",
       "source_role": "Annexure",
       "source_file": "Garden_Annexure_v15.6_FULL_CANDIDATE_2026-09-15.txt",
-      "source_file_sha256": "dfb0caa4d880df80091409dc58c2e80689e91fae83e21422374ccb6f6c02a516",
+      "source_file_sha256": "e100ad35f6fb7829836810f0a735ee69d5cc330e19798dde6052c1ea47831b2e",
       "anchors": {
         "primary": "[A-REG-ARCH-NAME]",
         "occurrence": 1,
@@ -9087,7 +9087,7 @@
       "id": "Annexure:T-RRCTX:1",
       "source_role": "Annexure",
       "source_file": "Garden_Annexure_v15.6_FULL_CANDIDATE_2026-09-15.txt",
-      "source_file_sha256": "dfb0caa4d880df80091409dc58c2e80689e91fae83e21422374ccb6f6c02a516",
+      "source_file_sha256": "e100ad35f6fb7829836810f0a735ee69d5cc330e19798dde6052c1ea47831b2e",
       "anchors": {
         "primary": "[T-RRCTX]",
         "occurrence": 1,
@@ -9134,7 +9134,7 @@
       "id": "Annexure:A-REFERENCE-CLOSURE:1",
       "source_role": "Annexure",
       "source_file": "Garden_Annexure_v15.6_FULL_CANDIDATE_2026-09-15.txt",
-      "source_file_sha256": "dfb0caa4d880df80091409dc58c2e80689e91fae83e21422374ccb6f6c02a516",
+      "source_file_sha256": "e100ad35f6fb7829836810f0a735ee69d5cc330e19798dde6052c1ea47831b2e",
       "anchors": {
         "primary": "[A-REFERENCE-CLOSURE]",
         "occurrence": 1,
@@ -9172,7 +9172,7 @@
       "id": "Annexure:A-CATALOG:1",
       "source_role": "Annexure",
       "source_file": "Garden_Annexure_v15.6_FULL_CANDIDATE_2026-09-15.txt",
-      "source_file_sha256": "dfb0caa4d880df80091409dc58c2e80689e91fae83e21422374ccb6f6c02a516",
+      "source_file_sha256": "e100ad35f6fb7829836810f0a735ee69d5cc330e19798dde6052c1ea47831b2e",
       "anchors": {
         "primary": "[A-CATALOG]",
         "occurrence": 1,
@@ -9392,7 +9392,7 @@
       "id": "Annexure:A-AUDIT:1",
       "source_role": "Annexure",
       "source_file": "Garden_Annexure_v15.6_FULL_CANDIDATE_2026-09-15.txt",
-      "source_file_sha256": "dfb0caa4d880df80091409dc58c2e80689e91fae83e21422374ccb6f6c02a516",
+      "source_file_sha256": "e100ad35f6fb7829836810f0a735ee69d5cc330e19798dde6052c1ea47831b2e",
       "anchors": {
         "primary": "[A-AUDIT]",
         "occurrence": 1,
@@ -9430,7 +9430,7 @@
       "id": "Annexure:A-HISTORY:1",
       "source_role": "Annexure",
       "source_file": "Garden_Annexure_v15.6_FULL_CANDIDATE_2026-09-15.txt",
-      "source_file_sha256": "dfb0caa4d880df80091409dc58c2e80689e91fae83e21422374ccb6f6c02a516",
+      "source_file_sha256": "e100ad35f6fb7829836810f0a735ee69d5cc330e19798dde6052c1ea47831b2e",
       "anchors": {
         "primary": "[A-HISTORY]",
         "occurrence": 1,
@@ -9468,7 +9468,7 @@
       "id": "Annexure:A-CPI:1",
       "source_role": "Annexure",
       "source_file": "Garden_Annexure_v15.6_FULL_CANDIDATE_2026-09-15.txt",
-      "source_file_sha256": "dfb0caa4d880df80091409dc58c2e80689e91fae83e21422374ccb6f6c02a516",
+      "source_file_sha256": "e100ad35f6fb7829836810f0a735ee69d5cc330e19798dde6052c1ea47831b2e",
       "anchors": {
         "primary": "[A-CPI]",
         "occurrence": 1,
@@ -9497,7 +9497,7 @@
       "id": "Annexure:A-CPI-RQ:1",
       "source_role": "Annexure",
       "source_file": "Garden_Annexure_v15.6_FULL_CANDIDATE_2026-09-15.txt",
-      "source_file_sha256": "dfb0caa4d880df80091409dc58c2e80689e91fae83e21422374ccb6f6c02a516",
+      "source_file_sha256": "e100ad35f6fb7829836810f0a735ee69d5cc330e19798dde6052c1ea47831b2e",
       "anchors": {
         "primary": "[A-CPI-RQ]",
         "occurrence": 1,
@@ -9540,7 +9540,7 @@
       "id": "Annexure:A-CDDT:1",
       "source_role": "Annexure",
       "source_file": "Garden_Annexure_v15.6_FULL_CANDIDATE_2026-09-15.txt",
-      "source_file_sha256": "dfb0caa4d880df80091409dc58c2e80689e91fae83e21422374ccb6f6c02a516",
+      "source_file_sha256": "e100ad35f6fb7829836810f0a735ee69d5cc330e19798dde6052c1ea47831b2e",
       "anchors": {
         "primary": "[A-CDDT]",
         "occurrence": 1,
@@ -9569,7 +9569,7 @@
       "id": "Annexure:A-OCF:1",
       "source_role": "Annexure",
       "source_file": "Garden_Annexure_v15.6_FULL_CANDIDATE_2026-09-15.txt",
-      "source_file_sha256": "dfb0caa4d880df80091409dc58c2e80689e91fae83e21422374ccb6f6c02a516",
+      "source_file_sha256": "e100ad35f6fb7829836810f0a735ee69d5cc330e19798dde6052c1ea47831b2e",
       "anchors": {
         "primary": "[A-OCF]",
         "occurrence": 1,
@@ -9598,7 +9598,7 @@
       "id": "Annexure:A-CMUR:1",
       "source_role": "Annexure",
       "source_file": "Garden_Annexure_v15.6_FULL_CANDIDATE_2026-09-15.txt",
-      "source_file_sha256": "dfb0caa4d880df80091409dc58c2e80689e91fae83e21422374ccb6f6c02a516",
+      "source_file_sha256": "e100ad35f6fb7829836810f0a735ee69d5cc330e19798dde6052c1ea47831b2e",
       "anchors": {
         "primary": "[A-CMUR]",
         "occurrence": 1,
@@ -9627,7 +9627,7 @@
       "id": "Annexure:A-CLIC:1",
       "source_role": "Annexure",
       "source_file": "Garden_Annexure_v15.6_FULL_CANDIDATE_2026-09-15.txt",
-      "source_file_sha256": "dfb0caa4d880df80091409dc58c2e80689e91fae83e21422374ccb6f6c02a516",
+      "source_file_sha256": "e100ad35f6fb7829836810f0a735ee69d5cc330e19798dde6052c1ea47831b2e",
       "anchors": {
         "primary": "[A-CLIC]",
         "occurrence": 1,
@@ -9656,7 +9656,7 @@
       "id": "Annexure:A-ALG-FRM:1",
       "source_role": "Annexure",
       "source_file": "Garden_Annexure_v15.6_FULL_CANDIDATE_2026-09-15.txt",
-      "source_file_sha256": "dfb0caa4d880df80091409dc58c2e80689e91fae83e21422374ccb6f6c02a516",
+      "source_file_sha256": "e100ad35f6fb7829836810f0a735ee69d5cc330e19798dde6052c1ea47831b2e",
       "anchors": {
         "primary": "[A-ALG-FRM]",
         "occurrence": 1,
@@ -9691,7 +9691,7 @@
       "id": "Annexure:A-GCL:1",
       "source_role": "Annexure",
       "source_file": "Garden_Annexure_v15.6_FULL_CANDIDATE_2026-09-15.txt",
-      "source_file_sha256": "dfb0caa4d880df80091409dc58c2e80689e91fae83e21422374ccb6f6c02a516",
+      "source_file_sha256": "e100ad35f6fb7829836810f0a735ee69d5cc330e19798dde6052c1ea47831b2e",
       "anchors": {
         "primary": "[A-GCL]",
         "occurrence": 1,
@@ -9720,7 +9720,7 @@
       "id": "Annexure:A-V154-DISPOSITION:1",
       "source_role": "Annexure",
       "source_file": "Garden_Annexure_v15.6_FULL_CANDIDATE_2026-09-15.txt",
-      "source_file_sha256": "dfb0caa4d880df80091409dc58c2e80689e91fae83e21422374ccb6f6c02a516",
+      "source_file_sha256": "e100ad35f6fb7829836810f0a735ee69d5cc330e19798dde6052c1ea47831b2e",
       "anchors": {
         "primary": "[A-V154-DISPOSITION]",
         "occurrence": 1,
@@ -9749,7 +9749,7 @@
       "id": "Annexure:A-V155:1",
       "source_role": "Annexure",
       "source_file": "Garden_Annexure_v15.6_FULL_CANDIDATE_2026-09-15.txt",
-      "source_file_sha256": "dfb0caa4d880df80091409dc58c2e80689e91fae83e21422374ccb6f6c02a516",
+      "source_file_sha256": "e100ad35f6fb7829836810f0a735ee69d5cc330e19798dde6052c1ea47831b2e",
       "anchors": {
         "primary": "[A-V155]",
         "occurrence": 1,
@@ -9782,7 +9782,7 @@
       "id": "Annexure:A-V15-6:1",
       "source_role": "Annexure",
       "source_file": "Garden_Annexure_v15.6_FULL_CANDIDATE_2026-09-15.txt",
-      "source_file_sha256": "dfb0caa4d880df80091409dc58c2e80689e91fae83e21422374ccb6f6c02a516",
+      "source_file_sha256": "e100ad35f6fb7829836810f0a735ee69d5cc330e19798dde6052c1ea47831b2e",
       "anchors": {
         "primary": "[A-V15-6]",
         "occurrence": 1,
@@ -9946,7 +9946,7 @@
         "[T-EH-20]"
       ],
       "reference_target_hashes": {
-        "[A-V15-6]": "cfdf07f13b34bb8c3af8f3716325f3fe9b93ca00aaf5ab2278e4c534a924b4ab",
+        "[A-V15-6]": "8860460250c87d6f0980a804131db76e4fee598a25561edf5a306ba7143c5e63",
         "[T-ARCH]": "476511b814cce91a519ecedd3110863fe37565cf6320656e4a61244bc1454476",
         "[T-IMPLEMENT]": "4002464a671449667e1ba67a8bb45c104eed111be4ce155b923b4970315f80c9",
         "[T-GSL]": "c33da31b4ead41fdec609c5785ae6c6eab9c3437be2fc22220eeec5b123955fd",
@@ -9982,14 +9982,14 @@
       "unresolved_references": [],
       "normative_semantics": true,
       "tier": "TIER_A",
-      "content_sha256": "87ac539cefb4d7c7da54bdf597845bb10a83908d505b8731ebe98302128385a9"
+      "content_sha256": "7c8764557e6e41618e8a385cd3bafd84cf9cb30f7d5e3e2aa5d96f78f8510733"
     },
     {
       "schema": "SectionUnit/v1",
       "id": "Theories:FRONTMATTER:1",
       "source_role": "Theories",
       "source_file": "Garden_Theories_v15.6_FULL_CANDIDATE_2026-09-15.txt",
-      "source_file_sha256": "3cd9232ba6ed02838ff6f9b1080ebe258b1e923032e5a2e1a3f1ba97d95c13f9",
+      "source_file_sha256": "723f3cefcf5f965a4024ec83d7e3739ad2c5f99daeaebc154afd687cc6e74492",
       "anchors": {
         "primary": null,
         "occurrence": 0,
@@ -10062,7 +10062,7 @@
       "id": "Theories:TH-THEORY-SYSTEM:1",
       "source_role": "Theories",
       "source_file": "Garden_Theories_v15.6_FULL_CANDIDATE_2026-09-15.txt",
-      "source_file_sha256": "3cd9232ba6ed02838ff6f9b1080ebe258b1e923032e5a2e1a3f1ba97d95c13f9",
+      "source_file_sha256": "723f3cefcf5f965a4024ec83d7e3739ad2c5f99daeaebc154afd687cc6e74492",
       "anchors": {
         "primary": "[TH-THEORY-SYSTEM]",
         "occurrence": 1,
@@ -10093,7 +10093,7 @@
       "id": "Theories:TH-THEORY-EQ:1",
       "source_role": "Theories",
       "source_file": "Garden_Theories_v15.6_FULL_CANDIDATE_2026-09-15.txt",
-      "source_file_sha256": "3cd9232ba6ed02838ff6f9b1080ebe258b1e923032e5a2e1a3f1ba97d95c13f9",
+      "source_file_sha256": "723f3cefcf5f965a4024ec83d7e3739ad2c5f99daeaebc154afd687cc6e74492",
       "anchors": {
         "primary": "[TH-THEORY-EQ]",
         "occurrence": 1,
@@ -10129,7 +10129,7 @@
       "id": "Theories:TH-SRT:1",
       "source_role": "Theories",
       "source_file": "Garden_Theories_v15.6_FULL_CANDIDATE_2026-09-15.txt",
-      "source_file_sha256": "3cd9232ba6ed02838ff6f9b1080ebe258b1e923032e5a2e1a3f1ba97d95c13f9",
+      "source_file_sha256": "723f3cefcf5f965a4024ec83d7e3739ad2c5f99daeaebc154afd687cc6e74492",
       "anchors": {
         "primary": "[TH-SRT]",
         "occurrence": 1,
@@ -10158,7 +10158,7 @@
       "id": "Theories:TH-VSM:1",
       "source_role": "Theories",
       "source_file": "Garden_Theories_v15.6_FULL_CANDIDATE_2026-09-15.txt",
-      "source_file_sha256": "3cd9232ba6ed02838ff6f9b1080ebe258b1e923032e5a2e1a3f1ba97d95c13f9",
+      "source_file_sha256": "723f3cefcf5f965a4024ec83d7e3739ad2c5f99daeaebc154afd687cc6e74492",
       "anchors": {
         "primary": "[TH-VSM]",
         "occurrence": 1,
@@ -10189,7 +10189,7 @@
       "id": "Theories:TH-RPM:1",
       "source_role": "Theories",
       "source_file": "Garden_Theories_v15.6_FULL_CANDIDATE_2026-09-15.txt",
-      "source_file_sha256": "3cd9232ba6ed02838ff6f9b1080ebe258b1e923032e5a2e1a3f1ba97d95c13f9",
+      "source_file_sha256": "723f3cefcf5f965a4024ec83d7e3739ad2c5f99daeaebc154afd687cc6e74492",
       "anchors": {
         "primary": "[TH-RPM]",
         "occurrence": 1,
@@ -10218,7 +10218,7 @@
       "id": "Theories:TH-PPM:1",
       "source_role": "Theories",
       "source_file": "Garden_Theories_v15.6_FULL_CANDIDATE_2026-09-15.txt",
-      "source_file_sha256": "3cd9232ba6ed02838ff6f9b1080ebe258b1e923032e5a2e1a3f1ba97d95c13f9",
+      "source_file_sha256": "723f3cefcf5f965a4024ec83d7e3739ad2c5f99daeaebc154afd687cc6e74492",
       "anchors": {
         "primary": "[TH-PPM]",
         "occurrence": 1,
@@ -10247,7 +10247,7 @@
       "id": "Theories:TH-THEORY-SYSTEM:2",
       "source_role": "Theories",
       "source_file": "Garden_Theories_v15.6_FULL_CANDIDATE_2026-09-15.txt",
-      "source_file_sha256": "3cd9232ba6ed02838ff6f9b1080ebe258b1e923032e5a2e1a3f1ba97d95c13f9",
+      "source_file_sha256": "723f3cefcf5f965a4024ec83d7e3739ad2c5f99daeaebc154afd687cc6e74492",
       "anchors": {
         "primary": "[TH-THEORY-SYSTEM]",
         "occurrence": 2,
@@ -10276,7 +10276,7 @@
       "id": "Theories:TH-TFT:1",
       "source_role": "Theories",
       "source_file": "Garden_Theories_v15.6_FULL_CANDIDATE_2026-09-15.txt",
-      "source_file_sha256": "3cd9232ba6ed02838ff6f9b1080ebe258b1e923032e5a2e1a3f1ba97d95c13f9",
+      "source_file_sha256": "723f3cefcf5f965a4024ec83d7e3739ad2c5f99daeaebc154afd687cc6e74492",
       "anchors": {
         "primary": "[TH-TFT]",
         "occurrence": 1,
@@ -10307,7 +10307,7 @@
       "id": "Theories:TH-FET:1",
       "source_role": "Theories",
       "source_file": "Garden_Theories_v15.6_FULL_CANDIDATE_2026-09-15.txt",
-      "source_file_sha256": "3cd9232ba6ed02838ff6f9b1080ebe258b1e923032e5a2e1a3f1ba97d95c13f9",
+      "source_file_sha256": "723f3cefcf5f965a4024ec83d7e3739ad2c5f99daeaebc154afd687cc6e74492",
       "anchors": {
         "primary": "[TH-FET]",
         "occurrence": 1,
@@ -10336,7 +10336,7 @@
       "id": "Theories:TH-SCT:1",
       "source_role": "Theories",
       "source_file": "Garden_Theories_v15.6_FULL_CANDIDATE_2026-09-15.txt",
-      "source_file_sha256": "3cd9232ba6ed02838ff6f9b1080ebe258b1e923032e5a2e1a3f1ba97d95c13f9",
+      "source_file_sha256": "723f3cefcf5f965a4024ec83d7e3739ad2c5f99daeaebc154afd687cc6e74492",
       "anchors": {
         "primary": "[TH-SCT]",
         "occurrence": 1,
@@ -10365,7 +10365,7 @@
       "id": "Theories:TH-UPS:1",
       "source_role": "Theories",
       "source_file": "Garden_Theories_v15.6_FULL_CANDIDATE_2026-09-15.txt",
-      "source_file_sha256": "3cd9232ba6ed02838ff6f9b1080ebe258b1e923032e5a2e1a3f1ba97d95c13f9",
+      "source_file_sha256": "723f3cefcf5f965a4024ec83d7e3739ad2c5f99daeaebc154afd687cc6e74492",
       "anchors": {
         "primary": "[TH-UPS]",
         "occurrence": 1,
@@ -10396,7 +10396,7 @@
       "id": "Theories:RA-PROFILES:1",
       "source_role": "Theories",
       "source_file": "Garden_Theories_v15.6_FULL_CANDIDATE_2026-09-15.txt",
-      "source_file_sha256": "3cd9232ba6ed02838ff6f9b1080ebe258b1e923032e5a2e1a3f1ba97d95c13f9",
+      "source_file_sha256": "723f3cefcf5f965a4024ec83d7e3739ad2c5f99daeaebc154afd687cc6e74492",
       "anchors": {
         "primary": "[RA-PROFILES]",
         "occurrence": 1,
@@ -10427,7 +10427,7 @@
       "id": "Theories:RA-SYSTEM-REL:1",
       "source_role": "Theories",
       "source_file": "Garden_Theories_v15.6_FULL_CANDIDATE_2026-09-15.txt",
-      "source_file_sha256": "3cd9232ba6ed02838ff6f9b1080ebe258b1e923032e5a2e1a3f1ba97d95c13f9",
+      "source_file_sha256": "723f3cefcf5f965a4024ec83d7e3739ad2c5f99daeaebc154afd687cc6e74492",
       "anchors": {
         "primary": "[RA-SYSTEM-REL]",
         "occurrence": 1,
@@ -10456,7 +10456,7 @@
       "id": "Theories:RA-GSL-KR:1",
       "source_role": "Theories",
       "source_file": "Garden_Theories_v15.6_FULL_CANDIDATE_2026-09-15.txt",
-      "source_file_sha256": "3cd9232ba6ed02838ff6f9b1080ebe258b1e923032e5a2e1a3f1ba97d95c13f9",
+      "source_file_sha256": "723f3cefcf5f965a4024ec83d7e3739ad2c5f99daeaebc154afd687cc6e74492",
       "anchors": {
         "primary": "[RA-GSL-KR]",
         "occurrence": 1,
@@ -10485,7 +10485,7 @@
       "id": "Theories:RA-GSL-AR:1",
       "source_role": "Theories",
       "source_file": "Garden_Theories_v15.6_FULL_CANDIDATE_2026-09-15.txt",
-      "source_file_sha256": "3cd9232ba6ed02838ff6f9b1080ebe258b1e923032e5a2e1a3f1ba97d95c13f9",
+      "source_file_sha256": "723f3cefcf5f965a4024ec83d7e3739ad2c5f99daeaebc154afd687cc6e74492",
       "anchors": {
         "primary": "[RA-GSL-AR]",
         "occurrence": 1,
@@ -10514,7 +10514,7 @@
       "id": "Theories:RA-GSL-R:1",
       "source_role": "Theories",
       "source_file": "Garden_Theories_v15.6_FULL_CANDIDATE_2026-09-15.txt",
-      "source_file_sha256": "3cd9232ba6ed02838ff6f9b1080ebe258b1e923032e5a2e1a3f1ba97d95c13f9",
+      "source_file_sha256": "723f3cefcf5f965a4024ec83d7e3739ad2c5f99daeaebc154afd687cc6e74492",
       "anchors": {
         "primary": "[RA-GSL-R]",
         "occurrence": 1,
@@ -10543,7 +10543,7 @@
       "id": "Theories:RA-GESTALT-APAO:1",
       "source_role": "Theories",
       "source_file": "Garden_Theories_v15.6_FULL_CANDIDATE_2026-09-15.txt",
-      "source_file_sha256": "3cd9232ba6ed02838ff6f9b1080ebe258b1e923032e5a2e1a3f1ba97d95c13f9",
+      "source_file_sha256": "723f3cefcf5f965a4024ec83d7e3739ad2c5f99daeaebc154afd687cc6e74492",
       "anchors": {
         "primary": "[RA-GESTALT-APAO]",
         "occurrence": 1,
@@ -10572,7 +10572,7 @@
       "id": "Theories:RA-TRAIN:1",
       "source_role": "Theories",
       "source_file": "Garden_Theories_v15.6_FULL_CANDIDATE_2026-09-15.txt",
-      "source_file_sha256": "3cd9232ba6ed02838ff6f9b1080ebe258b1e923032e5a2e1a3f1ba97d95c13f9",
+      "source_file_sha256": "723f3cefcf5f965a4024ec83d7e3739ad2c5f99daeaebc154afd687cc6e74492",
       "anchors": {
         "primary": "[RA-TRAIN]",
         "occurrence": 1,
@@ -10601,7 +10601,7 @@
       "id": "Theories:RA-GAIA-TITANIUM:1",
       "source_role": "Theories",
       "source_file": "Garden_Theories_v15.6_FULL_CANDIDATE_2026-09-15.txt",
-      "source_file_sha256": "3cd9232ba6ed02838ff6f9b1080ebe258b1e923032e5a2e1a3f1ba97d95c13f9",
+      "source_file_sha256": "723f3cefcf5f965a4024ec83d7e3739ad2c5f99daeaebc154afd687cc6e74492",
       "anchors": {
         "primary": "[RA-GAIA-TITANIUM]",
         "occurrence": 1,
@@ -10630,7 +10630,7 @@
       "id": "Theories:RA-GAIA-DIAMOND:1",
       "source_role": "Theories",
       "source_file": "Garden_Theories_v15.6_FULL_CANDIDATE_2026-09-15.txt",
-      "source_file_sha256": "3cd9232ba6ed02838ff6f9b1080ebe258b1e923032e5a2e1a3f1ba97d95c13f9",
+      "source_file_sha256": "723f3cefcf5f965a4024ec83d7e3739ad2c5f99daeaebc154afd687cc6e74492",
       "anchors": {
         "primary": "[RA-GAIA-DIAMOND]",
         "occurrence": 1,
@@ -10659,7 +10659,7 @@
       "id": "Theories:RA-RELIABILITY-OS:1",
       "source_role": "Theories",
       "source_file": "Garden_Theories_v15.6_FULL_CANDIDATE_2026-09-15.txt",
-      "source_file_sha256": "3cd9232ba6ed02838ff6f9b1080ebe258b1e923032e5a2e1a3f1ba97d95c13f9",
+      "source_file_sha256": "723f3cefcf5f965a4024ec83d7e3739ad2c5f99daeaebc154afd687cc6e74492",
       "anchors": {
         "primary": "[RA-RELIABILITY-OS]",
         "occurrence": 1,
@@ -10688,7 +10688,7 @@
       "id": "Theories:TH-GENERALIZED-ATTRACTION:1",
       "source_role": "Theories",
       "source_file": "Garden_Theories_v15.6_FULL_CANDIDATE_2026-09-15.txt",
-      "source_file_sha256": "3cd9232ba6ed02838ff6f9b1080ebe258b1e923032e5a2e1a3f1ba97d95c13f9",
+      "source_file_sha256": "723f3cefcf5f965a4024ec83d7e3739ad2c5f99daeaebc154afd687cc6e74492",
       "anchors": {
         "primary": "[TH-GENERALIZED-ATTRACTION]",
         "occurrence": 1,
@@ -10717,7 +10717,7 @@
       "id": "Theories:TH-GSL-GENERATIVE:1",
       "source_role": "Theories",
       "source_file": "Garden_Theories_v15.6_FULL_CANDIDATE_2026-09-15.txt",
-      "source_file_sha256": "3cd9232ba6ed02838ff6f9b1080ebe258b1e923032e5a2e1a3f1ba97d95c13f9",
+      "source_file_sha256": "723f3cefcf5f965a4024ec83d7e3739ad2c5f99daeaebc154afd687cc6e74492",
       "anchors": {
         "primary": "[TH-GSL-GENERATIVE]",
         "occurrence": 1,
@@ -10749,7 +10749,7 @@
       "id": "Theories:RA-CPI:1",
       "source_role": "Theories",
       "source_file": "Garden_Theories_v15.6_FULL_CANDIDATE_2026-09-15.txt",
-      "source_file_sha256": "3cd9232ba6ed02838ff6f9b1080ebe258b1e923032e5a2e1a3f1ba97d95c13f9",
+      "source_file_sha256": "723f3cefcf5f965a4024ec83d7e3739ad2c5f99daeaebc154afd687cc6e74492",
       "anchors": {
         "primary": "[RA-CPI]",
         "occurrence": 1,
@@ -10792,7 +10792,7 @@
       "id": "Theories:RA-CDDT:1",
       "source_role": "Theories",
       "source_file": "Garden_Theories_v15.6_FULL_CANDIDATE_2026-09-15.txt",
-      "source_file_sha256": "3cd9232ba6ed02838ff6f9b1080ebe258b1e923032e5a2e1a3f1ba97d95c13f9",
+      "source_file_sha256": "723f3cefcf5f965a4024ec83d7e3739ad2c5f99daeaebc154afd687cc6e74492",
       "anchors": {
         "primary": "[RA-CDDT]",
         "occurrence": 1,
@@ -10821,7 +10821,7 @@
       "id": "Theories:RA-OCF:1",
       "source_role": "Theories",
       "source_file": "Garden_Theories_v15.6_FULL_CANDIDATE_2026-09-15.txt",
-      "source_file_sha256": "3cd9232ba6ed02838ff6f9b1080ebe258b1e923032e5a2e1a3f1ba97d95c13f9",
+      "source_file_sha256": "723f3cefcf5f965a4024ec83d7e3739ad2c5f99daeaebc154afd687cc6e74492",
       "anchors": {
         "primary": "[RA-OCF]",
         "occurrence": 1,
@@ -10850,7 +10850,7 @@
       "id": "Theories:RA-MSC:1",
       "source_role": "Theories",
       "source_file": "Garden_Theories_v15.6_FULL_CANDIDATE_2026-09-15.txt",
-      "source_file_sha256": "3cd9232ba6ed02838ff6f9b1080ebe258b1e923032e5a2e1a3f1ba97d95c13f9",
+      "source_file_sha256": "723f3cefcf5f965a4024ec83d7e3739ad2c5f99daeaebc154afd687cc6e74492",
       "anchors": {
         "primary": "[RA-MSC]",
         "occurrence": 1,
@@ -10879,7 +10879,7 @@
       "id": "Theories:RA-TML:1",
       "source_role": "Theories",
       "source_file": "Garden_Theories_v15.6_FULL_CANDIDATE_2026-09-15.txt",
-      "source_file_sha256": "3cd9232ba6ed02838ff6f9b1080ebe258b1e923032e5a2e1a3f1ba97d95c13f9",
+      "source_file_sha256": "723f3cefcf5f965a4024ec83d7e3739ad2c5f99daeaebc154afd687cc6e74492",
       "anchors": {
         "primary": "[RA-TML]",
         "occurrence": 1,
@@ -10908,7 +10908,7 @@
       "id": "Theories:RA-V151-UPGRADES:1",
       "source_role": "Theories",
       "source_file": "Garden_Theories_v15.6_FULL_CANDIDATE_2026-09-15.txt",
-      "source_file_sha256": "3cd9232ba6ed02838ff6f9b1080ebe258b1e923032e5a2e1a3f1ba97d95c13f9",
+      "source_file_sha256": "723f3cefcf5f965a4024ec83d7e3739ad2c5f99daeaebc154afd687cc6e74492",
       "anchors": {
         "primary": "[RA-V151-UPGRADES]",
         "occurrence": 1,
@@ -10937,7 +10937,7 @@
       "id": "Theories:RA-CMUR:1",
       "source_role": "Theories",
       "source_file": "Garden_Theories_v15.6_FULL_CANDIDATE_2026-09-15.txt",
-      "source_file_sha256": "3cd9232ba6ed02838ff6f9b1080ebe258b1e923032e5a2e1a3f1ba97d95c13f9",
+      "source_file_sha256": "723f3cefcf5f965a4024ec83d7e3739ad2c5f99daeaebc154afd687cc6e74492",
       "anchors": {
         "primary": "[RA-CMUR]",
         "occurrence": 1,
@@ -10966,7 +10966,7 @@
       "id": "Theories:RA-CLIC:1",
       "source_role": "Theories",
       "source_file": "Garden_Theories_v15.6_FULL_CANDIDATE_2026-09-15.txt",
-      "source_file_sha256": "3cd9232ba6ed02838ff6f9b1080ebe258b1e923032e5a2e1a3f1ba97d95c13f9",
+      "source_file_sha256": "723f3cefcf5f965a4024ec83d7e3739ad2c5f99daeaebc154afd687cc6e74492",
       "anchors": {
         "primary": "[RA-CLIC]",
         "occurrence": 1,
@@ -10995,7 +10995,7 @@
       "id": "Theories:RA-GCL-V154:1",
       "source_role": "Theories",
       "source_file": "Garden_Theories_v15.6_FULL_CANDIDATE_2026-09-15.txt",
-      "source_file_sha256": "3cd9232ba6ed02838ff6f9b1080ebe258b1e923032e5a2e1a3f1ba97d95c13f9",
+      "source_file_sha256": "723f3cefcf5f965a4024ec83d7e3739ad2c5f99daeaebc154afd687cc6e74492",
       "anchors": {
         "primary": "[RA-GCL-V154]",
         "occurrence": 1,
@@ -11024,7 +11024,7 @@
       "id": "Theories:RA-ALG-FRM-V154:1",
       "source_role": "Theories",
       "source_file": "Garden_Theories_v15.6_FULL_CANDIDATE_2026-09-15.txt",
-      "source_file_sha256": "3cd9232ba6ed02838ff6f9b1080ebe258b1e923032e5a2e1a3f1ba97d95c13f9",
+      "source_file_sha256": "723f3cefcf5f965a4024ec83d7e3739ad2c5f99daeaebc154afd687cc6e74492",
       "anchors": {
         "primary": "[RA-ALG-FRM-V154]",
         "occurrence": 1,
@@ -11053,7 +11053,7 @@
       "id": "Theories:RA-V155:1",
       "source_role": "Theories",
       "source_file": "Garden_Theories_v15.6_FULL_CANDIDATE_2026-09-15.txt",
-      "source_file_sha256": "3cd9232ba6ed02838ff6f9b1080ebe258b1e923032e5a2e1a3f1ba97d95c13f9",
+      "source_file_sha256": "723f3cefcf5f965a4024ec83d7e3739ad2c5f99daeaebc154afd687cc6e74492",
       "anchors": {
         "primary": "[RA-V155]",
         "occurrence": 1,
@@ -11082,7 +11082,7 @@
       "id": "Theories:TH-V15-6:1",
       "source_role": "Theories",
       "source_file": "Garden_Theories_v15.6_FULL_CANDIDATE_2026-09-15.txt",
-      "source_file_sha256": "3cd9232ba6ed02838ff6f9b1080ebe258b1e923032e5a2e1a3f1ba97d95c13f9",
+      "source_file_sha256": "723f3cefcf5f965a4024ec83d7e3739ad2c5f99daeaebc154afd687cc6e74492",
       "anchors": {
         "primary": "[TH-V15-6]",
         "occurrence": 1,
@@ -11106,14 +11106,14 @@
         "[A-V15-6]"
       ],
       "reference_target_hashes": {
-        "[TH-V15-6]": "22eacb57eece1b8f8b15956750eda71642a86696023556181bf17512652c0439",
+        "[TH-V15-6]": "5480c7ae266fcae19f97e11afa7f05d6b7d74fbc82b86f4f6e97da2935608e51",
         "[T-V15-6]": "5cb0c59351e7e906fea0ffeddd914f181544e8a3a39db6173a8eb8ad75d9aad2",
-        "[A-V15-6]": "cfdf07f13b34bb8c3af8f3716325f3fe9b93ca00aaf5ab2278e4c534a924b4ab"
+        "[A-V15-6]": "8860460250c87d6f0980a804131db76e4fee598a25561edf5a306ba7143c5e63"
       },
       "unresolved_references": [],
       "normative_semantics": true,
       "tier": "TIER_A",
-      "content_sha256": "032307bcf87af32bfbb11e6f6b6642679a83f7109b4a1d7a410de46a1f6a1a54"
+      "content_sha256": "6cf94f020fd37cdbef8e35ec5f6f3746c7c8eca163f9c9a1f856fb0ae52051c2"
     }
   ],
   "coverage_scope": "Contiguous section-boundary segmentation only; not semantic closure or qualified review",

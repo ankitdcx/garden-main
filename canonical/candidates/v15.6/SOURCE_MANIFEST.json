@@ -22,16 +22,16 @@
     },
     "Annexure": {
       "name": "Garden_Annexure_v15.6_FULL_CANDIDATE_2026-09-15.txt",
-      "bytes": 1258074,
-      "sha256": "dfb0caa4d880df80091409dc58c2e80689e91fae83e21422374ccb6f6c02a516"
+      "bytes": 1258080,
+      "sha256": "e100ad35f6fb7829836810f0a735ee69d5cc330e19798dde6052c1ea47831b2e"
     },
     "Theories": {
       "name": "Garden_Theories_v15.6_FULL_CANDIDATE_2026-09-15.txt",
-      "bytes": 179578,
-      "sha256": "3cd9232ba6ed02838ff6f9b1080ebe258b1e923032e5a2e1a3f1ba97d95c13f9"
+      "bytes": 179584,
+      "sha256": "723f3cefcf5f965a4024ec83d7e3739ad2c5f99daeaebc154afd687cc6e74492"
     }
   },
   "source_root_algorithm": "sha256(canonical-json(sorted role/name/bytes/sha256 rows))",
-  "source_root_sha256": "e3ed83a6607a42d22b5bf3f3ceda425c0a2c807180ac6a69918216807077911b",
+  "source_root_sha256": "d4f054f21247948426abbe4c842ac65f4daa83f521f73bc3ac57e2d5860bdf6b",
   "predecessor_source_root_sha256": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598"
 }

@@ -1,0 +1,141 @@
+{
+  "schema": "GardenEvolutionReasoningBundle/v1",
+  "bundle_id": "GARDEN-2026-09-15-V157-CANDIDATE-PUBLICATION-PROPOSE-001-REASONING",
+  "action_id": "GARDEN-2026-09-15-V157-CANDIDATE-PUBLICATION-PROPOSE-001",
+  "design_epoch": "v15.5",
+  "canonical_source_root_sha256": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+  "source_obligation_refs": [
+    "canonical/candidates/v15.7/SOURCE_MANIFEST.json",
+    "canonical/candidates/CURRENT_CANDIDATE.json",
+    "reviews/v15.7/RELEASE-STATUS.md",
+    "reviews/v15.7/ROLE-REFERENCE-EDIT-RECEIPT.json",
+    "governance/PROCESS_CURRENT.json"
+  ],
+  "compare": {
+    "schema": "GardenEvolutionCompareReceipt/v1",
+    "action_id": "GARDEN-2026-09-15-V157-CANDIDATE-PUBLICATION-PROPOSE-001",
+    "design_epoch": "v15.5",
+    "canonical_source_root_sha256": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+    "predecessor_ref": "git:ankitdcx/garden-main@5a5fb60d54f9bb9310ea734657394c1c2de2f4fd",
+    "alternatives": [
+      {
+        "alternative_id": "DO_NOTHING",
+        "description": "Leave candidate programs scattered and current role wording unchanged.",
+        "projected_effect": "User-requested publication and wording cleanup remain incomplete.",
+        "risk": "Readers cannot find the latest complete draft."
+      },
+      {
+        "alternative_id": "PUBLISH_BOUNDED_CANDIDATE",
+        "description": "Publish cumulative five-file v15.7 candidate, current draft routing and neutral role wording; preserve canonical v15.5.",
+        "projected_effect": "Reviewable draft and accurate manifests are available from repository main after checks.",
+        "risk": "Edited archival packets no longer retain original hashes and must be marked redacted; candidate must not be confused with admitted canon."
+      }
+    ],
+    "bidirectional_gaps": [
+      {
+        "from": "DO_NOTHING",
+        "to": "PUBLISH_BOUNDED_CANDIDATE",
+        "gap": "No complete latest draft routing or requested role cleanup."
+      },
+      {
+        "from": "PUBLISH_BOUNDED_CANDIDATE",
+        "to": "DO_NOTHING",
+        "gap": "Adds draft layers and maintenance; earlier review bindings cannot transfer to edited bytes."
+      }
+    ]
+  },
+  "reason": {
+    "schema": "GardenEvolutionReasonReceipt/v1",
+    "action_id": "GARDEN-2026-09-15-V157-CANDIDATE-PUBLICATION-PROPOSE-001",
+    "design_epoch": "v15.5",
+    "canonical_source_root_sha256": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+    "strategy": "BOUNDED_CANDIDATE_PUBLICATION",
+    "tier": "V1_4_EXECUTION_FIRST_HIGH_DEPENDENCY",
+    "assumptions": [
+      "User authorized direct v15.7 preparation, repository update and removal of personal creation-role wording.",
+      "Current process remains v1.4 and canonical source remains v15.5.",
+      "Draft publication does not establish semantic admission or experimental success."
+    ],
+    "uncertainty": "Full semantic closure, independent-family qualification and new runtime experiments remain incomplete.",
+    "counterexamples": [
+      "Blanket version substitution would falsify historical evidence.",
+      "An edited archived packet with its old embedded hash must not be accepted as original evidence.",
+      "A draft manifest mismatch must fail validation."
+    ],
+    "dependency_refs": [
+      "canonical/candidates/v15.7/SOURCE_MANIFEST.json",
+      "canonical/candidates/CURRENT_CANDIDATE.json",
+      "reviews/v15.7/RELEASE-STATUS.md",
+      "reviews/v15.7/ROLE-REFERENCE-EDIT-RECEIPT.json",
+      "governance/PROCESS_CURRENT.json"
+    ],
+    "conclusion": "Publish the bounded candidate with regenerated source identity, explicit remaining gates and neutral role terms; grant no new authority.",
+    "authorization_effect": "NONE"
+  },
+  "proof": {
+    "schema": "GardenEvolutionProofReceipt/v1",
+    "action_id": "GARDEN-2026-09-15-V157-CANDIDATE-PUBLICATION-PROPOSE-001",
+    "design_epoch": "v15.5",
+    "canonical_source_root_sha256": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+    "obligations": [
+      {
+        "obligation_id": "PO-V157-PUBLICATION-001",
+        "statement": "Candidate manifests match output bytes and preserve exact canonical predecessor bytes.",
+        "verifier_class": "DETERMINISTIC_BUILD_AND_HASH_CHECK",
+        "result": "UNKNOWN",
+        "evidence_refs": []
+      },
+      {
+        "obligation_id": "PO-V157-PUBLICATION-002",
+        "statement": "Publication does not promote canonical source or transfer historical review approval.",
+        "verifier_class": "REFERENCE_AND_BOUNDARY_REVIEW",
+        "result": "UNKNOWN",
+        "evidence_refs": []
+      }
+    ],
+    "overall_result": "UNKNOWN",
+    "authorization_effect": "NONE"
+  },
+  "evidence": {
+    "schema": "GardenEvolutionEvidenceReceipt/v1",
+    "action_id": "GARDEN-2026-09-15-V157-CANDIDATE-PUBLICATION-PROPOSE-001",
+    "design_epoch": "v15.5",
+    "canonical_source_root_sha256": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+    "items": [
+      {
+        "kind": "SOURCE_RECORD",
+        "ref": "canonical/candidates/v15.7/SOURCE_MANIFEST.json",
+        "claim_scope": "Exact candidate source, user-requested wording edit scope, or retained governing process; not proof or admission."
+      },
+      {
+        "kind": "SOURCE_RECORD",
+        "ref": "canonical/candidates/CURRENT_CANDIDATE.json",
+        "claim_scope": "Exact candidate source, user-requested wording edit scope, or retained governing process; not proof or admission."
+      },
+      {
+        "kind": "SOURCE_RECORD",
+        "ref": "reviews/v15.7/RELEASE-STATUS.md",
+        "claim_scope": "Exact candidate source, user-requested wording edit scope, or retained governing process; not proof or admission."
+      },
+      {
+        "kind": "SOURCE_RECORD",
+        "ref": "reviews/v15.7/ROLE-REFERENCE-EDIT-RECEIPT.json",
+        "claim_scope": "Exact candidate source, user-requested wording edit scope, or retained governing process; not proof or admission."
+      },
+      {
+        "kind": "SOURCE_RECORD",
+        "ref": "governance/PROCESS_CURRENT.json",
+        "claim_scope": "Exact candidate source, user-requested wording edit scope, or retained governing process; not proof or admission."
+      }
+    ],
+    "proof_effect": "NONE",
+    "authorization_effect": "NONE"
+  },
+  "separation_assertions": {
+    "compare_is_not_decision": true,
+    "reason_is_not_authorization": true,
+    "evidence_is_not_proof": true,
+    "proof_is_not_authorization": true,
+    "actiongate_owns_authorization": true
+  }
+}

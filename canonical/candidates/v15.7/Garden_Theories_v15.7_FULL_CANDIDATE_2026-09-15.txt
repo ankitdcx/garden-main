@@ -3462,7 +3462,7 @@ successor_propagation:
   3. Regenerate the complete five-file v15.6 successor candidate from the immutable v15.5 predecessor plus admitted deltas; do not patch only isolated text files.
   4. Update glossary/catalog/reference-closure artifacts if GAIA is indexed there.
 origin:
-  kind: HUMAN_ORIGINATOR_DECISION
+  kind: HUMAN_STEWARD_DECISION
   date: 2026-09-14
   decision: Use 'Garden Artificial Intelligence Architecture' rather than 'Garden Autonomous Intelligence Architecture'.
 review_requirements:
@@ -3770,8 +3770,8 @@ Working neutral namespace candidate: `garden-ai-commons-27`; final availability 
 
 Requirements:
 - Remove personal names, personal email addresses, personal GitHub handles, and personal owner-specific URLs from the current destination tree.
-- Replace identity-bearing founder references with anonymous governance roles (`Human Originator`, `Human Steward`, role IDs) without changing authority semantics.
-- Remove/replace identity-bearing founder notes and contact details.
+- Replace identity-bearing human steward references with anonymous governance roles (`Human Steward`, `Human Steward`, role IDs) without changing authority semantics.
+- Remove/replace identity-bearing human steward notes and contact details.
 - Convert hard-coded owner/repository strings in scripts, governance records, conformance vectors, reviews, manifests, and receipts to neutral logical repository IDs or neutral destination refs.
 - Preserve evidentiary meaning through a private `RepositoryIdentityMigrationReceipt` binding old and new content/commit roots cryptographically without publishing natural-person identity in the neutral destination.
 - Sanitize retained Git author/committer/tagger metadata before import; do not copy identity-bearing PR/issue discussion history into the neutral repositories.
@@ -3882,6 +3882,6 @@ Next work: produce the comparator-scope table and evidence-pinned rows. Reconcil
 
 
 ## Direct v15.7 release binding — 2026-09-15
-The user authorized carrying the prepared v15.6 draft directly into v15.7. The actual canonical predecessor remains Garden v15.5 at source root 63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598. The retained v15.6 working candidate is e3ed83a6607a42d22b5bf3f3ceda425c0a2c807180ac6a69918216807077911b. References to completing v15.6 mean qualifying the necessary inherited scope; no intermediate canonical promotion is required merely to construct v15.7. This binding corrects the earlier anticipated lineage, preserves requirement semantics and grants no execution or qualification authority.
+The user authorized carrying the prepared v15.6 draft directly into v15.7. The actual canonical predecessor remains Garden v15.5 at source root 63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598. The retained v15.6 working candidate is d4f054f21247948426abbe4c842ac65f4daa83f521f73bc3ac57e2d5860bdf6b. References to completing v15.6 mean qualifying the necessary inherited scope; no intermediate canonical promotion is required merely to construct v15.7. This binding corrects the earlier anticipated lineage, preserves requirement semantics and grants no execution or qualification authority.
 
 END V15.7 EXTENSION

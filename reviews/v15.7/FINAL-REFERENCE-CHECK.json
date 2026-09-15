@@ -1,0 +1,14 @@
+{
+  "status": "PASS_SCOPED",
+  "scope": "All tracked current-tree UTF-8 content and filenames, including draft and archived copies. Git history not rewritten.",
+  "role_reference_hits": [],
+  "latest_candidate": "v15.7",
+  "latest_manifest": "canonical/candidates/v15.7/SOURCE_MANIFEST.json",
+  "candidate_roots": {
+    "v15.6": "d4f054f21247948426abbe4c842ac65f4daa83f521f73bc3ac57e2d5860bdf6b",
+    "v15.7": "eb4d5306a8f7dcca75f8cf7d60f6441bdf5b35bccb86ac2362b33f241af1591a"
+  },
+  "historical_and_canonical_bindings": "Retained v15.5; current canonical migration awaits admission.",
+  "historical_reviews": "Earlier model reviews and receipts are retained only for original source identities.",
+  "manifest_file_hashes": "PASS"
+}

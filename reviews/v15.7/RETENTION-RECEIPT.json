@@ -26,15 +26,15 @@
     {
       "role": "Annexure",
       "retained_offset": 562,
-      "retained_bytes": 1258074,
-      "draft_sha256": "dfb0caa4d880df80091409dc58c2e80689e91fae83e21422374ccb6f6c02a516",
+      "retained_bytes": 1258080,
+      "draft_sha256": "e100ad35f6fb7829836810f0a735ee69d5cc330e19798dde6052c1ea47831b2e",
       "exact": true
     },
     {
       "role": "Theories",
       "retained_offset": 562,
-      "retained_bytes": 179578,
-      "draft_sha256": "3cd9232ba6ed02838ff6f9b1080ebe258b1e923032e5a2e1a3f1ba97d95c13f9",
+      "retained_bytes": 179584,
+      "draft_sha256": "723f3cefcf5f965a4024ec83d7e3739ad2c5f99daeaebc154afd687cc6e74492",
       "exact": true
     }
   ]
