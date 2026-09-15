@@ -1,0 +1,146 @@
+{
+  "schema": "GardenEvolutionReasoningBundle/v1",
+  "bundle_id": "GARDEN-2026-09-15-PROJECT-AUDIT-RECOVERY-REASONING-001",
+  "action_id": "GARDEN-2026-09-15-PROJECT-AUDIT-RECOVERY-PROPOSE-001",
+  "design_epoch": "v15.5",
+  "canonical_source_root_sha256": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+  "source_obligation_refs": [
+    "governance/PROCESS_CURRENT.json",
+    "governance/PROCESS_EXECUTION_SCHEDULE_v1.json",
+    "governance/PROCESS_ENGINE_IMPLEMENTATION_v1.json",
+    "implementation/garden_kernel/process_engine.py"
+  ],
+  "compare": {
+    "schema": "GardenEvolutionCompareReceipt/v1",
+    "action_id": "GARDEN-2026-09-15-PROJECT-AUDIT-RECOVERY-PROPOSE-001",
+    "design_epoch": "v15.5",
+    "canonical_source_root_sha256": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+    "predecessor_ref": "git:ankitdcx/garden-main@f7b223bad67c4d45286bc4c1f6bb9eb3fe809da0",
+    "alternatives": [
+      {
+        "alternative_id": "DO_NOTHING",
+        "description": "Keep missing receipt restoration and permissive CycleBinding validation.",
+        "projected_effect": "Coordinator cannot mechanically reconstruct its governed state through the engine.",
+        "risk": "Receipt tampering, gaps, cross-cycle mixing or malformed repository bindings may go undetected by recovery."
+      },
+      {
+        "alternative_id": "REPLAY_EXISTING_ENGINE",
+        "description": "Recreate a process against externally observed bindings and regenerate each recorded transition without changing route/state/gate definitions.",
+        "projected_effect": "Existing engine validates route, order, bindings, gate coverage and algebra results; no partial instance is returned on error.",
+        "risk": "Gate labels still require external evidence validation; conformant records alone are not authenticity or authorization."
+      }
+    ],
+    "bidirectional_gaps": [
+      {
+        "from": "DO_NOTHING",
+        "to": "REPLAY_EXISTING_ENGINE",
+        "gap": "Missing machine restoration violates the admitted receipt-recovery execution contract."
+      },
+      {
+        "from": "REPLAY_EXISTING_ENGINE",
+        "to": "DO_NOTHING",
+        "gap": "Adds a validator and rejects previously tolerated malformed/test aliases; full SHA fixtures and regression tests are required."
+      }
+    ]
+  },
+  "reason": {
+    "schema": "GardenEvolutionReasonReceipt/v1",
+    "action_id": "GARDEN-2026-09-15-PROJECT-AUDIT-RECOVERY-PROPOSE-001",
+    "design_epoch": "v15.5",
+    "canonical_source_root_sha256": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+    "strategy": "DETERMINISTIC_RECEIPT_REPLAY_AND_NEGATIVE_TESTS",
+    "tier": "IMPLEMENTATION_CONFORMANCE",
+    "assumptions": [
+      "Process 1.4 remains governing.",
+      "Caller supplies externally observed binding; replay cannot authenticate its own input.",
+      "Existing route/state/gate definitions remain unchanged.",
+      "No full chat coverage or canonical certification is inferred."
+    ],
+    "uncertainty": "Independent end-to-end Coordinator wiring, durable storage and gate evidence authenticity remain open in swarm issue #148.",
+    "counterexamples": [
+      "Deleted, duplicated or reordered transition fails.",
+      "Cross-cycle/work/repo/route tampering fails.",
+      "Malformed or silently dropped repository head fails.",
+      "Changed observed binding fails.",
+      "Conformant replay cannot prove external gate truth."
+    ],
+    "dependency_refs": [
+      "governance/PROCESS_CURRENT.json",
+      "governance/PROCESS_EXECUTION_SCHEDULE_v1.json",
+      "governance/PROCESS_ENGINE_IMPLEMENTATION_v1.json",
+      "implementation/garden_kernel/process_engine.py"
+    ],
+    "conclusion": "Implement bounded recovery and strict binding validation; preserve backlog and coverage limits; retain independent closure and protected-action gates.",
+    "authorization_effect": "NONE"
+  },
+  "proof": {
+    "schema": "GardenEvolutionProofReceipt/v1",
+    "action_id": "GARDEN-2026-09-15-PROJECT-AUDIT-RECOVERY-PROPOSE-001",
+    "design_epoch": "v15.5",
+    "canonical_source_root_sha256": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+    "obligations": [
+      {
+        "obligation_id": "PO-RECOVERY-001",
+        "statement": "Replay reconstructs every valid prefix and emits the same next transition.",
+        "verifier_class": "EXECUTABLE_CONTRACT_TEST",
+        "result": "UNKNOWN",
+        "evidence_refs": [
+          "implementation/tests/test_process_restore.py"
+        ]
+      },
+      {
+        "obligation_id": "PO-RECOVERY-002",
+        "statement": "Malformed, missing, reordered, duplicate, stale or tampered receipts fail closed.",
+        "verifier_class": "EXECUTABLE_CONTRACT_TEST",
+        "result": "UNKNOWN",
+        "evidence_refs": [
+          "implementation/tests/test_process_restore.py"
+        ]
+      },
+      {
+        "obligation_id": "PO-RECOVERY-003",
+        "statement": "No route gates or external authority are added by replay.",
+        "verifier_class": "CONFORMANCE_AUDIT",
+        "result": "UNKNOWN",
+        "evidence_refs": [
+          "implementation/garden_kernel/process_engine.py",
+          "https://github.com/ankitdcx/garden-main/pull/58"
+        ]
+      }
+    ],
+    "overall_result": "UNKNOWN",
+    "authorization_effect": "NONE"
+  },
+  "evidence": {
+    "schema": "GardenEvolutionEvidenceReceipt/v1",
+    "action_id": "GARDEN-2026-09-15-PROJECT-AUDIT-RECOVERY-PROPOSE-001",
+    "design_epoch": "v15.5",
+    "canonical_source_root_sha256": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+    "items": [
+      {
+        "kind": "GOVERNING_PROCESS",
+        "ref": "governance/PROCESS_EXECUTION_SCHEDULE_v1.json",
+        "claim_scope": "Existing requirement to reconstruct state from immutable binding and contiguous receipts."
+      },
+      {
+        "kind": "EXECUTABLE_TEST",
+        "ref": "implementation/tests/test_process_restore.py",
+        "claim_scope": "Bounded roundtrip and negative input cases, not full runtime certification."
+      },
+      {
+        "kind": "CI",
+        "ref": "https://github.com/ankitdcx/garden-main/actions/runs/34929367811",
+        "claim_scope": "168 reference tests passed; conformance then correctly blocked because proposal transport evidence was missing. This record supplies that missing declaration without weakening the gate."
+      }
+    ],
+    "proof_effect": "NONE",
+    "authorization_effect": "NONE"
+  },
+  "separation_assertions": {
+    "compare_is_not_decision": true,
+    "reason_is_not_authorization": true,
+    "evidence_is_not_proof": true,
+    "proof_is_not_authorization": true,
+    "actiongate_owns_authorization": true
+  }
+}

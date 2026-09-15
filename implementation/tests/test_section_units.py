@@ -78,7 +78,7 @@ class SectionUnitInventoryTests(unittest.TestCase):
                 process_version="1.4",
                 design_epoch="v15.5",
                 source_root_sha256=inventory.source_root_sha256,
-                repo_heads={"garden-main": "TEST_HEAD"},
+                repo_heads={"garden-main": "a" * 40},
             )
             process = ProcessFactory.create(ProcessRoute.SECTION_UNIT_REVIEW, binding=binding, work_id=unit.unit_id)
             receipt = process.advance(

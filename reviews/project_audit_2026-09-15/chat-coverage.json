@@ -1,0 +1,251 @@
+{
+  "schema": "GardenChatArchiveAuditCoverage/v1",
+  "archive_sha256": "d69f69f318ee2c15c6df98042439a94982f469ad42b7be90c888b0fd3cd5a1f6",
+  "archive_conversation_count": 127,
+  "project_tagged_conversations": 26,
+  "active_text_messages_extracted": 1383,
+  "all_current_project_chats_reviewed": false,
+  "limitations": [
+    "Archive ends September 11; September 12-15 full transcripts unavailable in this pass.",
+    "Project tagging is export metadata; older untagged Garden chats excluded from the tagged project count.",
+    "Only active conversation branches extracted; alternate branches and attachments not exhaustively read.",
+    "All 26 tagged chats traversed chronologically; request excerpts and outcomes, not every long patch body, inspected.",
+    "Earlier repo audit claims 373 multi-provider conversations; that distinct corpus not re-verified in full."
+  ],
+  "conversations": [
+    {
+      "order": 1,
+      "conversation_id": "6a87f90e-ceb0-83e8-9f5d-677b039691f1",
+      "title": "Create Visual Design Document ok",
+      "created_at": "2026-08-21T07:08:56.921574+00:00",
+      "active_text_messages": 164,
+      "extracted_text_sha256": "0c074791a99504a67bef696610eb9a4d5814354107bcc300ce775252d3271801",
+      "review_scope": "Chronological request excerpts and outcome inspection; long pasted patch bodies are not exhaustively re-audited."
+    },
+    {
+      "order": 2,
+      "conversation_id": "6a886473-6c3c-83ee-aa34-3c4eaed46b34",
+      "title": "Canonical Design Revisions ok",
+      "created_at": "2026-08-21T14:45:13.635269+00:00",
+      "active_text_messages": 50,
+      "extracted_text_sha256": "9e591a6a3ed9ebcc719758357f1fb46782d26688109ea32b89d7f2241e7185b4",
+      "review_scope": "Chronological request excerpts and outcome inspection; long pasted patch bodies are not exhaustively re-audited."
+    },
+    {
+      "order": 3,
+      "conversation_id": "6a89085f-cd9c-83e8-8fab-121df5691faa",
+      "title": "New evidence supports an audit ok",
+      "created_at": "2026-08-22T02:24:38.210962+00:00",
+      "active_text_messages": 135,
+      "extracted_text_sha256": "6baca9800ae602db161922edfe4a96888c0af532dc91b778023e17a42ad2c329",
+      "review_scope": "Chronological request excerpts and outcome inspection; long pasted patch bodies are not exhaustively re-audited."
+    },
+    {
+      "order": 4,
+      "conversation_id": "6a89577a-af14-83e9-b6eb-1308124b2187",
+      "title": "Personalized Pro Lite Ideas ok",
+      "created_at": "2026-08-22T08:02:03.804451+00:00",
+      "active_text_messages": 59,
+      "extracted_text_sha256": "8239adcb82de82436937b5b919b27143884bbefb375f7a6028b3812922aa4af4",
+      "review_scope": "Chronological request excerpts and outcome inspection; long pasted patch bodies are not exhaustively re-audited."
+    },
+    {
+      "order": 5,
+      "conversation_id": "6a89b151-6374-83e8-bb3d-6026924572be",
+      "title": "Use Base Version ok",
+      "created_at": "2026-08-22T14:25:23.016485+00:00",
+      "active_text_messages": 121,
+      "extracted_text_sha256": "ff53fd2c92a5df9fe6da6fe22354a05cab68e93f6ad5328b76e47648d75b2aa4",
+      "review_scope": "Chronological request excerpts and outcome inspection; long pasted patch bodies are not exhaustively re-audited."
+    },
+    {
+      "order": 6,
+      "conversation_id": "6a8a5db1-b19c-83e8-8913-598d2d0c5886",
+      "title": "Garden Baseline Setup ok",
+      "created_at": "2026-08-23T02:40:51.321307+00:00",
+      "active_text_messages": 43,
+      "extracted_text_sha256": "b9ad776abfaa31005e266ef9236aa2c489e82360d8cfc70ef5b7acbb41181b31",
+      "review_scope": "Chronological request excerpts and outcome inspection; long pasted patch bodies are not exhaustively re-audited."
+    },
+    {
+      "order": 7,
+      "conversation_id": "6a8c4563-9268-83e8-bcde-c5ca5cb3dde0",
+      "title": "Chat ok",
+      "created_at": "2026-08-24T13:21:41.369057+00:00",
+      "active_text_messages": 73,
+      "extracted_text_sha256": "14e2f4fca8e64b5c115071c39626177a88e0d4b9f7fc1b4be1cad73655378305",
+      "review_scope": "Chronological request excerpts and outcome inspection; long pasted patch bodies are not exhaustively re-audited."
+    },
+    {
+      "order": 8,
+      "conversation_id": "6a8c4cd7-819c-83ee-9365-daf2a1420933",
+      "title": "Recover Ratified Changes ok",
+      "created_at": "2026-08-24T13:53:43.289802+00:00",
+      "active_text_messages": 27,
+      "extracted_text_sha256": "3fb268469df3ca2d4a97f3e2906190fd7be95ee70fcae7492eadbf1dc18eef8a",
+      "review_scope": "Chronological request excerpts and outcome inspection; long pasted patch bodies are not exhaustively re-audited."
+    },
+    {
+      "order": 9,
+      "conversation_id": "6a8cf7f1-88e0-83e8-8e3b-8345c95c2673",
+      "title": "Architectural Gap Review ok",
+      "created_at": "2026-08-25T02:03:48.951281+00:00",
+      "active_text_messages": 26,
+      "extracted_text_sha256": "cd3da77de1df949e530d9033499cd6068196279517ac3b306d66600976be148f",
+      "review_scope": "Chronological request excerpts and outcome inspection; long pasted patch bodies are not exhaustively re-audited."
+    },
+    {
+      "order": 10,
+      "conversation_id": "6a8cfb55-e654-83e8-a7a0-ff0003f5c1d6",
+      "title": "Create Garden v145 Suite ok",
+      "created_at": "2026-08-25T02:18:04.409915+00:00",
+      "active_text_messages": 19,
+      "extracted_text_sha256": "439bef1ad65d12a3f9b8aae90aa5b0b1a1c45a6d6d529e31a19972a28a848269",
+      "review_scope": "Chronological request excerpts and outcome inspection; long pasted patch bodies are not exhaustively re-audited."
+    },
+    {
+      "order": 11,
+      "conversation_id": "6a8d1aca-fc28-83ee-b2b9-151140f36ccd",
+      "title": "Patch implementation summary ok",
+      "created_at": "2026-08-25T04:32:20.410995+00:00",
+      "active_text_messages": 13,
+      "extracted_text_sha256": "fdae53dd53b6bfd9be40336e26d2ed48c7aab98eb5c5a665c53f2de7edea2c2b",
+      "review_scope": "Chronological request excerpts and outcome inspection; long pasted patch bodies are not exhaustively re-audited."
+    },
+    {
+      "order": 12,
+      "conversation_id": "6a8d2253-e270-83ee-a358-e1eabe236a1b",
+      "title": "Compare Roadmap Baseline ok",
+      "created_at": "2026-08-25T05:04:32.083006+00:00",
+      "active_text_messages": 28,
+      "extracted_text_sha256": "1f4996f760fddcfbe09b4a97d9694e53ce7c706e851c61d55ad8b58a51b9129c",
+      "review_scope": "Chronological request excerpts and outcome inspection; long pasted patch bodies are not exhaustively re-audited."
+    },
+    {
+      "order": 13,
+      "conversation_id": "6a8d868b-6790-83ee-97ee-e9ee288f4b7b",
+      "title": "Audit AGI Patch ok",
+      "created_at": "2026-08-25T12:12:04.643049+00:00",
+      "active_text_messages": 23,
+      "extracted_text_sha256": "0ef16a49b0f42687c1e1dda8d37ce3f25c35ddff21f4806d824390c6702d38b6",
+      "review_scope": "Chronological request excerpts and outcome inspection; long pasted patch bodies are not exhaustively re-audited."
+    },
+    {
+      "order": 14,
+      "conversation_id": "6a8e3f43-79f4-83e9-8d9a-d802f8d1ff21",
+      "title": "Baseline Upgrade Tracking ok",
+      "created_at": "2026-08-26T01:20:21.209877+00:00",
+      "active_text_messages": 49,
+      "extracted_text_sha256": "f56ee5150391f4eff411b24a4583e9c4ab059c0935018ecd0f3d49a42f76c2dc",
+      "review_scope": "Chronological request excerpts and outcome inspection; long pasted patch bodies are not exhaustively re-audited."
+    },
+    {
+      "order": 15,
+      "conversation_id": "6a8e5d2d-a528-83ee-95c7-e41b8077a94b",
+      "title": "TFT theory critique ok",
+      "created_at": "2026-08-26T03:27:45.403745+00:00",
+      "active_text_messages": 63,
+      "extracted_text_sha256": "2c0cf1bdcdd7cbf22fb2f27f2e11d8db19a38c4547aa3cdf6cddfd2804081328",
+      "review_scope": "Chronological request excerpts and outcome inspection; long pasted patch bodies are not exhaustively re-audited."
+    },
+    {
+      "order": 16,
+      "conversation_id": "6a8e63fa-2418-83e8-a232-92d415b1b63c",
+      "title": "Upgrade VSM theory ok",
+      "created_at": "2026-08-26T03:57:09.269553+00:00",
+      "active_text_messages": 7,
+      "extracted_text_sha256": "927fd297ea45530ff98729a17f9d36448b259e5d51a1a7ef7296bf8afb33fedf",
+      "review_scope": "Chronological request excerpts and outcome inspection; long pasted patch bodies are not exhaustively re-audited."
+    },
+    {
+      "order": 17,
+      "conversation_id": "6a8e9aa5-3624-83ee-971e-dcce642a368f",
+      "title": "Map justice system future pending",
+      "created_at": "2026-08-26T07:50:14.472875+00:00",
+      "active_text_messages": 10,
+      "extracted_text_sha256": "b0870a24262ffb3e1bbb61dd9d68e0913c9e28b331492d64c933f9b58d1cf800",
+      "review_scope": "Chronological request excerpts and outcome inspection; long pasted patch bodies are not exhaustively re-audited."
+    },
+    {
+      "order": 18,
+      "conversation_id": "6a8e9c77-ffb8-83e8-a5b4-9358bff5a6b8",
+      "title": "Rewrite propagation patch safely v15 pending.",
+      "created_at": "2026-08-26T07:57:46.644630+00:00",
+      "active_text_messages": 20,
+      "extracted_text_sha256": "cce0687338e4b272d60b8c4e4034cabcd96257c177343cbb5d1801f1496e2ee3",
+      "review_scope": "Chronological request excerpts and outcome inspection; long pasted patch bodies are not exhaustively re-audited."
+    },
+    {
+      "order": 19,
+      "conversation_id": "6a8ee5ef-9834-83e9-b9e1-0b905e234c51",
+      "title": "Upgrade RPM and PPM ok",
+      "created_at": "2026-08-26T13:11:47.425307+00:00",
+      "active_text_messages": 29,
+      "extracted_text_sha256": "dcc7a0098eaad7b6c6c56f7d742e0bd71a8f7daabce856c4f0d3dfbd58c5205b",
+      "review_scope": "Chronological request excerpts and outcome inspection; long pasted patch bodies are not exhaustively re-audited."
+    },
+    {
+      "order": 20,
+      "conversation_id": "6a8ef7ce-e7f4-83e8-91bb-c9306fdaa481",
+      "title": "Confirm garden version",
+      "created_at": "2026-08-26T14:27:28.955039+00:00",
+      "active_text_messages": 39,
+      "extracted_text_sha256": "3aed066120ab44492bee9e43a26420ea4fcfe043f1c10293f3ab79d8f434b1ce",
+      "review_scope": "Chronological request excerpts and outcome inspection; long pasted patch bodies are not exhaustively re-audited."
+    },
+    {
+      "order": 21,
+      "conversation_id": "6a8fa9e0-a620-83ee-8462-c60800553dc7",
+      "title": "AGI Future Outlook pending, future",
+      "created_at": "2026-08-27T03:07:18.653652+00:00",
+      "active_text_messages": 29,
+      "extracted_text_sha256": "d527edb3b4a9a52f65a9838cf419cd24d5365bb7caae03eceb43cd2bcaa1ba27",
+      "review_scope": "Chronological request excerpts and outcome inspection; long pasted patch bodies are not exhaustively re-audited."
+    },
+    {
+      "order": 22,
+      "conversation_id": "6a8fd163-ce58-83ee-9cee-e187a07cb394",
+      "title": "LLM Commit Verification",
+      "created_at": "2026-08-27T05:56:31.795005+00:00",
+      "active_text_messages": 57,
+      "extracted_text_sha256": "2121b3d3f4299b628a86354b10c0e9f3e5e76c4cb412c5f1e5bc2a6a10fb683b",
+      "review_scope": "Chronological request excerpts and outcome inspection; long pasted patch bodies are not exhaustively re-audited."
+    },
+    {
+      "order": 23,
+      "conversation_id": "6a96fa5c-60a4-83ee-b92c-188d1ffff865",
+      "title": "Garden Contribution Economy",
+      "created_at": "2026-09-01T16:17:09.035609+00:00",
+      "active_text_messages": 31,
+      "extracted_text_sha256": "b6c62560767587f0e2ddce175623fe5b0cf110ef79f4562fae6acb8689081067",
+      "review_scope": "Chronological request excerpts and outcome inspection; long pasted patch bodies are not exhaustively re-audited."
+    },
+    {
+      "order": 24,
+      "conversation_id": "6a9b9274-ddcc-83ee-9739-3be4e7aa239d",
+      "title": "Astra model comparison",
+      "created_at": "2026-09-05T03:54:54.839192+00:00",
+      "active_text_messages": 203,
+      "extracted_text_sha256": "c61d8c0fdf1b979a457bb6fca229c8ef232ea17a3c197b8727846babe69f4bca",
+      "review_scope": "Chronological request excerpts and outcome inspection; long pasted patch bodies are not exhaustively re-audited."
+    },
+    {
+      "order": 25,
+      "conversation_id": "6aa24d56-2ec0-83e8-9b0a-b9e752d37a38",
+      "title": "Exploring AI Meta Dimensions",
+      "created_at": "2026-09-10T06:25:42.507486+00:00",
+      "active_text_messages": 61,
+      "extracted_text_sha256": "d102f3df1c167d7de66ee250b7ffcafa8ca69f17f9ad22b4f5d08dff66e2b945",
+      "review_scope": "Chronological request excerpts and outcome inspection; long pasted patch bodies are not exhaustively re-audited."
+    },
+    {
+      "order": 26,
+      "conversation_id": "6aa26b67-e1b8-83e8-a66f-328c0a97bfb2",
+      "title": "Evaluate Garden Patch",
+      "created_at": "2026-09-10T08:33:58.282277+00:00",
+      "active_text_messages": 4,
+      "extracted_text_sha256": "aa6a5e4423c6f180d96e5460e3c0c49f98468cbce727bb402f87d7a34a11cd4a",
+      "review_scope": "Chronological request excerpts and outcome inspection; long pasted patch bodies are not exhaustively re-audited."
+    }
+  ]
+}

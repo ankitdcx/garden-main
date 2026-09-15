@@ -1,0 +1,43 @@
+{
+  "schema": "GardenEvolutionProductionAction/v1",
+  "design_epoch": "v15.5",
+  "dependencies": {
+    "canonical_source_root": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598"
+  },
+  "action": {
+    "action_id": "GARDEN-2026-09-15-PROJECT-AUDIT-RECOVERY-PROPOSE-001",
+    "verb": "PROPOSE",
+    "actor_ref": "agent:garden-integrator-build",
+    "subject_ref": "repo:ankitdcx/garden-main",
+    "input_refs": [
+      "governance/PROCESS_CURRENT.json",
+      "governance/PROCESS_EXECUTION_SCHEDULE_v1.json",
+      "governance/PROCESS_ENGINE_IMPLEMENTATION_v1.json",
+      "implementation/garden_kernel/process_engine.py",
+      "implementation/tests/test_process_restore.py",
+      "reviews/PROJECT_AUDIT_2026-09-15.md",
+      "reviews/evolution/reasoning/2026-09-15-project-audit-recovery.json",
+      "reviews/evolution/algebra/2026-09-15-project-audit-recovery.json",
+      "reviews/evolution/assurance/2026-09-15-project-audit-recovery.json"
+    ],
+    "provenance_refs": [
+      "https://github.com/ankitdcx/garden-main/pull/58",
+      "https://github.com/ankitdcx/garden-swarm/pull/171",
+      "reviews/project_audit_2026-09-15/repair-processes.json"
+    ],
+    "satisfied_preconditions": [
+      "ACTOR_IDENTIFIED",
+      "SUBJECT_IDENTIFIED",
+      "PROVENANCE_PRESENT",
+      "INPUT_REFS_TYPED"
+    ],
+    "claimed_postconditions": [
+      "CANDIDATE_RECORDED",
+      "NO_AUTHORITY_EXPANSION",
+      "CANONICAL_POINTER_UNCHANGED"
+    ]
+  },
+  "authority_ref": "AUTH-GARDEN-HOURLY-REVIEWER-v15.5",
+  "bound_inputs": [],
+  "boundary": "PROPOSE records the bounded repair under the existing subject-bound proposal envelope. It is not merge authorization, independent review, canonical admission, or a new ProcessVersion."
+}

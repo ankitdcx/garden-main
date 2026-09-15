@@ -3,6 +3,7 @@ from __future__ import annotations
 from abc import ABC
 from dataclasses import dataclass
 from enum import Enum
+import re
 from types import MappingProxyType
 from typing import Any, Mapping, Sequence
 
@@ -51,9 +52,19 @@ class CycleBinding:
 
     def __post_init__(self) -> None:
         for label in ("cycle_id", "process_version", "design_epoch", "source_root_sha256"):
-            if not str(getattr(self, label)).strip():
+            value = getattr(self, label)
+            if not isinstance(value, str) or not value.strip():
                 raise SemanticError(f"CycleBinding.{label} is required")
-        heads = {str(k).strip(): str(v).strip() for k, v in dict(self.repo_heads).items() if str(k).strip() and str(v).strip()}
+        if re.fullmatch(r"[0-9a-f]{64}", self.source_root_sha256) is None:
+            raise SemanticError("CycleBinding.source_root_sha256 must be a SHA-256 digest")
+        if not isinstance(self.repo_heads, Mapping):
+            raise SemanticError("CycleBinding.repo_heads must be a mapping")
+        heads = dict(self.repo_heads)
+        for name, head in heads.items():
+            if not isinstance(name, str) or not name.strip() or name != name.strip():
+                raise SemanticError("CycleBinding repository names must be nonempty canonical strings")
+            if not isinstance(head, str) or re.fullmatch(r"[0-9a-f]{40}", head) is None:
+                raise SemanticError("CycleBinding repository heads must be full commit SHAs")
         if not heads:
             raise SemanticError("CycleBinding.repo_heads must contain at least one repository")
         object.__setattr__(self, "repo_heads", MappingProxyType(heads))
@@ -317,6 +328,39 @@ PROCESS_IMPLEMENTATIONS: Mapping[ProcessRoute, type[GardenProcess]] = {
 
 
 class ProcessFactory:
+    @staticmethod
+    def restore(route_receipt: Mapping[str, Any], transition_receipts: Sequence[Mapping[str, Any]], *, binding: CycleBinding, work_id: str, algebra_profile: Mapping[str, Any], expected_process_version: str = CURRENT_GOVERNING_PROCESS_VERSION) -> GardenProcess:
+        """Replay a complete receipt prefix against an externally observed binding.
+
+        Recompute route, transitions, gate coverage and algebra validation. This
+        checks record conformance, not truth/authenticity of external gate evidence.
+        No partially replayed process is returned if any record fails validation.
+        """
+        if not isinstance(route_receipt, Mapping):
+            raise SemanticError("process restoration requires a route receipt")
+        process = ProcessFactory.create(route_receipt.get("route"), binding=binding, work_id=work_id, expected_process_version=expected_process_version)
+        if dict(route_receipt) != process.route_receipt():
+            raise SemanticError("route receipt differs from observed binding or current route definition")
+        if not isinstance(transition_receipts, (list, tuple)):
+            raise SemanticError("transition receipts must be an ordered complete prefix")
+        for index, receipt in enumerate(transition_receipts):
+            try:
+                if not isinstance(receipt, Mapping):
+                    raise TypeError("receipt must be a mapping")
+                target = ProcessState(receipt["to_state"])
+                refs = receipt["algebra_usage"]["source_obligation_refs"]
+                gates = receipt["satisfied_gates"]
+                if not isinstance(refs, list) or not isinstance(gates, list):
+                    raise TypeError("gates and source references must be lists")
+                if any(not isinstance(item, str) for item in refs + gates):
+                    raise TypeError("gates and source references must be strings")
+                regenerated = process.advance(target, satisfied_gates=gates, algebra_profile=algebra_profile, source_obligation_refs=refs)
+                if dict(receipt) != regenerated:
+                    raise SemanticError("receipt binding, order, gate coverage or algebra result mismatch")
+            except (KeyError, TypeError, ValueError, SemanticError) as exc:
+                raise SemanticError(f"invalid process transition receipt at index {index}: {exc}") from exc
+        return process
+
     @staticmethod
     def create(route: ProcessRoute | str, *, binding: CycleBinding, work_id: str, expected_process_version: str = CURRENT_GOVERNING_PROCESS_VERSION) -> GardenProcess:
         try:
