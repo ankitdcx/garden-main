@@ -19,7 +19,7 @@ The available ChatGPT export has 127 conversations, 26 explicitly tagged to this
 
 ## Repairs prepared in this audit
 
-Status at preparation: **implemented and locally tested; merge and post-merge verification still required**. Follow-up verification records/PR state determine final status.
+Public scheduler/cost repair: **merged and re-tested on resulting main** in [swarm PR #171](https://github.com/ankitdcx/garden-swarm/pull/171), merge `ee96e5f3d6ea752961a8ffed967c8573feca69de`. All three PR checks passed; 16 affected tests and canonical hash verification passed in a fresh checkout of that merge. Private recovery repair: [main PR #58](https://github.com/ankitdcx/garden-main/pull/58), pending final CI/merge at this record's creation. Its first CI run passed all 168 reference tests, then correctly blocked missing proposal transport/conformance declarations; these were added without weakening the gate. Neither repair claims independent end-to-end pipeline certification.
 
 | Stable work ID | Verified defect | Repair | Evidence |
 | --- | --- | --- | --- |
