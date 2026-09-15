@@ -1,0 +1,30 @@
+{
+  "schema": "GardenEvolutionProductionAction/v1",
+  "design_epoch": "v15.5",
+  "dependencies": {"canonical_source_root": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598"},
+  "action": {
+    "action_id": "GARDEN-2026-09-15-AUTOMATION-ENGINE-BINDING-PROPOSE-001",
+    "verb": "PROPOSE",
+    "actor_ref": "agent:garden-integrator-build",
+    "subject_ref": "repo:ankitdcx/garden-main",
+    "input_refs": [
+      "governance/AUTOMATION_ENGINE_BINDING_v1.json",
+      "governance/PROCESS_EXECUTION_SCHEDULE_v1.json",
+      "governance/PROCESS_ENGINE_IMPLEMENTATION_v1.json",
+      "implementation/tests/test_automation_engine_binding.py",
+      "reviews/evolution/reasoning/2026-09-15-automation-engine-binding-propose.json",
+      "reviews/evolution/algebra/2026-09-15-automation-engine-binding-propose.json",
+      "reviews/evolution/assurance/2026-09-15-automation-engine-binding-propose.json"
+    ],
+    "provenance_refs": [
+      "human:automation-engine-binding-request:2026-09-15",
+      "git:ankitdcx/garden-main@9ce9e1179aa41d6ab26be0ee7079668c6719cc75",
+      "governance/PROCESS_CURRENT.json"
+    ],
+    "satisfied_preconditions": ["ACTOR_IDENTIFIED", "SUBJECT_IDENTIFIED", "PROVENANCE_PRESENT", "INPUT_REFS_TYPED"],
+    "claimed_postconditions": ["CANDIDATE_RECORDED", "NO_AUTHORITY_EXPANSION", "CANONICAL_POINTER_UNCHANGED"]
+  },
+  "authority_ref": "AUTH-GARDEN-HOURLY-REVIEWER-v15.5",
+  "bound_inputs": [],
+  "boundary": "This transport records implementation/conformance changes only. It grants no protected authority, changes no Garden v15.5 canonical source semantics, and does not promote v15.6."
+}

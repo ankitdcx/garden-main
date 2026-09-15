@@ -1,26 +1,29 @@
 {
   "schema": "GardenProcessExecutionSchedule/v1",
   "process_version": "GardenCanonicalUpdateProcess@1.4",
+  "engine_id": "GardenProcessEngine@1",
+  "engine_profile": "governance/PROCESS_ENGINE_IMPLEMENTATION_v1.json",
+  "automation_binding_manifest": "governance/AUTOMATION_ENGINE_BINDING_v1.json",
   "timezone": "Asia/Kolkata",
   "hourly_cycle": [
-    {"minute":0,"lane":"Garden Post-Merge Verifier","role":"independent integrated-state verification"},
-    {"minute":5,"lane":"Garden Canonical Design Sweep","role":"SectionUnit coverage and successor-design review"},
-    {"minute":15,"lane":"Garden Research Scout","role":"public discovery/evidence only"},
-    {"minute":18,"lane":"Garden ReviewPacket Builder","role":"route + coherent-complete packet construction"},
-    {"minute":30,"lane":"Garden ChatGPT Reviewer","role":"blind primary review lane"},
-    {"minute":40,"lane":"Garden Hourly Cross-Exam","role":"same-cycle evidence cross-examination"},
-    {"minute":45,"lane":"Garden Hourly Branch Hygiene","role":"repo/PR hygiene and bounded repair"},
-    {"minute":50,"lane":"Garden Hourly Builder","role":"state-gated implementation/integration; execution-first contract work"},
-    {"minute":55,"lane":"Garden Pipeline Health","role":"independent pipeline-health and enforcement-coverage audit"}
+    {"minute":0,"lane":"Garden Post-Merge Verifier","mode":"ENGINE_INDEPENDENT_VERIFIER","role":"independent integrated-state verification"},
+    {"minute":5,"lane":"Garden Canonical Design Sweep","mode":"ENGINE_SECTION_REVIEW_WORKER","role":"SectionUnit coverage and successor-design review"},
+    {"minute":15,"lane":"Garden Research Scout","mode":"PRE_PROCESS_DISCOVERY","role":"public discovery/evidence only; no GardenProcess state mutation"},
+    {"minute":18,"lane":"Garden ReviewPacket Builder","mode":"ENGINE_ROUTE_PACKET_WORKER","role":"ProcessFactory routing + coherent-complete packet construction"},
+    {"minute":30,"lane":"Garden ChatGPT Reviewer","mode":"ENGINE_BLIND_REVIEW_WORKER","role":"blind primary review; cannot alone advance BLIND_REVIEW_COMPLETE"},
+    {"minute":40,"lane":"Garden Hourly Cross-Exam","mode":"ENGINE_CROSS_EXAM_WORKER","role":"same-cycle evidence cross-examination"},
+    {"minute":45,"lane":"Garden Hourly Branch Hygiene","mode":"ENGINE_REPAIR_WORKER","role":"repo/PR hygiene and bounded engine-routed repair"},
+    {"minute":50,"lane":"Garden Hourly Builder","mode":"ENGINE_IMPLEMENTATION_WORKER","role":"engine-state-gated implementation/integration"},
+    {"minute":55,"lane":"Garden Pipeline Health","mode":"ENGINE_INDEPENDENT_AUDITOR","role":"engine/receipt/pipeline health and enforcement-coverage audit"}
   ],
   "daily": [
-    {"time":"11:55","lane":"Garden Daily Repo Review","role":"deep audit/repair across both repos"},
-    {"time":"22:00","lane":"Garden Protocol Simplifier","role":"negative-growth simplification review"},
-    {"time":"23:00","lane":"Garden Daily Candidate","role":"successor materialization/admission status"}
+    {"time":"11:55","lane":"Garden Daily Repo Review","mode":"ENGINE_AUDIT_REPAIR_WORKER","role":"deep audit/repair across both repos"},
+    {"time":"22:00","lane":"Garden Protocol Simplifier","mode":"ENGINE_PROTECTED_CHANGE_PROPOSAL_WORKER","role":"negative-growth audit; protected process changes proposal-only"},
+    {"time":"23:00","lane":"Garden Daily Candidate","mode":"ENGINE_SUCCESSOR_COMPOSITION_WORKER","role":"engine-validated successor composition/admission status"}
   ],
   "periodic": [
-    {"cadence":"quarterly","lane":"Garden Pipeline Simplification","role":"90-day removal/merge audit"},
-    {"cadence":"weekly Friday morning","lane":"AI Architecture Brief","role":"external architecture/safety research shortlist"}
+    {"cadence":"quarterly","lane":"Garden Pipeline Simplification","mode":"ENGINE_PROTECTED_CHANGE_PROPOSAL_WORKER","role":"90-day removal/merge audit"},
+    {"cadence":"weekly Friday morning","lane":"AI Architecture Brief","mode":"EXTERNAL_RESEARCH_DELIVERY","role":"external architecture/safety research shortlist; not a Garden process lane"}
   ],
   "builder_implementation_priority": [
     "ProcessRouteTable/v1",
@@ -29,6 +32,8 @@
     "RuleEnforcementCoverageReceipt/v1",
     "PipelineHealthReceipt/v1"
   ],
-  "state_gating": "Clock times are watchdog/start opportunities only; CycleID, ProcessVersion, DesignEpoch, packet and prior-stage receipts determine authority to proceed.",
+  "state_gating": "Clock times are watchdog/start opportunities only. GardenProcess/ProcessFactory, immutable CycleBinding and contiguous GardenProcessTransitionReceipt/v1 evidence determine allowed route/state progress.",
+  "lane_rule": "Lane prompts define worker responsibilities only. They do not redefine routes, state graphs, required gates or promotion authority. PRE_PROCESS_DISCOVERY and EXTERNAL_RESEARCH_DELIVERY modes do not create or advance GardenProcess state.",
+  "algebra_rule": "Every governed GardenProcess transition must validate through REG-ALGEBRA-001; algebra conformance cannot mint authority or prove complete semantic compliance.",
   "duplicate_lane_rule": "Mechanically derived lane registry and overlap assessment govern activation; only one authoritative cross-exam disposition lane is active per CycleID/stage."
 }

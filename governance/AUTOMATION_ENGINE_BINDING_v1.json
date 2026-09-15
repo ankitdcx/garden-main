@@ -1,0 +1,31 @@
+{
+  "schema": "GardenAutomationEngineBinding/v1",
+  "engine_id": "GardenProcessEngine@1",
+  "governing_process": "GardenCanonicalUpdateProcess@1.4",
+  "engine_profile": "governance/PROCESS_ENGINE_IMPLEMENTATION_v1.json",
+  "engine_implementation": "implementation/garden_kernel/process_engine.py",
+  "transition_receipt": "GardenProcessTransitionReceipt/v1",
+  "algebra_registry_ref": "REG-ALGEBRA-001",
+  "rule": "Active Garden automations are workers around GardenProcess and may not redefine authoritative routes, states, required gates, or promotion authority in lane-local prompts.",
+  "bindings": [
+    {"automation_id":"6aa89f8d02688191927ec07da2cb9a99","lane":"Garden Post-Merge Verifier","mode":"ENGINE_INDEPENDENT_VERIFIER"},
+    {"automation_id":"6aa8a069d1d88191927f77a1ac724ea6","lane":"Garden Canonical Design Sweep","mode":"ENGINE_SECTION_REVIEW_WORKER","route":"SECTION_UNIT_REVIEW"},
+    {"automation_id":"6aa89f6c40a8819183afc1853b319f05","lane":"Garden Research Scout","mode":"PRE_PROCESS_DISCOVERY","engine_state_mutation":false},
+    {"automation_id":"6aa8a6d1ab7881918d82e44613a46fd6","lane":"Garden ReviewPacket Builder","mode":"ENGINE_ROUTE_PACKET_WORKER"},
+    {"automation_id":"6aa69eb215788191a67b100206958866","lane":"Garden ChatGPT Reviewer","mode":"ENGINE_BLIND_REVIEW_WORKER"},
+    {"automation_id":"6aa89d938ae08191aa10d0f7d1c760bd","lane":"Garden Hourly Cross-Exam","mode":"ENGINE_CROSS_EXAM_WORKER"},
+    {"automation_id":"6aa7a049de8881918969f916789d51e6","lane":"Garden Hourly Branch Hygiene","mode":"ENGINE_REPAIR_WORKER"},
+    {"automation_id":"6aa89d7c7ccc81918cce4b519a403ae5","lane":"Garden Hourly Builder","mode":"ENGINE_IMPLEMENTATION_WORKER"},
+    {"automation_id":"6aa8a79303b88191ba498dd919efb861","lane":"Garden Pipeline Health","mode":"ENGINE_INDEPENDENT_AUDITOR"},
+    {"automation_id":"6aa68f41559c8191860a5fd429db0246","lane":"Garden Daily Repo Review","mode":"ENGINE_AUDIT_REPAIR_WORKER"},
+    {"automation_id":"6aa8a5fb3db88191b62c284b23ca54d6","lane":"Garden Protocol Simplifier","mode":"ENGINE_PROTECTED_CHANGE_PROPOSAL_WORKER"},
+    {"automation_id":"6aa68e09473c8191ae77494704e6f808","lane":"Garden Daily Candidate","mode":"ENGINE_SUCCESSOR_COMPOSITION_WORKER"},
+    {"automation_id":"6aa8a7a5e4248191b9244a048e5b3f74","lane":"Garden Pipeline Simplification","mode":"ENGINE_PROTECTED_CHANGE_PROPOSAL_WORKER"}
+  ],
+  "non_garden_scheduled_tasks": [
+    {"automation_id":"6a81e57a93e881919c57c1df91465cc9","lane":"AI Architecture Brief","reason":"External research-delivery task; not a Garden route/state lane and therefore does not create or advance GardenProcess instances."}
+  ],
+  "disabled_historical_automations": "Remain disabled and carry no current route/state authority.",
+  "fail_closed": ["MISSING_ENGINE_BINDING","LOCAL_ROUTE_OVERRIDE","ILLEGAL_PROCESS_TRANSITION","MISSING_ENGINE_RECEIPT","STALE_CYCLE_BINDING","ALGEBRA_TRANSITION_INVALID","AUTHORITY_CLAIM_FROM_ALGEBRA"],
+  "authority_boundary": "Automation prompts may constrain their worker role but cannot mint protected authority, alter ProcessVersion semantics, admit delegation envelopes, or promote canon."
+}

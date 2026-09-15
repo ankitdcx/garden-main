@@ -6,6 +6,8 @@
   "implementation": "implementation/garden_kernel/process_engine.py",
   "algebra_profile": "gsl/EVOLUTION_ALGEBRA_PROFILE.json",
   "algebra_registry_ref": "REG-ALGEBRA-001",
+  "automation_binding_manifest": "governance/AUTOMATION_ENGINE_BINDING_v1.json",
+  "execution_schedule": "governance/PROCESS_EXECUTION_SCHEDULE_v1.json",
   "architecture": {
     "root_abstract_contract": "GardenProcess",
     "construction": "ProcessFactory",
@@ -18,20 +20,20 @@
       "MAJOR_DELEGABLE": "MajorDelegableProcess",
       "MAJOR_PROTECTED": "MajorProtectedProcess"
     },
-    "shared_policy_components": [
-      "binding",
-      "packet",
-      "section",
-      "light",
-      "semantic",
-      "minor",
-      "major",
-      "protected_authority"
-    ],
+    "shared_policy_components": ["binding","packet","section","light","semantic","minor","major","protected_authority"],
     "protected_route_rule": "MAJOR_PROTECTED and MAJOR_DELEGABLE are sibling implementations. Protected authority is an explicit composed gate policy and is not inherited from delegable behavior."
   },
+  "automation_execution_contract": {
+    "route_state_owner": "GardenProcessEngine@1",
+    "worker_prompt_scope": "Lane prompts may define role-specific work only and must not redefine route/state/gate semantics.",
+    "pre_process_exception": ["PRE_PROCESS_DISCOVERY"],
+    "non_process_exception": ["EXTERNAL_RESEARCH_DELIVERY"],
+    "blind_review_rule": "Individual blind-review workers persist reviewer evidence but cannot alone advance BLIND_REVIEW_COMPLETE.",
+    "audit_rule": "Independent audit lanes may inspect engine state/receipts but cannot certify their own health or mint authority.",
+    "fail_closed_codes": ["MISSING_ENGINE_BINDING","LOCAL_ROUTE_OVERRIDE","ILLEGAL_PROCESS_TRANSITION","MISSING_ENGINE_RECEIPT","STALE_CYCLE_BINDING","ALGEBRA_TRANSITION_INVALID","AUTHORITY_CLAIM_FROM_ALGEBRA"]
+  },
   "process_algebra_binding": {
-    "transition_operators": ["SEQUENCE", "BRANCH", "PARALLEL", "COMPOSE", "TERMINATE"],
+    "transition_operators": ["SEQUENCE","BRANCH","PARALLEL","COMPOSE","TERMINATE"],
     "operator_source": "REG-ALGEBRA-001.Process",
     "required_non_law_acknowledgement": "PARALLEL_EFFECT_COMMUTATIVITY_NOT_UNIVERSAL",
     "runtime_validation": "garden_kernel.evolution_algebra.validate_algebra_usage",
@@ -43,11 +45,11 @@
     "authorization_boundary": "Algebra validation never grants authority, admits a semantic delta, or promotes canon."
   },
   "cycle_binding": {
-    "immutable_fields": ["CycleID", "ProcessVersion", "DesignEpoch", "source_root_sha256", "repo_heads"],
+    "immutable_fields": ["CycleID","ProcessVersion","DesignEpoch","source_root_sha256","repo_heads"],
     "current_required_process_version": "1.4"
   },
   "testing": {
-    "tests": "implementation/tests/test_process_engine.py",
+    "tests": ["implementation/tests/test_process_engine.py","implementation/tests/test_automation_engine_binding.py"],
     "required_properties": [
       "all six routes resolve to concrete process implementations",
       "LIGHT cannot enter semantic-admission states",
@@ -55,7 +57,9 @@
       "no undeclared law is claimed",
       "MAJOR protected/delegable implementations are siblings",
       "protected promotion requires external HUMAN protected decision evidence",
-      "MAJOR promotion readiness requires verified simplification and enforcement coverage"
+      "MAJOR promotion readiness requires verified simplification and enforcement coverage",
+      "every scheduled Garden lane has exactly one automation-engine binding",
+      "pre-process discovery and external research tasks do not fabricate GardenProcess state"
     ]
   },
   "semantic_effect": "IMPLEMENTATION_CONFORMANCE_ONLY_NO_NEW_CANONICAL_GARDEN_SEMANTICS",

@@ -1,0 +1,21 @@
+{
+  "schema": "GardenEvolutionAlgebraUsageReceipt/v1",
+  "action_id": "GARDEN-2026-09-15-AUTOMATION-ENGINE-BINDING-PROPOSE-001",
+  "design_epoch": "v15.5",
+  "canonical_source_root_sha256": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+  "source_obligation_refs": [
+    "governance/AUTOMATION_ENGINE_BINDING_v1.json",
+    "governance/PROCESS_EXECUTION_SCHEDULE_v1.json",
+    "governance/PROCESS_ENGINE_IMPLEMENTATION_v1.json",
+    "canonical/current/Garden_System_v15.5_FULL_2026-09-12.txt:REG-ALGEBRA-001"
+  ],
+  "entries": [
+    {"algebra":"Process","status":"APPLIED","operators":["SEQUENCE","COMPOSE","DO_NOTHING"],"law_claims":[],"non_law_acknowledgements":["PARALLEL_EFFECT_COMMUTATIVITY_NOT_UNIVERSAL"],"applicability_reason":"The automation migration compares DO_NOTHING, composes lane bindings with one engine profile, and sequences schedule/manifest/test validation."},
+    {"algebra":"Policy","status":"FRONTIER","operators":[],"law_claims":[],"non_law_acknowledgements":[],"applicability_reason":"Worker-role policy is constrained by the admitted process, but this repository binding does not execute a new Policy Algebra operator.","frontier_reason":"No executable Policy Algebra operator is newly bound by this implementation-conformance change."},
+    {"algebra":"Decision","status":"FRONTIER","operators":[],"law_claims":[],"non_law_acknowledgements":[],"applicability_reason":"CI and process-engine outcomes are typed results, but no Level-3 Decision Algebra operator is claimed.","frontier_reason":"Executable Decision Algebra signatures remain outside this bounded change."},
+    {"algebra":"Conformance","status":"APPLIED","operators":["BIND_EVIDENCE","COVERAGE","GAP","DIFF"],"law_claims":[],"non_law_acknowledgements":["CONFORMANCE_IS_NOT_BINARY_ONLY","AUDIT_IS_NOT_A_SEPARATE_ALGEBRA"],"applicability_reason":"The binding manifest/test explicitly measures automation coverage, schedule differences, and missing-engine gaps while keeping audit within Conformance."},
+    {"algebra":"Evidence","status":"FRONTIER","operators":[],"law_claims":[],"non_law_acknowledgements":[],"applicability_reason":"Evidence is recorded in manifests/tests/CI, but no Level-3 Evidence Algebra composition operator is executed here.","frontier_reason":"Executable Evidence Algebra composition remains unbound for this change."},
+    {"algebra":"Bridge","status":"NOT_APPLICABLE","operators":[],"law_claims":[],"non_law_acknowledgements":[],"applicability_reason":"This change binds schedules, automation identifiers and process-engine roles using typed JSON/Python without a semantic representation bridge."}
+  ],
+  "semantic_compliance_proved": false
+}
