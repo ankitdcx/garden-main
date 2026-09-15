@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Fail if a candidate canonical successor differs from the admitted expected diff."""
+"""Check declared diff identity only; this checker cannot establish delta admission."""
 from __future__ import annotations
 import argparse, difflib, hashlib, json
 from pathlib import Path
@@ -19,10 +19,10 @@ def main()->int:
         old_path=Path(entry["predecessor"]); new_path=Path(entry["candidate"])
         if not old_path.is_file() or not new_path.is_file(): failures.append({"file":entry,"reason":"missing predecessor or candidate file"}); continue
         diff=normalized_diff(old_path,new_path); actual=digest_text(diff); expected=entry.get("expected_diff_sha256"); delta_ids=entry.get("delta_ids") or []; changed=bool(diff)
-        if changed and not delta_ids: failures.append({"candidate":str(new_path),"reason":"changed file has no admitted delta_ids"})
+        if changed and not delta_ids: failures.append({"candidate":str(new_path),"reason":"changed file has no declared delta_ids"})
         if actual!=expected: failures.append({"candidate":str(new_path),"reason":"observed diff hash does not match admitted expected diff","expected_diff_sha256":expected,"observed_diff_sha256":actual})
         observed.append({"predecessor":str(old_path),"candidate":str(new_path),"delta_ids":delta_ids,"changed":changed,"observed_diff_sha256":actual})
         if outdir: (outdir/f"{new_path.name}.diff").write_text(diff,encoding="utf-8")
-    receipt={"schema":"GardenSuccessorDriftReceipt/v1","predecessor_release":manifest.get("predecessor_release"),"candidate_release":manifest.get("candidate_release"),"observed":observed,"status":"PASS" if not failures else "FAIL","failures":failures,"rule":"candidate == predecessor + exactly the admitted expected per-file diffs"}
+    receipt={"schema":"GardenSuccessorDriftReceipt/v1","predecessor_release":manifest.get("predecessor_release"),"candidate_release":manifest.get("candidate_release"),"observed":observed,"status":"DIFF_MATCH_ONLY" if not failures else "FAIL","failures":failures,"rule":"candidate == predecessor + exactly the declared expected per-file diffs; admission is not checked","claimed_admission_status":manifest.get("admission_status","UNSPECIFIED"),"admitted_diff_verified":False,"canonical_promotion_authorized":False}
     print(json.dumps(receipt,indent=2,ensure_ascii=False)); return 0 if not failures else 1
 if __name__=="__main__": raise SystemExit(main())

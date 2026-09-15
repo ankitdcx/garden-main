@@ -1,0 +1,106 @@
+{
+  "schema": "GardenDesignReviewFollowup/v1",
+  "review_id": "V15.6-SOL-FOLLOWUP-2026-09-15",
+  "reviewer": {
+    "declared_model": "gpt-5.6-sol",
+    "family": "OpenAI",
+    "independence_limit": "This remains an OpenAI-family review and supplies no independent-family quorum."
+  },
+  "basis": {
+    "prior_blind_review": "reviews/v15.6/sol-blind-review.json",
+    "blind_review_was_saved_before_cross_examination": true,
+    "cross_examined_review": {
+      "path": "reviews/v15.6/terra-blind-review.json",
+      "sha256": "88bd712b51169080f1c72477b3d2c8ef3cca14c8df84e1d2e97c3b7662f3eb0e",
+      "model": "gpt-5.6-terra",
+      "family": "OpenAI",
+      "version_limit": "Terra reviewed the pre-repair engineering files, so its substantive observations are useful but its hashes and owner assessment do not validate the repaired bytes."
+    }
+  },
+  "reviewed_artifacts": [
+    {"path": "design_deltas/v15.6/ENGINEERING-HARDENING-SPECIFICATION.txt", "sha256": "5c31e7ac9f9393efbefdb752f75de96a86d979e5220c7e9f61c6c2cc3f3300dd"},
+    {"path": "design_deltas/v15.6/DELTASET-2026-09-15-ENGINEERING-HARDENING.json", "sha256": "f1eb379094f357b93c8e26a167e8851284b5cc49d82cdd5bb7e196757e60d8c4"},
+    {"path": "scripts/build_v15_6_candidate.py", "sha256": "12e44c56e263249165a734846c940c9693719311bc43183ac78c06d4f9dc9bef"},
+    {"path": "scripts/check_successor_drift.py", "sha256": "3349faf94b4c10d8525837e60c2fca11f567dfef609f9119a6b759c7deeeb34d"},
+    {"path": "implementation/garden_kernel/section_units.py", "sha256": "0c945da34194fe6f8523fb5515574f319402554a8b4f61a4469a170c8617d460"},
+    {"path": "implementation/tests/test_successor_diff_scope.py", "sha256": "ad4f01071e6fb07b8561e989faf7ec8c3d0343421b041c8f853f9c503c40b3f3"},
+    {"path": "canonical/candidates/v15.6/SOURCE_MANIFEST.json", "sha256": "fd44df30a16bce3cbdb59dc934fc1addaf8f465154014cc3b8a1002c82ed6775", "candidate_source_root_sha256": "e3ed83a6607a42d22b5bf3f3ceda425c0a2c807180ac6a69918216807077911b"},
+    {"path": "reviews/v15.6/REFERENCE-CLOSURE-RECEIPT.json", "sha256": "bcf77c90b707dd683e368f9bebd7c3b8c43bb6bd0fc860a3d2e22cd7779ffa8f"},
+    {"path": "reviews/v15.6/SECTION-INVENTORY.json", "sha256": "de8607c1c3bf48de9ef5ba02636642acfffc75f58bf8b01cbcbf8c6a7507720f"},
+    {"path": "reviews/v15.6/DIFF-IDENTITY-RECEIPT.json", "sha256": "8288cd426641fb82b70445326c841ab21be35c98c99c144b7ce25ed844af3304"}
+  ],
+  "verification": {
+    "owner_bindings_checked": 20,
+    "owner_heading_line_hash_mismatches": 0,
+    "unique_candidate_technical_anchors": 20,
+    "machine_contract_bindings_unresolved": 20,
+    "successor_diff_scope_regression_test": "PASS",
+    "reference_closure_status": "INCONCLUSIVE",
+    "reference_scan_newly_unresolved": 0,
+    "reference_scan_inherited_unresolved": 55,
+    "qualified_review_units": 0
+  },
+  "prior_findings": [
+    {
+      "id": "SOL-V156-001",
+      "status": "OPEN_BY_DESIGN",
+      "assessment": "The files remain truthful that executable TLA+, model checking, runtime tests, TUF/in-toto implementation, simulation and full STPA are pending. This is acceptable for a draft design and still blocks any completion, qualification or deployment claim."
+    },
+    {
+      "id": "SOL-V156-002",
+      "status": "FIXED_FOR_DRAFT_OPEN_FOR_EXECUTABLE_ADMISSION",
+      "assessment": "Each profile now identifies itself as a FunctionContract requirement profile, declares null contract ID/version and UNRESOLVED_REQUIRED_BEFORE_EXECUTABLE_ADMISSION, and lists authority/consent, result algebra, invalidators, resources/termination, dependencies and provenance obligations. It no longer masquerades as a machine-resolvable contract. All 20 bindings remain intentionally unresolved and therefore cannot support executable admission."
+    },
+    {
+      "id": "SOL-V156-003",
+      "status": "FIXED",
+      "assessment": "The repaired files separate one primary architecture owner from affected artifacts and dependencies. All 20 owner bindings resolve to exact predecessor path, heading, line, file hash and line hash; the recheck found zero mismatches."
+    },
+    {
+      "id": "SOL-V156-004",
+      "status": "FIXED_FOR_DRAFT",
+      "assessment": "EH-18 replaces the ambiguous [0,10] handoff-entry field with takeover_recoverable_region(D,e), requires uncertainty-interval containment, labels threshold arithmetic unvalidated, and enumerates sampling, sensor, delay, actuator, command-order and discretization proof obligations. Execution and qualification remain pending."
+    },
+    {
+      "id": "SOL-V156-005",
+      "status": "FIXED",
+      "assessment": "The diff checker now returns DIFF_MATCH_ONLY, states that admission is not checked, and always sets admitted_diff_verified and canonical_promotion_authorized false. Its regression test demonstrates that even a self-declared ADMITTED manifest cannot manufacture approval."
+    },
+    {
+      "id": "SOL-V156-006",
+      "status": "FIXED_FOR_LABELING_OPEN_FOR_PROMOTION",
+      "assessment": "The inventory now distinguishes contiguous section-boundary coverage from semantic closure through coverage_scope and section_boundary_coverage_complete. The separate closure receipt remains correctly INCONCLUSIVE with complete_semantic_reference_closure=false, 55 inherited unresolved anchors, zero new unresolved anchors and zero qualified units."
+    },
+    {
+      "id": "SOL-V156-007",
+      "status": "FIXED_FOR_DRAFT",
+      "assessment": "The engineering profiles now define T-EH-01 through T-EH-20, provide per-profile owner/anchor maps, and explicitly mark Annexure/User/System/Theories copies as nonnormative projections. Candidate generation distributes owner-grouped pending clauses by role. Full semantic closure and qualified review still remain release gates."
+    },
+    {
+      "id": "SOL-V156-008",
+      "status": "OPEN",
+      "assessment": "The change remains a large safety/authority/execution design package. Required protected/MAJOR release evidence and independent-family review are not supplied by these two OpenAI-family reviews."
+    }
+  ],
+  "cross_examination": {
+    "agreements_with_terra": [
+      "All 38 work items have substantive, uniquely numbered design coverage.",
+      "The documents preserve truthful design-versus-execution boundaries.",
+      "Revocation, uncertain completion and conjunctive supply-chain verification are materially well specified.",
+      "The tank arithmetic is internally consistent as a proposed bound and is not execution evidence."
+    ],
+    "qualification_of_terra": [
+      "Terra's NO_BLOCKING_DESIGN_COVERAGE_FINDING applies to the earlier engineering hashes and did not perform exhaustive owner compatibility analysis.",
+      "Both reviews are OpenAI-family reviews and cannot be counted as independent-family quorum.",
+      "The repaired owner and EH-18 language resolves concerns Terra did not flag, but only for draft-design clarity."
+    ]
+  },
+  "approval": {
+    "status": "APPROVE_REPAIRED_DRAFT_DESIGN_ONLY",
+    "canonical_promotion_approved": false,
+    "implementation_complete": false,
+    "executable_admission_ready": false,
+    "certification_established": false,
+    "rationale": "The concrete drafting, ownership-labeling, physical-boundary, diff-scope and inventory-labeling defects found in the blind review are repaired. Open machine bindings, unexecuted work, inconclusive semantic closure, zero qualified review units and missing independent-family release evidence continue to block any stronger conclusion."
+  }
+}

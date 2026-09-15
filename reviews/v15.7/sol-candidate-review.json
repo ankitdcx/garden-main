@@ -1,0 +1,155 @@
+{
+  "schema": "GardenCandidateDesignReview/v1",
+  "review_id": "V15.7-SOL-CANDIDATE-REVIEW-2026-09-15",
+  "reviewer": {
+    "declared_model": "gpt-5.6-sol",
+    "family": "OpenAI",
+    "independence_limit": "This is a bounded OpenAI-family draft review. It is not cross-family independence, does not supply three-family approval, and grants no admission or promotion authority."
+  },
+  "scope": "Bounded draft review of the direct v15.7 builder, five new candidate programs, the pending candidate index, and the materialized candidate source manifest. This review checks lineage, byte inclusion, claim boundaries and program independence; it is not runtime qualification, semantic closure, certification, admission or canonical promotion.",
+  "reviewed_artifacts": [
+    {
+      "path": "scripts/build_v15_7_candidate.py",
+      "sha256": "d1b5d5ad7bc9e7d7ade804e47ef56572ee2fb76fdd6ea4df92b359837077557f"
+    },
+    {
+      "path": "design_deltas/v15.7/TRACE-CANDIDATE.md",
+      "sha256": "9065930a2d470a2398a2603ddef38c48d3b6f4a560d8e99b6c2b6d5b75eaec74"
+    },
+    {
+      "path": "design_deltas/v15.7/COGNITIVE-INCREMENT-CANDIDATE.md",
+      "sha256": "97d10df0b90e0c91059ce962d23d3db76a34fa4c7f02fa6a03cf1a8d2c9ff5cb"
+    },
+    {
+      "path": "design_deltas/v15.7/COGNITIVE-CORE-CANDIDATE.md",
+      "sha256": "2d59b7b89f7f5ff13ef97d25e4c857ead4429b7c7738929111023c378b570eaa"
+    },
+    {
+      "path": "design_deltas/v15.7/COGNITIVE-COMPARE-CANDIDATE.md",
+      "sha256": "be02f9607aa8e3dc03ecdcc51770d5fadbe12bec900f97793f60e59daf51f47b"
+    },
+    {
+      "path": "design_deltas/v15.7/DESIGN-CLOSURE-CANDIDATE.md",
+      "sha256": "b292569808de81f67389b8a10302e8f76371789274bcb0a1eec2995f77aee35a"
+    },
+    {
+      "path": "design_deltas/v15.7/PENDING_CANDIDATE_INDEX.json",
+      "sha256": "ce0ef9b101bb0d5244e3f4a8e234794ff8ba17e785750863aa077a0b6291958a"
+    },
+    {
+      "path": "canonical/candidates/v15.7/SOURCE_MANIFEST.json",
+      "sha256": "d6f43b6a56c86ce3ff47fffd5cb3cd60e99dc7fa8d8acfee2afd99abecfb254e",
+      "declared_candidate_source_root_sha256": "6b9fd084dfabc4fc65d6ad5faa809fdd41272f73307afd6df394eba1465522c0"
+    }
+  ],
+  "verification": {
+    "canonical_predecessor_release": "Garden v15.5",
+    "canonical_predecessor_source_root_sha256": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+    "retained_v15_6_draft_source_root_sha256": "e3ed83a6607a42d22b5bf3f3ceda425c0a2c807180ac6a69918216807077911b",
+    "candidate_v15_7_source_root_sha256": "6b9fd084dfabc4fc65d6ad5faa809fdd41272f73307afd6df394eba1465522c0",
+    "manifest_file_hashes_and_byte_counts_recomputed": "PASS",
+    "manifest_source_root_recomputed": "PASS",
+    "retained_v15_6_files_found_exactly_once_as_contiguous_bytes": 5,
+    "retained_v15_6_file_hashes_match_manifest": "PASS",
+    "new_candidate_programs_incorporated_as_complete_exact_text": 5,
+    "candidate_program_inclusion_locations": {
+      "TRACE-CANDIDATE.md": "Technical",
+      "COGNITIVE-INCREMENT-CANDIDATE.md": "Technical",
+      "COGNITIVE-CORE-CANDIDATE.md": "Technical",
+      "COGNITIVE-COMPARE-CANDIDATE.md": "Theories",
+      "DESIGN-CLOSURE-CANDIDATE.md": "Annexure"
+    },
+    "v15_6_canonical_promotion_claimed": false,
+    "fresh_v15_7_runtime_or_capability_tests_claimed": false,
+    "programs_have_automatic_mutual_completion_prerequisites": false,
+    "qualification_or_superiority_claimed": false,
+    "reference_closure_status": "INCONCLUSIVE",
+    "newly_unresolved_explicit_anchor_references": 0,
+    "qualified_review_units": 0
+  },
+  "findings": [
+    {
+      "id": "SOL-V157-001",
+      "severity": "PASS",
+      "area": "direct lineage and source inclusion",
+      "finding": "The candidate correctly keeps Garden v15.5 as the canonical predecessor, identifies v15.6 only as a retained noncanonical draft, and produces the declared v15.7 root. All five v15.6 files are preserved byte-for-byte, and each of the five new candidate Markdown programs is incorporated once as complete exact text in its selected owner file.",
+      "evidence": [
+        "Recomputed v15.7 source root 6b9fd084dfabc4fc65d6ad5faa809fdd41272f73307afd6df394eba1465522c0",
+        "Five manifest byte counts and file hashes match",
+        "Five retained v15.6 blobs match their manifest hashes and occur once",
+        "Five candidate source blobs occur once in Technical, Theories or Annexure as declared"
+      ],
+      "required_resolution": "None for bounded draft materialization. Re-run these identity checks after any source change."
+    },
+    {
+      "id": "SOL-V157-002",
+      "severity": "PASS",
+      "area": "claims and independent programs",
+      "finding": "The new texts consistently distinguish registration and specification from implementation, qualification, comparative findings and admission. TRACE's 14 historical runtime/mock-adapter tests are explicitly historical and are not represented as fresh revision-3 or v15.7 qualification. TRACE, the focused cognitive increment, seven-function qualification, ten-comparator review and design closure remain separately progressable; shared records and combined claims create evidence dependencies only where applicable, rather than invented global prerequisites.",
+      "evidence": [
+        "TRACE-CANDIDATE.md sections Scope and lineage, Admission evidence, and Evidence state and next work",
+        "COGNITIVE-INCREMENT-CANDIDATE.md sections Evaluation ownership and Reconciliation and admission",
+        "COGNITIVE-CORE-CANDIDATE.md Purpose and relationship",
+        "COGNITIVE-COMPARE-CANDIDATE.md Purpose and independence",
+        "DESIGN-CLOSURE-CANDIDATE.md Relationship and independent progress"
+      ],
+      "required_resolution": "Preserve these boundaries in subsequent reconciliation, implementation and reporting."
+    },
+    {
+      "id": "SOL-V157-003",
+      "severity": "HIGH",
+      "area": "receipt provenance",
+      "finding": "The builder hard-codes repository_input 5a5fb60d54f9bb9310ea734657394c1c2de2f4fd into SOURCE-INTEGRATION-RECEIPT.json instead of deriving and binding the actual repository state. Running the reviewed builder at another commit or with uncommitted inputs would reproduce the stale value, so that field cannot substantiate the provenance of the generated candidate.",
+      "evidence": [
+        "scripts/build_v15_7_candidate.py literal repository_input",
+        "Reviewed working-tree HEAD was 02c3d3d5dee9685a987bd17145fbec9e33b69cf9 and the v15.7 inputs were untracked at review time"
+      ],
+      "required_resolution": "Derive the commit identity at build time and record dirty-state/input hashes, or rename the field to an explicitly historical registration base. Bind the receipt to the exact builder and all effective source inputs before using it as provenance."
+    },
+    {
+      "id": "SOL-V157-004",
+      "severity": "BLOCKER_FOR_PROMOTION",
+      "area": "qualification and semantic closure",
+      "finding": "Materialization proves identity and inclusion only. The bounded reference receipt is INCONCLUSIVE, semantic_closure_complete is false, and qualified_review_units is zero. The five programs deliberately leave source mappings, owner/contract bindings, DesignEpoch, implementation, protected evaluation, comparison rows and admission evidence for later work. The candidate therefore supports draft review but no qualification, completion, capability, superiority or canonical-promotion claim.",
+      "evidence": [
+        "reviews/v15.7/REFERENCE-CLOSURE-RECEIPT.json",
+        "Current evidence and next work sections in all five candidate programs",
+        "canonical/candidates/v15.7/SOURCE_MANIFEST.json status WORKING_FIVE_FILE_CANDIDATE_NOT_CANONICAL"
+      ],
+      "required_resolution": "Complete the separately specified reconciliation and evidence programs against the exact candidate DesignEpoch, resolve mandatory dependencies and semantic closure, and obtain the governed admission and independent-family evidence required for any promotion claim."
+    },
+    {
+      "id": "SOL-V157-005",
+      "severity": "REVIEW_LIMIT",
+      "area": "review independence",
+      "finding": "This Sol review is an OpenAI-family bounded draft assessment. It is not a three-family approval and cannot satisfy any cross-family release gate.",
+      "evidence": [
+        "Reviewer family declaration and bounded review scope"
+      ],
+      "required_resolution": "Obtain whatever independent-family reviews the governing promotion process requires; do not count this report more than once or as a separate family."
+    }
+  ],
+  "positive_observations": [
+    "The direct jump does not fabricate an intermediate canonical v15.6 release.",
+    "The candidate index keeps DesignEpoch null and calls canonical promotion a separate governed act.",
+    "The ten-comparator program constrains specification-only dispositions and prevents documentation review from becoming a measured-superiority claim.",
+    "The cognitive programs separate component evidence, combined evidence, regression, budget and protected evaluation ownership.",
+    "The design-closure program treats unresolved mappings as unresolved and NO_COMPARATOR_IN_BOUNDED_SET as a coverage limit rather than validation."
+  ],
+  "limitations": [
+    "No runtime, capability, regression, comparator or protected evaluation was executed for this review.",
+    "No exhaustive whole-source GSL or semantic-reference review was performed.",
+    "This review applies only to the exact artifact hashes listed above.",
+    "No independent model-family quorum or canonical approval is claimed."
+  ],
+  "approval": {
+    "status": "APPROVE_AS_BOUNDED_DRAFT_WITH_PROMOTION_BLOCKERS",
+    "draft_candidate_acceptable": true,
+    "canonical_promotion_approved": false,
+    "implementation_complete": false,
+    "qualification_established": false,
+    "comparative_superiority_established": false,
+    "three_family_approval_established": false,
+    "rationale": "The direct v15.7 package is internally consistent, complete at the byte-inclusion level and careful about claim boundaries. Its hard-coded repository provenance must be repaired before that receipt is relied upon, and the explicitly pending reconciliation, semantic closure, implementation, qualification and governed independent review remain promotion gates."
+  }
+}

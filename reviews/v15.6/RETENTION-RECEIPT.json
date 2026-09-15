@@ -1,0 +1,51 @@
+{
+  "status": "PASS",
+  "scope": "Byte retention only; no semantic admission",
+  "files": [
+    {
+      "role": "User",
+      "archive": "canonical/archive/v15.5/Garden_User_v15.5_FULL_2026-09-12.txt",
+      "candidate": "canonical/candidates/v15.6/Garden_User_v15.6_FULL_CANDIDATE_2026-09-15.txt",
+      "predecessor_sha256": "55aa9b58be6b0b6f0f02f845dc8b5d4ca692ddc50a8f50841374b599d1356435",
+      "retained_offset": 684,
+      "retained_bytes": 102337,
+      "exact_bytes_retained": true
+    },
+    {
+      "role": "System",
+      "archive": "canonical/archive/v15.5/Garden_System_v15.5_FULL_2026-09-12.txt",
+      "candidate": "canonical/candidates/v15.6/Garden_System_v15.6_FULL_CANDIDATE_2026-09-15.txt",
+      "predecessor_sha256": "6ead73f66c878caa6d1e419ad82afbc7f0f2a243e5de2cf1477e9c0ee4d93fe1",
+      "retained_offset": 686,
+      "retained_bytes": 210910,
+      "exact_bytes_retained": true
+    },
+    {
+      "role": "Technical",
+      "archive": "canonical/archive/v15.5/Garden_Technical_v15.5_FULL_2026-09-12.txt",
+      "candidate": "canonical/candidates/v15.6/Garden_Technical_v15.6_FULL_CANDIDATE_2026-09-15.txt",
+      "predecessor_sha256": "865f5ded862cb30d51ad213fa05cdc342983a31fb6a23bb9aad5b25a84d1cb9b",
+      "retained_offset": 689,
+      "retained_bytes": 735329,
+      "exact_bytes_retained": true
+    },
+    {
+      "role": "Annexure",
+      "archive": "canonical/archive/v15.5/Garden_Annexure_v15.5_FULL_2026-09-12.txt",
+      "candidate": "canonical/candidates/v15.6/Garden_Annexure_v15.6_FULL_CANDIDATE_2026-09-15.txt",
+      "predecessor_sha256": "56aa88e3c63e8ec8540175c0fad7d9d06ead021c49756cb281f4276a5c8bd084",
+      "retained_offset": 688,
+      "retained_bytes": 671401,
+      "exact_bytes_retained": true
+    },
+    {
+      "role": "Theories",
+      "archive": "canonical/archive/v15.5/Garden_Theories_v15.5_FULL_2026-09-12.txt",
+      "candidate": "canonical/candidates/v15.6/Garden_Theories_v15.6_FULL_CANDIDATE_2026-09-15.txt",
+      "predecessor_sha256": "26624ffa482e898ca30d7ef8eb147b17a07fa7a007fea3662169f23426207a93",
+      "retained_offset": 688,
+      "retained_bytes": 144938,
+      "exact_bytes_retained": true
+    }
+  ]
+}

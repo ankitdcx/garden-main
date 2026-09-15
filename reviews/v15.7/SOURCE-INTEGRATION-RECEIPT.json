@@ -1,0 +1,38 @@
+{
+  "status": "CANDIDATE_MATERIALIZED_NOT_ADMITTED",
+  "repository_registration_base": "5a5fb60d54f9bb9310ea734657394c1c2de2f4fd",
+  "registration_base_scope": "Historical GitHub source-registration base, not the local build commit",
+  "workspace_commit": "02c3d3d5dee9685a987bd17145fbec9e33b69cf9",
+  "workspace_dirty": true,
+  "builder_sha256": "4e5c4304967da4da81621c2084322a6b4d655be79bf69609f374c717e1f900f0",
+  "new_programs": [
+    {
+      "path": "design_deltas/v15.7/TRACE-CANDIDATE.md",
+      "sha256": "9065930a2d470a2398a2603ddef38c48d3b6f4a560d8e99b6c2b6d5b75eaec74",
+      "incorporated_complete_text": true
+    },
+    {
+      "path": "design_deltas/v15.7/COGNITIVE-INCREMENT-CANDIDATE.md",
+      "sha256": "97d10df0b90e0c91059ce962d23d3db76a34fa4c7f02fa6a03cf1a8d2c9ff5cb",
+      "incorporated_complete_text": true
+    },
+    {
+      "path": "design_deltas/v15.7/COGNITIVE-CORE-CANDIDATE.md",
+      "sha256": "2d59b7b89f7f5ff13ef97d25e4c857ead4429b7c7738929111023c378b570eaa",
+      "incorporated_complete_text": true
+    },
+    {
+      "path": "design_deltas/v15.7/COGNITIVE-COMPARE-CANDIDATE.md",
+      "sha256": "be02f9607aa8e3dc03ecdcc51770d5fadbe12bec900f97793f60e59daf51f47b",
+      "incorporated_complete_text": true
+    },
+    {
+      "path": "design_deltas/v15.7/DESIGN-CLOSURE-CANDIDATE.md",
+      "sha256": "b292569808de81f67389b8a10302e8f76371789274bcb0a1eec2995f77aee35a",
+      "incorporated_complete_text": true
+    }
+  ],
+  "carried_forward_draft": "e3ed83a6607a42d22b5bf3f3ceda425c0a2c807180ac6a69918216807077911b",
+  "candidate_source_root_sha256": "6b9fd084dfabc4fc65d6ad5faa809fdd41272f73307afd6df394eba1465522c0",
+  "comparison": "Retain five programs independently; no-addition leaves agreed work scattered, standalone replacement loses inherited work. Full cumulative draft selected; no superiority or completion claims."
+}

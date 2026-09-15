@@ -2,6 +2,16 @@
 
 Status: private implementation workspace.
 
+## Latest working candidate: v15.7
+
+[Garden v15.7](canonical/candidates/v15.7/README.md) carries the complete prepared v15.6 draft forward and adds five registered programs: TRACE, focused cognitive increment, cognitive qualification, comparative coverage and design closure. The user authorized a direct version jump. Its canonical predecessor remains v15.5; no intermediate v15.6 promotion is claimed. See [integration evidence](reviews/v15.7/SOURCE-INTEGRATION-RECEIPT.json) and [release status](reviews/v15.7/RELEASE-STATUS.md).
+
+## v15.6 working candidate
+
+The complete [five-file v15.6 candidate](canonical/candidates/v15.6/README.md) consolidates the pending upgrade queue, 15 corrected engineering patterns and 38 additional assurance work items. It is not yet canonical. See the [release status and remaining gates](reviews/v15.6/RELEASE-STATUS.md), [pending dispositions](design_deltas/v15.6/PENDING-RECONCILIATION-2026-09-15.json) and [reference migration inventory](reviews/v15.6/REFERENCE-MIGRATION-INVENTORY.json).
+
+An exact [v15.5 archival copy](canonical/archive/v15.5/SOURCE_MANIFEST.json) preserves predecessor bytes. Current canonical pointers and historical evidence bindings remain v15.5 until the existing promotion gates pass.
+
 ## Current canonical source
 
 - Garden v15.5 / GSL v45.1 five-file canonical source is pinned under `canonical/current/`.

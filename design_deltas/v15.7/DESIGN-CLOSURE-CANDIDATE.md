@@ -2,7 +2,7 @@
 Patch ID: GARDEN-v15.7-DESIGN-CLOSURE-01
 Revision: 2, consolidated with final accepted clarifications.
 Status: NON_CANONICAL_CANDIDATE_PENDING_RECONCILIATION_AND_ADMISSION.
-Target: v15.7, additive to completed v15.6; no new top-level engine or parallel review process.
+Target: v15.7, additive to the pinned v15.6 working candidate (not a promoted release); no new top-level engine or parallel review process.
 
 ## Relationship and independent progress
 Support Candidate A (COGNITIVE-CORE-CANDIDATE.md) and Candidate B (COGNITIVE-COMPARE-CANDIDATE.md) by reusing their versioned records.
@@ -64,3 +64,7 @@ Pin actual predecessor/source and candidate DesignEpoch during reconciliation. P
 ## Current evidence and next work
 Registration preserves user/assistant design review, not source reconciliation or qualified evidence. No tests, root-cause findings, comparator conclusions or admissions are claimed.
 Next output: first-pass requirement-level design-decision rows linked to Candidate A per-function dispositions and Candidate B per-comparator scope rows. Record existing coverage/NO_CHANGE where supported rather than force new patches.
+
+
+## Direct v15.7 release binding — 2026-09-15
+The user authorized carrying the prepared v15.6 draft directly into v15.7. The actual canonical predecessor remains Garden v15.5 at source root 63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598. The retained v15.6 working candidate is e3ed83a6607a42d22b5bf3f3ceda425c0a2c807180ac6a69918216807077911b. References to completing v15.6 mean qualifying the necessary inherited scope; no intermediate canonical promotion is required merely to construct v15.7. This binding corrects the earlier anticipated lineage, preserves requirement semantics and grants no execution or qualification authority.

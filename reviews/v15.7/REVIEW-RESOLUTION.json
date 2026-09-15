@@ -1,0 +1,11 @@
+{
+  "finding": "SOL-V157-003",
+  "status": "FIXED",
+  "resolution": "Renamed repo value to historical registration base; record actual local build commit, dirty state and exact builder hash. Source hashes and candidate/source roots bind all effective design inputs.",
+  "files": {
+    "scripts/build_v15_7_candidate.py": "4e5c4304967da4da81621c2084322a6b4d655be79bf69609f374c717e1f900f0",
+    "reviews/v15.7/SOURCE-INTEGRATION-RECEIPT.json": "b948109508ffd6bec6d518a8ef641f247dfc3e03ef994ac14a01911f7675be62"
+  },
+  "candidate_root_unchanged": "6b9fd084dfabc4fc65d6ad5faa809fdd41272f73307afd6df394eba1465522c0",
+  "promotion": false
+}

@@ -49,3 +49,7 @@ Findings route separately as specification work, implementation work, measured d
 Changes to comparator scope, budget or evaluation criteria require the applicable authorized decision. Comparative experiments use protected evaluation and matched-condition/limitation discipline from Candidate A where applicable; documentation review is not measured superiority.
 Current evidence: conversational design review only; no first-pass comparison or source reconciliation performed by registration.
 Next work: produce the comparator-scope table and evidence-pinned rows. Reconciliation may yield existing coverage, smaller amendments or blocked scope rather than new features.
+
+
+## Direct v15.7 release binding — 2026-09-15
+The user authorized carrying the prepared v15.6 draft directly into v15.7. The actual canonical predecessor remains Garden v15.5 at source root 63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598. The retained v15.6 working candidate is e3ed83a6607a42d22b5bf3f3ceda425c0a2c807180ac6a69918216807077911b. References to completing v15.6 mean qualifying the necessary inherited scope; no intermediate canonical promotion is required merely to construct v15.7. This binding corrects the earlier anticipated lineage, preserves requirement semantics and grants no execution or qualification authority.

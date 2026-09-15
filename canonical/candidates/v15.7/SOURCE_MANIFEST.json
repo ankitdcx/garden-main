@@ -1,0 +1,39 @@
+{
+  "schema": "GardenCanonicalSourceManifest/v1",
+  "release": "Garden v15.7",
+  "gsl": "v45.1",
+  "date": "2026-09-15",
+  "status": "WORKING_FIVE_FILE_CANDIDATE_NOT_CANONICAL",
+  "files": {
+    "User": {
+      "name": "Garden_User_v15.7_FULL_CANDIDATE_2026-09-15.txt",
+      "bytes": 108428,
+      "sha256": "fd55072ea37c0bbd6f6b1b2aa233afd2b23d22b6a76f23d364ad92e33b9a9d6b"
+    },
+    "System": {
+      "name": "Garden_System_v15.7_FULL_CANDIDATE_2026-09-15.txt",
+      "bytes": 250255,
+      "sha256": "b4fee8b2b5f75fe56485ad80c375e7e0188c54b97a7b4295ace1e74bb305a312"
+    },
+    "Technical": {
+      "name": "Garden_Technical_v15.7_FULL_CANDIDATE_2026-09-15.txt",
+      "bytes": 1012824,
+      "sha256": "46219e1cc6fe40e08990d393275fa97d56175035e69369055e769201ed908a39"
+    },
+    "Annexure": {
+      "name": "Garden_Annexure_v15.7_FULL_CANDIDATE_2026-09-15.txt",
+      "bytes": 1267534,
+      "sha256": "5a510cc0307c36523bd21423d5cdb651c6d31aefe53779e423939093c750f238"
+    },
+    "Theories": {
+      "name": "Garden_Theories_v15.7_FULL_CANDIDATE_2026-09-15.txt",
+      "bytes": 186400,
+      "sha256": "8dba8c471a040c590928e4605bcff90df9ddccae197b89482d5a176864d7e4aa"
+    }
+  },
+  "source_root_algorithm": "sha256(canonical-json(sorted role/name/bytes/sha256 rows))",
+  "source_root_sha256": "6b9fd084dfabc4fc65d6ad5faa809fdd41272f73307afd6df394eba1465522c0",
+  "predecessor_release": "Garden v15.5",
+  "predecessor_source_root_sha256": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+  "retained_draft_source_root_sha256": "e3ed83a6607a42d22b5bf3f3ceda425c0a2c807180ac6a69918216807077911b"
+}

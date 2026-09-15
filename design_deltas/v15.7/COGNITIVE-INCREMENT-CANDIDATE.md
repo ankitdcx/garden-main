@@ -2,7 +2,7 @@
 Patch ID: GARDEN-v15.7-COGNITIVE-INCREMENT-01
 Revision: 3, including final accepted reconciliation inputs.
 Status: NON_CANONICAL_CANDIDATE_PENDING_RECONCILIATION_AND_ADMISSION.
-Target: Garden v15.7, additive to completed v15.6; complements TRACE without activating it.
+Target: Garden v15.7, additive to the pinned v15.6 working candidate (not a promoted release); complements TRACE without activating it.
 Class: proposed capability increment; provisional MINOR architectural scope, subject to source reconciliation.
 
 This focused patch supersedes the earlier six-package proposal. It retains two mechanisms, four independently assessed amendments, and one deferred topic. Claimed gaps, novelty and overlap remain provisional until actual source comparison. No new top-level engine or canonical SchemaID is registered. Candidate tracking is not implementation, qualification, admission or canonical promotion.
@@ -57,7 +57,7 @@ Each mechanism/amendment needs:
 Include qualification costs, failures and negative results. Testing does not prove universal absence of regression.
 
 ## 6. Reconciliation and admission
-Pin completed v15.6 source and candidate DesignEpoch. For EVERY requirement record existing equivalent, extension required, new contract required or unresolved, with exact source anchors and rationale. Named hosts and overlaps above are inputs, not verified mappings.
+Pin the pinned v15.6 working candidate (not a promoted release) source and candidate DesignEpoch. For EVERY requirement record existing equivalent, extension required, new contract required or unresolved, with exact source anchors and rationale. Named hosts and overlaps above are inputs, not verified mappings.
 Resolve decision/termination host, routine representation, bounded qualification scope, evidence rules and held-out evaluation owner before affected consequential admission.
 Reuse schemas, registries and owners. Apply required whole-source comparison, dependency review, privacy/retention, authorization, budget, recovery and protected evaluation controls through the existing Garden process.
 Bind evidence to exact source, DesignEpoch, configuration, evaluator and assumptions. Distinguish proposals, observations, verified claims and authorized actions. Do not invent a future epoch or claim completed reconciliation.
@@ -68,4 +68,8 @@ Valid outcomes include existing coverage, smaller amendment, partial admission, 
 Competing explanations → authorized distinguishing experiment → observed result → candidate skill → qualification → measured reuse.
 The slice is the focused patch, not a demo for six new packages.
 Current evidence: user/assistant design cross-check only. No fresh runtime, capability, regression or source-reconciliation execution is claimed by registration. TRACE's historical tests do not qualify this patch.
-Next work: source mapping against completed v15.6, then bounded implementation and separately recorded component/combined experiments. Adding mechanisms does not automatically improve Garden.
+Next work: source mapping against the pinned v15.6 working candidate (not a promoted release), then bounded implementation and separately recorded component/combined experiments. Adding mechanisms does not automatically improve Garden.
+
+
+## Direct v15.7 release binding — 2026-09-15
+The user authorized carrying the prepared v15.6 draft directly into v15.7. The actual canonical predecessor remains Garden v15.5 at source root 63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598. The retained v15.6 working candidate is e3ed83a6607a42d22b5bf3f3ceda425c0a2c807180ac6a69918216807077911b. References to completing v15.6 mean qualifying the necessary inherited scope; no intermediate canonical promotion is required merely to construct v15.7. This binding corrects the earlier anticipated lineage, preserves requirement semantics and grants no execution or qualification authority.

@@ -1,0 +1,20 @@
+{
+  "schema": "GardenBoundedTestReceipt/v1",
+  "status": "PASS",
+  "command": "PYTHONPATH=implementation python -m unittest discover -s implementation/tests -q",
+  "tests_run": 188,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 1,
+  "skip_reason": "CI artifact emission test requires GITHUB_ACTIONS=true",
+  "python": "3.12.14",
+  "local_snapshot_commit": "02c3d3d5dee9685a987bd17145fbec9e33b69cf9",
+  "remote_source_snapshot": "9fce84227857eebc83e824bd30834e2a3ea50281",
+  "files": {
+    "scripts/check_successor_drift.py": "3349faf94b4c10d8525837e60c2fca11f567dfef609f9119a6b759c7deeeb34d",
+    "implementation/tests/test_successor_diff_scope.py": "ad4f01071e6fb07b8561e989faf7ec8c3d0343421b041c8f853f9c503c40b3f3",
+    "scripts/build_v15_6_candidate.py": "12e44c56e263249165a734846c940c9693719311bc43183ac78c06d4f9dc9bef"
+  },
+  "scope": "Existing reference kernel regression suite plus diff-admission regression; not new engineering failure-test execution, TLA+, supply-chain or physical simulation qualification",
+  "raw_output": "----------------------------------------------------------------------\nRan 188 tests in 0.633s\n\nOK (skipped=1)\nCANONICAL_SECTION_COUNT_RECEIPT_TEST={\"DesignEpoch\": \"Garden-v15.5@63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598\", \"ProcessVersion\": \"1.4\", \"QUALIFIED\": 0, \"STALE\": 0, \"TIER_A\": 251, \"TIER_B\": 14, \"TIER_C\": 1, \"TOTAL\": 266, \"UNREVIEWED\": 266, \"coverage_complete\": true, \"inventory_sha256\": \"171f574f183c5491ab496be0da289007f58aec6abc9f9f71205d26abc6221da4\", \"schema\": \"CanonicalSectionCountReceipt/v1\", \"source_root\": \"63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598\", \"sweep_completion_valid\": false}\n"
+}

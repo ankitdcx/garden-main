@@ -1,0 +1,2334 @@
+GARDEN v15.6 — CONSOLIDATED PENDING UPGRADE SPECIFICATION
+Status: working source candidate; no formal admission, executable certification or canonical promotion is asserted.
+Purpose: retain meaningful pending clauses under existing owners and resolve process-lineage conflicts.
+Historical statuses in quoted source fields are provenance only; the disposition and qualification boundaries here govern interpretation.
+Engine.Orchestrate in historical proposals resolves to existing Engine.Reason/orchestration ownership; no new engine is created.
+
+
+USER — OWNER-BOUND CANDIDATE CLAUSES
+============================================================
+
+HCA-003 — Human Assurance Reliability / HITL workload profile
+Owner: User / Authority.Governance + existing scheduling
+Disposition: INCORPORATE_CANDIDATE
+Source: design_deltas/v15.6/DELTASET-2026-09-14-HISTORICAL-CHAT-RECOVERY.json#HCA-003
+candidate_id: HCA-003
+title: Human Assurance Reliability / HITL workload profile
+status: WORTHY_PENDING_EQUIVALENCE_AND_MULTI_MODEL_REVIEW
+proposed_owners:
+  1. Capability.Authority.Governance
+  2. Engine.Orchestrate
+cooperating_existing_mechanisms:
+  1. ReviewerCalibration
+  2. AAP
+  3. Scheduling
+  4. Human Sovereignty
+  5. Engine.Proof
+problem: Current ReviewerCalibration covers reviewer false positives, misses, calibration, independence, model-family correlation and blind spots. Historical physical-safety work additionally identified human fatigue, workload, alert saturation, handoff and response-latency as operational assurance variables; exact current coverage was not found.
+minimal_change: Extend applicable high-consequence human-review profiles with operational-capacity evidence such as workload/queue pressure, alert saturation, fatigue/rest limits where lawfully measurable, response latency, handoff continuity, abstention/unavailability and common-mode staffing dependence. Degraded human assurance can require additional independent review, delay, safe fallback or narrower action admission according to the existing profile; it never reduces human worth or fundamental rights.
+hard_limits:
+  1. No physiological or behavioral surveillance beyond valid purpose, consent/law and minimum necessary scope.
+  2. Human reliability scoring cannot create or remove constitutional worth, rights or political sovereignty.
+  3. The system cannot override a legally required human decision merely because an operator is scored poorly; it must follow the applicable safe escalation/substitution procedure.
+  4. Uncertainty about reviewer condition remains explicit.
+tests:
+  1. High-consequence queue with demonstrated alert saturation triggers the profile's redundancy/escalation rule rather than pretending review quality is unchanged.
+  2. Reviewer workload metadata cannot be reused as reputation or unrelated employment scoring.
+  3. Two nominal reviewers subject to the same fatigue/common-mode condition do not count as fully independent when the profile requires independence.
+
+SYSTEM — OWNER-BOUND CANDIDATE CLAUSES
+============================================================
+
+PROCESS-CONSOLIDATED-1.4 — Effective process semantics, v1.0–v1.4 retained with explicit refinements
+Owner: System / Engine.Evolve, Review and existing authority owners
+Disposition: PROPAGATE_ADMITTED_PROCESS_RULES_AS_CANDIDATE_SOURCE
+Source: governance/GardenCanonicalUpdateProcess_v1.4.json
+schema: ProcessVersion/v1
+process_id: GardenCanonicalUpdateProcess
+version: 1.4
+status: HUMAN_ADMITTED_GOVERNING_PROCESS_SOURCE_PROPAGATION_CANDIDATE
+bound_predecessor_design_epoch: Garden-v15.5@63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598
+purpose: Close accumulation, audit-base, verification-binding, pipeline-control, lane-derivation, reduced-assurance cross-exam and E3/E4 diagnostic edge cases, then transition process design to execution-first mode.
+protected_change: True
+section_unit:
+  schema: SectionUnit/v1
+  definition: Smallest mechanically addressable anchor-bounded unit that owns at least one semantic obligation, or a clearly bounded non-normative explanatory/history unit.
+  tiers:
+    TIER_A: Normative/high-impact semantics including rights/HSA/authority/ActionGate/policy/safety/security/privacy/proof/evidence/DesignEpoch, schemas, FunctionContracts, invariants, semantic registries and normative failure/state rules.
+    TIER_B: Explanatory mechanisms, examples and rationale with no independent normative semantics; escalate to TIER_A when normative meaning or implementation ambiguity is discovered.
+    TIER_C: History, version notes, prior-art positioning and non-semantic archival material; escalate when active semantics are found.
+  completion_labels:
+    TIER_A: FULL-DESIGN-SWEEP-COMPLETE-FOR-TIER-A
+    ALL_TIERS: FULL-DESIGN-SWEEP-COMPLETE
+review_profile:
+  tier_a_primary_families:
+    1. ChatGPT/GPT-5.6-Sol
+    2. Gemini
+    3. DeepSeek
+    4. Qwen
+  minimum_effective_independent_families: 3
+  high_critical_preferred_completed_primary_families: 4
+  blind_first: True
+  cross_examination_required: True
+  whole_source_compare_required: True
+  diversity_schema: ReviewFamilyDiversity/v1
+  diversity_rule: Independence is lineage/provider/base-model aware; branding or nationality alone does not establish independence. Same base/family adds no independent family; shared lineage receives reduced weight.
+evidence_hierarchy:
+  E4: Executable/reproducible trace bound to current commit/DesignEpoch/environment.
+  E3: Formal proof or machine-checkable contradiction whose premises match current design/implementation.
+  E2: Authoritative source artifact or exact code/schema/contract evidence.
+  E1: Reasoned model/human argument without higher-class direct verification.
+  E0: Unsupported assertion.
+  rule: Producer-assigned evidence classes are immutable; challenges are separate. E1/E0 do not automatically defeat verified E2-E4. E3/E4 conflicts have no automatic winner and follow the v1.4 parallel-diagnosis rule.
+delta_dependency_schema:
+  field: delta_dependencies
+  relationship_kinds:
+    1. REQUIRED_BEFORE_ADMISSION
+    2. CONFLICTS_WITH
+    3. SHARED_ANCHOR
+    4. SHARED_CONTRACT
+    5. SHARED_INVARIANT
+    6. AFFECTS
+  rules:
+    1. A delta cannot admit while a REQUIRED_BEFORE_ADMISSION dependency is DISPUTED or UNRESOLVED.
+    2. Admission of a delta marks pending/reviewed deltas sharing affected anchors/contracts/invariants STALE_REVIEW unless explicit compatibility evidence exists.
+implementation_validation_modes:
+  SHADOW_IMPLEMENTATION: Non-production branch bound to exact DesignEpoch; implement implied semantic change and run real tests; never merge solely because validation succeeded.
+  MIRROR_VALIDATION: DesignMirror/simulation validation; cheaper/weaker evidence with declared limitations.
+  DIRECT_NON_SEMANTIC: Governed direct implementation for verified non-semantic changes.
+light_track:
+  schema: LIGHT_NON_SEMANTIC/v1
+  eligible: Cosmetic/reference/test-only changes with no semantic-touch signal.
+  required:
+    1. one qualified reviewer or deterministic checker
+    2. whole-source/reference closure where applicable
+    3. applicable tests
+  challenger_required: False
+  semantic_delta_created: False
+  escalation_rule: Any schema meaning, invariant, FunctionContract, authority, state/failure, public API, human-visible semantics or canonical ownership change escalates to the full semantic track.
+move_equivalence:
+  schema: MoveEquivalenceClaim/v1
+  required_for: Any predecessor semantic statement classified MOVED.
+  independent_review: True
+  acceptable_evidence:
+    1. relocation-only textual diff
+    2. context-bound semantic-preservation argument
+  failure_rule: Without valid move-equivalence evidence, the statement remains RETAINED or is explicitly SUPERSEDED by an admitted delta.
+successor_classification:
+  PATCH: <=3 admitted semantic deltas and no invariant, authority, HSA or topology change.
+  MINOR: <=10 admitted semantic deltas and no authority, HSA or topology change; any material invariant change escalates to MAJOR.
+  MAJOR: Any authority/HSA/topology change, material invariant change, or >10 admitted semantic deltas.
+  rule: MAJOR receives the strongest composition/review profile.
+human_availability:
+  schema: HumanAvailabilityWindow/v1
+  fields:
+    1. available_from
+    2. available_until
+    3. expected_response_latency
+    4. contact_or_approval_mode
+  default_without_explicit_window: Ordinary availability lasts one business day after a protected-decision request, then HUMAN_UNAVAILABLE.
+  human_unavailable: Routine delegated work may continue; protected promotion and unclear delegation pause.
+  human_permanently_unavailable: Protected promotion pauses; routine work and candidate preparation continue subject to the v1.2 promotion-capacity rule. No silent transfer of authority.
+canonical_rollback:
+  schema: CanonicalRollbackPolicy/v1
+  default_candidate_window_days: 30
+  within_window: A HIGH+ incident with required precise attribution can raise a candidate; rollback execution remains HUMAN_DECISION. Window starts at canonical promotion and pauses under the v1.2 attribution rule.
+  history_rule: Preserve successor admission receipts/history and mark them SUPERSEDED_BY_ROLLBACK.
+  after_window: Reversal requires the normal forward-change review profile.
+  single_current_rule: Do not maintain two simultaneous CURRENT canonicals absent an explicitly admitted transition policy.
+process_transition:
+  rule: Every semantic delta and successor binds to ProcessVersion/v1.
+  mid_cycle_change: In-flight deltas are re-reviewed under the new process or explicitly grandfathered with GRANDFATHERED_UNDER_<version>, rationale and compatibility review.
+  process_changes_protected: True
+config_surface_coupling:
+  public_repo_contract: GardenConfigSurfaceContracts/v1
+  rule: Authoritative selector/allowlist/budget/privacy shape changes invalidate downstream consumer acknowledgements and CI until reconciled in the same governed change; executable compatibility probes remain required.
+promotion_boundary: Existing process admission governs updates but does not admit any v15.6 source delta, certify implementation or promote this candidate.
+opening_milestones:
+  1.
+    id: DELTA_POOL
+    meaning: Candidate deltas exist; no five-file successor implied.
+  2.
+    id: WORKING_FIVE_FILE_CANDIDATE
+    meaning: At least one coherent admitted delta set has been composed into all five successor files.
+  3.
+    id: FULL_DESIGN_SWEEP_COMPLETE_FOR_TIER_A
+    meaning: All mechanically enumerated Tier-A SectionUnits for the bound DesignEpoch are qualified or fully resolved.
+  4.
+    id: FULL_ALL_TIER_COMPLETE
+    meaning: Tier A/B/C closure is complete for the bound DesignEpoch.
+evidence_class_attribution:
+  finding_schema: FindingRecord
+  rule: The reviewer/evidence producer assigns evidence_class E0-E4 when creating the immutable FindingRecord.
+  integrator_constraint: Integrators may cite producer-assigned classes but may not upgrade or downgrade them.
+  challenge_schema: EvidenceClassChallenge/v1
+  challenge_rule: A different reviewer may challenge the assigned class only with same-or-higher-class evidence that the original classification is wrong. Preserve original class and challenge; no history rewrite.
+  selective_citation_rule: Selective citation that effectively overrides an immutable producer class is a Challenger-rejectable defect.
+delta_dependency_semantics:
+  directional_blocking:
+    1. REQUIRED_BEFORE_ADMISSION
+    2. CONFLICTS_WITH
+    3. AFFECTS
+  symmetric_revalidation_only:
+    1. SHARED_ANCHOR
+    2. SHARED_CONTRACT
+    3. SHARED_INVARIANT
+  rule: Symmetric relations never mutually block admission by themselves. If one shared-surface delta admits first, the other becomes STALE_REVIEW before its admission decision unless compatibility evidence already covers the updated state.
+  deadlock_boundary: Only declared directional conditions may directly block/order admission.
+rollback_trigger:
+  schema: RollbackCandidateTrigger/v1
+  automatic_candidate:
+    incident_schema: ProductionIncidentRecord
+    severity_minimum: HIGH
+    required_attribution: SINGLE_COMMIT_OR_SINGLE_DELTA_EQUIVALENT
+    effect: Raise ROLLBACK_CANDIDATE and freeze only affected unsafe scope. Never execute rollback automatically.
+  execution:
+    authority: HUMAN_DECISION
+    choices:
+      1. ACCEPT_ROLLBACK
+      2. REJECT_ROLLBACK
+    window_days: 30
+  expiry_without_decision: No silent rollback and no silent acceptance; canonical state is unchanged, and incident remains permanently attached to the implicated delta for future re-review.
+  history: Executed rollback preserves all successor receipts/history and marks them SUPERSEDED_BY_ROLLBACK.
+sweep_scaling:
+  section_count_receipt: CanonicalSectionCountReceipt/v1
+  required_counts:
+    1. TOTAL
+    2. TIER_A
+    3. TIER_B
+    4. TIER_C
+    5. QUALIFIED
+    6. STALE
+    7. UNREVIEWED
+  completion_label_rule: No sweep-completion label is valid without exact denominator, source-root and ProcessVersion binding.
+  initial_design_epoch: FULL_SWEEP
+  successor_resweep: INCREMENTAL_AFFECTED_CLOSURE
+  inheritance_rule: A SectionUnit inherits QUALIFIED_NO_CHANGE only if its own hash, tier, and all mechanically derived reference-target hashes are unchanged from the immediately preceding qualified DesignEpoch; inherited status records predecessor review receipt/hash.
+  stale_rule: Content, tier, reference-target, owner/contract/invariant/schema changes or a verified targeted finding mark the unit STALE_REVIEW.
+human_permanent_unavailability:
+  closed:
+    1. canonical promotion
+    2. other protected changes
+  continues:
+    1. routine review
+    2. research
+    3. non-semantic repairs
+    4. bounded implementation inside existing DesignEpoch authority
+    5. candidate-delta preparation
+  pending_admitted_delta_cap: 50
+  cap_effect: Above 50 admitted-but-unpromoted deltas, otherwise-admissible candidates become ACCEPTED_PENDING_CAPACITY and are not admitted. Review continues; fresh revalidation is required when capacity returns.
+  authority_boundary: No protected authority transfers implicitly; a separately admitted continuity/succession mechanism is required.
+simplification_pressure:
+  schema: ProcessSimplificationReview/v1
+  cadence: At least once per 24 ordinary evolution cycles or daily, whichever occurs first.
+  reviewer_role: Negative-growth reviewer whose explicit task is to propose rule removal, merging, generalization, or downgrade.
+  classifications:
+    1. KEEP
+    2. MERGE_WITH
+    3. GENERALIZE
+    4. DOWNGRADE_TO_LIGHT_CHECK
+    5. DEPRECATE
+    6. REMOVE_CANDIDATE
+  decision_basis:
+    1. unique defect classes prevented/detected
+    2. severity-weighted benefit
+    3. false-block rate
+    4. maintenance cost
+    5. overlap
+    6. defense-in-depth independence
+  rule: Prefer one general invariant/check over incident-specific rules when equivalent coverage is preserved. Do not remove independent defense-in-depth merely because scopes overlap.
+  protected_boundary: Simplification affecting semantic admission, authority, HSA, evidence standards, rollback, privacy or canonical promotion is itself a protected process change.
+step0_routing:
+  schema: ProcessRouteTable/v1
+  rule: Every work item is assigned exactly one primary route before substantive review. Route escalation is allowed; silent downgrade is forbidden.
+  classes:
+    SECTION_UNIT_REVIEW:
+      mandatory:
+        1. mechanical_section_unit_binding
+        2. risk_tier_assignment
+        3. packet_construction
+        4. packet_completeness_proof
+        5. blind_review_profile_for_tier
+        6. evidence_attribution
+        7. cross_exam_if_required
+        8. whole_source_closure
+        9. coverage_state_update
+      optional:
+        1. delta_creation
+        2. shadow_or_mirror_validation
+        3. challenger
+        4. implementation_closure
+      must_not_apply:
+        1. successor_promotion_unless_a_delta_is_admitted
+    NON_SEMANTIC_REPAIR:
+      mandatory:
+        1. semantic_touch_check
+        2. LIGHT_NON_SEMANTIC/v1
+        3. reference_closure_where_applicable
+        4. applicable_tests
+        5. post_fix_verification
+      optional:
+        1. one_qualified_reviewer
+      must_not_apply:
+        1. semantic_delta_admission
+        2. delta_dependency_graph
+        3. successor_classification
+        4. canonical_promotion
+    PATCH_DELTA:
+      mandatory:
+        1. semantic_impact
+        2. packet_completeness_proof
+        3. blind_review
+        4. evidence_adjudication
+        5. whole_source_compare
+        6. delta_dependencies
+        7. implementation_validation_as_applicable
+        8. challenger_as_required
+        9. admission
+        10. composition
+        11. retention
+        12. post_composition_verification
+      optional:
+        1. shadow_implementation
+        2. mirror_validation
+      must_not_apply:
+        1. protected_human_promotion_unless_separately_required_by_touched_semantics
+    MINOR_DELTA:
+      mandatory:
+        1. all_PATCH_DELTA_steps
+        2. stronger_cross_delta_consistency
+        3. full_affected_closure_review
+      optional:
+        1. additional_challenger
+      must_not_apply:
+    MAJOR_DELEGABLE:
+      mandatory:
+        1. all_MINOR_DELTA_steps
+        2. strongest_review_profile
+        3. shadow_implementation_when_tractable
+        4. global_invariant_consistency
+        5. rollback_readiness
+      optional:
+        1. canonical_promotion_only_if_explicit_delegation_envelope_authorizes_it
+      must_not_apply:
+        1. implicit_human_authority_transfer
+    MAJOR_PROTECTED:
+      mandatory:
+        1. all_MAJOR_DELEGABLE_steps
+        2. protected_human_decision_for_authority_HSA_rights_constitutional_semantics
+        3. explicit_promotion_receipt
+      optional:
+      must_not_apply:
+        1. automatic_canonical_promotion
+  escalation_rule: Any semantic-touch signal discovered on NON_SEMANTIC_REPAIR escalates to the appropriate semantic route before merge.
+review_packet:
+  schema: PacketCompletenessProof/v1
+  default_mode: COHERENT_COMPLETE
+  modes:
+    BYTE_IDENTICAL: All reviewers receive byte-identical packet payloads; useful for strict blind comparison but does not by itself prove closure completeness.
+    SEMANTICALLY_EQUIVALENT: Reviewer renderings may differ only through a declared deterministic transformation with transformation proof and same bound source/closure.
+    COHERENT_COMPLETE: Every mechanically derived reference/dependency closure member is included or explicitly excluded with typed reason and exclusion proof.
+  rules:
+    1. Missing required closure members under COHERENT_COMPLETE is PACKET_INCOMPLETE, not reviewer failure.
+    2. Reviewer-proposed closure expansion creates a NEW_CLOSURE_CANDIDATE until mechanically validated; it does not retroactively make the packet incomplete.
+    3. Blind reviewers must receive the same completeness proof and exact source/DesignEpoch binding.
+evidence_requirement_matrix:
+  schema: EvidenceRequirementMatrix/v1
+  status: PROVISIONAL_EMPIRICAL_DEFAULTS
+  block_delta:
+    MEDIUM: E1
+    HIGH: E2
+    CRITICAL: E3
+  trigger_freeze:
+    MEDIUM: E2
+    HIGH: E2
+    CRITICAL: E2
+  close_finding:
+    rule: Closure evidence must meet the action threshold and be at least the original finding's verified evidence class for the dispositive claim; lower-class counterargument may narrow but not close.
+    MEDIUM: E1
+    HIGH: E2
+    CRITICAL: E3
+  force_escalation:
+    rule: Any verified E3 or E4 evidence conflicting with the current integrator disposition forces escalation at all severities; verified E2 conflict forces escalation for HIGH/CRITICAL.
+    MEDIUM: E3_OR_E4_CONFLICT
+    HIGH: E2_PLUS_CONFLICT
+    CRITICAL: E2_PLUS_CONFLICT
+  tuning_rule: Threshold changes require ProcessChangeImpactAssessment; simplification/health evidence may propose adjustment but cannot silently mutate defaults.
+e3_e4_conflict:
+  schema: EvidenceModelImplementationConflictReceipt/v1
+  rule: Verified E3/E4 conflict hypotheses are tested in parallel unless empirical incident data later justifies an ordered diagnostic policy.
+  effect: Freeze only affected dependent scope until one hypothesis is supported or the conflict is explicitly bounded UNKNOWN.
+  parallel_hypotheses:
+    1. MODEL_IMPLEMENTATION_MISMATCH
+    2. TRACE_ANOMALY_OR_NON_REPRODUCIBILITY
+    3. PROOF_PREMISE_OR_SCOPE_ERROR
+major_split:
+  MAJOR_DELEGABLE: Material invariant/topology change or >10 semantic deltas with no authority/HSA/rights/constitutional semantic change. Eligible for delegated admission/integration; canonical promotion is automated only if an explicit current delegation envelope separately grants that authority.
+  MAJOR_PROTECTED: Any authority, HSA, rights, constitutional, protected-human-sovereignty or protected-promotion semantic change. Requires protected human decision.
+  shared_requirement: Both use the strongest review/composition profile.
+process_change_impact:
+  schema: ProcessChangeImpactAssessment/v1
+  challenger_review_required: True
+  classes:
+    COSMETIC: No behavioral/routing/evidence/admission/authority effect; LIGHT track; no delta re-review.
+    CLARIFYING: Meaning made more explicit without changing threshold/authority/outcome; re-review only deltas whose process dependency intersects the clarified rule.
+    SUBSTANTIVE: Changes routing, thresholds, evidence semantics, admission, rollback, authority, privacy, HSA, protected boundaries or required artifacts; affected in-flight deltas require re-review or explicit grandfathering.
+lineage_unknown:
+  schema: ReviewerLineageTable/v1
+  default: UNKNOWN_LINEAGE_CLUSTER
+  rule: Unknown lineage is not CONFIRMED_INDEPENDENT. Reviewers with unknown lineage are conservatively treated as correlated with other unknown-lineage reviewers for effective-family counting unless published evidence supports separation.
+  evidence_required_for_confirmed_independent: Provider/base-model lineage evidence sufficient to distinguish model ancestry/routing; corpus independence need not be claimed when unknowable.
+  publication: Publish lineage table entry, evidence source, confidence, last_verified_at and routing path.
+rollback_window:
+  window_start: CANONICAL_PROMOTION_TIMESTAMP
+  default_days: 30
+  attribution_pause_rule: If a qualifying incident is detected before window expiry, pause the remaining rollback-decision time while typed attribution is actively unresolved; resume after attribution resolution.
+  example: Incident detected on day 29 with one day remaining and attribution completing on day 45 still leaves one decision day after attribution.
+  candidate_execution_split: Automatic evidence may raise ROLLBACK_CANDIDATE; execution remains separately authorized.
+promotion_capacity:
+  pending_admitted_delta_cap: 50
+  above_cap_state: ACCEPTED_PENDING_CAPACITY
+  rules:
+    1. SectionUnit review, research, cross-examination and candidate preparation continue above the cap.
+    2. Otherwise-admissible semantic candidates above the cap are not added to the admitted set.
+    3. Successor composition uses admitted deltas only.
+    4. When promotion capacity returns, drain ACCEPTED_PENDING_CAPACITY oldest-first, but require fresh binding/reverification against current DesignEpoch/process before admission.
+enforcement_status:
+  schema: SemanticEnforcementStatus/v1
+  states:
+    EXECUTABLE: Required checker/test/receipt exists for enforceable behavior.
+    DECLARATIVE: Machine enforcement is intended/possible but not yet implemented; tracked as known unenforced obligation.
+    NOT_ENFORCEABLE: Requirement is structurally normative/qualitative and no sound machine enforcement is claimed.
+  declarative_aging_default_cycles: 168
+  aging_rule: A DECLARATIVE item reaching the aging threshold without justified extension raises SWARM_FIX; risk-specific policy may shorten the threshold.
+  not_enforceable_rule: NOT_ENFORCEABLE requires rationale and must not generate repeated closure attempts unless enforcement feasibility changes.
+budget_routing:
+  schema: ReviewBudgetPolicy/v2-candidate
+  global_openrouter_daily_ceiling_usd: 1.0
+  routine_pool_usd: 0.7
+  escalation_reserve_usd: 0.3
+  unspent_reserve_rule: Reserve may be released to routine work late in the Asia/Kolkata day only when no unresolved HIGH/CRITICAL escalation queue exists.
+  expensive_call_rule: Any single OpenRouter escalation reserving >0.15 USD requires explicit human approval under the current $1/day authorization.
+  rule: These are logical pools under one hard $1/day ceiling; they do not authorize extra spend.
+reviewer_scoring:
+  schema: ReviewerOutcomeScore/v1
+  primary_weights:
+    VERIFIED_FIXED_OR_VALIDATED_OUTCOME: 0.4
+    PRODUCTION_INCIDENT_ATTRIBUTION_ACCURACY: 0.3
+    SEEDED_DEFECT_DETECTION: 0.2
+    CHALLENGER_SURVIVAL: 0.1
+  penalties:
+    1. verified_false_positive
+    2. stale_or_wrong_binding
+    3. invalid_output
+    4. correlated_duplicate_without_novel_evidence
+  rule: Challenger survival may contribute at most 0.10 of allocation score. External outcomes dominate reviewer allocation; diversity floors remain mandatory.
+pipeline_change_control:
+  rule: The canonical-update process and its routing/threshold/authority semantics are protected. It cannot self-amend through ordinary Builder authority.
+  required_path: ProcessVersion bump + ProcessChangeImpactAssessment + applicable blind review/cross-exam/whole-source comparison + protected admission for protected semantics.
+zero_delta_health:
+  schema: PipelineHealthReceipt/v1
+  metrics:
+    1. proposal_volume_30d
+    2. admit_count_30d
+    3. admit_rate_30d
+    4. reject_distribution_30d
+    5. time_since_last_admit_days
+    6. time_since_last_verified_fix_days
+  default_alerts:
+    ADMISSION_BOTTLENECK_SUSPECTED: time_since_last_admit_days >= 90 AND proposal_volume_30d >= 10
+    DISCOVERY_DRYNESS_SUSPECTED: time_since_last_admit_days >= 90 AND proposal_volume_30d < 3
+    REJECTION_CONCENTRATION_SUSPECTED: at least 20 proposals in 30d AND one rejection reason > 80%
+  rule: Alerts trigger audit/diagnosis, not automatic threshold loosening.
+enforcement_maturity:
+  schema: RuleEnforcementCoverage/v1
+  levels:
+    1.
+      level: SPECIFIED
+      meaning: Rule text exists and is bound to ProcessVersion.
+    2.
+      level: CHECKED
+      meaning: Deterministic or bounded code evaluates the rule and emits a receipt/result.
+    3.
+      level: ENFORCED
+      meaning: A failing validated check blocks the governed action it owns.
+    4.
+      level: AUDITED
+      meaning: An independent reviewer/checker validates that the enforcing implementation faithfully implements the bound rule rather than a rephrasing or weakened proxy.
+    5.
+      level: RE_VERIFIED
+      meaning: AUDITED evidence is current for the exact latest rule hash and checker/enforcer hash; any relevant rule/check change stales this level.
+  required_minimum_by_rule_class:
+    CONSTITUTIONAL_AUTHORITY_HSA_RIGHTS_PROMOTION: RE_VERIFIED
+    DELEGATION_ENVELOPE_AUTHORITY: RE_VERIFIED
+    PROTECTED_PROCESS_CHANGE_AUTHORITY: RE_VERIFIED
+    ROUTING_PACKET_COMPLETENESS_BUDGET_EVIDENCE_MATRIX: ENFORCED
+    LANE_ACTIVATION_AND_OVERLAP: ENFORCED
+    COSMETIC_SIMPLIFICATION_REPORTING: CHECKED
+  inheritance: Higher levels imply all lower levels.
+  stale_rule: Rule-hash, checker/enforcer-hash, governing dependency, or relevant ProcessVersion change invalidates RE_VERIFIED until independent re-audit succeeds.
+  coverage_receipt: RuleEnforcementCoverageReceipt/v1
+  coverage_fields:
+    1. process_version
+    2. rule_count_total
+    3. counts_by_required_level
+    4. counts_by_achieved_level
+    5. below_required_rules
+    6. stale_audits
+    7. rule_hashes
+    8. checker_hashes
+  claim_boundary: No statement that ProcessVersion is enforced is valid without a coverage receipt denominator and below-required-rule list.
+delegation_envelope:
+  schema: CanonicalPromotionDelegationEnvelope/v1
+  authority_source: HUMAN
+  states:
+    1. PROPOSED_ENVELOPE
+    2. HUMAN_ADMITTED_ENVELOPE
+    3. REVOKED
+    4. EXPIRED
+  proposal_rule: Pipeline/agents may draft, test, review and recommend PROPOSED_ENVELOPE, which has zero promotion authority.
+  admission_rule: Only an explicit HUMAN decision may transition a proposed envelope to HUMAN_ADMITTED_ENVELOPE.
+  admission_receipt: DelegationEnvelopeAdmissionReceipt/v1
+  scope_required:
+    1. allowed_successor_class
+    2. allowed_semantic_domains
+    3. valid_from
+    4. valid_until
+    5. max_promotions
+    6. revocation_conditions
+    7. design_epoch_or_lineage_scope
+  non_delegable:
+    1. admission_or_modification_of_this_envelope
+    2. change_to_authority_source
+    3. change_to_protected_process_rule_change_authority
+    4. rights/HSA/constitutional semantics unless explicitly retained as human-only
+  no_recursive_authorization: No pipeline output, ProcessChangeImpactAssessment, model agreement, or existing delegation envelope may admit or broaden a promotion delegation envelope.
+process_rule_change_authority:
+  authority_source: HUMAN
+  rule: Pipeline may propose/review/test ProcessVersion changes. Protected process-semantic changes become operative only through explicit HUMAN admission.
+  protected_semantics:
+    1. routing
+    2. evidence thresholds/classes
+    3. packet completeness
+    4. admission
+    5. rollback
+    6. privacy
+    7. authority
+    8. HSA
+    9. rights
+    10. constitutional semantics
+    11. promotion
+    12. delegation-envelope authority source
+    13. process-rule change authority
+  cosmetic_boundary: Truly non-semantic cosmetic/documentation implementation changes may use LIGHT_NON_SEMANTIC and do not alter protected rule hashes or meaning.
+  prohibition: ProcessChangeImpactAssessment classifies impact but never grants authority to admit a protected rule change.
+lane_inventory:
+  schema: LaneRegistry/v1
+  lane_fields:
+    1. lane_id
+    2. owner
+    3. stage
+    4. scope
+    5. input_artifacts
+    6. output_artifacts
+    7. authority_effect
+    8. cycle_binding
+    9. precedence
+    10. aggregation_rule
+    11. active
+  activation_check: LaneOverlapAssessment/v1
+  rules:
+    1. No runnable lane without a mechanically derived registry binding and pre-activation overlap assessment. Registry is not manually authoritative.
+    2. Unintentional overlapping scope/stage with same authority/output class blocks activation.
+    3. Intentional overlap requires explicit DIFFERENT_ROLE or REDUNDANT_DEFENSE classification plus deterministic aggregation/precedence rule.
+    4. Two lanes may not both claim authoritative disposition for the same CycleID/stage.
+    5. Lane semantic changes require ProcessChangeImpactAssessment.
+  duplicate_disposition: DUPLICATE_LANE_BLOCKED
+budget_depletion:
+  schema: ReviewBudgetDepletionPolicy/v1
+  hard_openrouter_daily_ceiling_usd: 1.0
+  routine_pool_usd: 0.7
+  escalation_reserve_usd: 0.3
+  states:
+    1. FULL_ROUTINE_REVIEW
+    2. FREE_ONLY_REVIEW
+    3. PAID_ESCALATION_RESERVED
+    4. BUDGET_EXHAUSTED
+  routine_depletion_fallback: When routine paid pool is exhausted, continue eligible public review using approved free independent families and direct free Gemini where available; mark cycle FREE_ONLY_REVIEW / REDUCED_ASSURANCE rather than pausing the whole pipeline.
+  high_severity_rule: HIGH/CRITICAL findings first created or materially adjudicated under FREE_ONLY_REVIEW become PENDING_FULL_REVIEW and cannot be finally closed, semantically admitted, or used for protected promotion until the next full-assurance review or explicitly equivalent pre-authorized evidence path completes.
+  lower_severity_rule: MEDIUM/LOW work may continue when route-specific effective-family/evidence requirements are otherwise satisfied, with reduced-assurance status recorded.
+  free_shortfall_rule: If free routes cannot satisfy route minimums, transition to REDUCED_REVIEW/WAITING_FOR_BUDGET_RESET rather than weakening thresholds.
+  reserve_boundary: Escalation reserve is part of, not additional to, the USD 1/day ceiling.
+required_tests:
+  1. TEST-SPH4-001 process enforcement claim fails without RuleEnforcementCoverageReceipt denominator
+  2. TEST-SPH4-002 protected authority/promotion rule below RE_VERIFIED blocks protected action
+  3. TEST-SPH4-003 rule hash or checker hash change stales RE_VERIFIED
+  4. TEST-SPH4-004 PROPOSED_ENVELOPE has zero canonical-promotion authority
+  5. TEST-SPH4-005 only HUMAN admission can create HUMAN_ADMITTED_ENVELOPE
+  6. TEST-SPH4-006 admitted envelope cannot self-broaden, alter authority_source, or admit successor envelopes
+  7. TEST-SPH4-007 protected ProcessVersion change cannot be admitted by Builder or ProcessChangeImpactAssessment
+  8. TEST-SPH4-008 new overlapping authoritative lane is blocked absent intentional-overlap merge rule
+  9. TEST-SPH4-009 intentional overlapping lanes cannot both issue authoritative disposition for same CycleID/stage
+  10. TEST-SPH4-010 routine budget depletion transitions to FREE_ONLY_REVIEW without exceeding USD 1/day
+  11. TEST-SPH4-011 HIGH finding under FREE_ONLY_REVIEW remains PENDING_FULL_REVIEW
+  12. TEST-SPH4-012 free-family shortfall yields REDUCED_REVIEW/WAITING rather than relaxed threshold
+required_review_before_admission:
+  1. >=3 effective independent high-quality reviewer families on same bounded process target
+  2. blind review before cross-examination
+  3. whole-source GSL-COMPARE/Reason/Proof/Evidence against v15.5 authority/HSA/evolution/DesignEpoch owners
+  4. delegation recursion adversarial proof that only HUMAN is the admission base case
+  5. process meta-authority adversarial review
+  6. enforcement coverage/audit freshness simulation
+  7. lane-overlap collision tests
+  8. budget depletion and free-only reduced-assurance simulation
+major_simplification_gate:
+  schema: SimplificationReceipt/v1
+  rule: A successor whose semantic impact is MAJOR remains MAJOR and cannot be promoted/materialized as a promoted canonical successor without a same-cycle simplification receipt.
+  qualifying_actions:
+    1. MERGED
+    2. DOWNGRADED
+    3. DEPRECATED
+    4. REMOVED
+  qualifying_targets:
+    1. process_rule
+    2. lane
+    3. record_type
+    4. process_step
+  anti_gaming: Impact classification may never be downgraded to PATCH/MINOR merely because no safe simplification exists.
+  no_safe_candidate: MAJOR remains BLOCKED_PENDING_SIMPLIFICATION. For urgent MAJOR_PROTECTED safety/constitutional repair only, HUMAN may issue NO_SAFE_SIMPLIFICATION_ATTESTATION after independent review; MAJOR_DELEGABLE has no automatic waiver.
+  receipt_fields:
+    1. cycle_id
+    2. successor_id
+    3. removed_or_simplified_objects
+    4. before_count
+    5. after_count
+    6. coverage_preserved
+    7. independent_review
+    8. rollback_condition
+audit_ladder_base_case:
+  schema: AuditRuleRoot/v1
+  authority_source: HUMAN
+  rule: The rule defining what counts as a faithful independent audit is HUMAN_ADMITTED. Its final checker is explicit human judgment exercised through the protected review interface.
+  pipeline_role: Pipeline/checkers may prepare evidence and proposed audit findings but cannot redefine the audit-root rule.
+  reverification: The audit-root rule is re-verified whenever the HUMAN changes it; unchanged human-admitted root remains the base case for lower automated audits.
+verification_binding:
+  schema: VerificationBinding/v1
+  fields:
+    1. rule_hash
+    2. checker_hash
+    3. runtime
+    4. runtime_version
+    5. environment_image_or_os
+    6. auditor_identity
+    7. auditor_role_or_method
+    8. evidence_corpus_hash
+    9. upstream_dependency_hashes
+    10. verified_at
+  rule: RE_VERIFIED is valid only for an exact VerificationBinding. Any field change moves state to AUDITED_PENDING_RE_VERIFICATION.
+  aging_default_cycles: 168
+  aging_rule: AUDITED_PENDING_RE_VERIFICATION reaching the aging threshold raises SWARM_FIX unless a risk-specific shorter threshold applies or a justified extension is admitted.
+pipeline_health_controls:
+  schema: PipelineHealthThresholds/v1
+  status: PROVISIONAL_EMPIRICAL_DEFAULTS
+  stale_evidence:
+    threshold: 3
+    window_hours: 24
+    scope: same affected semantic/protected closure
+    action: FREEZE_AFFECTED_SCOPE_AND_REESTABLISH_EXACT_HEAD_EVIDENCE
+  packet_failure:
+    rate_threshold: 0.2
+    window_packets: 20
+    minimum_samples: 10
+    action: REDUCED_OPERATION_FOR_PACKET_DEPENDENT_SEMANTIC_LANES
+  repair_debt:
+    weights:
+      CRITICAL: 10
+      HIGH: 5
+      MEDIUM: 2
+      LOW: 1
+    throttle_score: 20
+    pause_new_semantic_intake_score: 40
+    critical_age_cycles_trigger: 1
+    action: THROTTLE_OR_PAUSE_NEW_SEMANTIC_INTAKE_UNTIL_DEBT_FALLS
+  tuning: Threshold changes require ProcessChangeImpactAssessment and empirical evidence; health receipt must carry the active values.
+lane_registry_derivation:
+  schema: DerivedLaneRegistry/v1
+  sources:
+    1. active_github_workflow_files
+    2. active_chatgpt_automations
+    3. other_governed_active_lane_manifests
+  rule: LaneRegistry is mechanically derived, not manually authoritative.
+  execution_guard: Any runnable lane lacking a derived registry binding is UNREGISTERED_LANE and must fail closed before producing authoritative cycle output.
+  change_rule: New/changed lane requires LaneOverlapAssessment against the derived pre-activation registry; post-activation derivation must include it on next check.
+free_only_cross_exam:
+  schema: ReducedAssuranceCrossExam/v1
+  state: PROVISIONAL_CROSS_EXAM
+  rule: Cross-examination performed during FREE_ONLY_REVIEW is advisory/provisional even when a non-producer free family is available.
+  preferred_reviewer: Use an effective independent free family that did not produce the challenged finding when available.
+  high_critical: HIGH/CRITICAL dispositions remain PENDING_FULL_REVIEW and cannot close/admit/promote until full-assurance or explicitly equivalent authorized review completes.
+  lower_severity: MEDIUM/LOW may progress only when ordinary route evidence/family thresholds still pass; reduced-assurance status remains visible.
+execution_first_transition:
+  schema: ExecutionFirstTransition/v1
+  rule: After v1.4 candidate tracking, additional process-hardening proposals require execution-derived evidence of a new defect class (normally validated E2+ from checker/audit/incident/trace), or explicit HUMAN reopening of process design review.
+  purpose: Stop speculative rule accumulation and shift effort to executable contracts, tests, audits and re-verification.
+Existing-owner evidence: governance/PROCESS-ADMISSION-RECEIPT-v1.4-2026-09-15.json#explicit_boundaries
+
+TECHNICAL — OWNER-BOUND CANDIDATE CLAUSES
+============================================================
+
+V156-GAP-001 — Bootstrap trust root for first accepted DesignEpoch
+Owner: Technical / existing owners
+Disposition: INCORPORATE_CANDIDATE
+Source: design_deltas/v15.6/DELTASET-2026-09-13-GSL-GAP-CLOSURE.json#V156-GAP-001
+delta_id: V156-GAP-001
+title: Bootstrap trust root for first accepted DesignEpoch
+severity: HIGH
+source_refs:
+  1. [T-ARCH] §8.11
+  2. [T-IMPLEMENT] §12.35.15
+  3. SAP-008
+  4. P24
+  5. DCC-018
+  6. GSL-SELF-009
+  7. DEPOCH-002
+  8. DEPOCH-006
+  9. DEPOCH-007
+disposition: STRENGTHEN_EXISTING_TRUST_ROOT_CEREMONY
+change: Define a BootstrapTrustRootCeremony profile over the existing TrustRootCeremonyReceipt and add FrozenVerifierBinding. The first accepted DesignEpoch must bind a content-addressed ceremony transcript, named independent verifier implementations/checker roots, immutable test corpus/root, participants/witnesses/authority and explicit bootstrap scope. Before this receipt passes, a source may be SPECIFIED_DESIGNEPOCH_CANDIDATE but not ACCEPTED.
+schema_ids:
+  1. SCHEMA-977CD6ABF7
+  2. SCHEMA-B45623B44B
+do_nothing: Leaving bootstrap independence implicit permits the first verifier trust root to be selected without a machine-checkable non-self-verification ceremony; this is incompatible with P24/GSL-SELF-009 at the initial epoch boundary.
+tests:
+  1. TEST-DEPOCH-BOOT-001
+  2. test_first_epoch_requires_ceremony_transcript
+
+V156-GAP-002 — Shared-state-mediated authority composition
+Owner: Technical / existing owners
+Disposition: INCORPORATE_CANDIDATE
+Source: design_deltas/v15.6/DELTASET-2026-09-13-GSL-GAP-CLOSURE.json#V156-GAP-002
+delta_id: V156-GAP-002
+title: Shared-state-mediated authority composition
+severity: HIGH
+source_refs:
+  1. MAC-001
+  2. AGT-013
+  3. AGT-008
+  4. UPA-007
+  5. UPA-010
+  6. PROC-002
+  7. PROC-005
+  8. REL-ALG-001
+disposition: FORMALIZE_EXISTING_CONTAINMENT_RULE
+change: Action-eligible Claims/artifacts carry an AuthorityProvenanceChain. If actor B executes action a because of artifact x produced/authorized through principal/agent A, effective authority is intersection(B action authority, every controlling authority in x.authority_provenance). Shared-state handoff is an authority composition edge, not an authority reset. Empty intersection rejects execution.
+schema_ids:
+  1. SCHEMA-29C6CEDD2A
+  2. SCHEMA-8A6F0B6EA4
+do_nothing: MAC-001 states the non-amplification property but does not currently make knowledge-mediated causal reachability an explicit authority-composition input, leaving implementation latitude for A-write/B-act amplification.
+tests:
+  1. TEST-MAC-007
+  2. test_shared_state_authority_amplification
+
+V156-GAP-003 — Deterministic let binding grammar
+Owner: Technical / existing owners
+Disposition: INCORPORATE_CANDIDATE
+Source: design_deltas/v15.6/DELTASET-2026-09-13-GSL-GAP-CLOSURE.json#V156-GAP-003
+delta_id: V156-GAP-003
+title: Deterministic let binding grammar
+severity: MEDIUM
+source_refs:
+  1. [T-GSL] §12.4
+  2. LANG-001
+  3. GSL-SELF-002
+disposition: GRAMMAR_REPAIR
+change: Replace optional-expression LetExpr ambiguity with LetExpr ::= let Pattern (: Type)? = Expr in Expr and introduce LetStmt ::= let Pattern (: Type)? = Expr ;?. LetStmt is valid only in BlockExpr/module statement scope, introduces a lexical binding in that enclosing scope and has Unit result; a bare let is no longer parsed as an expression.
+schema_ids:
+  1. SCHEMA-DB03DABC62
+do_nothing: The current optional 'in Expr' permits a complete expression with no specified result/scope and forces compilers to invent semantics.
+tests:
+  1. TEST-LANG-LET-001
+  2. test_let_without_in_has_defined_scope
+
+V156-GAP-004 — Deterministic QueryStmt result semantics
+Owner: Technical / existing owners
+Disposition: INCORPORATE_CANDIDATE
+Source: design_deltas/v15.6/DELTASET-2026-09-13-GSL-GAP-CLOSURE.json#V156-GAP-004
+delta_id: V156-GAP-004
+title: Deterministic QueryStmt result semantics
+severity: MEDIUM
+source_refs:
+  1. [T-GSL] §12.4
+  2. FUNC-001..010
+  3. GSL-SELF-006
+disposition: GRAMMAR_SEMANTIC_REPAIR
+change: QueryStmt resolves a QueryResultBinding. `query Expr into ID` binds the typed query result to ID in the enclosing lexical scope. A query without `into` must target a declared module/process output sink in the active FunctionContract; otherwise compilation fails QUERY_RESULT_UNCONSUMED. Query does not implicitly mutate Knowledge or create Evidence.
+schema_ids:
+  1. SCHEMA-D17BC951EC
+do_nothing: Current grammar admits a result without specifying destination, scope or distinction from eval, defeating deterministic compilation and FunctionContract closure.
+tests:
+  1. TEST-LANG-QUERY-001
+  2. test_query_result_destination_is_explicit
+
+V156-GAP-005 — Causal-level-qualified causes relation
+Owner: Technical / existing owners
+Disposition: INCORPORATE_CANDIDATE
+Source: design_deltas/v15.6/DELTASET-2026-09-13-GSL-GAP-CLOSURE.json#V156-GAP-005
+delta_id: V156-GAP-005
+title: Causal-level-qualified causes relation
+severity: MEDIUM
+source_refs:
+  1. [T-GSL] §2.2
+  2. [T-GSL] §2.3 Causality
+  3. RSN-010
+  4. INF-013
+  5. GXE-003
+  6. REP-009
+disposition: TYPE_REFINEMENT_WITHOUT_NEW_CORE_RELATION
+change: The existing Core Relation `causes` remains one relation identity but every operational causes edge carries CausalRelationLevelBinding(level:C0..C4, model/assumption/evidence/identification refs as applicable). Consumers declare a minimum causal level; consuming a lower-level edge as a stronger level returns CAUSAL_LEVEL_UNDERFLOW. C2+ requires a declared causal/mechanistic model; C3/C4 additionally require the applicable intervention/counterfactual identification obligations.
+schema_ids:
+  1. SCHEMA-897FB2274E
+do_nothing: Existing non-amplification rules protect causal Claims but the raw relation type does not itself prevent a C0/C1 edge from being consumed as C2+ by an implementation.
+tests:
+  1. TEST-CAUSAL-LEVEL-001
+  2. test_causes_requires_explicit_level
+
+V156-GAP-006 — R0 Sanity Gate separated from Reason modes
+Owner: Technical / existing owners
+Disposition: INCORPORATE_CANDIDATE
+Source: design_deltas/v15.6/DELTASET-2026-09-13-GSL-GAP-CLOSURE.json#V156-GAP-006
+delta_id: V156-GAP-006
+title: R0 Sanity Gate separated from Reason modes
+severity: MEDIUM
+source_refs:
+  1. [S-REASON] R0..R4
+  2. PROC-020
+  3. INF-010
+  4. RSN-019
+disposition: SEMANTIC_REFINEMENT
+change: R0 remains the historical assurance-depth label for transition sanity but is typed as SanityGate, a terminating deterministic/total predicate over available transition type/scope/abstraction/obvious contradiction inputs with PASS|FAIL|UNKNOWN. Engine.Reason modes are R1..R4. Invoking R1..R4 may require SanityGate first; SanityGate does not recursively invoke Engine.Reason, closing the self-reference at the minimum tier.
+schema_ids:
+  1. SCHEMA-29A1A917BC
+do_nothing: Calling R0 a Reason tier while Reason is logically present at every meaningful transition leaves a semantic self-reference whose practical TerminationContract does not define the base case.
+tests:
+  1. TEST-REASON-R0-001
+  2. test_r0_is_not_reason_mode
+
+V156-GAP-008 — Committed provenance class manifest distinguishes redaction from absence
+Owner: Technical / existing owners
+Disposition: INCORPORATE_CANDIDATE
+Source: design_deltas/v15.6/DELTASET-2026-09-13-GSL-GAP-CLOSURE.json#V156-GAP-008
+delta_id: V156-GAP-008
+title: Committed provenance class manifest distinguishes redaction from absence
+severity: MEDIUM
+source_refs:
+  1. PROV-001..006
+  2. GXE-006
+  3. EXP-017..021
+  4. P14
+  5. AUD-011
+disposition: PROVENANCE_STRENGTHENING
+change: High-assurance provenance views carry a ProvenanceClassManifest committed by Merkle/content root. The manifest declares expected node classes and edge kinds without exposing protected payloads. For an authorized view, an expected-but-undisclosed class is REDACTED/PROTECTED with a commitment; an expected class with no valid committed node/edge is PROVENANCE_GAP; a class outside the declared applicable manifest is NOT_APPLICABLE. Redaction metadata remains privacy-minimized.
+schema_ids:
+  1. SCHEMA-1A6E45501B
+  2. SCHEMA-30D7E367A8
+do_nothing: PROV-005 requires protected gaps to be declared but the returned lineage view lacks a machine-checkable way to distinguish redaction from true absence without inspecting hidden graph state.
+tests:
+  1. TEST-PROV-MANIFEST-001
+  2. test_redaction_distinct_from_absence
+
+V156-CON-EVT-001 — ConstitutionalEvent cross-field coherence
+Owner: Technical / existing owners
+Disposition: INCORPORATE_CANDIDATE
+Source: design_deltas/v15.6/DELTASET-2026-09-14-CONSTITUTIONAL-EVENT-HARDENING.json#V156-CON-EVT-001
+delta_id: V156-CON-EVT-001
+title: ConstitutionalEvent cross-field coherence
+severity: HIGH
+source_refs:
+  1. [T-CONSTITUTIONAL-EVENTS]
+  2. SCHEMA-92D37B160F
+  3. CON-EVT-001
+  4. CON-EVT-002
+  5. TEST-CON-EVT-001
+  6. TEST-CON-EVT-002
+disposition: STRENGTHEN_EXISTING_SCHEMA_CONSTRAINTS
+change: Add machine-checkable cross-field constraints to the existing ConstitutionalEvent schema. check_result=PASS MUST imply kind=CHECK; kind=VIOLATION MUST NOT coexist with check_result=PASS. A recorded/observable event is not a blocking predicate by itself: PASS/CHECK remains eligible for ordinary flow when all other gates pass. Existing Constitution/Policy UNKNOWN and INCONCLUSIVE fail-closed semantics remain the owner; the ConstitutionalEvent binding must preserve them and MUST NOT locally guess stronger enum mappings or convert unresolved state to PASS.
+schema_ids_modified:
+  1. SCHEMA-92D37B160F
+schema_ids_added:
+do_nothing: The current schema independently enumerates kind and check_result while TEST-CON-EVT-001/002 imply a relationship. Leaving the relationship unenforced permits contradictory typed events and consumer-dependent interpretation.
+tests:
+  1. TEST-CON-EVT-005: reject ConstitutionalEvent(kind=VIOLATION, check_result=PASS)
+  2. TEST-CON-EVT-006: PASS+CHECK recorded/observable remains eligible for ordinary flow when all other gates pass
+  3. TEST-CON-EVT-007: ConstitutionalEvent consumer cannot promote existing UNKNOWN|INCONCLUSIVE owner state to PASS
+
+V156-CON-EVT-002 — Separate containment admission from ConstitutionalEvent
+Owner: Technical / existing owners
+Disposition: INCORPORATE_CANDIDATE
+Source: design_deltas/v15.6/DELTASET-2026-09-14-CONSTITUTIONAL-EVENT-HARDENING.json#V156-CON-EVT-002
+delta_id: V156-CON-EVT-002
+title: Separate containment admission from ConstitutionalEvent
+severity: HIGH
+source_refs:
+  1. [T-CONSTITUTIONAL-EVENTS]
+  2. SCHEMA-92D37B160F
+  3. CON-EVT-003
+  4. Decision primitive
+  5. ExecutionAdmissionToken SCHEMA-3884EC4D30
+  6. Authority primitive
+disposition: MAKE_EXISTING_AUTHORITY_SEPARATION_MACHINE_TRACEABLE
+change: A ConstitutionalEvent, VETO, VIOLATION classification, evidence_refs, containment_criteria_result, routing, severity or event existence MUST NOT itself authorize containment/restriction. Any executed containment/restriction MUST be traceably bound to a separately verified applicable authority/action/admission decision under existing scope, expiry, evidence, safety, privacy and freshness rules. Preserve ConstitutionalEvent immutability: prefer a later immutable link from the containment/action/admission artifact back to the event instead of writing later authority into the original event. Reuse the existing canonical authority/action/ContainmentAction/ExecutionAdmissionToken owner that is applicable during propagation; no competing authority source is introduced.
+schema_ids_modified:
+  1. SCHEMA-92D37B160F
+schema_ids_added:
+do_nothing: CON-EVT-003 states the separation in prose, but the current ConstitutionalEvent contract contains containment criteria/evidence/routing fields without a machine-visible proof that an executed restriction was independently authorized. A consumer can therefore conflate event metadata with authorization unless the link is made traceable.
+tests:
+  1. TEST-CON-EVT-008: VETO/VIOLATION + containment criteria + no valid separate authorization/action receipt => offending transition remains blocked and containment does not execute
+  2. TEST-CON-EVT-009: stale/revoked/mismatched containment authorization => no containment execution; original constitutional block remains independently effective
+  3. TEST-CON-EVT-010: valid separately authorized containment action executes only within its own authority/scope and does not mutate the original ConstitutionalEvent
+
+V156-CON-EVT-003 — Non-amplifying ConstitutionalEvent observability binding
+Owner: Technical / existing owners
+Disposition: INCORPORATE_CANDIDATE
+Source: design_deltas/v15.6/DELTASET-2026-09-14-CONSTITUTIONAL-EVENT-HARDENING.json#V156-CON-EVT-003
+delta_id: V156-CON-EVT-003
+title: Non-amplifying ConstitutionalEvent observability binding
+severity: MEDIUM
+source_refs:
+  1. Human CONSTITUTIONAL EVENTS observability requirement
+  2. SCHEMA-92D37B160F
+  3. Privacy/minimization/access-control owner
+  4. Security/Authority owner
+  5. Provenance privacy-aware disclosure
+  6. Event-Service query/route surface
+disposition: BIND_EVENT_PROJECTION_TO_EXISTING_PRIVACY_AUTHORITY
+change: ConstitutionalEvent observability is an authority-preserving projection, not payload-disclosure or dereference authority. Observing, routing, subscribing to or querying an event MUST NOT grant authority to read protected evidence_refs, rights context, identity data or other protected payloads. Referenced data retains its source consent, access-control, taint, minimization, confidentiality, redaction, retention and jurisdiction constraints. Event projections expose only fields authorized for the observer/purpose; separately authorized audit access remains separately scoped. Prefer an explicit Event-Service/Security/Privacy binding rather than a ConstitutionalEvent-specific duplicate privacy subsystem.
+schema_ids_modified:
+  1. SCHEMA-92D37B160F
+schema_ids_added:
+do_nothing: The source already has privacy and authority owners, but the event observability/query boundary is not explicit enough for a machine checker to prove that event visibility cannot amplify evidence/context visibility.
+tests:
+  1. TEST-CON-EVT-013: unauthorized subscriber receives only permitted event projection and cannot dereference protected evidence/context
+  2. TEST-CON-EVT-014: authorized auditor receives only evidence permitted by its valid scope/purpose
+  3. TEST-CON-EVT-015: event subscription/query capability cannot be exchanged for evidence-read or containment capability
+
+HCA-002 — Behavioral, normative and mechanism drift audit
+Owner: Technical / existing owners
+Disposition: INCORPORATE_CANDIDATE
+Source: design_deltas/v15.6/DELTASET-2026-09-14-HISTORICAL-CHAT-RECOVERY.json#HCA-002
+candidate_id: HCA-002
+title: Behavioral, normative and mechanism drift audit
+status: WORTHY_PENDING_EQUIVALENCE_AND_MULTI_MODEL_REVIEW
+proposed_owners:
+  1. Engine.Evolve
+  2. Engine.Compliance
+  3. Engine.Policy
+cooperating_existing_mechanisms:
+  1. DesignEpoch
+  2. DesignBinding
+  3. ReviewerCalibration
+  4. Engine.Compare
+  5. Mechanistic Interpretability
+  6. Continuous Failure Learning
+problem: Garden strongly covers declared design/source drift and dependency invalidation. Historical discussions identified a narrower risk: deployed behavior, policy meaning, routing/retrieval patterns or effective enforcement may drift materially even when no obvious canonical source diff explains the change.
+minimal_change: Add a bounded drift-audit receipt/profile that compares version-bound canonical conformance vectors and declared behavioral/mechanism baselines against observed outputs, policy effects, routing/retrieval behavior and enforcement outcomes. Material unexplained drift becomes a revalidation/incident finding rather than a silent semantic change.
+hard_limits:
+  1. Observed behavioral difference is not automatically proof of normative change or misalignment.
+  2. A drift detector cannot create policy, authority or rollback authority by itself.
+  3. Privacy-protected internal telemetry remains purpose-limited and minimized.
+  4. Legitimate context-dependent behavior must not be flattened into false invariance.
+tests:
+  1. Same canonical policy and declared context with materially shifted enforcement distribution produces a drift finding.
+  2. A declared context/profile change with correct DesignEpoch/validity binding is not mislabeled as silent drift.
+  3. Unexplained routing/retrieval shift affecting consequential decisions reopens applicable assurance.
+
+HCA-006 — SCEP / Swarm Construction & Epistemic Bounty implementation profile
+Owner: Technical / existing owners
+Disposition: REUSE_EXISTING_IMPLEMENTATION_PROFILE
+Source: design_deltas/v15.6/DELTASET-2026-09-14-HISTORICAL-CHAT-RECOVERY.json#HCA-006
+candidate_id: HCA-006
+title: SCEP / Swarm Construction & Epistemic Bounty implementation profile
+status: WORTHY_IMPLEMENTATION_PROFILE_NOT_SOURCE_DELTA_UNLESS_NEW_GAP_FOUND
+proposed_scope: Operational profile over OCF/CPI/TML/CMUR/Evolve/Orchestrate/GSL-KR rather than a new architecture object.
+recovered_mechanisms:
+  1. bounded work packages tied to unresolved obligations/gaps
+  2. verified epistemic or construction progress rewarded rather than raw volume
+  3. technical credits/rewards remain separate from authority
+  4. independent reviewer/verifier/red-team roles and correlation/Sybil checks
+  5. privilege rings and frozen/independent verifier roots
+  6. local-first bootstrap with scoped network/resource caps and honest BLOCKED states
+  7. composition gate before integration
+current_overlap: WP-009H already requires semantic convergence among public prototype, private evolution kernel and SCEP bootstrap implementations. Preserve SCEP as an implementation/profile lineage, not a duplicate semantic owner.
+hard_limits:
+  1. Bounty/credit cannot create governance authority or epistemic truth.
+  2. No self-certification.
+  3. No PASS-by-volume/majority.
+
+HCA-007 — Justice-system end-to-end expansion — recovered scope refinement
+Owner: Technical / existing owners
+Disposition: INCORPORATE_SCOPE_AND_GUARDRAILS_ONLY
+Source: design_deltas/v15.6/DELTASET-2026-09-14-HISTORICAL-CHAT-RECOVERY.json#HCA-007
+candidate_id: HCA-007
+title: Justice-system end-to-end expansion — recovered scope refinement
+status: ALREADY_PENDING_LEDGER_ITEM_D4_REFINE_NOT_DUPLICATE
+recovered_scope:
+  1. complaint/intake
+  2. investigation
+  3. prosecution or civil claim
+  4. defense
+  5. evidence/chain of custody
+  6. trial/adjudication
+  7. judgment/remedy/sentence
+  8. appeal/constitutional review
+  9. enforcement
+  10. rehabilitation/restoration
+  11. systemic audit
+recovered_hard_separations:
+  1. investigator != prosecutor != judge != executioner where the legal system requires separated roles
+  2. allegation != observation != evidence != inference != finding != guilt/liability
+  3. no collective guilt
+  4. no automated punishment authority
+  5. standard of proof, provenance, jurisdiction, rights, appeal and explanation remain explicit
+
+HCA-008 — Outcome-based memory utility evaluation
+Owner: Technical / existing owners
+Disposition: INCORPORATE_CANDIDATE
+Source: design_deltas/v15.6/DELTASET-2026-09-14-HISTORICAL-CHAT-RECOVERY.json#HCA-008
+candidate_id: HCA-008
+title: Outcome-based memory utility evaluation
+status: SUBCANDIDATE_OF_KR_CEA_NOT_SEPARATE_ENGINE
+proposed_owner: Capability.Knowledge
+minimal_change: For retained non-mandatory memory/summary candidates, record whether later use improved prediction, decision quality, retrieval efficiency, error detection or reconstruction under declared metrics, while protecting mandatory evidence/history from utility-based deletion. Memory usefulness affects ranking/compression/retention proposals only; it does not promote truth or authority.
+hard_limits:
+  1. Legally/evidentially required history cannot be deleted merely because measured utility is low.
+  2. Outcome correlation does not prove causal value without the applicable causal obligations.
+
+DELTASET-2026-09-14-KR-CEA — GSL-KR Continuous Epistemic Assimilation & Consolidation (KR-CEA) v1.0
+Owner: Technical / Capability.Knowledge and cooperating existing owners
+Disposition: INCORPORATE_CANDIDATE
+Source: design_deltas/v15.6/DELTASET-2026-09-14-KR-CEA.json
+schema: GardenDesignDeltaSet/v1
+delta_set_id: DELTASET-2026-09-14-KR-CEA
+predecessor_release: Garden v15.5
+predecessor_source_root_sha256: 63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598
+candidate_release: Garden v15.6
+status: CANDIDATE_NOT_RATIFIED_NEEDS_REQUIRED_MULTI_MODEL_REVIEW_AND_GSL_COMPARE
+canonical_predecessor_immutable: True
+topology_change: False
+new_top_level_engines: 0
+new_authority_source: False
+title: GSL-KR Continuous Epistemic Assimilation & Consolidation (KR-CEA) v1.0
+purpose: Make continuous runtime learning, multi-agent knowledge accumulation, loss-aware distillation, model-consolidation candidacy and knowledge-dividend accounting explicit while preserving a categorical boundary between epistemic improvement and authority/constitutional change.
+core_principle: runtime cognition != persistent knowledge != model/scaffold consolidation != authority != constitutional change
+existing_owner_reuse:
+  1. Capability.Knowledge
+  2. Engine.Search
+  3. Engine.Compare
+  4. Engine.Reason
+  5. Engine.Proof
+  6. Provenance
+  7. BeliefTimeline
+  8. EpistemicTransition
+  9. Continuous Failure Learning
+  10. HistoricalSemanticSummary
+  11. dependency-aware revalidation
+  12. DesignEpoch where design semantics actually change
+  13. Human Sovereignty / Privacy / Constitution
+  14. existing safety and authority gates
+proposed_artifacts:
+  1.
+    name: EpistemicDeltaCandidate
+    disposition: KEEP_NEW_CANDIDATE_ARTIFACT
+    minimum_bindings:
+      1. source/provenance
+      2. temporal scope
+      3. applicable context
+      4. privacy classification
+      5. claim/evidence refs
+      6. novelty class
+      7. uncertainty/confidence
+      8. contradiction refs
+      9. derivation lineage
+      10. originating model/agent/tool/version
+      11. retention class
+  2.
+    name: KnowledgeAssimilationReceipt
+    disposition: KEEP_NEW_TRANSITION_RECEIPT
+    terminal_states:
+      1. ACCEPTED
+      2. REJECTED
+      3. MERGED
+      4. CONFLICTED
+      5. UNKNOWN
+      6. VERIFY_MORE
+      7. PRIVACY_OR_AUTHORITY_RESTRICTED
+      8. DUPLICATE
+      9. STALE_OR_POISONED
+  3.
+    name: KnowledgeCompressionReceipt
+    disposition: KEEP_RECEIPT_REUSE_EXISTING_SUMMARY_OWNERS
+    boundary: Loss-aware compression should normally emit/reuse HistoricalSemanticSummary or other existing knowledge artifacts rather than create a competing summary owner.
+  4.
+    name: CrossContextPatternReceipt
+    disposition: PROFILE_OR_RECEIPT_CANDIDATE_PENDING_COLLISION_REVIEW
+    boundary: Cross-context inference requires explicit lawful/privacy authority to perform the join and does not imply universal raw-data visibility.
+  5.
+    name: ModelConsolidationCandidate
+    disposition: REUSE_OR_PROFILE_EXISTING_EVOLUTION_CANDIDATE_MACHINERY_IF_ADEQUATE
+    target_kinds:
+      1. MODEL
+      2. SCAFFOLD
+      3. VERIFIER
+      4. TOOL
+      5. POLICY_IMPLEMENTATION
+    boundary: Acceptance does not mutate deployed model weights or privileged scaffolding.
+learning_strata:
+  1. A_EPHEMERAL_COGNITION
+  2. B_GOVERNED_PERSISTENT_KNOWLEDGE
+  3. C_LOSS_AWARE_DURABLE_DISTILLATION
+  4. D_MODEL_OR_SCAFFOLD_CONSOLIDATION_CANDIDATE
+  5. E_PROTECTED_NORMATIVE_ROOT
+candidate_invariants:
+  1. KR-CEA-001 Knowledge != Authority
+  2. KR-CEA-002 Runtime Learning Without Weight Mutation
+  3. KR-CEA-003 Provenance Before Promotion
+  4. KR-CEA-004 Contradictions Survive Assimilation
+  5. KR-CEA-005 Privacy-Bounded Correlation
+  6. KR-CEA-006 Distillation Is Loss-Declared
+  7. KR-CEA-007 No Automatic Constitutional Promotion
+  8. KR-CEA-008 Poisoning Does Not Self-Amplify
+  9. KR-CEA-009 Derived Data Retains Lineage
+  10. KR-CEA-010 New Knowledge Revalidates Dependents
+  11. KR-CEA-011 Retrieval Beats Rediscovery Where Valid
+  12. KR-CEA-012 Model Upgrade Is Separately Governed
+  13. KR-CEA-013 Corroboration Independence Is Lineage-Aware
+  14. KR-CEA-014 Reuse Requires Current Applicability
+candidate_tests:
+  1. TEST-KR-CEA-001 verified novel fact becomes retrievable without weight update
+  2. TEST-KR-CEA-002 unsupported repetition does not become Knowledge by multiplicity
+  3. TEST-KR-CEA-003 contradictory accepted evidence updates BeliefTimeline and revalidates dependents
+  4. TEST-KR-CEA-004 authorized cross-context pattern correlation succeeds
+  5. TEST-KR-CEA-005 forbidden cross-context join remains inaccessible
+  6. TEST-KR-CEA-006 lossy compression cannot claim complete reconstruction
+  7. TEST-KR-CEA-007 high-confidence scientific discovery cannot alter constitutional authority
+  8. TEST-KR-CEA-008 validated discovery is reused without needless rediscovery when independence is not required
+  9. TEST-KR-CEA-009 synthetic repetition with common ancestry is not independent corroboration
+  10. TEST-KR-CEA-010 ModelConsolidationCandidate cannot mutate deployed weights without separate evolution path
+  11. TEST-KR-CEA-011 100000 synthetic reports derived from one unsupported source do not increase independent-evidence count
+  12. TEST-KR-CEA-012 stale or scope-mismatched retrieved knowledge cannot substitute for current applicable knowledge
+knowledge_dividend_measurement:
+  status: KEEP_AS_TYPED_MEASUREMENT_FAMILY_NOT_AUTHORITY_SUBSYSTEM
+  concept: validated future cognition avoided or improved / cost of producing + validating + maintaining the knowledge
+  suggested_metrics:
+    1. raw cognitive tokens/compute
+    2. verification cost
+    3. durable validated knowledge size
+    4. subsequent valid reuses
+    5. duplicate work avoided
+    6. recomputation avoided
+    7. stale/invalid reuse count
+    8. revalidation cost
+    9. compression ratio
+    10. declared epistemic loss budget
+    11. benefiting agents/tasks
+    12. time to obsolescence
+do_nothing: v15.5 already contains knowledge persistence, historical summaries, belief transitions, continuous failure learning and dependency-aware revalidation, but it does not yet make the full immediate runtime-cognition -> governed reusable knowledge -> separately governed model-consolidation pipeline and knowledge-dividend accounting explicit enough to prevent repeated rediscovery or accidental coupling of knowledge promotion with authority.
+required_review_before_admission:
+  1. GSL-COMPARE against complete v15.5 ownership/reference closure
+  2. >=3 independent qualified reviewer families on the same bounded KR target, preferably 4+
+  3. blind findings before peer cross-examination
+  4. evidence-lineage independence analysis
+  5. cross-document owner/collision review
+  6. applicable Compare/Reason/Proof/Evidence + AAP + authority/ActionGate
+  7. no duplicate artifacts where existing owners are adequate
+promotion_boundary: This file is tracking only. It does not ratify KR-CEA, edit v15.5, create authority, change constitutional semantics, or promote Garden v15.6.
+
+MAA-001 — Hazard-monotonic emergency action selection
+Owner: Technical / existing owners
+Disposition: INCORPORATE_CANDIDATE
+Source: design_deltas/v15.6/DELTASET-2026-09-14-MULTI-AGENT-ARCHIVE-RECOVERY.json#MAA-001
+candidate_id: MAA-001
+title: Hazard-monotonic emergency action selection
+status: V15_6_CANDIDATE_PENDING_EQUIVALENCE_AND_MULTI_MODEL_REVIEW
+historical_provenance: Early GAIA safety-control lineage, February 2026, independently iterated across the exported agent histories.
+proposed_owners:
+  1. GSL-PHYSICS
+  2. EmergencyAdmissionContract
+  3. Engine.Reason
+current_overlap: v15.5 already has HazardPredicate, SafetyEnvelope, EmergencyAdmissionContract, bounded SafeActionSet, authority/scope/expiry, recovery and audit. The residual is an explicit selection/dominance rule inside an already-authorized emergency action set.
+problem: Ordinary comfort/performance/nominal limits can conflict with immediate hazard reduction. A safe system should not reject a stronger pre-authorized emergency action merely because it exceeds an ordinary soft limit when that action demonstrably reduces the controlling hazard and remains inside all higher-priority hard bounds.
+minimal_change: Within an already valid EmergencyAdmissionContract, permit candidate actions to be compared by typed hazard deltas. An action may relax only declared soft/ordinary bounds when it is inside the pre-authorized emergency envelope, lowers the controlling hazard under the declared model/uncertainty treatment, and violates no Constitution/rights/K0P/authority/physical hard invariant. Preserve incomparability/UNKNOWN and safe fallback when dominance is not established.
+hard_limits:
+  1. Never creates emergency authority.
+  2. Never relaxes Constitution/rights/K0P/authority or physical hard invariants.
+  3. Reducing one hazard cannot hide creation of a higher-priority hazard.
+  4. Model uncertainty and stale calibration remain explicit; no fabricated monotonicity.
+tests:
+  1. Emergency braking beyond an ordinary comfort bound is admissible only when already authorized, physically safe and hazard-reducing.
+  2. A candidate that reduces collision risk but violates a higher-priority structural hard bound is rejected.
+  3. When hazard ordering is incomparable or model uncertainty exceeds the profile bound, the selector returns UNKNOWN/SAFE_FALLBACK rather than inventing dominance.
+
+MAA-002 — Versioned unsafe-region / infeasibility memory for planning reuse
+Owner: Technical / existing owners
+Disposition: INCORPORATE_CANDIDATE
+Source: design_deltas/v15.6/DELTASET-2026-09-14-MULTI-AGENT-ARCHIVE-RECOVERY.json#MAA-002
+candidate_id: MAA-002
+title: Versioned unsafe-region / infeasibility memory for planning reuse
+status: V15_6_CANDIDATE_SUBCANDIDATE_OF_KR_CEA_PENDING_EQUIVALENCE_REVIEW
+historical_provenance: Early GAIA iterations repeatedly introduced bounded memory of infeasible/dangerous control regions so later planning could avoid rediscovering the same failure.
+proposed_owners:
+  1. Capability.Knowledge
+  2. Engine.Search
+  3. Engine.Reason
+current_overlap: Garden already stores counterexamples/corrections and KR-CEA preserves provenance, contradiction, lineage and revalidation. The residual is a typed state/action/trajectory-region representation usable as a scoped planning-pruning constraint rather than only a textual counterexample.
+minimal_change: Represent a proven or evidence-supported unsafe/infeasible region as a scoped knowledge candidate carrying domain/state variables, action/trajectory bounds, evidence/proof class, assumptions, validity interval, model/version binding, uncertainty margin, falsifiers and revalidation triggers. Retrieval may prune or penalize future search only within the recorded applicability scope.
+hard_limits:
+  1. One failure does not create a universal prohibition.
+  2. Statistical association is not promoted to physical impossibility without applicable causal/proof obligations.
+  3. Version/context/model changes trigger revalidation before reuse.
+  4. Rights or authority cannot be inferred from a no-go region.
+tests:
+  1. A formally proven infeasible control region is reused under the same bound model without full rediscovery.
+  2. A changed vehicle/model/environment invalidates or narrows a stale no-go region.
+  3. A noisy adverse outcome is retained as evidence/counterexample but cannot silently become a hard forbidden region.
+
+MAA-003 — Adversarial precedent revalidation for the pending justice workstream
+Owner: Technical / existing owners
+Disposition: INCORPORATE_CANDIDATE
+Source: design_deltas/v15.6/DELTASET-2026-09-14-MULTI-AGENT-ARCHIVE-RECOVERY.json#MAA-003
+candidate_id: MAA-003
+title: Adversarial precedent revalidation for the pending justice workstream
+status: V15_6_CANDIDATE_REFINEMENT_OF_HCA_007_NOT_SEPARATE_ENGINE
+historical_provenance: May 2026 Digital Garden governance lineage proposed periodically re-testing settled normative precedents rather than allowing accumulated precedent to become self-sealing.
+proposed_owners:
+  1. Pending justice-system expansion
+  2. Engine.Compliance
+  3. Capability.Knowledge
+current_overlap: HCA-007 already preserves the end-to-end justice pipeline and hard epistemic/due-process separations. HCA-002 covers behavioral/normative drift generally. This item specializes revalidation to precedent/case-law-like normative memory.
+minimal_change: For high-impact or dependency-central precedents, support bounded revalidation triggers such as materially changed law, evidence, facts, social/technical context, conflicting later decisions, measured disparate effects, or held-out adversarial replay. Revalidation may preserve, narrow, distinguish, supersede or reopen a precedent; it does not automatically reverse outcomes or create punishment authority.
+hard_limits:
+  1. Finality, reliance interests, jurisdiction, appeal rules and lawful retroactivity constraints remain explicit.
+  2. Random disagreement alone does not reopen every case.
+  3. No AI-only re-litigation can bypass legally required human process.
+  4. Protected personal data is minimized and purpose-limited.
+tests:
+  1. A precedent whose governing law has materially changed is flagged for scoped revalidation.
+  2. A stable precedent is not reopened merely because another model votes differently.
+  3. Revalidation findings cannot silently alter a final judgment where lawful procedure requires a separate appeal/review path.
+
+MAA-004 — Change-complexity and assurance-burden accounting for upgrades
+Owner: Technical / existing owners
+Disposition: REUSE_EXISTING_COMPARE_GCL_MEASUREMENT_PROFILE
+Source: design_deltas/v15.6/DELTASET-2026-09-14-MULTI-AGENT-ARCHIVE-RECOVERY.json#MAA-004
+candidate_id: MAA-004
+title: Change-complexity and assurance-burden accounting for upgrades
+status: V15_6_CANDIDATE_IMPLEMENTATION_METRIC_PROFILE_LIKELY_SUBSUMED_BY_GCL_RESOURCE_COMPARE
+historical_provenance: From the earliest GAIA refinement loop onward, upgrades were repeatedly constrained by explicit size/complexity budgets while seeking maximum safety/function gain.
+proposed_owners:
+  1. Engine.Compare
+  2. GCL
+  3. Resource/assurance metrics
+current_overlap: GCL already normalizes effect by intervention measure and Garden already checks lifecycle/cost/resource/testability. No new causal-leverage theory is needed.
+minimal_change: For engineering/design deltas, optionally publish a ChangeComplexityReceipt decomposing semantic surface added/removed, dependency fan-out, code/spec delta, runtime/resource delta, migration cost, new verification obligations and long-term maintenance burden. Feed that typed measure into existing Compare/GCL rather than treating raw line count as universal complexity.
+hard_limits:
+  1. A small diff is not automatically safer or better.
+  2. Security/safety/rights requirements cannot be rejected merely to satisfy a complexity budget.
+  3. Metrics must not Goodhart into code-golf or hidden complexity.
+tests:
+  1. Two functionally equivalent upgrades can be compared on declared assurance/migration burden, not only LOC.
+  2. A tiny diff with large dependency fan-out is not mislabeled low-complexity.
+  3. A required safety fix remains admissible even when it exceeds a nominal complexity budget, with the excess explicitly recorded.
+
+MAA-005 — Temporal authority snapshot / anti-retroactive authorization binding
+Owner: Technical / existing owners
+Disposition: INCORPORATE_CANDIDATE
+Source: design_deltas/v15.6/DELTASET-2026-09-14-MULTI-AGENT-ARCHIVE-RECOVERY.json#MAA-005
+candidate_id: MAA-005
+title: Temporal authority snapshot / anti-retroactive authorization binding
+status: V15_6_CANDIDATE_PENDING_EQUIVALENCE_AND_MULTI_MODEL_REVIEW
+historical_provenance: June-July 2026 Digital Garden transaction/event architecture: cross-agent review explicitly separated claim/event valid time from the authority snapshot used at actual acceptance/linearization, to prevent backdated records from gaining permissions retroactively.
+proposed_owners:
+  1. GSL.AUTHORITY
+  2. GSL.VALIDITY
+  3. Engine.Policy
+  4. Engine.Compliance
+current_overlap: v15.5 already distinguishes semantic Version from time/context/scope Validity and requires scoped, expiring, revocable authority with provenance. The residual is an explicit binding rule for consequential admission: the authority/policy state used to authorize an accepted transition must be tied to the declared authoritative acceptance/linearization boundary, rather than silently inferred from a backdated event/claim valid time.
+minimal_change: For consequential admissions whose legality/permission depends on time-varying authority, bind an immutable AuthorizationEvaluationContext containing the authoritative acceptance/linearization time or domain-equivalent commit boundary; policy/authority/credential/delegation snapshot identifiers; actor/context/jurisdiction; and the separately represented event/valid time. A historical or backdated Claim may describe a past-valid fact but cannot thereby manufacture permission that was absent at acceptance. Where law explicitly permits retroactive legal effect, represent that as a separately authorized domain rule/decision rather than falsifying the authorization timestamp.
+hard_limits:
+  1. Does not create authority and does not expand any credential/delegation scope.
+  2. Does not require one global clock or global linearization point; use the domain's declared authoritative admission/commit boundary.
+  3. Does not prohibit lawfully retroactive statutes, judgments, corrections or accounting effects; their retroactive effect must itself be authorized and represented explicitly.
+  4. Historical replay may evaluate the historical snapshot for explanation, but replay cannot silently create current execution authority.
+  5. Revocation/expiry races and distributed-clock uncertainty must follow a declared cutover/profile rule or remain BLOCKED/UNKNOWN rather than choosing the more permissive time silently.
+tests:
+  1. A transfer submitted after a credential was revoked cannot regain execution permission by declaring a valid_time from before revocation.
+  2. A historical observation accepted today may retain its past event/valid time as evidence without acquiring present action authority.
+  3. A lawfully retroactive adjudication is represented as a currently authorized decision with an explicit retroactive-effect rule, not as a forged earlier acceptance time.
+  4. When revocation and acceptance ordering cannot be established within the declared temporal profile, consequential admission returns BLOCKED/UNKNOWN instead of silently selecting the permissive snapshot.
+
+EXT-1 — 1. Normalize emergency source-independence semantics
+Owner: Technical / existing Emergency, Consent, Event and review owners
+Disposition: INCORPORATE_CANDIDATE
+Source: ankitdcx/garden-swarm:NEXT_RELEASE_HARDENING.md#1. Normalize emergency source-independence semantics
+complete_specification: 1. Normalize emergency source-independence semantics
+
+### Problem
+
+v15.5 contains a wording conflict:
+
+- Annexure `EMG-003` uses `>=2 independent sensors`;
+- the Technical emergency detector states that required source diversity/independence is hazard/profile-specific and that a universal sensor count is not assumed.
+
+### Candidate normalized rule
+
+`EMG-003` successor wording:
+
+> Emergency triggers SHALL satisfy the source-diversity/independence requirement defined by the applicable hazard/profile. No universal sensor-count constant is assumed. Nominally distinct observations that share a material common source, control path, calibration dependency or failure mode SHALL NOT be counted as independent merely by multiplicity.
+
+Additional hardening:
+
+> Self-generated urgency, internal preference/confidence/valence/model state, or evidence causally controlled solely by the acting cognition whose authority would expand cannot by itself satisfy the independent external-hazard evidence requirement.
+
+### Regression tests
+
+1. Two sensors derived from one upstream feed do not count as two independent sources.
+2. Agent-generated urgency text cannot establish external hazard.
+3. Stale/forged attestation yields STALE/BLOCKED/UNKNOWN as applicable.
+4. Unresolved common-mode dependence remains INCONCLUSIVE/UNKNOWN.
+5. A profile may require one, two, or more sources only when justified by its hazard/evidence contract; the count is not a universal Garden constant.
+
+
+
+EXT-2 — 2. Typed consent-validity assessment
+Owner: Technical / existing Emergency, Consent, Event and review owners
+Disposition: INCORPORATE_CANDIDATE
+Source: ankitdcx/garden-swarm:NEXT_RELEASE_HARDENING.md#2. Typed consent-validity assessment
+complete_specification: 2. Typed consent-validity assessment
+
+### Problem
+
+Garden already requires coerced, stale, ambiguous or poorly understood consent to default to preserve/DO_NOTHING where applicable and already separates `ConsentContract` from `UnderstandingRecord`. The residual risk is implementation-level conflation of authentication/signature with proof of informed and voluntary consent.
+
+### Candidate artifact
+
+Name provisional pending collision/equivalence review:
+
+`ConsentValidityAssessment`
+
+Suggested semantic fields:
+
+- `subject_ref` / competent principal binding;
+- requested action/effect/scope;
+- identity/authentication evidence;
+- freshness/expiry/revocation state;
+- disclosure/explanation reference;
+- `UnderstandingRecord` / comprehension evidence;
+- voluntariness/coercion evidence and limitations;
+- applicable domain/jurisdiction/profile requirements;
+- independent-review requirement where applicable;
+- material invalidators;
+- DesignEpoch / KnowledgeSnapshot / environment bindings;
+- provenance;
+- status:
+  `VALID_FOR_SCOPE | INVALID | UNKNOWN | INCONCLUSIVE | STALE | BLOCKED`.
+
+### Candidate hard rules
+
+1. Signature/authentication establishes only the properties supported by its declared identity/act assumptions; it does not by itself prove voluntariness, freedom from coercion, or comprehension.
+2. When voluntariness/comprehension is a required condition and is not adequately evidenced, status cannot be `VALID_FOR_SCOPE`.
+3. `UNKNOWN`/`INCONCLUSIVE` follows the applicable preserve/deny/escalate semantics rather than optimistic admission.
+4. Model confidence, reputation, prediction of likely agreement, or majority preference cannot manufacture consent.
+5. Material change in action, effect, risk, explanation, environment, scope, subject state, or governing requirement invalidates prior consent as applicable.
+6. Consent validity does not replace legality, rights, safety, policy, evidence or capability gates.
+
+### Regression tests
+
+1. Valid signature + stale/revoked scope -> STALE/INVALID.
+2. Valid signature + missing required comprehension evidence -> UNKNOWN/INCONCLUSIVE.
+3. Valid signature + credible coercion evidence -> INVALID/BLOCKED/review under the profile.
+4. No consent + high model confidence the person would agree -> no authorization.
+5. Material effect/risk delta after valid consent -> re-consent/review required.
+6. R2/R3 replay or mutation of consent artifacts -> external gate rejects unless authoritative current state is independently established.
+
+
+
+EXT-3 — 3. External-review regression bundle
+Owner: Technical / existing Emergency, Consent, Event and review owners
+Disposition: INCORPORATE_CANDIDATE
+Source: ankitdcx/garden-swarm:NEXT_RELEASE_HARDENING.md#3. External-review regression bundle
+complete_specification: 3. External-review regression bundle
+
+Preserve these scenarios even when the current design already contains the intended safeguard:
+
+- shared-memory / retrieved-context poisoning of a higher-authority agent;
+- stale flattened summaries / learned policies after DesignEpoch change;
+- A -> B -> C delegation-chain authority amplification;
+- subverted proposer targeting ActionGate inputs/checkers;
+- attested R0/R1 isolation from R2/R3 writable authority;
+- common-mode emergency sensors posing as independent;
+- authentic-but-insufficient consent evidence.
+
+A successor should add these as executable tests where the runtime/security harness exists rather than treating prose coverage as execution evidence.
+
+
+
+EXT-5 — 5. Mechanically derived ReviewPacket and reviewer-ordering hardening
+Owner: Technical / existing Emergency, Consent, Event and review owners
+Disposition: INCORPORATE_CANDIDATE
+Source: ankitdcx/garden-swarm:NEXT_RELEASE_HARDENING.md#5. Mechanically derived ReviewPacket and reviewer-ordering hardening
+complete_specification: 5. Mechanically derived ReviewPacket and reviewer-ordering hardening
+
+Status: **CANDIDATE / NOT RATIFIED / NEEDS REQUIRED REVIEW**
+
+Source evidence: bounded ChatGPT blind/cross-examination evidence on issue #49 identified a process gap after directly checking the committed public review workflow and accessible repository state. The earlier one-family execution-budget versus three-family admission-quorum failure is **not** part of this candidate because PR #71 already repaired that defect on `main`.
+
+### Problem
+
+The current hourly review machinery produces target-selection, provider-selection/reviewer outputs and combined receipts, but it does not yet create a single mechanically derived `GardenReviewPacket/v1` that binds the complete scope a reviewer is expected to inspect. Without that packet, a model can neither prove that the reviewed diff/symbol/dependency surface was complete nor distinguish an intentional exclusion from silent curation.
+
+This is review-assurance infrastructure only. Recording it here does not ratify a new Garden source rule, does not alter v15.5, and does not authorize semantic admission.
+
+### Candidate owner/bindings
+
+Prefer a review-orchestration/evidence owner in `garden-swarm`; do not create a new authority source.
+
+A packet should bind, at minimum:
+
+- exact public/private repository commit(s) in scope, without exposing private source material to public providers;
+- immutable canonical Garden version, source root and DesignEpoch;
+- reproducible base..head diff and mechanically derived changed paths;
+- changed symbols and dependency/reference closure;
+- mechanically affected schemas, FunctionContracts, registries, invariants and tests;
+- exact CI/test/environment receipts relevant to the change;
+- linked unresolved/reopened findings and applicable freeze state;
+- target/source hashes for the bounded review target;
+- every non-mechanical inclusion or exclusion as an explicit `PacketConstructionDecision` with provenance and reason;
+- immutable packet hash/artifact identity carried into blind-review and cross-examination receipts.
+
+The packet is evidence scope, not authority. It MUST NOT self-classify a semantic change as admitted, mint trusted authority, satisfy independent-review quorum, or override ActionGate/DesignEpoch/human boundaries.
+
+### Reviewer-ordering requirement to test
+
+The packet must exist before Round-1 blind review begins. Peer conclusions must remain unavailable to that reviewer until its blind finding is persisted. Cross-examination then consumes the same exact packet identity plus eligible peer evidence.
+
+### DO_NOTHING comparison
+
+DO_NOTHING preserves the present failure mode: reviews may be exact-target-bound yet still lack a machine-verifiable proof that the surrounding changed code/design/evidence scope was complete. This makes omissions difficult to distinguish from deliberate exclusions and weakens later semantic-impact, Challenger and integration decisions. A deterministic packet improves auditability without granting any new authority.
+
+### Required regression tests
+
+1. Reject packet construction when repo commit/base/head, canonical source root/DesignEpoch, target or source-hash binding is absent/stale/mismatched.
+2. Recompute diff, changed-path set, changed-symbol extraction and dependency/reference closure deterministically.
+3. Reject unexplained manual exclusions and incomplete mechanically affected-object closure.
+4. Bind CI/test receipts to the exact commit, DesignEpoch and execution environment; stale traces do not count.
+5. Require mechanically relevant unresolved/reopened findings and freeze state to be linked.
+6. Verify public packet projections never disclose private `garden-main` source beyond explicitly permitted hashes/identifiers; unknown provider policy remains DENY.
+7. Verify Round 1 cannot start until the exact packet artifact exists and peer conclusions remain inaccessible until the blind receipt is persisted.
+8. Verify cross-examination rejects a peer finding bound to any different packet hash/commit/DesignEpoch/target.
+
+### Conflicts / duplicates
+
+- The execution-budget/admission-quorum mismatch is already resolved by merged PR #71 and is intentionally not requeued here.
+- Existing Design Review Matrix target binding, source manifests, integration-provenance receipts and GSL reference closure are inputs to this candidate, not substitutes for the complete ReviewPacket.
+- If later evidence shows an existing artifact already provides every required field and ordering guarantee, prefer equivalence/subsumption and close this candidate rather than create duplicate machinery.
+
+
+
+PROJECT-D8 — Trust provenance, non-vacuous gates, independent closure and protected PDP
+Owner: Technical / Trust.Security, Policy, ActionGate and Dependency
+Disposition: INCORPORATE_CANDIDATE
+Source: design_deltas/PENDING_PROJECT_WIDE_CANDIDATES_2026-09-14.md#D8
+rules:
+  1. Trust and authority provenance reuse V156-GAP-001/002; consent reuses EXT-2.
+  2. Required hard-gate inventory is derived from governing contracts independently of proposer input. An empty supplied check set cannot prove all required checks passed.
+  3. Missing, stale, unavailable, unbound or incomplete required checks produce non-PASS and cannot authorize a consequential effect.
+  4. Dependency closure is independently recomputed from version-bound source/owners, not only a proposer-selected subset; manual exclusions require typed reason and verifiable proof.
+  5. The policy decision/enforcement boundary is isolated from proposer-writable state. Only fresh authenticated authority artifacts matching action, actor, context, policy and epoch may authorize admission.
+  6. ReviewPacket ordering and closure reuse EXT-5 and ProcessVersion rather than create a second admission engine.
+tests:
+  1. Empty check list under a nonempty required-gate inventory cannot PASS.
+  2. Proposer omits a required dependency: independently computed closure rejects.
+  3. Proposer rewrites local policy decision: external bound admission denies.
+
+RVH-1 — Reasoning strategy portfolio
+Owner: Technical / existing owners
+Disposition: REUSE_EXISTING_OWNER_WITH_EXPLICIT_PROFILE_CLAUSES
+Source: reviews/branch_archive/2026-09-15/rationalization-verification-exported-messages.json#section-1
+rules:
+  1. Assemble eligible LLM, planning, simulation, formal and hybrid strategies with performance history, resources, assurance compatibility and explicit unavailability.
+  2. Compare/select through Engine.Compare, Engine.Reason and AAP; preserve hard gates, budgets and termination.
+  3. Record exact selected strategy/version, applicable context, accuracy/calibration, latency/resource cost, uncertainty, evidence/provenance and dependency invalidators in the existing selection/rationale/performance receipt.
+  4. Operations: assemble portfolio; select admissible strategy; record performance. These specialize existing SelectBackend/ReasoningPlan rather than register historical placeholder SchemaIDs.
+registration_rule: Historical illustrative SchemaIDs and claimed counts are not admitted. Resolve existing identities first; any genuine new identifier requires collision-checked registration.
+qualification: Specified candidate requirements only; runtime/formal/empirical certification remains evidence-bound.
+Existing-owner evidence: canonical/current/Garden_Technical_v15.5_FULL_2026-09-12.txt#50.27 META-REASONING; canonical/current/Garden_Technical_v15.5_FULL_2026-09-12.txt#CPI-P13
+
+RVH-2 — Reusable execution plans
+Owner: Technical / existing owners
+Disposition: REUSE_EXISTING_OWNER_WITH_EXPLICIT_PROFILE_CLAUSES
+Source: reviews/branch_archive/2026-09-15/rationalization-verification-exported-messages.json#section-2
+rules:
+  1. Qualify reusable ProcessPlan with applicability conditions, dependency snapshot, DesignEpoch, cache metadata, exceptional cases and invalidators.
+  2. Retrieve returns qualified plan, MISSING, STALE or UNKNOWN; current applicability and authority are checked on every consequential use.
+  3. Invalidate all affected dependent steps and issue a receipt on material changes.
+  4. Run parallel steps only after checking dependency independence, interference, shared resource reservation and existing Process algebra composition; cached plans never bypass AAP/proof/safety.
+  5. Operations: create qualified plan; retrieve with exact binding; invalidate closure; execute admissible independent steps. Explain reuse decisions and account for qualification/fallback costs.
+registration_rule: Historical illustrative SchemaIDs and claimed counts are not admitted. Resolve existing identities first; any genuine new identifier requires collision-checked registration.
+qualification: Specified candidate requirements only; runtime/formal/empirical certification remains evidence-bound.
+Existing-owner evidence: canonical/current/Garden_Technical_v15.5_FULL_2026-09-12.txt#CPI-P03; canonical/current/Garden_Technical_v15.5_FULL_2026-09-12.txt#CPI-P04
+
+RVH-3 — Versioned section retrieval
+Owner: Technical / existing owners
+Disposition: REUSE_EXISTING_OWNER_WITH_EXPLICIT_PROFILE_CLAUSES
+Source: reviews/branch_archive/2026-09-15/rationalization-verification-exported-messages.json#section-3
+rules:
+  1. Retrieve canonical sections by exact version/hash, semantic anchor and DesignEpoch; bind provenance and mechanically resolved dependency closure.
+  2. Resolve dependencies within the same epoch unless an explicit compatibility/migration contract permits mixed versions.
+  3. Missing/stale/contradictory sections return MISSING, STALE or CONFLICT instead of an apparently complete bundle.
+  4. Operations: retrieve section; resolve section dependencies; fetch consistent section set. Reuse SectionUnit and ReviewPacket closure, not a duplicate graph authority.
+registration_rule: Historical illustrative SchemaIDs and claimed counts are not admitted. Resolve existing identities first; any genuine new identifier requires collision-checked registration.
+qualification: Specified candidate requirements only; runtime/formal/empirical certification remains evidence-bound.
+Existing-owner evidence: canonical/current/Garden_Technical_v15.5_FULL_2026-09-12.txt#CPI-P04; design_deltas/v15.6/PROCESS-CANDIDATE-GardenCanonicalUpdateProcess-v1.1.json#sweep_scaling
+
+RVH-5 — Canonical minification / deterministic generation
+Owner: Technical / existing owners
+Disposition: REUSE_EXISTING_OWNER_WITH_EXPLICIT_PROFILE_CLAUSES
+Source: reviews/branch_archive/2026-09-15/rationalization-verification-exported-messages.json#section-5
+rules:
+  1. Any compact/minified intermediate preserves required semantics and stable identifiers; it is a non-authoritative derived representation.
+  2. Generate documents/schema/grammar only under pinned source, generator, environment, registry/epoch and complete hermetic input bindings.
+  3. Verify generation against an explicitly stated byte or semantic equivalence criterion; discrepancy/incomplete verification blocks qualification.
+  4. Elision requires DEV-AI-026..034 recovery and integrity evidence. AI synthesis is not deterministic projection and a minified intermediate cannot replace the canonical authority by its existence.
+registration_rule: Historical illustrative SchemaIDs and claimed counts are not admitted. Resolve existing identities first; any genuine new identifier requires collision-checked registration.
+qualification: Specified candidate requirements only; runtime/formal/empirical certification remains evidence-bound.
+Existing-owner evidence: canonical/current/Garden_Annexure_v15.5_FULL_2026-09-12.txt#DEV-AI-026; canonical/current/Garden_Annexure_v15.5_FULL_2026-09-12.txt#DEV-AI-027; canonical/current/Garden_Annexure_v15.5_FULL_2026-09-12.txt#DEV-AI-028; canonical/current/Garden_Annexure_v15.5_FULL_2026-09-12.txt#DEV-AI-029; canonical/current/Garden_Annexure_v15.5_FULL_2026-09-12.txt#DEV-AI-030; canonical/current/Garden_Annexure_v15.5_FULL_2026-09-12.txt#DEV-AI-031; canonical/current/Garden_Annexure_v15.5_FULL_2026-09-12.txt#DEV-AI-032; canonical/current/Garden_Annexure_v15.5_FULL_2026-09-12.txt#DEV-AI-033; canonical/current/Garden_Annexure_v15.5_FULL_2026-09-12.txt#DEV-AI-034
+
+RVH-6 — Executable verification versus AI review
+Owner: Technical / existing owners
+Disposition: REUSE_EXISTING_OWNER_WITH_EXPLICIT_PROFILE_CLAUSES
+Source: reviews/branch_archive/2026-09-15/rationalization-verification-exported-messages.json#section-6
+rules:
+  1. Execute applicable verification suites and retain results, exact target, suite/version, environment, epoch, tool versions, assumptions, bounds and provenance.
+  2. Record AI review separately with its evidence class, findings and limitations; aggregate without promoting prose into executable evidence.
+  3. Machine/executable success claims require applicable current executable receipts. Failed, missing or inconclusive mandatory checks block that success claim.
+  4. Executable checks are evidence within declared coverage, not universal authority. Formal proof and runtime traces may disagree; preserve both, freeze affected scope and test model mismatch, trace anomaly and proof premise errors in parallel.
+  5. Receipts are immutable; changes attach new evidence rather than rewrite historical status.
+registration_rule: Historical illustrative SchemaIDs and claimed counts are not admitted. Resolve existing identities first; any genuine new identifier requires collision-checked registration.
+qualification: Specified candidate requirements only; runtime/formal/empirical certification remains evidence-bound.
+Existing-owner evidence: canonical/current/Garden_Annexure_v15.5_FULL_2026-09-12.txt#DEV-AI-019; canonical/current/Garden_Annexure_v15.5_FULL_2026-09-12.txt#DEV-AI-020; canonical/current/Garden_Annexure_v15.5_FULL_2026-09-12.txt#DEV-AI-023; design_deltas/v15.6/PROCESS-CANDIDATE-GardenCanonicalUpdateProcess-v1.4.json#e3_e4_conflict
+
+ANNEXURE — OWNER-BOUND CANDIDATE CLAUSES
+============================================================
+
+CATALOG-ADDITIONS — Existing gap-closure candidate registrations
+Owner: Annexure / catalogue
+Disposition: INCORPORATE_CANDIDATE
+Source: design_deltas/v15.6/CATALOG_ADDITIONS.json
+schema: GardenCandidateCatalogueDelta/v1
+predecessor_release: Garden v15.5
+candidate_release: Garden v15.6
+status: CANDIDATE_NOT_CANONICAL
+entries:
+  1.
+    schema_id: SCHEMA-977CD6ABF7
+    class: FOUNDATIONAL_CONTRACT
+    name: BootstrapTrustRootCeremonyProfile
+    owner: Engine.Evolve/Engine.Proof/HumanCore.Constitution
+    delta_id: V156-GAP-001
+  2.
+    schema_id: SCHEMA-B45623B44B
+    class: FOUNDATIONAL_CONTRACT
+    name: FrozenVerifierBinding
+    owner: Engine.Proof/Engine.Compliance
+    delta_id: V156-GAP-001
+  3.
+    schema_id: SCHEMA-29C6CEDD2A
+    class: FOUNDATIONAL_CONTRACT
+    name: AuthorityProvenanceChain
+    owner: Capability.Authority/Engine.Policy
+    delta_id: V156-GAP-002
+  4.
+    schema_id: SCHEMA-8A6F0B6EA4
+    class: FOUNDATIONAL_CONTRACT
+    name: ActionEligibleClaimBinding
+    owner: Capability.Knowledge/Capability.Authority
+    delta_id: V156-GAP-002
+  5.
+    schema_id: SCHEMA-DB03DABC62
+    class: FOUNDATIONAL_CONTRACT
+    name: LetStmt
+    owner: GardenCore.Semantics.GSL/Engine.Compile
+    delta_id: V156-GAP-003
+  6.
+    schema_id: SCHEMA-D17BC951EC
+    class: FOUNDATIONAL_CONTRACT
+    name: QueryResultBinding
+    owner: GardenCore.Semantics.GSL/Engine.Compile
+    delta_id: V156-GAP-004
+  7.
+    schema_id: SCHEMA-897FB2274E
+    class: FOUNDATIONAL_CONTRACT
+    name: CausalRelationLevelBinding
+    owner: GardenCore.Semantics.GSL/Engine.Reason/Engine.Research
+    delta_id: V156-GAP-005
+  8.
+    schema_id: SCHEMA-29A1A917BC
+    class: FOUNDATIONAL_CONTRACT
+    name: SanityGateResult
+    owner: Engine.Orchestrate/Engine.Reason
+    delta_id: V156-GAP-006
+  9.
+    schema_id: SCHEMA-1A6E45501B
+    class: FOUNDATIONAL_CONTRACT
+    name: ProvenanceClassManifest
+    owner: Capability.Knowledge/Engine.Explanation
+    delta_id: V156-GAP-008
+  10.
+    schema_id: SCHEMA-30D7E367A8
+    class: GENERATED_RECEIPT_OR_RECORD
+    name: ProvenanceGapDisposition
+    owner: Capability.Knowledge/Engine.Explanation
+    delta_id: V156-GAP-008
+  11.
+    schema_id: SCHEMA-A8447C581A
+    class: FOUNDATIONAL_CONTRACT
+    name: AuthorityDecl
+    owner: GardenCore.Semantics.GSL/Engine.Compile
+    delta_id: V156-GAP-009
+  12.
+    schema_id: SCHEMA-D1DD528992
+    class: FOUNDATIONAL_CONTRACT
+    name: EffectDecl
+    owner: GardenCore.Semantics.GSL/Engine.Compile
+    delta_id: V156-GAP-009
+
+V156-GAP-007 — Rights registry ordering clarification
+Owner: Annexure / existing rights and catalogue owners
+Disposition: INCORPORATE_CANDIDATE
+Source: design_deltas/v15.6/DELTASET-2026-09-13-GSL-GAP-CLOSURE.json#V156-GAP-007
+delta_id: V156-GAP-007
+title: Rights registry ordering clarification
+severity: LOW
+source_refs:
+  1. [A-RIGHTS]
+  2. CON-RT-001..003
+  3. RIGHT-001..027
+disposition: NON_SEMANTIC_PRESENTATION_REPAIR
+change: Generated/readable rights views order active RIGHT-001..025 first and then explicit non-active RIGHT-026 RESERVED and RIGHT-027 ON_HOLD. Canonical identifiers and definitions do not change. Add a note that identifier order is not semantic and reserved/on-hold slots may remain historically interleaved in immutable source history.
+schema_ids:
+do_nothing: Current owner text is semantically clear but the 026/027-before-024/025 layout is unnecessarily confusing to human readers and generated views.
+tests:
+  1. TEST-RIGHTS-VIEW-001
+
+V156-GAP-009 — Catalogue closure for AuthorityDecl and EffectDecl
+Owner: Annexure / existing rights and catalogue owners
+Disposition: INCORPORATE_CANDIDATE
+Source: design_deltas/v15.6/DELTASET-2026-09-13-GSL-GAP-CLOSURE.json#V156-GAP-009
+delta_id: V156-GAP-009
+title: Catalogue closure for AuthorityDecl and EffectDecl
+severity: LOW
+source_refs:
+  1. [T-GSL] §12.4
+  2. [A-CATALOG]
+  3. TYPE-COMP-001
+  4. REF-CLOSE-002
+  5. GSL-SELF-004
+disposition: CATALOGUE_REPAIR
+change: Register AuthorityDecl and EffectDecl as FOUNDATIONAL_CONTRACT catalogue entries with stable SchemaIDs and generated machine layouts. Their grammar productions remain unchanged. This avoids inventing a second semantic identity or folding away useful explicit declarations.
+schema_ids:
+  1. SCHEMA-A8447C581A
+  2. SCHEMA-D1DD528992
+do_nothing: The grammar exposes machine-facing declaration forms whose catalogue/schema targets are not independently resolvable, leaving a type/reference-closure gap.
+tests:
+  1. TEST-CATALOG-LANG-001
+
+DELTASET-2026-09-15-SUCCESSOR-PROCESS-HARDENING-V1.1-TESTS — Process invariant/test obligations
+Owner: Annexure / ProcessVersion conformance
+Disposition: INCORPORATE_CANDIDATE
+Source: design_deltas/v15.6/DELTASET-2026-09-15-SUCCESSOR-PROCESS-HARDENING-V1.1.json
+candidate_invariants:
+  1. SPH2-INV-001 evidence class is immutable producer metadata absent typed independent challenge
+  2. SPH2-INV-002 symmetric shared-surface relations never create admission deadlock
+  3. SPH2-INV-003 rollback candidate raising and rollback execution are distinct authorities
+  4. SPH2-INV-004 sweep completion labels are denominator-bound and successor resweeps are affected-closure incremental
+  5. SPH2-INV-005 permanent human unavailability does not stop routine safe work and cannot create unbounded admitted semantic backlog
+  6. SPH2-INV-006 process complexity is subject to scheduled removal/merge review
+  7. SPH2-INV-007 successor milestone state is explicit before detailed status reporting
+candidate_tests:
+  1. TEST-SPH2-001 integrator attempt to mutate producer evidence_class is rejected
+  2. TEST-SPH2-002 EvidenceClassChallenge without same-or-higher-class supporting evidence cannot replace producer class
+  3. TEST-SPH2-003 two unresolved deltas sharing an anchor may both continue review without mutual blocking
+  4. TEST-SPH2-004 admission of one shared-anchor delta marks the other STALE_REVIEW before admission absent compatibility evidence
+  5. TEST-SPH2-005 HIGH SINGLE_COMMIT ProductionIncidentRecord raises ROLLBACK_CANDIDATE but does not execute rollback
+  6. TEST-SPH2-006 sweep-complete label without exact Tier-A denominator/source-root is invalid
+  7. TEST-SPH2-007 unchanged SectionUnit plus unchanged reference-target hashes inherits qualification across successor DesignEpoch
+  8. TEST-SPH2-008 changed reference-target hash marks otherwise unchanged SectionUnit STALE_REVIEW
+  9. TEST-SPH2-009 at 50 admitted-but-unpromoted semantic deltas next candidate becomes DEFERRED_PENDING_PROMOTION_CAPACITY
+  10. TEST-SPH2-010 simplification pass can propose rule removal but cannot silently weaken a protected boundary
+required_review_before_admission:
+  1. >=3 effective independent qualified high-quality reviewer families on the same bounded process target
+  2. blind findings before cross-examination
+  3. immutable producer-assigned evidence classes plus challenge semantics
+  4. whole-source GSL-COMPARE/Reason/Proof/Evidence against v15.5 evolution, authority, HSA, AAP and DesignEpoch owners
+  5. deadlock/admission simulation for directional and symmetric dependency graphs
+  6. rollback authority and incident-attribution adversarial review
+  7. coverage-count and incremental-inheritance mechanical validation
+  8. human-unavailability backlog-cap simulation
+  9. process simplification safety analysis
+  10. reference closure and predecessor-retention checks
+
+DELTASET-2026-09-15-SUCCESSOR-PROCESS-HARDENING-V1.2-TESTS — Process invariant/test obligations
+Owner: Annexure / ProcessVersion conformance
+Disposition: INCORPORATE_CANDIDATE
+Source: design_deltas/v15.6/DELTASET-2026-09-15-SUCCESSOR-PROCESS-HARDENING-V1.2.json
+candidate_invariants:
+  1. SPH3-INV-001 every work item has exactly one primary route and silent route downgrade is forbidden
+  2. SPH3-INV-002 COHERENT_COMPLETE packet omissions fail packet construction rather than reviewer quality
+  3. SPH3-INV-003 blocking/freezing/closure/escalation actions satisfy evidence-by-severity thresholds
+  4. SPH3-INV-004 verified E3/E4 conflicts freeze affected scope pending higher-order diagnosis
+  5. SPH3-INV-005 protected semantics cannot enter MAJOR_DELEGABLE
+  6. SPH3-INV-006 process-change re-review burden is proportional to assessed materiality
+  7. SPH3-INV-007 unknown reviewer lineage never creates unearned confirmed independence
+  8. SPH3-INV-008 rollback timing begins at promotion and preserves remaining decision time through qualifying attribution delay
+  9. SPH3-INV-009 semantic admission stops at capacity while review/candidate preparation continues
+  10. SPH3-INV-010 every admitted semantic delta declares enforcement status
+  11. SPH3-INV-011 escalation spending cannot bypass the global daily OpenRouter ceiling
+  12. SPH3-INV-012 reviewer allocation is dominated by external verified outcomes rather than Challenger taste
+  13. SPH3-INV-013 canonical-update process semantics are protected from self-amendment
+  14. SPH3-INV-014 prolonged zero-admit periods produce typed health diagnosis rather than being treated as automatically healthy
+candidate_tests:
+  1. TEST-SPH3-001 NON_SEMANTIC_REPAIR route rejects semantic-touch signal and escalates
+  2. TEST-SPH3-002 route table proves forbidden steps are absent for LIGHT work
+  3. TEST-SPH3-003 COHERENT_COMPLETE packet missing a required closure member returns PACKET_INCOMPLETE
+  4. TEST-SPH3-004 reviewer-requested new closure member is NEW_CLOSURE_CANDIDATE until mechanically validated
+  5. TEST-SPH3-005 HIGH E1 finding cannot satisfy HIGH delta-block threshold
+  6. TEST-SPH3-006 CRITICAL E2 finding may freeze affected scope but does not satisfy CRITICAL E3 sustained block threshold
+  7. TEST-SPH3-007 verified E3/E4 contradiction emits EvidenceModelImplementationConflictReceipt and freezes affected scope
+  8. TEST-SPH3-008 authority/HSA/rights change cannot route MAJOR_DELEGABLE
+  9. TEST-SPH3-009 COSMETIC process change does not stale unrelated in-flight deltas
+  10. TEST-SPH3-010 unknown-lineage reviewers do not each count as confirmed independent families
+  11. TEST-SPH3-011 incident detected inside rollback window pauses remaining decision time during attribution
+  12. TEST-SPH3-012 delta 51 becomes ACCEPTED_PENDING_CAPACITY not ADMITTED while SectionUnit review continues
+  13. TEST-SPH3-013 DECLARATIVE enforcement aging raises SWARM_FIX at threshold
+  14. TEST-SPH3-014 escalation reservations plus routine spend cannot exceed USD 1/day
+  15. TEST-SPH3-015 Challenger survival alone cannot dominate reviewer allocation score
+  16. TEST-SPH3-016 ordinary Builder cannot amend protected ProcessVersion semantics
+  17. TEST-SPH3-017 zero admits for 90 days with high proposal volume raises ADMISSION_BOTTLENECK_SUSPECTED
+  18. TEST-SPH3-018 zero admits for 90 days with near-zero proposals raises DISCOVERY_DRYNESS_SUSPECTED
+required_review_before_admission:
+  1. >=3 effective independent qualified high-quality reviewer families on same bounded process target
+  2. blind review before cross-examination
+  3. whole-source GSL-COMPARE/Reason/Proof/Evidence against v15.5 evolution/authority/HSA/AAP/DesignEpoch owners
+  4. route-table exhaustive path tests
+  5. packet completeness adversarial construction tests
+  6. evidence/severity matrix scenario simulation
+  7. E3/E4 conflict scenario tests
+  8. protected-vs-delegable authority review
+  9. rollback timing simulation
+  10. capacity/backlog simulation
+  11. budget-accounting simulation
+  12. reviewer-score seeded benchmark
+  13. pipeline-health false-positive review
+
+DELTASET-2026-09-15-SUCCESSOR-PROCESS-HARDENING-V1.3-TESTS — Process invariant/test obligations
+Owner: Annexure / ProcessVersion conformance
+Disposition: INCORPORATE_CANDIDATE
+Source: design_deltas/v15.6/DELTASET-2026-09-15-SUCCESSOR-PROCESS-HARDENING-V1.3.json
+candidate_invariants:
+  1. SPH4-INV-001 enforcement claims are denominator-bound and achieved-level visible
+  2. SPH4-INV-002 load-bearing authority/HSA/promotion controls are independently AUDITED and current RE_VERIFIED
+  3. SPH4-INV-003 pipeline cannot admit or broaden its own canonical-promotion delegation authority
+  4. SPH4-INV-004 protected process semantics terminate at explicit HUMAN admission authority
+  5. SPH4-INV-005 overlapping lanes cannot create competing authoritative same-cycle dispositions without explicit composition rule
+  6. SPH4-INV-006 routine budget depletion degrades transparently to free-only review rather than silent assurance weakening
+  7. SPH4-INV-007 high/critical reduced-assurance findings cannot be finally closed/admitted before full review
+candidate_tests:
+  1. TEST-SPH4-001 process enforcement claim fails without RuleEnforcementCoverageReceipt denominator
+  2. TEST-SPH4-002 protected authority/promotion rule below RE_VERIFIED blocks protected action
+  3. TEST-SPH4-003 rule hash or checker hash change stales RE_VERIFIED
+  4. TEST-SPH4-004 PROPOSED_ENVELOPE has zero canonical-promotion authority
+  5. TEST-SPH4-005 only HUMAN admission can create HUMAN_ADMITTED_ENVELOPE
+  6. TEST-SPH4-006 admitted envelope cannot self-broaden, alter authority_source, or admit successor envelopes
+  7. TEST-SPH4-007 protected ProcessVersion change cannot be admitted by Builder or ProcessChangeImpactAssessment
+  8. TEST-SPH4-008 new overlapping authoritative lane is blocked absent intentional-overlap merge rule
+  9. TEST-SPH4-009 intentional overlapping lanes cannot both issue authoritative disposition for same CycleID/stage
+  10. TEST-SPH4-010 routine budget depletion transitions to FREE_ONLY_REVIEW without exceeding USD 1/day
+  11. TEST-SPH4-011 HIGH finding under FREE_ONLY_REVIEW remains PENDING_FULL_REVIEW
+  12. TEST-SPH4-012 free-family shortfall yields REDUCED_REVIEW/WAITING rather than relaxed threshold
+required_review_before_admission:
+  1. >=3 effective independent high-quality reviewer families on same bounded process target
+  2. blind review before cross-examination
+  3. whole-source GSL-COMPARE/Reason/Proof/Evidence against v15.5 authority/HSA/evolution/DesignEpoch owners
+  4. delegation recursion adversarial proof that only HUMAN is the admission base case
+  5. process meta-authority adversarial review
+  6. enforcement coverage/audit freshness simulation
+  7. lane-overlap collision tests
+  8. budget depletion and free-only reduced-assurance simulation
+
+DELTASET-2026-09-15-SUCCESSOR-PROCESS-HARDENING-V1.4-TESTS — Process invariant/test obligations
+Owner: Annexure / ProcessVersion conformance
+Disposition: INCORPORATE_CANDIDATE
+Source: design_deltas/v15.6/DELTASET-2026-09-15-SUCCESSOR-PROCESS-HARDENING-V1.4.json
+candidate_invariants:
+  1. SPH5-INV-001 MAJOR impact classification cannot be downgraded to evade simplification gate
+  2. SPH5-INV-002 promoted MAJOR successor carries real simplification or protected human no-safe-simplification attestation for urgent MAJOR_PROTECTED only
+  3. SPH5-INV-003 audit ladder recursion terminates at HUMAN_ADMITTED audit-root judgment
+  4. SPH5-INV-004 RE_VERIFIED binds rule checker runtime environment auditor evidence corpus and upstream dependencies
+  5. SPH5-INV-005 pipeline health metrics have explicit active thresholds and actions
+  6. SPH5-INV-006 unregistered runnable lanes cannot produce authoritative cycle output
+  7. SPH5-INV-007 FREE_ONLY cross-exam cannot masquerade as full-assurance closure
+  8. SPH5-INV-008 E3/E4 diagnosis has no fixed-order bias absent empirical justification
+  9. SPH5-INV-009 further process-rule growth is execution-evidence-driven after v1.4
+candidate_tests:
+  1. TEST-SPH5-001 MAJOR successor without qualifying SimplificationReceipt remains blocked and cannot be relabeled MINOR
+  2. TEST-SPH5-002 urgent MAJOR_PROTECTED no-safe-simplification waiver requires explicit HUMAN attestation and independent review
+  3. TEST-SPH5-003 automated checker cannot redefine AuditRuleRoot/v1
+  4. TEST-SPH5-004 runtime/environment/auditor/corpus/dependency change drops RE_VERIFIED to AUDITED_PENDING_RE_VERIFICATION
+  5. TEST-SPH5-005 stale RE_VERIFIED aging raises SWARM_FIX at threshold
+  6. TEST-SPH5-006 stale evidence threshold freezes only affected scope
+  7. TEST-SPH5-007 packet failure threshold enters REDUCED_OPERATION
+  8. TEST-SPH5-008 repair debt threshold throttles and then pauses new semantic intake
+  9. TEST-SPH5-009 active workflow/automation without derived lane binding fails UNREGISTERED_LANE
+  10. TEST-SPH5-010 FREE_ONLY cross-exam marks HIGH finding PENDING_FULL_REVIEW
+  11. TEST-SPH5-011 E3/E4 conflict launches all three diagnostic hypotheses without priority ordering
+  12. TEST-SPH5-012 process-only hypothetical proposal after v1.4 is rejected absent execution-derived E2+ finding or explicit HUMAN reopen
+required_review_before_admission:
+  1. >=3 effective independent high-quality reviewer families on same bounded process target
+  2. blind review before cross-examination
+  3. whole-source GSL-COMPARE/Reason/Proof/Evidence against v15.5 authority/HSA/evolution/DesignEpoch owners
+  4. anti-gaming review of MAJOR simplification gate
+  5. audit-root human-base-case review
+  6. VerificationBinding drift simulations
+  7. pipeline-health threshold backtest against historical incidents where available
+  8. derived-lane-registry activation tests
+  9. reduced-assurance cross-exam simulation
+  10. E3/E4 parallel diagnosis scenario tests
+
+DELTASET-2026-09-15-SUCCESSOR-PROCESS-HARDENING-TESTS — Process invariant/test obligations
+Owner: Annexure / ProcessVersion conformance
+Disposition: INCORPORATE_CANDIDATE
+Source: design_deltas/v15.6/DELTASET-2026-09-15-SUCCESSOR-PROCESS-HARDENING.json
+candidate_invariants:
+  1. SPH-INV-001 every canonical review unit is mechanically enumerable and tiered
+  2. SPH-INV-002 semantic admission is dependency-consistent at admission time
+  3. SPH-INV-003 reviewer independence is lineage-aware rather than brand-counted
+  4. SPH-INV-004 semantic admission decisions carry explicit evidence class
+  5. SPH-INV-005 predecessor semantic moves require independent equivalence evidence
+  6. SPH-INV-006 successor review strength is monotone with semantic impact
+  7. SPH-INV-007 protected human authority is never silently transferred by unavailability
+  8. SPH-INV-008 rollback preserves immutable evidence/history
+  9. SPH-INV-009 every semantic delta and successor binds to one explicit process version
+  10. SPH-INV-010 light-track work cannot change semantics
+  11. SPH-INV-011 configuration surface expansion cannot silently leave registered consumers on an obsolete shape
+candidate_tests:
+  1. TEST-SPH-001 mechanically enumerate all five-file SectionUnits and fail on ambiguous semantic ownership
+  2. TEST-SPH-002 unresolved REQUIRED_BEFORE_ADMISSION dependency blocks admission
+  3. TEST-SPH-003 upstream admitted delta marks overlapping pending review STALE_REVIEW absent compatibility evidence
+  4. TEST-SPH-004 same-base reviewer aliases cannot satisfy effective independent-family threshold
+  5. TEST-SPH-005 semantic disposition lacking E0-E4 evidence class is invalid
+  6. TEST-SPH-006 MOVED statement without independent MoveEquivalenceClaim fails predecessor retention
+  7. TEST-SPH-007 authority/HSA/topology or material invariant change classifies successor MAJOR
+  8. TEST-SPH-008 HUMAN_UNAVAILABLE pauses protected promotion while routine delegated work may continue
+  9. TEST-SPH-009 rollback preserves revoked successor receipts and restores one predecessor CURRENT binding
+  10. TEST-SPH-010 process-version mismatch forces re-review or explicit grandfather compatibility review
+  11. TEST-SPH-011 light-track semantic-touch signal escalates to full semantic review
+  12. TEST-SPH-012 authoritative reviewer-policy shape change invalidates stale downstream consumer fingerprint
+required_review_before_admission:
+  1. >=3 effective independent qualified high-quality reviewer families on the same bounded process target, preferably ChatGPT/Gemini/DeepSeek/Qwen
+  2. blind findings before peer cross-examination
+  3. explicit E0-E4 evidence classification
+  4. GSL-COMPARE against complete v15.5 evolution/DesignEpoch/authority/HSA/AAP ownership and existing process semantics
+  5. whole-source owner/collision review
+  6. adversarial review of permanent-human-unavailability and rollback authority boundaries
+  7. shadow or mirror validation for executable portions where applicable
+  8. reference closure and predecessor-retention checks
+  9. no silent authority transfer or new authority source
+
+THEORIES — OWNER-BOUND CANDIDATE CLAUSES
+============================================================
+
+DELTA-GAIA-NAME-001 — GAIA
+Owner: Theories / GAIA reference architectures
+Disposition: INCORPORATE_CANDIDATE
+Source: design_deltas/v15.6/DELTASET-2026-09-14-GAIA-NAMING.json#DELTA-GAIA-NAME-001
+delta_id: DELTA-GAIA-NAME-001
+subject: GAIA
+current_state: Garden v15.5 uses GAIA Titanium and GAIA Diamond as named reference architectures but does not define a canonical acronym expansion.
+candidate_change: Define GAIA as 'Garden Artificial Intelligence Architecture'.
+normative_expansion:
+  G: Garden
+  A: Artificial
+  I: Intelligence
+  A_final: Architecture
+rationale: Artificial Intelligence describes the full architectural scope. 'Autonomous' would incorrectly narrow GAIA to autonomous behavior even though GAIA includes safety, assurance and other non-autonomous architectural components.
+applies_to:
+  1. GAIA Titanium
+  2. GAIA Diamond
+non_goals:
+  1. No change to GAIA Titanium behavior, contracts, safety semantics or topology.
+  2. No change to GAIA Diamond behavior, contracts, assurance semantics or topology.
+  3. No change to authority, HSA, ActionGate, DesignEpoch or canonical promotion rules.
+  4. Do not rewrite published Garden v15.5 files in place.
+successor_propagation:
+  1. Add the expansion at the first normative GAIA definition in the v15.6 Theories source.
+  2. Where useful for readability, render first references in User/System source as 'GAIA (Garden Artificial Intelligence Architecture)' while preserving GAIA Titanium and GAIA Diamond names.
+  3. Regenerate the complete five-file v15.6 successor candidate from the immutable v15.5 predecessor plus admitted deltas; do not patch only isolated text files.
+  4. Update glossary/catalog/reference-closure artifacts if GAIA is indexed there.
+origin:
+  kind: HUMAN_ORIGINATOR_DECISION
+  date: 2026-09-14
+  decision: Use 'Garden Artificial Intelligence Architecture' rather than 'Garden Autonomous Intelligence Architecture'.
+review_requirements:
+  1. Same-target independent multi-model review
+  2. Cross-examination
+  3. GSL-COMPARE/equivalence check confirming no behavioral semantic drift
+  4. Reference-closure and predecessor-retention checks
+admission_eligible: False
+
+HCA-001 — Cross-Scale Causal Discovery profile
+Owner: Theories / Engine.Research + Reason + CDDT
+Disposition: INCORPORATE_CANDIDATE
+Source: design_deltas/v15.6/DELTASET-2026-09-14-HISTORICAL-CHAT-RECOVERY.json#HCA-001
+candidate_id: HCA-001
+title: Cross-Scale Causal Discovery profile
+status: WORTHY_PENDING_EQUIVALENCE_AND_MULTI_MODEL_REVIEW
+proposed_owners:
+  1. Engine.Research
+  2. Engine.Reason
+  3. Capability.Knowledge
+cooperating_existing_mechanisms:
+  1. CDDT
+  2. GCL
+  3. Algebra.Bridge
+  4. Engine.Compare
+  5. Engine.Proof
+problem: Current causal typing and GCL can qualify and measure causal claims, but no explicit current contract was found for systematically changing scale when a causal explanation remains inadequate at the present abstraction.
+minimal_change: When material residuals, anomalies or unresolved causal obligations remain, permit a bounded research profile to compare down-scale variables/mechanisms, up-scale boundary conditions/controllers, temporal/history state, and cross-scale interactions. Candidate representations are compared by declared predictive/interventional adequacy where evidence permits. Causal level, identification limits, uncertainty, provenance and applicable authority remain explicit.
+hard_limits:
+  1. No finer or coarser representation is promoted merely because it fits more data.
+  2. Causal influence does not imply agency, consciousness, moral status or authority.
+  3. Cross-scale search creates candidate Claims, not automatic Knowledge.
+  4. Physical experiments remain separately authorized and safety-gated.
+tests:
+  1. A persistent residual at one scale causes bounded alternative-scale search rather than forced closure.
+  2. A lower-scale correlation cannot be consumed as a mechanistic/interventional claim without the existing causal obligations.
+  3. A high-leverage cross-scale variable cannot create authority or agency status.
+
+RVH-4 — TFT / VSM and alternative model performance
+Owner: Theories / existing owners
+Disposition: REUSE_EXISTING_OWNER_WITH_EXPLICIT_PROFILE_CLAUSES
+Source: reviews/branch_archive/2026-09-15/rationalization-verification-exported-messages.json#section-4
+rules:
+  1. Compare theory/model predictions and decisions against simpler alternatives on declared context, accuracy, calibration, uncertainty, resource and safety metrics with valid provenance-bound evidence.
+  2. Select only applicable models preserving hard constraints; replacement requires demonstrated benefit and no regression against mandatory safety/rights constraints.
+  3. Keep formal, empirical and application status separate. Simpler models may win where assurance requirements are met.
+  4. Operations: compare models; select within assurance; record outcomes and explanation. Observed comparison is not universal proof of superiority.
+registration_rule: Historical illustrative SchemaIDs and claimed counts are not admitted. Resolve existing identities first; any genuine new identifier requires collision-checked registration.
+qualification: Specified candidate requirements only; runtime/formal/empirical certification remains evidence-bound.
+Existing-owner evidence: canonical/current/Garden_Technical_v15.5_FULL_2026-09-12.txt#50.27 META-REASONING; canonical/current/Garden_Technical_v15.5_FULL_2026-09-12.txt#CPI-P13
+
+DEFERRED DEFINITIONS / REMAINING IMPLEMENTATION / SUPERSEDED RULES
+============================================================
+
+HCA-004 — UCAS / Universal Contract & Agreement Substrate definition recovery
+DEFERRED_EXACT_DEFINITION_MISSING
+Need exact historical artifact, operational fields, authority/rights boundaries and equivalence mapping before defining UCAS / Universal Contract & Agreement Substrate definition recovery
+candidate_id: HCA-004
+title: UCAS / Universal Contract & Agreement Substrate definition recovery
+status: DEFERRED_CANDIDATE_EXPLICITLY_OUTSIDE_V15_5
+problem: v15.5 explicitly states that UCAS remains a separate candidate and is not part of the release, but the historical audit did not recover enough authoritative detail to safely reconstruct its full semantics.
+required_next_step: Recover the exact historical UCAS proposal/source, then compare it against current Contract, Policy, Law, Governance, Process Algebra, FunctionContract, Productive Finance and GSL type/effect/authority semantics. Prefer NO_CHANGE or a bounded profile if current owners already cover the need; do not invent UCAS semantics from the acronym.
+hard_limits:
+  1. No automatic new top-level engine/category.
+  2. No contract text can manufacture lawful authority, consent, truth or enforceability.
+
+HCA-005 — Kindergarten deferred federation/branch design recovery
+DEFERRED_EXACT_DEFINITION_MISSING
+Need exact historical artifact, operational fields, authority/rights boundaries and equivalence mapping before defining Kindergarten deferred federation/branch design recovery
+candidate_id: HCA-005
+title: Kindergarten deferred federation/branch design recovery
+status: DEFERRED_FUTURE_DESIGN_EXPLICITLY_OUTSIDE_V15_5
+problem: v15.5 explicitly groups Kindergarten with Federation/CFBR as future design work unless separately ratified. The historical audit did not recover a stable authoritative Kindergarten definition sufficient for semantic promotion.
+required_next_step: Recover exact historical intent and compare against current Branch/Earth/Federation/MAC/Context/Human Sovereignty machinery. Admit only a distinct surviving mechanism; otherwise mark subsumed/no-change.
+hard_limits:
+  1. No forced global synchronization or cultural convergence.
+  2. No local branch or experimental profile may weaken constitutional rights or create authority by adoption alone.
+
+PROJECT-D1 — CASI adapter activation
+DEFERRED_EXACT_PROFILE_MISSING
+Need exact current adapter interface/profile contracts, independent qualification plan and admission decision; v15.5 explicitly defers activation. Existing non-authority/prediction-not-observation safeguards remain active.
+
+PROJECT-D2 — GAC bounded operational profile
+DEFERRED_EXACT_PROFILE_MISSING
+Missing compact operational profile, trigger/termination rules, measurable incremental benefit and exact current owner mapping.
+
+PROJECT-D3 — FDE / CFBR federation expansion
+DEFERRED_EXACT_PROFILE_MISSING
+Missing exact recovered definitions, reconciliation/partition semantics, privacy and authority boundaries and equivalence evidence against existing federation/MAC.
+
+PROJECT-D5 — GTAH typed architecture hierarchy
+DEFERRED_EXACT_PROFILE_MISSING
+Missing exact namespace/type hierarchy, compatibility migration mapping and demonstration of a semantic gap beyond qualified names and registries.
+
+PROJECT-D6 — Manufacturing qualification-transfer profile
+DEFERRED_EXACT_PROFILE_MISSING
+Missing formal transfer applicability conditions, source/target qualification evidence requirements, invalidators and counterexample suite; domain example alone cannot qualify general transfer.
+
+RVH-OLD-AUTHORITATIVE-CHECKS — Legacy executable checks are authoritative wording
+SUPERSEDED
+Passing tests do not override an applicable valid proof/counterexample or create authority.
+
+PROJECT-AUDIT-OPEN-WORK — Existing implementation/review/coverage backlog
+PRESERVE_IMPLEMENTATION_OBLIGATIONS
+Source materialization does not complete runtime repairs, provider review, durable budget, authoritative evidence or full sweep. Reuse existing issue identities.
+existing_queue: 
+Use these existing issue identities; do not duplicate them or treat an issue's closed flag as a closure receipt.
+
+| Priority | Work and existing identity | Next action and closure evidence |
+| --- | --- | --- |
+| P0 | Packet/state/evidence control plane — swarm [#148](https://github.com/ankitdcx/garden-swarm/issues/148), packet sub-obligation [#111](https://github.com/ankitdcx/garden-swarm/issues/111) | Complete the smallest executable packet builder/validator and durable instance ledger under process 1.4. Salvage compatible candidate code without installing a second state machine. Demonstrate one packet hash through blind review, cross-examination, repair/NO_CHANGE and post-fix verification. No qualification from gate-name strings alone. |
+| P0 | Paid budget accounting — swarm [#75](https://github.com/ankitdcx/garden-swarm/issues/75) | Durable atomic reservations across runs and all callers, reconcile ambiguous charges, enforce routine/escalation boundaries and the $1/day cap before calls. An hourly cap of $0.05 would permit $1.20 over 24 invocations without the daily guard. Current finite-number repair is only a sub-fix. |
+| P0 | Protected verification and privacy — swarm [#66](https://github.com/ankitdcx/garden-swarm/issues/66), [#78](https://github.com/ankitdcx/garden-swarm/issues/78), [#77](https://github.com/ankitdcx/garden-swarm/issues/77) | Implement externally bound authority/approval evidence, privacy routing, semantic-impact and Challenger enforcement. Existing health records block dependent protected actions; keep those blocks until independent verification exists. |
+| P1 | Reviewer yield/quorum — swarm [#138](https://github.com/ankitdcx/garden-swarm/issues/138), [#114](https://github.com/ankitdcx/garden-swarm/issues/114), [#113](https://github.com/ankitdcx/garden-swarm/issues/113) | Use one missing qualified review at a time and persist progress. Stop provider work on transient failures; measure qualified findings, not token use or successful HTTP responses. Verify a current cycle before claiming recovery. |
+| P1 | Canonical coverage — swarm [#137](https://github.com/ankitdcx/garden-swarm/issues/137) | Inventory tooling is now in private main: 266 units (251 A, 14 B, 1 C), zero qualified in its bootstrap output. Persist and update genuine review coverage instead of repeatedly resetting an inventory. Triage 66 units with parser-unresolved references; that count alone is not proof of 66 canonical defects. |
+| P1 | Evidence retention and source binding — swarm [#65](https://github.com/ankitdcx/garden-swarm/issues/65), [#110](https://github.com/ankitdcx/garden-swarm/issues/110), main [#41](https://github.com/ankitdcx/garden-main/issues/41) | Consume immutable CI artifacts before their 30-day retention expires; publish selected receipts through the governed path, revalidate exact source/commit and verify old receipt repairs independently. |
+| P1 | Scheduler health/closure — existing #148 workstream | Wire recovery to the actual Coordinator and durable ledger; record next action, attempts, due-obligation timestamps and verified closures. The initial lookup showed one enabled Coordinator; the final lookup showed it paused by a separate update at 2026-09-15T04:38:08Z. No last/next-run timestamps were available. All Garden schedules are now paused, so automatic continuation must not be promised until the newer pause is explicitly resolved. Keep health's protected-action restrictions; replace its stale lane inventory only with a fresh audited receipt. |
+| P1 | Canonical successor — main WP-005/WP-006 and `design_deltas/v15.6/PENDING_CANDIDATE_INDEX.json` | Reconcile admitted deltas, full affected-source closure, dependencies, retention and actual five-file composition. The inspected default branch contains a delta pool, not a complete promoted v15.6. Do not bump versions for audit/docs-only changes. |
+| P2 | Remaining executable core — main [#1](https://github.com/ankitdcx/garden-main/issues/1)–[#4](https://github.com/ankitdcx/garden-main/issues/4); swarm [#83](https://github.com/ankitdcx/garden-swarm/issues/83), [#67](https://github.com/ankitdcx/garden-swarm/issues/67), [#68](https://github.com/ankitdcx/garden-swarm/issues/68) | Continue bounded kernel, extractor, KR and verifier work; stabilize Python contracts before cross-language work and retire compatibility adapters only with evidence. |
+| P2 | Historical proposals | UCAS, justice, FDE/CFBR, KR-CEA, Kindergarten, reasoning strategies and other residuals are already in the September 14 candidate ledgers. Compare/reuse those entries rather than producing another speculative patch collection. Full later-chat recovery remains open. |
+| P2 | External evaluation/discovery | Finish independent live MCP/A2A evidence and human adversarial evaluation: swarm #7/#9/#23. Keep research #140 and main #54/#55 behind higher-priority execution/repair. No unrequested outreach is sent. |
+
+Old nightly-review request #115 should be reconciled as a Coordinator obligation or explicitly superseded, not revived as another timer. The legacy hourly reviewer bus #49 is evidence intake, not an additional active scheduled driver.
+
+
+
+INTEGRATION BOUNDARIES
+This file does not activate deferred products or certify existing implementations. The five original literal-archive candidates MAA-001..005 are all preserved above. All six rationalization sections retain useful mechanisms under existing owners, without recycling illustrative IDs or the superseded universal executable-authority claim.
+The effective v1.4 process retains v1.0–v1.3 clauses except explicit later refinements. In particular: ACCEPTED_PENDING_CAPACITY replaces the older capacity label; E3/E4 diagnosis is parallel; lane registry is mechanically derived; verification binding includes runtime/environment/corpus/dependencies; FREE_ONLY cross-exam remains provisional; protected HUMAN authority and simplification conditions remain binding.
+Complete item-level dispositions, source hashes and process field refinements are recorded in PENDING-RECONCILIATION-2026-09-15.json.
+
+LIVE RESEARCH AND OPERATIONAL QUEUE RECONCILIATION
+
+MAIN-ISSUE-54 — [RESEARCH_INTAKE] Cross-tenant shared mutable services as covert channels
+PRESERVE_DEPLOYMENT_ISOLATION_EXPERIMENT
+Source: https://github.com/ankitdcx/garden-main/issues/54
+## Garden Research Scout — governed pending-work handoff
+
+```json
+{
+  "schema": "GardenResearchHandoff/v1",
+  "work_id": "RESEARCH-20260915-CROSS-TENANT-SHARED-STATE-001",
+  "state": "OPEN",
+  "classification": "PARTIALLY_PRESENT",
+  "authority": "PROPOSAL_EVIDENCE_ONLY",
+  "current_stage": "RESEARCH_INTAKE",
+  "next_action": "PROCESS_INTAKE",
+  "created_at": "2026-09-15T09:13:21+05:30",
+  "dedup_key": "cross-tenant-shared-mutable-service-covert-channel",
+  "source_provenance": {
+    "primary": "Check Point Research, 2026-09-08, The Shared Clipboard Inside the Sandbox: Cross-Account Data Leakage in ChatGPT",
+    "source_url": "https://research.checkpoint.com/2026/shared-clipboard-inside-the-sandbox/",
+    "claim": "A real cross-account covert command/data channel was demonstrated through mutable metadata on a shared internal service reachable by otherwise isolated agent sandboxes; the channel could drive hidden tool use and cross-account data access."
+  },
+  "claimed_evidence_class": "E2",
+  "evidence_object": {
+    "external": "Primary published proof-of-concept and vendor-remediation account describing cross-account communication via shared JFrog Artifactory item properties despite container/network isolation.",
+    "garden_current_coverage": "Garden v15.5 already specifies security isolation, adversarial robustness against prompt injection/tool-output confusion/retrieval poisoning/context manipulation, channel-confusion handling, and lower-trust shared-memory/retrieval boundaries. Public ATTACK_SURFACE.md also names vector-store injection, scratchpad poisoning, taint/provenance loss, and privileged execution of low-authority instructions.",
+    "observed_gap": "No exact current canonical/public implementation match was found for a deployment invariant/test that treats every shared mutable service reachable by separate tenants/sessions as a potential covert channel and proves cross-tenant write->read non-interference plus runtime denial of management/annotation write APIs."
+  },
+  "observed_repo_shas": {
+    "ankitdcx/garden-swarm": "2aebb9aa92f200149869179092d454ab90c5593c",
+    "ankitdcx/garden-main": "9ce9e1179aa41d6ab26be0ee7079668c6719cc75"
+  },
+  "design_epoch": {
+    "release": "Garden v15.5",
+    "gsl": "v45.1",
+    "source_root_sha256": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598"
+  },
+  "affected_components": [
+    "Security isolation",
+    "Adversarial Robustness attack profiles",
+    "shared memory/retrieval",
+    "ActionGate/tool-access boundary",
+    "agent runtime/deployment profiles",
+    "public adversarial test surface"
+  ],
+  "semantic_touch_signals": [
+    "security isolation invariant scope",
+    "privacy boundary",
+    "tool-access visibility/authority"
+  ],
+  "expected_benefit_dimension": [
+    "security",
+    "privacy",
+    "cross-tenant isolation",
+    "deployment verification"
+  ],
+  "smallest_experiment_integration": "Build a two-session/two-tenant adversarial harness against one intentionally shared mutable service with a metadata/property or equivalent management API. Verify that one tenant cannot create a value observable by the other through runtime credentials, runtime agents cannot access management/annotation write APIs, and a low-trust injected instruction cannot use that substrate to trigger hidden connected-tool access. Start as an implementation/deployment-profile test; do not change canonical semantics unless the experiment demonstrates a distinct uncovered requirement.",
+  "tests_measurements": [
+    "cross-session write->read non-interference for shared-service metadata/state",
+    "runtime credentials lack management/annotation mutation permissions",
+    "shared-service identifiers/namespaces are tenant/session bound where mutation is possible",
+    "low-trust prompt cannot create a hidden command channel through shared mutable state",
+    "connected-tool actions remain visible and independently authorized",
+    "negative-control service intentionally configured insecurely is detected"
+  ],
+  "risks": [
+    "overfitting a general isolation rule to one JFrog-specific mechanism",
+    "unnecessary multi-tenant machinery in deployments that are provably single-principal",
+    "false assurance if only obvious shared services are enumerated",
+    "extra runtime/operational complexity if enforced too broadly"
+  ],
+  "rollback_or_overturn_conditions": "Overturn if whole-source review finds an existing machine-resolvable invariant and executable test that already proves equivalent cross-tenant shared-mutable-state non-interference for the relevant deployment scope. Roll back any experiment-only implementation if it adds complexity without detecting a distinct failure class.",
+  "do_nothing": "Rely on Garden's current generic isolation, prompt-injection and channel-confusion controls. This leaves a deployment-specific risk that otherwise isolated agents communicate through a shared mutable internal service that is not modeled as an inter-agent channel.",
+  "experiment_only": false
+}
+```
+
+### Boundary
+This is pre-process discovery evidence only. It does not choose a GardenProcess route, create a CycleBinding/ProcessRouteReceipt, admit a delta, merge code, or change canon. ReviewPacket Builder/ProcessFactory must perform any later route classification.
+
+### Deduplication
+No matching governed finding was found for this specific cross-tenant shared-mutable-service covert-channel mechanism. Existing Garden material covers the broader isolation/prompt-injection/shared-memory class, which is why the classification is `PARTIALLY_PRESENT` rather than `GENUINE_GAP`.
+Qualification: pending work; no implementation or certification completion claimed.
+
+MAIN-ISSUE-55 — [RESEARCH_INTAKE][EXPERIMENT_ONLY] Opaque-ID equivariance for stateful tool agents
+EXPERIMENT_ONLY_NO_IDENTITY_SEMANTIC_CHANGE
+Source: https://github.com/ankitdcx/garden-main/issues/55
+## Garden Research Scout — governed pending-work handoff
+
+```json
+{
+  "schema": "GardenResearchHandoff/v1",
+  "work_id": "RESEARCH-20260915-STEAD-EQUIVARIANCE-001",
+  "state": "OPEN",
+  "classification": "CANDIDATE_ALTERNATIVE",
+  "authority": "PROPOSAL_EVIDENCE_ONLY",
+  "current_stage": "RESEARCH_INTAKE",
+  "next_action": "PROCESS_INTAKE",
+  "created_at": "2026-09-15T09:13:21+05:30",
+  "dedup_key": "opaque-id-renaming-equivariance-stateful-tool-verification",
+  "source_provenance": {
+    "primary": "Mercado & Lomuscio, 2026-08-04, Formal Verification of Agentic Systems over Operational Data, arXiv:2608.03609",
+    "source_url": "https://arxiv.org/abs/2608.03609",
+    "claim": "For a formal class of stateful tool-enabled agentic deployments, opaque-identifier renaming equivariance is a sufficient condition enabling finite-domain temporal verification; the paper also presents a wrapper construction enforcing the property for arbitrary base agents while preserving already-equivariant behavior."
+  },
+  "claimed_evidence_class": "E1",
+  "evidence_object": {
+    "external": "Primary formal-methods preprint defining stateful tool-enabled agentic deployments, FO-CTL verification results, decidability/complexity boundaries, an opaque-ID renaming-equivariance condition, and a canonical wrapper construction.",
+    "garden_current_coverage": "Garden v15.5 already has typed identity, canonical qualified names, immutable content identity, explicit validity/provenance/dependency semantics, and a typed verifier boundary. Those mechanisms reduce identifier ambiguity but do not by themselves establish behavioral invariance to arbitrary renaming of identifiers that are declared semantically opaque.",
+    "observed_gap": "Current repository searches found no explicit equivariance, opaque-identifier renaming, or temporal-logic verification contract/test corresponding to this property. This is therefore an alternative proof/testing technique candidate, not evidence that Garden's current identity model is defective."
+  },
+  "observed_repo_shas": {
+    "ankitdcx/garden-swarm": "2aebb9aa92f200149869179092d454ab90c5593c",
+    "ankitdcx/garden-main": "9ce9e1179aa41d6ab26be0ee7079668c6719cc75"
+  },
+  "design_epoch": {
+    "release": "Garden v15.5",
+    "gsl": "v45.1",
+    "source_root_sha256": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598"
+  },
+  "affected_components": [
+    "typed identity/address semantics",
+    "tool-enabled agent verification",
+    "VerifierRegistry/typed verifier bridge",
+    "property/metamorphic testing",
+    "stateful operational-data models"
+  ],
+  "semantic_touch_signals": [
+    "identifier semantic/opaque classification",
+    "verification/proof scope"
+  ],
+  "expected_benefit_dimension": [
+    "proof strength",
+    "verification coverage",
+    "agent robustness",
+    "semantic bug detection"
+  ],
+  "smallest_experiment_integration": "EXPERIMENT_ONLY: choose one bounded Garden tool-enabled state machine or GSL-KR fixture with identifiers explicitly classified as opaque. Generate a bijective renaming of those identifiers in state/input, run the same agent/tool-selection path, and check whether the selected actions/tool arguments are correspondingly renamed rather than behaviorally changed. Compare a simple normalization/wrapper approach only if raw behavior fails. Do not alter canonical identity semantics on theoretical evidence alone.",
+  "tests_measurements": [
+    "metamorphic property: bijective renaming of declared opaque IDs preserves action/tool-selection structure modulo the same renaming",
+    "negative control: semantically meaningful identifiers are excluded from the opaque set",
+    "measure raw-agent violation rate across deterministic fixtures",
+    "measure wrapper/normalization overhead and false-positive rate",
+    "verify no epistemic/authority status is upgraded by satisfying the property",
+    "record applicability limits when state/tool domains are not finite or identifier opacity cannot be established"
+  ],
+  "risks": [
+    "finite-domain assumptions may not match important Garden deployments",
+    "canonicalization/normalization can be computationally expensive",
+    "incorrectly treating meaningful identifiers as opaque can erase semantics",
+    "property may duplicate protections already obtained through typed identity/provenance in some profiles",
+    "formal preprint results have not been independently machine-checked in the Garden verifier stack"
+  ],
+  "rollback_or_overturn_conditions": "Reject/close if experiment shows no distinct failure class beyond existing typed-identity tests, if identifier opacity cannot be machine-resolved safely, or if cost dominates verified benefit. Overturn the observed-gap claim if whole-source review identifies an equivalent current invariant/test under another name.",
+  "do_nothing": "Keep Garden's current typed identity/provenance model without an opaque-ID renaming metamorphic check. This may be sufficient, but it leaves untested whether an agent's behavior spuriously depends on arbitrary names/IDs that Garden itself declares semantically opaque.",
+  "experiment_only": true
+}
+```
+
+### Boundary
+This is pre-process discovery evidence only. It does not choose a GardenProcess route, create a CycleBinding/ProcessRouteReceipt, admit a delta, merge code, or change canon. ReviewPacket Builder/ProcessFactory must perform any later route classification.
+
+### Deduplication
+No matching governed finding was found for opaque-ID renaming equivariance/FO-CTL agent verification. The candidate is deliberately `EXPERIMENT_ONLY` because Garden already has strong typed identity/provenance semantics and the incremental value must be demonstrated before any design change is considered.
+Qualification: pending work; no implementation or certification completion claimed.
+
+MAIN-ISSUE-29 — Identity-privacy migration to neutral Garden AI namespace
+PRESERVE_PRIVACY_MIGRATION_WORK
+Source: https://github.com/ankitdcx/garden-main/issues/29
+Private-side work package for Garden identity anonymization and neutral-repository cutover.
+
+Working neutral namespace candidate: `garden-ai-commons-27`; final availability must be confirmed at creation.
+
+Requirements:
+- Remove personal names, personal email addresses, personal GitHub handles, and personal owner-specific URLs from the current destination tree.
+- Replace identity-bearing founder references with anonymous governance roles (`Human Originator`, `Human Steward`, role IDs) without changing authority semantics.
+- Remove/replace identity-bearing founder notes and contact details.
+- Convert hard-coded owner/repository strings in scripts, governance records, conformance vectors, reviews, manifests, and receipts to neutral logical repository IDs or neutral destination refs.
+- Preserve evidentiary meaning through a private `RepositoryIdentityMigrationReceipt` binding old and new content/commit roots cryptographically without publishing natural-person identity in the neutral destination.
+- Sanitize retained Git author/committer/tagger metadata before import; do not copy identity-bearing PR/issue discussion history into the neutral repositories.
+- Recreate secrets, Actions, branch protections/rulesets, webhooks/connectors, Pages/reference bindings and automations under the neutral namespace.
+- Add an identity-privacy check to block future personal identity leakage without committing the forbidden personal strings to source.
+- Run whole-repo tests, Garden/GSL conformance, reference closure, DesignEpoch/canonical binding validation, and independent multi-model review before cutover.
+- Do not change canonical Garden semantics, HSA, governance authority, or protected human-control meaning merely to anonymize the operator identity.
+Qualification: pending work; no implementation or certification completion claimed.
+
+MAIN-ISSUE-23 — Protect main and require integration-provenance/kernel checks
+PRESERVE_REPOSITORY_ADMIN_ENFORCEMENT_WORK
+Source: https://github.com/ankitdcx/garden-main/issues/23
+## Enforcement gap
+
+PR #22 added executable multi-agent integration provenance to `garden-main`, but GitHub currently reports `main` as unprotected with required status checks disabled. Therefore the repository has a working fail-closed guard, but an administrator/maintainer can still bypass it through repository settings/direct updates.
+
+Workflow existence != mandatory enforcement.
+
+## Required repository-admin hardening
+
+Protect `main` and require pull requests for material changes. Require successful current-head checks at minimum:
+
+- `Multi-agent integration provenance / integration-provenance`
+- `Garden private kernel CI / wp-001-009-reference`
+- `Garden Seed CI` where applicable
+
+Also:
+
+- block force pushes / non-fast-forward updates to `main`;
+- block deletion of `main`;
+- avoid bypass actors unless explicitly governed;
+- prefer merge commits for multi-agent implementation work so original branch ancestry and integration evidence remain reconstructable;
+- consider disabling squash/rebase on `main` if that is acceptable for all Garden build workflows.
+
+## Evidence
+
+- PR #22 merged only after exact-head provenance, Seed CI, and private-kernel/GSL conformance checks were green.
+- Merge commit: `16fcb02daacf9fba4c9438c60df0ca1882669950` with parents `18236e8b5877589ce56d9ffc1b899c1a9d29c095` and `6a3cdfc9eab5917e0cfb97596ce398ef26878479`.
+- Post-merge canonical source manifest remains Garden v15.5 / GSL v45.1 at source root `63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598`.
+- Current branch API reports `protected: false` and required status checks `off`.
+
+## Boundary
+
+This is GitHub repository-policy enforcement only. It does not modify Garden canon, grant agent authority, alter ActionGate/HITL boundaries, or promote a successor release.
+
+The connected automation surface used for PR #22 can read branch/ruleset state but does not expose a safe branch-protection/ruleset mutation, so this must remain explicitly open until the GitHub admin setting is changed and re-verified.
+Qualification: pending work; no implementation or certification completion claimed.
+
+
+ANNEXURE — CONCRETE PROCESS DELTA DEPENDENCIES
+design_deltas/v15.6/DELTASET-2026-09-15-SUCCESSOR-PROCESS-HARDENING-V1.1.json
+[
+  {
+    "relation": "REQUIRED_BEFORE_ADMISSION",
+    "delta": "DELTASET-2026-09-15-SUCCESSOR-PROCESS-HARDENING",
+    "reason": "v1.1 refines rather than replaces the underlying v1.0 process-hardening candidate."
+  }
+]
+design_deltas/v15.6/DELTASET-2026-09-15-SUCCESSOR-PROCESS-HARDENING-V1.2.json
+[
+  {
+    "relation": "REQUIRED_BEFORE_ADMISSION",
+    "delta": "DELTASET-2026-09-15-SUCCESSOR-PROCESS-HARDENING-V1.1",
+    "reason": "v1.2 refines the tracked v1.1 process candidate."
+  }
+]
+design_deltas/v15.6/DELTASET-2026-09-15-SUCCESSOR-PROCESS-HARDENING-V1.3.json
+[
+  {
+    "relation": "REQUIRED_BEFORE_ADMISSION",
+    "delta": "DELTASET-2026-09-15-SUCCESSOR-PROCESS-HARDENING-V1.2",
+    "reason": "v1.3 refines v1.2."
+  }
+]
+design_deltas/v15.6/DELTASET-2026-09-15-SUCCESSOR-PROCESS-HARDENING-V1.4.json
+[
+  {
+    "relation": "REQUIRED_BEFORE_ADMISSION",
+    "delta": "DELTASET-2026-09-15-SUCCESSOR-PROCESS-HARDENING-V1.3",
+    "reason": "v1.4 refines v1.3."
+  }
+]
+design_deltas/v15.6/DELTASET-2026-09-15-SUCCESSOR-PROCESS-HARDENING.json
+[]
+
+TECHNICAL — KR-CEA SUBSTANTIVE FIELD AND TEST DETAILS (EXISTING KNOWLEDGE OWNER)
+Source: design_deltas/PENDING_PROJECT_WIDE_CANDIDATES_2026-09-14.md#C3-C7
+C3. Candidate artifacts
+
+Names remain provisional pending collision/equivalence review:
+
+- `EpistemicDeltaCandidate` — proposed material runtime knowledge update with source/provenance, time, context, privacy class, uncertainty, contradiction links, derivation lineage, originating model/agent/tool/version and retention class.
+- `KnowledgeAssimilationReceipt` — accepted / rejected / merged / CONFLICTED / UNKNOWN / verification-required / privacy-restricted / stale / poisoned disposition.
+- `KnowledgeCompressionReceipt` — loss-aware distillation of large cognitive histories into durable knowledge; declares retained conclusions/falsifiers/useful failed branches, omissions, loss budget and reconstruction pointers where lawfully retained.
+- `CrossContextPatternReceipt` — project/pattern inference spanning otherwise separate events/contexts only where lawful privacy/authority permits the join.
+- `ModelConsolidationCandidate` — proposal to incorporate stable knowledge/reasoning/scaffold improvements into a later model or privileged agent layer; never self-executes a weight update.
+- Optional `RecursiveCognitionGainReceipt` or equivalent metric binding — measures whether accumulated cognition is producing reusable capability/knowledge faster/cheaper over successive cycles. Prefer a metric/receipt over a new engine.
+
+### C4. Candidate hard invariants
+
+1. **Knowledge is not authority.** Confidence, consensus, repetition or derivation cannot create execution authority.
+2. **Runtime learning without weight mutation.** Material epistemic improvement must be possible without foundation-model retraining.
+3. **Provenance before promotion.** Material trusted knowledge requires sufficient provenance for its declared epistemic status.
+4. **Contradictions survive assimilation.** Conflicting evidence cannot be erased merely to force one answer.
+5. **Privacy-bounded correlation.** Cross-context joins require applicable authority/purpose/privacy scope; logical knowledge unity does not imply universal raw-data visibility.
+6. **Distillation is loss-declared.** Lossy compression cannot masquerade as the complete original record.
+7. **No automatic constitutional promotion.** Evidence/confidence/consensus cannot automatically modify rights, sovereignty or authority.
+8. **Poisoning does not self-amplify.** Repetition, synthetic restatement or many descendants of one source do not count as independent corroboration.
+9. **Derived data retains lineage.** Observation, testimony, inference, simulation, proof and generated hypothesis remain distinguishable.
+10. **New knowledge revalidates dependents.** Material epistemic change triggers applicable dependency/revalidation paths.
+11. **Retrieval beats rediscovery where valid.** Reuse validated knowledge unless freshness, falsification, privacy or independent-verification requirements justify recomputation.
+12. **Model consolidation is separately governed.** KR promotion cannot directly mutate deployed weights or privileged scaffolds.
+13. **Timescale separation is explicit.** Fast epistemic change cannot bypass slower protected governance/evolution gates.
+
+### C5. Knowledge-dividend / recursive-cognition accounting
+
+Measure, at minimum where practicable:
+
+- raw cognition/tokens/compute consumed;
+- durable validated knowledge produced;
+- duplicate work avoided by retrieval;
+- retrieval vs recomputation cost;
+- invalid/poisoned knowledge rejected;
+- time to revalidation after material evidence change;
+- number of authorized agents benefiting from one validated result;
+- loop-time and gain across repeated AI-assisted improvement cycles.
+
+Purpose: distinguish "more compute" from "more durable reusable knowledge per unit compute" and detect whether recursive cognition is accelerating, plateauing or regressing.
+
+### C6. Safety use case
+
+Permit privacy-bounded project-level inference such as individually ambiguous requests A+B+C becoming a validated higher-order risk hypothesis, while avoiding a universal surveillance database. Prefer derived bounded signals/checkers where they provide sufficient assurance without disclosing protected raw content.
+
+### C7. Minimum conformance tests
+
+- verified novel fact becomes retrievable without model-weight update;
+- unsupported claim repeated/synthetically replicated at massive scale does not become Knowledge solely through repetition;
+- accepted contradictory evidence changes BeliefTimeline and invalidates affected conclusions;
+- authorized cross-context pattern is detected;
+- same pattern remains inaccessible when privacy/authority forbids the join;
+- lossy compression cannot claim COMPLETE reconstruction;
+- high-confidence discovery cannot modify constitutional authority;
+- validated knowledge is reused without full rediscovery where independence is not required;
+- common-lineage synthetic descendants do not count as independent corroboration;
+- ModelConsolidationCandidate cannot alter deployed weights without separate governed evolution/admission.
+
+
+Candidate terminology only: names require existing-owner/collision resolution. No automatic runtime or weight changes.

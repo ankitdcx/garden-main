@@ -1,0 +1,41 @@
+{
+  "status": "PASS",
+  "scope": "Exact draft bytes retained, including its exact v15.5 source layers. No semantic admission.",
+  "files": [
+    {
+      "role": "User",
+      "retained_offset": 558,
+      "retained_bytes": 107320,
+      "draft_sha256": "bed327c387fdb72dc40a228fb56c2f1e5ef71fd61bfc9311e32139b21ca33466",
+      "exact": true
+    },
+    {
+      "role": "System",
+      "retained_offset": 560,
+      "retained_bytes": 249061,
+      "draft_sha256": "c2a4d72c1b445271737b6c136fcf01f2f490f89b006086d1c804d21b3ebbfde5",
+      "exact": true
+    },
+    {
+      "role": "Technical",
+      "retained_offset": 563,
+      "retained_bytes": 983642,
+      "draft_sha256": "dc2e3b46d83fc620973b861bc05578e250da2cdbba7d005305ea45ae96f5e5de",
+      "exact": true
+    },
+    {
+      "role": "Annexure",
+      "retained_offset": 562,
+      "retained_bytes": 1258074,
+      "draft_sha256": "dfb0caa4d880df80091409dc58c2e80689e91fae83e21422374ccb6f6c02a516",
+      "exact": true
+    },
+    {
+      "role": "Theories",
+      "retained_offset": 562,
+      "retained_bytes": 179578,
+      "draft_sha256": "3cd9232ba6ed02838ff6f9b1080ebe258b1e923032e5a2e1a3f1ba97d95c13f9",
+      "exact": true
+    }
+  ]
+}
