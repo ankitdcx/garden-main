@@ -1,0 +1,7 @@
+{
+  "release": "Garden v15.7",
+  "status": "WORKING_FIVE_FILE_CANDIDATE",
+  "manifest": "canonical/candidates/v15.7/SOURCE_MANIFEST.json",
+  "source_root_sha256": "eb4d5306a8f7dcca75f8cf7d60f6441bdf5b35bccb86ac2362b33f241af1591a",
+  "canonical": false
+}

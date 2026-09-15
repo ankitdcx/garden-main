@@ -5,7 +5,7 @@ This is intended as a private working repository.
 - No external licence is granted by this repository setup.
 - No third-party code, model weights, datasets, or substantial copied implementation is intentionally introduced by this bootstrap package.
 - Public ideas may be referenced as prior art/provenance, while Garden-compatible requirements are independently stated.
-- Do not make this repository public, choose an outbound licence, contribute Garden inventions upstream, disclose a private patent candidate, or accept agreements affecting Garden rights without an explicit Human Originator/HITL decision through the applicable Garden process.
+- Do not make this repository public, choose an outbound licence, contribute Garden inventions upstream, disclose a private patent candidate, or accept agreements affecting Garden rights without an explicit Human Steward/HITL decision through the applicable Garden process.
 - Patent validity, patentability, inventorship, priority, ownership, claim scope, and freedom-to-operate are not established by this repository.
 
 ## Patent-preservation control

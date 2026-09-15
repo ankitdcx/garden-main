@@ -1,0 +1,45 @@
+{
+  "schema": "GardenEvolutionProductionAction/v1",
+  "design_epoch": "v15.5",
+  "dependencies": {
+    "canonical_source_root": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598"
+  },
+  "action": {
+    "action_id": "GARDEN-2026-09-15-V157-CANDIDATE-PUBLICATION-PROPOSE-001",
+    "verb": "PROPOSE",
+    "actor_ref": "agent:garden-integrator-build",
+    "subject_ref": "repo:ankitdcx/garden-main",
+    "input_refs": [
+      "canonical/candidates/v15.7/SOURCE_MANIFEST.json",
+      "canonical/candidates/CURRENT_CANDIDATE.json",
+      "reviews/v15.7/RELEASE-STATUS.md",
+      "reviews/v15.7/ROLE-REFERENCE-EDIT-RECEIPT.json",
+      "governance/PROCESS_CURRENT.json",
+      "reviews/evolution/reasoning/2026-09-15-v157-candidate-publication-propose.json",
+      "reviews/evolution/algebra/2026-09-15-v157-candidate-publication-propose.json",
+      "reviews/evolution/assurance/2026-09-15-v157-candidate-publication-propose.json",
+      "scripts/gate_human_admitted_update.py",
+      "implementation/garden_kernel/base_admission.py",
+      ".github/workflows/trusted-human-admission.yml"
+    ],
+    "provenance_refs": [
+      "git:ankitdcx/garden-main@5a5fb60d54f9bb9310ea734657394c1c2de2f4fd",
+      "governance/GardenCanonicalUpdateProcess_v1.4.json",
+      "reviews/v15.7/ROLE-REFERENCE-EDIT-RECEIPT.json"
+    ],
+    "satisfied_preconditions": [
+      "ACTOR_IDENTIFIED",
+      "SUBJECT_IDENTIFIED",
+      "PROVENANCE_PRESENT",
+      "INPUT_REFS_TYPED"
+    ],
+    "claimed_postconditions": [
+      "CANDIDATE_RECORDED",
+      "NO_AUTHORITY_EXPANSION",
+      "CANONICAL_POINTER_UNCHANGED"
+    ]
+  },
+  "authority_ref": "AUTH-GARDEN-HOURLY-REVIEWER-v15.5",
+  "bound_inputs": [],
+  "boundary": "PROPOSE only. Records candidate publication and wording cleanup; does not grant merge, promotion, policy or human authority."
+}

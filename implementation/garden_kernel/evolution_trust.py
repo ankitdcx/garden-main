@@ -14,6 +14,9 @@ GOVERNANCE_RECEIPT_SCHEMA = "GardenEvolutionGovernanceClassificationReceipt/v1"
 ATTESTATION_RECEIPT_SCHEMA = "GardenEvolutionTrustedAttestationReceipt/v1"
 
 PROTECTED_CONSTITUTIONAL_PATHS: dict[str, str] = {
+    "scripts/gate_hourly_evolution.py": "ACTION_GATE_RULES",
+    "implementation/garden_kernel/evolution_trust.py": "CONSTITUTIONAL_CLASSIFICATION_RULES",
+    "implementation/garden_kernel/base_admission.py": "HUMAN_ATTESTATION_RULES",
     "implementation/garden_kernel/evolution_gate.py": "ACTION_GATE_RULES",
     "implementation/garden_kernel/evolution_authority.py": "AUTHORITY_ENVELOPE_RULES",
     "implementation/garden_kernel/evolution_epoch.py": "DESIGN_EPOCH_BINDING_RULES",
@@ -21,6 +24,9 @@ PROTECTED_CONSTITUTIONAL_PATHS: dict[str, str] = {
     "governance/evolution_authority_registry.json": "AUTHORITY_ENVELOPE_RULES",
 }
 PROTECTED_CONSTITUTIONAL_PREFIXES: dict[str, str] = {
+    "implementation/garden_kernel/": "TRUSTED_VERIFIER_DEPENDENCIES",
+    ".github/workflows/": "ACTION_GATE_EXECUTION_RULES",
+    "governance/human_admissions/": "HUMAN_ATTESTATION_RULES",
     "canonical/current/": "CANONICAL_SOURCE_POINTER_OR_CONTENT",
 }
 

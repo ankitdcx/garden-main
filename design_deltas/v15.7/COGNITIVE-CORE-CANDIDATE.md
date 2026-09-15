@@ -49,4 +49,8 @@ Require no detected unacceptable regression within declared coverage/tolerances;
 Apply existing privacy, retention, authorization, recovery, dependency and whole-source comparison/admission rules. Unresolved mandatory bindings block affected scope.
 Completion is scoped qualification evidence and dispositions, not comparative superiority or canonical promotion. Implemented / qualified / comparatively stronger / unresolved remain distinct claim states.
 Current evidence: conversational design review only; registration executes no cognitive tests or source reconciliation.
-Next work: produce first-pass per-function disposition and baseline-limitation tables against completed v15.6 and the selected v15.7 candidate configuration.
+Next work: produce first-pass per-function disposition and baseline-limitation tables against the pinned v15.6 working candidate (not a promoted release) and the selected v15.7 candidate configuration.
+
+
+## Direct v15.7 release binding — 2026-09-15
+The user authorized carrying the prepared v15.6 draft directly into v15.7. The actual canonical predecessor remains Garden v15.5 at source root 63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598. The retained v15.6 working candidate is d4f054f21247948426abbe4c842ac65f4daa83f521f73bc3ac57e2d5860bdf6b. References to completing v15.6 mean qualifying the necessary inherited scope; no intermediate canonical promotion is required merely to construct v15.7. This binding corrects the earlier anticipated lineage, preserves requirement semantics and grants no execution or qualification authority.

@@ -1,0 +1,19 @@
+{
+  "status": "PASS_SCOPED",
+  "tests_run": 199,
+  "passed": 198,
+  "skipped": 1,
+  "failures": 0,
+  "errors": 0,
+  "command": "PYTHONPATH=implementation python -m unittest discover -s implementation/tests",
+  "scope": "Reference regression and new Git-based admission tests; no canonical, physical or cognitive qualification",
+  "files": {
+    "implementation/garden_kernel/base_admission.py": "b57b061ef03eba36cae948ffc101ff52c312dd2f44f795265ea0f05dabffe87e",
+    "scripts/gate_human_admitted_update.py": "0b0208aa3d24fa405654e3f81ba11af543a07a64093456f9cff47672ffc6d642",
+    "scripts/gate_hourly_evolution.py": "ff135041d0941ace4f999c6002821083dd1cc212506aa642e06db91c0daef45a",
+    "implementation/garden_kernel/evolution_trust.py": "26de06003d021e6cdd9120604b2d87e443ca3791b034d4f5e6ffd694427c9244",
+    "implementation/tests/test_base_admission.py": "bd44fd48b79d63a90dc921d3ce7d11105708eb499b04c561c87cab52f23fec45",
+    "implementation/tests/test_production_evolution_transport.py": "8c26039714a245fb5da9dcdf3aef5a8583acc8f5b82e059dc2b218a2d5e64cc8",
+    ".github/workflows/trusted-human-admission.yml": "753832e37462a27fc5dd372adaf5dba559d07a7588975478dd635a7f8f85b03a"
+  }
+}
