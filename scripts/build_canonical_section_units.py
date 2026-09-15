@@ -7,6 +7,7 @@ import json
 import os
 from pathlib import Path
 import sys
+import subprocess
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "implementation"))
@@ -26,7 +27,7 @@ def main() -> int:
     parser.add_argument("--manifest", default=str(ROOT / "canonical" / "current" / "SOURCE_MANIFEST.json"))
     parser.add_argument("--algebra-profile", default=str(ROOT / "gsl" / "EVOLUTION_ALGEBRA_PROFILE.json"))
     parser.add_argument("--process-version", default="1.4")
-    parser.add_argument("--repo-head", default=os.environ.get("GITHUB_SHA", "LOCAL"))
+    parser.add_argument("--repo-head", default=os.environ.get("GITHUB_SHA"))
     parser.add_argument("--inventory-output", required=True)
     parser.add_argument("--count-output", required=True)
     parser.add_argument("--process-output", required=True)
@@ -35,7 +36,13 @@ def main() -> int:
     manifest = json.loads(Path(args.manifest).read_text(encoding="utf-8"))
     profile = json.loads(Path(args.algebra_profile).read_text(encoding="utf-8"))
     inventory = build_inventory(source_dir=Path(args.source_dir), manifest=manifest, process_version=args.process_version)
-    repo_head = str(args.repo_head).strip()
+    repo_head = args.repo_head
+    if repo_head is None:
+        try:
+            repo_head = subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=ROOT, text=True).strip()
+        except (OSError, subprocess.CalledProcessError):
+            parser.error("provide --repo-head with the full observed commit SHA")
+    repo_head = str(repo_head).strip()
     if not repo_head:
         raise SystemExit("repo head is required")
 

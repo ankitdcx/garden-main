@@ -1,0 +1,751 @@
+{
+  "schema": "GardenProjectAuditRepairEvidence/v1",
+  "scope": "Implementation of existing v1.4 requirements; no new process semantics or canonical promotion.",
+  "classification_evidence": [
+    "Remove legacy repository clock triggers to implement admitted single-driver schedule.",
+    "Reject malformed budget numbers under existing verified-cost requirement.",
+    "Replay existing route/transition records against observed CycleBinding without adding or removing route gates."
+  ],
+  "records": [
+    {
+      "work_id": "AUDIT-20260915-SCHEDULER-COST",
+      "route_receipt": {
+        "schema": "ProcessRouteReceipt/v1",
+        "cycle_id": "CYCLE-PROJECT-AUDIT-20260915-001",
+        "work_id": "AUDIT-20260915-SCHEDULER-COST",
+        "process_version": "1.4",
+        "design_epoch": "v15.5",
+        "source_root_sha256": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+        "route": "NON_SEMANTIC_REPAIR",
+        "mandatory_steps": [
+          "semantic_touch_check",
+          "LIGHT_NON_SEMANTIC/v1",
+          "reference_closure_where_applicable",
+          "applicable_tests",
+          "post_fix_verification"
+        ],
+        "optional_steps": [
+          "one_qualified_reviewer"
+        ],
+        "forbidden_steps": [
+          "semantic_delta_admission",
+          "delta_dependency_graph",
+          "successor_classification",
+          "canonical_promotion"
+        ],
+        "silent_downgrade_forbidden": true
+      },
+      "transition_receipts": [
+        {
+          "schema": "GardenProcessTransitionReceipt/v1",
+          "engine_schema": "GardenProcessEngine/v1",
+          "cycle_id": "CYCLE-PROJECT-AUDIT-20260915-001",
+          "work_id": "AUDIT-20260915-SCHEDULER-COST",
+          "process_version": "1.4",
+          "design_epoch": "v15.5",
+          "source_root_sha256": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+          "repo_heads": {
+            "garden-main": "f7b223bad67c4d45286bc4c1f6bb9eb3fe809da0",
+            "garden-swarm": "2aebb9aa92f200149869179092d454ab90c5593c"
+          },
+          "route": "NON_SEMANTIC_REPAIR",
+          "from_state": "CREATED",
+          "to_state": "ROUTED",
+          "process_operator": "BRANCH",
+          "required_gates": [
+            "ROUTE_CLASSIFIED",
+            "SEMANTIC_TOUCH_FALSE"
+          ],
+          "satisfied_gates": [
+            "ROUTE_CLASSIFIED",
+            "SEMANTIC_TOUCH_FALSE"
+          ],
+          "algebra_registry_ref": "REG-ALGEBRA-001",
+          "algebra_usage": {
+            "schema": "GardenEvolutionAlgebraUsageReceipt/v1",
+            "action_id": "CYCLE-PROJECT-AUDIT-20260915-001:AUDIT-20260915-SCHEDULER-COST:CREATED->ROUTED",
+            "design_epoch": "v15.5",
+            "canonical_source_root_sha256": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+            "source_obligation_refs": [
+              "governance/PROCESS_EXECUTION_SCHEDULE_v1.json",
+              "governance/GardenCanonicalUpdateProcess_v1.4.json",
+              "governance/PROCESS_ENGINE_IMPLEMENTATION_v1.json"
+            ],
+            "entries": [
+              {
+                "algebra": "Process",
+                "status": "APPLIED",
+                "operators": [
+                  "BRANCH"
+                ],
+                "law_claims": [],
+                "non_law_acknowledgements": [
+                  "PARALLEL_EFFECT_COMMUTATIVITY_NOT_UNIVERSAL"
+                ],
+                "applicability_reason": "A GardenProcess transition executes one registered Process Algebra operator; omitted laws are not inferred."
+              },
+              {
+                "algebra": "Policy",
+                "status": "FRONTIER",
+                "operators": [],
+                "law_claims": [],
+                "non_law_acknowledgements": [],
+                "applicability_reason": "External gates constrain transition eligibility but are not relabeled as executable Policy Algebra.",
+                "frontier_reason": "No Policy Algebra operator is executed by GardenProcess."
+              },
+              {
+                "algebra": "Decision",
+                "status": "FRONTIER",
+                "operators": [],
+                "law_claims": [],
+                "non_law_acknowledgements": [],
+                "applicability_reason": "Transition outcomes are typed while executable Decision Algebra signatures remain outside this bounded profile.",
+                "frontier_reason": "Decision Algebra executable signatures remain FRONTIER."
+              },
+              {
+                "algebra": "Conformance",
+                "status": "APPLIED",
+                "operators": [
+                  "BIND_EVIDENCE",
+                  "COVERAGE"
+                ],
+                "law_claims": [],
+                "non_law_acknowledgements": [
+                  "CONFORMANCE_IS_NOT_BINARY_ONLY",
+                  "AUDIT_IS_NOT_A_SEPARATE_ALGEBRA"
+                ],
+                "applicability_reason": "Required gates are evidence-bound and coverage is recorded without collapsing non-binary states."
+              },
+              {
+                "algebra": "Evidence",
+                "status": "FRONTIER",
+                "operators": [],
+                "law_claims": [],
+                "non_law_acknowledgements": [],
+                "applicability_reason": "Evidence references are carried but no executable Evidence Algebra composition operator is claimed.",
+                "frontier_reason": "Evidence Algebra executable signatures remain FRONTIER."
+              },
+              {
+                "algebra": "Bridge",
+                "status": "NOT_APPLICABLE",
+                "operators": [],
+                "law_claims": [],
+                "non_law_acknowledgements": [],
+                "applicability_reason": "Typed Python/JSON transport does not itself invoke a semantic Bridge operator."
+              }
+            ],
+            "semantic_compliance_proved": false
+          },
+          "algebra_validation": {
+            "schema": "GardenEvolutionAlgebraValidationReceipt/v1",
+            "action_id": "CYCLE-PROJECT-AUDIT-20260915-001:AUDIT-20260915-SCHEDULER-COST:CREATED->ROUTED",
+            "design_epoch": "v15.5",
+            "canonical_source_root_sha256": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+            "source_obligation_refs": [
+              "governance/PROCESS_EXECUTION_SCHEDULE_v1.json",
+              "governance/GardenCanonicalUpdateProcess_v1.4.json",
+              "governance/PROCESS_ENGINE_IMPLEMENTATION_v1.json"
+            ],
+            "algebras": {
+              "Process": {
+                "status": "APPLIED",
+                "operator_count": 1,
+                "law_claim_count": 0,
+                "applicability_reason": "A GardenProcess transition executes one registered Process Algebra operator; omitted laws are not inferred."
+              },
+              "Policy": {
+                "status": "FRONTIER",
+                "operator_count": 0,
+                "law_claim_count": 0,
+                "applicability_reason": "External gates constrain transition eligibility but are not relabeled as executable Policy Algebra."
+              },
+              "Decision": {
+                "status": "FRONTIER",
+                "operator_count": 0,
+                "law_claim_count": 0,
+                "applicability_reason": "Transition outcomes are typed while executable Decision Algebra signatures remain outside this bounded profile."
+              },
+              "Conformance": {
+                "status": "APPLIED",
+                "operator_count": 2,
+                "law_claim_count": 0,
+                "applicability_reason": "Required gates are evidence-bound and coverage is recorded without collapsing non-binary states."
+              },
+              "Evidence": {
+                "status": "FRONTIER",
+                "operator_count": 0,
+                "law_claim_count": 0,
+                "applicability_reason": "Evidence references are carried but no executable Evidence Algebra composition operator is claimed."
+              },
+              "Bridge": {
+                "status": "NOT_APPLICABLE",
+                "operator_count": 0,
+                "law_claim_count": 0,
+                "applicability_reason": "Typed Python/JSON transport does not itself invoke a semantic Bridge operator."
+              }
+            },
+            "applied": [
+              "Process",
+              "Conformance"
+            ],
+            "frontier": [
+              "Policy",
+              "Decision",
+              "Evidence"
+            ],
+            "not_applicable": [
+              "Bridge"
+            ],
+            "required_frontier_count": 3,
+            "authorization_result": "NOT_EVALUATED_HERE",
+            "semantic_compliance_proved": false,
+            "boundary": "Algebra validation checks declared operator/law/non-law use only; it grants no authority and does not prove Garden certification."
+          },
+          "authorization_result": "NOT_MINTED_BY_PROCESS_ENGINE",
+          "semantic_compliance_proved": false,
+          "boundary": "Transition validity and algebra conformance do not grant authority, admit a semantic delta, or promote Garden canon."
+        },
+        {
+          "schema": "GardenProcessTransitionReceipt/v1",
+          "engine_schema": "GardenProcessEngine/v1",
+          "cycle_id": "CYCLE-PROJECT-AUDIT-20260915-001",
+          "work_id": "AUDIT-20260915-SCHEDULER-COST",
+          "process_version": "1.4",
+          "design_epoch": "v15.5",
+          "source_root_sha256": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+          "repo_heads": {
+            "garden-main": "f7b223bad67c4d45286bc4c1f6bb9eb3fe809da0",
+            "garden-swarm": "2aebb9aa92f200149869179092d454ab90c5593c"
+          },
+          "route": "NON_SEMANTIC_REPAIR",
+          "from_state": "ROUTED",
+          "to_state": "IMPLEMENTED",
+          "process_operator": "SEQUENCE",
+          "required_gates": [
+            "LIGHT_CHECKS_PASS"
+          ],
+          "satisfied_gates": [
+            "LIGHT_CHECKS_PASS"
+          ],
+          "algebra_registry_ref": "REG-ALGEBRA-001",
+          "algebra_usage": {
+            "schema": "GardenEvolutionAlgebraUsageReceipt/v1",
+            "action_id": "CYCLE-PROJECT-AUDIT-20260915-001:AUDIT-20260915-SCHEDULER-COST:ROUTED->IMPLEMENTED",
+            "design_epoch": "v15.5",
+            "canonical_source_root_sha256": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+            "source_obligation_refs": [
+              "governance/PROCESS_EXECUTION_SCHEDULE_v1.json",
+              "governance/GardenCanonicalUpdateProcess_v1.4.json",
+              "governance/PROCESS_ENGINE_IMPLEMENTATION_v1.json"
+            ],
+            "entries": [
+              {
+                "algebra": "Process",
+                "status": "APPLIED",
+                "operators": [
+                  "SEQUENCE"
+                ],
+                "law_claims": [],
+                "non_law_acknowledgements": [
+                  "PARALLEL_EFFECT_COMMUTATIVITY_NOT_UNIVERSAL"
+                ],
+                "applicability_reason": "A GardenProcess transition executes one registered Process Algebra operator; omitted laws are not inferred."
+              },
+              {
+                "algebra": "Policy",
+                "status": "FRONTIER",
+                "operators": [],
+                "law_claims": [],
+                "non_law_acknowledgements": [],
+                "applicability_reason": "External gates constrain transition eligibility but are not relabeled as executable Policy Algebra.",
+                "frontier_reason": "No Policy Algebra operator is executed by GardenProcess."
+              },
+              {
+                "algebra": "Decision",
+                "status": "FRONTIER",
+                "operators": [],
+                "law_claims": [],
+                "non_law_acknowledgements": [],
+                "applicability_reason": "Transition outcomes are typed while executable Decision Algebra signatures remain outside this bounded profile.",
+                "frontier_reason": "Decision Algebra executable signatures remain FRONTIER."
+              },
+              {
+                "algebra": "Conformance",
+                "status": "APPLIED",
+                "operators": [
+                  "BIND_EVIDENCE",
+                  "COVERAGE"
+                ],
+                "law_claims": [],
+                "non_law_acknowledgements": [
+                  "CONFORMANCE_IS_NOT_BINARY_ONLY",
+                  "AUDIT_IS_NOT_A_SEPARATE_ALGEBRA"
+                ],
+                "applicability_reason": "Required gates are evidence-bound and coverage is recorded without collapsing non-binary states."
+              },
+              {
+                "algebra": "Evidence",
+                "status": "FRONTIER",
+                "operators": [],
+                "law_claims": [],
+                "non_law_acknowledgements": [],
+                "applicability_reason": "Evidence references are carried but no executable Evidence Algebra composition operator is claimed.",
+                "frontier_reason": "Evidence Algebra executable signatures remain FRONTIER."
+              },
+              {
+                "algebra": "Bridge",
+                "status": "NOT_APPLICABLE",
+                "operators": [],
+                "law_claims": [],
+                "non_law_acknowledgements": [],
+                "applicability_reason": "Typed Python/JSON transport does not itself invoke a semantic Bridge operator."
+              }
+            ],
+            "semantic_compliance_proved": false
+          },
+          "algebra_validation": {
+            "schema": "GardenEvolutionAlgebraValidationReceipt/v1",
+            "action_id": "CYCLE-PROJECT-AUDIT-20260915-001:AUDIT-20260915-SCHEDULER-COST:ROUTED->IMPLEMENTED",
+            "design_epoch": "v15.5",
+            "canonical_source_root_sha256": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+            "source_obligation_refs": [
+              "governance/PROCESS_EXECUTION_SCHEDULE_v1.json",
+              "governance/GardenCanonicalUpdateProcess_v1.4.json",
+              "governance/PROCESS_ENGINE_IMPLEMENTATION_v1.json"
+            ],
+            "algebras": {
+              "Process": {
+                "status": "APPLIED",
+                "operator_count": 1,
+                "law_claim_count": 0,
+                "applicability_reason": "A GardenProcess transition executes one registered Process Algebra operator; omitted laws are not inferred."
+              },
+              "Policy": {
+                "status": "FRONTIER",
+                "operator_count": 0,
+                "law_claim_count": 0,
+                "applicability_reason": "External gates constrain transition eligibility but are not relabeled as executable Policy Algebra."
+              },
+              "Decision": {
+                "status": "FRONTIER",
+                "operator_count": 0,
+                "law_claim_count": 0,
+                "applicability_reason": "Transition outcomes are typed while executable Decision Algebra signatures remain outside this bounded profile."
+              },
+              "Conformance": {
+                "status": "APPLIED",
+                "operator_count": 2,
+                "law_claim_count": 0,
+                "applicability_reason": "Required gates are evidence-bound and coverage is recorded without collapsing non-binary states."
+              },
+              "Evidence": {
+                "status": "FRONTIER",
+                "operator_count": 0,
+                "law_claim_count": 0,
+                "applicability_reason": "Evidence references are carried but no executable Evidence Algebra composition operator is claimed."
+              },
+              "Bridge": {
+                "status": "NOT_APPLICABLE",
+                "operator_count": 0,
+                "law_claim_count": 0,
+                "applicability_reason": "Typed Python/JSON transport does not itself invoke a semantic Bridge operator."
+              }
+            },
+            "applied": [
+              "Process",
+              "Conformance"
+            ],
+            "frontier": [
+              "Policy",
+              "Decision",
+              "Evidence"
+            ],
+            "not_applicable": [
+              "Bridge"
+            ],
+            "required_frontier_count": 3,
+            "authorization_result": "NOT_EVALUATED_HERE",
+            "semantic_compliance_proved": false,
+            "boundary": "Algebra validation checks declared operator/law/non-law use only; it grants no authority and does not prove Garden certification."
+          },
+          "authorization_result": "NOT_MINTED_BY_PROCESS_ENGINE",
+          "semantic_compliance_proved": false,
+          "boundary": "Transition validity and algebra conformance do not grant authority, admit a semantic delta, or promote Garden canon."
+        }
+      ],
+      "restored_state": "IMPLEMENTED",
+      "status": "IMPLEMENTED_LOCAL_TESTS_PASS_PENDING_MERGE_AND_POST_MERGE_VERIFICATION",
+      "closure_claimed": false
+    },
+    {
+      "work_id": "AUDIT-20260915-RECEIPT-RESTORE",
+      "route_receipt": {
+        "schema": "ProcessRouteReceipt/v1",
+        "cycle_id": "CYCLE-PROJECT-AUDIT-20260915-001",
+        "work_id": "AUDIT-20260915-RECEIPT-RESTORE",
+        "process_version": "1.4",
+        "design_epoch": "v15.5",
+        "source_root_sha256": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+        "route": "NON_SEMANTIC_REPAIR",
+        "mandatory_steps": [
+          "semantic_touch_check",
+          "LIGHT_NON_SEMANTIC/v1",
+          "reference_closure_where_applicable",
+          "applicable_tests",
+          "post_fix_verification"
+        ],
+        "optional_steps": [
+          "one_qualified_reviewer"
+        ],
+        "forbidden_steps": [
+          "semantic_delta_admission",
+          "delta_dependency_graph",
+          "successor_classification",
+          "canonical_promotion"
+        ],
+        "silent_downgrade_forbidden": true
+      },
+      "transition_receipts": [
+        {
+          "schema": "GardenProcessTransitionReceipt/v1",
+          "engine_schema": "GardenProcessEngine/v1",
+          "cycle_id": "CYCLE-PROJECT-AUDIT-20260915-001",
+          "work_id": "AUDIT-20260915-RECEIPT-RESTORE",
+          "process_version": "1.4",
+          "design_epoch": "v15.5",
+          "source_root_sha256": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+          "repo_heads": {
+            "garden-main": "f7b223bad67c4d45286bc4c1f6bb9eb3fe809da0",
+            "garden-swarm": "2aebb9aa92f200149869179092d454ab90c5593c"
+          },
+          "route": "NON_SEMANTIC_REPAIR",
+          "from_state": "CREATED",
+          "to_state": "ROUTED",
+          "process_operator": "BRANCH",
+          "required_gates": [
+            "ROUTE_CLASSIFIED",
+            "SEMANTIC_TOUCH_FALSE"
+          ],
+          "satisfied_gates": [
+            "ROUTE_CLASSIFIED",
+            "SEMANTIC_TOUCH_FALSE"
+          ],
+          "algebra_registry_ref": "REG-ALGEBRA-001",
+          "algebra_usage": {
+            "schema": "GardenEvolutionAlgebraUsageReceipt/v1",
+            "action_id": "CYCLE-PROJECT-AUDIT-20260915-001:AUDIT-20260915-RECEIPT-RESTORE:CREATED->ROUTED",
+            "design_epoch": "v15.5",
+            "canonical_source_root_sha256": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+            "source_obligation_refs": [
+              "governance/PROCESS_EXECUTION_SCHEDULE_v1.json",
+              "governance/GardenCanonicalUpdateProcess_v1.4.json",
+              "governance/PROCESS_ENGINE_IMPLEMENTATION_v1.json"
+            ],
+            "entries": [
+              {
+                "algebra": "Process",
+                "status": "APPLIED",
+                "operators": [
+                  "BRANCH"
+                ],
+                "law_claims": [],
+                "non_law_acknowledgements": [
+                  "PARALLEL_EFFECT_COMMUTATIVITY_NOT_UNIVERSAL"
+                ],
+                "applicability_reason": "A GardenProcess transition executes one registered Process Algebra operator; omitted laws are not inferred."
+              },
+              {
+                "algebra": "Policy",
+                "status": "FRONTIER",
+                "operators": [],
+                "law_claims": [],
+                "non_law_acknowledgements": [],
+                "applicability_reason": "External gates constrain transition eligibility but are not relabeled as executable Policy Algebra.",
+                "frontier_reason": "No Policy Algebra operator is executed by GardenProcess."
+              },
+              {
+                "algebra": "Decision",
+                "status": "FRONTIER",
+                "operators": [],
+                "law_claims": [],
+                "non_law_acknowledgements": [],
+                "applicability_reason": "Transition outcomes are typed while executable Decision Algebra signatures remain outside this bounded profile.",
+                "frontier_reason": "Decision Algebra executable signatures remain FRONTIER."
+              },
+              {
+                "algebra": "Conformance",
+                "status": "APPLIED",
+                "operators": [
+                  "BIND_EVIDENCE",
+                  "COVERAGE"
+                ],
+                "law_claims": [],
+                "non_law_acknowledgements": [
+                  "CONFORMANCE_IS_NOT_BINARY_ONLY",
+                  "AUDIT_IS_NOT_A_SEPARATE_ALGEBRA"
+                ],
+                "applicability_reason": "Required gates are evidence-bound and coverage is recorded without collapsing non-binary states."
+              },
+              {
+                "algebra": "Evidence",
+                "status": "FRONTIER",
+                "operators": [],
+                "law_claims": [],
+                "non_law_acknowledgements": [],
+                "applicability_reason": "Evidence references are carried but no executable Evidence Algebra composition operator is claimed.",
+                "frontier_reason": "Evidence Algebra executable signatures remain FRONTIER."
+              },
+              {
+                "algebra": "Bridge",
+                "status": "NOT_APPLICABLE",
+                "operators": [],
+                "law_claims": [],
+                "non_law_acknowledgements": [],
+                "applicability_reason": "Typed Python/JSON transport does not itself invoke a semantic Bridge operator."
+              }
+            ],
+            "semantic_compliance_proved": false
+          },
+          "algebra_validation": {
+            "schema": "GardenEvolutionAlgebraValidationReceipt/v1",
+            "action_id": "CYCLE-PROJECT-AUDIT-20260915-001:AUDIT-20260915-RECEIPT-RESTORE:CREATED->ROUTED",
+            "design_epoch": "v15.5",
+            "canonical_source_root_sha256": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+            "source_obligation_refs": [
+              "governance/PROCESS_EXECUTION_SCHEDULE_v1.json",
+              "governance/GardenCanonicalUpdateProcess_v1.4.json",
+              "governance/PROCESS_ENGINE_IMPLEMENTATION_v1.json"
+            ],
+            "algebras": {
+              "Process": {
+                "status": "APPLIED",
+                "operator_count": 1,
+                "law_claim_count": 0,
+                "applicability_reason": "A GardenProcess transition executes one registered Process Algebra operator; omitted laws are not inferred."
+              },
+              "Policy": {
+                "status": "FRONTIER",
+                "operator_count": 0,
+                "law_claim_count": 0,
+                "applicability_reason": "External gates constrain transition eligibility but are not relabeled as executable Policy Algebra."
+              },
+              "Decision": {
+                "status": "FRONTIER",
+                "operator_count": 0,
+                "law_claim_count": 0,
+                "applicability_reason": "Transition outcomes are typed while executable Decision Algebra signatures remain outside this bounded profile."
+              },
+              "Conformance": {
+                "status": "APPLIED",
+                "operator_count": 2,
+                "law_claim_count": 0,
+                "applicability_reason": "Required gates are evidence-bound and coverage is recorded without collapsing non-binary states."
+              },
+              "Evidence": {
+                "status": "FRONTIER",
+                "operator_count": 0,
+                "law_claim_count": 0,
+                "applicability_reason": "Evidence references are carried but no executable Evidence Algebra composition operator is claimed."
+              },
+              "Bridge": {
+                "status": "NOT_APPLICABLE",
+                "operator_count": 0,
+                "law_claim_count": 0,
+                "applicability_reason": "Typed Python/JSON transport does not itself invoke a semantic Bridge operator."
+              }
+            },
+            "applied": [
+              "Process",
+              "Conformance"
+            ],
+            "frontier": [
+              "Policy",
+              "Decision",
+              "Evidence"
+            ],
+            "not_applicable": [
+              "Bridge"
+            ],
+            "required_frontier_count": 3,
+            "authorization_result": "NOT_EVALUATED_HERE",
+            "semantic_compliance_proved": false,
+            "boundary": "Algebra validation checks declared operator/law/non-law use only; it grants no authority and does not prove Garden certification."
+          },
+          "authorization_result": "NOT_MINTED_BY_PROCESS_ENGINE",
+          "semantic_compliance_proved": false,
+          "boundary": "Transition validity and algebra conformance do not grant authority, admit a semantic delta, or promote Garden canon."
+        },
+        {
+          "schema": "GardenProcessTransitionReceipt/v1",
+          "engine_schema": "GardenProcessEngine/v1",
+          "cycle_id": "CYCLE-PROJECT-AUDIT-20260915-001",
+          "work_id": "AUDIT-20260915-RECEIPT-RESTORE",
+          "process_version": "1.4",
+          "design_epoch": "v15.5",
+          "source_root_sha256": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+          "repo_heads": {
+            "garden-main": "f7b223bad67c4d45286bc4c1f6bb9eb3fe809da0",
+            "garden-swarm": "2aebb9aa92f200149869179092d454ab90c5593c"
+          },
+          "route": "NON_SEMANTIC_REPAIR",
+          "from_state": "ROUTED",
+          "to_state": "IMPLEMENTED",
+          "process_operator": "SEQUENCE",
+          "required_gates": [
+            "LIGHT_CHECKS_PASS"
+          ],
+          "satisfied_gates": [
+            "LIGHT_CHECKS_PASS"
+          ],
+          "algebra_registry_ref": "REG-ALGEBRA-001",
+          "algebra_usage": {
+            "schema": "GardenEvolutionAlgebraUsageReceipt/v1",
+            "action_id": "CYCLE-PROJECT-AUDIT-20260915-001:AUDIT-20260915-RECEIPT-RESTORE:ROUTED->IMPLEMENTED",
+            "design_epoch": "v15.5",
+            "canonical_source_root_sha256": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+            "source_obligation_refs": [
+              "governance/PROCESS_EXECUTION_SCHEDULE_v1.json",
+              "governance/GardenCanonicalUpdateProcess_v1.4.json",
+              "governance/PROCESS_ENGINE_IMPLEMENTATION_v1.json"
+            ],
+            "entries": [
+              {
+                "algebra": "Process",
+                "status": "APPLIED",
+                "operators": [
+                  "SEQUENCE"
+                ],
+                "law_claims": [],
+                "non_law_acknowledgements": [
+                  "PARALLEL_EFFECT_COMMUTATIVITY_NOT_UNIVERSAL"
+                ],
+                "applicability_reason": "A GardenProcess transition executes one registered Process Algebra operator; omitted laws are not inferred."
+              },
+              {
+                "algebra": "Policy",
+                "status": "FRONTIER",
+                "operators": [],
+                "law_claims": [],
+                "non_law_acknowledgements": [],
+                "applicability_reason": "External gates constrain transition eligibility but are not relabeled as executable Policy Algebra.",
+                "frontier_reason": "No Policy Algebra operator is executed by GardenProcess."
+              },
+              {
+                "algebra": "Decision",
+                "status": "FRONTIER",
+                "operators": [],
+                "law_claims": [],
+                "non_law_acknowledgements": [],
+                "applicability_reason": "Transition outcomes are typed while executable Decision Algebra signatures remain outside this bounded profile.",
+                "frontier_reason": "Decision Algebra executable signatures remain FRONTIER."
+              },
+              {
+                "algebra": "Conformance",
+                "status": "APPLIED",
+                "operators": [
+                  "BIND_EVIDENCE",
+                  "COVERAGE"
+                ],
+                "law_claims": [],
+                "non_law_acknowledgements": [
+                  "CONFORMANCE_IS_NOT_BINARY_ONLY",
+                  "AUDIT_IS_NOT_A_SEPARATE_ALGEBRA"
+                ],
+                "applicability_reason": "Required gates are evidence-bound and coverage is recorded without collapsing non-binary states."
+              },
+              {
+                "algebra": "Evidence",
+                "status": "FRONTIER",
+                "operators": [],
+                "law_claims": [],
+                "non_law_acknowledgements": [],
+                "applicability_reason": "Evidence references are carried but no executable Evidence Algebra composition operator is claimed.",
+                "frontier_reason": "Evidence Algebra executable signatures remain FRONTIER."
+              },
+              {
+                "algebra": "Bridge",
+                "status": "NOT_APPLICABLE",
+                "operators": [],
+                "law_claims": [],
+                "non_law_acknowledgements": [],
+                "applicability_reason": "Typed Python/JSON transport does not itself invoke a semantic Bridge operator."
+              }
+            ],
+            "semantic_compliance_proved": false
+          },
+          "algebra_validation": {
+            "schema": "GardenEvolutionAlgebraValidationReceipt/v1",
+            "action_id": "CYCLE-PROJECT-AUDIT-20260915-001:AUDIT-20260915-RECEIPT-RESTORE:ROUTED->IMPLEMENTED",
+            "design_epoch": "v15.5",
+            "canonical_source_root_sha256": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+            "source_obligation_refs": [
+              "governance/PROCESS_EXECUTION_SCHEDULE_v1.json",
+              "governance/GardenCanonicalUpdateProcess_v1.4.json",
+              "governance/PROCESS_ENGINE_IMPLEMENTATION_v1.json"
+            ],
+            "algebras": {
+              "Process": {
+                "status": "APPLIED",
+                "operator_count": 1,
+                "law_claim_count": 0,
+                "applicability_reason": "A GardenProcess transition executes one registered Process Algebra operator; omitted laws are not inferred."
+              },
+              "Policy": {
+                "status": "FRONTIER",
+                "operator_count": 0,
+                "law_claim_count": 0,
+                "applicability_reason": "External gates constrain transition eligibility but are not relabeled as executable Policy Algebra."
+              },
+              "Decision": {
+                "status": "FRONTIER",
+                "operator_count": 0,
+                "law_claim_count": 0,
+                "applicability_reason": "Transition outcomes are typed while executable Decision Algebra signatures remain outside this bounded profile."
+              },
+              "Conformance": {
+                "status": "APPLIED",
+                "operator_count": 2,
+                "law_claim_count": 0,
+                "applicability_reason": "Required gates are evidence-bound and coverage is recorded without collapsing non-binary states."
+              },
+              "Evidence": {
+                "status": "FRONTIER",
+                "operator_count": 0,
+                "law_claim_count": 0,
+                "applicability_reason": "Evidence references are carried but no executable Evidence Algebra composition operator is claimed."
+              },
+              "Bridge": {
+                "status": "NOT_APPLICABLE",
+                "operator_count": 0,
+                "law_claim_count": 0,
+                "applicability_reason": "Typed Python/JSON transport does not itself invoke a semantic Bridge operator."
+              }
+            },
+            "applied": [
+              "Process",
+              "Conformance"
+            ],
+            "frontier": [
+              "Policy",
+              "Decision",
+              "Evidence"
+            ],
+            "not_applicable": [
+              "Bridge"
+            ],
+            "required_frontier_count": 3,
+            "authorization_result": "NOT_EVALUATED_HERE",
+            "semantic_compliance_proved": false,
+            "boundary": "Algebra validation checks declared operator/law/non-law use only; it grants no authority and does not prove Garden certification."
+          },
+          "authorization_result": "NOT_MINTED_BY_PROCESS_ENGINE",
+          "semantic_compliance_proved": false,
+          "boundary": "Transition validity and algebra conformance do not grant authority, admit a semantic delta, or promote Garden canon."
+        }
+      ],
+      "restored_state": "IMPLEMENTED",
+      "status": "IMPLEMENTED_LOCAL_TESTS_PASS_PENDING_MERGE_AND_POST_MERGE_VERIFICATION",
+      "closure_claimed": false
+    }
+  ]
+}

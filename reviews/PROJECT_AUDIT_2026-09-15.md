@@ -1,0 +1,58 @@
+# Garden project audit — 15 September 2026
+
+The architecture and current implementation are different maturity levels. Garden v15.5 remains the immutable five-file source, GSL v45.1 remains current, and HUMAN-admitted GardenCanonicalUpdateProcess 1.4 governs the update machinery. The repository contains an executable reference kernel and a process-route engine, but it does not yet demonstrate a complete automated packet-to-review-to-repair-to-canonical-successor cycle.
+
+## Coverage and chronology
+
+This pass obtained both repository trees at `garden-main:f7b223bad67c4d45286bc4c1f6bb9eb3fe809da0` and `garden-swarm:2aebb9aa92f200149869179092d454ab90c5593c`, inspected current issues/PRs, recent CI results, process/health/admission records, and the live automation configuration. All five canonical source files are available locally and retain the published hashes. This is not a full semantic certification of the source.
+
+The available ChatGPT export has 127 conversations, 26 explicitly tagged to this project, and 1,383 active-branch user/assistant text messages in those tagged chats. All 26 were traversed oldest to newest; request excerpts and outcomes were inspected. Long pasted patches were not all reread verbatim. The archive ends September 11. The September 12–15 full transcripts and the larger multi-provider corpus cited by the September 14 audit were not fully available/reverified here. Therefore **all current project chats reviewed = false**. Exact per-chat coverage is in [chat-coverage.json](project_audit_2026-09-15/chat-coverage.json). This limitation must survive future summaries.
+
+| Period | Development and current consequence |
+| --- | --- |
+| August 21–23 | Readability, typed hierarchy, Policy Algebra, GSL-COMPARE, VLP and per-step control loop. Repeated retention audits show why source loss and generated-content claims need mechanical evidence. |
+| August 24–25 | v14.3 Bridge, specification compiler, standards and engineering ingestion; v14.5 assurance, v14.6 continuity, v14.7 cognition. Design acceptance remained separate from implementation certification. |
+| August 26–27 | Five-file split, TFT/VSM/RPM/PPM, CASI and lossless representation. Justice, UCAS and federation were also discussed as future work. Later canonical source/decisions govern over an older defer/include remark. |
+| September 1–10 | Contribution economy, cross-domain transfer, reusable knowledge, reasoning/verification improvements. Speculative savings, patentability and AGI predictions are not implementation evidence or acceptance tests. |
+| September 11–12 | Available project context and repository records establish CPI/CLIC, GCL and algebra work leading to v15.5. Full later transcripts were not read. |
+| September 13–15 | Two-repository development, model-review pipeline, candidate queues, process 1.4 admission and a single Coordinator. Main issue is incomplete executable enforcement and persistent closure, rather than lack of more architectural proposals. |
+
+## Repairs prepared in this audit
+
+Status at preparation: **implemented and locally tested; merge and post-merge verification still required**. Follow-up verification records/PR state determine final status.
+
+| Stable work ID | Verified defect | Repair | Evidence |
+| --- | --- | --- | --- |
+| AUDIT-20260915-SCHEDULER-COST | Three GitHub cron triggers remain despite the admitted single-Coordinator schedule. | Remove the two hourly review timers and daily branch-hygiene timer; retain explicit dispatch and add CI regression coverage. | New test fails against all three original workflow files and passes after the repair. Enabled server-side workflow state could not be fetched with the available endpoint; source-level scheduling mismatch is confirmed. |
+| AUDIT-20260915-SCHEDULER-COST | Negative, non-finite and boolean usage/cost values could be accepted as verified, defeating numeric budget checks or accepting an unverified finding. | Validate finite nonnegative numeric values; malformed daily usage blocks the billable POST; malformed response cost cannot qualify a finding. | Mocked-provider regressions fail before the fix and pass after it; no paid provider call was made. This does not close the durable budget-ledger gap in swarm issue #75. |
+| AUDIT-20260915-RECEIPT-RESTORE | Coordinator requires receipt-based recovery, but the process factory has no recovery validator; binding silently drops malformed repository entries and accepts non-SHA heads. | Add deterministic receipt-prefix replay, compare route/state/bindings/gates/algebra results, reject missing/duplicate/reordered/cross-cycle/stale/tampered records and malformed bindings. Resolve local section-inventory HEAD from Git or require an explicit full SHA. | Round-trip/resume tests plus adversarial receipt and binding tests. Gate evidence authenticity remains external; replay is record conformance, not authority verification. |
+
+The existing NON_SEMANTIC_REPAIR engine route was used to record ROUTED and IMPLEMENTED states in [repair-processes.json](project_audit_2026-09-15/repair-processes.json). No VERIFIED/CLOSED state or independent-model review is fabricated.
+
+## Open work owned by the assistant
+
+Use these existing issue identities; do not duplicate them or treat an issue's closed flag as a closure receipt.
+
+| Priority | Work and existing identity | Next action and closure evidence |
+| --- | --- | --- |
+| P0 | Packet/state/evidence control plane — swarm [#148](https://github.com/ankitdcx/garden-swarm/issues/148), packet sub-obligation [#111](https://github.com/ankitdcx/garden-swarm/issues/111) | Complete the smallest executable packet builder/validator and durable instance ledger under process 1.4. Salvage compatible candidate code without installing a second state machine. Demonstrate one packet hash through blind review, cross-examination, repair/NO_CHANGE and post-fix verification. No qualification from gate-name strings alone. |
+| P0 | Paid budget accounting — swarm [#75](https://github.com/ankitdcx/garden-swarm/issues/75) | Durable atomic reservations across runs and all callers, reconcile ambiguous charges, enforce routine/escalation boundaries and the $1/day cap before calls. An hourly cap of $0.05 would permit $1.20 over 24 invocations without the daily guard. Current finite-number repair is only a sub-fix. |
+| P0 | Protected verification and privacy — swarm [#66](https://github.com/ankitdcx/garden-swarm/issues/66), [#78](https://github.com/ankitdcx/garden-swarm/issues/78), [#77](https://github.com/ankitdcx/garden-swarm/issues/77) | Implement externally bound authority/approval evidence, privacy routing, semantic-impact and Challenger enforcement. Existing health records block dependent protected actions; keep those blocks until independent verification exists. |
+| P1 | Reviewer yield/quorum — swarm [#138](https://github.com/ankitdcx/garden-swarm/issues/138), [#114](https://github.com/ankitdcx/garden-swarm/issues/114), [#113](https://github.com/ankitdcx/garden-swarm/issues/113) | Use one missing qualified review at a time and persist progress. Stop provider work on transient failures; measure qualified findings, not token use or successful HTTP responses. Verify a current cycle before claiming recovery. |
+| P1 | Canonical coverage — swarm [#137](https://github.com/ankitdcx/garden-swarm/issues/137) | Inventory tooling is now in private main: 266 units (251 A, 14 B, 1 C), zero qualified in its bootstrap output. Persist and update genuine review coverage instead of repeatedly resetting an inventory. Triage 66 units with parser-unresolved references; that count alone is not proof of 66 canonical defects. |
+| P1 | Evidence retention and source binding — swarm [#65](https://github.com/ankitdcx/garden-swarm/issues/65), [#110](https://github.com/ankitdcx/garden-swarm/issues/110), main [#41](https://github.com/ankitdcx/garden-main/issues/41) | Consume immutable CI artifacts before their 30-day retention expires; publish selected receipts through the governed path, revalidate exact source/commit and verify old receipt repairs independently. |
+| P1 | Scheduler health/closure — existing #148 workstream | Wire recovery to the actual Coordinator and durable ledger; record next action, attempts, due-obligation timestamps and verified closures. The live lookup shows one enabled Coordinator but no last/next-run timestamps, so uninterrupted execution has not been demonstrated. Keep health's protected-action restrictions; replace its stale lane inventory only with a fresh audited receipt. |
+| P1 | Canonical successor — main WP-005/WP-006 and `design_deltas/v15.6/PENDING_CANDIDATE_INDEX.json` | Reconcile admitted deltas, full affected-source closure, dependencies, retention and actual five-file composition. The inspected default branch contains a delta pool, not a complete promoted v15.6. Do not bump versions for audit/docs-only changes. |
+| P2 | Remaining executable core — main [#1](https://github.com/ankitdcx/garden-main/issues/1)–[#4](https://github.com/ankitdcx/garden-main/issues/4); swarm [#83](https://github.com/ankitdcx/garden-swarm/issues/83), [#67](https://github.com/ankitdcx/garden-swarm/issues/67), [#68](https://github.com/ankitdcx/garden-swarm/issues/68) | Continue bounded kernel, extractor, KR and verifier work; stabilize Python contracts before cross-language work and retire compatibility adapters only with evidence. |
+| P2 | Historical proposals | UCAS, justice, FDE/CFBR, KR-CEA, Kindergarten, reasoning strategies and other residuals are already in the September 14 candidate ledgers. Compare/reuse those entries rather than producing another speculative patch collection. Full later-chat recovery remains open. |
+| P2 | External evaluation/discovery | Finish independent live MCP/A2A evidence and human adversarial evaluation: swarm #7/#9/#23. Keep research #140 and main #54/#55 behind higher-priority execution/repair. No unrequested outreach is sent. |
+
+Old nightly-review request #115 should be reconciled as a Coordinator obligation or explicitly superseded, not revived as another timer. The legacy hourly reviewer bus #49 is evidence intake, not an additional active scheduled driver.
+
+## Open items requiring the user
+
+1. **Repository protection:** public ruleset Main requires PRs but no successful status checks; existing swarm [#52](https://github.com/ankitdcx/garden-swarm/issues/52). Require current-head integration-provenance and integrity checks plus relevant test gates. Private rulesets return GitHub's plan restriction; existing main [#23](https://github.com/ankitdcx/garden-main/issues/23). Choose a plan/organization supporting private-repository protection. Do not make private main public as a workaround. This session has no supported ruleset-write tool.
+2. **Complete history:** provide a newer export if exhaustive September 12–15 transcript coverage is required. Current archive coverage is recorded above; the assistant should not ask for already supplied September 11 bytes again.
+3. **Protected decisions only when ready:** approve concrete canonical promotion, genuinely changed protected process semantics, trust-root decisions or namespace/IP decisions after the required review package exists. Routine verified implementation repairs remain assistant work. Existing neutral-namespace migration is swarm #80/main #29; preserve provenance and redirects before any move.
+
+No request to increase the spending cap is made. No new canonical design or protected authority is approved by this audit. Human attention should go to those concrete external controls and protected decisions, not each small defect.
