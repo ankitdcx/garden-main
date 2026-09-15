@@ -1,0 +1,31 @@
+{
+  "schema": "GardenEvolutionProductionAction/v1",
+  "design_epoch": "v15.5",
+  "dependencies": {"canonical_source_root": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598"},
+  "action": {
+    "action_id": "GARDEN-2026-09-15-PIPELINE-HEALTH-PUBLISH-001",
+    "verb": "PROPOSE",
+    "actor_ref": "agent:garden-integrator-build",
+    "subject_ref": "repo:ankitdcx/garden-main",
+    "input_refs": [
+      "governance/PROCESS_CURRENT.json",
+      "governance/PIPELINE_HEALTH_CURRENT.json",
+      "governance/PIPELINE_HEALTH_RECEIPT-PIPELINE-HEALTH-20260915T0855+0530.json",
+      "governance/RULE_ENFORCEMENT_COVERAGE-PIPELINE-HEALTH-20260915T0855+0530.json",
+      "governance/DERIVED_LANE_REGISTRY-PIPELINE-HEALTH-20260915T0855+0530.json",
+      "reviews/evolution/reasoning/2026-09-15-pipeline-health-audit-publication.json",
+      "reviews/evolution/algebra/2026-09-15-pipeline-health-audit-publication.json",
+      "reviews/evolution/assurance/2026-09-15-pipeline-health-audit-publication.json"
+    ],
+    "provenance_refs": [
+      "human:scheduled-pipeline-health-policy:2026-09-15",
+      "governance/PROCESS_CURRENT.json",
+      "governance/PROCESS-ADMISSION-RECEIPT-v1.4-2026-09-15.json"
+    ],
+    "satisfied_preconditions": ["ACTOR_IDENTIFIED", "SUBJECT_IDENTIFIED", "PROVENANCE_PRESENT", "INPUT_REFS_TYPED"],
+    "claimed_postconditions": ["CANDIDATE_RECORDED", "NO_AUTHORITY_EXPANSION", "CANONICAL_POINTER_UNCHANGED"]
+  },
+  "authority_ref": "AUTH-GARDEN-HOURLY-REVIEWER-v15.5",
+  "bound_inputs": [],
+  "boundary": "This PROPOSE transport publishes independent health/conformance evidence only. It cannot certify its own closure counts, admit a semantic delta, modify Garden v15.5, expand authority, or promote canon."
+}
