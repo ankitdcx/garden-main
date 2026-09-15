@@ -20,7 +20,7 @@ See `branch_archive/2026-09-15/history-search-coverage.json` for conversation id
 | Work | Existing owner | Remaining action |
 | --- | --- | --- |
 | Durable process records, coherent review packets and exact-head closure | swarm #148 / #111 | Adapt preserved builders to admitted Process 1.4; validate a complete review-to-repair cycle. Historical packets are not current approval evidence. |
-| Rate-limit stop/resume | swarm #138 / #114 / #113 / #148 | Persist attempt, partial findings, cooldown and next action; stop a provider batch after transient failure. The IP inventory runner still continues across failed calls and lacks durable exact resume. Keep it undispatched until repaired. |
+| Rate-limit stop/resume | swarm #138 / #114 / #113 / #148 | Persist attempt, partial findings, cooldown and next action; stop a provider batch after transient failure. Public PR #176 now stops the IP inventory and other batches after their first failed provider result. Durable exact resume remains open; keep provider dispatch blocked until that path is qualified. |
 | Shared daily spending limit | swarm #75 | Atomic reservations across all callers/runs and uncertain-charge reconciliation; retain $1/day maximum. |
 | Independent review of integrator decisions | swarm #77 / #114 / #148 | Bind Challenger/cross-review evidence to accepted/rejected findings and resulting commit; successful HTTP or a closed issue is insufficient. |
 | Research findings become actionable and close with evidence | swarm #140; main #54/#55 | Deduplicate findings, give each a disposition and test/evidence, attach verified closure or an explicit blocker. |
