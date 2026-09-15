@@ -1,0 +1,44 @@
+{
+  "schema": "GardenEvolutionProductionAction/v1",
+  "design_epoch": "v15.5",
+  "dependencies": {
+    "canonical_source_root": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598"
+  },
+  "action": {
+    "action_id": "GARDEN-2026-09-15-ALGEBRA-BOUND-UPDATE-REPAIR-PROPOSE-001",
+    "verb": "PROPOSE",
+    "actor_ref": "agent:garden-integrator-build",
+    "subject_ref": "repo:ankitdcx/garden-main",
+    "input_refs": [
+      "https://github.com/ankitdcx/garden-main/issues/41",
+      "governance/PROCESS_CURRENT.json",
+      "implementation/garden_kernel/algebra_bound_update.py",
+      "reviews/evolution/reasoning/2026-09-15-algebra-bound-update-repair-propose.json",
+      "reviews/evolution/algebra/2026-09-15-algebra-bound-update-repair-propose.json",
+      "reviews/evolution/assurance/2026-09-15-algebra-bound-update-repair-propose.json",
+      "reviews/evolution/algebra_bound/2026-09-15-garden-main-aab3950-bound-update.json",
+      "reviews/evolution/algebra_bound/2026-09-15-garden-swarm-05948d6-bound-update.json",
+      "governance/PARALLEL-WORK-RECONCILIATION-2026-09-15.json"
+    ],
+    "provenance_refs": [
+      "https://github.com/ankitdcx/garden-main/issues/41",
+      "git:ankitdcx/garden-main@f8dd36c6ac5cf8de911e81b64c0973dd92f5f91c",
+      "governance/GardenCanonicalUpdateProcess_v1.4.json",
+      "git:ankitdcx/garden-swarm@347b48f8b870e10dc1e8c956f1f116e90e628dbe"
+    ],
+    "satisfied_preconditions": [
+      "ACTOR_IDENTIFIED",
+      "SUBJECT_IDENTIFIED",
+      "PROVENANCE_PRESENT",
+      "INPUT_REFS_TYPED"
+    ],
+    "claimed_postconditions": [
+      "CANDIDATE_RECORDED",
+      "NO_AUTHORITY_EXPANSION",
+      "CANONICAL_POINTER_UNCHANGED"
+    ]
+  },
+  "authority_ref": "AUTH-GARDEN-HOURLY-REVIEWER-v15.5",
+  "bound_inputs": [],
+  "boundary": "This PROPOSE transport binds the execution-derived repair to typed reasoning/algebra/AAP evidence. It grants no merge, process admission, canonical promotion, delegation, policy, or human authority."
+}
