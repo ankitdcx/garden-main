@@ -1,0 +1,23 @@
+{
+  "affected_contracts": [],
+  "affected_invariants": [],
+  "agent_id": "codex",
+  "base_sha": "a213e1d4564b6dcff94d9cda9b2efb9218e41cd9",
+  "design_epoch_ref": "Garden-v15.5@63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+  "intended_effect": "Register two accepted candidates under v15.7 with all reconciliation requirements; no runtime/canonical changes or v15.6 edits.",
+  "intent_id": "INTENT-COGNITIVE-QUALIFICATION-COMPARISON-V15-7-20260915",
+  "parallel_mode": "INDEPENDENT_COMPARISON",
+  "schema": "AgentWorkIntent/v1",
+  "semantic_domains": [
+    "cognitive qualification and comparison candidate tracking"
+  ],
+  "source_root_sha256": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+  "target_paths": [
+    "design_deltas/v15.7/COGNITIVE-CORE-CANDIDATE.md",
+    "design_deltas/v15.7/COGNITIVE-COMPARE-CANDIDATE.md",
+    "design_deltas/v15.7/COGNITIVE-QUALIFICATION-COMPARISON-WORK-INTENT.json",
+    "design_deltas/v15.7/PENDING_CANDIDATE_INDEX.json"
+  ],
+  "target_symbols": [],
+  "work_package_id": "WP-COGNITIVE-QUALIFICATION-COMPARISON-V15-7"
+}
