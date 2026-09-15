@@ -1,0 +1,127 @@
+{
+  "schema": "GardenEvolutionReasoningBundle/v1",
+  "bundle_id": "GARDEN-2026-09-15-HUMAN-ADMISSION-BOOTSTRAP-PROPOSE-001-REASONING",
+  "action_id": "GARDEN-2026-09-15-HUMAN-ADMISSION-BOOTSTRAP-PROPOSE-001",
+  "design_epoch": "v15.5",
+  "canonical_source_root_sha256": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+  "source_obligation_refs": [
+    "governance/human_admissions/PR-72.json",
+    "scripts/gate_human_admitted_update.py",
+    "implementation/garden_kernel/base_admission.py",
+    "governance/PROCESS_CURRENT.json"
+  ],
+  "compare": {
+    "schema": "GardenEvolutionCompareReceipt/v1",
+    "action_id": "GARDEN-2026-09-15-HUMAN-ADMISSION-BOOTSTRAP-PROPOSE-001",
+    "design_epoch": "v15.5",
+    "canonical_source_root_sha256": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+    "predecessor_ref": "git:ankitdcx/garden-main@5a5fb60d54f9bb9310ea734657394c1c2de2f4fd",
+    "alternatives": [
+      {
+        "alternative_id": "DO_NOTHING",
+        "description": "Leave human approval disconnected.",
+        "projected_effect": "Explicitly authorized protected changes cannot be admitted by the CLI.",
+        "risk": "Work remains blocked."
+      },
+      {
+        "alternative_id": "PUBLISH_BOUNDED_CANDIDATE",
+        "description": "Record scoped human-root admission and install a verifier on trusted base before checking candidate code.",
+        "projected_effect": "The existing HUMAN_SIGNOFF boundary becomes executable for the exact admitted change.",
+        "risk": "Trust depends on controlled base admission and branch governance; no human signature is asserted."
+      }
+    ],
+    "bidirectional_gaps": [
+      {
+        "from": "DO_NOTHING",
+        "to": "PUBLISH_BOUNDED_CANDIDATE",
+        "gap": "No complete latest draft routing or requested role cleanup."
+      },
+      {
+        "from": "PUBLISH_BOUNDED_CANDIDATE",
+        "to": "DO_NOTHING",
+        "gap": "Adds draft layers and maintenance; earlier review bindings cannot transfer to edited bytes."
+      }
+    ]
+  },
+  "reason": {
+    "schema": "GardenEvolutionReasonReceipt/v1",
+    "action_id": "GARDEN-2026-09-15-HUMAN-ADMISSION-BOOTSTRAP-PROPOSE-001",
+    "design_epoch": "v15.5",
+    "canonical_source_root_sha256": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+    "strategy": "HUMAN_AUTHORIZED_APPROVAL_WIRING",
+    "tier": "V1_4_EXECUTION_FIRST_HIGH_DEPENDENCY",
+    "assumptions": [
+      "The user explicitly requested connection of their existing approval and merge of PR72.",
+      "GardenProcess v1.4 permits HUMAN root admission; this is an agent record of observed instruction, not a digital human signature.",
+      "New verification code must execute only after admission to trusted base; candidate code is never trusted to approve itself."
+    ],
+    "uncertainty": "GitHub branch protection configuration is an external operator trust boundary; this task checks exact-head CI before merge.",
+    "counterexamples": [
+      "Blanket version substitution would falsify historical evidence.",
+      "An edited archived packet with its old embedded hash must not be accepted as original evidence.",
+      "A draft manifest mismatch must fail validation."
+    ],
+    "dependency_refs": [
+      "governance/human_admissions/PR-72.json",
+      "scripts/gate_human_admitted_update.py",
+      "implementation/garden_kernel/base_admission.py",
+      "governance/PROCESS_CURRENT.json"
+    ],
+    "conclusion": "Install base verifier and scoped instruction record first; then verify PR72 from trusted base against exact content and action identities.",
+    "authorization_effect": "NONE"
+  },
+  "proof": {
+    "schema": "GardenEvolutionProofReceipt/v1",
+    "action_id": "GARDEN-2026-09-15-HUMAN-ADMISSION-BOOTSTRAP-PROPOSE-001",
+    "design_epoch": "v15.5",
+    "canonical_source_root_sha256": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+    "obligations": [
+      {
+        "obligation_id": "PO-ADMISSION-TRUST-001",
+        "statement": "Candidate-controlled code and records cannot mint signoff; exact scope, expiry and identity mismatches are rejected.",
+        "verifier_class": "REAL_GIT_ADVERSARIAL_TESTS",
+        "result": "UNKNOWN",
+        "evidence_refs": []
+      }
+    ],
+    "overall_result": "UNKNOWN",
+    "authorization_effect": "NONE"
+  },
+  "evidence": {
+    "schema": "GardenEvolutionEvidenceReceipt/v1",
+    "action_id": "GARDEN-2026-09-15-HUMAN-ADMISSION-BOOTSTRAP-PROPOSE-001",
+    "design_epoch": "v15.5",
+    "canonical_source_root_sha256": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+    "items": [
+      {
+        "kind": "SOURCE_RECORD",
+        "ref": "governance/human_admissions/PR-72.json",
+        "claim_scope": "Observed authorization or proposed trust-boundary implementation; not independent qualification."
+      },
+      {
+        "kind": "SOURCE_RECORD",
+        "ref": "scripts/gate_human_admitted_update.py",
+        "claim_scope": "Observed authorization or proposed trust-boundary implementation; not independent qualification."
+      },
+      {
+        "kind": "SOURCE_RECORD",
+        "ref": "implementation/garden_kernel/base_admission.py",
+        "claim_scope": "Observed authorization or proposed trust-boundary implementation; not independent qualification."
+      },
+      {
+        "kind": "SOURCE_RECORD",
+        "ref": "governance/PROCESS_CURRENT.json",
+        "claim_scope": "Observed authorization or proposed trust-boundary implementation; not independent qualification."
+      }
+    ],
+    "proof_effect": "NONE",
+    "authorization_effect": "NONE"
+  },
+  "separation_assertions": {
+    "compare_is_not_decision": true,
+    "reason_is_not_authorization": true,
+    "evidence_is_not_proof": true,
+    "proof_is_not_authorization": true,
+    "actiongate_owns_authorization": true
+  }
+}
