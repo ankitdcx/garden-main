@@ -1,0 +1,69 @@
+{
+  "schema": "CompletionExecutionImplementationObservation/v1",
+  "date": "2026-09-15",
+  "repository": "ankitdcx/garden-main",
+  "pr": 65,
+  "tested_head": "ba4062f274e28758beac847ad8d2c360436b00e8",
+  "merge_sha": "006714a45fc8f122c3ed2e14cbb7fadbee25c0a3",
+  "test_count": 187,
+  "checks": [
+    {
+      "name": "audit",
+      "id": 104282130965,
+      "conclusion": "success",
+      "head_sha": "ba4062f274e28758beac847ad8d2c360436b00e8",
+      "details_url": "https://github.com/ankitdcx/garden-main/actions/runs/34938683545/job/104282130965"
+    },
+    {
+      "name": "integration-provenance",
+      "id": 104282130947,
+      "conclusion": "success",
+      "head_sha": "ba4062f274e28758beac847ad8d2c360436b00e8",
+      "details_url": "https://github.com/ankitdcx/garden-main/actions/runs/34938683538/job/104282130947"
+    },
+    {
+      "name": "validate",
+      "id": 104282130888,
+      "conclusion": "success",
+      "head_sha": "ba4062f274e28758beac847ad8d2c360436b00e8",
+      "details_url": "https://github.com/ankitdcx/garden-main/actions/runs/34938683487/job/104282130888"
+    },
+    {
+      "name": "wp-001-009-reference",
+      "id": 104282130813,
+      "conclusion": "success",
+      "head_sha": "ba4062f274e28758beac847ad8d2c360436b00e8",
+      "details_url": "https://github.com/ankitdcx/garden-main/actions/runs/34938683470/job/104282130813"
+    },
+    {
+      "name": "wp-001-009-reference",
+      "id": 104282120212,
+      "conclusion": "success",
+      "head_sha": "ba4062f274e28758beac847ad8d2c360436b00e8",
+      "details_url": "https://github.com/ankitdcx/garden-main/actions/runs/34938680182/job/104282120212"
+    },
+    {
+      "name": "validate",
+      "id": 104282120059,
+      "conclusion": "success",
+      "head_sha": "ba4062f274e28758beac847ad8d2c360436b00e8",
+      "details_url": "https://github.com/ankitdcx/garden-main/actions/runs/34938680156/job/104282120059"
+    }
+  ],
+  "no_live_provider_calls": true,
+  "operational_status": "PAUSED_NOT_DEPLOYED",
+  "coordinator_prompt_updated": true,
+  "coordinator_webhook_update": "FAILED_SERVICE_ERROR_NO_TRIGGER_SAVED",
+  "hosting_blocker": "Render connector requires user confirmation of workspace before service inspection",
+  "algebra_issue_41": "CLOSED_EXACT_TWO_HISTORICAL_BINDINGS_REVERIFIED",
+  "remaining": [
+    "Durable host and all callers sharing one store",
+    "Authenticated single-call provider adapters and real gate verifiers",
+    "Historical spending reconciliation",
+    "Mechanically derived full closure and family provenance",
+    "Reliable completion/continuation/delayed-wake delivery",
+    "Real qualified end-to-end cycle",
+    "General rollback/compensation and attested reconstruction remain outside implemented route engine"
+  ],
+  "semantic_compliance_proved": false
+}
