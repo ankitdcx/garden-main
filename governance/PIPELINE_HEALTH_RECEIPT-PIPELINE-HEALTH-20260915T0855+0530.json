@@ -1,0 +1,214 @@
+{
+  "schema": "PipelineHealthReceipt/v1",
+  "receipt_id": "REC-PIPELINE-HEALTH-20260915T0855+0530",
+  "generated_at": "2026-09-15T08:55:00+05:30",
+  "health_state": "REDUCED_OPERATION",
+  "auditor": {
+    "identity": "Garden Pipeline Health",
+    "method": "independent connector-backed audit of current GitHub heads, workflow trees, process files, open-work sources and active ChatGPT automations",
+    "self_health_or_closure_certification": "FORBIDDEN",
+    "closure_counts_for_this_lane": "EXCLUDED"
+  },
+  "process_resolution": {
+    "pointer": "governance/PROCESS_CURRENT.json",
+    "resolved_process": "GardenCanonicalUpdateProcess@1.4",
+    "resolved_status": "HUMAN_ADMITTED_CURRENT",
+    "result": "PASS",
+    "design_epoch": "Garden-v15.5@63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+    "source_root_sha256": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598"
+  },
+  "exact_state": {
+    "garden_main_head": "b92a799582a07c6bfddcbc06b09a1b917cfe31f6",
+    "garden_swarm_head": "2aebb9aa92f200149869179092d454ab90c5593c",
+    "process_engine": "GardenProcessEngine@1",
+    "process_engine_profile": "governance/PROCESS_ENGINE_IMPLEMENTATION_v1.json",
+    "process_engine_result": "CHECKED_IMPLEMENTATION_PRESENT",
+    "process_engine_merge_pr": "ankitdcx/garden-main#44",
+    "process_engine_exact_head_checks": ["Garden Seed CI PASS","Garden main publication readiness PASS","Garden private kernel CI PASS","Multi-agent integration provenance PASS after rerun"]
+  },
+  "derived_lane_registry_ref": "governance/DERIVED_LANE_REGISTRY-PIPELINE-HEALTH-20260915T0855+0530.json",
+  "rule_enforcement_coverage_ref": "governance/RULE_ENFORCEMENT_COVERAGE-PIPELINE-HEALTH-20260915T0855+0530.json",
+  "checks": {
+    "active_lane_inventory": {
+      "state":"PASS_DERIVED",
+      "detail":"14 enabled ChatGPT automations plus 19 current GitHub workflow files are bound in DerivedLaneRegistry/v1; no duplicate active authoritative cross-exam automation was found."
+    },
+    "cycle_binding": {
+      "state":"REDUCED_OPERATION",
+      "detail":"GardenProcess implements immutable CycleBinding, but no persisted current process-instance/transition-receipt stream was found that permits mechanical enumeration of live CycleIDs end-to-end."
+    },
+    "state_machine_order": {
+      "state":"CHECKED_NOT_YET_END_TO_END_ENFORCED",
+      "detail":"Merged GardenProcess enforces allowed per-route transitions and required gate sets in code/tests; consuming lanes have not yet produced a persisted end-to-end cycle proving engine-only transition use."
+    },
+    "packet_completeness": {
+      "state":"REDUCED_OPERATION",
+      "detail":"No current default-branch GardenReviewPacket/v1 or PacketCompletenessProof/v1 implementation/receipt stream was found. Packet-dependent semantic lanes cannot claim normal operation."
+    },
+    "blind_cross_exam_same_cycle": {
+      "state":"NOT_VERIFIABLE_FAIL_CLOSED",
+      "detail":"Without persisted CycleID+packet_hash packet and blind findings, blind-before-cross-exam same-cycle integrity cannot be established."
+    },
+    "exact_head_integration": {
+      "state":"PARTIAL",
+      "detail":"The process-engine PR was tested on its exact head before merge, but repository settings do not require status checks on garden-main current main; garden-swarm also reports required-status enforcement off."
+    },
+    "post_merge_closure": {
+      "state":"REDUCED_OPERATION",
+      "detail":"Repository search found no FindingClosureReceipt/v1. Merge, issue closure or PR closure is therefore not counted as Garden finding closure."
+    },
+    "budget_state": {
+      "state":"REDUCED_ASSURANCE",
+      "hard_daily_ceiling_usd":1.0,
+      "admitted_logical_pools_usd":{"routine":0.70,"escalation_reserve":0.30},
+      "observed_public_config_pools_usd":{"routine":9.0,"challenger":3.0,"escalation":5.0,"emergency_reserve":3.0},
+      "detail":"The hard one-dollar ceiling exists, but logical-pool configuration and durable remaining-balance evidence do not match v1.4. Full-assurance paid-review state is not mechanically knowable."
+    },
+    "repair_debt": {
+      "state":"THROTTLE_NEW_SEMANTIC_INTAKE",
+      "weights":{"CRITICAL":10,"HIGH":5,"MEDIUM":2,"LOW":1},
+      "distinct_obligations_count":5,
+      "counts":{"CRITICAL":0,"HIGH":5,"MEDIUM":0,"LOW":0},
+      "score":25,
+      "throttle_threshold":20,
+      "pause_threshold":40,
+      "critical_older_than_one_cycle":0
+    },
+    "execution_first": {
+      "state":"PASS_WITH_STALE_TRACKING",
+      "detail":"The Process-v2 line was retired/salvaged into implementation under admitted v1.4. PENDING_CANDIDATE_INDEX still labels the v1.4 process candidate as pending/not-ratified and must be reconciled as historical/admitted lineage, not treated as a new speculative process proposal."
+    }
+  },
+  "pending_work_health": {
+    "state":"BLOCKED_NO_NORMALIZED_LIFECYCLE",
+    "source_universe": {
+      "garden_main_open_issues":7,
+      "garden_swarm_open_issues":38,
+      "open_repository_issue_total":45,
+      "pending_candidate_index_entries":12,
+      "warning":"These are source-universe counts, not a deduplicated governed-work count; informational inbox/task issues and candidate-index aliases cannot be distinguished mechanically without a normalized lifecycle record."
+    },
+    "queue_metrics": {
+      "open_count_by_stage":null,
+      "oldest_open_source_age_hours":70.45,
+      "oldest_open_source_ref":"ankitdcx/garden-main#1",
+      "newly_closed_since_last_receipt":null,
+      "reopened_or_regressed_since_last_receipt":null,
+      "orphan_count":null,
+      "baseline_reason":"No prior PipelineHealthReceipt/v1 and no normalized governed pending-work ledger were found; manufacturing stage/closure counts would violate the audit rule."
+    },
+    "flags": {
+      "ORPHANED_FINDING":"NOT_COMPUTABLE_UNTIL_NORMALIZED_LEDGER_EXISTS",
+      "MISSING_NEXT_ACTION":"SYSTEMIC_LEGACY_GAP_OPEN_ISSUES_AND_CANDIDATE_INDEX_DO_NOT_EXPOSE_TYPED_CURRENT_STAGE_NEXT_ACTION",
+      "STALE_PACKET_ASSIGNMENT":"NOT_COMPUTABLE_NO_CURRENT_PACKET_ASSIGNMENT_LEDGER",
+      "CLOSURE_WITHOUT_RECEIPT":"SYSTEMIC_CLOSURE_DEBT_RISK_NO_FINDING_CLOSURE_RECEIPT_INSTANCES_FOUND",
+      "RECEIPT_WITHOUT_FINDING":"NONE_FOUND",
+      "TERMINAL_STATE_MISMATCH":["design_deltas/v15.6/PENDING_CANDIDATE_INDEX.json still marks CAND-SUCCESSOR-PROCESS-HARDENING-V1.4-2026-09-15 pending/not-ratified although GardenCanonicalUpdateProcess@1.4 is HUMAN-admitted current."],
+      "DUPLICATE_ACTIVE_FINDING":"NOT_MECHANICALLY_PROVED",
+      "AWAITING_VERIFICATION":["ankitdcx/garden-swarm#113 remains implemented-awaiting-fresh-verification and has no typed independent closure receipt."]
+    },
+    "aging_and_no_progress": {
+      "materially_stale_source_threshold":"No universal threshold inferred; oldest source item is approximately 70.45 hours old.",
+      "repeated_needs_more_evidence_loop_control":"Several repair issues provide prose closure requirements, but no machine lifecycle/attempt-history stream exists to prove progress or detect loops. Normalize attempt_count, last_evidence_hash and next_action before allowing indefinite retries."
+    }
+  },
+  "packet_incomplete_control": {
+    "samples_20_builds":0,
+    "minimum_samples_required":10,
+    "rate":null,
+    "threshold_triggered":"NOT_COMPUTABLE",
+    "operating_state":"REDUCED_OPERATION_ANYWAY_BECAUSE_PACKET_SUBSTRATE_IS_MISSING"
+  },
+  "stale_evidence_control": {
+    "same_protected_closure_stale_events_24h":null,
+    "threshold":3,
+    "threshold_triggered":"NOT_COMPUTABLE_NO_NORMALIZED_EVENT_STREAM",
+    "known_stale_scope":["Algebra-bound update evidence tracked by ankitdcx/garden-main#41"],
+    "action":"Affected stale scopes may not be claimed VERIFIED_FIXED; rebuild current-bound exact-head evidence."
+  },
+  "repair_obligations": [
+    {
+      "schema":"RepairObligation/v1",
+      "repair_id":"REPAIR-20260915-RULE-COVERAGE-001",
+      "severity":"HIGH",
+      "class":"RULE_ENFORCEMENT_COVERAGE",
+      "status":"OPEN",
+      "first_seen_cycle":"PIPELINE-HEALTH-20260915T0855+0530",
+      "age_cycles":0,
+      "attempt_count":1,
+      "blocker":"All six admitted rule classes are below their required maturity; no rule is currently AUDITED or RE_VERIFIED with the full v1.4 VerificationBinding.",
+      "next_action":"Implement or attach rule-specific enforcers and independent VerificationBindings; rerun coverage on exact current heads.",
+      "dependent_freeze":["canonical promotion","delegation-envelope admission/broadening","protected process-semantic admission"]
+    },
+    {
+      "schema":"RepairObligation/v1",
+      "repair_id":"REPAIR-20260915-PACKET-CYCLE-LIFECYCLE-001",
+      "severity":"HIGH",
+      "class":"CONTROL_PLANE_EXECUTION",
+      "status":"OPEN",
+      "first_seen_cycle":"PIPELINE-HEALTH-20260915T0855+0530",
+      "age_cycles":0,
+      "attempt_count":1,
+      "evidence_refs":["ankitdcx/garden-swarm#148","ankitdcx/garden-swarm#111","ankitdcx/garden-swarm#110","ankitdcx/garden-swarm#113"],
+      "blocker":"Process engine is merged, but no default-branch GardenReviewPacket/v1, PacketCompletenessProof/v1, normalized pending-work lifecycle or FindingClosureReceipt/v1 stream is present.",
+      "next_action":"Use merged ProcessFactory/GardenProcess to implement packet construction, persistent process receipts, pending-work normalization and independent post-merge closure; demonstrate one exact packet_hash end-to-end."
+    },
+    {
+      "schema":"RepairObligation/v1",
+      "repair_id":"REPAIR-20260915-BUDGET-POLICY-DRIFT-001",
+      "severity":"HIGH",
+      "class":"BUDGET_AND_REDUCED_ASSURANCE",
+      "status":"OPEN",
+      "first_seen_cycle":"PIPELINE-HEALTH-20260915T0855+0530",
+      "age_cycles":0,
+      "attempt_count":1,
+      "evidence_refs":["ankitdcx/garden-swarm:agents/openrouter-paid-review-policy.json","ankitdcx/garden-swarm#75"],
+      "blocker":"Public policy has hard daily ceiling USD 1.00 but legacy logical pools routine=9, challenger=3, escalation=5, emergency_reserve=3, conflicting with admitted v1.4 routine=0.70/escalation_reserve=0.30.",
+      "next_action":"Reconcile config/runtime to v1.4, add durable daily spend/balance receipt and emit FREE_ONLY_REVIEW/REDUCED_ASSURANCE whenever remaining routine assurance cannot be established.",
+      "operating_rule_until_fixed":"Do not count paid-review availability as normal full assurance when durable v1.4 budget state is unknown."
+    },
+    {
+      "schema":"RepairObligation/v1",
+      "repair_id":"REPAIR-20260915-EXACT-HEAD-ENFORCEMENT-001",
+      "severity":"HIGH",
+      "class":"REPOSITORY_POLICY_ENFORCEMENT",
+      "status":"OPEN",
+      "first_seen_cycle":"PIPELINE-HEALTH-20260915T0855+0530",
+      "age_cycles":0,
+      "attempt_count":1,
+      "evidence_refs":["ankitdcx/garden-main#23","ankitdcx/garden-swarm#52"],
+      "blocker":"Process-engine PR had successful exact-head checks, but current main settings do not require status checks; garden-main main is unprotected and garden-swarm required-status enforcement is off.",
+      "next_action":"Require governed current-head checks and PR merge on both mains; block force/bypass as applicable; independently verify settings."
+    },
+    {
+      "schema":"RepairObligation/v1",
+      "repair_id":"REPAIR-20260915-ALGEBRA-BOUND-UPDATES-001",
+      "severity":"HIGH",
+      "class":"EVOLUTION_EVIDENCE_BINDING",
+      "status":"OPEN",
+      "first_seen_cycle":"POSTMERGE-20260915T0802+0530",
+      "age_cycles":0,
+      "attempt_count":1,
+      "evidence_refs":["ankitdcx/garden-main#41"],
+      "blocker":"AlgebraBoundUpdateReceipt/v1 is absent; issue #41 is also bound to v1.3-candidate and needs rebinding/revalidation under current v1.4 exact heads.",
+      "next_action":"Implement AlgebraBoundUpdateReceipt/v1 using current REG-ALGEBRA-001 profile/validator, backfill current-bound receipts and mark stale predecessor evidence historical."
+    }
+  ],
+  "material_blockers": [
+    "Packet/Cycle/pending-work/closure execution substrate is not wired end-to-end around the newly merged GardenProcess engine.",
+    "All six enforcement-coverage rule classes remain below admitted required maturity; protected dependent actions are blocked.",
+    "Budget config/ledger does not match admitted v1.4 logical-pool semantics, so assurance is REDUCED_ASSURANCE.",
+    "Required status checks are not enforced by repository settings on either current main.",
+    "AlgebraBoundUpdateReceipt/v1 remains open repair debt."
+  ],
+  "next_operating_mode": {
+    "semantic_intake":"THROTTLED",
+    "packet_dependent_semantic_review":"REDUCED_OPERATION_FAIL_CLOSED",
+    "paid_review_assurance":"REDUCED_ASSURANCE_UNTIL_DURABLE_V1_4_BUDGET_STATE",
+    "nonsemantic_repair":"MAY_CONTINUE_UNDER_GARDENPROCESS_LIGHT_ROUTE",
+    "research":"MAY_CONTINUE_BUT_SURVIVING_WORK_MUST_BE_NORMALIZED_BEFORE_GOVERNED_USE",
+    "protected_actions":"BLOCK_DEPENDENT_ACTIONS_UNTIL_REQUIRED_RE_VERIFICATION"
+  },
+  "semantic_compliance_proved": false,
+  "authority_effect": "NONE"
+}
