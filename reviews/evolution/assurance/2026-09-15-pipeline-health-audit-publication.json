@@ -1,0 +1,54 @@
+{
+  "schema": "GardenEvolutionAAPSelectionReceipt/v1",
+  "action_id": "GARDEN-2026-09-15-PIPELINE-HEALTH-PUBLISH-001",
+  "design_epoch": "v15.5",
+  "canonical_source_root_sha256": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+  "source_obligation_refs": [
+    "governance/PROCESS_CURRENT.json",
+    "governance/GardenCanonicalUpdateProcess_v1.4.json",
+    "governance/PIPELINE_HEALTH_RECEIPT-PIPELINE-HEALTH-20260915T0855+0530.json",
+    "canonical/current/Garden_System_v15.5_FULL_2026-09-12.txt:AAP v1.0"
+  ],
+  "impact": {
+    "consequence": "HIGH",
+    "irreversibility": "LOW",
+    "authority": "HIGH",
+    "novelty": "LOW",
+    "uncertainty": "MEDIUM",
+    "sensitivity": "HIGH",
+    "dependency_impact": "HIGH",
+    "disagreement": "LOW",
+    "hard_policy": true,
+    "constitutional": false,
+    "physical_safety": false
+  },
+  "selected": {
+    "reason_tier": "R4",
+    "verity_tier": "V4",
+    "safety_tier": "S3",
+    "modules": [
+      "SOURCE_IDENTITY",
+      "GSL_TYPING",
+      "DESIGN_EPOCH",
+      "SOURCE_OBLIGATION",
+      "COMPARE",
+      "REASON",
+      "PROOF",
+      "EVIDENCE",
+      "AAP",
+      "AUTHORITY",
+      "ACTION_GATE",
+      "PROCESS_ALGEBRA",
+      "CONFORMANCE_ALGEBRA",
+      "INDEPENDENT_REVIEW_REQUIREMENT",
+      "POLICY_CHECK"
+    ]
+  },
+  "resource_budget": {
+    "status": "SUFFICIENT",
+    "basis": "Bounded evidence publication using exact current repository heads, an admitted ProcessVersion, mechanically derived lane/workflow inventories, deterministic conformance checks and explicit UNKNOWN/REDUCED_OPERATION handling where execution evidence is absent."
+  },
+  "degradation_disposition": "REDUCED_OPERATION_AND_REDUCED_ASSURANCE_RECORDED_IN_AUDIT_OUTPUT",
+  "authorization_effect": "NONE",
+  "semantic_compliance_proved": false
+}
