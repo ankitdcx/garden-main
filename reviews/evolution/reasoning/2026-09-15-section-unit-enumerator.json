@@ -1,0 +1,94 @@
+{
+  "schema": "GardenEvolutionReasoningBundle/v1",
+  "bundle_id": "GARDEN-2026-09-15-SECTION-UNIT-ENUMERATOR-REASONING-001",
+  "action_id": "GARDEN-2026-09-15-SECTION-UNIT-ENUMERATOR-PROPOSE-001",
+  "design_epoch": "v15.5",
+  "canonical_source_root_sha256": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+  "source_obligation_refs": [
+    "design_deltas/v15.6/PROCESS-CANDIDATE-GardenCanonicalUpdateProcess-v1.0.json:SectionUnit/v1",
+    "governance/PROCESS_CURRENT.json",
+    "https://github.com/ankitdcx/garden-main/issues/2"
+  ],
+  "compare": {
+    "schema": "GardenEvolutionCompareReceipt/v1",
+    "action_id": "GARDEN-2026-09-15-SECTION-UNIT-ENUMERATOR-PROPOSE-001",
+    "design_epoch": "v15.5",
+    "canonical_source_root_sha256": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+    "predecessor_ref": "git:ankitdcx/garden-main@9ce9e1179aa41d6ab26be0ee7079668c6719cc75",
+    "alternatives": [
+      {"alternative_id":"DO_NOTHING","description":"Keep the canonical sweep blocked because no deterministic SectionUnit/v1 denominator exists.","projected_effect":"The sweep remains unable to assert exact Tier A/B/C counts or create per-unit process bindings.","risk":"Canonical review coverage stays unmeasurable and completion labels remain invalid."},
+      {"alternative_id":"IMPLEMENT_SECTION_UNIT_ENUMERATOR","description":"Implement deterministic anchor-occurrence SectionUnit enumeration over all five immutable source files, exact tiering, reference-target hashes, and SECTION_UNIT_REVIEW routing through ProcessFactory.","projected_effect":"The sweep obtains an exact denominator and engine-bound per-unit route receipts without changing canonical source semantics.","risk":"A defective boundary classifier could mis-segment the source, so source hashes, contiguous line coverage, conservative tiering, deterministic tests, and fail-closed ambiguity checks are required."}
+    ],
+    "bidirectional_gaps": [
+      {"from":"DO_NOTHING","to":"IMPLEMENT_SECTION_UNIT_ENUMERATOR","gap":"DO_NOTHING cannot produce the exact mechanically bound SectionUnit denominator required by the admitted process."},
+      {"from":"IMPLEMENT_SECTION_UNIT_ENUMERATOR","to":"DO_NOTHING","gap":"The implementation adds a parser/classifier that must remain conservative and synchronized with immutable source and ProcessVersion semantics."}
+    ]
+  },
+  "reason": {
+    "schema": "GardenEvolutionReasonReceipt/v1",
+    "action_id": "GARDEN-2026-09-15-SECTION-UNIT-ENUMERATOR-PROPOSE-001",
+    "design_epoch": "v15.5",
+    "canonical_source_root_sha256": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+    "strategy": "EXECUTION_DERIVED_SECTION_UNIT_DENOMINATOR_REPAIR",
+    "tier": "IMPLEMENTATION_CONFORMANCE",
+    "assumptions": [
+      "GardenCanonicalUpdateProcess@1.4 is HUMAN-admitted and its SectionUnit semantics inherit the v1.0 candidate definition.",
+      "Garden v15.5 five-file canonical source is immutable and SOURCE_MANIFEST.json is the exact source identity.",
+      "This change implements existing admitted review-process semantics and does not alter Garden source semantics.",
+      "Conservative over-classification to TIER_A is preferable to silently under-reviewing normative/high-impact material.",
+      "ProcessFactory/GardenProcess owns route/state transitions; the enumerator may only create SECTION_UNIT_REVIEW instances and advance them through valid engine transitions."
+    ],
+    "uncertainty": "Anchor declaration conventions may contain unusual historical forms; the implementation therefore requires contiguous full-file coverage, occurrence-qualified repeated anchors, exact source hashes, and leaves unresolved references explicit rather than guessing.",
+    "counterexamples": [
+      "A source byte/hash mismatch must reject inventory construction.",
+      "A line-range gap or overlap must reject the denominator.",
+      "A normative/high-impact unit classified TIER_B or TIER_C would be unsafe.",
+      "An unresolved reference must remain explicit and may later make packet closure incomplete.",
+      "A SectionUnit review process instance may not bypass ProcessFactory or mint authority from Process Algebra validation."
+    ],
+    "dependency_refs": [
+      "design_deltas/v15.6/PROCESS-CANDIDATE-GardenCanonicalUpdateProcess-v1.0.json",
+      "governance/GardenCanonicalUpdateProcess_v1.4.json",
+      "governance/PROCESS_ENGINE_IMPLEMENTATION_v1.json",
+      "implementation/garden_kernel/process_engine.py",
+      "canonical/current/SOURCE_MANIFEST.json"
+    ],
+    "conclusion": "Implement the deterministic SectionUnit/v1 inventory as bounded process infrastructure, emit exact denominator/count artifacts, and route each unit only to ROUTED through the admitted GardenProcess engine pending packet/review work.",
+    "authorization_effect": "NONE"
+  },
+  "proof": {
+    "schema": "GardenEvolutionProofReceipt/v1",
+    "action_id": "GARDEN-2026-09-15-SECTION-UNIT-ENUMERATOR-PROPOSE-001",
+    "design_epoch": "v15.5",
+    "canonical_source_root_sha256": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+    "obligations": [
+      {"obligation_id":"PO-SECTION-UNIT-001","statement":"All five canonical files are hash/byte verified against SOURCE_MANIFEST before enumeration.","verifier_class":"EXECUTABLE_CONTRACT_TEST","result":"UNKNOWN","evidence_refs":[]},
+      {"obligation_id":"PO-SECTION-UNIT-002","statement":"Every source line belongs to exactly one contiguous SectionUnit range and the denominator exactly partitions Tier A/B/C.","verifier_class":"EXECUTABLE_CONTRACT_TEST","result":"UNKNOWN","evidence_refs":[]},
+      {"obligation_id":"PO-SECTION-UNIT-003","statement":"Every enumerated unit can instantiate SECTION_UNIT_REVIEW and advance CREATED->ROUTED only through ProcessFactory/GardenProcess with registered Process Algebra validation.","verifier_class":"EXECUTABLE_CONTRACT_TEST","result":"UNKNOWN","evidence_refs":[]},
+      {"obligation_id":"PO-SECTION-UNIT-004","statement":"The inventory/count/routing artifacts grant no authority and assert no sweep completion while all units remain UNREVIEWED.","verifier_class":"CONFORMANCE_AUDIT","result":"UNKNOWN","evidence_refs":[]}
+    ],
+    "overall_result": "UNKNOWN",
+    "authorization_effect": "NONE"
+  },
+  "evidence": {
+    "schema": "GardenEvolutionEvidenceReceipt/v1",
+    "action_id": "GARDEN-2026-09-15-SECTION-UNIT-ENUMERATOR-PROPOSE-001",
+    "design_epoch": "v15.5",
+    "canonical_source_root_sha256": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+    "items": [
+      {"kind":"EXECUTION_DEFECT","ref":"garden-canonical-design-sweep:2026-09-15:denominator-unresolved","claim_scope":"The previous sweep could verify source identity but could not produce a valid SectionUnit denominator because no complete enumerator existed."},
+      {"kind":"WORK_PACKAGE","ref":"https://github.com/ankitdcx/garden-main/issues/2","claim_scope":"WP-002 requires source parser/extractor coverage, source anchors/hashes, gaps and tests without false coverage claims."},
+      {"kind":"GOVERNING_PROCESS","ref":"governance/PROCESS_CURRENT.json","claim_scope":"Binds implementation to HUMAN-admitted GardenCanonicalUpdateProcess@1.4."},
+      {"kind":"SECTION_UNIT_DEFINITION","ref":"design_deltas/v15.6/PROCESS-CANDIDATE-GardenCanonicalUpdateProcess-v1.0.json","claim_scope":"Defines SectionUnit/v1 and Tier A/B/C semantics incorporated into the admitted process lineage."}
+    ],
+    "proof_effect": "NONE",
+    "authorization_effect": "NONE"
+  },
+  "separation_assertions": {
+    "compare_is_not_decision": true,
+    "reason_is_not_authorization": true,
+    "evidence_is_not_proof": true,
+    "proof_is_not_authorization": true,
+    "actiongate_owns_authorization": true
+  }
+}
