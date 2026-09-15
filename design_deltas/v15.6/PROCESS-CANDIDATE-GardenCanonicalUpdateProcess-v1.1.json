@@ -1,0 +1,68 @@
+{
+  "schema": "ProcessVersion/v1",
+  "process_id": "GardenCanonicalUpdateProcess",
+  "version": "1.1-candidate",
+  "status": "NON_CANONICAL_PROCESS_CANDIDATE_PENDING_REQUIRED_REVIEW",
+  "base_process_candidate": "design_deltas/v15.6/PROCESS-CANDIDATE-GardenCanonicalUpdateProcess-v1.0.json",
+  "bound_predecessor_design_epoch": "Garden-v15.5@63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+  "purpose": "Refine v1.0 candidate to remove integrator evidence-class discretion, prevent dependency cliques, make rollback triggers explicit, make design sweep incrementally bounded, bound permanent-unavailability accumulation, and add protocol simplification pressure.",
+  "protected_change": true,
+  "opening_milestones": [
+    {"id":"DELTA_POOL","meaning":"Candidate deltas exist; no five-file successor implied."},
+    {"id":"WORKING_FIVE_FILE_CANDIDATE","meaning":"At least one coherent admitted delta set has been composed into all five successor files."},
+    {"id":"FULL_DESIGN_SWEEP_COMPLETE_FOR_TIER_A","meaning":"All mechanically enumerated Tier-A SectionUnits for the bound DesignEpoch are qualified or fully resolved."},
+    {"id":"FULL_ALL_TIER_COMPLETE","meaning":"Tier A/B/C closure is complete for the bound DesignEpoch."}
+  ],
+  "evidence_class_attribution": {
+    "finding_schema": "FindingRecord",
+    "rule": "The reviewer/evidence producer assigns evidence_class E0-E4 when creating the immutable FindingRecord.",
+    "integrator_constraint": "Integrators may cite producer-assigned classes but may not upgrade or downgrade them.",
+    "challenge_schema": "EvidenceClassChallenge/v1",
+    "challenge_rule": "A different reviewer may challenge the assigned class only with same-or-higher-class evidence that the original classification is wrong. Preserve original class and challenge; no history rewrite.",
+    "selective_citation_rule": "Selective citation that effectively overrides an immutable producer class is a Challenger-rejectable defect."
+  },
+  "delta_dependency_semantics": {
+    "directional_blocking": ["REQUIRED_BEFORE_ADMISSION","CONFLICTS_WITH","AFFECTS"],
+    "symmetric_revalidation_only": ["SHARED_ANCHOR","SHARED_CONTRACT","SHARED_INVARIANT"],
+    "rule": "Symmetric relations never mutually block admission by themselves. If one shared-surface delta admits first, the other becomes STALE_REVIEW before its admission decision unless compatibility evidence already covers the updated state.",
+    "deadlock_boundary": "Only declared directional conditions may directly block/order admission."
+  },
+  "rollback_trigger": {
+    "schema": "RollbackCandidateTrigger/v1",
+    "automatic_candidate": {
+      "incident_schema": "ProductionIncidentRecord",
+      "severity_minimum": "HIGH",
+      "required_attribution": "SINGLE_COMMIT_OR_SINGLE_DELTA_EQUIVALENT",
+      "effect": "Raise ROLLBACK_CANDIDATE and freeze only affected unsafe scope. Never execute rollback automatically."
+    },
+    "execution": {"authority":"HUMAN_DECISION","choices":["ACCEPT_ROLLBACK","REJECT_ROLLBACK"],"window_days":30},
+    "expiry_without_decision": "No silent rollback and no silent acceptance; canonical state is unchanged, and incident remains permanently attached to the implicated delta for future re-review.",
+    "history": "Executed rollback preserves all successor receipts/history and marks them SUPERSEDED_BY_ROLLBACK."
+  },
+  "sweep_scaling": {
+    "section_count_receipt": "CanonicalSectionCountReceipt/v1",
+    "required_counts": ["TOTAL","TIER_A","TIER_B","TIER_C","QUALIFIED","STALE","UNREVIEWED"],
+    "completion_label_rule": "No sweep-completion label is valid without exact denominator, source-root and ProcessVersion binding.",
+    "initial_design_epoch": "FULL_SWEEP",
+    "successor_resweep": "INCREMENTAL_AFFECTED_CLOSURE",
+    "inheritance_rule": "A SectionUnit inherits QUALIFIED_NO_CHANGE only if its own hash, tier, and all mechanically derived reference-target hashes are unchanged from the immediately preceding qualified DesignEpoch; inherited status records predecessor review receipt/hash.",
+    "stale_rule": "Content, tier, reference-target, owner/contract/invariant/schema changes or a verified targeted finding mark the unit STALE_REVIEW."
+  },
+  "human_permanent_unavailability": {
+    "closed": ["canonical promotion","other protected changes"],
+    "continues": ["routine review","research","non-semantic repairs","bounded implementation inside existing DesignEpoch authority","candidate-delta preparation"],
+    "pending_admitted_delta_cap": 50,
+    "cap_effect": "After 50 admitted-but-unpromoted semantic deltas, otherwise-admissible semantic candidates become DEFERRED_PENDING_PROMOTION_CAPACITY rather than admitted.",
+    "authority_boundary": "No protected authority transfers implicitly; a separately admitted continuity/succession mechanism is required."
+  },
+  "simplification_pressure": {
+    "schema": "ProcessSimplificationReview/v1",
+    "cadence": "At least once per 24 ordinary evolution cycles or daily, whichever occurs first.",
+    "reviewer_role": "Negative-growth reviewer whose explicit task is to propose rule removal, merging, generalization, or downgrade.",
+    "classifications": ["KEEP","MERGE_WITH","GENERALIZE","DOWNGRADE_TO_LIGHT_CHECK","DEPRECATE","REMOVE_CANDIDATE"],
+    "decision_basis": ["unique defect classes prevented/detected","severity-weighted benefit","false-block rate","maintenance cost","overlap","defense-in-depth independence"],
+    "rule": "Prefer one general invariant/check over incident-specific rules when equivalent coverage is preserved. Do not remove independent defense-in-depth merely because scopes overlap.",
+    "protected_boundary": "Simplification affecting semantic admission, authority, HSA, evidence standards, rollback, privacy or canonical promotion is itself a protected process change."
+  },
+  "promotion_boundary": "Tracking-only process refinement. It does not modify canonical v15.5, admit v15.6 deltas, transfer authority, or promote a successor."
+}

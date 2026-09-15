@@ -1,0 +1,60 @@
+{
+  "schema": "GardenDesignDeltaSet/v1",
+  "delta_set_id": "DELTASET-2026-09-15-SUCCESSOR-PROCESS-HARDENING-V1.1",
+  "predecessor_release": "Garden v15.5",
+  "predecessor_source_root_sha256": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+  "candidate_release": "Garden v15.6",
+  "status": "CANDIDATE_NOT_RATIFIED_PROCESS_REFINEMENT_PENDING_REQUIRED_MULTI_MODEL_REVIEW_AND_GSL_COMPARE",
+  "canonical_predecessor_immutable": true,
+  "topology_change": false,
+  "new_top_level_engines": 0,
+  "new_authority_source": false,
+  "title": "Canonical Successor Process Hardening v1.1 Candidate",
+  "purpose": "Refine the v1.0 successor-process candidate with immutable evidence-class attribution, non-blocking symmetric dependency semantics, rollback-candidate triggers, incremental Tier-A sweep inheritance, bounded permanent-unavailability accumulation, and scheduled process simplification.",
+  "process_candidate": "design_deltas/v15.6/PROCESS-CANDIDATE-GardenCanonicalUpdateProcess-v1.1.json",
+  "delta_dependencies": [{"relation":"REQUIRED_BEFORE_ADMISSION","delta":"DELTASET-2026-09-15-SUCCESSOR-PROCESS-HARDENING","reason":"v1.1 refines rather than replaces the underlying v1.0 process-hardening candidate."}],
+  "findings": [
+    {"id":"SPH2-001","name":"Immutable evidence-class attribution","disposition":"PROPOSE","summary":"Producer assigns E0-E4 in immutable FindingRecord; integrator may cite but never reclassify; reclassification requires typed independent challenge with same-or-higher-class evidence."},
+    {"id":"SPH2-002","name":"Directional versus symmetric delta relations","disposition":"PROPOSE","summary":"Only directional dependency relations may block/order admission; shared anchor/contract/invariant relations trigger stale review after upstream admission but never mutual blocking."},
+    {"id":"SPH2-003","name":"Rollback candidate trigger","disposition":"PROPOSE","summary":"HIGH+ precisely attributed production incident raises rollback candidate and affected-scope freeze, but rollback execution remains explicit protected human decision."},
+    {"id":"SPH2-004","name":"Bounded incremental Tier-A sweep","disposition":"PROPOSE","summary":"Publish exact section denominators and inherit qualified reviews across successors only when unit and reference-target hashes are unchanged; otherwise re-review affected closure."},
+    {"id":"SPH2-005","name":"Permanent-unavailability backlog cap","disposition":"PROPOSE","summary":"Protected promotion closes while routine work continues; cap admitted-but-unpromoted semantic deltas at 50 and defer further admissions pending promotion capacity."},
+    {"id":"SPH2-006","name":"Protocol simplification pressure","disposition":"PROPOSE","summary":"Scheduled negative-growth review proposes removal/merge/generalization/downgrade of low-yield or duplicate rules, with protected review for semantic governance changes."},
+    {"id":"SPH2-007","name":"Milestones moved to process opening","disposition":"PROPOSE","summary":"Make DELTA_POOL, WORKING_FIVE_FILE_CANDIDATE, TIER_A_COMPLETE and FULL_ALL_TIER_COMPLETE first-class opening states rather than an end-note."}
+  ],
+  "candidate_invariants": [
+    "SPH2-INV-001 evidence class is immutable producer metadata absent typed independent challenge",
+    "SPH2-INV-002 symmetric shared-surface relations never create admission deadlock",
+    "SPH2-INV-003 rollback candidate raising and rollback execution are distinct authorities",
+    "SPH2-INV-004 sweep completion labels are denominator-bound and successor resweeps are affected-closure incremental",
+    "SPH2-INV-005 permanent human unavailability does not stop routine safe work and cannot create unbounded admitted semantic backlog",
+    "SPH2-INV-006 process complexity is subject to scheduled removal/merge review",
+    "SPH2-INV-007 successor milestone state is explicit before detailed status reporting"
+  ],
+  "candidate_tests": [
+    "TEST-SPH2-001 integrator attempt to mutate producer evidence_class is rejected",
+    "TEST-SPH2-002 EvidenceClassChallenge without same-or-higher-class supporting evidence cannot replace producer class",
+    "TEST-SPH2-003 two unresolved deltas sharing an anchor may both continue review without mutual blocking",
+    "TEST-SPH2-004 admission of one shared-anchor delta marks the other STALE_REVIEW before admission absent compatibility evidence",
+    "TEST-SPH2-005 HIGH SINGLE_COMMIT ProductionIncidentRecord raises ROLLBACK_CANDIDATE but does not execute rollback",
+    "TEST-SPH2-006 sweep-complete label without exact Tier-A denominator/source-root is invalid",
+    "TEST-SPH2-007 unchanged SectionUnit plus unchanged reference-target hashes inherits qualification across successor DesignEpoch",
+    "TEST-SPH2-008 changed reference-target hash marks otherwise unchanged SectionUnit STALE_REVIEW",
+    "TEST-SPH2-009 at 50 admitted-but-unpromoted semantic deltas next candidate becomes DEFERRED_PENDING_PROMOTION_CAPACITY",
+    "TEST-SPH2-010 simplification pass can propose rule removal but cannot silently weaken a protected boundary"
+  ],
+  "required_review_before_admission": [
+    ">=3 effective independent qualified high-quality reviewer families on the same bounded process target",
+    "blind findings before cross-examination",
+    "immutable producer-assigned evidence classes plus challenge semantics",
+    "whole-source GSL-COMPARE/Reason/Proof/Evidence against v15.5 evolution, authority, HSA, AAP and DesignEpoch owners",
+    "deadlock/admission simulation for directional and symmetric dependency graphs",
+    "rollback authority and incident-attribution adversarial review",
+    "coverage-count and incremental-inheritance mechanical validation",
+    "human-unavailability backlog-cap simulation",
+    "process simplification safety analysis",
+    "reference closure and predecessor-retention checks"
+  ],
+  "do_nothing": "Without this refinement, the v1.0 candidate leaves evidence-class authority at risk of integrator bias, shared-surface dependencies can be misread as mutual blockers, rollback has no typed candidate trigger, Tier-A completion lacks a durable denominator/incremental inheritance rule, permanent unavailability can accumulate an unbounded backlog, and process complexity has only growth pressure.",
+  "promotion_boundary": "Tracking-only refinement. Operational automation may follow safer fail-closed behavior now, but this delta does not amend canonical v15.5 or become v15.6 semantics until required review/admission completes."
+}
