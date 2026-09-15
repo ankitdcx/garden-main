@@ -1,0 +1,63 @@
+name: Garden Governed ReviewPacket Next One Use
+
+on:
+  push:
+    branches:
+      - evidence/review-packet-next-20260915-0915
+    paths:
+      - tools/evidence/build_next_governed_review_packet.py
+      - .github/workflows/governed-review-packet-next-one-use.yml
+
+permissions:
+  contents: write
+  actions: read
+  pull-requests: read
+  issues: read
+
+jobs:
+  build-governed-review-packet:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Build under merged GardenProcess engine
+        id: packet
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          python -m compileall -q implementation/garden_kernel tools/evidence/build_next_governed_review_packet.py
+          python tools/evidence/build_next_governed_review_packet.py
+
+      - name: Persist immutable cycle evidence
+        env:
+          CYCLE_ID: ${{ steps.packet.outputs.cycle_id }}
+        run: |
+          set -euo pipefail
+          test -n "$CYCLE_ID"
+          git config user.name "garden-evidence-bot"
+          git config user.email "garden-evidence-bot@users.noreply.github.com"
+          git add "evidence/review-packets/$CYCLE_ID"
+          git diff --cached --quiet && { echo "No evidence generated" >&2; exit 1; }
+          git commit -m "Persist governed GardenReviewPacket $CYCLE_ID [engine-bound evidence-only]"
+          git push origin "HEAD:${GITHUB_REF_NAME}"
+
+      - name: Summary
+        run: |
+          {
+            echo "### Governed Garden ReviewPacket"
+            echo "- CycleID: `${{ steps.packet.outputs.cycle_id }}`"
+            echo "- route: `${{ steps.packet.outputs.route }}`"
+            echo "- SectionUnit: `${{ steps.packet.outputs.selected_section_unit }}`"
+            echo "- packet_hash: `${{ steps.packet.outputs.packet_hash }}`"
+            echo "- completeness: **${{ steps.packet.outputs.completeness_status }}**"
+            echo "- process state: `${{ steps.packet.outputs.process_state }}`"
+            echo "- blockers: `${{ steps.packet.outputs.blocker_count }}`"
+          } >> "$GITHUB_STEP_SUMMARY"

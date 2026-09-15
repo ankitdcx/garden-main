@@ -1,0 +1,49 @@
+name: Garden ReviewPacket Builder One Use
+
+on:
+  push:
+    branches:
+      - evidence/review-packet/GARDEN-CYCLE-9808F68B96C2B1AD7FA2
+    paths:
+      - .github/workflows/review-packet-builder-one-use.yml
+
+permissions:
+  contents: write
+  actions: read
+  issues: read
+  pull-requests: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Build canonical packet
+        id: packet
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python tools/evidence/build_review_packet_one_use.py
+
+      - name: Persist governed evidence branch
+        env:
+          CYCLE_ID: GARDEN-CYCLE-9808F68B96C2B1AD7FA2
+        run: |
+          set -euo pipefail
+          git config user.name "garden-evidence-bot"
+          git config user.email "garden-evidence-bot@users.noreply.github.com"
+          git add "evidence/review-packets/$CYCLE_ID"
+          git commit -m "Persist immutable GardenReviewPacket $CYCLE_ID [evidence-only]"
+          git push origin "HEAD:${GITHUB_REF_NAME}"
+
+      - name: Summary
+        run: |
+          {
+            echo "### Garden ReviewPacket"
+            echo "- CycleID: ${{ steps.packet.outputs.cycle_id }}"
+            echo "- packet_hash: `${{ steps.packet.outputs.packet_hash }}`"
+            echo "- completeness: **${{ steps.packet.outputs.completeness_status }}**"
+            echo "- blockers: `${{ steps.packet.outputs.blocker_codes }}`"
+          } >> "$GITHUB_STEP_SUMMARY"
