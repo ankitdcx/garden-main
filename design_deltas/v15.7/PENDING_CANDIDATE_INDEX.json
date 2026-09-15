@@ -8,6 +8,16 @@
       "status": "CANDIDATE_USER_REQUESTED_TRACKING_PENDING_RECONCILIATION_AND_ADMISSION",
       "summary": "TRACE revision 3 plus final clarifications: bounded runtime, external authorization, evidence/receipt hardening and compromise-scoped assurance.",
       "work_package_id": "WP-TRACE-V15-7-CANDIDATE"
+    },
+    {
+      "candidate_id": "CAND-COGNITIVE-INCREMENT-001",
+      "kind": "FOCUSED_CAPABILITY_INCREMENT_CANDIDATE",
+      "next_action": "Resolve source hosts, termination, routine representation, qualification scope and protected held-out evaluation owner against completed v15.6; then assess components separately and together with regression criteria.",
+      "source": "design_deltas/v15.7/COGNITIVE-INCREMENT-CANDIDATE.md",
+      "status": "CANDIDATE_USER_REQUESTED_TRACKING_PENDING_RECONCILIATION_AND_ADMISSION",
+      "summary": "Revision 3: active explanation competition and qualified skill acquisition; four conditional owner amendments; broader capability-boundary work deferred.",
+      "supersedes": "Earlier six-package conversational proposal; not TRACE.",
+      "work_package_id": "WP-COGNITIVE-V15-7-CANDIDATE"
     }
   ],
   "canonical_promotion": "Separate governed act; registration grants no admission or execution authority.",
