@@ -1,0 +1,66 @@
+{
+  "schema": "GardenEvolutionAlgebraUsageReceipt/v1",
+  "action_id": "GARDEN-2026-09-15-PIPELINE-HEALTH-PUBLISH-001",
+  "design_epoch": "v15.5",
+  "canonical_source_root_sha256": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+  "source_obligation_refs": [
+    "governance/PROCESS_CURRENT.json",
+    "governance/PIPELINE_HEALTH_CURRENT.json",
+    "governance/PIPELINE_HEALTH_RECEIPT-PIPELINE-HEALTH-20260915T0855+0530.json",
+    "canonical/current/Garden_System_v15.5_FULL_2026-09-12.txt:REG-ALGEBRA-001"
+  ],
+  "entries": [
+    {
+      "algebra": "Process",
+      "status": "APPLIED",
+      "operators": ["SEQUENCE", "DO_NOTHING"],
+      "law_claims": [],
+      "non_law_acknowledgements": ["PARALLEL_EFFECT_COMMUTATIVITY_NOT_UNIVERSAL"],
+      "applicability_reason": "The audit compares DO_NOTHING against typed receipt publication and sequences observation, derivation, classification and evidence publication; no omitted Process law is inferred."
+    },
+    {
+      "algebra": "Policy",
+      "status": "FRONTIER",
+      "operators": [],
+      "law_claims": [],
+      "non_law_acknowledgements": [],
+      "applicability_reason": "Admitted policy constrains dependent actions, but this audit publication does not execute a registered Policy Algebra operator.",
+      "frontier_reason": "Policy authority remains external to the health receipt and ActionGate boundaries."
+    },
+    {
+      "algebra": "Decision",
+      "status": "FRONTIER",
+      "operators": [],
+      "law_claims": [],
+      "non_law_acknowledgements": [],
+      "applicability_reason": "Health classifications are typed audit results, but no executable Decision Algebra signature is bound by this publication.",
+      "frontier_reason": "Decision Algebra executable signatures remain FRONTIER."
+    },
+    {
+      "algebra": "Conformance",
+      "status": "APPLIED",
+      "operators": ["BIND_EVIDENCE", "COVERAGE", "GAP"],
+      "law_claims": [],
+      "non_law_acknowledgements": ["CONFORMANCE_IS_NOT_BINARY_ONLY", "AUDIT_IS_NOT_A_SEPARATE_ALGEBRA"],
+      "applicability_reason": "The health audit binds exact repository/process evidence, reports an exact rule denominator, and preserves UNKNOWN/REDUCED_OPERATION gaps rather than collapsing them to Boolean compliance."
+    },
+    {
+      "algebra": "Evidence",
+      "status": "FRONTIER",
+      "operators": [],
+      "law_claims": [],
+      "non_law_acknowledgements": [],
+      "applicability_reason": "Evidence references are recorded, but no Level-3 executable Evidence Algebra composition operator is claimed.",
+      "frontier_reason": "Evidence Algebra executable composition remains FRONTIER."
+    },
+    {
+      "algebra": "Bridge",
+      "status": "NOT_APPLICABLE",
+      "operators": [],
+      "law_claims": [],
+      "non_law_acknowledgements": [],
+      "applicability_reason": "The audit uses typed repository/API evidence and invokes no semantic-to-representation Garden Bridge operation."
+    }
+  ],
+  "semantic_compliance_proved": false
+}
