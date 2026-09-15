@@ -1,0 +1,21 @@
+{
+  "schema": "GardenEvolutionAlgebraUsageReceipt/v1",
+  "action_id": "GARDEN-2026-09-15-SERIAL-SCHEDULER-PROPOSE-001",
+  "design_epoch": "v15.5",
+  "canonical_source_root_sha256": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+  "source_obligation_refs": [
+    "governance/AUTOMATION_ENGINE_BINDING_v1.json",
+    "governance/PROCESS_EXECUTION_SCHEDULE_v1.json",
+    "governance/PROCESS_ENGINE_IMPLEMENTATION_v1.json",
+    "canonical/current/Garden_System_v15.5_FULL_2026-09-12.txt:REG-ALGEBRA-001"
+  ],
+  "entries": [
+    {"algebra":"Process","status":"APPLIED","operators":["SEQUENCE","BRANCH","DO_NOTHING","TERMINATE"],"law_claims":[],"non_law_acknowledgements":["PARALLEL_EFFECT_COMMUTATIVITY_NOT_UNIVERSAL"],"applicability_reason":"A single Coordinator branches over due/eligible work, executes one unit in sequence, may take DO_NOTHING, and terminates each run without parallel Garden-stage execution."},
+    {"algebra":"Policy","status":"FRONTIER","operators":[],"law_claims":[],"non_law_acknowledgements":[],"applicability_reason":"Admitted process policy constrains scheduling, but this topology change does not claim a new executable Policy Algebra binding.","frontier_reason":"Policy authority remains owned by existing ActionGate/protected governance."},
+    {"algebra":"Decision","status":"FRONTIER","operators":[],"law_claims":[],"non_law_acknowledgements":[],"applicability_reason":"Coordinator eligibility produces typed selections, but no Level-3 Decision Algebra operator is claimed.","frontier_reason":"Decision operator signatures remain outside this bounded scheduling implementation."},
+    {"algebra":"Conformance","status":"APPLIED","operators":["BIND_EVIDENCE","GAP","COVERAGE"],"law_claims":[],"non_law_acknowledgements":["CONFORMANCE_IS_NOT_BINARY_ONLY","AUDIT_IS_NOT_A_SEPARATE_ALGEBRA"],"applicability_reason":"Schedule/binding tests bind evidence and expose coverage gaps without collapsing health to a Boolean."},
+    {"algebra":"Evidence","status":"FRONTIER","operators":[],"law_claims":[],"non_law_acknowledgements":[],"applicability_reason":"Receipts/evidence are recorded but no executable Evidence Algebra composition operator is newly bound.","frontier_reason":"Evidence composition remains frontiered."},
+    {"algebra":"Bridge","status":"NOT_APPLICABLE","operators":[],"law_claims":[],"non_law_acknowledgements":[],"applicability_reason":"Scheduling uses typed repository/automation records and invokes no semantic representation bridge."}
+  ],
+  "semantic_compliance_proved": false
+}
