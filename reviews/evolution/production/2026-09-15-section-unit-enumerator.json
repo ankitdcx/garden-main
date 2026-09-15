@@ -1,0 +1,34 @@
+{
+  "schema": "GardenEvolutionProductionAction/v1",
+  "design_epoch": "v15.5",
+  "dependencies": {"canonical_source_root": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598"},
+  "action": {
+    "action_id": "GARDEN-2026-09-15-SECTION-UNIT-ENUMERATOR-PROPOSE-001",
+    "verb": "PROPOSE",
+    "actor_ref": "agent:garden-integrator-build",
+    "subject_ref": "repo:ankitdcx/garden-main",
+    "input_refs": [
+      "governance/PROCESS_CURRENT.json",
+      "governance/GardenCanonicalUpdateProcess_v1.4.json",
+      "governance/PROCESS_ENGINE_IMPLEMENTATION_v1.json",
+      "design_deltas/v15.6/PROCESS-CANDIDATE-GardenCanonicalUpdateProcess-v1.0.json",
+      "canonical/current/SOURCE_MANIFEST.json",
+      "implementation/garden_kernel/section_units.py",
+      "scripts/build_canonical_section_units.py",
+      "implementation/tests/test_section_units.py",
+      "reviews/evolution/reasoning/2026-09-15-section-unit-enumerator.json",
+      "reviews/evolution/algebra/2026-09-15-section-unit-enumerator.json",
+      "reviews/evolution/assurance/2026-09-15-section-unit-enumerator.json"
+    ],
+    "provenance_refs": [
+      "garden-canonical-design-sweep:2026-09-15:denominator-unresolved",
+      "https://github.com/ankitdcx/garden-main/issues/2",
+      "governance/PROCESS-ADMISSION-RECEIPT-v1.4-2026-09-15.json"
+    ],
+    "satisfied_preconditions": ["ACTOR_IDENTIFIED", "SUBJECT_IDENTIFIED", "PROVENANCE_PRESENT", "INPUT_REFS_TYPED"],
+    "claimed_postconditions": ["CANDIDATE_RECORDED", "NO_AUTHORITY_EXPANSION", "CANONICAL_POINTER_UNCHANGED"]
+  },
+  "authority_ref": "AUTH-GARDEN-HOURLY-REVIEWER-v15.5",
+  "bound_inputs": [],
+  "boundary": "This PROPOSE transport records implementation/conformance work only. The integrator actor is used because the trusted proposal envelope is subject-bound; this does not give the canonical-sweep reviewer any additional authority. It does not qualify a SectionUnit, admit a source-design delta, alter ProcessVersion 1.4 semantics, mint authority, or promote Garden canon."
+}

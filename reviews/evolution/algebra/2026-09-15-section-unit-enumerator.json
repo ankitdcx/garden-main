@@ -1,0 +1,21 @@
+{
+  "schema": "GardenEvolutionAlgebraUsageReceipt/v1",
+  "action_id": "GARDEN-2026-09-15-SECTION-UNIT-ENUMERATOR-PROPOSE-001",
+  "design_epoch": "v15.5",
+  "canonical_source_root_sha256": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+  "source_obligation_refs": [
+    "governance/PROCESS_CURRENT.json",
+    "governance/PROCESS_ENGINE_IMPLEMENTATION_v1.json",
+    "design_deltas/v15.6/PROCESS-CANDIDATE-GardenCanonicalUpdateProcess-v1.0.json:SectionUnit/v1",
+    "canonical/current/Garden_System_v15.5_FULL_2026-09-12.txt:REG-ALGEBRA-001"
+  ],
+  "entries": [
+    {"algebra":"Process","status":"APPLIED","operators":["BRANCH","SEQUENCE"],"law_claims":[],"non_law_acknowledgements":["PARALLEL_EFFECT_COMMUTATIVITY_NOT_UNIVERSAL"],"applicability_reason":"Each SectionUnit is routed through ProcessFactory using BRANCH and later packet construction follows SEQUENCE; no omitted law is inferred."},
+    {"algebra":"Policy","status":"FRONTIER","operators":[],"law_claims":[],"non_law_acknowledgements":[],"applicability_reason":"Tier rules constrain classification but are not relabeled as executable Policy Algebra operators.","frontier_reason":"No executable Policy Algebra operator is newly bound."},
+    {"algebra":"Decision","status":"FRONTIER","operators":[],"law_claims":[],"non_law_acknowledgements":[],"applicability_reason":"Tier/coverage outputs are typed classifications while executable Decision Algebra signatures remain outside this bounded implementation.","frontier_reason":"No Level-3 Decision Algebra operator is claimed."},
+    {"algebra":"Conformance","status":"APPLIED","operators":["BIND_EVIDENCE","COVERAGE","GAP"],"law_claims":[],"non_law_acknowledgements":["CONFORMANCE_IS_NOT_BINARY_ONLY","AUDIT_IS_NOT_A_SEPARATE_ALGEBRA"],"applicability_reason":"The enumerator binds exact source hashes, proves contiguous denominator coverage, and preserves unresolved references as explicit gaps."},
+    {"algebra":"Evidence","status":"FRONTIER","operators":[],"law_claims":[],"non_law_acknowledgements":[],"applicability_reason":"Exact source hashes and line ranges are evidence references, but no executable Evidence Algebra composition operator is invoked.","frontier_reason":"Evidence Algebra executable signatures remain FRONTIER."},
+    {"algebra":"Bridge","status":"NOT_APPLICABLE","operators":[],"law_claims":[],"non_law_acknowledgements":[],"applicability_reason":"Text parsing and JSON serialization do not invoke a semantic Bridge operator."}
+  ],
+  "semantic_compliance_proved": false
+}
