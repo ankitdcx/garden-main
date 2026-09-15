@@ -1,0 +1,72 @@
+{
+  "schema": "ParallelWorkReconciliationReceipt/v1",
+  "receipt_id": "PARALLEL-WORK-RECONCILIATION-2026-09-15-001",
+  "status": "RECORDED_UNDER_CURRENT_PROCESS",
+  "current_process": "GardenCanonicalUpdateProcess@1.4",
+  "current_process_pointer": "governance/PROCESS_CURRENT.json",
+  "design_epoch": "Garden-v15.5@63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+  "canonical_effect": "NONE",
+  "authority_effect": "NONE_RECONCILIATION_ONLY",
+  "inputs": [
+    {
+      "source": "ankitdcx/garden-main",
+      "ref": "main@f8dd36c6ac5cf8de911e81b64c0973dd92f5f91c",
+      "verification": "DIRECT_REPO_EVIDENCE",
+      "role": "CURRENT_GOVERNING_PROCESS",
+      "result": "AUTHORITATIVE_FOR_UPDATE_PROCESS"
+    },
+    {
+      "source": "ankitdcx/garden-swarm",
+      "ref": "347b48f8b870e10dc1e8c956f1f116e90e628dbe",
+      "verification": "DIRECT_REPO_EVIDENCE",
+      "role": "OLDER_PROCESS_V2_CANDIDATE_SOURCE",
+      "result": "MINE_FOR_MISSING_IMPLEMENTATION_ONLY",
+      "already_present_in_v1_4_lineage": [
+        "ProcessRouteTable/v1 routing",
+        "PacketCompletenessProof/v1 coherent-complete packets",
+        "producer-assigned E0-E4 evidence classes and challenges",
+        "exact-head evidence invalidation and governed merge verification",
+        "repair aging/backlog pressure",
+        "outcome-weighted reviewer scoring",
+        "budget/reduced-assurance rules",
+        "human authority/process self-amendment protection",
+        "PipelineHealthReceipt/v1",
+        "negative-growth simplification review"
+      ],
+      "adopted_by_this_repair": [
+        "AlgebraBoundUpdateReceipt/v1",
+        "exact target_kind binding PUBLIC_REPO|PRIVATE_IMPLEMENTATION|CANONICAL_DESIGN",
+        "explicit REG-ALGEBRA-001 profile/blob binding",
+        "registered Process operator trace and required non-law acknowledgement",
+        "frontier-preserving no-authority validation"
+      ],
+      "not_adopted": [
+        "a second GardenProcess-v2 governing process",
+        "duplicate process state machine as an independent authority surface",
+        "self-activation or replacement of current ProcessVersion"
+      ],
+      "reason": "GardenCanonicalUpdateProcess v1.4 is HUMAN-admitted current and execution-first; duplicate process semantics are not reopened without execution-derived E2+ evidence or explicit HUMAN reopening."
+    },
+    {
+      "source": "parallel_chat_reported_repo:ankitdcx/garden",
+      "ref": "branch=codex/add-gp-algebra-editorial; commit=9f63bdf",
+      "verification": "REFERENCE_ONLY_SOURCE_BYTES_NOT_AVAILABLE_TO_CONNECTED_GITHUB_INSTALLATION",
+      "role": "PARALLEL_PROCESS_ALGEBRA_EDITORIAL_CANDIDATE",
+      "reported_scope": [
+        "Garden Process Algebra/DSL section 10.1",
+        "insert ‡ marker in the reported ⊗ₚ grammar notation",
+        "clarify expression-body grammar",
+        "reported as editorial/grammar compatibility with no semantic expansion"
+      ],
+      "disposition": "PENDING_EXACT_BYTES_OR_EQUIVALENT_ACCESSIBLE_PATCH",
+      "canonical_effect": "NONE",
+      "rule": "Do not reconstruct or promote inaccessible source text from chat summary. When exact bytes become accessible, compare mechanically against current v15.5/v15.6 candidate source and route as LIGHT only if semantic-touch analysis remains zero; otherwise use the current semantic route."
+    }
+  ],
+  "single_lineage_rule": "All parallel chats and agents converge through the current PROCESS_CURRENT pointer, exact repo commits and governed evidence records; chat conclusions do not create a second authoritative process lineage.",
+  "remaining_work": [
+    "Run CI and exact-head validation for the AlgebraBoundUpdateReceipt repair.",
+    "Close RepairObligation #41 only after both backfilled receipts validate against current profile and exact SHAs.",
+    "Ingest the external grammar/editorial patch only after its exact bytes become accessible or an equivalent exact patch is supplied in a connected governed repo."
+  ]
+}
