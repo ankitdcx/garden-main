@@ -48,7 +48,7 @@
     "status": "SUFFICIENT",
     "basis": "Bounded evidence publication using exact current repository heads, an admitted ProcessVersion, mechanically derived lane/workflow inventories, deterministic conformance checks and explicit UNKNOWN/REDUCED_OPERATION handling where execution evidence is absent."
   },
-  "degradation_disposition": "REDUCED_OPERATION_AND_REDUCED_ASSURANCE_RECORDED_IN_AUDIT_OUTPUT",
+  "degradation_disposition": "NONE",
   "authorization_effect": "NONE",
   "semantic_compliance_proved": false
 }
