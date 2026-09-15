@@ -1,0 +1,88 @@
+{
+  "schema": "RuleEnforcementCoverageReceipt/v1",
+  "receipt_id": "REC-PIPELINE-HEALTH-20260915T0855+0530-RULE-COVERAGE",
+  "generated_at": "2026-09-15T08:55:00+05:30",
+  "auditor": {
+    "identity": "Garden Pipeline Health",
+    "method": "independent connector-backed repository and automation audit",
+    "self_certification_forbidden": true
+  },
+  "process_binding": {
+    "process_version": "GardenCanonicalUpdateProcess@1.4",
+    "process_pointer": "governance/PROCESS_CURRENT.json",
+    "design_epoch": "Garden-v15.5@63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+    "garden_main_head": "b92a799582a07c6bfddcbc06b09a1b917cfe31f6",
+    "garden_swarm_head": "2aebb9aa92f200149869179092d454ab90c5593c"
+  },
+  "levels": ["SPECIFIED","CHECKED","ENFORCED","AUDITED","RE_VERIFIED"],
+  "denominator": 6,
+  "rules": [
+    {
+      "rule_id":"CONSTITUTIONAL_AUTHORITY_HSA_RIGHTS_PROMOTION",
+      "required_level":"RE_VERIFIED",
+      "achieved_level":"CHECKED",
+      "evidence":["GardenProcess MAJOR_PROTECTED promotion requires HUMAN_PROTECTED_DECISION_VALID and CANONICAL_PROMOTION_AUTHORIZED gates.","garden-swarm constitutional-path-guard workflow exists."],
+      "gap":"No current independent VerificationBinding proves exact rule/checker/runtime/environment/evidence-corpus binding end-to-end; repository settings do not make all relevant checks mandatory.",
+      "verification_binding":null,
+      "dependent_action":"Protected authority/HSA/rights/canonical-promotion readiness is blocked."
+    },
+    {
+      "rule_id":"DELEGATION_ENVELOPE_AUTHORITY",
+      "required_level":"RE_VERIFIED",
+      "achieved_level":"SPECIFIED",
+      "evidence":["GardenCanonicalUpdateProcess v1.3/v1.4 specifies HUMAN-only envelope admission and no recursive authorization."],
+      "gap":"No executable envelope-admission checker/enforcer with a current independent VerificationBinding was found.",
+      "verification_binding":null,
+      "dependent_action":"Delegation-envelope admission or broadening is blocked."
+    },
+    {
+      "rule_id":"PROTECTED_PROCESS_CHANGE_AUTHORITY",
+      "required_level":"RE_VERIFIED",
+      "achieved_level":"CHECKED",
+      "evidence":["PROCESS_CURRENT resolves to HUMAN-admitted GardenCanonicalUpdateProcess@1.4.","GardenProcess rejects a CycleBinding whose ProcessVersion is not 1.4."],
+      "gap":"No current independently audited VerificationBinding proves protected process-change admission enforcement end-to-end.",
+      "verification_binding":null,
+      "dependent_action":"Further protected ProcessVersion semantic admission is blocked pending re-verification."
+    },
+    {
+      "rule_id":"ROUTING_PACKET_COMPLETENESS_BUDGET_EVIDENCE_MATRIX",
+      "required_level":"ENFORCED",
+      "achieved_level":"SPECIFIED",
+      "evidence":["GardenProcess exposes route definitions and packet gates.","Admitted process specifies PacketCompletenessProof, EvidenceRequirementMatrix and budget controls."],
+      "gap":"No current default-branch GardenReviewPacket/v1 or PacketCompletenessProof/v1 implementation/receipt stream was found; public budget config retains legacy logical pools inconsistent with admitted v1.4 pools.",
+      "verification_binding":null,
+      "dependent_action":"Packet-dependent semantic review/admission is REDUCED_OPERATION and cannot claim closure."
+    },
+    {
+      "rule_id":"LANE_ACTIVATION_AND_OVERLAP",
+      "required_level":"ENFORCED",
+      "achieved_level":"SPECIFIED",
+      "evidence":["This audit derives 14 enabled ChatGPT automations and 19 current GitHub workflow files into DerivedLaneRegistry/v1."],
+      "gap":"No activation-time fail-closed registry/overlap enforcer exists on current default branches; this audit receipt does not itself become an activation gate.",
+      "verification_binding":null,
+      "dependent_action":"Any newly observed unregistered authoritative lane must fail closed."
+    },
+    {
+      "rule_id":"COSMETIC_SIMPLIFICATION_REPORTING",
+      "required_level":"CHECKED",
+      "achieved_level":"SPECIFIED",
+      "evidence":["Garden Protocol Simplifier and Garden Pipeline Simplification automations are enabled."],
+      "gap":"No deterministic checker/receipt implementation establishing simplification-reporting coverage was found.",
+      "verification_binding":null,
+      "dependent_action":"No protected action directly blocked; maturity remains below required CHECKED."
+    }
+  ],
+  "counts_by_required_level": {"CHECKED":1,"ENFORCED":2,"RE_VERIFIED":3},
+  "counts_by_achieved_level": {"SPECIFIED":4,"CHECKED":2,"ENFORCED":0,"AUDITED":0,"RE_VERIFIED":0},
+  "below_required_count": 6,
+  "below_required_rules": ["CONSTITUTIONAL_AUTHORITY_HSA_RIGHTS_PROMOTION","DELEGATION_ENVELOPE_AUTHORITY","PROTECTED_PROCESS_CHANGE_AUTHORITY","ROUTING_PACKET_COMPLETENESS_BUDGET_EVIDENCE_MATRIX","LANE_ACTIVATION_AND_OVERLAP","COSMETIC_SIMPLIFICATION_REPORTING"],
+  "re_verified_binding_requirements": ["rule_hash","checker_hash","runtime","runtime_version","environment_image_or_os","auditor_identity","auditor_role_or_method","evidence_corpus_hash","upstream_dependency_hashes","verified_at"],
+  "binding_rule": "Any RE_VERIFIED binding-field change transitions the rule to AUDITED_PENDING_RE_VERIFICATION.",
+  "protected_action_block": {
+    "active": true,
+    "scopes": ["canonical promotion","delegation-envelope admission/broadening","protected ProcessVersion semantic admission"],
+    "rule": "Block only dependent protected action; ordinary fail-closed implementation, research and nonsemantic repair may continue."
+  },
+  "semantic_compliance_proved": false,
+  "authority_effect": "NONE"
+}
