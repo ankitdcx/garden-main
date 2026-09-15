@@ -1,0 +1,65 @@
+{
+  "schema": "GardenEvolutionAlgebraUsageReceipt/v1",
+  "action_id": "GARDEN-BACKFILL-20260915-GARDEN-SWARM-05948D6-001",
+  "design_epoch": "v15.5",
+  "canonical_source_root_sha256": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+  "source_obligation_refs": [
+    "https://github.com/ankitdcx/garden-main/issues/41",
+    "repo:ankitdcx/garden-swarm@05948d6ae45e75429f95286c1d4e60d73ea7652b",
+    "canonical/current/Garden_System_v15.5_FULL_2026-09-12.txt:REG-ALGEBRA-001"
+  ],
+  "entries": [
+    {
+      "algebra": "Process",
+      "status": "APPLIED",
+      "operators": ["SEQUENCE", "DO_NOTHING"],
+      "law_claims": [],
+      "non_law_acknowledgements": ["PARALLEL_EFFECT_COMMUTATIVITY_NOT_UNIVERSAL"],
+      "applicability_reason": "The public-repo update sequenced bounded implementation, tests, integration evidence and merge while preserving a no-change alternative."
+    },
+    {
+      "algebra": "Policy",
+      "status": "FRONTIER",
+      "operators": [],
+      "law_claims": [],
+      "non_law_acknowledgements": [],
+      "applicability_reason": "Repository policy constrained the update, but no executable Policy Algebra operator is claimed retrospectively.",
+      "frontier_reason": "Repository gates and ActionGate semantics are not silently relabeled as Policy Algebra."
+    },
+    {
+      "algebra": "Decision",
+      "status": "FRONTIER",
+      "operators": [],
+      "law_claims": [],
+      "non_law_acknowledgements": [],
+      "applicability_reason": "Typed CI and integration dispositions existed, but exact executable Decision Algebra signatures were not bound by this update.",
+      "frontier_reason": "Decision Algebra Level-3 executable operators remain frontiered."
+    },
+    {
+      "algebra": "Conformance",
+      "status": "APPLIED",
+      "operators": ["BIND_EVIDENCE", "COVERAGE"],
+      "law_claims": [],
+      "non_law_acknowledgements": ["CONFORMANCE_IS_NOT_BINARY_ONLY", "AUDIT_IS_NOT_A_SEPARATE_ALGEBRA"],
+      "applicability_reason": "The public update was covered by exact repository checks and preserved unresolved evidence state rather than treating green CI as full semantic certification."
+    },
+    {
+      "algebra": "Evidence",
+      "status": "FRONTIER",
+      "operators": [],
+      "law_claims": [],
+      "non_law_acknowledgements": [],
+      "applicability_reason": "Evidence existed, but no executable Evidence Algebra composition operator is claimed retrospectively.",
+      "frontier_reason": "Evidence Algebra Level-3 executable operators remain frontiered."
+    },
+    {
+      "algebra": "Bridge",
+      "status": "NOT_APPLICABLE",
+      "operators": [],
+      "law_claims": [],
+      "non_law_acknowledgements": [],
+      "applicability_reason": "The public repository update invoked no semantic-to-representation Bridge operation."
+    }
+  ],
+  "semantic_compliance_proved": false
+}
