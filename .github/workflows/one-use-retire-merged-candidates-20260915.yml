@@ -1,0 +1,77 @@
+name: One-use retire merged candidate branches 2026-09-15
+
+on:
+  pull_request:
+    types: [opened]
+    paths:
+      - '.github/workflows/one-use-retire-merged-candidates-20260915.yml'
+
+permissions:
+  contents: read
+  pull-requests: read
+
+jobs:
+  retire:
+    if: github.event.pull_request.head.repo.full_name == github.repository && github.head_ref == 'cleanup/retire-merged-candidates-20260915b'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      contents: write
+      pull-requests: read
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+      - name: Verify exact dispositions and delete with atomic leases
+        env:
+          GH_TOKEN: ${{ github.token }}
+          SELF_BRANCH: ${{ github.head_ref }}
+          SELF_SHA: ${{ github.event.pull_request.head.sha }}
+          CLEANUP_CONFIG: '{"repository":"ankitdcx/garden-main","main_sha":"5a5fb60d54f9bb9310ea734657394c1c2de2f4fd","branches":[{"name":"audit/completion-execution-evidence-20260915","sha":"dd27f69fc2d9362738ffd654acc9bd8ebb541c62","reason":"MERGED_PR","pr":66},{"name":"candidate/cognitive-qualification-comparison-v15-7","sha":"33ae37edd536d52db476d2bc33e7b7fd81250af0","reason":"MERGED_PR","pr":69},{"name":"candidate/cognitive-v15-7","sha":"df78972df58b6ab56f93481b8d8af4d41c327485","reason":"MERGED_PR","pr":68},{"name":"candidate/design-closure-v15-7","sha":"af59c1eb1ee7ce2ff4dd4ccaae5a0e94578ed129","reason":"MERGED_PR","pr":70},{"name":"candidate/trace-v15-7","sha":"071b5f60de8c76f083089b6e4921bdaa855aa21f","reason":"MERGED_PR","pr":67},{"name":"repair/completion-process-20260915","sha":"ba4062f274e28758beac847ad8d2c360436b00e8","reason":"MERGED_PR","pr":65},{"name":"release/v15.6-working-candidate-20260915","sha":"9fce84227857eebc83e824bd30834e2a3ea50281","reason":"ANCESTOR_OF_MAIN"}]}'
+        run: |
+          python - <<'PY'
+          import json, os, re, subprocess, urllib.request
+          from pathlib import Path
+
+          def git(*args): return subprocess.check_output(['git',*args],text=True).strip()
+          def live_heads(): return {x.split()[1].removeprefix('refs/heads/'):x.split()[0] for x in git('ls-remote','--heads','origin').splitlines()}
+          def api(path):
+              req=urllib.request.Request('https://api.github.com'+path,headers={'Authorization':'Bearer '+os.environ['GH_TOKEN'],'Accept':'application/vnd.github+json'})
+              with urllib.request.urlopen(req,timeout=30) as r:return json.load(r)
+
+          cfg=json.loads(os.environ['CLEANUP_CONFIG']); repo=os.environ['GITHUB_REPOSITORY']; base=cfg['main_sha']
+          assert repo==cfg['repository'] and git('rev-parse','HEAD')==base
+          heads=live_heads(); assert heads.get('main')==base
+          open_prs=[]
+          for page in range(1,20):
+              rows=api(f'/repos/{repo}/pulls?state=open&per_page=100&page={page}'); open_prs += rows
+              if len(rows)<100: break
+          open_heads={p['head']['ref'] for p in open_prs if p.get('head',{}).get('repo') and p['head']['repo']['full_name']==repo}
+          delete=[]; absent=[]
+          for row in cfg['branches']:
+              name,sha,reason=row['name'],row['sha'],row['reason']; assert re.fullmatch('[0-9a-f]{40}',sha)
+              if name not in heads: absent.append(row); continue
+              assert heads[name]==sha, f'branch moved: {name}'; assert name not in open_heads, f'open PR: {name}'
+              if reason=='MERGED_PR':
+                  pr=api(f'/repos/{repo}/pulls/{row["pr"]}'); assert pr['head']['ref']==name and pr['head']['sha']==sha and pr.get('merged_at'), f'not exact merged PR: {name}'
+              elif reason=='ANCESTOR_OF_MAIN': subprocess.run(['git','merge-base','--is-ancestor',sha,base],check=True)
+              else: raise AssertionError(reason)
+              delete.append(row)
+          self_branch,self_sha=os.environ['SELF_BRANCH'],os.environ['SELF_SHA']
+          assert self_branch=='cleanup/retire-merged-candidates-20260915b' and heads.get(self_branch)==self_sha
+          delete.append({'name':self_branch,'sha':self_sha,'reason':'RUN_OWNED_TEMPORARY'})
+          assert live_heads().get('main')==base
+          cmd=['git','push','--atomic']+[f"--force-with-lease=refs/heads/{r['name']}:{r['sha']}" for r in delete]+['origin']+[f":refs/heads/{r['name']}" for r in delete]
+          subprocess.run(cmd,check=True)
+          remaining=live_heads(); assert remaining.get('main')==base and not any(r['name'] in remaining for r in delete)
+          receipt={'schema':'BranchRetirementReceipt/v1','repository':repo,'main_sha':base,'deleted':delete,'already_absent':absent,'remaining_heads':remaining,'status':'VERIFIED','canonical_effect':'NONE','provider_calls':0}
+          Path('branch-retirement-receipt.json').write_text(json.dumps(receipt,indent=2)+'\n');print(json.dumps(receipt,indent=2))
+          PY
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: branch-retirement-${{ github.run_id }}
+          path: branch-retirement-receipt.json
+          retention-days: 90
+          if-no-files-found: error
