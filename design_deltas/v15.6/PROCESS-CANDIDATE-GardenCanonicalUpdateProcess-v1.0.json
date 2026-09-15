@@ -1,0 +1,99 @@
+{
+  "schema": "ProcessVersion/v1",
+  "process_id": "GardenCanonicalUpdateProcess",
+  "version": "1.0-candidate",
+  "status": "NON_CANONICAL_PROCESS_CANDIDATE_PENDING_REQUIRED_REVIEW",
+  "bound_predecessor_design_epoch": "Garden-v15.5@63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+  "purpose": "Typed candidate process for canonical Garden updates and successor construction.",
+  "protected_change": true,
+  "section_unit": {
+    "schema": "SectionUnit/v1",
+    "definition": "Smallest mechanically addressable anchor-bounded unit that owns at least one semantic obligation, or a clearly bounded non-normative explanatory/history unit.",
+    "tiers": {
+      "TIER_A": "Normative/high-impact semantics including rights/HSA/authority/ActionGate/policy/safety/security/privacy/proof/evidence/DesignEpoch, schemas, FunctionContracts, invariants, semantic registries and normative failure/state rules.",
+      "TIER_B": "Explanatory mechanisms, examples and rationale with no independent normative semantics; escalate to TIER_A when normative meaning or implementation ambiguity is discovered.",
+      "TIER_C": "History, version notes, prior-art positioning and non-semantic archival material; escalate when active semantics are found."
+    },
+    "completion_labels": {
+      "TIER_A": "FULL-DESIGN-SWEEP-COMPLETE-FOR-TIER-A",
+      "ALL_TIERS": "FULL-DESIGN-SWEEP-COMPLETE"
+    }
+  },
+  "review_profile": {
+    "tier_a_primary_families": ["ChatGPT/GPT-5.6-Sol", "Gemini", "DeepSeek", "Qwen"],
+    "minimum_effective_independent_families": 3,
+    "high_critical_preferred_completed_primary_families": 4,
+    "blind_first": true,
+    "cross_examination_required": true,
+    "whole_source_compare_required": true,
+    "diversity_schema": "ReviewFamilyDiversity/v1",
+    "diversity_rule": "Independence is lineage/provider/base-model aware; branding or nationality alone does not establish independence. Same base/family adds no independent family; shared lineage receives reduced weight."
+  },
+  "evidence_hierarchy": {
+    "E4": "Executable/reproducible trace bound to current commit/DesignEpoch/environment.",
+    "E3": "Formal proof or machine-checkable contradiction whose premises match current design/implementation.",
+    "E2": "Authoritative source artifact or exact code/schema/contract evidence.",
+    "E1": "Reasoned model/human argument without higher-class direct verification.",
+    "E0": "Unsupported assertion.",
+    "rule": "Every semantic cross-exam/admission disposition cites its highest surviving evidence class. E1/E0 do not automatically veto verified E2-E4. Conflicting verified evidence becomes a separate unresolved finding."
+  },
+  "delta_dependency_schema": {
+    "field": "delta_dependencies",
+    "relationship_kinds": ["REQUIRED_BEFORE_ADMISSION", "CONFLICTS_WITH", "SHARED_ANCHOR", "SHARED_CONTRACT", "SHARED_INVARIANT", "AFFECTS"],
+    "rules": [
+      "A delta cannot admit while a REQUIRED_BEFORE_ADMISSION dependency is DISPUTED or UNRESOLVED.",
+      "Admission of a delta marks pending/reviewed deltas sharing affected anchors/contracts/invariants STALE_REVIEW unless explicit compatibility evidence exists."
+    ]
+  },
+  "implementation_validation_modes": {
+    "SHADOW_IMPLEMENTATION": "Non-production branch bound to exact DesignEpoch; implement implied semantic change and run real tests; never merge solely because validation succeeded.",
+    "MIRROR_VALIDATION": "DesignMirror/simulation validation; cheaper/weaker evidence with declared limitations.",
+    "DIRECT_NON_SEMANTIC": "Governed direct implementation for verified non-semantic changes."
+  },
+  "light_track": {
+    "schema": "LIGHT_NON_SEMANTIC/v1",
+    "eligible": "Cosmetic/reference/test-only changes with no semantic-touch signal.",
+    "required": ["one qualified reviewer or deterministic checker", "whole-source/reference closure where applicable", "applicable tests"],
+    "challenger_required": false,
+    "semantic_delta_created": false,
+    "escalation_rule": "Any schema meaning, invariant, FunctionContract, authority, state/failure, public API, human-visible semantics or canonical ownership change escalates to the full semantic track."
+  },
+  "move_equivalence": {
+    "schema": "MoveEquivalenceClaim/v1",
+    "required_for": "Any predecessor semantic statement classified MOVED.",
+    "independent_review": true,
+    "acceptable_evidence": ["relocation-only textual diff", "context-bound semantic-preservation argument"],
+    "failure_rule": "Without valid move-equivalence evidence, the statement remains RETAINED or is explicitly SUPERSEDED by an admitted delta."
+  },
+  "successor_classification": {
+    "PATCH": "<=3 admitted semantic deltas and no invariant, authority, HSA or topology change.",
+    "MINOR": "<=10 admitted semantic deltas and no authority, HSA or topology change; any material invariant change escalates to MAJOR.",
+    "MAJOR": "Any authority/HSA/topology change, material invariant change, or >10 admitted semantic deltas.",
+    "rule": "MAJOR receives the strongest composition/review profile."
+  },
+  "human_availability": {
+    "schema": "HumanAvailabilityWindow/v1",
+    "fields": ["available_from", "available_until", "expected_response_latency", "contact_or_approval_mode"],
+    "default_without_explicit_window": "Ordinary availability lasts one business day after a protected-decision request, then HUMAN_UNAVAILABLE.",
+    "human_unavailable": "Routine delegated work may continue; protected promotion and unclear delegation pause.",
+    "human_permanently_unavailable": "Protected canonical promotion remains paused until a separately admitted continuity/governance mechanism exists; no silent transfer of protected authority."
+  },
+  "canonical_rollback": {
+    "schema": "CanonicalRollbackPolicy/v1",
+    "default_candidate_window_days": 30,
+    "within_window": "A verified critical regression may trigger a governed rollback to the immutable predecessor.",
+    "history_rule": "Preserve successor admission receipts/history and mark them SUPERSEDED_BY_ROLLBACK.",
+    "after_window": "Reversal requires the normal forward-change review profile.",
+    "single_current_rule": "Do not maintain two simultaneous CURRENT canonicals absent an explicitly admitted transition policy."
+  },
+  "process_transition": {
+    "rule": "Every semantic delta and successor binds to ProcessVersion/v1.",
+    "mid_cycle_change": "In-flight deltas are re-reviewed under the new process or explicitly grandfathered with GRANDFATHERED_UNDER_<version>, rationale and compatibility review.",
+    "process_changes_protected": true
+  },
+  "config_surface_coupling": {
+    "public_repo_contract": "GardenConfigSurfaceContracts/v1",
+    "rule": "Authoritative selector/allowlist/budget/privacy shape changes invalidate downstream consumer acknowledgements and CI until reconciled in the same governed change; executable compatibility probes remain required."
+  },
+  "promotion_boundary": "Candidate process only. It does not itself modify canonical v15.5, admit any v15.6 semantic delta, transfer protected authority, or promote a successor."
+}
