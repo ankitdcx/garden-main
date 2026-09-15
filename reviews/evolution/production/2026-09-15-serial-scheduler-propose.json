@@ -5,7 +5,7 @@
   "action": {
     "action_id": "GARDEN-2026-09-15-SERIAL-SCHEDULER-PROPOSE-001",
     "verb": "PROPOSE",
-    "actor_ref": "agent:garden-coordinator-migration",
+    "actor_ref": "agent:garden-integrator-build",
     "subject_ref": "repo:ankitdcx/garden-main",
     "input_refs": [
       "governance/AUTOMATION_ENGINE_BINDING_v1.json",
