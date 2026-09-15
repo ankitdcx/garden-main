@@ -1,0 +1,14 @@
+{
+  "ProcessVersion": "1.4",
+  "DesignEpoch": "Garden-v15.5@63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+  "source_root_sha256": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+  "repo_heads": {
+    "ankitdcx/garden-main": "9fce84227857eebc83e824bd30834e2a3ea50281"
+  },
+  "CycleID": "GARDEN-V156-1CEA7B96B486F204C83BD14A",
+  "schema": "CycleBinding/v1",
+  "immutable": true,
+  "purpose": "WORKING_FIVE_FILE_CANDIDATE",
+  "canonical_promotion": false,
+  "source_authority": "User request in this conversation; evidence gates remain controlling"
+}

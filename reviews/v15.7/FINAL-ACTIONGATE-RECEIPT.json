@@ -1,0 +1,55 @@
+{
+  "schema": "GardenEvolutionProductionGateReceipt/v1",
+  "request_schema": "GardenEvolutionProductionAction/v1",
+  "action_id": "GARDEN-2026-09-15-V157-CANDIDATE-PUBLICATION-PROPOSE-001",
+  "verb": "PROPOSE",
+  "decision": "ESCALATE",
+  "reasons": [
+    "CONSTITUTIONAL_CHANGE_REQUIRES_HUMAN_SIGNOFF"
+  ],
+  "current_design_epoch": "v15.5",
+  "current_dependencies": {
+    "canonical_source_root": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598"
+  },
+  "canonical_release": "Garden v15.5",
+  "gsl": "v45.1",
+  "authority_ref": "AUTH-GARDEN-HOURLY-REVIEWER-v15.5",
+  "authority": {
+    "subject": "agent:garden-integrator-build",
+    "role": "REVIEWER",
+    "granted_by": "human:garden-steward:hourly-integration-instruction",
+    "actions": [
+      "PROPOSE"
+    ],
+    "resources": [
+      "repo:ankitdcx/garden-main"
+    ],
+    "max_delegation_depth": 0,
+    "can_mint_envelopes": false,
+    "can_promote_canon": false
+  },
+  "trusted_attestations": {
+    "human_signoff": false,
+    "independent_review": false,
+    "verified_receipt_ids": [],
+    "source": "VERIFIED_TRUSTED_RECEIPTS_ONLY"
+  },
+  "governance": {
+    "verified": true,
+    "schema": "GardenEvolutionGovernanceClassificationReceipt/v1",
+    "tier": "CONSTITUTIONAL",
+    "domains": [
+      "AUTHORITY_ENVELOPE_RULES"
+    ],
+    "reasons": [
+      "PROTECTED_CHANGE:AUTHORITY_ENVELOPE_RULES"
+    ],
+    "receipt_sha256": "9470244289d5b7fa73ac8c49dcd71af993ece96507285abe10af6c0382fe9a3d",
+    "evidence_source": "TRUSTED_GIT_DIFF",
+    "base_ref": "HEAD^",
+    "head_ref": "HEAD"
+  },
+  "canonical_pointer_changed": false,
+  "materialization_candidate_only": false,
+  "receipt_visibility": "PRESERVE_ALLOW_REJECT_ESCALATE"
+}

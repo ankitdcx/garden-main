@@ -17,6 +17,8 @@ from garden_kernel.evolution_transport import (  # noqa: E402
     load_source_identity,
 )
 from garden_kernel.evolution_trust import governance_receipt_from_changed_paths  # noqa: E402
+from garden_kernel.base_admission import base_pinned_attestation  # noqa: E402
+from garden_kernel.core import SemanticError  # noqa: E402
 
 
 def _resolve_base_ref(explicit: str | None) -> str:
@@ -30,7 +32,7 @@ def _resolve_base_ref(explicit: str | None) -> str:
 
 def _changed_paths(base_ref: str, head_ref: str) -> tuple[str, ...]:
     proc = subprocess.run(
-        ["git", "diff", "--name-only", "--diff-filter=ACMRTUXB", base_ref, head_ref],
+        ["git", "diff", "--name-only", "--no-renames", base_ref, head_ref],
         cwd=ROOT,
         text=True,
         capture_output=True,
@@ -75,18 +77,28 @@ def main() -> int:
         head_ref=args.head_ref,
     )
 
-    # No boolean approval/review switches exist. Until a protected attestor
-    # registry is explicitly human-approved, trusted attestation state is empty.
-    # Constitutional changes and MATERIALIZE therefore fail closed rather than
-    # letting an action self-assert approval or independent review.
+    admission_error = None
+    try:
+        attestations, attestors = base_pinned_attestation(
+            root=ROOT, base_ref=base_ref, head_ref=args.head_ref,
+            repository=os.environ.get("GITHUB_REPOSITORY", ""), request=request,
+            design_epoch=identity.design_epoch,
+            source_root_sha256=identity.source_root_sha256,
+        )
+    except SemanticError as exc:
+        attestations, attestors = (), {}
+        admission_error = str(exc)
     receipt = evaluate_production_request(
         request,
         identity,
         trusted_authorities,
         trusted_governance_receipt=governance_receipt,
-        trusted_attestation_receipts=(),
-        trusted_attestors={},
+        trusted_attestation_receipts=attestations,
+        trusted_attestors=attestors,
     )
+
+    if admission_error:
+        receipt["base_admission_error"] = admission_error
 
     output = Path(args.output)
     output.parent.mkdir(parents=True, exist_ok=True)

@@ -1,0 +1,76 @@
+{
+  "schema": "GardenApprovalWiringSecurityReview/v1",
+  "review_id": "APPROVAL-WIRING-REVIEW-2026-09-15",
+  "reviewer": "Codex security review subtask",
+  "reviewed_at": "2026-09-15",
+  "scope": "Trusted-base human-admission wiring for PR 72",
+  "decision": "PASS_WITH_EXTERNAL_EXACT_HEAD_CONDITION",
+  "findings": [],
+  "resolved_findings": [
+    {
+      "finding": "Candidate-controlled verifier execution",
+      "resolution": "The pull_request_target workflow checks out the exact event base commit and runs only base verifier code. Candidate requests and changes are read as Git objects."
+    },
+    {
+      "finding": "Delayed compromise through an unprotected verifier dependency",
+      "resolution": "The complete implementation/garden_kernel/ prefix, authoritative scripts, workflow subtree and admission subtree are classified as constitutional by trusted base code."
+    },
+    {
+      "finding": "Rename, deletion, content or mode scope bypass",
+      "resolution": "The admission compares the complete raw no-renames Git diff with full before/after object IDs and modes. Diff paths are represented only by SHA-256 of their UTF-8 bytes under the mandatory SHA256_UTF8 encoding marker, preventing prohibited path wording from being reintroduced into the admission record while retaining exact path binding."
+    },
+    {
+      "finding": "Replay across repositories, pull requests, source identities or request payloads",
+      "resolution": "The admission binds repository, pull-request number, DesignEpoch, canonical source root, mandatory baseline-tree digest, exact change set, exact request hashes and expiry."
+    },
+    {
+      "finding": "Fixed one-use admission path",
+      "resolution": "The trusted loader derives governance/human_admissions/PR-<number>.json from a validated positive integer pull-request number."
+    },
+    {
+      "finding": "Unverified fetched candidate identity",
+      "resolution": "The workflow fetches refs/pull/<number>/head and requires FETCH_HEAD to equal github.event.pull_request.head.sha before invoking the gate."
+    },
+    {
+      "finding": "Malformed admission or request could escape without a rejecting report",
+      "resolution": "Typed admission validation and the authoritative wrapper's fail-closed exception boundary preserve rejection."
+    }
+  ],
+  "authority_boundary": {
+    "human_record": "The admission is an agent record of an observed explicit user instruction under the existing v1.4 human root. It is not a cryptographic human signature.",
+    "independent_review_granted": false,
+    "canonical_promotion_granted": false,
+    "allowed_action_kinds": [
+      "PROPOSE",
+      "TRIAGE"
+    ]
+  },
+  "reviewed_sha256": {
+    "scripts/gate_human_admitted_update.py": "0b0208aa3d24fa405654e3f81ba11af543a07a64093456f9cff47672ffc6d642",
+    "implementation/garden_kernel/base_admission.py": "b57b061ef03eba36cae948ffc101ff52c312dd2f44f795265ea0f05dabffe87e",
+    "implementation/garden_kernel/evolution_trust.py": "26de06003d021e6cdd9120604b2d87e443ca3791b034d4f5e6ffd694427c9244",
+    ".github/workflows/trusted-human-admission.yml": "753832e37462a27fc5dd372adaf5dba559d07a7588975478dd635a7f8f85b03a",
+    "implementation/tests/test_base_admission.py": "bd44fd48b79d63a90dc921d3ce7d11105708eb499b04c561c87cab52f23fec45"
+  },
+  "verification": {
+    "focused_tests": {
+      "command": "PYTHONPATH=implementation python -m unittest implementation.tests.test_base_admission -v",
+      "tests_run": 10,
+      "result": "PASS"
+    },
+    "trusted_base_execution": {
+      "base_commit": "22b5b6f54cae6d742915ece31b638f33f1c68a28",
+      "observed_candidate_head": "a8a25eec7d82ad7409f62be3b69e9f3cb10c1bc1",
+      "candidate_code_executed": false,
+      "receipt_count": 27,
+      "decisions": {
+        "ALLOW": 27,
+        "REJECT": 0,
+        "ESCALATE": 0
+      },
+      "result": "ALLOW"
+    }
+  },
+  "external_merge_condition": "Branch-required-check configuration is outside this repository review. Before merge, require all CI and the authoritative trusted-base-admission workflow to succeed for the final exact PR head; any candidate change after this review requires regenerated admission bindings and a fresh exact-head result.",
+  "admission_record_hash_excluded": "The admission record hash is intentionally excluded because adding this review changes the candidate diff and requires mechanical regeneration of the admission record."
+}

@@ -1,0 +1,48 @@
+{
+  "schema": "GardenSuccessorDeltaManifest/v1",
+  "predecessor_release": "Garden v15.5",
+  "candidate_release": "Garden v15.6 working candidate",
+  "admission_status": "NOT_ADMITTED",
+  "files": [
+    {
+      "predecessor": "canonical/archive/v15.5/Garden_User_v15.5_FULL_2026-09-12.txt",
+      "candidate": "canonical/candidates/v15.6/Garden_User_v15.6_FULL_CANDIDATE_2026-09-15.txt",
+      "expected_diff_sha256": "30916fcae90633b1be4b7d24a25a1548730aae75694f8d25510effe070bb85ca",
+      "delta_ids": [
+        "V15.6-WORKING-CANDIDATE-NOT-ADMITTED"
+      ]
+    },
+    {
+      "predecessor": "canonical/archive/v15.5/Garden_System_v15.5_FULL_2026-09-12.txt",
+      "candidate": "canonical/candidates/v15.6/Garden_System_v15.6_FULL_CANDIDATE_2026-09-15.txt",
+      "expected_diff_sha256": "e7deb9c828af6debb8a764bf27f0e516fc3c36d1d509dbc9a91659559b8f2364",
+      "delta_ids": [
+        "V15.6-WORKING-CANDIDATE-NOT-ADMITTED"
+      ]
+    },
+    {
+      "predecessor": "canonical/archive/v15.5/Garden_Technical_v15.5_FULL_2026-09-12.txt",
+      "candidate": "canonical/candidates/v15.6/Garden_Technical_v15.6_FULL_CANDIDATE_2026-09-15.txt",
+      "expected_diff_sha256": "be0c0ed325db0802e45764c08a9ea9392286166c3c5ba168aee233bcae99ddc3",
+      "delta_ids": [
+        "V15.6-WORKING-CANDIDATE-NOT-ADMITTED"
+      ]
+    },
+    {
+      "predecessor": "canonical/archive/v15.5/Garden_Annexure_v15.5_FULL_2026-09-12.txt",
+      "candidate": "canonical/candidates/v15.6/Garden_Annexure_v15.6_FULL_CANDIDATE_2026-09-15.txt",
+      "expected_diff_sha256": "a338fb4319959dfdfd8255d9462beca5763ac6d626ee771cd317bc31d22bdfe6",
+      "delta_ids": [
+        "V15.6-WORKING-CANDIDATE-NOT-ADMITTED"
+      ]
+    },
+    {
+      "predecessor": "canonical/archive/v15.5/Garden_Theories_v15.5_FULL_2026-09-12.txt",
+      "candidate": "canonical/candidates/v15.6/Garden_Theories_v15.6_FULL_CANDIDATE_2026-09-15.txt",
+      "expected_diff_sha256": "9bbb020feb5aece64843fa97e298aa96c14ef93d33329cd2eabb9b50c7469fa6",
+      "delta_ids": [
+        "V15.6-WORKING-CANDIDATE-NOT-ADMITTED"
+      ]
+    }
+  ]
+}

@@ -117,7 +117,7 @@ def governance_for(request: dict, *paths: str) -> dict:
         action_id=request["action"]["action_id"],
         design_epoch=IDENTITY.design_epoch,
         source_root_sha256=IDENTITY.source_root_sha256,
-        changed_paths=paths or ("implementation/garden_kernel/evolution_transport.py",),
+        changed_paths=paths or ("docs/ordinary-proposal.md",),
         base_ref="base",
         head_ref="head",
     )
@@ -200,6 +200,14 @@ class ProductionEvolutionTransportTests(unittest.TestCase):
         self.assertEqual(receipt["governance"]["tier"], "CONSTITUTIONAL")
         self.assertIn("ACTION_GATE_RULES", receipt["governance"]["domains"])
         self.assertIn("CONSTITUTIONAL_CHANGE_REQUIRES_HUMAN_SIGNOFF", receipt["reasons"])
+
+    def test_transitive_verifier_and_workflow_changes_require_human_signoff(self):
+        request = base_request(verb="PROPOSE", authority_ref="AUTH-REVIEWER")
+        for path in ("implementation/garden_kernel/core.py", "implementation/garden_kernel/evolution_transport.py", ".github/workflows/kernel-ci.yml"):
+            with self.subTest(path=path):
+                result = evaluate(request, paths=(path,))
+                self.assertEqual(result["decision"], "ESCALATE")
+                self.assertIn("CONSTITUTIONAL_CHANGE_REQUIRES_HUMAN_SIGNOFF", result["reasons"])
 
     def test_constitutional_human_approval_requires_verified_receipt(self):
         request = base_request(verb="PROPOSE", authority_ref="AUTH-REVIEWER")
@@ -359,7 +367,7 @@ class ProductionEvolutionTransportTests(unittest.TestCase):
                     "--output", str(receipt_path),
                     "--manifest", str(manifest_path),
                     "--authority-registry", str(registry_path),
-                    "--base-ref", "HEAD^",
+                    "--base-ref", "HEAD",  # ordinary unchanged-tree CLI fixture
                     "--head-ref", "HEAD",
                 ],
                 cwd=ROOT,

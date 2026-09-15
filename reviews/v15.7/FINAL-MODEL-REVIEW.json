@@ -1,0 +1,65 @@
+{
+  "schema": "GardenBoundedModelPublicationReview/v1",
+  "review_id": "GARDEN-2026-09-15-V157-FINAL-MODEL-REVIEW-001",
+  "date": "2026-09-15",
+  "scope": "Publication review of the corrected role-reference receipt and superseded historical review resolution, with identity and boundary checks against the current v15.7 candidate.",
+  "disposition": "PASS_BOUNDED_WITH_KNOWN_ACTIONGATE_BLOCKER",
+  "candidate": {
+    "release": "Garden v15.7",
+    "status": "WORKING_FIVE_FILE_CANDIDATE_NOT_CANONICAL",
+    "source_root_sha256": "eb4d5306a8f7dcca75f8cf7d60f6441bdf5b35bccb86ac2362b33f241af1591a",
+    "canonical": false
+  },
+  "canonical_baseline": {
+    "release": "Garden v15.5",
+    "source_root_sha256": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+    "pointer_unchanged": true
+  },
+  "verified_fixes": [
+    {
+      "record": "reviews/v15.7/ROLE-REFERENCE-EDIT-RECEIPT.json",
+      "result": "PASS",
+      "detail": "All 15 final_after_regeneration_sha256 values equal the current bytes. Intermediate edit hashes are distinguished from final regenerated hashes. The edited archived packet is marked as a redacted derivative whose prior hashes and review effects do not transfer."
+    },
+    {
+      "record": "reviews/v15.7/REVIEW-RESOLUTION.json",
+      "result": "PASS",
+      "detail": "The prior SOL-V157-003 resolution is enclosed as SUPERSEDED_HISTORICAL_RESOLUTION. The effective fields bind the current candidate root and current source-integration receipt hash."
+    }
+  ],
+  "checked_file_sha256": {
+    "reviews/v15.7/ROLE-REFERENCE-EDIT-RECEIPT.json": "3a7f5111604b99afee62f32af5bb781eb7c5072193cc5ab43983ef156a2e2d00",
+    "reviews/v15.7/REVIEW-RESOLUTION.json": "36c64cb145934348eaf4905c99938bf203ccd2c7b20b6d621ad8a48be564ac27",
+    "reviews/v15.7/SOURCE-INTEGRATION-RECEIPT.json": "73f2ac019bd32fca5a3267865c4fcc5e7fffe684ee07e298d907e758743a577e",
+    "canonical/candidates/v15.7/SOURCE_MANIFEST.json": "193f8e3eeb90e60e6e55a3679aafc051d3694422a20e82bb5697319b8c572b48",
+    "canonical/candidates/CURRENT_CANDIDATE.json": "bb77b106250838bdc22678fcedc40f8021607de7867a661a6c65413478017d48",
+    "reviews/v15.7/FINAL-ACTIONGATE-RECEIPT.json": "315ce7b54ad9f64cfcccdcc2898f29b549af1403172d217e8442bcc68b610144",
+    "reviews/v15.7/FINAL-TEST-RECEIPT.json": "ac2dbe9b091605b237c7a2e30030ea18bb467b23924273d0a3dbedaa2674bb5e"
+  },
+  "claim_checks": {
+    "false_promotion_claim_found": false,
+    "false_test_claim_found": false,
+    "stale_effective_candidate_root_found": false,
+    "authority_expansion_approved": false,
+    "historical_review_transferred_to_current_candidate": false
+  },
+  "known_blocker": {
+    "record": "reviews/v15.7/FINAL-ACTIONGATE-RECEIPT.json",
+    "decision": "ESCALATE",
+    "reason": "CONSTITUTIONAL_CHANGE_REQUIRES_HUMAN_SIGNOFF",
+    "effect": "This review does not admit the protected authority-registry change, authorize merge, or promote the candidate."
+  },
+  "qualification_boundary": {
+    "independent_family_qualification_established": false,
+    "semantic_closure_established": false,
+    "runtime_or_cognitive_qualification_established": false,
+    "canonical_promotion_approved": false,
+    "note": "This is a scoped publication review. Earlier reviews remain bound to their exact historical inputs."
+  },
+  "test_boundary": {
+    "reported_result": "187 passed, 1 skipped",
+    "receipt_status": "PASS_SCOPED",
+    "scope_limit": "The existing reference-kernel regression suite does not execute the newly specified TLA+, supply-chain, physical, or cognitive qualification work."
+  },
+  "authorization_effect": "NONE"
+}

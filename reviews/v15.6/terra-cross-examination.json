@@ -1,0 +1,101 @@
+{
+  "schema": "GardenCrossExamination/v1",
+  "review_id": "V15.6-TERRA-CROSS-EXAMINATION-2026-09-15",
+  "reviewer": {
+    "model": "gpt-5.6-terra",
+    "family": "OpenAI"
+  },
+  "purpose": "Cross-examine the Sol blind-review findings against the repaired current artifacts. This report is evidence of a same-family cross-examination only; it makes no quorum, admission, certification, or promotion claim.",
+  "peer_review_examined": {
+    "path": "reviews/v15.6/sol-blind-review.json",
+    "sha256": "3c3b2c0d54ac8960a501534958be6f6e8bba1e0fd648351ea11160947c1d024d"
+  },
+  "reviewed_artifacts": [
+    {
+      "path": "design_deltas/v15.6/ENGINEERING-HARDENING-SPECIFICATION.txt",
+      "sha256": "5c31e7ac9f9393efbefdb752f75de96a86d979e5220c7e9f61c6c2cc3f3300dd"
+    },
+    {
+      "path": "design_deltas/v15.6/DELTASET-2026-09-15-ENGINEERING-HARDENING.json",
+      "sha256": "f1eb379094f357b93c8e26a167e8851284b5cc49d82cdd5bb7e196757e60d8c4"
+    },
+    {
+      "path": "scripts/check_successor_drift.py",
+      "sha256": "3349faf94b4c10d8525837e60c2fca11f567dfef609f9119a6b759c7deeeb34d"
+    },
+    {
+      "path": "reviews/v15.6/EXPECTED-CANDIDATE-DIFF.json",
+      "sha256": "e4c62c3b25cba82fec0b7547ec198f999b9b05e088eb1430b2a2cc3fa928ec34"
+    },
+    {
+      "path": "reviews/v15.6/DIFF-IDENTITY-RECEIPT.json",
+      "sha256": "8288cd426641fb82b70445326c841ab21be35c98c99c144b7ce25ed844af3304"
+    },
+    {
+      "path": "reviews/v15.6/SECTION-INVENTORY.json",
+      "sha256": "de8607c1c3bf48de9ef5ba02636642acfffc75f58bf8b01cbcbf8c6a7507720f"
+    },
+    {
+      "path": "reviews/v15.6/REFERENCE-CLOSURE-RECEIPT.json",
+      "sha256": "bcf77c90b707dd683e368f9bebd7c3b8c43bb6bd0fc860a3d2e22cd7779ffa8f"
+    },
+    {
+      "path": "canonical/candidates/v15.6/SOURCE_MANIFEST.json",
+      "sha256": "fd44df30a16bce3cbdb59dc934fc1addaf8f465154014cc3b8a1002c82ed6775",
+      "candidate_source_root_sha256": "e3ed83a6607a42d22b5bf3f3ceda425c0a2c807180ac6a69918216807077911b"
+    }
+  ],
+  "cross_examination": [
+    {
+      "sol_finding": "SOL-V156-001",
+      "status": "OPEN_INTENTIONALLY",
+      "assessment": "Agreed. The repair does not, and should not, convert specified work into executed work. The specification and delta continue to label executable modeling, checking, runtime tests, TUF/in-toto implementation, simulation, and full STPA as pending."
+    },
+    {
+      "sol_finding": "SOL-V156-002",
+      "status": "OPEN_EXPLICITLY_BOUND",
+      "assessment": "Agreed. The repaired records strengthen truthfulness: each FunctionContract block is marked a requirement profile, with null machine ID/version and UNRESOLVED_REQUIRED_BEFORE_EXECUTABLE_ADMISSION. This resolves any implication that prose is already a machine-resolvable contract, but it does not resolve the missing machine bindings."
+    },
+    {
+      "sol_finding": "SOL-V156-003",
+      "status": "RESOLVED_FOR_SOURCE_DESIGN_TRACEABILITY",
+      "assessment": "The 20 patches now separate a single canonical_owner_binding from affected_artifact_schema_profile_refs and include an owner_anchor_change_map with source path, hash, heading, line, anchor, and candidate technical anchor. This addresses the prior schema/contract-as-owner ambiguity for the candidate design. Exhaustive semantic compatibility of all owner fields remains outside this check."
+    },
+    {
+      "sol_finding": "SOL-V156-004",
+      "status": "RESOLVED_WORDING_AND_PROOF_BOUNDARY; EXECUTION_EVIDENCE_OPEN",
+      "assessment": "Agreed with Sol's original objection. The prior handoff_entry_region was ambiguous and should not have been accepted as harmless. It is removed. EH-18 now defines takeover_recoverable_region(D,e), requires the actual uncertainty interval to fit the time-dependent region, states that [0,10] applies only at completed takeover with D=0 and a functioning fallback, and calls an empty interval nonrecoverable. The threshold is explicitly PROPOSED_ARITHMETIC_NOT_VALIDATED and a proof obligation lists error sign, sampling phase, age, monitoring, delay, actuator dynamics, command order, uncertainty propagation, and discretization. The continuous-time/interval proof and simulation evidence remain open."
+    },
+    {
+      "sol_finding": "SOL-V156-005",
+      "status": "RESOLVED",
+      "assessment": "The checker now describes itself as diff identity only and, when run against the current five-file expected-diff manifest, emits DIFF_MATCH_ONLY with claimed_admission_status NOT_ADMITTED, admitted_diff_verified false, canonical_promotion_authorized false, and no diff-identity failures. This prevents a successful byte-diff check from being labeled admitted-diff satisfaction."
+    },
+    {
+      "sol_finding": "SOL-V156-006",
+      "status": "RESOLVED_AT_THE_PUBLISHED_EVIDENCE_BOUNDARY",
+      "assessment": "The generated SECTION-INVENTORY now says its coverage scope is contiguous section-boundary segmentation only, exposes section_boundary_coverage_complete separately, and sets semantic_reference_closure_complete false. The separate closure receipt remains INCONCLUSIVE with complete_semantic_reference_closure false. Thus the artifacts do not present segmentation coverage as semantic closure. Semantic reference, SchemaID, FunctionContract, and proof-obligation closure remain open."
+    },
+    {
+      "sol_finding": "SOL-V156-007",
+      "status": "PARTIALLY_RESOLVED",
+      "assessment": "The new per-patch owner/anchor change maps and explicit projection policy materially improve the five-file ownership presentation. It remains only a candidate presentation because the records themselves state that cross-file projection links and machine references require builder/closure verification."
+    },
+    {
+      "sol_finding": "SOL-V156-008",
+      "status": "OPEN",
+      "assessment": "Agreed. The repaired candidate remains noncanonical and lacks executed assurance evidence, semantic closure, and required independent-family review."
+    }
+  ],
+  "current_noncompletion_facts": [
+    "All 38 work items are uniquely registered and design-specified, but implementation/execution evidence is not supplied by these artifacts.",
+    "Machine FunctionContract IDs and versions are explicitly unresolved before executable admission.",
+    "Semantic reference closure is explicitly incomplete/inconclusive.",
+    "The current candidate source manifest calls the artifact WORKING_FIVE_FILE_CANDIDATE_NOT_CANONICAL."
+  ],
+  "limitations": [
+    "This cross-examination checks the listed bytes and one successful DIFF_MATCH_ONLY invocation. It does not execute models, simulations, supply-chain verification, runtime recovery tests, or semantic closure analysis.",
+    "This is a same-family OpenAI review and does not satisfy an independent-family requirement.",
+    "No canonical admission, release qualification, certification, quorum, or promotion conclusion is made."
+  ]
+}

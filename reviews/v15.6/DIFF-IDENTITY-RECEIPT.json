@@ -1,0 +1,58 @@
+{
+  "schema": "GardenSuccessorDriftReceipt/v1",
+  "predecessor_release": "Garden v15.5",
+  "candidate_release": "Garden v15.6 working candidate",
+  "observed": [
+    {
+      "predecessor": "canonical/archive/v15.5/Garden_User_v15.5_FULL_2026-09-12.txt",
+      "candidate": "canonical/candidates/v15.6/Garden_User_v15.6_FULL_CANDIDATE_2026-09-15.txt",
+      "delta_ids": [
+        "V15.6-WORKING-CANDIDATE-NOT-ADMITTED"
+      ],
+      "changed": true,
+      "observed_diff_sha256": "30916fcae90633b1be4b7d24a25a1548730aae75694f8d25510effe070bb85ca"
+    },
+    {
+      "predecessor": "canonical/archive/v15.5/Garden_System_v15.5_FULL_2026-09-12.txt",
+      "candidate": "canonical/candidates/v15.6/Garden_System_v15.6_FULL_CANDIDATE_2026-09-15.txt",
+      "delta_ids": [
+        "V15.6-WORKING-CANDIDATE-NOT-ADMITTED"
+      ],
+      "changed": true,
+      "observed_diff_sha256": "e7deb9c828af6debb8a764bf27f0e516fc3c36d1d509dbc9a91659559b8f2364"
+    },
+    {
+      "predecessor": "canonical/archive/v15.5/Garden_Technical_v15.5_FULL_2026-09-12.txt",
+      "candidate": "canonical/candidates/v15.6/Garden_Technical_v15.6_FULL_CANDIDATE_2026-09-15.txt",
+      "delta_ids": [
+        "V15.6-WORKING-CANDIDATE-NOT-ADMITTED"
+      ],
+      "changed": true,
+      "observed_diff_sha256": "be0c0ed325db0802e45764c08a9ea9392286166c3c5ba168aee233bcae99ddc3"
+    },
+    {
+      "predecessor": "canonical/archive/v15.5/Garden_Annexure_v15.5_FULL_2026-09-12.txt",
+      "candidate": "canonical/candidates/v15.6/Garden_Annexure_v15.6_FULL_CANDIDATE_2026-09-15.txt",
+      "delta_ids": [
+        "V15.6-WORKING-CANDIDATE-NOT-ADMITTED"
+      ],
+      "changed": true,
+      "observed_diff_sha256": "9ae143837ab8c1f6d9ed597b5f393eb24a2ef8257fbcadcee3f4d204508a5420"
+    },
+    {
+      "predecessor": "canonical/archive/v15.5/Garden_Theories_v15.5_FULL_2026-09-12.txt",
+      "candidate": "canonical/candidates/v15.6/Garden_Theories_v15.6_FULL_CANDIDATE_2026-09-15.txt",
+      "delta_ids": [
+        "V15.6-WORKING-CANDIDATE-NOT-ADMITTED"
+      ],
+      "changed": true,
+      "observed_diff_sha256": "c2551664f609cfa475058cfebf478e6c65766b5f3ddbd6182c46a38432503ace"
+    }
+  ],
+  "status": "DIFF_MATCH_ONLY",
+  "failures": [],
+  "rule": "candidate == predecessor + exactly the declared expected per-file diffs; admission is not checked",
+  "claimed_admission_status": "NOT_ADMITTED",
+  "admitted_diff_verified": false,
+  "canonical_promotion_authorized": false
+}

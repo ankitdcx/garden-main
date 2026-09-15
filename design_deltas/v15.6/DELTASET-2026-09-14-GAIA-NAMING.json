@@ -38,7 +38,7 @@
         "Update glossary/catalog/reference-closure artifacts if GAIA is indexed there."
       ],
       "origin": {
-        "kind": "HUMAN_ORIGINATOR_DECISION",
+        "kind": "HUMAN_STEWARD_DECISION",
         "date": "2026-09-14",
         "decision": "Use 'Garden Artificial Intelligence Architecture' rather than 'Garden Autonomous Intelligence Architecture'."
       },

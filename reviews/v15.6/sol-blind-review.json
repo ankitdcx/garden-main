@@ -1,0 +1,197 @@
+{
+  "schema": "GardenBlindDesignReview/v1",
+  "review_id": "V15.6-SOL-BLIND-REVIEW-2026-09-15",
+  "reviewer": {
+    "declared_model": "gpt-5.6-sol",
+    "family": "OpenAI",
+    "independence_limit": "This review is a separate model pass but is not cross-family independence and must not be counted as one of three independent model families."
+  },
+  "scope": "Draft design review of the engineering-hardening specification, its machine-readable delta, and the candidate build approach; not certification, admission, promotion authority, implementation verification, or executed safety evidence.",
+  "blindness": {
+    "other_agent_reviews_read_before_save": false,
+    "note": "No other v15.6 agent review was inspected before this report was saved."
+  },
+  "reviewed_artifacts": [
+    {
+      "path": "design_deltas/v15.6/ENGINEERING-HARDENING-SPECIFICATION.txt",
+      "sha256": "c1f7684b33dcdf75e2f53868dc6a9b33b9105af4dedc931267eedf5d303546fe"
+    },
+    {
+      "path": "design_deltas/v15.6/DELTASET-2026-09-15-ENGINEERING-HARDENING.json",
+      "sha256": "b203e69f7431611e8745532fe944d3a896acf4b3936f4cd02e94dc30897b12b9"
+    },
+    {
+      "path": "scripts/build_v15_6_candidate.py",
+      "sha256": "a7823470a1962993d241eeb51c87a849526d83c96448455924eedb94d1f3c55d"
+    },
+    {
+      "path": "canonical/current/SOURCE_MANIFEST.json",
+      "sha256": "1accfe90b24c6fab8a32f23e7f6694fab11eef010a42de6faf01622c48a7b1f3"
+    },
+    {
+      "path": "gsl/FUNCTION_CONTRACTS.json",
+      "sha256": "b3bc845a44a10c4f47699955e04cba71fbbf5d1e41f08e537c083f8035b041db"
+    },
+    {
+      "path": "canonical/current/Garden_Annexure_v15.5_FULL_2026-09-12.txt",
+      "sha256": "56aa88e3c63e8ec8540175c0fad7d9d06ead021c49756cb281f4276a5c8bd084"
+    },
+    {
+      "path": "implementation/garden_kernel/section_units.py",
+      "sha256": "0c945da34194fe6f8523fb5515574f319402554a8b4f61a4469a170c8617d460",
+      "hash_note": "Recorded from the reviewed working tree; re-hash before relying on this review if the tree changes."
+    },
+    {
+      "path": "scripts/check_successor_drift.py",
+      "sha256": "2c5b2f594dd1c4865689a509626bc7597851c22ac92b7b64a7aa933f73714b47",
+      "hash_note": "Recorded from the reviewed working tree; re-hash before relying on this review if the tree changes."
+    },
+    {
+      "path": "design_deltas/v15.6/PENDING-CONSOLIDATED-SPECIFICATION.txt",
+      "sha256": "24d52f94f71efe94b454d9f622e1db00db7b637558176d09cdc55144fbac8fee"
+    },
+    {
+      "path": "design_deltas/v15.6/PENDING-RECONCILIATION-2026-09-15.json",
+      "sha256": "acd2549bef988f1108cde9cb24a4e5f65344d073799f5e5f149f339df2e77eea"
+    },
+    {
+      "path": "canonical/candidates/v15.6/SOURCE_MANIFEST.json",
+      "sha256": "8ba8d844c6ee36ccbede68ee81588f5ccf116a80f8e316445a78b074445cea7a",
+      "declared_candidate_source_root_sha256": "6980d86eb2c99a5f36938bb555d4d19aad6437c4502e6f075a01096db828258a"
+    },
+    {
+      "path": "reviews/v15.6/REFERENCE-CLOSURE-RECEIPT.json",
+      "sha256": "edcc5a31648e72da6291bce97e4cef3c6e91152879f8a3a81a254d6888f018e8"
+    }
+  ],
+  "checks": {
+    "profile_count": 20,
+    "corrected_pattern_count": 15,
+    "work_item_register_count": 38,
+    "work_item_numbers_complete_and_unique": true,
+    "invariant_count": 88,
+    "test_specification_count": 73,
+    "delta_json_parse": "PASS",
+    "status_language_distinguishes_specification_from_execution": true,
+    "function_contract_registry_observed_coverage": {
+      "scoped_functions": 29,
+      "declared_contracts": 13,
+      "frontier": 16,
+      "ratio": 0.448276,
+      "semantic_compliance_proved": false
+    }
+  },
+  "findings": [
+    {
+      "id": "SOL-V156-001",
+      "severity": "BLOCKER_FOR_PROMOTION",
+      "area": "completion claims",
+      "finding": "The 38 requested work items are specified but are not implemented or executed. Items 1, 6, 10, 16, 17, 18, 21, 26 and 30 explicitly require creation, testing, analysis or receipts, while the delta truthfully labels them execution-pending. A release description may claim design incorporation only; it cannot claim that all work items are complete.",
+      "evidence": [
+        "ENGINEERING-HARDENING-SPECIFICATION.txt lines 2-9 and COMPLETE USER WORK ITEM REGISTER",
+        "DELTASET verification_status: executable_TLA_model NOT_CREATED, model_checking/runtime_tests NOT_EXECUTED, pipeline NOT_IMPLEMENTED, physical_simulation SPECIFIED_NOT_EXECUTED, full STPA pending"
+      ],
+      "required_resolution": "Keep the candidate noncanonical and describe these items as specified/deferred, or implement and execute them with exact current receipts before any completion or qualification claim."
+    },
+    {
+      "id": "SOL-V156-002",
+      "severity": "BLOCKER_FOR_PROMOTION",
+      "area": "FunctionContract ownership and resolution",
+      "finding": "All 20 profiles contain prose headed FunctionContract refinement, but none resolves an exact owner-qualified FunctionContract identity/version in the machine-readable FunctionContract registry. Canonical FUNC-001, FUNC-007 and FUNC-009 require one resolvable owner contract, dependencies/invalidators/resources/provenance, and invalidation on contract change. The current registry also proves only 13 of 29 scoped evolution functions are declared and explicitly says semantic compliance is not proved.",
+      "evidence": [
+        "Canonical Annexure FUNC-001..010",
+        "gsl/FUNCTION_CONTRACTS.json semantic_compliance_proved=false",
+        "audit_function_contract_coverage.py result: 13 declared, 16 FRONTIER"
+      ],
+      "required_resolution": "Bind each executable refinement to an existing exact contract identifier or introduce a governed versioned contract under the canonical Technical owner; include authority/consent, complete result algebra, invalidators, resources/termination, dependencies and provenance. Do not treat the present prose blocks as machine-resolvable contracts."
+    },
+    {
+      "id": "SOL-V156-003",
+      "severity": "HIGH",
+      "area": "owner semantics",
+      "finding": "The Owners fields mix architecture owners, registries, schema artifacts, contract artifacts and vague labels such as existing CASI adapter contracts and existing requirement/admission owners. This can be read as assigning ownership to a schema/contract instance, contrary to the canonical single-owner and owner-qualified identity rules. The delta's own claim that existing owner fields retain identity is therefore not mechanically demonstrated.",
+      "evidence": [
+        "Profiles EH-01, EH-04, EH-11, EH-15 and EH-18 Owners fields",
+        "Canonical Annexure DOC-OWN-003..006, GSL-SELF-004, FUNC-001 and NS-HARD-001"
+      ],
+      "required_resolution": "Separate canonical owner IDs from affected artifact/schema references in distinct fields and resolve every owner to its exact canonical anchor. Treat schema and contract IDs as targets owned by those anchors, not as owners themselves."
+    },
+    {
+      "id": "SOL-V156-004",
+      "severity": "HIGH",
+      "area": "physical fallback semantics",
+      "finding": "EH-18's profile field handoff_entry_region says every actual state in [0,10] is an entry state under delay assumptions, while EH-18-004 correctly requires the delay-dependent recoverable interval [1.1D, 10-1.1D] and warns against labeling every safe state recoverable under delayed takeover. The field is ambiguous and can be consumed as the unsafe broader claim. Also, the 0.49 m threshold arithmetic is a plausible conservative specification, not a validated threshold: sampling phase, error sign, controller switching semantics and numerical integration error still require the promised interval/continuous-time proof.",
+      "evidence": [
+        "EH-18 profile fields safety_margin, switching_thresholds and handoff_entry_region",
+        "EH-18-002..004 and TEST-EH-18-001"
+      ],
+      "required_resolution": "Rename and type the field as takeover_recoverable_region(D, estimation_bound), remove the unconditional [0,10] entry declaration, and bind the threshold to a proof obligation covering sampling phase, sensor error, delay decomposition, actuator dynamics and discretization error."
+    },
+    {
+      "id": "SOL-V156-005",
+      "severity": "HIGH",
+      "area": "candidate versus promotion",
+      "finding": "The builder is appropriately documented as candidate-only, but its drift manifest supplies the nonempty token V15.6-WORKING-CANDIDATE-NOT-ADMITTED as delta_ids. check_successor_drift.py accepts any nonempty delta_ids while describing its rule as exactly admitted diffs. Thus the generated drift receipt can PASS even though admission_status is NOT_ADMITTED. Downstream use could confuse reproducibility with admission.",
+      "evidence": [
+        "scripts/build_v15_6_candidate.py diff_rows and admission_status",
+        "scripts/check_successor_drift.py changed-file test and receipt rule"
+      ],
+      "required_resolution": "Make the checker validate an admitted-delta registry/receipt and fail or emit CANDIDATE_MATCH_ONLY when admission_status is not admitted. A hash match must never be labeled satisfaction of admitted diffs without admission evidence."
+    },
+    {
+      "id": "SOL-V156-006",
+      "severity": "HIGH",
+      "area": "reference closure",
+      "finding": "The builder honestly emits REFERENCE-CLOSURE-RECEIPT status INCONCLUSIVE and complete_semantic_reference_closure=false, but build_inventory marks coverage_complete=true even though its parser covers only H/S/T/TH/RA/A anchors. This field describes segmentation coverage, yet its generic name is easy to mistake for semantic closure. No promotion may rely on it as full closure.",
+      "evidence": [
+        "scripts/build_v15_6_candidate.py REFERENCE-CLOSURE-RECEIPT",
+        "implementation/garden_kernel/section_units.py coverage_complete and boundary_algorithm"
+      ],
+      "required_resolution": "Rename or qualify inventory coverage as section_boundary_coverage_complete and require a separate fail-closed semantic reference/SchemaID/FunctionContract/proof-obligation closure result before promotion."
+    },
+    {
+      "id": "SOL-V156-007",
+      "severity": "MEDIUM",
+      "area": "five-file ownership structure",
+      "finding": "The revised builder preserves all v15.5 bytes, distributes owner-grouped pending clauses into the five corresponding files, places the engineering specification in Technical, and embeds the machine-readable delta/reconciliation ledger in Annexure. This is structurally improved and reviewable as a candidate, but the script still does not demonstrate that every normative statement has one authoritative owner, that all first technical uses resolve, or that the appended blocks preserve the canonical reader path. The broad Owner lines in Technical compound this gap.",
+      "evidence": [
+        "scripts/build_v15_6_candidate.py owner-grouped pending_sections and texts mapping",
+        "Canonical Annexure DOC-OWN-001..012 and DOC-PRES-LINK-001"
+      ],
+      "required_resolution": "Produce an owner/anchor change map for every new invariant, contract refinement and profile field, with projections explicitly marked nonnormative and cross-file links resolved."
+    },
+    {
+      "id": "SOL-V156-008",
+      "severity": "MEDIUM",
+      "area": "release class and evidence",
+      "finding": "The package introduces 88 normative invariants across authority, safety, revocation, execution and supply-chain behavior. It therefore cannot be treated as a routine patch. The specification itself keeps review pending, and this OpenAI-family review supplies no cross-family quorum or executed assurance evidence.",
+      "evidence": [
+        "20 profiles, 88 invariants and 73 unexecuted test specifications",
+        "Specification status and promotion boundary"
+      ],
+      "required_resolution": "Apply the governing MAJOR/protected release path, fresh whole-source review, simplification and rule-enforcement evidence, and required independent-family review before promotion."
+    }
+  ],
+  "positive_observations": [
+    "The specification consistently labels tests, TLA+, STPA, simulation, runtime correspondence and supply-chain work as pending rather than completed.",
+    "The 38-item register is complete and unique, and all 15 corrected patterns are represented.",
+    "The revocation model correctly distinguishes precommit cancellation from postcommit containment/reconciliation and preserves OUTCOME_UNKNOWN.",
+    "Blast-radius accounting includes cumulative, concurrent, delayed, indirect and outstanding effects and does not release capacity on timeout alone.",
+    "Continuity text preserves independent fallback authority, fencing, explicit assurance loss and fresh authorization for recovery.",
+    "The build script preserves exact predecessor bytes and does not modify canonical/current."
+  ],
+  "limitations": [
+    "No TLA+ model, model-check run, runtime recovery suite, physical simulation, full STPA, TUF/in-toto implementation or deployment evidence was available to review.",
+    "This was targeted owner and semantic review, not an exhaustive five-file GSL-COMPARE or proof of reference closure.",
+    "The working tree may change after the recorded hashes; this review applies only to the listed artifact bytes.",
+    "No claim of independent model-family quorum is made."
+  ],
+  "approval": {
+    "status": "APPROVE_AS_DRAFT_DESIGN_WITH_BLOCKERS",
+    "draft_design_acceptable": true,
+    "canonical_promotion_approved": false,
+    "implementation_complete": false,
+    "certification_established": false,
+    "rationale": "The design is materially safer and honest about pending execution, but owner/FunctionContract resolution, EH-18 recoverability wording, admission-aware drift checking, complete closure, executable work and independent-family release evidence remain unresolved."
+  }
+}

@@ -5,7 +5,7 @@ Status: NON_CANONICAL_CANDIDATE_PENDING_RECONCILIATION_AND_ADMISSION.
 TRACE is a memorable name, not an acronym.
 
 ## Scope and lineage
-TRACE v0.2 is a versioned experimental runtime candidate, not merely a pattern, a new foundation model, or demonstrated AGI. This increment is additive to completed v15.6. It does not modify v15.6's parallel build or canonical/current. Supersede any earlier conversational v15.6 assignment for TRACE with this v15.7 target; no TRACE entry was found in the v15.6 main index at registration base.
+TRACE v0.2 is a versioned experimental runtime candidate, not merely a pattern, a new foundation model, or demonstrated AGI. This increment is additive to the pinned v15.6 working candidate (not a promoted release). It does not modify v15.6's parallel build or canonical/current. Supersede any earlier conversational v15.6 assignment for TRACE with this v15.7 target; no TRACE entry was found in the v15.6 main index at registration base.
 
 This specification includes requirements not yet implemented in v0.2. Architectural impact is minor; implementation and assurance impact is moderate. Formal change routing remains subject to reconciliation. No new top-level engine, authority source or canonical SchemaID is registered here.
 
@@ -59,8 +59,8 @@ Keep execution and evaluation status separate:
 - Budget exhausted: terminal BUDGET_EXHAUSTED for ordinary execution.
 Uncertainty accompanies evaluation. Where a probability is meaningful, bind method, assumptions and calibration evidence, or mark uncalibrated. Acceptance with uncertainty requires externally defined policy permission. Confidence never grants action authority.
 
-## 8. Reconciliation against completed v15.6
-Pin completed v15.6 source identity and the proposed v15.7 DesignEpoch before qualification; neither is invented at registration.
+## 8. Reconciliation against the pinned v15.6 working candidate (not a promoted release)
+Pin the pinned v15.6 working candidate (not a promoted release) source identity and the proposed v15.7 DesignEpoch before qualification; neither is invented at registration.
 Map EVERY requirement to contracts, schemas, invariants and tests, with status EXISTING_EQUIVALENT, EXTENSION_REQUIRED, NEW_CONTRACT_REQUIRED or UNRESOLVED. Mandatory unresolved requirements block affected admission.
 Run automated schema/reference/duplicate checks and semantic review of authority, overlap, dependencies and whole-source closure under the applicable Garden process, including GSL-COMPARE where required.
 Record conflicts, decisions and outstanding obligations. Prefer reuse and NO_CHANGE where equivalent. Any actual replacement requires an explicit amendment; do not silently supersede v15.6.
@@ -76,4 +76,8 @@ Separate runtime-correctness, enforcement-assurance and live-model-capability re
 ## Evidence state and next work
 Historical TRACE v0.2 package records 14 passing runtime/mock-adapter tests; the prior turn inspected that record. This registration does not rerun them, certify revision 3 or claim live-model performance.
 No source runtime is activated/imported by this tracking change. Artifact hashes can identify the available package without treating its historical receipts as admission evidence.
-Next bounded work: reconcile against completed v15.6, then implement residual requirements and run fresh adapter/enforcement qualification under the bound candidate epoch. Required independent review and canonical promotion remain separate.
+Next bounded work: reconcile against the pinned v15.6 working candidate (not a promoted release), then implement residual requirements and run fresh adapter/enforcement qualification under the bound candidate epoch. Required independent review and canonical promotion remain separate.
+
+
+## Direct v15.7 release binding — 2026-09-15
+The user authorized carrying the prepared v15.6 draft directly into v15.7. The actual canonical predecessor remains Garden v15.5 at source root 63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598. The retained v15.6 working candidate is d4f054f21247948426abbe4c842ac65f4daa83f521f73bc3ac57e2d5860bdf6b. References to completing v15.6 mean qualifying the necessary inherited scope; no intermediate canonical promotion is required merely to construct v15.7. This binding corrects the earlier anticipated lineage, preserves requirement semantics and grants no execution or qualification authority.
