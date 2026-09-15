@@ -7,11 +7,11 @@
   "timezone": "Asia/Kolkata",
   "active_driver": {
     "lane": "Garden Coordinator",
-    "cadence": "hourly",
-    "minute": 10,
-    "mode": "ENGINE_SERIAL_COORDINATOR",
+    "cadence": "EVENT_DRIVEN_COMPLETION",
+    "mode": "ENGINE_SERIAL_COMPLETION_COORDINATOR",
     "max_material_work_units_per_run": 1,
-    "max_external_provider_calls_in_parallel": 1
+    "max_external_provider_calls_in_parallel": 1,
+    "deployment_status": "PAUSED_PENDING_DURABLE_HOST_AND_ADAPTER_QUALIFICATION"
   },
   "absorbed_worker_roles": [
     "post-merge verification",
@@ -29,22 +29,53 @@
     "90-day pipeline simplification"
   ],
   "due_obligations": [
-    {"name":"ENGINE_PIPELINE_HEALTH","cadence":"<=6h overdue"},
-    {"name":"BRANCH_PR_HYGIENE","cadence":"<=6h overdue when needed"},
-    {"name":"PUBLIC_RESEARCH_SCOUT","cadence":">=12h between runs and only if higher-priority work absent"},
-    {"name":"LEGACY_PENDING_WORK_RECONCILIATION","cadence":"daily"},
-    {"name":"PROTOCOL_SIMPLIFICATION","cadence":"at most daily"},
-    {"name":"PIPELINE_SIMPLIFICATION","cadence":"when 90-day window due"},
-    {"name":"SUCCESSOR_COMPOSITION","cadence":"state-driven whenever admitted work is ready"}
+    {
+      "name": "ENGINE_PIPELINE_HEALTH",
+      "cadence": "<=6h overdue"
+    },
+    {
+      "name": "BRANCH_PR_HYGIENE",
+      "cadence": "<=6h overdue when needed"
+    },
+    {
+      "name": "PUBLIC_RESEARCH_SCOUT",
+      "cadence": ">=12h between runs and only if higher-priority work absent"
+    },
+    {
+      "name": "LEGACY_PENDING_WORK_RECONCILIATION",
+      "cadence": "daily"
+    },
+    {
+      "name": "PROTOCOL_SIMPLIFICATION",
+      "cadence": "at most daily"
+    },
+    {
+      "name": "PIPELINE_SIMPLIFICATION",
+      "cadence": "when 90-day window due"
+    },
+    {
+      "name": "SUCCESSOR_COMPOSITION",
+      "cadence": "state-driven whenever admitted work is ready"
+    }
   ],
   "disabled_schedules": {
     "former_garden_lane_wakeups": "DISABLED_ABSORBED_BY_GARDEN_COORDINATOR",
     "AI Architecture Brief": "DISABLED_BY_HUMAN_REQUEST",
     "Garden Maintenance": "DISABLED_ABSORBED_BY_GARDEN_COORDINATOR"
   },
-  "selection_rule": "Each Coordinator occurrence selects exactly one highest-priority eligible work unit or NO_CHANGE. All governed transitions use ProcessFactory/GardenProcess and engine required_gates().",
-  "blind_review_serialization": "When multiple independent families are required, accumulate independent findings across later Coordinator occurrences rather than launching parallel scheduled/model work; advance BLIND_REVIEW_COMPLETE only when the required set is complete.",
-  "transient_failure_rule": "429/TOO_MANY_REQUESTS/concurrency/service-unavailable never advances GardenProcess state, never triggers immediate retry loops, and retains the same next_action for a later hourly occurrence after exact-state re-observation.",
-  "state_gating": "Clock time only starts the Coordinator. CycleID, ProcessVersion, DesignEpoch, packet and contiguous GardenProcessTransitionReceipt/v1 evidence determine what may run.",
-  "algebra_rule": "Every governed transition validates through REG-ALGEBRA-001. Scheduling/algebra conformance grants no authority and does not prove full semantic compliance."
+  "selection_rule": "On completion, immediately select the next highest-priority eligible bounded work unit. Stop on unmet dependencies, missing evidence, budget exhaustion, cooldown or unknown outcome. No recurring clock is required.",
+  "blind_review_serialization": "Persist one independent family result per work unit. The next eligible family starts after completion; all allocated families must finish before cross-examination. Never lower review requirements to increase frequency.",
+  "transient_failure_rule": "429/TOO_MANY_REQUESTS never advances GardenProcess state. Persist Retry-After/exponential cooldown; resume only on an eligible wake after that deadline. Interrupted or ambiguously charged calls require reconciliation before retry.",
+  "state_gating": "Completion is a wake-up, not authority. CycleID, ProcessVersion, DesignEpoch, exact repository heads, packet and contiguous transition receipts determine eligibility.",
+  "algebra_rule": "Every governed transition validates through REG-ALGEBRA-001. Scheduling/algebra conformance grants no authority and does not prove full semantic compliance.",
+  "runtime_implementation": "implementation/garden_kernel/completion_runner.py",
+  "execution_boundary": "Each work unit has one handler and at most one provider call; a bounded worker wake may chain completed units sequentially. This does not permit parallel calls or change route/gate semantics.",
+  "wakeup_contract": {
+    "completion": "immediate within bounded worker wake",
+    "bounded_wake_exhaustion": "durable host must arrange continuation",
+    "cooldown": "one deferred wake at or after persisted deadline; never hourly polling",
+    "external_dependency": "relevant completion event",
+    "empty_queue": "stop until new work arrives"
+  },
+  "human_directive": "2026-09-15: Do not make it hourly; invoke each item when the last finishes; improve quality and throughput; fix pending process algebra."
 }

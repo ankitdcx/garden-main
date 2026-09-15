@@ -53,7 +53,7 @@ class CycleBinding:
     def __post_init__(self) -> None:
         for label in ("cycle_id", "process_version", "design_epoch", "source_root_sha256"):
             value = getattr(self, label)
-            if not isinstance(value, str) or not value.strip():
+            if not isinstance(value, str) or not value.strip() or value != value.strip():
                 raise SemanticError(f"CycleBinding.{label} is required")
         if re.fullmatch(r"[0-9a-f]{64}", self.source_root_sha256) is None:
             raise SemanticError("CycleBinding.source_root_sha256 must be a SHA-256 digest")
@@ -181,8 +181,16 @@ SEMANTIC_TRANSITIONS = (
 )
 
 
+def _strict_strings(values, label):
+    if not isinstance(values, (list, tuple)) or any(not isinstance(x, str) or not x or x != x.strip() for x in values):
+        raise SemanticError(f"{label} must be a list of canonical strings")
+    if len(values) != len(set(values)):
+        raise SemanticError(f"{label} must not contain duplicates")
+    return list(values)
+
+
 def _algebra_usage(action_id: str, binding: CycleBinding, operator: str, refs: Sequence[str]) -> dict[str, Any]:
-    source_refs = [str(x).strip() for x in refs if str(x).strip()]
+    source_refs = _strict_strings(refs, "source_obligation_refs")
     if not source_refs:
         raise SemanticError("process transition requires source_obligation_refs")
     return {
@@ -212,7 +220,7 @@ class GardenProcess(ABC):
     def __init__(self, *, binding: CycleBinding, work_id: str, expected_process_version: str = CURRENT_GOVERNING_PROCESS_VERSION) -> None:
         if binding.process_version != expected_process_version:
             raise SemanticError(f"cycle ProcessVersion {binding.process_version!r} does not match governing version {expected_process_version!r}")
-        if not work_id.strip():
+        if not isinstance(work_id, str) or not work_id.strip() or work_id != work_id.strip():
             raise SemanticError("GardenProcess.work_id is required")
         self.binding = binding
         self.work_id = work_id.strip()
@@ -247,7 +255,7 @@ class GardenProcess(ABC):
 
     def advance(self, target: ProcessState, *, satisfied_gates: Sequence[str], algebra_profile: Mapping[str, Any], source_obligation_refs: Sequence[str]) -> dict[str, Any]:
         transition = self._transition_to(target)
-        satisfied = frozenset(str(x).strip() for x in satisfied_gates if str(x).strip())
+        satisfied = frozenset(_strict_strings(satisfied_gates, "satisfied_gates"))
         required = self.required_gates(target)
         missing = required - satisfied
         if missing:

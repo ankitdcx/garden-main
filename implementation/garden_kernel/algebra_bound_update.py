@@ -16,19 +16,19 @@ _SHA40 = re.compile(r"^[0-9a-f]{40}$")
 
 
 def _text(value: Any, label: str) -> str:
-    text = str(value or "").strip()
-    if not text:
+    text = value
+    if not isinstance(text, str) or not text or text != text.strip():
         raise SemanticError(f"algebra-bound update requires non-empty {label}")
     return text
 
 
-def _texts(value: Any, label: str, *, allow_empty: bool = False) -> tuple[str, ...]:
+def _texts(value: Any, label: str, *, allow_empty: bool = False, ordered_trace: bool = False) -> tuple[str, ...]:
     if not isinstance(value, (list, tuple)):
         raise SemanticError(f"{label} must be a list")
-    items = tuple(str(item).strip() for item in value if str(item).strip())
+    items = tuple(_text(item, label) for item in value)
     if not items and not allow_empty:
         raise SemanticError(f"algebra-bound update requires non-empty {label}")
-    if len(items) != len(set(items)):
+    if not ordered_trace and len(items) != len(set(items)):
         raise SemanticError(f"{label} must not contain duplicates")
     return items
 
@@ -87,7 +87,7 @@ def validate_algebra_bound_update(
     profile_ref = _text(payload.get("algebra_profile_ref"), "receipt.algebra_profile_ref")
     profile_blob_sha = _text(payload.get("algebra_profile_blob_sha"), "receipt.algebra_profile_blob_sha")
     result = _text(payload.get("result"), "receipt.result")
-    operator_trace = _texts(payload.get("process_operator_trace"), "receipt.process_operator_trace")
+    operator_trace = _texts(payload.get("process_operator_trace"), "receipt.process_operator_trace", ordered_trace=True)
     non_laws = _texts(payload.get("process_non_law_acknowledgements"), "receipt.process_non_law_acknowledgements")
     conformance_refs = _texts(payload.get("conformance_refs"), "receipt.conformance_refs")
     policy_gate_refs = _texts(payload.get("policy_gate_refs", ()), "receipt.policy_gate_refs", allow_empty=True)
@@ -101,6 +101,8 @@ def validate_algebra_bound_update(
         raise SemanticError(f"unknown algebra-bound update result: {result}")
     if "/" not in repo:
         raise SemanticError("repo must be owner/name")
+    if not _SHA40.fullmatch(profile_blob_sha):
+        raise SemanticError("algebra profile blob must be an exact Git SHA")
     if not _SHA40.fullmatch(repo_sha):
         raise SemanticError("repo_sha must be an exact 40-character lowercase git SHA")
     if registry_ref != "REG-ALGEBRA-001" or profile.get("registry_ref") != registry_ref:
