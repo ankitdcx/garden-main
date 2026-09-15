@@ -1,0 +1,30 @@
+{
+  "schema": "GardenEvolutionProductionAction/v1",
+  "design_epoch": "v15.5",
+  "dependencies": {"canonical_source_root": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598"},
+  "action": {
+    "action_id": "GARDEN-2026-09-15-PROCESS-V1.4-ADMISSION-PROPOSE-001",
+    "verb": "PROPOSE",
+    "actor_ref": "agent:garden-integrator-build",
+    "subject_ref": "repo:ankitdcx/garden-main",
+    "input_refs": [
+      "governance/GardenCanonicalUpdateProcess_v1.4.json",
+      "governance/PROCESS-ADMISSION-RECEIPT-v1.4-2026-09-15.json",
+      "governance/PROCESS_CURRENT.json",
+      "governance/PROCESS_EXECUTION_SCHEDULE_v1.json",
+      "reviews/evolution/reasoning/2026-09-15-process-v1.4-admission-propose.json",
+      "reviews/evolution/algebra/2026-09-15-process-v1.4-admission-propose.json",
+      "reviews/evolution/assurance/2026-09-15-process-v1.4-admission-propose.json"
+    ],
+    "provenance_refs": [
+      "human:process-v1.4-admission:2026-09-15",
+      "design_deltas/v15.6/PROCESS-CANDIDATE-GardenCanonicalUpdateProcess-v1.4.json",
+      "governance/PROCESS-ADMISSION-RECEIPT-v1.4-2026-09-15.json"
+    ],
+    "satisfied_preconditions": ["ACTOR_IDENTIFIED", "SUBJECT_IDENTIFIED", "PROVENANCE_PRESENT", "INPUT_REFS_TYPED"],
+    "claimed_postconditions": ["CANDIDATE_RECORDED", "NO_AUTHORITY_EXPANSION", "CANONICAL_POINTER_UNCHANGED"]
+  },
+  "authority_ref": "AUTH-GARDEN-HOURLY-REVIEWER-v15.5",
+  "bound_inputs": [],
+  "boundary": "This transport is conformance/provenance only. HUMAN admission is carried exclusively by ProcessAdmissionReceipt/v1 and this PROPOSE action does not grant or expand authority."
+}
