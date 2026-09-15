@@ -1,0 +1,90 @@
+{
+  "schema": "GardenEvolutionReasoningBundle/v1",
+  "bundle_id": "GARDEN-2026-09-15-AUTOMATION-ENGINE-BINDING-REASONING-001",
+  "action_id": "GARDEN-2026-09-15-AUTOMATION-ENGINE-BINDING-PROPOSE-001",
+  "design_epoch": "v15.5",
+  "canonical_source_root_sha256": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+  "source_obligation_refs": [
+    "governance/PROCESS_CURRENT.json",
+    "governance/PROCESS_ENGINE_IMPLEMENTATION_v1.json",
+    "canonical/current/Garden_System_v15.5_FULL_2026-09-12.txt:REG-ALGEBRA-001"
+  ],
+  "compare": {
+    "schema": "GardenEvolutionCompareReceipt/v1",
+    "action_id": "GARDEN-2026-09-15-AUTOMATION-ENGINE-BINDING-PROPOSE-001",
+    "design_epoch": "v15.5",
+    "canonical_source_root_sha256": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+    "predecessor_ref": "git:ankitdcx/garden-main@9ce9e1179aa41d6ab26be0ee7079668c6719cc75",
+    "alternatives": [
+      {"alternative_id":"DO_NOTHING","description":"Leave active Garden automation prompts and repository schedule only partially bound to the new engine.","projected_effect":"Lane-local process interpretations can drift from GardenProcess despite the engine existing.","risk":"Duplicate route/state semantics and audit ambiguity remain possible."},
+      {"alternative_id":"BIND_AUTOMATIONS_TO_ENGINE","description":"Record every active Garden automation as a worker around GardenProcess and make schedule/profile consistency executable.","projected_effect":"The engine becomes the single route/state authority and lane prompts become role-specific workers.","risk":"Operational coupling to the engine increases, so engine failures must fail closed and remain independently auditable."}
+    ],
+    "bidirectional_gaps": [
+      {"from":"DO_NOTHING","to":"BIND_AUTOMATIONS_TO_ENGINE","gap":"DO_NOTHING lacks complete machine-readable lane-to-engine coverage and permits prompt-level state drift."},
+      {"from":"BIND_AUTOMATIONS_TO_ENGINE","to":"DO_NOTHING","gap":"Binding adds a maintained manifest and test obligation absent from the looser configuration."}
+    ]
+  },
+  "reason": {
+    "schema": "GardenEvolutionReasonReceipt/v1",
+    "action_id": "GARDEN-2026-09-15-AUTOMATION-ENGINE-BINDING-PROPOSE-001",
+    "design_epoch": "v15.5",
+    "canonical_source_root_sha256": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+    "strategy": "SINGLE_ENGINE_WORKER_BINDING",
+    "tier": "IMPLEMENTATION_CONFORMANCE",
+    "assumptions": [
+      "GardenCanonicalUpdateProcess@1.4 remains the HUMAN-admitted governing process.",
+      "GardenProcessEngine@1 is already merged and is the authoritative route/state implementation.",
+      "Discovery-only and unrelated research tasks should not fabricate GardenProcess state.",
+      "Automation prompts constrain worker roles but cannot mint authority."
+    ],
+    "uncertainty": "Live automation service state is external to repository tests, so the manifest records the intended active bindings while Pipeline Health must detect runtime drift.",
+    "counterexamples": [
+      "A blind reviewer advancing BLIND_REVIEW_COMPLETE by itself would violate the worker/engine boundary.",
+      "Research Scout creating a ProcessRouteReceipt would improperly turn discovery into authoritative routing.",
+      "An automation treating algebra validation as promotion authority would be invalid.",
+      "A scheduled Garden lane missing from the binding manifest would create an unaudited process surface."
+    ],
+    "dependency_refs": [
+      "governance/AUTOMATION_ENGINE_BINDING_v1.json",
+      "governance/PROCESS_EXECUTION_SCHEDULE_v1.json",
+      "governance/PROCESS_ENGINE_IMPLEMENTATION_v1.json",
+      "implementation/garden_kernel/process_engine.py"
+    ],
+    "conclusion": "Bind all active Garden automation lanes to the merged process engine, keep discovery/non-Garden research outside state mutation, and enforce schedule/binding consistency with tests.",
+    "authorization_effect": "NONE"
+  },
+  "proof": {
+    "schema": "GardenEvolutionProofReceipt/v1",
+    "action_id": "GARDEN-2026-09-15-AUTOMATION-ENGINE-BINDING-PROPOSE-001",
+    "design_epoch": "v15.5",
+    "canonical_source_root_sha256": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+    "obligations": [
+      {"obligation_id":"PO-AUTO-ENGINE-001","statement":"Every scheduled Garden lane has exactly one automation-engine binding.","verifier_class":"EXECUTABLE_CONTRACT_TEST","result":"UNKNOWN","evidence_refs":[]},
+      {"obligation_id":"PO-AUTO-ENGINE-002","statement":"Discovery-only and unrelated research tasks do not fabricate GardenProcess state.","verifier_class":"EXECUTABLE_CONTRACT_TEST","result":"UNKNOWN","evidence_refs":[]},
+      {"obligation_id":"PO-AUTO-ENGINE-003","statement":"Lane prompts cannot override protected authority or Process Algebra boundaries.","verifier_class":"CI_CONFORMANCE_AUDIT","result":"UNKNOWN","evidence_refs":[]}
+    ],
+    "overall_result": "UNKNOWN",
+    "authorization_effect": "NONE"
+  },
+  "evidence": {
+    "schema": "GardenEvolutionEvidenceReceipt/v1",
+    "action_id": "GARDEN-2026-09-15-AUTOMATION-ENGINE-BINDING-PROPOSE-001",
+    "design_epoch": "v15.5",
+    "canonical_source_root_sha256": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+    "items": [
+      {"kind":"HUMAN_DIRECTIVE","ref":"human:automation-engine-binding-request:2026-09-15","claim_scope":"Explicit instruction to update all automated Garden tasks and the repository after process-engine introduction."},
+      {"kind":"MERGED_IMPLEMENTATION","ref":"git:ankitdcx/garden-main@b92a799582a07c6bfddcbc06b09a1b917cfe31f6","claim_scope":"Merged composable GardenProcess engine and Process Algebra-bound route/state implementation."},
+      {"kind":"PIPELINE_HEALTH_BASELINE","ref":"git:ankitdcx/garden-main@9ce9e1179aa41d6ab26be0ee7079668c6719cc75","claim_scope":"Current base includes independently published PipelineHealthReceipt, RuleEnforcementCoverageReceipt and DerivedLaneRegistry evidence."},
+      {"kind":"GOVERNING_PROCESS","ref":"governance/PROCESS_CURRENT.json","claim_scope":"HUMAN-admitted GardenCanonicalUpdateProcess@1.4 execution-first process."}
+    ],
+    "proof_effect": "NONE",
+    "authorization_effect": "NONE"
+  },
+  "separation_assertions": {
+    "compare_is_not_decision": true,
+    "reason_is_not_authorization": true,
+    "evidence_is_not_proof": true,
+    "proof_is_not_authorization": true,
+    "actiongate_owns_authorization": true
+  }
+}
