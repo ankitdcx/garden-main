@@ -1,0 +1,53 @@
+{
+  "schema": "GardenEvolutionAAPSelectionReceipt/v1",
+  "action_id": "GARDEN-2026-09-15-ALGEBRA-BOUND-UPDATE-REPAIR-PROPOSE-001",
+  "design_epoch": "v15.5",
+  "canonical_source_root_sha256": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+  "source_obligation_refs": [
+    "https://github.com/ankitdcx/garden-main/issues/41",
+    "governance/PROCESS_CURRENT.json",
+    "gsl/EVOLUTION_ALGEBRA_PROFILE.json",
+    "canonical/current/Garden_System_v15.5_FULL_2026-09-12.txt:AAP v1.0"
+  ],
+  "impact": {
+    "consequence": "HIGH",
+    "irreversibility": "LOW",
+    "authority": "LOW",
+    "novelty": "MEDIUM",
+    "uncertainty": "MEDIUM",
+    "sensitivity": "MEDIUM",
+    "dependency_impact": "HIGH",
+    "disagreement": "LOW",
+    "hard_policy": false,
+    "constitutional": false,
+    "physical_safety": false
+  },
+  "selected": {
+    "reason_tier": "R3",
+    "verity_tier": "V3",
+    "safety_tier": "S2",
+    "modules": [
+      "SOURCE_IDENTITY",
+      "GSL_TYPING",
+      "DESIGN_EPOCH",
+      "SOURCE_OBLIGATION",
+      "COMPARE",
+      "REASON",
+      "PROOF",
+      "EVIDENCE",
+      "AAP",
+      "AUTHORITY",
+      "ACTION_GATE",
+      "PROCESS_ALGEBRA",
+      "CONFORMANCE_ALGEBRA",
+      "INDEPENDENT_REVIEW_REQUIREMENT"
+    ]
+  },
+  "resource_budget": {
+    "status": "SUFFICIENT",
+    "basis": "Bounded execution-derived repair with deterministic unit tests, exact persisted-receipt validation, whole-repo conformance audits and post-merge verification; no canonical or authority mutation is requested."
+  },
+  "degradation_disposition": "NONE",
+  "authorization_effect": "NONE",
+  "semantic_compliance_proved": false
+}
