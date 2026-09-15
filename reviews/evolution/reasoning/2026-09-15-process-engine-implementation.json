@@ -1,0 +1,94 @@
+{
+  "schema": "GardenEvolutionReasoningBundle/v1",
+  "bundle_id": "GARDEN-2026-09-15-PROCESS-ENGINE-REASONING-001",
+  "action_id": "GARDEN-2026-09-15-PROCESS-ENGINE-IMPLEMENT-001",
+  "design_epoch": "v15.5",
+  "canonical_source_root_sha256": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+  "source_obligation_refs": [
+    "governance/PROCESS_CURRENT.json",
+    "governance/GardenCanonicalUpdateProcess_v1.4.json",
+    "canonical/current/Garden_System_v15.5_FULL_2026-09-12.txt:REG-ALGEBRA-001"
+  ],
+  "compare": {
+    "schema": "GardenEvolutionCompareReceipt/v1",
+    "action_id": "GARDEN-2026-09-15-PROCESS-ENGINE-IMPLEMENT-001",
+    "design_epoch": "v15.5",
+    "canonical_source_root_sha256": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+    "predecessor_ref": "git:ankitdcx/garden-main@f8dd36c6ac5cf8de911e81b64c0973dd92f5f91c",
+    "alternatives": [
+      {"alternative_id":"DO_NOTHING","description":"Keep ProcessVersion 1.4 expressed separately across workflow prompts and existing evolution primitives without a shared process engine.","projected_effect":"The admitted process remains valid, but route/state semantics are duplicated across executors and are harder to test as one contract.","risk":"Implementation drift can arise when lanes independently encode route transitions or gates."},
+      {"alternative_id":"IMPLEMENT_COMPOSABLE_PROCESS_ENGINE","description":"Implement one abstract GardenProcess state machine, composition-based gate policies, ProcessFactory, and six sibling route implementations using existing evolution/algebra validators.","projected_effect":"Common route/state semantics become executable and centrally testable while scheduled lanes remain role executors rather than process-definition owners.","risk":"A faulty abstraction could centralize an implementation error, so exact ProcessVersion binding, route-specific tests, algebra conformance, and external authority gates must remain load-bearing."}
+    ],
+    "bidirectional_gaps": [
+      {"from":"DO_NOTHING","to":"IMPLEMENT_COMPOSABLE_PROCESS_ENGINE","gap":"DO_NOTHING lacks one executable route/state contract and central Process Algebra transition validation."},
+      {"from":"IMPLEMENT_COMPOSABLE_PROCESS_ENGINE","to":"DO_NOTHING","gap":"The engine introduces a shared implementation dependency that must remain synchronized with admitted ProcessVersion 1.4 and cannot replace external authority or conformance gates."}
+    ]
+  },
+  "reason": {
+    "schema": "GardenEvolutionReasonReceipt/v1",
+    "action_id": "GARDEN-2026-09-15-PROCESS-ENGINE-IMPLEMENT-001",
+    "design_epoch": "v15.5",
+    "canonical_source_root_sha256": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+    "strategy": "COMPOSITION_FIRST_PROCESS_ENGINE_WITH_EXISTING_ALGEBRA_VALIDATION",
+    "tier": "IMPLEMENTATION_CONFORMANCE",
+    "assumptions": [
+      "GardenCanonicalUpdateProcess@1.4 is the HUMAN-admitted current governing process.",
+      "Garden v15.5 remains the immutable canonical design baseline.",
+      "The engine implements admitted process semantics and does not create new canonical Garden semantics.",
+      "Process Algebra validation is conformance evidence only and cannot grant authority or prove complete semantic compliance.",
+      "MAJOR_DELEGABLE and MAJOR_PROTECTED must remain sibling route implementations so protected authority cannot leak through inheritance."
+    ],
+    "uncertainty": "This implementation does not yet prove every ProcessVersion 1.4 rule is ENFORCED/AUDITED/RE_VERIFIED; later RuleEnforcementCoverage must measure that maturity explicitly.",
+    "counterexamples": [
+      "A process transition that uses an unregistered Process Algebra operator must fail.",
+      "A LIGHT route entering semantic admission would violate the route table.",
+      "A protected MAJOR promotion that succeeds without external HUMAN protected-decision evidence would be invalid.",
+      "An algebra receipt that mints authority or claims semantic compliance would be invalid.",
+      "A cycle bound to ProcessVersion 1.3 must not be silently executed as ProcessVersion 1.4."
+    ],
+    "dependency_refs": [
+      "governance/PROCESS_CURRENT.json",
+      "governance/GardenCanonicalUpdateProcess_v1.4.json",
+      "gsl/EVOLUTION_ALGEBRA_PROFILE.json",
+      "implementation/garden_kernel/evolution_algebra.py",
+      "implementation/garden_kernel/evolution_authority.py"
+    ],
+    "conclusion": "Implement the composable process engine as implementation/conformance infrastructure, retain all external authority and admission boundaries, and validate each runtime transition against the registered Process Algebra profile.",
+    "authorization_effect": "NONE"
+  },
+  "proof": {
+    "schema": "GardenEvolutionProofReceipt/v1",
+    "action_id": "GARDEN-2026-09-15-PROCESS-ENGINE-IMPLEMENT-001",
+    "design_epoch": "v15.5",
+    "canonical_source_root_sha256": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+    "obligations": [
+      {"obligation_id":"PO-PROCESS-ENGINE-001","statement":"All six admitted ProcessRoute classes resolve to concrete process implementations while preserving route-specific forbidden transitions.","verifier_class":"EXECUTABLE_CONTRACT_TEST","result":"UNKNOWN","evidence_refs":[]},
+      {"obligation_id":"PO-PROCESS-ENGINE-002","statement":"Runtime process transitions use only registered Process Algebra operators and acknowledge registered non-laws.","verifier_class":"ALGEBRA_CONFORMANCE_AUDIT","result":"UNKNOWN","evidence_refs":[]},
+      {"obligation_id":"PO-PROCESS-ENGINE-003","statement":"MAJOR_PROTECTED cannot inherit delegable promotion authority and still requires external HUMAN protected-decision evidence.","verifier_class":"AUTHORITY_AND_EXECUTABLE_CONTRACT_TEST","result":"UNKNOWN","evidence_refs":[]},
+      {"obligation_id":"PO-PROCESS-ENGINE-004","statement":"The process engine cannot mint authority, admit a semantic delta, or promote Garden canon merely by validating a transition.","verifier_class":"CONFORMANCE_AND_AUTHORITY_AUDIT","result":"UNKNOWN","evidence_refs":[]}
+    ],
+    "overall_result": "UNKNOWN",
+    "authorization_effect": "NONE"
+  },
+  "evidence": {
+    "schema": "GardenEvolutionEvidenceReceipt/v1",
+    "action_id": "GARDEN-2026-09-15-PROCESS-ENGINE-IMPLEMENT-001",
+    "design_epoch": "v15.5",
+    "canonical_source_root_sha256": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+    "items": [
+      {"kind":"HUMAN_DIRECTIVE","ref":"human:process-engine-implementation:2026-09-15","claim_scope":"Explicit instruction to implement the parent/abstract process architecture and require Process Algebra compliance."},
+      {"kind":"GOVERNING_PROCESS","ref":"governance/PROCESS_CURRENT.json","claim_scope":"Binds implementation to HUMAN-admitted GardenCanonicalUpdateProcess@1.4."},
+      {"kind":"IMPLEMENTATION_PROFILE","ref":"governance/PROCESS_ENGINE_IMPLEMENTATION_v1.json","claim_scope":"Declares the composable engine architecture, route implementations, algebra binding, tests, and non-authorizing boundary."},
+      {"kind":"PROCESS_ALGEBRA_PROFILE","ref":"gsl/EVOLUTION_ALGEBRA_PROFILE.json","claim_scope":"Provides the executable registered Process operators and required non-law acknowledgements."}
+    ],
+    "proof_effect": "NONE",
+    "authorization_effect": "NONE"
+  },
+  "separation_assertions": {
+    "compare_is_not_decision": true,
+    "reason_is_not_authorization": true,
+    "evidence_is_not_proof": true,
+    "proof_is_not_authorization": true,
+    "actiongate_owns_authorization": true
+  }
+}

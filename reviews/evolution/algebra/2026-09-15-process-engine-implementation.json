@@ -1,0 +1,66 @@
+{
+  "schema": "GardenEvolutionAlgebraUsageReceipt/v1",
+  "action_id": "GARDEN-2026-09-15-PROCESS-ENGINE-IMPLEMENT-001",
+  "design_epoch": "v15.5",
+  "canonical_source_root_sha256": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+  "source_obligation_refs": [
+    "governance/PROCESS_CURRENT.json",
+    "governance/GardenCanonicalUpdateProcess_v1.4.json",
+    "governance/PROCESS_ENGINE_IMPLEMENTATION_v1.json",
+    "canonical/current/Garden_System_v15.5_FULL_2026-09-12.txt:REG-ALGEBRA-001"
+  ],
+  "entries": [
+    {
+      "algebra": "Process",
+      "status": "APPLIED",
+      "operators": ["SEQUENCE", "BRANCH", "PARALLEL", "COMPOSE", "TERMINATE"],
+      "law_claims": [],
+      "non_law_acknowledgements": ["PARALLEL_EFFECT_COMMUTATIVITY_NOT_UNIVERSAL"],
+      "applicability_reason": "The process engine routes by BRANCH, sequences state transitions, models blind review as PARALLEL, composes successor work, and terminates closed process instances. No omitted algebra law is inferred."
+    },
+    {
+      "algebra": "Policy",
+      "status": "FRONTIER",
+      "operators": [],
+      "law_claims": [],
+      "non_law_acknowledgements": [],
+      "applicability_reason": "Reusable gate policies constrain transitions, but the implementation deliberately does not relabel them as executable Garden Policy Algebra operators.",
+      "frontier_reason": "No Policy Algebra operator is newly bound by this implementation."
+    },
+    {
+      "algebra": "Decision",
+      "status": "FRONTIER",
+      "operators": [],
+      "law_claims": [],
+      "non_law_acknowledgements": [],
+      "applicability_reason": "Transition outcomes are typed, but executable Decision Algebra signatures remain outside the bounded profile.",
+      "frontier_reason": "No Level-3 Decision Algebra operator is claimed."
+    },
+    {
+      "algebra": "Conformance",
+      "status": "APPLIED",
+      "operators": ["BIND_EVIDENCE", "COVERAGE", "GAP"],
+      "law_claims": [],
+      "non_law_acknowledgements": ["CONFORMANCE_IS_NOT_BINARY_ONLY", "AUDIT_IS_NOT_A_SEPARATE_ALGEBRA"],
+      "applicability_reason": "The engine binds transition-gate evidence, reports required/satisfied coverage, and exposes missing-gate gaps without reducing conformance to a bare Boolean."
+    },
+    {
+      "algebra": "Evidence",
+      "status": "FRONTIER",
+      "operators": [],
+      "law_claims": [],
+      "non_law_acknowledgements": [],
+      "applicability_reason": "Evidence references are transported and validated, but no executable Evidence Algebra composition operator is newly invoked.",
+      "frontier_reason": "Evidence Algebra executable composition remains FRONTIER."
+    },
+    {
+      "algebra": "Bridge",
+      "status": "NOT_APPLICABLE",
+      "operators": [],
+      "law_claims": [],
+      "non_law_acknowledgements": [],
+      "applicability_reason": "The implementation uses typed Python/JSON representation only and performs no semantic-to-representation Garden Bridge operation."
+    }
+  ],
+  "semantic_compliance_proved": false
+}

@@ -1,0 +1,63 @@
+{
+  "schema": "GardenProcessEngineProfile/v1",
+  "engine_id": "GardenProcessEngine@1",
+  "governing_process_ref": "governance/PROCESS_CURRENT.json",
+  "required_process_version": "1.4",
+  "implementation": "implementation/garden_kernel/process_engine.py",
+  "algebra_profile": "gsl/EVOLUTION_ALGEBRA_PROFILE.json",
+  "algebra_registry_ref": "REG-ALGEBRA-001",
+  "architecture": {
+    "root_abstract_contract": "GardenProcess",
+    "construction": "ProcessFactory",
+    "composition_over_deep_inheritance": true,
+    "concrete_routes": {
+      "SECTION_UNIT_REVIEW": "SectionUnitReviewProcess",
+      "NON_SEMANTIC_REPAIR": "NonSemanticRepairProcess",
+      "PATCH_DELTA": "PatchDeltaProcess",
+      "MINOR_DELTA": "MinorDeltaProcess",
+      "MAJOR_DELEGABLE": "MajorDelegableProcess",
+      "MAJOR_PROTECTED": "MajorProtectedProcess"
+    },
+    "shared_policy_components": [
+      "binding",
+      "packet",
+      "section",
+      "light",
+      "semantic",
+      "minor",
+      "major",
+      "protected_authority"
+    ],
+    "protected_route_rule": "MAJOR_PROTECTED and MAJOR_DELEGABLE are sibling implementations. Protected authority is an explicit composed gate policy and is not inherited from delegable behavior."
+  },
+  "process_algebra_binding": {
+    "transition_operators": ["SEQUENCE", "BRANCH", "PARALLEL", "COMPOSE", "TERMINATE"],
+    "operator_source": "REG-ALGEBRA-001.Process",
+    "required_non_law_acknowledgement": "PARALLEL_EFFECT_COMMUTATIVITY_NOT_UNIVERSAL",
+    "runtime_validation": "garden_kernel.evolution_algebra.validate_algebra_usage",
+    "policy_algebra_status": "FRONTIER",
+    "decision_algebra_status": "FRONTIER",
+    "evidence_algebra_status": "FRONTIER",
+    "bridge_status": "NOT_APPLICABLE_UNLESS_ACTUALLY_INVOKED",
+    "semantic_compliance_proved": false,
+    "authorization_boundary": "Algebra validation never grants authority, admits a semantic delta, or promotes canon."
+  },
+  "cycle_binding": {
+    "immutable_fields": ["CycleID", "ProcessVersion", "DesignEpoch", "source_root_sha256", "repo_heads"],
+    "current_required_process_version": "1.4"
+  },
+  "testing": {
+    "tests": "implementation/tests/test_process_engine.py",
+    "required_properties": [
+      "all six routes resolve to concrete process implementations",
+      "LIGHT cannot enter semantic-admission states",
+      "PARALLEL/COMPOSE transitions validate against REG-ALGEBRA-001",
+      "no undeclared law is claimed",
+      "MAJOR protected/delegable implementations are siblings",
+      "protected promotion requires external HUMAN protected decision evidence",
+      "MAJOR promotion readiness requires verified simplification and enforcement coverage"
+    ]
+  },
+  "semantic_effect": "IMPLEMENTATION_CONFORMANCE_ONLY_NO_NEW_CANONICAL_GARDEN_SEMANTICS",
+  "canonical_promotion_effect": "NONE"
+}
