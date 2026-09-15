@@ -7,85 +7,27 @@
   "status": "NON_CANONICAL_TRACKING_ONLY",
   "purpose": "Single machine-readable index for worthy post-v15.5 candidates so design work is not stranded in chats, issues, branches or implementation-only work packages.",
   "candidate_groups": [
-    {
-      "candidate_id": "CAND-GSL-GAP-CLOSURE-9",
-      "kind": "SOURCE_DESIGN_DELTA_SET",
-      "status": "CANDIDATE_IMPLEMENTATION_AND_CROSS_REFERENCE_IN_PROGRESS",
-      "source": "design_deltas/v15.6/DELTASET-2026-09-13-GSL-GAP-CLOSURE.json",
-      "summary": "Nine source-design gap closures: bootstrap trust root, shared-state authority provenance, deterministic let/query semantics, causal-level typing, R0 SanityGate separation, rights-view ordering, provenance redaction-vs-absence manifest, and catalogue closure for AuthorityDecl/EffectDecl."
-    },
-    {
-      "candidate_id": "CAND-KR-CEA-1.0",
-      "kind": "SOURCE_DESIGN_DELTA_SET",
-      "status": "CANDIDATE_NOT_RATIFIED_NEEDS_REQUIRED_MULTI_MODEL_REVIEW_AND_GSL_COMPARE",
-      "source": "design_deltas/v15.6/DELTASET-2026-09-14-KR-CEA.json",
-      "summary": "Continuous runtime epistemic assimilation, lineage-aware corroboration, loss-aware distillation, separately governed model consolidation and knowledge-dividend accounting without authority amplification."
-    },
-    {
-      "candidate_id": "CAND-HISTORICAL-CHAT-RECOVERY-2026-09-14",
-      "kind": "SOURCE_DESIGN_RECOVERY_AND_RECONCILIATION_SET",
-      "status": "CANDIDATE_RECOVERY_ONLY_NOT_RATIFIED",
-      "source": "design_deltas/v15.6/DELTASET-2026-09-14-HISTORICAL-CHAT-RECOVERY.json",
-      "audit_source": "reviews/HISTORICAL_CHAT_UPGRADE_AUDIT_2026-09-14.md",
-      "summary": "Bounded historical-chat audit preserving only distinct residuals after whole-source comparison: cross-scale causal discovery, behavioral/normative/mechanism drift audit, Human Assurance Reliability/HITL workload profile, UCAS and Kindergarten definition recovery, SCEP implementation lineage, fuller justice scope, and outcome-based KR memory evaluation."
-    },
-    {
-      "candidate_id": "CAND-MULTI-AGENT-ARCHIVE-RECOVERY-2026-09-14",
-      "kind": "LITERAL_EXPORT_RECOVERY_AND_RECONCILIATION_SET",
-      "status": "CANDIDATE_ARCHIVE_RECOVERY_ONLY_NOT_RATIFIED",
-      "source": "design_deltas/v15.6/DELTASET-2026-09-14-MULTI-AGENT-ARCHIVE-RECOVERY.json",
-      "audit_source": "reviews/MULTI_AGENT_ARCHIVE_AUDIT_2026-09-14.md",
-      "summary": "Literal ChatGPT/DeepSeek/Gemini export audit preserves five residuals not already explicit enough in v15.5 or prior recovery: hazard-monotonic emergency selection, scoped unsafe-region/infeasibility memory, adversarial precedent revalidation refinement, change-complexity/assurance-burden accounting, and temporal authority snapshot/anti-retroactive authorization binding."
-    },
-    {
-      "candidate_id": "CAND-GAIA-NAMING-001",
-      "kind": "SOURCE_DESIGN_TERMINOLOGY_DELTA_SET",
-      "status": "CANDIDATE_USER_APPROVED_TERMINOLOGY_PENDING_REQUIRED_REVIEW",
-      "source": "design_deltas/v15.6/DELTASET-2026-09-14-GAIA-NAMING.json",
-      "summary": "Define GAIA as 'Garden Artificial Intelligence Architecture' for GAIA Titanium and GAIA Diamond. This is a terminology clarification only; it does not change GAIA behavior, safety/assurance contracts, authority or topology."
-    },
-    {
-      "candidate_id": "CAND-EXTERNAL-HARDENING",
-      "kind": "SOURCE_DESIGN_HARDENING_QUEUE",
-      "status": "CANDIDATE_NOT_RATIFIED",
-      "public_source": "ankitdcx/garden-swarm:NEXT_RELEASE_HARDENING.md",
-      "summary": "Emergency-source independence normalization, typed consent-validity assessment, external regression bundle, and ConstitutionalEvent typed-boundary/observability hardening. Must be reconciled into the private candidate materialization before any daily successor release."
-    },
-    {
-      "candidate_id": "CAND-RATIONALIZATION-VERIFICATION-LEGACY",
-      "kind": "LEGACY_RATIFIED_DESIGN_PROPOSAL_RECONCILIATION",
-      "status": "NEEDS_EXPLICIT_V15_5_SUBSUMPTION_OR_REQUEUE_CHECK",
-      "summary": "Earlier Rationalization & Verification Hardening / ReasoningStrategyPortfolio proposal was recorded as a ratified design proposal with machine/empirical certification pending. Do not silently drop it: compare against v15.5 Reason/GSL-COMPARE/AAP/verification owners and either mark fully subsumed with evidence or requeue only surviving semantic gaps.",
-      "admission_boundary": "No assumption that the historical proposal is still needed in full; reconciliation must prefer existing v15.5 owners and NO_CHANGE where already covered."
-    }
+    {"candidate_id":"CAND-GSL-GAP-CLOSURE-9","kind":"SOURCE_DESIGN_DELTA_SET","status":"CANDIDATE_IMPLEMENTATION_AND_CROSS_REFERENCE_IN_PROGRESS","source":"design_deltas/v15.6/DELTASET-2026-09-13-GSL-GAP-CLOSURE.json","summary":"Nine source-design gap closures: bootstrap trust root, shared-state authority provenance, deterministic let/query semantics, causal-level typing, R0 SanityGate separation, rights-view ordering, provenance redaction-vs-absence manifest, and catalogue closure for AuthorityDecl/EffectDecl."},
+    {"candidate_id":"CAND-KR-CEA-1.0","kind":"SOURCE_DESIGN_DELTA_SET","status":"CANDIDATE_NOT_RATIFIED_NEEDS_REQUIRED_MULTI_MODEL_REVIEW_AND_GSL_COMPARE","source":"design_deltas/v15.6/DELTASET-2026-09-14-KR-CEA.json","summary":"Continuous runtime epistemic assimilation, lineage-aware corroboration, loss-aware distillation, separately governed model consolidation and knowledge-dividend accounting without authority amplification."},
+    {"candidate_id":"CAND-HISTORICAL-CHAT-RECOVERY-2026-09-14","kind":"SOURCE_DESIGN_RECOVERY_AND_RECONCILIATION_SET","status":"CANDIDATE_RECOVERY_ONLY_NOT_RATIFIED","source":"design_deltas/v15.6/DELTASET-2026-09-14-HISTORICAL-CHAT-RECOVERY.json","audit_source":"reviews/HISTORICAL_CHAT_UPGRADE_AUDIT_2026-09-14.md","summary":"Bounded historical-chat audit preserving only distinct residuals after whole-source comparison: cross-scale causal discovery, behavioral/normative/mechanism drift audit, Human Assurance Reliability/HITL workload profile, UCAS and Kindergarten definition recovery, SCEP implementation lineage, fuller justice scope, and outcome-based KR memory evaluation."},
+    {"candidate_id":"CAND-MULTI-AGENT-ARCHIVE-RECOVERY-2026-09-14","kind":"LITERAL_EXPORT_RECOVERY_AND_RECONCILIATION_SET","status":"CANDIDATE_ARCHIVE_RECOVERY_ONLY_NOT_RATIFIED","source":"design_deltas/v15.6/DELTASET-2026-09-14-MULTI-AGENT-ARCHIVE-RECOVERY.json","audit_source":"reviews/MULTI_AGENT_ARCHIVE_AUDIT_2026-09-14.md","summary":"Literal ChatGPT/DeepSeek/Gemini export audit preserves five residuals not already explicit enough in v15.5 or prior recovery: hazard-monotonic emergency selection, scoped unsafe-region/infeasibility memory, adversarial precedent revalidation refinement, change-complexity/assurance-burden accounting, and temporal authority snapshot/anti-retroactive authorization binding."},
+    {"candidate_id":"CAND-GAIA-NAMING-001","kind":"SOURCE_DESIGN_TERMINOLOGY_DELTA_SET","status":"CANDIDATE_USER_APPROVED_TERMINOLOGY_PENDING_REQUIRED_REVIEW","source":"design_deltas/v15.6/DELTASET-2026-09-14-GAIA-NAMING.json","summary":"Define GAIA as 'Garden Artificial Intelligence Architecture' for GAIA Titanium and GAIA Diamond. This is a terminology clarification only; it does not change GAIA behavior, safety/assurance contracts, authority or topology."},
+    {"candidate_id":"CAND-EXTERNAL-HARDENING","kind":"SOURCE_DESIGN_HARDENING_QUEUE","status":"CANDIDATE_NOT_RATIFIED","public_source":"ankitdcx/garden-swarm:NEXT_RELEASE_HARDENING.md","summary":"Emergency-source independence normalization, typed consent-validity assessment, external regression bundle, and ConstitutionalEvent typed-boundary/observability hardening. Must be reconciled into the private candidate materialization before any daily successor release."},
+    {"candidate_id":"CAND-SUCCESSOR-PROCESS-HARDENING-2026-09-15","kind":"SOURCE_DESIGN_AND_EVOLUTION_PROCESS_DELTA_SET","status":"CANDIDATE_NOT_RATIFIED_PROCESS_HARDENING_PENDING_REQUIRED_MULTI_MODEL_REVIEW_AND_GSL_COMPARE","source":"design_deltas/v15.6/DELTASET-2026-09-15-SUCCESSOR-PROCESS-HARDENING.json","process_candidate":"design_deltas/v15.6/PROCESS-CANDIDATE-GardenCanonicalUpdateProcess-v1.0.json","summary":"Tiered SectionUnit review, delta-dependency scheduling, lineage-aware reviewer diversity, explicit E0-E4 evidence classes, shadow/mirror implementation validation, MoveEquivalenceClaim, PATCH/MINOR/MAJOR successor classes, human-availability continuity, governed rollback, ProcessVersion binding, LIGHT non-semantic track and configuration-surface coupling."},
+    {"candidate_id":"CAND-RATIONALIZATION-VERIFICATION-LEGACY","kind":"LEGACY_RATIFIED_DESIGN_PROPOSAL_RECONCILIATION","status":"NEEDS_EXPLICIT_V15_5_SUBSUMPTION_OR_REQUEUE_CHECK","summary":"Earlier Rationalization & Verification Hardening / ReasoningStrategyPortfolio proposal was recorded as a ratified design proposal with machine/empirical certification pending. Do not silently drop it: compare against v15.5 Reason/GSL-COMPARE/AAP/verification owners and either mark fully subsumed with evidence or requeue only surviving semantic gaps.","admission_boundary":"No assumption that the historical proposal is still needed in full; reconciliation must prefer existing v15.5 owners and NO_CHANGE where already covered."}
   ],
   "implementation_or_conformance_hardening_not_source_design_deltas": [
-    {
-      "item": "WP-009H shared DesignEpoch semantic convergence vectors",
-      "status": "MERGED_IMPLEMENTATION_CONFORMANCE_HARDENING",
-      "reason": "Valuable federation/reproducibility infrastructure but not by itself a new Garden source semantic requirement."
-    },
-    {
-      "item": "WP-009D..G Compare/Reason/Proof/Evidence, algebra/AAP and tamper-evident evolution audit",
-      "status": "MERGED_IMPLEMENTATION_CONFORMANCE_HARDENING",
-      "reason": "Moves implementation toward existing Garden intent; any newly exposed semantic gap must enter this candidate index separately."
-    },
-    {
-      "item": "Multi-agent integration provenance / semantic collision checks",
-      "status": "MERGED_REPOSITORY_HARDENING",
-      "reason": "Repository build-safety mechanism; not automatically a five-file Garden semantic delta."
-    },
-    {
-      "item": "Hourly same-target 3-4+ reviewer matrix, daily repo review, one daily candidate, archive/version history",
-      "status": "EVOLUTION_PROCESS_IMPLEMENTATION_POLICY",
-      "reason": "Operational Garden-development governance. It may expose source-design requirements, but the workflow itself is not automatically a source semantic delta."
-    }
+    {"item":"WP-009H shared DesignEpoch semantic convergence vectors","status":"MERGED_IMPLEMENTATION_CONFORMANCE_HARDENING","reason":"Valuable federation/reproducibility infrastructure but not by itself a new Garden source semantic requirement."},
+    {"item":"WP-009D..G Compare/Reason/Proof/Evidence, algebra/AAP and tamper-evident evolution audit","status":"MERGED_IMPLEMENTATION_CONFORMANCE_HARDENING","reason":"Moves implementation toward existing Garden intent; any newly exposed semantic gap must enter this candidate index separately."},
+    {"item":"Multi-agent integration provenance / semantic collision checks","status":"MERGED_REPOSITORY_HARDENING","reason":"Repository build-safety mechanism; not automatically a five-file Garden semantic delta."},
+    {"item":"Hourly same-target 3-4+ reviewer matrix, daily repo review, one daily candidate, archive/version history","status":"EVOLUTION_PROCESS_IMPLEMENTATION_POLICY","reason":"Operational Garden-development governance. It may expose source-design requirements, but the workflow itself is not automatically a source semantic delta."},
+    {"item":"Configuration-surface coupling guard","status":"MERGED_PUBLIC_REPOSITORY_HARDENING","reason":"Public CI guard against selector/allowlist/budget/privacy producer-consumer shape drift; it supports the process-hardening candidate but does not itself amend canonical source semantics."}
   ],
   "already_in_v15_5_or_reconciled_not_pending": [
     "CPI/CLIC reconciliation already carried into the v15.x source lineage before v15.5",
     "GCL executable ratio/authority-reduction hardening and algebra formalization already reconciled by v15.5",
     "v15.5 banner/schema-dictionary/duplicate-registration repairs"
   ],
-  "daily_materialization_rule": "A daily successor candidate may include only deltas that have passed the required >=3 independent same-target reviewer families with peer cross-examination, whole-source GSL-COMPARE/reason/proof/evidence, cross-delta consistency, reference closure and exact predecessor-retention checks. Tracking in this index is not admission.",
+  "daily_materialization_rule": "A daily successor candidate may include only deltas that have passed the required >=3 effective independent same-target reviewer families with blind-first review, peer cross-examination, explicit evidence-class adjudication, whole-source GSL-COMPARE/reason/proof/evidence, delta-dependency consistency, cross-delta consistency, reference closure and exact predecessor-retention checks. Tracking in this index is not admission.",
   "canonical_promotion": "HUMAN_ONLY_SEPARATE_ACT"
 }
