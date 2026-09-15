@@ -1,0 +1,11 @@
+{
+  "schema": "PipelineHealthCurrentPointer/v1",
+  "process_ref": "governance/PROCESS_CURRENT.json",
+  "required_process_version": "GardenCanonicalUpdateProcess@1.4",
+  "receipt": "governance/PIPELINE_HEALTH_RECEIPT-PIPELINE-HEALTH-20260915T0855+0530.json",
+  "rule_enforcement_coverage": "governance/RULE_ENFORCEMENT_COVERAGE-PIPELINE-HEALTH-20260915T0855+0530.json",
+  "derived_lane_registry": "governance/DERIVED_LANE_REGISTRY-PIPELINE-HEALTH-20260915T0855+0530.json",
+  "generated_at": "2026-09-15T08:55:00+05:30",
+  "health_state": "REDUCED_OPERATION",
+  "authority_effect": "NONE"
+}
