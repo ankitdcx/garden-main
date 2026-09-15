@@ -1,0 +1,160 @@
+{
+  "schema": "GardenEvolutionReasoningBundle/v1",
+  "bundle_id": "GARDEN-2026-09-15-ALGEBRA-BOUND-UPDATE-REPAIR-REASONING-001",
+  "action_id": "GARDEN-2026-09-15-ALGEBRA-BOUND-UPDATE-REPAIR-PROPOSE-001",
+  "design_epoch": "v15.5",
+  "canonical_source_root_sha256": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+  "source_obligation_refs": [
+    "https://github.com/ankitdcx/garden-main/issues/41",
+    "governance/PROCESS_CURRENT.json",
+    "gsl/EVOLUTION_ALGEBRA_PROFILE.json",
+    "implementation/garden_kernel/evolution_algebra.py"
+  ],
+  "compare": {
+    "schema": "GardenEvolutionCompareReceipt/v1",
+    "action_id": "GARDEN-2026-09-15-ALGEBRA-BOUND-UPDATE-REPAIR-PROPOSE-001",
+    "design_epoch": "v15.5",
+    "canonical_source_root_sha256": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+    "predecessor_ref": "git:ankitdcx/garden-main@f8dd36c6ac5cf8de911e81b64c0973dd92f5f91c",
+    "alternatives": [
+      {
+        "alternative_id": "DO_NOTHING",
+        "description": "Leave update actions with algebra usage receipts but no exact repo-SHA/target-kind/profile binding.",
+        "projected_effect": "Issue #41 remains open and recent governed update evidence stays STALE_EVIDENCE/NEEDS_MORE_EVIDENCE.",
+        "risk": "An algebra usage receipt can be semantically valid yet detached from the exact repository mutation it is being cited for."
+      },
+      {
+        "alternative_id": "ALGEBRA_BOUND_UPDATE_REPAIR",
+        "description": "Add a non-authorizing AlgebraBoundUpdateReceipt validator and exact backfills for the two affected governed SHAs, while retaining v1.4 as the sole current process.",
+        "projected_effect": "Update evidence gains deterministic exact-SHA, target-kind, ProcessVersion, DesignEpoch/source-root and algebra-profile binding without changing Garden canon or authority.",
+        "risk": "Adds another evidence record type and validator that must remain synchronized with the existing evolution algebra profile and audit chain."
+      }
+    ],
+    "bidirectional_gaps": [
+      {
+        "from": "DO_NOTHING",
+        "to": "ALGEBRA_BOUND_UPDATE_REPAIR",
+        "gap": "DO_NOTHING cannot deterministically prove that an algebra receipt belongs to the exact governed update SHA and target class."
+      },
+      {
+        "from": "ALGEBRA_BOUND_UPDATE_REPAIR",
+        "to": "DO_NOTHING",
+        "gap": "The repair adds maintenance and must avoid becoming a second authorization or process layer."
+      }
+    ]
+  },
+  "reason": {
+    "schema": "GardenEvolutionReasonReceipt/v1",
+    "action_id": "GARDEN-2026-09-15-ALGEBRA-BOUND-UPDATE-REPAIR-PROPOSE-001",
+    "design_epoch": "v15.5",
+    "canonical_source_root_sha256": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+    "strategy": "EXECUTION_DERIVED_EXACT_BINDING_REPAIR",
+    "tier": "V1_4_EXECUTION_FIRST_HIGH_DEPENDENCY",
+    "assumptions": [
+      "GardenCanonicalUpdateProcess v1.4 remains the sole HUMAN-admitted current update process.",
+      "Garden v15.5 remains immutable canonical design.",
+      "Issue #41 is validated execution-derived evidence of a missing exact update-to-algebra binding.",
+      "The existing GardenEvolutionAlgebraUsageReceipt validator remains the owner of algebra operator/law/non-law semantics.",
+      "An algebra-bound receipt may validate provenance/conformance but may not grant merge, admission, promotion, delegation or policy authority."
+    ],
+    "uncertainty": "Policy, Decision and Evidence executable algebra bindings remain frontiered; the repair intentionally preserves those frontiers and does not attempt to close them.",
+    "counterexamples": [
+      "A receipt bound to the wrong repo SHA must fail even if its algebra usage is otherwise valid.",
+      "A PUBLIC_REPO update mislabeled CANONICAL_DESIGN must fail.",
+      "An unregistered Process operator or missing required Process non-law acknowledgement must fail.",
+      "A receipt citing a stale DesignEpoch/source root/profile blob must fail.",
+      "A receipt claiming semantic compliance or authority while frontiers remain must fail.",
+      "An inaccessible parallel-chat patch must not be reconstructed from summary text and silently admitted."
+    ],
+    "dependency_refs": [
+      "governance/PROCESS_CURRENT.json",
+      "governance/GardenCanonicalUpdateProcess_v1.4.json",
+      "gsl/EVOLUTION_ALGEBRA_PROFILE.json",
+      "implementation/garden_kernel/evolution_algebra.py",
+      "implementation/garden_kernel/algebra_bound_update.py",
+      "https://github.com/ankitdcx/garden-main/issues/41"
+    ],
+    "conclusion": "Implement the exact binding validator and backfill the two affected SHAs, keep all authority and canonical semantics unchanged, and treat the inaccessible parallel grammar patch as reference-only until exact bytes are available.",
+    "authorization_effect": "NONE"
+  },
+  "proof": {
+    "schema": "GardenEvolutionProofReceipt/v1",
+    "action_id": "GARDEN-2026-09-15-ALGEBRA-BOUND-UPDATE-REPAIR-PROPOSE-001",
+    "design_epoch": "v15.5",
+    "canonical_source_root_sha256": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+    "obligations": [
+      {
+        "obligation_id": "PO-ALGBOUND-001",
+        "statement": "The validator rejects stale repo, ProcessVersion, DesignEpoch, source-root and algebra-profile bindings.",
+        "verifier_class": "UNIT_TEST_AND_EXACT_BACKFILL_TEST",
+        "result": "UNKNOWN",
+        "evidence_refs": []
+      },
+      {
+        "obligation_id": "PO-ALGBOUND-002",
+        "statement": "The validator accepts only registered Process operators and required non-law acknowledgements supported by the bound usage receipt.",
+        "verifier_class": "UNIT_TEST",
+        "result": "UNKNOWN",
+        "evidence_refs": []
+      },
+      {
+        "obligation_id": "PO-ALGBOUND-003",
+        "statement": "The bound receipt cannot mint authority or claim semantic compliance while required algebra frontiers remain.",
+        "verifier_class": "UNIT_TEST_AND_CONFORMANCE_AUDIT",
+        "result": "UNKNOWN",
+        "evidence_refs": []
+      },
+      {
+        "obligation_id": "PO-ALGBOUND-004",
+        "statement": "Both issue-41 affected historical SHAs validate against persisted backfilled usage/validation/bound receipts.",
+        "verifier_class": "EXACT_PERSISTED_RECEIPT_TEST",
+        "result": "UNKNOWN",
+        "evidence_refs": []
+      }
+    ],
+    "overall_result": "UNKNOWN",
+    "authorization_effect": "NONE"
+  },
+  "evidence": {
+    "schema": "GardenEvolutionEvidenceReceipt/v1",
+    "action_id": "GARDEN-2026-09-15-ALGEBRA-BOUND-UPDATE-REPAIR-PROPOSE-001",
+    "design_epoch": "v15.5",
+    "canonical_source_root_sha256": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+    "items": [
+      {
+        "kind": "REPAIR_OBLIGATION",
+        "ref": "https://github.com/ankitdcx/garden-main/issues/41",
+        "claim_scope": "Records the HIGH execution-derived defect: valid algebra usage existed without exact target-kind/repo-SHA algebra-bound update closure."
+      },
+      {
+        "kind": "CURRENT_PROCESS",
+        "ref": "governance/PROCESS_CURRENT.json",
+        "claim_scope": "GardenCanonicalUpdateProcess v1.4 is HUMAN-admitted current and execution-first."
+      },
+      {
+        "kind": "ALGEBRA_PROFILE",
+        "ref": "gsl/EVOLUTION_ALGEBRA_PROFILE.json",
+        "claim_scope": "Defines registered Process operators/non-laws and preserves Policy/Decision/Evidence frontiers."
+      },
+      {
+        "kind": "PREDECESSOR_IMPLEMENTATION",
+        "ref": "implementation/garden_kernel/evolution_algebra.py",
+        "claim_scope": "Existing validator checks bounded algebra use but does not bind an exact repository update SHA or target kind."
+      },
+      {
+        "kind": "PARALLEL_WORK_REFERENCE",
+        "ref": "parallel_chat:ankitdcx/garden:codex/add-gp-algebra-editorial@9f63bdf",
+        "claim_scope": "Reported editorial grammar patch is reference-only because source bytes are not available through the connected GitHub installation."
+      }
+    ],
+    "proof_effect": "NONE",
+    "authorization_effect": "NONE"
+  },
+  "separation_assertions": {
+    "compare_is_not_decision": true,
+    "reason_is_not_authorization": true,
+    "evidence_is_not_proof": true,
+    "proof_is_not_authorization": true,
+    "actiongate_owns_authorization": true
+  }
+}
