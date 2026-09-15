@@ -1,0 +1,50 @@
+name: Garden delta ledger CI
+
+on:
+  push:
+    paths:
+      - 'design_deltas/**'
+      - 'tools/validate_delta_ledger.py'
+      - 'tests/test_delta_ledger.py'
+      - '.github/workflows/delta-ledger-ci.yml'
+  pull_request:
+    paths:
+      - 'design_deltas/**'
+      - 'tools/validate_delta_ledger.py'
+      - 'tests/test_delta_ledger.py'
+      - '.github/workflows/delta-ledger-ci.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate-delta-ledger:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    env:
+      BOUND_REPOSITORY_COMMIT: ${{ github.event.pull_request.head.sha || github.sha }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ env.BOUND_REPOSITORY_COMMIT }}
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Verify exact reviewed commit binding
+        run: |
+          test -n "$BOUND_REPOSITORY_COMMIT"
+          test "$(git rev-parse HEAD)" = "$BOUND_REPOSITORY_COMMIT"
+      - name: Emit exact-commit DeltaAdmissionReadinessReceipt
+        run: python tools/validate_delta_ledger.py --repository-commit "$BOUND_REPOSITORY_COMMIT" | tee delta-admission-readiness-receipt.json
+      - name: Run delta-ledger regression tests
+        run: python -m unittest tests.test_delta_ledger -v
+      - name: Upload readiness receipt
+        uses: actions/upload-artifact@v4
+        with:
+          name: delta-admission-readiness-receipt
+          path: delta-admission-readiness-receipt.json
+          if-no-files-found: error
+          retention-days: 30
+      - name: Boundary reminder
+        run: echo 'Delta ledger PASS proves structural/readiness-check execution only; it does not ratify a delta, grant authority, promote canonical Garden, or lift an active freeze without the required Challenger evidence.'

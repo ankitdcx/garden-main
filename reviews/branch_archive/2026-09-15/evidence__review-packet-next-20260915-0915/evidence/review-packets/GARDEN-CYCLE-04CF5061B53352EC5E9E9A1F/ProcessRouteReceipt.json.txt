@@ -1,0 +1,30 @@
+{
+  "cycle_id": "GARDEN-CYCLE-04CF5061B53352EC5E9E9A1F",
+  "design_epoch": "v15.5",
+  "forbidden_steps": [
+    "successor_promotion_unless_a_delta_is_admitted"
+  ],
+  "mandatory_steps": [
+    "mechanical_section_unit_binding",
+    "risk_tier_assignment",
+    "packet_construction",
+    "packet_completeness_proof",
+    "blind_review_profile_for_tier",
+    "evidence_attribution",
+    "cross_exam_if_required",
+    "whole_source_closure",
+    "coverage_state_update"
+  ],
+  "optional_steps": [
+    "delta_creation",
+    "shadow_or_mirror_validation",
+    "challenger",
+    "implementation_closure"
+  ],
+  "process_version": "1.4",
+  "route": "SECTION_UNIT_REVIEW",
+  "schema": "ProcessRouteReceipt/v1",
+  "silent_downgrade_forbidden": true,
+  "source_root_sha256": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+  "work_id": "SECTION_UNIT_REVIEW:User:FRONTMATTER:1"
+}

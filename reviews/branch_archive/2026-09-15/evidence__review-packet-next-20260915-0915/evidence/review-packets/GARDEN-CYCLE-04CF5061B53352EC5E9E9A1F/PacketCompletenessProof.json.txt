@@ -1,0 +1,48 @@
+{
+  "authorization_effect": "NONE",
+  "blockers": [
+    {
+      "code": "REQUIRED_CANONICAL_REFERENCE_CLOSURE_MISSING",
+      "count": 239
+    },
+    {
+      "check": "closure_fixed_point",
+      "code": "REQUIRED_CHECK_FAILED"
+    }
+  ],
+  "closure_frontier": {
+    "bridge_algebra": "NOT_APPLICABLE",
+    "canonical_anchor_closure": "OPEN_UNRESOLVED_REFERENCES",
+    "decision_algebra": "FRONTIER",
+    "evidence_algebra": "FRONTIER",
+    "policy_algebra": "FRONTIER",
+    "semantic_compliance_proved": false
+  },
+  "cycle_id": "GARDEN-CYCLE-04CF5061B53352EC5E9E9A1F",
+  "mode": "COHERENT_COMPLETE",
+  "packet_hash": "41ba0c726fc1a6a884d3a9d5c1571d4d05c2b8cc23f8ef2850f8f6585fc30ce6",
+  "packet_ready_gate": "NOT_SATISFIED",
+  "required_checks": {
+    "algebra_grants_no_authority": true,
+    "closure_fixed_point": false,
+    "created_to_routed_engine_transition": true,
+    "cycle_binding_exact_repo_heads": true,
+    "exact_ci_evidence_present": true,
+    "exact_target_evidence_present": true,
+    "implementation_bindings_present": true,
+    "owners_present": true,
+    "process_current_resolved": true,
+    "process_engine_profile_current": true,
+    "repair_obligations_included": true,
+    "required_pr_head_ci_pass": true,
+    "route_receipt_engine_generated": true,
+    "route_transition_algebra_registry": true,
+    "target_no_change_proof": true,
+    "target_source_hash_verified": true
+  },
+  "route": "SECTION_UNIT_REVIEW",
+  "schema": "PacketCompletenessProof/v1",
+  "semantic_compliance_proved": false,
+  "status": "PACKET_INCOMPLETE",
+  "target_section_unit_id": "User:FRONTMATTER:1"
+}

@@ -1,0 +1,1200 @@
+#!/usr/bin/env python3
+from __future__ import annotations
+
+import ast
+import hashlib
+import json
+import os
+import platform
+import re
+import shutil
+import subprocess
+import sys
+import tempfile
+import time
+import urllib.error
+import urllib.request
+from datetime import datetime, timezone
+from pathlib import Path
+from typing import Any, Iterable
+
+CYCLE_ID = "GARDEN-CYCLE-9808F68B96C2B1AD7FA2"
+PUBLIC_REPO = "ankitdcx/garden-swarm"
+PRIVATE_REPO = "ankitdcx/garden-main"
+PUBLIC_HEAD = "c57402b610c9cdf88d5f3ade5abf693a76bd546d"
+PRIVATE_HEAD = "f8dd36c6ac5cf8de911e81b64c0973dd92f5f91c"
+TARGET_BASE = "05948d6ae45e75429f95286c1d4e60d73ea7652b"
+TARGET_HEAD = "347b48f8b870e10dc1e8c956f1f116e90e628dbe"
+TARGET_TREE = "6a7fb9e7c1be3a43cf2ad238a886f704d8ab290d"
+PROCESS_VERSION = "GardenCanonicalUpdateProcess/v1.4"
+CANONICAL_GARDEN_VERSION = "v15.5"
+DESIGN_EPOCH = "Garden-v15.5@63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598"
+CANONICAL_SOURCE_ROOT_SHA256 = "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598"
+ALGORITHM_ID = "GardenReviewPacketBuilderDeterministic/v1.2"
+CLOSURE_ALGORITHM_ID = "GardenDeclaredReferenceClosure/v1.1"
+TARGET_KIND = "PUBLIC_REPO"
+TARGET_PR = 152
+CARRIER_PR = 159
+PUBLIC_REVIEW_WORKFLOW_PATH = ".github/workflows/ip-origin-multi-agent-review.yml"
+REPO_ROOT = Path(os.environ.get("GITHUB_WORKSPACE", Path.cwd())).resolve()
+OUT = REPO_ROOT / "evidence" / "review-packets" / CYCLE_ID
+PUBLIC_CLONE = Path("/tmp/garden-swarm-review-packet")
+PRIVATE_WT = Path("/tmp/garden-main-bound-head")
+MAX_API_PAGES = 3
+
+TEXT_EXTENSIONS = {
+    ".py", ".json", ".md", ".yml", ".yaml", ".txt", ".toml", ".ini", ".cfg",
+    ".sh", ".ps1", ".js", ".ts", ".tsx", ".jsx", ".html", ".css", ".xml", ".csv"
+}
+PATH_ROOTS = (
+    ".github/", "agents/", "tools/", "tests/", "gsl/", "implementation/",
+    "governance/", "design_deltas/", "canonical/", "reviews/", "scripts/",
+    "docs/", "schemas/", "registries/"
+)
+PATH_PATTERN = re.compile(
+    r"(?P<path>(?:\.github|agents|tools|tests|gsl|implementation|governance|design_deltas|canonical|reviews|scripts|docs|schemas|registries)"
+    r"/[A-Za-z0-9_./+\-]+(?:\.[A-Za-z0-9_.+\-]+)?)"
+)
+SCHEMA_PATTERN = re.compile(r"\b[A-Za-z][A-Za-z0-9_.-]+/v[0-9][A-Za-z0-9_.-]*\b")
+REGISTRY_PATTERN = re.compile(r"\bREG-[A-Z0-9-]+\b")
+FUNCTION_CONTRACT_PATTERN = re.compile(r"\b(?:FC-[A-Z0-9-]+|FunctionContract/[A-Za-z0-9_.-]+)\b")
+INVARIANT_PATTERN = re.compile(r"\b(?:INV-[A-Z0-9-]+|INVARIANT-[A-Z0-9-]+)\b")
+REPAIR_PATTERN = re.compile(r"\bREPAIR-[A-Z0-9-]+\b")
+ANCHOR_PATTERN = re.compile(r"\[[A-Z][A-Z0-9-]*\]#?[A-Za-z0-9_.-]*|§\s*[0-9]+(?:\.[0-9A-Za-z]+)*")
+
+def now_utc() -> str:
+    return datetime.now(timezone.utc).replace(microsecond=0).isoformat().replace("+00:00", "Z")
+
+def canonical_bytes(obj: Any) -> bytes:
+    return json.dumps(obj, sort_keys=True, separators=(",", ":"), ensure_ascii=False).encode("utf-8")
+
+def pretty_bytes(obj: Any) -> bytes:
+    return (json.dumps(obj, sort_keys=True, indent=2, ensure_ascii=False) + "\n").encode("utf-8")
+
+def sha256(data: bytes) -> str:
+    return hashlib.sha256(data).hexdigest()
+
+def run(cmd: list[str], cwd: Path | None = None, timeout: int = 120, check: bool = True) -> subprocess.CompletedProcess:
+    cp = subprocess.run(
+        cmd, cwd=str(cwd) if cwd else None, stdout=subprocess.PIPE,
+        stderr=subprocess.PIPE, timeout=timeout, check=False
+    )
+    if check and cp.returncode != 0:
+        raise RuntimeError(
+            f"command failed rc={cp.returncode}: {' '.join(cmd)}\n"
+            f"stdout={cp.stdout.decode('utf-8','replace')}\n"
+            f"stderr={cp.stderr.decode('utf-8','replace')}"
+        )
+    return cp
+
+def run_text(cmd: list[str], cwd: Path | None = None, timeout: int = 120, check: bool = True) -> str:
+    return run(cmd, cwd=cwd, timeout=timeout, check=check).stdout.decode("utf-8", "replace")
+
+def git(cwd: Path, *args: str, check: bool = True, timeout: int = 120) -> str:
+    return run_text(["git", *args], cwd=cwd, check=check, timeout=timeout).strip()
+
+def git_bytes(cwd: Path, *args: str, check: bool = True, timeout: int = 120) -> bytes:
+    return run(["git", *args], cwd=cwd, check=check, timeout=timeout).stdout
+
+def github_json(url: str, token: str | None = None, required: bool = True) -> Any:
+    headers = {
+        "Accept": "application/vnd.github+json",
+        "X-GitHub-Api-Version": "2022-11-28",
+        "User-Agent": "GardenReviewPacketBuilder-v1",
+    }
+    if token:
+        headers["Authorization"] = f"Bearer {token}"
+    req = urllib.request.Request(url, headers=headers)
+    try:
+        with urllib.request.urlopen(req, timeout=30) as r:
+            return json.loads(r.read().decode("utf-8"))
+    except Exception as exc:
+        if required:
+            raise
+        return {"_unavailable": True, "error": f"{type(exc).__name__}: {exc}", "url": url}
+
+def branch_head(repo: str, token: str | None = None) -> str:
+    data = github_json(f"https://api.github.com/repos/{repo}/branches/main", token=token)
+    return data["commit"]["sha"]
+
+def repo_parent(cwd: Path, rev: str) -> str:
+    parts = git(cwd, "rev-list", "--parents", "-n", "1", rev).split()
+    if len(parts) < 2:
+        raise RuntimeError(f"{rev} has no parent")
+    return parts[1]
+
+def git_file_exists(cwd: Path, rev: str, path: str) -> bool:
+    cp = run(["git", "cat-file", "-e", f"{rev}:{path}"], cwd=cwd, check=False)
+    return cp.returncode == 0
+
+def git_file_bytes(cwd: Path, rev: str, path: str) -> bytes:
+    return git_bytes(cwd, "show", f"{rev}:{path}")
+
+def git_blob_sha(cwd: Path, rev: str, path: str) -> str:
+    return git(cwd, "rev-parse", f"{rev}:{path}")
+
+def safe_utf8(data: bytes) -> tuple[str | None, str]:
+    try:
+        return data.decode("utf-8"), "UTF8"
+    except UnicodeDecodeError:
+        return None, "NON_UTF8"
+
+def file_object(cwd: Path, rev: str, path: str, role: str) -> dict[str, Any]:
+    data = git_file_bytes(cwd, rev, path)
+    text, encoding = safe_utf8(data)
+    obj: dict[str, Any] = {
+        "object_type": "RepositoryFileEvidence/v1",
+        "repo_revision": rev,
+        "path": path,
+        "role": role,
+        "git_blob_sha1": git_blob_sha(cwd, rev, path),
+        "sha256": sha256(data),
+        "byte_length": len(data),
+        "encoding": encoding,
+    }
+    if text is not None:
+        obj["content"] = text
+    else:
+        obj["content_hex"] = data.hex()
+    return obj
+
+def list_tree(cwd: Path, rev: str) -> list[str]:
+    return [p for p in git(cwd, "ls-tree", "-r", "--name-only", rev).splitlines() if p]
+
+def changed_manifest(cwd: Path, base: str, head: str) -> dict[str, Any]:
+    name_status = git(cwd, "diff", "--name-status", base, head).splitlines()
+    numstat_lines = git(cwd, "diff", "--numstat", base, head).splitlines()
+    numstat: dict[str, tuple[str, str]] = {}
+    for line in numstat_lines:
+        parts = line.split("\t")
+        if len(parts) >= 3:
+            numstat[parts[-1]] = (parts[0], parts[1])
+    files: list[dict[str, Any]] = []
+    for line in name_status:
+        if not line:
+            continue
+        parts = line.split("\t")
+        status = parts[0]
+        path = parts[-1]
+        entry: dict[str, Any] = {"path": path, "status": status}
+        adds, dels = numstat.get(path, ("?", "?"))
+        entry["additions"] = int(adds) if adds.isdigit() else adds
+        entry["deletions"] = int(dels) if dels.isdigit() else dels
+        if status[0] != "D" and git_file_exists(cwd, head, path):
+            entry["head_blob_sha1"] = git_blob_sha(cwd, head, path)
+            entry["head_sha256"] = sha256(git_file_bytes(cwd, head, path))
+        if status[0] != "A" and git_file_exists(cwd, base, path):
+            entry["base_blob_sha1"] = git_blob_sha(cwd, base, path)
+            entry["base_sha256"] = sha256(git_file_bytes(cwd, base, path))
+        files.append(entry)
+    diff_bytes = git_bytes(cwd, "diff", "--binary", "--full-index", "--no-color", base, head)
+    diff_text = diff_bytes.decode("utf-8", "replace")
+    return {
+        "schema": "GitObjectDiffManifest/v1",
+        "mode": "NO_CHANGE" if not files else "DIFF",
+        "base": base,
+        "head": head,
+        "changed_files": files,
+        "exact_diff_text": diff_text,
+        "diff_sha256": sha256(diff_bytes),
+        "diff_byte_length": len(diff_bytes),
+    }
+
+def top_level_python_symbols(text: str) -> dict[str, str]:
+    try:
+        tree = ast.parse(text)
+    except SyntaxError as exc:
+        return {f"<AST_PARSE_ERROR:{exc.lineno}:{exc.offset}>": ""}
+    result: dict[str, str] = {}
+    for node in tree.body:
+        if isinstance(node, (ast.FunctionDef, ast.AsyncFunctionDef, ast.ClassDef)):
+            seg = ast.get_source_segment(text, node) or ast.dump(node, include_attributes=False)
+            result[node.name] = sha256(seg.encode("utf-8"))
+    return result
+
+def changed_symbols(cwd: Path, base: str, head: str, manifest: dict[str, Any]) -> list[dict[str, Any]]:
+    out: list[dict[str, Any]] = []
+    for f in manifest["changed_files"]:
+        path = f["path"]
+        if not path.endswith(".py"):
+            out.append({
+                "path": path,
+                "symbol": f"file::{path}",
+                "kind": "FILE_LEVEL_FALLBACK_NON_PYTHON",
+                "derivation": "non-Python changed file => file-level symbol"
+            })
+            continue
+        base_text = ""
+        head_text = ""
+        if git_file_exists(cwd, base, path):
+            base_text = git_file_bytes(cwd, base, path).decode("utf-8", "replace")
+        if git_file_exists(cwd, head, path):
+            head_text = git_file_bytes(cwd, head, path).decode("utf-8", "replace")
+        b = top_level_python_symbols(base_text) if base_text else {}
+        h = top_level_python_symbols(head_text) if head_text else {}
+        names = sorted(set(b) | set(h))
+        emitted = False
+        for name in names:
+            if b.get(name) != h.get(name):
+                emitted = True
+                kind = "TOP_LEVEL_PYTHON_SYMBOL_AST_HASH_DELTA"
+                if name.startswith("<AST_PARSE_ERROR:"):
+                    kind = "AST_PARSE_ERROR"
+                out.append({
+                    "path": path, "symbol": name, "kind": kind,
+                    "base_ast_sha256": b.get(name), "head_ast_sha256": h.get(name),
+                    "derivation": "AST top-level FunctionDef/AsyncFunctionDef/ClassDef source hash comparison"
+                })
+        if not emitted:
+            out.append({
+                "path": path,
+                "symbol": f"file::{path}",
+                "kind": "PYTHON_FILE_FALLBACK_NO_TOP_LEVEL_SYMBOL_DELTA",
+                "derivation": "changed Python file with no detected top-level def/class delta"
+            })
+    return out
+
+def python_import_candidates(path: str, text: str) -> set[str]:
+    result: set[str] = set()
+    try:
+        tree = ast.parse(text)
+    except SyntaxError:
+        return result
+    package_parts = Path(path).with_suffix("").parts[:-1]
+    for node in ast.walk(tree):
+        names: list[tuple[str | None, int]] = []
+        if isinstance(node, ast.Import):
+            for alias in node.names:
+                names.append((alias.name, 0))
+        elif isinstance(node, ast.ImportFrom):
+            names.append((node.module or "", node.level))
+        else:
+            continue
+        for module, level in names:
+            if module is None:
+                continue
+            parts = list(package_parts)
+            if level:
+                drop = max(0, level - 1)
+                if drop:
+                    parts = parts[:-drop] if drop <= len(parts) else []
+                mod_parts = [p for p in module.split(".") if p]
+                parts = parts + mod_parts
+            else:
+                parts = [p for p in module.split(".") if p]
+            if not parts:
+                continue
+            base = "/".join(parts)
+            result.add(base + ".py")
+            result.add(base + "/__init__.py")
+            if level == 0 and package_parts:
+                sibling = "/".join(list(package_parts) + parts)
+                result.add(sibling + ".py")
+                result.add(sibling + "/__init__.py")
+    return result
+
+def literal_path_candidates(text: str) -> set[str]:
+    out: set[str] = set()
+    for m in PATH_PATTERN.finditer(text):
+        p = m.group("path").strip(" \t\r\n'\"`),.;")
+        while "//" in p:
+            p = p.replace("//", "/")
+        out.add(p)
+    return out
+
+def extract_identifiers(texts: Iterable[str]) -> dict[str, list[str]]:
+    joined = "\n".join(texts)
+    return {
+        "schemas": sorted(set(SCHEMA_PATTERN.findall(joined))),
+        "function_contracts": sorted(set(FUNCTION_CONTRACT_PATTERN.findall(joined))),
+        "invariants": sorted(set(INVARIANT_PATTERN.findall(joined))),
+        "registries": sorted(set(REGISTRY_PATTERN.findall(joined))),
+        "source_anchors": sorted(set(ANCHOR_PATTERN.findall(joined))),
+    }
+
+def extract_tests(path: str, text: str) -> list[str]:
+    if not path.endswith(".py"):
+        return []
+    try:
+        tree = ast.parse(text)
+    except SyntaxError:
+        return []
+    tests: list[str] = []
+    for node in ast.walk(tree):
+        if isinstance(node, (ast.FunctionDef, ast.AsyncFunctionDef)) and node.name.startswith("test"):
+            tests.append(f"{path}::{node.name}")
+    return sorted(set(tests))
+
+def derive_public_closure(
+    cwd: Path, rev: str, changed_files: list[str], symbols: list[dict[str, Any]]
+) -> tuple[list[str], list[dict[str, Any]], dict[str, Any]]:
+    all_paths = set(list_tree(cwd, rev))
+    include = set(changed_files)
+    if ".github/CODEOWNERS" in all_paths:
+        include.add(".github/CODEOWNERS")
+    unresolved: list[dict[str, Any]] = []
+    consideration_log: list[dict[str, Any]] = []
+    queue = list(sorted(include))
+    seen = set()
+    while queue:
+        path = queue.pop(0)
+        if path in seen:
+            continue
+        seen.add(path)
+        if path not in all_paths:
+            unresolved.append({"from": path, "candidate": path, "reason": "INCLUDED_PATH_NOT_PRESENT_AT_TARGET"})
+            continue
+        data = git_file_bytes(cwd, rev, path)
+        text, enc = safe_utf8(data)
+        if text is None:
+            consideration_log.append({"from": path, "candidate": None, "decision": "NO_TEXT_SCAN", "reason": enc})
+            continue
+        candidates = set(literal_path_candidates(text))
+        if path.endswith(".py"):
+            candidates |= python_import_candidates(path, text)
+        for cand in sorted(candidates):
+            if cand in all_paths:
+                consideration_log.append({"from": path, "candidate": cand, "decision": "INCLUDE", "reason": "LOCAL_REFERENCE"})
+                if cand not in include:
+                    include.add(cand)
+                    queue.append(cand)
+            else:
+                if cand.startswith(PATH_ROOTS):
+                    consideration_log.append({"from": path, "candidate": cand, "decision": "UNRESOLVED", "reason": "LOCAL_REFERENCE_TARGET_MISSING"})
+                    unresolved.append({"from": path, "candidate": cand, "reason": "LOCAL_REFERENCE_TARGET_MISSING"})
+                else:
+                    consideration_log.append({"from": path, "candidate": cand, "decision": "EXCLUDE", "reason": "NONLOCAL_OR_EXTERNAL_IMPORT"})
+    generic_symbols = {"main", "run", "load", "save", "build", "validate", "parse"}
+    symbol_names = sorted({
+        s["symbol"] for s in symbols
+        if not s["symbol"].startswith("file::")
+        and not s["symbol"].startswith("<")
+        and len(s["symbol"]) >= 8
+        and s["symbol"] not in generic_symbols
+    })
+    needles = sorted(set(changed_files + symbol_names))
+    reverse_candidates = [
+        p for p in all_paths
+        if (p.startswith("tests/") or p.startswith(".github/workflows/"))
+        and Path(p).suffix.lower() in TEXT_EXTENSIONS
+    ]
+    reverse_added = []
+    for path in sorted(reverse_candidates):
+        text = git_file_bytes(cwd, rev, path).decode("utf-8", "replace")
+        hits = [n for n in needles if n and n in text]
+        if hits and path not in include:
+            include.add(path)
+            reverse_added.append({"path": path, "hits": hits[:50]})
+    if reverse_added:
+        queue = [x["path"] for x in reverse_added]
+        while queue:
+            path = queue.pop(0)
+            if path in seen:
+                continue
+            seen.add(path)
+            text = git_file_bytes(cwd, rev, path).decode("utf-8", "replace")
+            candidates = literal_path_candidates(text)
+            if path.endswith(".py"):
+                candidates |= python_import_candidates(path, text)
+            for cand in sorted(candidates):
+                if cand in all_paths:
+                    consideration_log.append({"from": path, "candidate": cand, "decision": "INCLUDE", "reason": "REVERSE_REFERENCE_TRANSITIVE_LOCAL_REFERENCE"})
+                    if cand not in include:
+                        include.add(cand)
+                        queue.append(cand)
+                elif cand.startswith(PATH_ROOTS):
+                    unresolved.append({"from": path, "candidate": cand, "reason": "LOCAL_REFERENCE_TARGET_MISSING"})
+    missing_present: list[dict[str, str]] = []
+    for path in sorted(include):
+        text = git_file_bytes(cwd, rev, path).decode("utf-8", "replace")
+        candidates = literal_path_candidates(text)
+        if path.endswith(".py"):
+            candidates |= python_import_candidates(path, text)
+        for cand in sorted(candidates):
+            if cand in all_paths and cand not in include:
+                missing_present.append({"from": path, "candidate": cand})
+    frontier = {
+        "schema": "DeclaredClosureFrontier/v1",
+        "algorithm": CLOSURE_ALGORITHM_ID,
+        "fixed_point_verified": not missing_present,
+        "additional_present_objects_within_boundary": missing_present,
+        "unresolved_reference_candidates": sorted(unresolved, key=lambda x: (x["from"], x["candidate"])),
+        "status": "CLOSED_UNDER_DECLARED_ALGORITHM" if not missing_present and not unresolved else "AMBIGUOUS_OR_UNRESOLVED",
+        "reverse_reference_additions": reverse_added,
+        "consideration_log_sha256": sha256(canonical_bytes(consideration_log)),
+        "consideration_count": len(consideration_log),
+    }
+    return sorted(include), consideration_log, frontier
+
+def derive_private_binding_closure(cwd: Path, rev: str, roots: list[str]) -> tuple[list[str], list[dict[str, Any]], dict[str, Any]]:
+    all_paths = set(list_tree(cwd, rev))
+    include = {p for p in roots if p in all_paths}
+    missing_roots = [p for p in roots if p not in all_paths]
+    queue = list(sorted(include))
+    seen = set()
+    unresolved: list[dict[str, Any]] = [{"from": "<ROOT>", "candidate": p, "reason": "REQUIRED_PRIVATE_BINDING_ROOT_MISSING"} for p in missing_roots]
+    log: list[dict[str, Any]] = []
+    while queue:
+        path = queue.pop(0)
+        if path in seen:
+            continue
+        seen.add(path)
+        data = git_file_bytes(cwd, rev, path)
+        text, enc = safe_utf8(data)
+        if text is None:
+            log.append({"from": path, "candidate": None, "decision": "NO_TEXT_SCAN", "reason": enc})
+            continue
+        for cand in sorted(literal_path_candidates(text)):
+            if cand in all_paths:
+                log.append({"from": path, "candidate": cand, "decision": "INCLUDE", "reason": "PRIVATE_BINDING_LOCAL_REFERENCE"})
+                if cand not in include:
+                    include.add(cand)
+                    queue.append(cand)
+            elif cand.startswith(PATH_ROOTS):
+                log.append({"from": path, "candidate": cand, "decision": "UNRESOLVED", "reason": "PRIVATE_BINDING_LOCAL_REFERENCE_TARGET_MISSING"})
+                unresolved.append({"from": path, "candidate": cand, "reason": "PRIVATE_BINDING_LOCAL_REFERENCE_TARGET_MISSING"})
+    missing_present = []
+    for path in sorted(include):
+        text = git_file_bytes(cwd, rev, path).decode("utf-8", "replace")
+        for cand in sorted(literal_path_candidates(text)):
+            if cand in all_paths and cand not in include:
+                missing_present.append({"from": path, "candidate": cand})
+    frontier = {
+        "algorithm": CLOSURE_ALGORITHM_ID + "+PRIVATE_BINDINGS",
+        "fixed_point_verified": not missing_present,
+        "additional_present_objects_within_boundary": missing_present,
+        "unresolved_reference_candidates": sorted(unresolved, key=lambda x: (x["from"], x["candidate"])),
+        "status": "CLOSED_UNDER_DECLARED_ALGORITHM" if not missing_present and not unresolved else "AMBIGUOUS_OR_UNRESOLVED",
+        "consideration_log_sha256": sha256(canonical_bytes(log)),
+        "consideration_count": len(log),
+    }
+    return sorted(include), log, frontier
+
+def parse_json_file(cwd: Path, rev: str, path: str) -> Any:
+    return json.loads(git_file_bytes(cwd, rev, path).decode("utf-8"))
+
+def exact_execution_receipt(label: str, cwd: Path, commands: list[list[str]]) -> dict[str, Any]:
+    env = {
+        "python": sys.version,
+        "python_executable": sys.executable,
+        "platform": platform.platform(),
+        "uname": " ".join(platform.uname()),
+        "git_version": run_text(["git", "--version"]).strip(),
+        "runner_os": os.environ.get("RUNNER_OS"),
+        "runner_arch": os.environ.get("RUNNER_ARCH"),
+        "image_os": os.environ.get("ImageOS"),
+        "image_version": os.environ.get("ImageVersion"),
+    }
+    results = []
+    for cmd in commands:
+        started = now_utc()
+        try:
+            cp = run(cmd, cwd=cwd, timeout=180, check=False)
+            ended = now_utc()
+            results.append({
+                "command": cmd,
+                "started_at_utc": started,
+                "ended_at_utc": ended,
+                "returncode": cp.returncode,
+                "stdout": cp.stdout.decode("utf-8", "replace"),
+                "stderr": cp.stderr.decode("utf-8", "replace"),
+                "execution_status": "COMPLETED",
+            })
+        except subprocess.TimeoutExpired as exc:
+            ended = now_utc()
+            results.append({
+                "command": cmd,
+                "started_at_utc": started,
+                "ended_at_utc": ended,
+                "returncode": None,
+                "stdout": (exc.stdout or b"").decode("utf-8", "replace") if isinstance(exc.stdout, (bytes, bytearray)) else str(exc.stdout or ""),
+                "stderr": (exc.stderr or b"").decode("utf-8", "replace") if isinstance(exc.stderr, (bytes, bytearray)) else str(exc.stderr or ""),
+                "execution_status": "TIMEOUT",
+            })
+        except Exception as exc:
+            ended = now_utc()
+            results.append({
+                "command": cmd,
+                "started_at_utc": started,
+                "ended_at_utc": ended,
+                "returncode": None,
+                "stdout": "",
+                "stderr": f"{type(exc).__name__}: {exc}",
+                "execution_status": "EXECUTION_ERROR",
+            })
+    return {
+        "schema": "ExactHeadExecutionReceipt/v1",
+        "label": label,
+        "cwd_revision": git(cwd, "rev-parse", "HEAD"),
+        "tree": git(cwd, "rev-parse", "HEAD^{tree}"),
+        "environment": env,
+        "commands": results,
+    }
+
+def discover_touching_issues(repo: str, token: str | None, needles: list[str], mandatory_numbers: set[int]) -> list[dict[str, Any]]:
+    found: dict[int, dict[str, Any]] = {}
+    for page in range(1, MAX_API_PAGES + 1):
+        data = github_json(
+            f"https://api.github.com/repos/{repo}/issues?state=open&per_page=100&page={page}",
+            token=token, required=False
+        )
+        if isinstance(data, dict) and data.get("_unavailable"):
+            return [{"_unavailable": True, "repo": repo, "error": data.get("error")}]
+        if not isinstance(data, list):
+            break
+        for issue in data:
+            if "pull_request" in issue:
+                continue
+            n = int(issue["number"])
+            hay = (issue.get("title") or "") + "\n" + (issue.get("body") or "")
+            if n in mandatory_numbers or any(needle and needle in hay for needle in needles):
+                found[n] = {
+                    "repo": repo,
+                    "number": n,
+                    "state": issue.get("state"),
+                    "title": issue.get("title"),
+                    "body": issue.get("body"),
+                    "html_url": issue.get("html_url"),
+                    "created_at": issue.get("created_at"),
+                    "updated_at": issue.get("updated_at"),
+                    "repair_obligation_ids": sorted(set(REPAIR_PATTERN.findall(hay))),
+                }
+        if len(data) < 100:
+            break
+    for n in sorted(mandatory_numbers):
+        if n not in found:
+            issue = github_json(f"https://api.github.com/repos/{repo}/issues/{n}", token=token, required=False)
+            if isinstance(issue, dict) and not issue.get("_unavailable"):
+                found[n] = {
+                    "repo": repo, "number": n, "state": issue.get("state"),
+                    "title": issue.get("title"), "body": issue.get("body"),
+                    "html_url": issue.get("html_url"), "created_at": issue.get("created_at"),
+                    "updated_at": issue.get("updated_at"),
+                    "repair_obligation_ids": sorted(set(REPAIR_PATTERN.findall((issue.get("body") or "") + "\n" + (issue.get("title") or "")))),
+                }
+    return [found[k] for k in sorted(found)]
+
+def blind_reviewer_state() -> dict[str, Any]:
+    data = github_json(
+        f"https://api.github.com/repos/{PUBLIC_REPO}/actions/runs?event=pull_request&head_sha=045fe70a0462144210215f0cbfb5e2d867808f2c&per_page=100",
+        required=False
+    )
+    if isinstance(data, dict) and data.get("_unavailable"):
+        return {"query_available": False, "error": data.get("error"), "blind_reviewer_started": None, "matching_runs": []}
+    runs = data.get("workflow_runs", []) if isinstance(data, dict) else []
+    matches = []
+    for r in runs:
+        path = r.get("path") or ""
+        name = (r.get("name") or "").lower()
+        if path == PUBLIC_REVIEW_WORKFLOW_PATH or ("ip-origin" in name and "review" in name):
+            matches.append({
+                "id": r.get("id"), "name": r.get("name"), "path": path,
+                "status": r.get("status"), "conclusion": r.get("conclusion"),
+                "created_at": r.get("created_at"), "run_started_at": r.get("run_started_at"),
+                "head_sha": r.get("head_sha"), "html_url": r.get("html_url"),
+            })
+    return {"query_available": True, "blind_reviewer_started": bool(matches), "matching_runs": matches}
+
+def algebra_receipts(profile: dict[str, Any], action_id: str, packet_refs: list[str]) -> tuple[dict[str, Any], dict[str, Any], dict[str, Any]]:
+    entries = [
+        {
+            "algebra": "Process", "status": "APPLIED",
+            "operators": ["SEQUENCE", "RECONSTRUCT", "COMPOSE", "TERMINATE"],
+            "law_claims": [],
+            "non_law_acknowledgements": ["PARALLEL_EFFECT_COMMUTATIVITY_NOT_UNIVERSAL"],
+            "applicability_reason": "Packet construction binds immutable inputs, reconstructs mechanical closure, composes evidence, canonicalizes/hash-freezes the packet, then terminates construction."
+        },
+        {
+            "algebra": "Policy", "status": "FRONTIER",
+            "operators": [], "law_claims": [], "non_law_acknowledgements": [],
+            "applicability_reason": "This lane constructs evidence only and executes no policy authority operator.",
+            "frontier_reason": "Policy authority evaluation remains outside this deterministic evidence-construction action."
+        },
+        {
+            "algebra": "Decision", "status": "FRONTIER",
+            "operators": [], "law_claims": [], "non_law_acknowledgements": [],
+            "applicability_reason": "No semantic accept/reject decision is executed by the packet builder.",
+            "frontier_reason": "Decision Algebra is not executed in this evidence-only lane."
+        },
+        {
+            "algebra": "Conformance", "status": "APPLIED",
+            "operators": ["REQUIREMENT_UNION", "SCOPE_PROJECT", "BIND_EVIDENCE", "BIND_PROOF", "COVERAGE", "GAP", "DIFF", "COMPOSE_CONFORMANCE"],
+            "law_claims": [],
+            "non_law_acknowledgements": ["CONFORMANCE_IS_NOT_BINARY_ONLY", "AUDIT_IS_NOT_A_SEPARATE_ALGEBRA"],
+            "applicability_reason": "Construction projects the bounded target, binds exact evidence/proofs, computes diffs, coverage and gaps, and composes the completeness receipt."
+        },
+        {
+            "algebra": "Evidence", "status": "FRONTIER",
+            "operators": [], "law_claims": [], "non_law_acknowledgements": [],
+            "applicability_reason": "Evidence objects are serialized and hashed, but no Level-3 Evidence Algebra composition operator is claimed.",
+            "frontier_reason": "Executable Evidence Algebra remains a declared frontier."
+        },
+        {
+            "algebra": "Bridge", "status": "NOT_APPLICABLE",
+            "operators": [], "law_claims": [], "non_law_acknowledgements": [],
+            "applicability_reason": "No semantic representation bridge transform is performed."
+        }
+    ]
+    usage = {
+        "schema": "GardenEvolutionAlgebraUsageReceipt/v1",
+        "action_id": action_id,
+        "cycle_id": CYCLE_ID,
+        "design_epoch": "v15.5",
+        "canonical_source_root_sha256": CANONICAL_SOURCE_ROOT_SHA256,
+        "source_obligation_refs": packet_refs,
+        "entries": entries,
+        "semantic_compliance_proved": False,
+        "authorization_effect": "NONE",
+        "grants_authority": False,
+    }
+    registry = profile.get("registry") or profile.get("registries") or {}
+    candidates: list[dict[str, Any]] = []
+    if isinstance(registry, dict):
+        candidates.append(registry)
+        candidates.extend(v for v in registry.values() if isinstance(v, dict))
+    if isinstance(profile, dict):
+        candidates.append(profile)
+        candidates.extend(v for v in profile.values() if isinstance(v, dict))
+    serialized = json.dumps(profile, sort_keys=True)
+    errors: list[str] = []
+    required_nonlaws = {
+        "Process": {"PARALLEL_EFFECT_COMMUTATIVITY_NOT_UNIVERSAL"},
+        "Conformance": {"CONFORMANCE_IS_NOT_BINARY_ONLY", "AUDIT_IS_NOT_A_SEPARATE_ALGEBRA"},
+    }
+    registered_ops = {
+        "Process": {"SEQUENCE","BRANCH","PARALLEL","COMPOSE","RETRY","ROLLBACK","COMPENSATE","RECONSTRUCT","ITERATE","RECURSE","TERMINATE","DO_NOTHING"},
+        "Policy": {"AND_D","OR_D","NOT_D","RESOLVE_D","precedence_D"},
+        "Decision": set(),
+        "Conformance": {"REQUIREMENT_UNION","REQUIREMENT_INTERSECTION","SCOPE_PROJECT","MAP_STANDARD","PROPAGATE_OBLIGATION","BIND_EVIDENCE","BIND_PROOF","INVALIDATE_BY_DEPENDENCY","COVERAGE","GAP","DIFF","COMPOSE_CONFORMANCE"},
+        "Evidence": set(),
+        "Bridge": {"ENCODE","DECODE","PROJECT","LIFT","LOWER","MAP"},
+    }
+    for entry in entries:
+        alg = entry["algebra"]
+        ops = set(entry["operators"])
+        invalid = sorted(ops - registered_ops.get(alg, set()))
+        if invalid:
+            errors.append(f"{alg}:unregistered_operators:{invalid}")
+        if entry["status"] == "APPLIED":
+            missing = sorted(required_nonlaws.get(alg, set()) - set(entry["non_law_acknowledgements"]))
+            if missing:
+                errors.append(f"{alg}:missing_required_nonlaws:{missing}")
+        if alg in ("Decision", "Evidence") and entry["status"] != "FRONTIER":
+            errors.append(f"{alg}:must_remain_frontier_under_current_profile")
+    if "REG-ALGEBRA-001" not in serialized:
+        errors.append("profile_missing_REG-ALGEBRA-001")
+    validation = {
+        "schema": "GardenEvolutionAlgebraValidationReceipt/v1",
+        "action_id": action_id,
+        "cycle_id": CYCLE_ID,
+        "profile_ref": "gsl/EVOLUTION_ALGEBRA_PROFILE.json@"+PRIVATE_HEAD,
+        "profile_sha256": sha256(canonical_bytes(profile)),
+        "result": "PASS" if not errors else "FAIL",
+        "errors": errors,
+        "applied_algebras": [e["algebra"] for e in entries if e["status"] == "APPLIED"],
+        "frontier_algebras": [e["algebra"] for e in entries if e["status"] == "FRONTIER"],
+        "not_applicable_algebras": [e["algebra"] for e in entries if e["status"] == "NOT_APPLICABLE"],
+        "required_frontier_count": sum(1 for e in entries if e["status"] == "FRONTIER"),
+        "semantic_compliance_proved": False,
+        "authorization_result": "NOT_EVALUATED_HERE",
+        "grants_authority": False,
+    }
+    process_trace = [
+        {"step": 1, "operator": "SEQUENCE", "effect": "bind exact heads/process/design epoch/target"},
+        {"step": 2, "operator": "RECONSTRUCT", "effect": "derive exact diffs, symbols and declared reference closure"},
+        {"step": 3, "operator": "COMPOSE", "effect": "compose evidence objects and completeness proof inputs"},
+        {"step": 4, "operator": "SEQUENCE", "effect": "canonicalize and SHA-256 freeze packet payload"},
+        {"step": 5, "operator": "TERMINATE", "effect": "finalize immutable cycle evidence; no semantic decision or authority effect"},
+    ]
+    bound = {
+        "schema": "AlgebraBoundUpdateReceipt/v1",
+        "action_id": action_id,
+        "cycle_id": CYCLE_ID,
+        "process_version": PROCESS_VERSION,
+        "design_epoch": DESIGN_EPOCH,
+        "canonical_source_root_sha256": CANONICAL_SOURCE_ROOT_SHA256,
+        "target_kind": TARGET_KIND,
+        "target_repo": PUBLIC_REPO,
+        "target_base": TARGET_BASE,
+        "target_head": TARGET_HEAD,
+        "process_operator_trace": process_trace,
+        "algebra_usage_receipt_ref": f"evidence/review-packets/{CYCLE_ID}/GardenEvolutionAlgebraUsageReceipt.json",
+        "algebra_validation_receipt_ref": f"evidence/review-packets/{CYCLE_ID}/GardenEvolutionAlgebraValidationReceipt.json",
+        "conformance_refs": [f"evidence/review-packets/{CYCLE_ID}/PacketCompletenessReceipt.json"],
+        "policy_gate_refs": [],
+        "remaining_frontiers": validation["frontier_algebras"],
+        "required_non_law_acknowledgements": ["PARALLEL_EFFECT_COMMUTATIVITY_NOT_UNIVERSAL"],
+        "semantic_compliance_proved": False,
+        "result": "APPLIED" if not errors else "FRONTIER_BLOCKED",
+        "authorization_effect": "NONE",
+        "grants_authority": False,
+    }
+    return usage, validation, bound
+
+def main() -> None:
+    token = os.environ.get("GITHUB_TOKEN")
+    if not token:
+        raise RuntimeError("GITHUB_TOKEN unavailable")
+    OUT.mkdir(parents=True, exist_ok=True)
+
+    if PUBLIC_CLONE.exists():
+        shutil.rmtree(PUBLIC_CLONE)
+    run(["git", "clone", "--filter=blob:none", "https://github.com/ankitdcx/garden-swarm.git", str(PUBLIC_CLONE)], timeout=180)
+    run(["git", "fetch", "--no-tags", "origin", "refs/pull/152/head:refs/remotes/origin/pr-152"], cwd=PUBLIC_CLONE, timeout=180)
+    run(["git", "checkout", "--detach", TARGET_HEAD], cwd=PUBLIC_CLONE)
+    if git(PUBLIC_CLONE, "rev-parse", "HEAD") != TARGET_HEAD:
+        raise RuntimeError("target checkout mismatch")
+    if git(PUBLIC_CLONE, "rev-parse", "HEAD^{tree}") != TARGET_TREE:
+        raise RuntimeError("target tree mismatch")
+
+    if PRIVATE_WT.exists():
+        shutil.rmtree(PRIVATE_WT)
+    run(["git", "worktree", "add", "--detach", str(PRIVATE_WT), PRIVATE_HEAD], cwd=REPO_ROOT, timeout=180)
+
+    construction_started = now_utc()
+    start_heads = {
+        "public_main": branch_head(PUBLIC_REPO),
+        "private_main": branch_head(PRIVATE_REPO, token=token),
+    }
+
+    target_diff = changed_manifest(PUBLIC_CLONE, TARGET_BASE, TARGET_HEAD)
+    target_changed_paths = [x["path"] for x in target_diff["changed_files"]]
+    target_symbols = changed_symbols(PUBLIC_CLONE, TARGET_BASE, TARGET_HEAD, target_diff)
+    public_closure_paths, public_consideration, public_frontier = derive_public_closure(
+        PUBLIC_CLONE, TARGET_HEAD, target_changed_paths, target_symbols
+    )
+    public_closure_objects = [
+        file_object(PUBLIC_CLONE, TARGET_HEAD, p, "PUBLIC_TARGET_DECLARED_REFERENCE_CLOSURE")
+        for p in public_closure_paths
+    ]
+
+    private_binding_roots = [
+        "governance/PROCESS_CURRENT.json",
+        "governance/GardenCanonicalUpdateProcess_v1.4.json",
+        "governance/PROCESS-ADMISSION-RECEIPT-v1.4-2026-09-15.json",
+        "gsl/EVOLUTION_ALGEBRA_PROFILE.json",
+        "implementation/garden_kernel/evolution_algebra.py",
+        "reviews/evolution/algebra/2026-09-15-process-v1.4-admission-propose.json",
+    ]
+    private_closure_paths, private_consideration, private_frontier = derive_private_binding_closure(
+        PRIVATE_WT, PRIVATE_HEAD, private_binding_roots
+    )
+    private_closure_objects = [
+        file_object(PRIVATE_WT, PRIVATE_HEAD, p, "PRIVATE_PROCESS_ALGEBRA_CANONICAL_BINDING_CLOSURE")
+        for p in private_closure_paths
+    ]
+
+    public_parent = repo_parent(PUBLIC_CLONE, PUBLIC_HEAD)
+    private_parent = repo_parent(PRIVATE_WT, PRIVATE_HEAD)
+    public_head_diff = changed_manifest(PUBLIC_CLONE, public_parent, PUBLIC_HEAD)
+    private_head_diff = changed_manifest(PRIVATE_WT, private_parent, PRIVATE_HEAD)
+    public_head_diff["repo"] = PUBLIC_REPO
+    private_head_diff["repo"] = PRIVATE_REPO
+
+    exact_target_files = [
+        file_object(PUBLIC_CLONE, TARGET_HEAD, p, "SELECTED_TARGET_EXACT_FILE")
+        for p in target_changed_paths
+    ]
+
+    changed_texts = [
+        git_file_bytes(PUBLIC_CLONE, TARGET_HEAD, p).decode("utf-8", "replace")
+        for p in target_changed_paths if git_file_exists(PUBLIC_CLONE, TARGET_HEAD, p)
+    ]
+    affected = extract_identifiers(changed_texts)
+    test_ids: list[str] = []
+    for p, t in zip(target_changed_paths, changed_texts):
+        test_ids.extend(extract_tests(p, t))
+    affected["tests"] = sorted(set(test_ids))
+    affected["implementation_bindings"] = sorted(
+        [f"{PUBLIC_REPO}@{TARGET_HEAD}:{p}" for p in public_closure_paths]
+        + [f"{PRIVATE_REPO}@{PRIVATE_HEAD}:{p}" for p in private_closure_paths]
+    )
+    affected["derivation"] = {
+        "schemas": SCHEMA_PATTERN.pattern,
+        "function_contracts": FUNCTION_CONTRACT_PATTERN.pattern,
+        "invariants": INVARIANT_PATTERN.pattern,
+        "registries": REGISTRY_PATTERN.pattern,
+        "tests": "AST FunctionDef/AsyncFunctionDef names beginning with 'test' in selected changed Python files",
+        "implementation_bindings": "all files in mechanically derived public/private closure sets",
+    }
+
+    public_exec = exact_execution_receipt(
+        "PUBLIC_SELECTED_TARGET_EXACT_HEAD",
+        PUBLIC_CLONE,
+        [
+            [sys.executable, "tests/test_process_v2_controls.py"],
+            [sys.executable, "tools/validate_review_packet.py", "--help"],
+        ],
+    )
+    private_exec = exact_execution_receipt(
+        "PRIVATE_CURRENT_HEAD_EXACT_HEAD",
+        PRIVATE_WT,
+        [
+            [sys.executable, "-m", "unittest", "discover", "-s", "implementation/tests", "-p", "test_*.py"],
+            [sys.executable, "-m", "unittest", "discover", "-s", "tests", "-p", "test_*.py"],
+        ],
+    )
+
+    ci_api = {
+        "public_target_workflow_runs": github_json(
+            f"https://api.github.com/repos/{PUBLIC_REPO}/actions/runs?head_sha={TARGET_HEAD}&per_page=100",
+            required=False
+        ),
+        "private_current_head_workflow_runs": github_json(
+            f"https://api.github.com/repos/{PRIVATE_REPO}/actions/runs?head_sha={PRIVATE_HEAD}&per_page=100",
+            token=token, required=False
+        ),
+        "note": "Exact-head execution receipts above are independent of whether GitHub Actions has a historical run directly attached to the commit."
+    }
+
+    process_pointer = parse_json_file(PRIVATE_WT, PRIVATE_HEAD, "governance/PROCESS_CURRENT.json")
+    process_artifact = parse_json_file(PRIVATE_WT, PRIVATE_HEAD, "governance/GardenCanonicalUpdateProcess_v1.4.json")
+    public_candidate_process = parse_json_file(PUBLIC_CLONE, TARGET_HEAD, "PROCESS_VERSION.json")
+    public_policy = parse_json_file(PUBLIC_CLONE, TARGET_HEAD, "agents/process-control-policy.json")
+    algebra_profile = parse_json_file(PRIVATE_WT, PRIVATE_HEAD, "gsl/EVOLUTION_ALGEBRA_PROFILE.json")
+
+    active_freezes = [
+        {
+            "source": f"{PUBLIC_REPO}@{TARGET_HEAD}:PROCESS_VERSION.json",
+            "type": "PROCESS_SUCCESSOR_ADMISSION_FREEZE",
+            "status": public_candidate_process.get("status"),
+            "predecessor_process_version": public_candidate_process.get("predecessor_process_version"),
+            "canonical_garden_version": public_candidate_process.get("canonical_garden_version"),
+            "evidence": public_candidate_process,
+        },
+        {
+            "source": f"{PRIVATE_REPO}@{PRIVATE_HEAD}:governance/GardenCanonicalUpdateProcess_v1.4.json",
+            "type": "CANONICAL_PROMOTION_BOUNDARY",
+            "status": process_artifact.get("status"),
+            "promotion_boundary": process_artifact.get("promotion_boundary"),
+            "v15_6_simplification_bootstrap": process_artifact.get("v15_6_simplification_bootstrap"),
+        },
+    ]
+
+    needles = list(target_changed_paths)
+    needles += affected["schemas"] + affected["registries"]
+    needles += [TARGET_HEAD, TARGET_BASE, "GardenReviewPacket/v1", "AlgebraBoundUpdateReceipt/v1"]
+    public_issues = discover_touching_issues(PUBLIC_REPO, None, needles, {148})
+    private_issues = discover_touching_issues(PRIVATE_REPO, token, needles, {41})
+    linked_findings = public_issues + private_issues
+
+    blind_state = blind_reviewer_state()
+    peer_findings_cutoff = now_utc()
+
+    exclusions: list[dict[str, Any]] = [
+        {
+            "object": "same-cycle peer findings created after packet finalization",
+            "reason_code": "POST_FINALIZATION_PEER_FINDINGS_FORBIDDEN",
+            "machine_check": {"cutoff_utc": peer_findings_cutoff, "include_only_created_at_lte_cutoff": True},
+            "blocking": False,
+        }
+    ]
+    pr152 = github_json(f"https://api.github.com/repos/{PUBLIC_REPO}/pulls/{TARGET_PR}", required=False)
+    selected_target_after_head = None
+    if isinstance(pr152, dict) and not pr152.get("_unavailable"):
+        selected_target_after_head = ((pr152.get("head") or {}).get("sha"))
+        if selected_target_after_head and selected_target_after_head != TARGET_HEAD:
+            try:
+                run(["git", "cat-file", "-e", f"{selected_target_after_head}^{{commit}}"], cwd=PUBLIC_CLONE, timeout=30)
+                later = changed_manifest(PUBLIC_CLONE, TARGET_HEAD, selected_target_after_head)
+                for f in later["changed_files"]:
+                    exclusions.append({
+                        "object": f"{PUBLIC_REPO}@{selected_target_after_head}:{f['path']}",
+                        "reason_code": "OUTSIDE_SELECTED_TARGET_AFTER_FINAL_CANDIDATE_HEAD",
+                        "machine_check": {
+                            "selected_target_head": TARGET_HEAD,
+                            "later_pr_head": selected_target_after_head,
+                            "git_diff_status": f["status"],
+                            "path": f["path"],
+                        },
+                        "blocking": False,
+                    })
+            except Exception as exc:
+                exclusions.append({
+                    "object": f"{PUBLIC_REPO}@{selected_target_after_head}:post-target delta",
+                    "reason_code": "POST_TARGET_DELTA_ENUMERATION_UNAVAILABLE",
+                    "machine_check": {"error": f"{type(exc).__name__}: {exc}"},
+                    "blocking": True,
+                })
+
+    action_id = f"GARDEN_REVIEW_PACKET_BUILD:{CYCLE_ID}"
+    packet_refs = [
+        f"{PUBLIC_REPO}@{TARGET_HEAD}",
+        f"{PRIVATE_REPO}@{PRIVATE_HEAD}",
+        f"canonical:{CANONICAL_GARDEN_VERSION}@{CANONICAL_SOURCE_ROOT_SHA256}",
+    ]
+    usage_receipt, algebra_validation, algebra_bound = algebra_receipts(algebra_profile, action_id, packet_refs)
+
+    source_anchors = {
+        "canonical": {
+            "garden_version": CANONICAL_GARDEN_VERSION,
+            "design_epoch": DESIGN_EPOCH,
+            "source_root_sha256": CANONICAL_SOURCE_ROOT_SHA256,
+            "required_registry": "REG-ALGEBRA-001",
+            "process_anchor_refs": ["[S-PROCESS]#5.1", "[S-PROCESS]#5.1B"],
+        },
+        "process": {
+            "process_version": PROCESS_VERSION,
+            "current_pointer": process_pointer,
+            "artifact_sha256": sha256(git_file_bytes(PRIVATE_WT, PRIVATE_HEAD, "governance/GardenCanonicalUpdateProcess_v1.4.json")),
+            "pointer_sha256": sha256(git_file_bytes(PRIVATE_WT, PRIVATE_HEAD, "governance/PROCESS_CURRENT.json")),
+        },
+        "target": {
+            "repo": PUBLIC_REPO,
+            "base": TARGET_BASE,
+            "head": TARGET_HEAD,
+            "tree": TARGET_TREE,
+            "exact_diff_sha256": target_diff["diff_sha256"],
+        },
+    }
+
+    construction_script_sha256 = sha256(Path(__file__).read_bytes())
+    packet_without_hash: dict[str, Any] = {
+        "schema": "GardenReviewPacket/v1",
+        "cycle_id": CYCLE_ID,
+        "packet_construction": {
+            "algorithm_id": ALGORITHM_ID,
+            "closure_algorithm_id": CLOSURE_ALGORITHM_ID,
+            "construction_script_sha256": construction_script_sha256,
+            "canonical_serialization": "json.dumps(value, sort_keys=True, separators=(',', ':'), ensure_ascii=False).encode('utf-8')",
+            "packet_hash_rule": "SHA-256 of canonical packet object with packet_hash field absent",
+            "construction_started_utc": construction_started,
+            "peer_findings_cutoff_utc": peer_findings_cutoff,
+            "post_finalization_peer_findings_forbidden": True,
+            "semantic_reviewer": False,
+        },
+        "bindings": {
+            "public_repo": {"repo": PUBLIC_REPO, "head": PUBLIC_HEAD},
+            "private_repo": {"repo": PRIVATE_REPO, "head": PRIVATE_HEAD},
+            "canonical_garden_version": CANONICAL_GARDEN_VERSION,
+            "design_epoch": DESIGN_EPOCH,
+            "canonical_source_root_sha256": CANONICAL_SOURCE_ROOT_SHA256,
+            "process_version": PROCESS_VERSION,
+            "source_anchors": source_anchors,
+        },
+        "selected_bounded_target": {
+            "target_kind": TARGET_KIND,
+            "repo": PUBLIC_REPO,
+            "base": TARGET_BASE,
+            "head": TARGET_HEAD,
+            "tree": TARGET_TREE,
+            "description": "Garden Process v2 coherent review control-plane candidate, bounded to the exact two-commit delta from TARGET_BASE through TARGET_HEAD; later PR transport/carrier commits are excluded.",
+            "exact_target_diff": target_diff,
+            "exact_target_files": exact_target_files,
+        },
+        "in_scope_repo_diffs": [public_head_diff, private_head_diff],
+        "changed_files": target_diff["changed_files"],
+        "changed_symbols": target_symbols,
+        "declared_dependency_reference_closure": {
+            "algorithm": CLOSURE_ALGORITHM_ID,
+            "public_target": {
+                "root_set": target_changed_paths,
+                "included_paths": public_closure_paths,
+                "objects": public_closure_objects,
+                "frontier": public_frontier,
+                "consideration_log_sha256": sha256(canonical_bytes(public_consideration)),
+            },
+            "private_process_algebra_bindings": {
+                "root_set": private_binding_roots,
+                "included_paths": private_closure_paths,
+                "objects": private_closure_objects,
+                "frontier": private_frontier,
+                "consideration_log_sha256": sha256(canonical_bytes(private_consideration)),
+            },
+            "owner_definitions": [
+                o for o in public_closure_objects if o["path"] == ".github/CODEOWNERS"
+            ],
+        },
+        "affected": affected,
+        "exact_head_ci_test_environment_receipts": {
+            "public_selected_target": public_exec,
+            "private_current_head": private_exec,
+            "github_actions_api": ci_api,
+        },
+        "active_freezes": active_freezes,
+        "linked_unresolved_or_reopened_findings_and_repair_obligations": linked_findings,
+        "algebra_receipts": {
+            "GardenEvolutionAlgebraUsageReceipt/v1": usage_receipt,
+            "GardenEvolutionAlgebraValidationReceipt/v1": algebra_validation,
+            "AlgebraBoundUpdateReceipt/v1": algebra_bound,
+        },
+        "process_conformance_algebra_refs": [
+            f"evidence/review-packets/{CYCLE_ID}/GardenEvolutionAlgebraUsageReceipt.json",
+            f"evidence/review-packets/{CYCLE_ID}/GardenEvolutionAlgebraValidationReceipt.json",
+            f"evidence/review-packets/{CYCLE_ID}/AlgebraBoundUpdateReceipt.json",
+            f"evidence/review-packets/{CYCLE_ID}/PacketCompletenessReceipt.json",
+        ],
+        "exclusion_manifest": exclusions,
+        "blind_review_precondition_observation": blind_state,
+        "authority_effect": "NONE",
+        "semantic_compliance_proved": False,
+        "semantic_decisions": [],
+    }
+
+    blockers: list[dict[str, Any]] = []
+    if start_heads["public_main"] != PUBLIC_HEAD:
+        blockers.append({"code": "STALE_PUBLIC_HEAD_AT_START", "expected": PUBLIC_HEAD, "observed": start_heads["public_main"]})
+    if start_heads["private_main"] != PRIVATE_HEAD:
+        blockers.append({"code": "STALE_PRIVATE_HEAD_AT_START", "expected": PRIVATE_HEAD, "observed": start_heads["private_main"]})
+    if public_frontier["status"] != "CLOSED_UNDER_DECLARED_ALGORITHM":
+        blockers.append({"code": "PUBLIC_CLOSURE_NOT_CLOSED", "frontier": public_frontier})
+    if private_frontier["status"] != "CLOSED_UNDER_DECLARED_ALGORITHM":
+        blockers.append({"code": "PRIVATE_BINDING_CLOSURE_NOT_CLOSED", "frontier": private_frontier})
+    if algebra_validation["result"] != "PASS":
+        blockers.append({"code": "INVALID_ALGEBRA_BINDING", "validation": algebra_validation})
+    if blind_state.get("blind_reviewer_started") is True:
+        blockers.append({"code": "BLIND_REVIEW_ALREADY_STARTED_BEFORE_PACKET_FINALIZATION", "runs": blind_state.get("matching_runs")})
+    if blind_state.get("query_available") is False:
+        blockers.append({"code": "BLIND_REVIEW_START_EVIDENCE_UNAVAILABLE", "detail": blind_state})
+    if not target_diff["exact_diff_text"]:
+        blockers.append({"code": "REQUIRED_TARGET_CONTENT_NOT_MATERIALIZED"})
+    if not target_symbols:
+        blockers.append({"code": "CHANGED_SYMBOL_SET_EMPTY_UNEXPECTED"})
+    if not any(x["path"] == ".github/CODEOWNERS" for x in public_closure_objects):
+        blockers.append({"code": "OWNER_DEFINITION_UNAVAILABLE"})
+    if process_pointer.get("current_version") != "1.4" or process_pointer.get("status") != "HUMAN_ADMITTED_CURRENT":
+        blockers.append({"code": "PROCESS_VERSION_BINDING_INVALID", "pointer": process_pointer})
+    for ex in exclusions:
+        if ex.get("blocking"):
+            blockers.append({"code": "BLOCKING_EXCLUSION", "exclusion": ex})
+    # Historical GitHub Actions API snapshots are supplemental. Exact-head test/environment
+    # evidence is generated above in this CI runner even when no historical run is attached.
+
+    end_heads = {
+        "public_main": branch_head(PUBLIC_REPO),
+        "private_main": branch_head(PRIVATE_REPO, token=token),
+    }
+    packet_without_hash["bindings"]["head_recheck_immediately_before_freeze"] = end_heads
+    if end_heads["public_main"] != PUBLIC_HEAD:
+        blockers.append({"code": "STALE_PUBLIC_HEAD_BEFORE_FREEZE", "expected": PUBLIC_HEAD, "observed": end_heads["public_main"]})
+    if end_heads["private_main"] != PRIVATE_HEAD:
+        blockers.append({"code": "STALE_PRIVATE_HEAD_BEFORE_FREEZE", "expected": PRIVATE_HEAD, "observed": end_heads["private_main"]})
+
+    packet_hash = sha256(canonical_bytes(packet_without_hash))
+    packet = dict(packet_without_hash)
+    packet["packet_hash"] = packet_hash
+    packet_bytes = canonical_bytes(packet)
+    packet_file_sha256 = sha256(packet_bytes)
+
+    declared_objects = sorted(set(
+        [f"public:{p}" for p in public_closure_paths]
+        + [f"private:{p}" for p in private_closure_paths]
+        + [
+            f"target-diff:{TARGET_BASE}..{TARGET_HEAD}",
+            f"repo-diff:{PUBLIC_REPO}:{public_parent}..{PUBLIC_HEAD}",
+            f"repo-diff:{PRIVATE_REPO}:{private_parent}..{PRIVATE_HEAD}",
+            "receipt:GardenEvolutionAlgebraUsageReceipt/v1",
+            "receipt:GardenEvolutionAlgebraValidationReceipt/v1",
+            "receipt:AlgebraBoundUpdateReceipt/v1",
+            "evidence:exact-head-public-execution",
+            "evidence:exact-head-private-execution",
+            "evidence:linked-open-findings",
+            "evidence:active-freezes",
+            "evidence:owner-definitions",
+        ]
+    ))
+    included_objects = list(declared_objects)
+    closure_frontier = {
+        "status": "CLOSED_UNDER_DECLARED_ALGORITHM"
+        if public_frontier["status"] == "CLOSED_UNDER_DECLARED_ALGORITHM"
+        and private_frontier["status"] == "CLOSED_UNDER_DECLARED_ALGORITHM"
+        else "AMBIGUOUS_OR_UNRESOLVED",
+        "public": public_frontier,
+        "private": private_frontier,
+        "no_additional_object_without_leaving_declared_boundary": bool(
+            public_frontier["fixed_point_verified"]
+            and private_frontier["fixed_point_verified"]
+            and not public_frontier["unresolved_reference_candidates"]
+            and not private_frontier["unresolved_reference_candidates"]
+        ),
+    }
+    completeness = {
+        "schema": "PacketCompletenessReceipt/v1",
+        "cycle_id": CYCLE_ID,
+        "packet_hash": packet_hash,
+        "canonical_packet_file_sha256": packet_file_sha256,
+        "criterion": "COHERENT_COMPLETE",
+        "status": "PASS" if not blockers else "PACKET_INCOMPLETE",
+        "closure_algorithm": CLOSURE_ALGORITHM_ID,
+        "declared_object_set": declared_objects,
+        "included_object_set": included_objects,
+        "exclusion_manifest": exclusions,
+        "closure_frontier": closure_frontier,
+        "blockers": blockers,
+        "head_binding": {
+            "public": PUBLIC_HEAD,
+            "private": PRIVATE_HEAD,
+            "start_observation": start_heads,
+            "pre_freeze_observation": end_heads,
+        },
+        "semantic_delta_admitted": False,
+        "semantic_compliance_proved": False,
+        "authorization_effect": "NONE",
+        "grants_authority": False,
+        "completed_utc": now_utc(),
+    }
+
+    files = {
+        "GardenReviewPacket.json": packet_bytes,
+        "PacketCompletenessReceipt.json": canonical_bytes(completeness),
+        "GardenEvolutionAlgebraUsageReceipt.json": canonical_bytes(usage_receipt),
+        "GardenEvolutionAlgebraValidationReceipt.json": canonical_bytes(algebra_validation),
+        "AlgebraBoundUpdateReceipt.json": canonical_bytes(algebra_bound),
+    }
+    retrieval = {
+        "schema": "GardenEvidenceLedgerEntry/v1",
+        "cycle_id": CYCLE_ID,
+        "packet_schema": "GardenReviewPacket/v1",
+        "packet_hash": packet_hash,
+        "canonical_packet_file_sha256": packet_file_sha256,
+        "completeness_status": completeness["status"],
+        "completeness_receipt_ref": f"evidence/review-packets/{CYCLE_ID}/PacketCompletenessReceipt.json",
+        "algebra_receipt_refs": {
+            "usage": f"evidence/review-packets/{CYCLE_ID}/GardenEvolutionAlgebraUsageReceipt.json",
+            "validation": f"evidence/review-packets/{CYCLE_ID}/GardenEvolutionAlgebraValidationReceipt.json",
+            "bound_update": f"evidence/review-packets/{CYCLE_ID}/AlgebraBoundUpdateReceipt.json",
+        },
+        "retrieval_reference": {
+            "repo": PRIVATE_REPO,
+            "branch": os.environ.get("GITHUB_REF_NAME"),
+            "path": f"evidence/review-packets/{CYCLE_ID}/GardenReviewPacket.json",
+            "binding_private_main_sha": PRIVATE_HEAD,
+        },
+        "blind_review_rule": "Blind reviewers for this CycleID may consume only canonical GardenReviewPacket.json bytes identified by packet_hash; no post-finalization peer findings.",
+        "authority_effect": "NONE",
+        "semantic_compliance_proved": False,
+        "created_utc": now_utc(),
+    }
+    files["ledger-index.json"] = canonical_bytes(retrieval)
+    manifest_lines = []
+    for name, data in sorted(files.items()):
+        (OUT / name).write_bytes(data + (b"\n" if not data.endswith(b"\n") else b""))
+        manifest_lines.append(f"{sha256((OUT/name).read_bytes())}  {name}")
+    (OUT / "MANIFEST.sha256").write_text("\n".join(manifest_lines) + "\n", encoding="utf-8")
+    summary = {
+        "cycle_id": CYCLE_ID,
+        "packet_hash": packet_hash,
+        "packet_file_sha256": packet_file_sha256,
+        "completeness_status": completeness["status"],
+        "blocker_codes": [b["code"] for b in blockers],
+        "public_head": PUBLIC_HEAD,
+        "private_head": PRIVATE_HEAD,
+        "target_head": TARGET_HEAD,
+        "process_version": PROCESS_VERSION,
+        "blind_reviewer_started": blind_state.get("blind_reviewer_started"),
+        "output_dir": str(OUT.relative_to(REPO_ROOT)),
+    }
+    print(json.dumps(summary, sort_keys=True))
+    Path(os.environ.get("GITHUB_OUTPUT", "/tmp/garden-packet-output")).write_text(
+        "\n".join([
+            f"cycle_id={CYCLE_ID}",
+            f"packet_hash={packet_hash}",
+            f"packet_file_sha256={packet_file_sha256}",
+            f"completeness_status={completeness['status']}",
+            f"blocker_codes={','.join(b['code'] for b in blockers)}",
+        ]) + "\n",
+        encoding="utf-8",
+    )
+
+if __name__ == "__main__":
+    main()

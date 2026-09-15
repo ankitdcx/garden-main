@@ -1,0 +1,317 @@
+#!/usr/bin/env python3
+from __future__ import annotations
+
+import hashlib
+import importlib.util
+import json
+from pathlib import Path
+from typing import Any
+
+HERE = Path(__file__).resolve()
+BASE_PATH = HERE.with_name("build_review_packet_one_use.py")
+SPEC = importlib.util.spec_from_file_location("garden_review_packet_base", BASE_PATH)
+base = importlib.util.module_from_spec(SPEC)
+assert SPEC and SPEC.loader
+SPEC.loader.exec_module(base)
+
+base.ALGORITHM_ID = "GardenReviewPacketBuilderDeterministic/v1.3"
+base.CLOSURE_ALGORITHM_ID = "GardenDeclaredReferenceClosure/v1.2"
+BASE_DEPENDENCY_SHA256 = hashlib.sha256(BASE_PATH.read_bytes()).hexdigest()
+WRAPPER_SHA256 = hashlib.sha256(HERE.read_bytes()).hexdigest()
+# Make the base builder's self-hash identify the actually invoked construction entrypoint.
+base.__file__ = str(HERE)
+
+GENERATED_PREFIXES = ("agents/runtime/", "agents/outbox/")
+
+def _canonical(obj: Any) -> bytes:
+    return json.dumps(obj, sort_keys=True, separators=(",", ":"), ensure_ascii=False).encode("utf-8")
+
+def _sha(data: bytes) -> str:
+    return hashlib.sha256(data).hexdigest()
+
+def _is_file_like(path: str) -> bool:
+    name = Path(path.rstrip("/")).name
+    return "." in name and not path.endswith("/")
+
+def _classify_absent(source: str, candidate: str, origin: str, rev: str) -> tuple[str, dict[str, Any]]:
+    if origin == "PYTHON_IMPORT":
+        return "EXCLUDE", {
+            "object": candidate,
+            "from": source,
+            "reason_code": "PYTHON_IMPORT_NOT_RESOLVED_TO_REPOSITORY_OBJECT",
+            "machine_check": {"revision": rev, "candidate_absent_from_git_tree": True, "origin": origin},
+        }
+    if candidate.startswith(GENERATED_PREFIXES):
+        return "EXCLUDE", {
+            "object": candidate,
+            "from": source,
+            "reason_code": "GENERATED_RUNTIME_ARTIFACT_NOT_SOURCE_OBJECT",
+            "machine_check": {"revision": rev, "candidate_absent_from_git_tree": True, "origin": origin},
+        }
+    if not _is_file_like(candidate):
+        return "EXCLUDE", {
+            "object": candidate,
+            "from": source,
+            "reason_code": "NON_FILE_NAMESPACE_OR_DIRECTORY_ANCHOR_NOT_PRESENT",
+            "machine_check": {"revision": rev, "candidate_absent_from_git_tree": True, "origin": origin},
+        }
+    return "UNRESOLVED", {
+        "from": source,
+        "candidate": candidate,
+        "reason": "FILE_LIKE_LOCAL_REFERENCE_TARGET_MISSING",
+        "origin": origin,
+        "revision": rev,
+    }
+
+def _closure(cwd: Path, rev: str, roots: list[str], private: bool = False):
+    all_paths = set(base.list_tree(cwd, rev))
+    include = {p for p in roots if p in all_paths}
+    missing_roots = [p for p in roots if p not in all_paths]
+    unresolved: list[dict[str, Any]] = [
+        {"from": "<ROOT>", "candidate": p, "reason": "REQUIRED_ROOT_MISSING", "revision": rev}
+        for p in missing_roots
+    ]
+    exclusions: list[dict[str, Any]] = []
+    log: list[dict[str, Any]] = []
+    queue = sorted(include)
+    seen: set[str] = set()
+
+    def consider(source: str, cand: str, origin: str) -> None:
+        if cand in all_paths:
+            log.append({"from": source, "candidate": cand, "decision": "INCLUDE", "reason": origin})
+            if cand not in include:
+                include.add(cand)
+                queue.append(cand)
+            return
+        prefix = cand.rstrip("/") + "/"
+        descendants = sorted(p for p in all_paths if p.startswith(prefix))
+        if descendants and origin == "LITERAL_PATH":
+            log.append({
+                "from": source, "candidate": cand, "decision": "EXPAND_DIRECTORY",
+                "reason": "LITERAL_DIRECTORY_REFERENCE", "descendant_count": len(descendants)
+            })
+            for p in descendants:
+                if p not in include:
+                    include.add(p)
+                    queue.append(p)
+            return
+        decision, record = _classify_absent(source, cand, origin, rev)
+        log.append({"from": source, "candidate": cand, "decision": decision, "reason": record.get("reason_code") or record.get("reason")})
+        if decision == "EXCLUDE":
+            exclusions.append(record)
+        else:
+            unresolved.append(record)
+
+    while queue:
+        path = queue.pop(0)
+        if path in seen:
+            continue
+        seen.add(path)
+        data = base.git_file_bytes(cwd, rev, path)
+        text, enc = base.safe_utf8(data)
+        if text is None:
+            log.append({"from": path, "candidate": None, "decision": "NO_TEXT_SCAN", "reason": enc})
+            continue
+        for cand in sorted(base.literal_path_candidates(text)):
+            consider(path, cand, "LITERAL_PATH")
+        if path.endswith(".py"):
+            for cand in sorted(base.python_import_candidates(path, text)):
+                consider(path, cand, "PYTHON_IMPORT")
+
+    if not private:
+        generic_symbols = {"main", "run", "load", "save", "build", "validate", "parse"}
+        symbols = getattr(_closure, "_symbols", [])
+        symbol_names = sorted({
+            s["symbol"] for s in symbols
+            if not s["symbol"].startswith("file::")
+            and not s["symbol"].startswith("<")
+            and len(s["symbol"]) >= 8
+            and s["symbol"] not in generic_symbols
+        })
+        needles = sorted(set(roots + symbol_names))
+        reverse_candidates = [
+            p for p in all_paths
+            if (p.startswith("tests/") or p.startswith(".github/workflows/"))
+            and Path(p).suffix.lower() in base.TEXT_EXTENSIONS
+        ]
+        reverse_added = []
+        for path in sorted(reverse_candidates):
+            text = base.git_file_bytes(cwd, rev, path).decode("utf-8", "replace")
+            hits = [n for n in needles if n and n in text]
+            if hits and path not in include:
+                include.add(path)
+                queue.append(path)
+                reverse_added.append({"path": path, "hits": hits[:50]})
+        while queue:
+            path = queue.pop(0)
+            if path in seen:
+                continue
+            seen.add(path)
+            text = base.git_file_bytes(cwd, rev, path).decode("utf-8", "replace")
+            for cand in sorted(base.literal_path_candidates(text)):
+                consider(path, cand, "LITERAL_PATH")
+            if path.endswith(".py"):
+                for cand in sorted(base.python_import_candidates(path, text)):
+                    consider(path, cand, "PYTHON_IMPORT")
+    else:
+        reverse_added = []
+
+    missing_present: list[dict[str, str]] = []
+    for path in sorted(include):
+        text = base.git_file_bytes(cwd, rev, path).decode("utf-8", "replace")
+        candidates = [(c, "LITERAL_PATH") for c in base.literal_path_candidates(text)]
+        if path.endswith(".py"):
+            candidates.extend((c, "PYTHON_IMPORT") for c in base.python_import_candidates(path, text))
+        for cand, origin in sorted(candidates):
+            if cand in all_paths and cand not in include:
+                missing_present.append({"from": path, "candidate": cand})
+            elif origin == "LITERAL_PATH":
+                prefix = cand.rstrip("/") + "/"
+                for p in all_paths:
+                    if p.startswith(prefix) and p not in include:
+                        missing_present.append({"from": path, "candidate": p})
+
+    # Deduplicate deterministic exclusions and unresolved candidates.
+    exclusion_map = {
+        (x["from"], x["object"], x["reason_code"]): x for x in exclusions
+    }
+    unresolved_map = {
+        (x["from"], x["candidate"], x["reason"]): x for x in unresolved
+    }
+    exclusions = [exclusion_map[k] for k in sorted(exclusion_map)]
+    unresolved = [unresolved_map[k] for k in sorted(unresolved_map)]
+    missing_present = sorted({(x["from"], x["candidate"]) for x in missing_present})
+    missing_present_objs = [{"from": a, "candidate": b} for a, b in missing_present]
+    closed = not missing_present_objs and not unresolved
+    frontier = {
+        "schema": "DeclaredClosureFrontier/v1",
+        "algorithm": base.CLOSURE_ALGORITHM_ID + ("+PRIVATE_BINDINGS" if private else ""),
+        "fixed_point_verified": not missing_present_objs,
+        "additional_present_objects_within_boundary": missing_present_objs,
+        "unresolved_reference_candidates": unresolved,
+        "mechanical_exclusions": exclusions,
+        "status": "CLOSED_UNDER_DECLARED_ALGORITHM" if closed else "AMBIGUOUS_OR_UNRESOLVED",
+        "reverse_reference_additions": reverse_added,
+        "consideration_log_sha256": _sha(_canonical(log)),
+        "consideration_count": len(log),
+    }
+    return sorted(include), log, frontier
+
+def derive_public(cwd: Path, rev: str, changed_files: list[str], symbols: list[dict[str, Any]]):
+    roots = list(changed_files)
+    all_paths = set(base.list_tree(cwd, rev))
+    if ".github/CODEOWNERS" in all_paths:
+        roots.append(".github/CODEOWNERS")
+    _closure._symbols = symbols
+    return _closure(cwd, rev, roots, private=False)
+
+def derive_private(cwd: Path, rev: str, roots: list[str]):
+    return _closure(cwd, rev, roots, private=True)
+
+base.derive_public_closure = derive_public
+base.derive_private_binding_closure = derive_private
+
+def _postprocess() -> None:
+    out = base.OUT
+    packet_path = out / "GardenReviewPacket.json"
+    completeness_path = out / "PacketCompletenessReceipt.json"
+    ledger_path = out / "ledger-index.json"
+    packet = json.loads(packet_path.read_text(encoding="utf-8"))
+    completeness = json.loads(completeness_path.read_text(encoding="utf-8"))
+    ledger = json.loads(ledger_path.read_text(encoding="utf-8"))
+
+    packet["packet_construction"]["algorithm_id"] = base.ALGORITHM_ID
+    packet["packet_construction"]["closure_algorithm_id"] = base.CLOSURE_ALGORITHM_ID
+    packet["packet_construction"]["construction_script_sha256"] = WRAPPER_SHA256
+    packet["packet_construction"]["implementation_dependencies"] = [{
+        "path": "tools/evidence/build_review_packet_one_use.py",
+        "sha256": BASE_DEPENDENCY_SHA256,
+        "role": "BASE_IMPLEMENTATION_DEPENDENCY"
+    }]
+
+    closure = packet["declared_dependency_reference_closure"]
+    closure_exclusions = []
+    for scope_name, repo in (("public_target", base.PUBLIC_REPO), ("private_process_algebra_bindings", base.PRIVATE_REPO)):
+        for ex in closure[scope_name]["frontier"].get("mechanical_exclusions", []):
+            closure_exclusions.append({
+                "object": f"{repo}:{ex['object']}",
+                "reason_code": ex["reason_code"],
+                "machine_check": ex["machine_check"] | {"referenced_from": ex["from"], "closure_scope": scope_name},
+                "blocking": False,
+            })
+    existing = {(x.get("object"), x.get("reason_code")) for x in packet.get("exclusion_manifest", [])}
+    for ex in closure_exclusions:
+        if (ex["object"], ex["reason_code"]) not in existing:
+            packet.setdefault("exclusion_manifest", []).append(ex)
+    packet["exclusion_manifest"] = sorted(packet["exclusion_manifest"], key=lambda x: (x.get("object", ""), x.get("reason_code", "")))
+
+    packet.pop("packet_hash", None)
+    packet_hash = _sha(_canonical(packet))
+    packet["packet_hash"] = packet_hash
+    packet_bytes = _canonical(packet)
+    packet_file_sha256 = _sha(packet_bytes)
+
+    completeness["packet_hash"] = packet_hash
+    completeness["canonical_packet_file_sha256"] = packet_file_sha256
+    completeness["closure_algorithm"] = base.CLOSURE_ALGORITHM_ID
+    completeness["exclusion_manifest"] = packet["exclusion_manifest"]
+    completeness["closure_frontier"] = {
+        "status": "CLOSED_UNDER_DECLARED_ALGORITHM"
+        if closure["public_target"]["frontier"]["status"] == "CLOSED_UNDER_DECLARED_ALGORITHM"
+        and closure["private_process_algebra_bindings"]["frontier"]["status"] == "CLOSED_UNDER_DECLARED_ALGORITHM"
+        else "AMBIGUOUS_OR_UNRESOLVED",
+        "public": closure["public_target"]["frontier"],
+        "private": closure["private_process_algebra_bindings"]["frontier"],
+        "no_additional_object_without_leaving_declared_boundary": bool(
+            closure["public_target"]["frontier"]["fixed_point_verified"]
+            and closure["private_process_algebra_bindings"]["frontier"]["fixed_point_verified"]
+            and not closure["public_target"]["frontier"]["unresolved_reference_candidates"]
+            and not closure["private_process_algebra_bindings"]["frontier"]["unresolved_reference_candidates"]
+        ),
+    }
+    # Remove only closure blockers that the v1.2 algorithm has mechanically resolved.
+    completeness["blockers"] = [
+        b for b in completeness.get("blockers", [])
+        if not (
+            b.get("code") == "PUBLIC_CLOSURE_NOT_CLOSED"
+            and closure["public_target"]["frontier"]["status"] == "CLOSED_UNDER_DECLARED_ALGORITHM"
+        )
+        and not (
+            b.get("code") == "PRIVATE_BINDING_CLOSURE_NOT_CLOSED"
+            and closure["private_process_algebra_bindings"]["frontier"]["status"] == "CLOSED_UNDER_DECLARED_ALGORITHM"
+        )
+    ]
+    completeness["status"] = "PASS" if not completeness["blockers"] else "PACKET_INCOMPLETE"
+
+    ledger["packet_hash"] = packet_hash
+    ledger["canonical_packet_file_sha256"] = packet_file_sha256
+    ledger["completeness_status"] = completeness["status"]
+
+    packet_path.write_bytes(packet_bytes + b"\n")
+    completeness_path.write_bytes(_canonical(completeness) + b"\n")
+    ledger_path.write_bytes(_canonical(ledger) + b"\n")
+
+    manifest_names = [
+        "AlgebraBoundUpdateReceipt.json",
+        "GardenEvolutionAlgebraUsageReceipt.json",
+        "GardenEvolutionAlgebraValidationReceipt.json",
+        "GardenReviewPacket.json",
+        "PacketCompletenessReceipt.json",
+        "ledger-index.json",
+    ]
+    (out / "MANIFEST.sha256").write_text(
+        "".join(f"{_sha((out / name).read_bytes())}  {name}\n" for name in sorted(manifest_names)),
+        encoding="utf-8",
+    )
+    print(json.dumps({
+        "cycle_id": base.CYCLE_ID,
+        "packet_hash": packet_hash,
+        "packet_file_sha256": packet_file_sha256,
+        "completeness_status": completeness["status"],
+        "blocker_codes": [b.get("code") for b in completeness["blockers"]],
+        "closure_exclusion_count": len(closure_exclusions),
+    }, sort_keys=True))
+
+if __name__ == "__main__":
+    base.main()
+    _postprocess()

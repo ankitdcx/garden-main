@@ -1,0 +1,608 @@
+#!/usr/bin/env python3
+from __future__ import annotations
+
+import hashlib
+import json
+import os
+import platform
+import re
+import subprocess
+import sys
+import urllib.request
+from pathlib import Path
+from typing import Any, Iterable
+
+ROOT = Path(__file__).resolve().parents[2]
+sys.path.insert(0, str(ROOT / "implementation"))
+
+from garden_kernel.process_engine import (  # noqa: E402
+    CURRENT_GOVERNING_PROCESS_VERSION,
+    CycleBinding,
+    ProcessFactory,
+    ProcessRoute,
+    ProcessState,
+)
+from garden_kernel.section_units import build_inventory  # noqa: E402
+
+EXPECTED_MAIN_HEAD = "c204d9d97292ab8bb66c4d6f0b40795235e07777"
+EXPECTED_SWARM_HEAD = "2aebb9aa92f200149869179092d454ab90c5593c"
+SECTION_UNIT_IMPLEMENTATION_PR = 53
+SECTION_UNIT_IMPLEMENTATION_HEAD = "71b905eec8d66b1457dd5ee3f87420a6076e5e77"
+SOURCE_ROOT = "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598"
+DESIGN_EPOCH = "v15.5"
+DESIGN_EPOCH_REF = f"Garden-v15.5@{SOURCE_ROOT}"
+PROCESS_VERSION = "1.4"
+PRIVATE_REPO = "ankitdcx/garden-main"
+PUBLIC_REPO = "ankitdcx/garden-swarm"
+PROFILE_PATH = ROOT / "gsl" / "EVOLUTION_ALGEBRA_PROFILE.json"
+MANIFEST_PATH = ROOT / "canonical" / "current" / "SOURCE_MANIFEST.json"
+CURRENT_PROCESS_PATH = ROOT / "governance" / "PROCESS_CURRENT.json"
+ENGINE_PROFILE_PATH = ROOT / "governance" / "PROCESS_ENGINE_IMPLEMENTATION_v1.json"
+PIPELINE_HEALTH_CURRENT_PATH = ROOT / "governance" / "PIPELINE_HEALTH_CURRENT.json"
+
+SCHEMA_RE = re.compile(r"\b[A-Za-z][A-Za-z0-9_.-]+/v[0-9][A-Za-z0-9_.-]*\b")
+REGISTRY_RE = re.compile(r"\bREG-[A-Z0-9][A-Z0-9._-]*\b")
+FC_RE = re.compile(r"\b(?:FC-[A-Z0-9][A-Z0-9._-]*|FunctionContract(?:/[A-Za-z0-9_.-]+)?)\b")
+INVARIANT_ID_RE = re.compile(r"\b(?:INV-[A-Z0-9][A-Z0-9._-]*|[A-Z][A-Z0-9]{1,20}-\d{3})\b")
+TEST_ID_RE = re.compile(r"\bTEST-[A-Z0-9][A-Z0-9._-]*\b")
+DECL_LINE_RE = {
+    "function_contracts": re.compile(r"^\s*@FC\|.*$", re.MULTILINE),
+    "invariants": re.compile(r"^\s*@INV\|.*$", re.MULTILINE),
+    "tests": re.compile(r"^\s*@TEST\|.*$", re.MULTILINE),
+}
+
+
+def canonical_bytes(obj: Any) -> bytes:
+    return json.dumps(obj, sort_keys=True, separators=(",", ":"), ensure_ascii=False).encode("utf-8")
+
+
+def pretty(obj: Any) -> str:
+    return json.dumps(obj, sort_keys=True, indent=2, ensure_ascii=False) + "\n"
+
+
+def sha256(data: bytes) -> str:
+    return hashlib.sha256(data).hexdigest()
+
+
+def run_text(*args: str, check: bool = True) -> str:
+    cp = subprocess.run(args, cwd=ROOT, text=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+    if check and cp.returncode != 0:
+        raise RuntimeError(f"command failed {args!r}: {cp.stderr.strip()}")
+    return cp.stdout.strip()
+
+
+def git(*args: str, check: bool = True) -> str:
+    return run_text("git", *args, check=check)
+
+
+def git_bytes(*args: str, check: bool = True) -> bytes:
+    cp = subprocess.run(("git", *args), cwd=ROOT, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+    if check and cp.returncode != 0:
+        raise RuntimeError(f"git failed {args!r}: {cp.stderr.decode('utf-8', 'replace').strip()}")
+    return cp.stdout
+
+
+def api_json(url: str) -> Any:
+    token = os.environ.get("GITHUB_TOKEN", "").strip()
+    headers = {
+        "Accept": "application/vnd.github+json",
+        "X-GitHub-Api-Version": "2022-11-28",
+        "User-Agent": "Garden-Governed-ReviewPacket-Builder-v1",
+    }
+    if token:
+        headers["Authorization"] = f"Bearer {token}"
+    req = urllib.request.Request(url, headers=headers)
+    with urllib.request.urlopen(req, timeout=30) as response:
+        return json.loads(response.read().decode("utf-8"))
+
+
+def remote_main_head(repo: str) -> str:
+    return str(api_json(f"https://api.github.com/repos/{repo}/branches/main")["commit"]["sha"])
+
+
+def load_json(path: Path) -> dict[str, Any]:
+    return json.loads(path.read_text(encoding="utf-8"))
+
+
+def exact_file(path: str, rev: str = EXPECTED_MAIN_HEAD) -> dict[str, Any]:
+    raw = git_bytes("show", f"{rev}:{path}")
+    return {
+        "path": path,
+        "revision": rev,
+        "git_blob_sha1": git("rev-parse", f"{rev}:{path}"),
+        "sha256": sha256(raw),
+        "bytes": len(raw),
+    }
+
+
+def unit_content(unit: Any) -> str:
+    path = ROOT / "canonical" / "current" / unit.source_file
+    lines = path.read_text(encoding="utf-8").splitlines()
+    return "\n".join(lines[unit.start_line - 1 : unit.end_line])
+
+
+def mechanical_anchor_closure(inventory: Any, selected: Any) -> tuple[list[Any], list[dict[str, str]]]:
+    by_anchor: dict[str, list[Any]] = {}
+    for unit in inventory.units:
+        if unit.anchor:
+            by_anchor.setdefault(unit.anchor, []).append(unit)
+    included: dict[str, Any] = {selected.unit_id: selected}
+    queue = [selected]
+    unresolved: dict[tuple[str, str], dict[str, str]] = {}
+    while queue:
+        unit = queue.pop(0)
+        for ref in unit.references:
+            targets = by_anchor.get(ref)
+            if not targets:
+                unresolved[(unit.unit_id, ref)] = {
+                    "from_section_unit": unit.unit_id,
+                    "reference": ref,
+                    "reason": "ANCHOR_REFERENCE_TARGET_NOT_FOUND_IN_CANONICAL_SECTION_INVENTORY",
+                }
+                continue
+            for target in targets:
+                if target.unit_id not in included:
+                    included[target.unit_id] = target
+                    queue.append(target)
+    ordered = [u for u in inventory.units if u.unit_id in included]
+    return ordered, [unresolved[key] for key in sorted(unresolved)]
+
+
+def extract_semantic_objects(texts: Iterable[str]) -> dict[str, list[str]]:
+    joined = "\n".join(texts)
+    schemas = sorted(set(SCHEMA_RE.findall(joined)))
+    registries = sorted(set(REGISTRY_RE.findall(joined)))
+    function_contracts = set(FC_RE.findall(joined))
+    invariants = set(INVARIANT_ID_RE.findall(joined))
+    tests = set(TEST_ID_RE.findall(joined))
+    for line in DECL_LINE_RE["function_contracts"].findall(joined):
+        function_contracts.add(line.strip())
+    for line in DECL_LINE_RE["invariants"].findall(joined):
+        invariants.add(line.strip())
+    for line in DECL_LINE_RE["tests"].findall(joined):
+        tests.add(line.strip())
+    return {
+        "schemas": schemas,
+        "function_contracts": sorted(function_contracts),
+        "invariants": sorted(invariants),
+        "tests": sorted(tests),
+        "registries": registries,
+    }
+
+
+def workflow_runs_for(sha: str) -> list[dict[str, Any]]:
+    data = api_json(f"https://api.github.com/repos/{PRIVATE_REPO}/actions/runs?head_sha={sha}&per_page=100")
+    rows = []
+    for run in data.get("workflow_runs", []):
+        rows.append({
+            "id": run.get("id"),
+            "name": run.get("name"),
+            "event": run.get("event"),
+            "status": run.get("status"),
+            "conclusion": run.get("conclusion"),
+            "run_number": run.get("run_number"),
+            "head_sha": run.get("head_sha"),
+            "created_at": run.get("created_at"),
+            "updated_at": run.get("updated_at"),
+            "html_url": run.get("html_url"),
+        })
+    return rows
+
+
+def required_ci_summary(runs: list[dict[str, Any]]) -> dict[str, Any]:
+    required = [
+        "Garden Seed CI",
+        "Garden main publication readiness",
+        "Garden private kernel CI",
+        "Multi-agent integration provenance",
+    ]
+    successes: dict[str, list[int]] = {}
+    for name in required:
+        successes[name] = [int(r["id"]) for r in runs if r.get("name") == name and r.get("conclusion") == "success"]
+    return {
+        "required_workflow_names": required,
+        "successful_run_ids_by_name": successes,
+        "required_checks_pass": all(successes[name] for name in required),
+    }
+
+
+def main() -> int:
+    # Fail closed on any current-head drift before constructing a CycleBinding.
+    actual_main = remote_main_head(PRIVATE_REPO)
+    actual_swarm = remote_main_head(PUBLIC_REPO)
+    if actual_main != EXPECTED_MAIN_HEAD:
+        raise SystemExit(f"FAIL_CLOSED: garden-main main drifted: expected {EXPECTED_MAIN_HEAD}, got {actual_main}")
+    if actual_swarm != EXPECTED_SWARM_HEAD:
+        raise SystemExit(f"FAIL_CLOSED: garden-swarm main drifted: expected {EXPECTED_SWARM_HEAD}, got {actual_swarm}")
+
+    process_current = load_json(CURRENT_PROCESS_PATH)
+    engine_profile = load_json(ENGINE_PROFILE_PATH)
+    algebra_profile = load_json(PROFILE_PATH)
+    manifest = load_json(MANIFEST_PATH)
+    if process_current.get("current_version") != PROCESS_VERSION or process_current.get("status") != "HUMAN_ADMITTED_CURRENT":
+        raise SystemExit("FAIL_CLOSED: PROCESS_CURRENT is unavailable, stale, or not HUMAN_ADMITTED_CURRENT")
+    if engine_profile.get("required_process_version") != PROCESS_VERSION:
+        raise SystemExit("FAIL_CLOSED: process-engine profile does not bind current ProcessVersion")
+    if engine_profile.get("implementation") != "implementation/garden_kernel/process_engine.py":
+        raise SystemExit("FAIL_CLOSED: process-engine implementation binding is unexpected")
+    if engine_profile.get("algebra_registry_ref") != "REG-ALGEBRA-001":
+        raise SystemExit("FAIL_CLOSED: process-engine algebra registry binding is stale")
+    if CURRENT_GOVERNING_PROCESS_VERSION != PROCESS_VERSION:
+        raise SystemExit("FAIL_CLOSED: imported process engine does not implement ProcessVersion 1.4")
+    if algebra_profile.get("design_epoch") != DESIGN_EPOCH or algebra_profile.get("canonical_source_root_sha256") != SOURCE_ROOT:
+        raise SystemExit("FAIL_CLOSED: algebra profile is stale for canonical DesignEpoch/source root")
+    if manifest.get("source_root_sha256") != SOURCE_ROOT:
+        raise SystemExit("FAIL_CLOSED: canonical source manifest is stale")
+
+    # The evidence branch may add only builder plumbing. It may not alter the governing engine/profile/process bindings.
+    protected_bindings = [
+        "governance/PROCESS_CURRENT.json",
+        "governance/GardenCanonicalUpdateProcess_v1.4.json",
+        "governance/PROCESS_ENGINE_IMPLEMENTATION_v1.json",
+        "implementation/garden_kernel/process_engine.py",
+        "gsl/EVOLUTION_ALGEBRA_PROFILE.json",
+        "canonical/current/SOURCE_MANIFEST.json",
+    ]
+    changed_protected = git("diff", "--name-only", EXPECTED_MAIN_HEAD, "HEAD", "--", *protected_bindings)
+    if changed_protected.strip():
+        raise SystemExit(f"FAIL_CLOSED: evidence branch changed protected process bindings: {changed_protected}")
+
+    inventory = build_inventory(
+        source_dir=ROOT / "canonical" / "current",
+        manifest=manifest,
+        process_version=PROCESS_VERSION,
+    )
+    selected = next((u for u in inventory.units if u.tier == "TIER_A"), None)
+    if selected is None:
+        raise SystemExit("FAIL_CLOSED: canonical inventory has no Tier-A SectionUnit")
+
+    cycle_seed = "\0".join([
+        PROCESS_VERSION,
+        DESIGN_EPOCH_REF,
+        SOURCE_ROOT,
+        EXPECTED_MAIN_HEAD,
+        EXPECTED_SWARM_HEAD,
+        selected.unit_id,
+    ]).encode("utf-8")
+    cycle_id = "GARDEN-CYCLE-" + sha256(cycle_seed)[:24].upper()
+    work_id = f"SECTION_UNIT_REVIEW:{selected.unit_id}"
+    binding = CycleBinding(
+        cycle_id=cycle_id,
+        process_version=PROCESS_VERSION,
+        design_epoch=DESIGN_EPOCH,
+        source_root_sha256=SOURCE_ROOT,
+        repo_heads={PRIVATE_REPO: EXPECTED_MAIN_HEAD, PUBLIC_REPO: EXPECTED_SWARM_HEAD},
+    )
+
+    # Exactly one route is classified. ProcessFactory/GardenProcess own all route/state semantics.
+    route = ProcessRoute.SECTION_UNIT_REVIEW
+    process = ProcessFactory.create(route, binding=binding, work_id=work_id)
+    route_receipt = process.route_receipt()
+    transition_refs = [
+        "governance/PROCESS_CURRENT.json",
+        "governance/GardenCanonicalUpdateProcess_v1.4.json",
+        "governance/PROCESS_ENGINE_IMPLEMENTATION_v1.json",
+        "implementation/garden_kernel/process_engine.py",
+        f"canonical/current/{selected.source_file}:{selected.start_line}-{selected.end_line}",
+    ]
+    routed_required = sorted(process.required_gates(ProcessState.ROUTED))
+    routed_transition = process.advance(
+        ProcessState.ROUTED,
+        satisfied_gates=routed_required,
+        algebra_profile=algebra_profile,
+        source_obligation_refs=transition_refs,
+    )
+
+    closure_units, unresolved = mechanical_anchor_closure(inventory, selected)
+    closure_texts = [unit_content(u) for u in closure_units]
+    semantic_objects = extract_semantic_objects(closure_texts)
+    owners = sorted({owner for u in closure_units for owner in u.owner_ids})
+
+    closure_members = []
+    for unit, content in zip(closure_units, closure_texts):
+        closure_members.append({
+            "section_unit": unit.to_dict(),
+            "content": content,
+            "content_sha256_verified": sha256(content.encode("utf-8")) == unit.content_sha256,
+        })
+
+    source_path = f"canonical/current/{selected.source_file}"
+    main_parent = git("rev-list", "--parents", "-n", "1", EXPECTED_MAIN_HEAD).split()[1]
+    target_diff = git_bytes("diff", "--binary", "--full-index", "--no-color", main_parent, EXPECTED_MAIN_HEAD, "--", source_path)
+    target_change_proof = {
+        "schema": "TargetChangeProof/v1",
+        "mode": "NO_CHANGE" if not target_diff else "DIFF",
+        "comparison_base": main_parent,
+        "comparison_head": EXPECTED_MAIN_HEAD,
+        "path": source_path,
+        "diff_sha256": sha256(target_diff),
+        "diff_bytes": len(target_diff),
+        "exact_diff_text": target_diff.decode("utf-8", "replace"),
+        "canonical_manifest_file_sha256": selected.source_file_sha256,
+        "current_file_sha256": sha256((ROOT / source_path).read_bytes()),
+    }
+
+    implementation_paths = [
+        "implementation/garden_kernel/process_engine.py",
+        "implementation/garden_kernel/section_units.py",
+        "implementation/tests/test_process_engine.py",
+        "implementation/tests/test_section_units.py",
+        "scripts/build_canonical_section_units.py",
+        "governance/PROCESS_CURRENT.json",
+        "governance/GardenCanonicalUpdateProcess_v1.4.json",
+        "governance/PROCESS_ENGINE_IMPLEMENTATION_v1.json",
+        "gsl/EVOLUTION_ALGEBRA_PROFILE.json",
+        "canonical/current/SOURCE_MANIFEST.json",
+    ]
+    implementation_bindings = [exact_file(path) for path in implementation_paths]
+
+    pr_head_runs = workflow_runs_for(SECTION_UNIT_IMPLEMENTATION_HEAD)
+    main_head_runs = workflow_runs_for(EXPECTED_MAIN_HEAD)
+    ci_summary = required_ci_summary(pr_head_runs)
+    current_commit = api_json(f"https://api.github.com/repos/{PRIVATE_REPO}/commits/{EXPECTED_MAIN_HEAD}")
+    exact_head_ci = {
+        "section_unit_implementation_pr": SECTION_UNIT_IMPLEMENTATION_PR,
+        "tested_pr_head": SECTION_UNIT_IMPLEMENTATION_HEAD,
+        "tested_pr_head_runs": pr_head_runs,
+        "tested_pr_head_summary": ci_summary,
+        "current_main_head": EXPECTED_MAIN_HEAD,
+        "current_main_head_runs": main_head_runs,
+        "current_main_direct_run_count": len(main_head_runs),
+        "current_main_commit_verification": current_commit.get("commit", {}).get("verification"),
+        "boundary": "Successful PR-head checks establish the implementation head evidence; absence of direct merge-commit runs is preserved as an unresolved exact-head-enforcement gap rather than inferred success.",
+    }
+
+    pipeline_current = load_json(PIPELINE_HEALTH_CURRENT_PATH)
+    health_receipt_path = ROOT / str(pipeline_current.get("receipt", ""))
+    pipeline_health = load_json(health_receipt_path) if health_receipt_path.is_file() else {
+        "schema": "MissingPipelineHealthReceipt/v1",
+        "reason": "PIPELINE_HEALTH_CURRENT receipt path unavailable",
+    }
+    repair_obligations = list(pipeline_health.get("repair_obligations", []))
+    repair_ids = [str(x.get("repair_id")) for x in repair_obligations if x.get("repair_id")]
+
+    unresolved_findings: list[dict[str, Any]] = []
+    if unresolved:
+        unresolved_findings.append({
+            "id": "PACKET-UNRESOLVED-CANONICAL-ANCHOR-REFERENCES",
+            "severity": "BLOCKING_PACKET_COMPLETENESS",
+            "count": len(unresolved),
+            "evidence": unresolved,
+        })
+    if not ci_summary["required_checks_pass"]:
+        unresolved_findings.append({
+            "id": "SECTION-UNIT-IMPLEMENTATION-REQUIRED-CI-NOT-FULLY-PASSING",
+            "severity": "BLOCKING_PACKET_COMPLETENESS",
+            "evidence": ci_summary,
+        })
+    if not main_head_runs:
+        unresolved_findings.append({
+            "id": "CURRENT-MAIN-NO-DIRECT-WORKFLOW-RUNS",
+            "severity": "KNOWN_ENFORCEMENT_GAP_NONBLOCKING_FOR_PACKET_CONTENT",
+            "evidence": {"head": EXPECTED_MAIN_HEAD, "direct_run_count": 0},
+        })
+    health_exact = pipeline_health.get("exact_state", {}) if isinstance(pipeline_health, dict) else {}
+    health_bound_head = health_exact.get("garden_main_head")
+    if health_bound_head and health_bound_head != EXPECTED_MAIN_HEAD:
+        unresolved_findings.append({
+            "id": "PIPELINE-HEALTH-RECEIPT-HEAD-STALE",
+            "severity": "KNOWN_HEALTH_EVIDENCE_STALENESS",
+            "evidence": {"receipt_head": health_bound_head, "current_head": EXPECTED_MAIN_HEAD},
+        })
+
+    freezes = [
+        {
+            "scope": "SEMANTIC_DECISION_AND_ADMISSION",
+            "state": "FROZEN_BY_THIS_EVIDENCE_ONLY_LANE",
+            "reason": "ReviewPacket construction has no semantic-decision authority.",
+        },
+        {
+            "scope": "CANONICAL_PROMOTION",
+            "state": "FROZEN",
+            "reason": "Packet construction and algebra validation never grant promotion authority.",
+        },
+    ]
+    for obligation in repair_obligations:
+        for scope in obligation.get("dependent_freeze", []) or []:
+            freezes.append({
+                "scope": scope,
+                "state": "FROZEN_BY_PIPELINE_HEALTH_REPAIR_OBLIGATION",
+                "reason": obligation.get("repair_id"),
+            })
+
+    packet = {
+        "schema": "GardenReviewPacket/v1",
+        "cycle_binding": {
+            "schema": "CycleBinding/v1",
+            "CycleID": binding.cycle_id,
+            "ProcessVersion": binding.process_version,
+            "DesignEpoch": binding.design_epoch,
+            "DesignEpochRef": DESIGN_EPOCH_REF,
+            "source_root_sha256": binding.source_root_sha256,
+            "repo_heads": dict(binding.repo_heads),
+            "immutable": True,
+        },
+        "route": route.value,
+        "work_id": work_id,
+        "review_mode": "COHERENT_COMPLETE",
+        "target": {
+            "kind": "CANONICAL_SECTION_UNIT",
+            "tier": selected.tier,
+            "section_unit": selected.to_dict(),
+            "content": unit_content(selected),
+            "source_file_evidence": exact_file(source_path),
+            "change_proof": target_change_proof,
+        },
+        "declared_dependency_reference_closure": {
+            "algorithm": "CanonicalSectionUnitAnchorClosure/v1",
+            "roots": [selected.unit_id],
+            "members": closure_members,
+            "member_count": len(closure_members),
+            "unresolved_reference_candidates": unresolved,
+            "reviewer_proposed_expansions": [],
+            "reviewer_proposed_expansion_state": "NONE; any future proposal is NEW_CLOSURE_CANDIDATE until mechanically validated",
+            "fixed_point_verified": not unresolved,
+            "status": "CLOSED_UNDER_DECLARED_ALGORITHM" if not unresolved else "AMBIGUOUS_OR_UNRESOLVED",
+        },
+        "owners": owners,
+        "schemas": semantic_objects["schemas"],
+        "function_contracts": semantic_objects["function_contracts"],
+        "invariants": semantic_objects["invariants"],
+        "tests": {
+            "canonical_declared_tests": semantic_objects["tests"],
+            "implementation_test_bindings": [
+                exact_file("implementation/tests/test_process_engine.py"),
+                exact_file("implementation/tests/test_section_units.py"),
+            ],
+        },
+        "registries": semantic_objects["registries"],
+        "implementation_bindings": implementation_bindings,
+        "exact_head_ci_environment_evidence": exact_head_ci,
+        "packet_builder_environment": {
+            "python": sys.version,
+            "platform": platform.platform(),
+            "git_version": git("--version"),
+            "github_run_id": os.environ.get("GITHUB_RUN_ID"),
+            "github_run_attempt": os.environ.get("GITHUB_RUN_ATTEMPT"),
+            "github_sha": os.environ.get("GITHUB_SHA"),
+            "github_ref": os.environ.get("GITHUB_REF"),
+        },
+        "freezes": freezes,
+        "unresolved_findings": unresolved_findings,
+        "repair_obligations": repair_obligations,
+        "pending_work_ids": sorted(set([
+            "WP-002",
+            "GARDEN-MAIN-PR-53",
+            selected.unit_id,
+            *repair_ids,
+        ])),
+        "exclusions": [
+            {
+                "scope": "SEMANTIC_DISPOSITION",
+                "reason": "Packet builder is evidence-only and may not accept/reject the target semantics.",
+            },
+            {
+                "scope": "REVIEWER_PROPOSED_CLOSURE_EXPANSION",
+                "reason": "No reviewer-proposed expansion exists yet; any future one remains NEW_CLOSURE_CANDIDATE until mechanical validation.",
+            },
+        ],
+        "closure_frontier": {
+            "canonical_anchor_closure": "CLOSED" if not unresolved else "OPEN_UNRESOLVED_REFERENCES",
+            "policy_algebra": "FRONTIER",
+            "decision_algebra": "FRONTIER",
+            "evidence_algebra": "FRONTIER",
+            "bridge_algebra": "NOT_APPLICABLE",
+            "semantic_compliance_proved": False,
+        },
+        "decision": "NOT_EVALUATED",
+        "authorization_effect": "NONE",
+        "semantic_compliance_proved": False,
+    }
+    packet_hash = sha256(canonical_bytes(packet))
+    packet["packet_hash"] = packet_hash
+
+    blockers: list[dict[str, Any]] = []
+    if unresolved:
+        blockers.append({"code": "REQUIRED_CANONICAL_REFERENCE_CLOSURE_MISSING", "count": len(unresolved)})
+    if not ci_summary["required_checks_pass"]:
+        blockers.append({"code": "REQUIRED_SECTION_UNIT_IMPLEMENTATION_CI_NOT_PASSING"})
+    required_checks = {
+        "process_current_resolved": process_current.get("current_version") == PROCESS_VERSION,
+        "process_engine_profile_current": engine_profile.get("required_process_version") == PROCESS_VERSION,
+        "cycle_binding_exact_repo_heads": dict(binding.repo_heads) == {PRIVATE_REPO: EXPECTED_MAIN_HEAD, PUBLIC_REPO: EXPECTED_SWARM_HEAD},
+        "exact_target_evidence_present": bool(packet["target"]["content"]),
+        "target_source_hash_verified": packet["target"]["change_proof"]["canonical_manifest_file_sha256"] == packet["target"]["change_proof"]["current_file_sha256"],
+        "target_no_change_proof": packet["target"]["change_proof"]["mode"] == "NO_CHANGE",
+        "owners_present": bool(owners),
+        "implementation_bindings_present": len(implementation_bindings) == len(implementation_paths),
+        "exact_ci_evidence_present": bool(pr_head_runs),
+        "required_pr_head_ci_pass": bool(ci_summary["required_checks_pass"]),
+        "repair_obligations_included": isinstance(repair_obligations, list),
+        "closure_fixed_point": not unresolved,
+        "route_receipt_engine_generated": route_receipt.get("schema") == "ProcessRouteReceipt/v1" and route_receipt.get("route") == route.value,
+        "created_to_routed_engine_transition": routed_transition.get("schema") == "GardenProcessTransitionReceipt/v1" and routed_transition.get("from_state") == "CREATED" and routed_transition.get("to_state") == "ROUTED",
+        "route_transition_algebra_registry": routed_transition.get("algebra_registry_ref") == "REG-ALGEBRA-001",
+        "algebra_grants_no_authority": routed_transition.get("authorization_result") == "NOT_MINTED_BY_PROCESS_ENGINE",
+    }
+    for name, passed in required_checks.items():
+        if not passed:
+            blockers.append({"code": "REQUIRED_CHECK_FAILED", "check": name})
+
+    completeness = {
+        "schema": "PacketCompletenessProof/v1",
+        "cycle_id": cycle_id,
+        "packet_hash": packet_hash,
+        "mode": "COHERENT_COMPLETE",
+        "route": route.value,
+        "target_section_unit_id": selected.unit_id,
+        "required_checks": required_checks,
+        "blockers": blockers,
+        "closure_frontier": packet["closure_frontier"],
+        "status": "PASS" if not blockers else "PACKET_INCOMPLETE",
+        "packet_ready_gate": "PACKET_COMPLETENESS_PROOF_PASS" if not blockers else "NOT_SATISFIED",
+        "authorization_effect": "NONE",
+        "semantic_compliance_proved": False,
+    }
+
+    packet_ready_transition: dict[str, Any] | None = None
+    if completeness["status"] == "PASS":
+        packet_required = sorted(process.required_gates(ProcessState.PACKET_READY))
+        packet_ready_transition = process.advance(
+            ProcessState.PACKET_READY,
+            satisfied_gates=packet_required,
+            algebra_profile=algebra_profile,
+            source_obligation_refs=[*transition_refs, "PacketCompletenessProof/v1", packet_hash],
+        )
+
+    out = ROOT / "evidence" / "review-packets" / cycle_id
+    out.mkdir(parents=True, exist_ok=True)
+    artifacts: dict[str, Any] = {
+        "CycleBinding.json": packet["cycle_binding"],
+        "ProcessRouteReceipt.json": route_receipt,
+        "Transition-CREATED-ROUTED.json": routed_transition,
+        "GardenReviewPacket.json": packet,
+        "PacketCompletenessProof.json": completeness,
+    }
+    if packet_ready_transition is not None:
+        artifacts["Transition-ROUTED-PACKET_READY.json"] = packet_ready_transition
+    for name, payload in artifacts.items():
+        (out / name).write_text(pretty(payload), encoding="utf-8")
+    (out / "TargetDiff.patch").write_bytes(target_diff)
+
+    ledger = {
+        "schema": "GardenReviewPacketLedgerEntry/v1",
+        "cycle_id": cycle_id,
+        "packet_hash": packet_hash,
+        "route": route.value,
+        "selected_section_unit": selected.unit_id,
+        "tier": selected.tier,
+        "process_state": process.state.value,
+        "completeness_status": completeness["status"],
+        "repo_heads": dict(binding.repo_heads),
+        "authorization_effect": "NONE",
+    }
+    (out / "ledger-index.json").write_text(pretty(ledger), encoding="utf-8")
+
+    sums = []
+    for path in sorted(out.iterdir()):
+        if path.name == "SHA256SUMS" or not path.is_file():
+            continue
+        sums.append(f"{sha256(path.read_bytes())}  {path.name}")
+    (out / "SHA256SUMS").write_text("\n".join(sums) + "\n", encoding="utf-8")
+
+    github_output = os.environ.get("GITHUB_OUTPUT")
+    if github_output:
+        with open(github_output, "a", encoding="utf-8") as handle:
+            handle.write(f"cycle_id={cycle_id}\n")
+            handle.write(f"packet_hash={packet_hash}\n")
+            handle.write(f"route={route.value}\n")
+            handle.write(f"selected_section_unit={selected.unit_id}\n")
+            handle.write(f"completeness_status={completeness['status']}\n")
+            handle.write(f"process_state={process.state.value}\n")
+            handle.write(f"blocker_count={len(blockers)}\n")
+    print(pretty(ledger), end="")
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

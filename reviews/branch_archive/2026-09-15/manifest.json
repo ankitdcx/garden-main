@@ -1,0 +1,179 @@
+{
+  "schema": "BranchArchiveManifest/v1",
+  "date": "2026-09-15",
+  "repository": "ankitdcx/garden-main",
+  "base_sha": "46a423d56f10aa67ab610a3446144e89451d7e1f",
+  "canonical_effect": "NONE",
+  "authority_effect": "NONE",
+  "scope": "Exact changed-file blobs from each retiring branch; .txt snapshots are inactive historical data. Original Git commit SHA preserves full-tree lineage. This is preservation, not functional adoption, review approval, or freeze lifting.",
+  "branches": [
+    {
+      "branch": "audit/project-verification-20260915",
+      "sha": "7479780c466b9fd0c407b4d4f5a949c508784ab1",
+      "disposition": "ALREADY_MERGED",
+      "ahead_of_initial_main": 0,
+      "files": []
+    },
+    {
+      "branch": "design-delta-ledger-v1-20260914",
+      "sha": "bdcf9cf61a6c991853a0cafcb71237a1657ddc21",
+      "disposition": "FROZEN_PENDING_CHALLENGER",
+      "ahead_of_initial_main": 15,
+      "files": [
+        {
+          "original_path": ".github/workflows/delta-ledger-ci.yml",
+          "archive_path": "reviews/branch_archive/2026-09-15/design-delta-ledger-v1-20260914/.github/workflows/delta-ledger-ci.yml.txt",
+          "blob_sha": "47b2450c4959d50ff78ecf72d5cb199defa20658"
+        },
+        {
+          "original_path": "design_deltas/schema/DeltaRecord.v1.schema.json",
+          "archive_path": "reviews/branch_archive/2026-09-15/design-delta-ledger-v1-20260914/design_deltas/schema/DeltaRecord.v1.schema.json.txt",
+          "blob_sha": "71202a88dda270deffcb1109338b00becd251e56"
+        },
+        {
+          "original_path": "design_deltas/v15.6/DELTA_LEDGER.json",
+          "archive_path": "reviews/branch_archive/2026-09-15/design-delta-ledger-v1-20260914/design_deltas/v15.6/DELTA_LEDGER.json.txt",
+          "blob_sha": "de12f13cdf0e1da4cb021ed5834276da73dfeea8"
+        },
+        {
+          "original_path": "design_deltas/v15.6/README.md",
+          "archive_path": "reviews/branch_archive/2026-09-15/design-delta-ledger-v1-20260914/design_deltas/v15.6/README.md.txt",
+          "blob_sha": "bbfba780c7199f6af20b2c7ea6ee91ff0f1bdede"
+        },
+        {
+          "original_path": "tests/test_delta_ledger.py",
+          "archive_path": "reviews/branch_archive/2026-09-15/design-delta-ledger-v1-20260914/tests/test_delta_ledger.py.txt",
+          "blob_sha": "8c99789dc0157c5851a37918a1c1298975696e22"
+        },
+        {
+          "original_path": "tools/validate_delta_ledger.py",
+          "archive_path": "reviews/branch_archive/2026-09-15/design-delta-ledger-v1-20260914/tools/validate_delta_ledger.py.txt",
+          "blob_sha": "eb0289fa704fae6925da47fe73a91e5971fb0bba"
+        }
+      ]
+    },
+    {
+      "branch": "evidence/review-packet/GARDEN-CYCLE-9808F68B96C2B1AD7FA2",
+      "sha": "be208a6dbb11f9bc03e4c086b0da8a7fc2015465",
+      "disposition": "HISTORICAL_PACKET_NOT_CURRENT_EVIDENCE",
+      "ahead_of_initial_main": 4,
+      "files": [
+        {
+          "original_path": ".github/workflows/review-packet-builder-one-use.yml",
+          "archive_path": "reviews/branch_archive/2026-09-15/evidence__review-packet__GARDEN-CYCLE-9808F68B96C2B1AD7FA2/.github/workflows/review-packet-builder-one-use.yml.txt",
+          "blob_sha": "80e35a8c000fa7179bc6b738a384eaaf90a0a8b7"
+        },
+        {
+          "original_path": "evidence/review-packets/GARDEN-CYCLE-9808F68B96C2B1AD7FA2/AlgebraBoundUpdateReceipt.json",
+          "archive_path": "reviews/branch_archive/2026-09-15/evidence__review-packet__GARDEN-CYCLE-9808F68B96C2B1AD7FA2/evidence/review-packets/GARDEN-CYCLE-9808F68B96C2B1AD7FA2/AlgebraBoundUpdateReceipt.json.txt",
+          "blob_sha": "02a0f96c251a6b469319bf0dce60b5e22f901027"
+        },
+        {
+          "original_path": "evidence/review-packets/GARDEN-CYCLE-9808F68B96C2B1AD7FA2/GardenEvolutionAlgebraUsageReceipt.json",
+          "archive_path": "reviews/branch_archive/2026-09-15/evidence__review-packet__GARDEN-CYCLE-9808F68B96C2B1AD7FA2/evidence/review-packets/GARDEN-CYCLE-9808F68B96C2B1AD7FA2/GardenEvolutionAlgebraUsageReceipt.json.txt",
+          "blob_sha": "16a77285438300d7efbf6bdf64a86e2a53175fb9"
+        },
+        {
+          "original_path": "evidence/review-packets/GARDEN-CYCLE-9808F68B96C2B1AD7FA2/GardenEvolutionAlgebraValidationReceipt.json",
+          "archive_path": "reviews/branch_archive/2026-09-15/evidence__review-packet__GARDEN-CYCLE-9808F68B96C2B1AD7FA2/evidence/review-packets/GARDEN-CYCLE-9808F68B96C2B1AD7FA2/GardenEvolutionAlgebraValidationReceipt.json.txt",
+          "blob_sha": "e51d475694461f6d51b07f7ad13a4da4c5444153"
+        },
+        {
+          "original_path": "evidence/review-packets/GARDEN-CYCLE-9808F68B96C2B1AD7FA2/GardenReviewPacket.json",
+          "archive_path": "reviews/branch_archive/2026-09-15/evidence__review-packet__GARDEN-CYCLE-9808F68B96C2B1AD7FA2/evidence/review-packets/GARDEN-CYCLE-9808F68B96C2B1AD7FA2/GardenReviewPacket.json.txt",
+          "blob_sha": "bd441f79900c23307f7c8c937af0231a0b763e9f"
+        },
+        {
+          "original_path": "evidence/review-packets/GARDEN-CYCLE-9808F68B96C2B1AD7FA2/MANIFEST.sha256",
+          "archive_path": "reviews/branch_archive/2026-09-15/evidence__review-packet__GARDEN-CYCLE-9808F68B96C2B1AD7FA2/evidence/review-packets/GARDEN-CYCLE-9808F68B96C2B1AD7FA2/MANIFEST.sha256.txt",
+          "blob_sha": "595c56b89ce8511321e33661bb8fd0dc8acf8b65"
+        },
+        {
+          "original_path": "evidence/review-packets/GARDEN-CYCLE-9808F68B96C2B1AD7FA2/PacketCompletenessReceipt.json",
+          "archive_path": "reviews/branch_archive/2026-09-15/evidence__review-packet__GARDEN-CYCLE-9808F68B96C2B1AD7FA2/evidence/review-packets/GARDEN-CYCLE-9808F68B96C2B1AD7FA2/PacketCompletenessReceipt.json.txt",
+          "blob_sha": "f2de27639d9dd81ef7ce67fd1ca6a589d7f9318a"
+        },
+        {
+          "original_path": "evidence/review-packets/GARDEN-CYCLE-9808F68B96C2B1AD7FA2/ledger-index.json",
+          "archive_path": "reviews/branch_archive/2026-09-15/evidence__review-packet__GARDEN-CYCLE-9808F68B96C2B1AD7FA2/evidence/review-packets/GARDEN-CYCLE-9808F68B96C2B1AD7FA2/ledger-index.json.txt",
+          "blob_sha": "ea7bb8986f46cc74a50cb0669809f18f28f9b951"
+        },
+        {
+          "original_path": "tools/evidence/build_review_packet_one_use.py",
+          "archive_path": "reviews/branch_archive/2026-09-15/evidence__review-packet__GARDEN-CYCLE-9808F68B96C2B1AD7FA2/tools/evidence/build_review_packet_one_use.py.txt",
+          "blob_sha": "f79c4baff18b54d5951094c532e869b5073ee6f3"
+        },
+        {
+          "original_path": "tools/evidence/build_review_packet_one_use_v2.py",
+          "archive_path": "reviews/branch_archive/2026-09-15/evidence__review-packet__GARDEN-CYCLE-9808F68B96C2B1AD7FA2/tools/evidence/build_review_packet_one_use_v2.py.txt",
+          "blob_sha": "9e23eb82449ef638355c258d535ccbbdb3a2c67c"
+        }
+      ]
+    },
+    {
+      "branch": "evidence/review-packet-next-20260915-0915",
+      "sha": "bfa3c4d4d0fa94a634092a983da590801d97bf72",
+      "disposition": "HISTORICAL_PACKET_NOT_CURRENT_EVIDENCE",
+      "ahead_of_initial_main": 3,
+      "files": [
+        {
+          "original_path": ".github/workflows/governed-review-packet-next-one-use.yml",
+          "archive_path": "reviews/branch_archive/2026-09-15/evidence__review-packet-next-20260915-0915/.github/workflows/governed-review-packet-next-one-use.yml.txt",
+          "blob_sha": "7939bcdf864f46ea4858c89087824d04e0172e5b"
+        },
+        {
+          "original_path": "evidence/review-packets/GARDEN-CYCLE-04CF5061B53352EC5E9E9A1F/CycleBinding.json",
+          "archive_path": "reviews/branch_archive/2026-09-15/evidence__review-packet-next-20260915-0915/evidence/review-packets/GARDEN-CYCLE-04CF5061B53352EC5E9E9A1F/CycleBinding.json.txt",
+          "blob_sha": "df639e57b13fe29168dc16e27b4cab75fc8d3eb5"
+        },
+        {
+          "original_path": "evidence/review-packets/GARDEN-CYCLE-04CF5061B53352EC5E9E9A1F/GardenReviewPacket.json",
+          "archive_path": "reviews/branch_archive/2026-09-15/evidence__review-packet-next-20260915-0915/evidence/review-packets/GARDEN-CYCLE-04CF5061B53352EC5E9E9A1F/GardenReviewPacket.json.txt",
+          "blob_sha": "eab1f121d2a7e75bb3d6ab5573f6e7050db4e1fb"
+        },
+        {
+          "original_path": "evidence/review-packets/GARDEN-CYCLE-04CF5061B53352EC5E9E9A1F/PacketCompletenessProof.json",
+          "archive_path": "reviews/branch_archive/2026-09-15/evidence__review-packet-next-20260915-0915/evidence/review-packets/GARDEN-CYCLE-04CF5061B53352EC5E9E9A1F/PacketCompletenessProof.json.txt",
+          "blob_sha": "640296be80c837f905e3c330808f668961a08fee"
+        },
+        {
+          "original_path": "evidence/review-packets/GARDEN-CYCLE-04CF5061B53352EC5E9E9A1F/ProcessRouteReceipt.json",
+          "archive_path": "reviews/branch_archive/2026-09-15/evidence__review-packet-next-20260915-0915/evidence/review-packets/GARDEN-CYCLE-04CF5061B53352EC5E9E9A1F/ProcessRouteReceipt.json.txt",
+          "blob_sha": "6a52bffc21315b95c5ca30675faa3738edcda2cb"
+        },
+        {
+          "original_path": "evidence/review-packets/GARDEN-CYCLE-04CF5061B53352EC5E9E9A1F/SHA256SUMS",
+          "archive_path": "reviews/branch_archive/2026-09-15/evidence__review-packet-next-20260915-0915/evidence/review-packets/GARDEN-CYCLE-04CF5061B53352EC5E9E9A1F/SHA256SUMS.txt",
+          "blob_sha": "81775c26b1075c65230baa54d10c2ba93bd43580"
+        },
+        {
+          "original_path": "evidence/review-packets/GARDEN-CYCLE-04CF5061B53352EC5E9E9A1F/TargetDiff.patch",
+          "archive_path": "reviews/branch_archive/2026-09-15/evidence__review-packet-next-20260915-0915/evidence/review-packets/GARDEN-CYCLE-04CF5061B53352EC5E9E9A1F/TargetDiff.patch.txt",
+          "blob_sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+        },
+        {
+          "original_path": "evidence/review-packets/GARDEN-CYCLE-04CF5061B53352EC5E9E9A1F/Transition-CREATED-ROUTED.json",
+          "archive_path": "reviews/branch_archive/2026-09-15/evidence__review-packet-next-20260915-0915/evidence/review-packets/GARDEN-CYCLE-04CF5061B53352EC5E9E9A1F/Transition-CREATED-ROUTED.json.txt",
+          "blob_sha": "9a780f81da0b781e33eb7fef9b5cdfe88edc11c0"
+        },
+        {
+          "original_path": "evidence/review-packets/GARDEN-CYCLE-04CF5061B53352EC5E9E9A1F/ledger-index.json",
+          "archive_path": "reviews/branch_archive/2026-09-15/evidence__review-packet-next-20260915-0915/evidence/review-packets/GARDEN-CYCLE-04CF5061B53352EC5E9E9A1F/ledger-index.json.txt",
+          "blob_sha": "997b75dec0116497e262b87b5c4d761a7a8c36ec"
+        },
+        {
+          "original_path": "tools/evidence/build_next_governed_review_packet.py",
+          "archive_path": "reviews/branch_archive/2026-09-15/evidence__review-packet-next-20260915-0915/tools/evidence/build_next_governed_review_packet.py.txt",
+          "blob_sha": "f21dd4fa09440a2b1d7067896bb9df8f80ffe61d"
+        }
+      ]
+    },
+    {
+      "branch": "repair/project-audit-process-recovery-20260915",
+      "sha": "3c46e2bcfd88bf1bf3249469227d9bf4411aed94",
+      "disposition": "ALREADY_MERGED",
+      "ahead_of_initial_main": 0,
+      "files": []
+    }
+  ]
+}
