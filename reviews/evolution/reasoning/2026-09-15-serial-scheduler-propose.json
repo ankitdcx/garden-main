@@ -1,0 +1,89 @@
+{
+  "schema": "GardenEvolutionReasoningBundle/v1",
+  "bundle_id": "GARDEN-2026-09-15-SERIAL-SCHEDULER-REASONING-001",
+  "action_id": "GARDEN-2026-09-15-SERIAL-SCHEDULER-PROPOSE-001",
+  "design_epoch": "v15.5",
+  "canonical_source_root_sha256": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+  "source_obligation_refs": [
+    "governance/PROCESS_CURRENT.json",
+    "governance/PROCESS_ENGINE_IMPLEMENTATION_v1.json",
+    "governance/AUTOMATION_ENGINE_BINDING_v1.json"
+  ],
+  "compare": {
+    "schema": "GardenEvolutionCompareReceipt/v1",
+    "action_id": "GARDEN-2026-09-15-SERIAL-SCHEDULER-PROPOSE-001",
+    "design_epoch": "v15.5",
+    "canonical_source_root_sha256": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+    "predecessor_ref": "git:ankitdcx/garden-main@c204d9d97292ab8bb66c4d6f0b40795235e07777",
+    "alternatives": [
+      {"alternative_id":"DO_NOTHING","description":"Retain many separately scheduled Garden wake-ups.","projected_effect":"State-gated work remains correct but scheduled executions can overlap and increase transient concurrency/rate-limit pressure.","risk":"Too-many-requests failures can interrupt work and create unnecessary no-op invocations."},
+      {"alternative_id":"SERIAL_COORDINATOR","description":"Use one hourly ProcessEngine-bound Coordinator and absorb all former jobs as worker roles/due obligations.","projected_effect":"Garden work is serialized to one material unit per run, preserving the process roles while removing scheduled overlap.","risk":"Some multi-stage cycles take longer wall-clock time because independent reviews accumulate across runs."}
+    ],
+    "bidirectional_gaps": [
+      {"from":"DO_NOTHING","to":"SERIAL_COORDINATOR","gap":"DO_NOTHING does not eliminate overlapping scheduler wake-ups or guarantee serialized provider use."},
+      {"from":"SERIAL_COORDINATOR","to":"DO_NOTHING","gap":"Serialization trades maximum throughput for lower concurrency pressure and may lengthen cycle completion time."}
+    ]
+  },
+  "reason": {
+    "schema": "GardenEvolutionReasonReceipt/v1",
+    "action_id": "GARDEN-2026-09-15-SERIAL-SCHEDULER-PROPOSE-001",
+    "design_epoch": "v15.5",
+    "canonical_source_root_sha256": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+    "strategy": "SERIAL_PROCESS_ENGINE_SCHEDULING_WITH_DUE_OBLIGATIONS",
+    "tier": "OPERATIONAL_PROCESS_IMPLEMENTATION",
+    "assumptions": [
+      "The main observed failure mode is overlapping scheduled/agent work rather than a need for more independent scheduler lanes.",
+      "GardenProcessEngine@1 already separates process roles from authoritative route/state semantics.",
+      "Independent review quality can be preserved by accumulating blind family reviews across sequential Coordinator runs.",
+      "The user's instruction explicitly requests weekly-job removal and Process-Algebra-governed scheduling that avoids too-many-request pressure."
+    ],
+    "uncertainty": "Platform-side rate limits can still occur for reasons outside Garden, so the design reduces scheduled concurrency and fails closed on transient limits rather than claiming they are impossible.",
+    "counterexamples": [
+      "If more than one Garden scheduler remains active, the serialization claim is false.",
+      "If the Coordinator launches parallel provider calls, rate-limit pressure can reappear despite one automation.",
+      "If a transient failure advances GardenProcess state, retry safety is broken.",
+      "If absorbed worker roles gain route/state authority outside ProcessFactory, the abstraction regresses."
+    ],
+    "dependency_refs": [
+      "governance/AUTOMATION_ENGINE_BINDING_v1.json",
+      "governance/PROCESS_EXECUTION_SCHEDULE_v1.json",
+      "governance/PROCESS_ENGINE_IMPLEMENTATION_v1.json",
+      "implementation/tests/test_automation_engine_binding.py"
+    ],
+    "conclusion": "Serialize Garden scheduling behind one hourly Coordinator, keep all roles as engine-bound worker/due obligations, disable the weekly brief, and fail closed without state advancement on transient rate limits.",
+    "authorization_effect": "NONE"
+  },
+  "proof": {
+    "schema": "GardenEvolutionProofReceipt/v1",
+    "action_id": "GARDEN-2026-09-15-SERIAL-SCHEDULER-PROPOSE-001",
+    "design_epoch": "v15.5",
+    "canonical_source_root_sha256": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+    "obligations": [
+      {"obligation_id":"PO-SCHED-001","statement":"Repository schedule and binding manifest describe exactly one active Garden scheduler.","verifier_class":"EXECUTABLE_CONTRACT_TEST","result":"UNKNOWN","evidence_refs":[]},
+      {"obligation_id":"PO-SCHED-002","statement":"Former Garden jobs are absorbed/disabled rather than independently scheduled.","verifier_class":"EXECUTABLE_CONTRACT_TEST","result":"UNKNOWN","evidence_refs":[]},
+      {"obligation_id":"PO-SCHED-003","statement":"Transient 429/concurrency failure leaves GardenProcess state unchanged and defers retry.","verifier_class":"PROCESS_EXECUTION_AUDIT","result":"UNKNOWN","evidence_refs":[]}
+    ],
+    "overall_result": "UNKNOWN",
+    "authorization_effect": "NONE"
+  },
+  "evidence": {
+    "schema": "GardenEvolutionEvidenceReceipt/v1",
+    "action_id": "GARDEN-2026-09-15-SERIAL-SCHEDULER-PROPOSE-001",
+    "design_epoch": "v15.5",
+    "canonical_source_root_sha256": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+    "items": [
+      {"kind":"HUMAN_DIRECTIVE","ref":"human:serialize-garden-scheduling:2026-09-15","claim_scope":"Clean up active tasks, disable the weekly job, route scheduling through Process Algebra, and reduce too-many-request failures."},
+      {"kind":"CURRENT_ENGINE_PROFILE","ref":"governance/PROCESS_ENGINE_IMPLEMENTATION_v1.json","claim_scope":"GardenProcessEngine@1 is the current shared route/state implementation."},
+      {"kind":"PREDECESSOR_SCHEDULE","ref":"governance/PROCESS_EXECUTION_SCHEDULE_v1.json@c204d9d97292ab8bb66c4d6f0b40795235e07777","claim_scope":"Prior topology scheduled many Garden lanes independently."}
+    ],
+    "proof_effect": "NONE",
+    "authorization_effect": "NONE"
+  },
+  "separation_assertions": {
+    "compare_is_not_decision": true,
+    "reason_is_not_authorization": true,
+    "evidence_is_not_proof": true,
+    "proof_is_not_authorization": true,
+    "actiongate_owns_authorization": true
+  }
+}

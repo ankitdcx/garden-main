@@ -19,32 +19,44 @@ class AutomationEngineBindingTests(unittest.TestCase):
         self.assertEqual(self.schedule["engine_id"], "GardenProcessEngine@1")
         self.assertEqual(self.profile["automation_binding_manifest"], "governance/AUTOMATION_ENGINE_BINDING_v1.json")
 
-    def test_every_scheduled_garden_lane_has_exactly_one_binding(self):
-        scheduled = []
-        for section in ("hourly_cycle", "daily", "periodic"):
-            for item in self.schedule[section]:
-                if item["mode"] != "EXTERNAL_RESEARCH_DELIVERY":
-                    scheduled.append(item["lane"])
-        bound = [item["lane"] for item in self.binding["bindings"]]
-        self.assertEqual(len(bound), len(set(bound)))
-        self.assertEqual(set(scheduled), set(bound))
+    def test_exactly_one_active_garden_scheduler(self):
+        self.assertEqual(self.binding["scheduling_topology"], "SINGLE_SERIAL_COORDINATOR")
+        self.assertEqual(self.binding["active_driver_count"], 1)
+        self.assertEqual(len(self.binding["active_bindings"]), 1)
+        driver = self.binding["active_bindings"][0]
+        self.assertEqual(driver["lane"], "Garden Coordinator")
+        self.assertEqual(self.schedule["active_driver"]["lane"], "Garden Coordinator")
+        self.assertEqual(driver["max_material_work_units_per_run"], 1)
+        self.assertEqual(driver["max_external_provider_calls_in_parallel"], 1)
 
-    def test_automation_ids_are_unique(self):
-        ids = [item["automation_id"] for item in self.binding["bindings"]]
-        self.assertEqual(len(ids), len(set(ids)))
+    def test_absorbed_workers_are_not_active_schedulers(self):
+        active = {item["lane"] for item in self.binding["active_bindings"]}
+        absorbed = {item["lane"] for item in self.binding["absorbed_disabled_workers"]}
+        self.assertFalse(active & absorbed)
+        self.assertIn("Garden ChatGPT Reviewer", absorbed)
+        self.assertIn("Garden Pipeline Health", absorbed)
+        self.assertIn("Garden Maintenance", absorbed)
 
-    def test_pre_process_discovery_cannot_mutate_engine_state(self):
-        scouts = [item for item in self.binding["bindings"] if item["mode"] == "PRE_PROCESS_DISCOVERY"]
-        self.assertTrue(scouts)
-        self.assertTrue(all(item.get("engine_state_mutation") is False for item in scouts))
+    def test_weekly_brief_is_disabled_not_scheduled(self):
+        disabled = {item["lane"]: item["status"] for item in self.binding["disabled_non_garden_scheduled_tasks"]}
+        self.assertEqual(disabled.get("AI Architecture Brief"), "DISABLED_BY_HUMAN_REQUEST")
+        self.assertEqual(self.schedule["disabled_schedules"]["AI Architecture Brief"], "DISABLED_BY_HUMAN_REQUEST")
 
-    def test_non_garden_research_is_explicitly_outside_process_state(self):
-        names = {item["lane"] for item in self.binding["non_garden_scheduled_tasks"]}
-        self.assertIn("AI Architecture Brief", names)
-
-    def test_fail_closed_codes_cover_engine_drift(self):
-        required = {"MISSING_ENGINE_BINDING", "LOCAL_ROUTE_OVERRIDE", "ILLEGAL_PROCESS_TRANSITION", "MISSING_ENGINE_RECEIPT", "STALE_CYCLE_BINDING", "ALGEBRA_TRANSITION_INVALID", "AUTHORITY_CLAIM_FROM_ALGEBRA"}
+    def test_serialization_and_transient_failure_are_fail_closed(self):
+        policy = self.binding["serialization_policy"]
+        self.assertTrue(policy["one_material_work_unit_per_run"])
+        self.assertFalse(policy["parallel_garden_stages"])
+        self.assertFalse(policy["parallel_external_provider_calls"])
+        self.assertIn("NO_STATE_ADVANCE", policy["transient_rate_limit"])
+        required = {"MULTIPLE_ACTIVE_GARDEN_SCHEDULERS", "TRANSIENT_FAILURE_STATE_ADVANCE", "ALGEBRA_TRANSITION_INVALID"}
         self.assertTrue(required <= set(self.binding["fail_closed"]))
+
+    def test_schedule_has_no_parallel_lane_arrays(self):
+        self.assertNotIn("hourly_cycle", self.schedule)
+        self.assertNotIn("daily", self.schedule)
+        self.assertNotIn("periodic", self.schedule)
+        self.assertEqual(self.schedule["active_driver"]["max_material_work_units_per_run"], 1)
+        self.assertEqual(self.schedule["active_driver"]["max_external_provider_calls_in_parallel"], 1)
 
 
 if __name__ == "__main__":

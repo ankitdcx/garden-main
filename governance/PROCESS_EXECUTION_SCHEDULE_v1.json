@@ -5,35 +5,46 @@
   "engine_profile": "governance/PROCESS_ENGINE_IMPLEMENTATION_v1.json",
   "automation_binding_manifest": "governance/AUTOMATION_ENGINE_BINDING_v1.json",
   "timezone": "Asia/Kolkata",
-  "hourly_cycle": [
-    {"minute":0,"lane":"Garden Post-Merge Verifier","mode":"ENGINE_INDEPENDENT_VERIFIER","role":"independent integrated-state verification"},
-    {"minute":5,"lane":"Garden Canonical Design Sweep","mode":"ENGINE_SECTION_REVIEW_WORKER","role":"SectionUnit coverage and successor-design review"},
-    {"minute":15,"lane":"Garden Research Scout","mode":"PRE_PROCESS_DISCOVERY","role":"public discovery/evidence only; no GardenProcess state mutation"},
-    {"minute":18,"lane":"Garden ReviewPacket Builder","mode":"ENGINE_ROUTE_PACKET_WORKER","role":"ProcessFactory routing + coherent-complete packet construction"},
-    {"minute":30,"lane":"Garden ChatGPT Reviewer","mode":"ENGINE_BLIND_REVIEW_WORKER","role":"blind primary review; cannot alone advance BLIND_REVIEW_COMPLETE"},
-    {"minute":40,"lane":"Garden Hourly Cross-Exam","mode":"ENGINE_CROSS_EXAM_WORKER","role":"same-cycle evidence cross-examination"},
-    {"minute":45,"lane":"Garden Hourly Branch Hygiene","mode":"ENGINE_REPAIR_WORKER","role":"repo/PR hygiene and bounded engine-routed repair"},
-    {"minute":50,"lane":"Garden Hourly Builder","mode":"ENGINE_IMPLEMENTATION_WORKER","role":"engine-state-gated implementation/integration"},
-    {"minute":55,"lane":"Garden Pipeline Health","mode":"ENGINE_INDEPENDENT_AUDITOR","role":"engine/receipt/pipeline health and enforcement-coverage audit"}
+  "active_driver": {
+    "lane": "Garden Coordinator",
+    "cadence": "hourly",
+    "minute": 10,
+    "mode": "ENGINE_SERIAL_COORDINATOR",
+    "max_material_work_units_per_run": 1,
+    "max_external_provider_calls_in_parallel": 1
+  },
+  "absorbed_worker_roles": [
+    "post-merge verification",
+    "canonical SectionUnit design sweep",
+    "public research intake",
+    "ReviewPacket construction",
+    "blind review",
+    "cross-examination",
+    "branch/PR hygiene",
+    "implementation/integration",
+    "pipeline health/enforcement coverage",
+    "daily repo reconciliation",
+    "negative-growth protocol simplification",
+    "successor candidate composition",
+    "90-day pipeline simplification"
   ],
-  "daily": [
-    {"time":"11:55","lane":"Garden Daily Repo Review","mode":"ENGINE_AUDIT_REPAIR_WORKER","role":"deep audit/repair across both repos"},
-    {"time":"22:00","lane":"Garden Protocol Simplifier","mode":"ENGINE_PROTECTED_CHANGE_PROPOSAL_WORKER","role":"negative-growth audit; protected process changes proposal-only"},
-    {"time":"23:00","lane":"Garden Daily Candidate","mode":"ENGINE_SUCCESSOR_COMPOSITION_WORKER","role":"engine-validated successor composition/admission status"}
+  "due_obligations": [
+    {"name":"ENGINE_PIPELINE_HEALTH","cadence":"<=6h overdue"},
+    {"name":"BRANCH_PR_HYGIENE","cadence":"<=6h overdue when needed"},
+    {"name":"PUBLIC_RESEARCH_SCOUT","cadence":">=12h between runs and only if higher-priority work absent"},
+    {"name":"LEGACY_PENDING_WORK_RECONCILIATION","cadence":"daily"},
+    {"name":"PROTOCOL_SIMPLIFICATION","cadence":"at most daily"},
+    {"name":"PIPELINE_SIMPLIFICATION","cadence":"when 90-day window due"},
+    {"name":"SUCCESSOR_COMPOSITION","cadence":"state-driven whenever admitted work is ready"}
   ],
-  "periodic": [
-    {"cadence":"quarterly","lane":"Garden Pipeline Simplification","mode":"ENGINE_PROTECTED_CHANGE_PROPOSAL_WORKER","role":"90-day removal/merge audit"},
-    {"cadence":"weekly Friday morning","lane":"AI Architecture Brief","mode":"EXTERNAL_RESEARCH_DELIVERY","role":"external architecture/safety research shortlist; not a Garden process lane"}
-  ],
-  "builder_implementation_priority": [
-    "ProcessRouteTable/v1",
-    "PacketCompletenessProof/v1",
-    "EvidenceRequirementMatrix/v1",
-    "RuleEnforcementCoverageReceipt/v1",
-    "PipelineHealthReceipt/v1"
-  ],
-  "state_gating": "Clock times are watchdog/start opportunities only. GardenProcess/ProcessFactory, immutable CycleBinding and contiguous GardenProcessTransitionReceipt/v1 evidence determine allowed route/state progress.",
-  "lane_rule": "Lane prompts define worker responsibilities only. They do not redefine routes, state graphs, required gates or promotion authority. PRE_PROCESS_DISCOVERY and EXTERNAL_RESEARCH_DELIVERY modes do not create or advance GardenProcess state.",
-  "algebra_rule": "Every governed GardenProcess transition must validate through REG-ALGEBRA-001; algebra conformance cannot mint authority or prove complete semantic compliance.",
-  "duplicate_lane_rule": "Mechanically derived lane registry and overlap assessment govern activation; only one authoritative cross-exam disposition lane is active per CycleID/stage."
+  "disabled_schedules": {
+    "former_garden_lane_wakeups": "DISABLED_ABSORBED_BY_GARDEN_COORDINATOR",
+    "AI Architecture Brief": "DISABLED_BY_HUMAN_REQUEST",
+    "Garden Maintenance": "DISABLED_ABSORBED_BY_GARDEN_COORDINATOR"
+  },
+  "selection_rule": "Each Coordinator occurrence selects exactly one highest-priority eligible work unit or NO_CHANGE. All governed transitions use ProcessFactory/GardenProcess and engine required_gates().",
+  "blind_review_serialization": "When multiple independent families are required, accumulate independent findings across later Coordinator occurrences rather than launching parallel scheduled/model work; advance BLIND_REVIEW_COMPLETE only when the required set is complete.",
+  "transient_failure_rule": "429/TOO_MANY_REQUESTS/concurrency/service-unavailable never advances GardenProcess state, never triggers immediate retry loops, and retains the same next_action for a later hourly occurrence after exact-state re-observation.",
+  "state_gating": "Clock time only starts the Coordinator. CycleID, ProcessVersion, DesignEpoch, packet and contiguous GardenProcessTransitionReceipt/v1 evidence determine what may run.",
+  "algebra_rule": "Every governed transition validates through REG-ALGEBRA-001. Scheduling/algebra conformance grants no authority and does not prove full semantic compliance."
 }

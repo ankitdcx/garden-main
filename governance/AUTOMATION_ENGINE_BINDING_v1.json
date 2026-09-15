@@ -6,26 +6,56 @@
   "engine_implementation": "implementation/garden_kernel/process_engine.py",
   "transition_receipt": "GardenProcessTransitionReceipt/v1",
   "algebra_registry_ref": "REG-ALGEBRA-001",
-  "rule": "Active Garden automations are workers around GardenProcess and may not redefine authoritative routes, states, required gates, or promotion authority in lane-local prompts.",
-  "bindings": [
-    {"automation_id":"6aa89f8d02688191927ec07da2cb9a99","lane":"Garden Post-Merge Verifier","mode":"ENGINE_INDEPENDENT_VERIFIER"},
-    {"automation_id":"6aa8a069d1d88191927f77a1ac724ea6","lane":"Garden Canonical Design Sweep","mode":"ENGINE_SECTION_REVIEW_WORKER","route":"SECTION_UNIT_REVIEW"},
-    {"automation_id":"6aa89f6c40a8819183afc1853b319f05","lane":"Garden Research Scout","mode":"PRE_PROCESS_DISCOVERY","engine_state_mutation":false},
-    {"automation_id":"6aa8a6d1ab7881918d82e44613a46fd6","lane":"Garden ReviewPacket Builder","mode":"ENGINE_ROUTE_PACKET_WORKER"},
-    {"automation_id":"6aa69eb215788191a67b100206958866","lane":"Garden ChatGPT Reviewer","mode":"ENGINE_BLIND_REVIEW_WORKER"},
-    {"automation_id":"6aa89d938ae08191aa10d0f7d1c760bd","lane":"Garden Hourly Cross-Exam","mode":"ENGINE_CROSS_EXAM_WORKER"},
-    {"automation_id":"6aa7a049de8881918969f916789d51e6","lane":"Garden Hourly Branch Hygiene","mode":"ENGINE_REPAIR_WORKER"},
-    {"automation_id":"6aa89d7c7ccc81918cce4b519a403ae5","lane":"Garden Hourly Builder","mode":"ENGINE_IMPLEMENTATION_WORKER"},
-    {"automation_id":"6aa8a79303b88191ba498dd919efb861","lane":"Garden Pipeline Health","mode":"ENGINE_INDEPENDENT_AUDITOR"},
-    {"automation_id":"6aa68f41559c8191860a5fd429db0246","lane":"Garden Daily Repo Review","mode":"ENGINE_AUDIT_REPAIR_WORKER"},
-    {"automation_id":"6aa8a5fb3db88191b62c284b23ca54d6","lane":"Garden Protocol Simplifier","mode":"ENGINE_PROTECTED_CHANGE_PROPOSAL_WORKER"},
-    {"automation_id":"6aa68e09473c8191ae77494704e6f808","lane":"Garden Daily Candidate","mode":"ENGINE_SUCCESSOR_COMPOSITION_WORKER"},
-    {"automation_id":"6aa8a7a5e4248191b9244a048e5b3f74","lane":"Garden Pipeline Simplification","mode":"ENGINE_PROTECTED_CHANGE_PROPOSAL_WORKER"}
+  "scheduling_topology": "SINGLE_SERIAL_COORDINATOR",
+  "active_driver_count": 1,
+  "active_bindings": [
+    {
+      "automation_id": "6aa8bfd0de048191be26d84162c1c4d6",
+      "lane": "Garden Coordinator",
+      "mode": "ENGINE_SERIAL_COORDINATOR",
+      "schedule": "hourly at minute 10 Asia/Kolkata",
+      "max_material_work_units_per_run": 1,
+      "max_external_provider_calls_in_parallel": 1,
+      "engine_state_authority": "ProcessFactory/GardenProcess only"
+    }
   ],
-  "non_garden_scheduled_tasks": [
-    {"automation_id":"6a81e57a93e881919c57c1df91465cc9","lane":"AI Architecture Brief","reason":"External research-delivery task; not a Garden route/state lane and therefore does not create or advance GardenProcess instances."}
+  "absorbed_disabled_workers": [
+    {"automation_id":"6aa89f8d02688191927ec07da2cb9a99","lane":"Garden Post-Merge Verifier","absorbed_as":"coordinator due role"},
+    {"automation_id":"6aa8a069d1d88191927f77a1ac724ea6","lane":"Garden Canonical Design Sweep","absorbed_as":"coordinator SECTION_UNIT_REVIEW role"},
+    {"automation_id":"6aa89f6c40a8819183afc1853b319f05","lane":"Garden Research Scout","absorbed_as":"coordinator PRE_PROCESS research due role"},
+    {"automation_id":"6aa8a6d1ab7881918d82e44613a46fd6","lane":"Garden ReviewPacket Builder","absorbed_as":"coordinator packet role"},
+    {"automation_id":"6aa69eb215788191a67b100206958866","lane":"Garden ChatGPT Reviewer","absorbed_as":"coordinator blind-review role"},
+    {"automation_id":"6aa89d938ae08191aa10d0f7d1c760bd","lane":"Garden Hourly Cross-Exam","absorbed_as":"coordinator cross-exam role"},
+    {"automation_id":"6aa7a049de8881918969f916789d51e6","lane":"Garden Hourly Branch Hygiene","absorbed_as":"coordinator hygiene due role"},
+    {"automation_id":"6aa89d7c7ccc81918cce4b519a403ae5","lane":"Garden Hourly Builder","absorbed_as":"coordinator implementation role"},
+    {"automation_id":"6aa8a79303b88191ba498dd919efb861","lane":"Garden Pipeline Health","absorbed_as":"coordinator health due role"},
+    {"automation_id":"6aa68f41559c8191860a5fd429db0246","lane":"Garden Daily Repo Review","absorbed_as":"coordinator daily reconciliation due role"},
+    {"automation_id":"6aa8a5fb3db88191b62c284b23ca54d6","lane":"Garden Protocol Simplifier","absorbed_as":"coordinator daily simplification due role"},
+    {"automation_id":"6aa68e09473c8191ae77494704e6f808","lane":"Garden Daily Candidate","absorbed_as":"coordinator successor-composition role"},
+    {"automation_id":"6aa8a7a5e4248191b9244a048e5b3f74","lane":"Garden Pipeline Simplification","absorbed_as":"coordinator 90-day simplification due role"},
+    {"automation_id":"6aa8c14886708191a4fe9b41a2ea3a5b","lane":"Garden Maintenance","absorbed_as":"coordinator maintenance due roles"}
   ],
-  "disabled_historical_automations": "Remain disabled and carry no current route/state authority.",
-  "fail_closed": ["MISSING_ENGINE_BINDING","LOCAL_ROUTE_OVERRIDE","ILLEGAL_PROCESS_TRANSITION","MISSING_ENGINE_RECEIPT","STALE_CYCLE_BINDING","ALGEBRA_TRANSITION_INVALID","AUTHORITY_CLAIM_FROM_ALGEBRA"],
-  "authority_boundary": "Automation prompts may constrain their worker role but cannot mint protected authority, alter ProcessVersion semantics, admit delegation envelopes, or promote canon."
+  "disabled_non_garden_scheduled_tasks": [
+    {"automation_id":"6a81e57a93e881919c57c1df91465cc9","lane":"AI Architecture Brief","status":"DISABLED_BY_HUMAN_REQUEST"}
+  ],
+  "serialization_policy": {
+    "one_material_work_unit_per_run": true,
+    "parallel_garden_stages": false,
+    "parallel_external_provider_calls": false,
+    "blind_review_accumulation": "one missing independent review per run when needed; persist and continue on later runs",
+    "transient_rate_limit": "NO_STATE_ADVANCE_NO_IMMEDIATE_RETRY_RETAIN_NEXT_ACTION",
+    "retry_owner": "later Garden Coordinator occurrence after re-observing exact state"
+  },
+  "due_obligations": {
+    "engine_pipeline_health": "at least every 6 hours",
+    "branch_pr_hygiene": "at least every 6 hours when needed",
+    "public_research_scout": "at most every 12 hours and only when higher-priority work is absent",
+    "legacy_pending_work_reconciliation": "at least daily",
+    "protocol_simplification": "at most once per Asia/Kolkata day",
+    "pipeline_simplification": "when 90-day window is due",
+    "successor_candidate_composition": "whenever admitted semantic work is ready; no separate clock wake-up"
+  },
+  "rule": "Only Garden Coordinator is an active Garden scheduler. Former lanes are worker roles/due obligations and carry no independent scheduling or route/state authority.",
+  "fail_closed": ["MULTIPLE_ACTIVE_GARDEN_SCHEDULERS","MISSING_ENGINE_BINDING","LOCAL_ROUTE_OVERRIDE","ILLEGAL_PROCESS_TRANSITION","MISSING_ENGINE_RECEIPT","STALE_CYCLE_BINDING","ALGEBRA_TRANSITION_INVALID","AUTHORITY_CLAIM_FROM_ALGEBRA","TRANSIENT_FAILURE_STATE_ADVANCE"],
+  "authority_boundary": "Scheduling and Process Algebra conformance cannot mint protected authority, alter ProcessVersion semantics, admit delegation envelopes, or promote canon."
 }
