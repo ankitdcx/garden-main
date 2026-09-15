@@ -1,0 +1,33 @@
+name: Trusted base human admission
+on:
+  pull_request_target:
+    types: [opened, synchronize, reopened, ready_for_review]
+permissions:
+  contents: read
+jobs:
+  trusted-base-admission:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.base.sha }}
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Inspect proposed Git objects with trusted base code
+        env:
+          GARDEN_BASE_SHA: ${{ github.event.pull_request.base.sha }}
+          GARDEN_HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+          GARDEN_PR: ${{ github.event.pull_request.number }}
+        run: |
+          git fetch origin "refs/pull/$GARDEN_PR/head"
+          test "$(git rev-parse FETCH_HEAD)" = "$GARDEN_HEAD_SHA"
+          python scripts/gate_human_admitted_update.py --base "$GARDEN_BASE_SHA" --head "$GARDEN_HEAD_SHA" --repository "$GITHUB_REPOSITORY" --pull-request "$GARDEN_PR" --output /tmp/trusted-admission.json
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: trusted-admission-${{ github.run_id }}
+          path: /tmp/trusted-admission.json
+          if-no-files-found: error

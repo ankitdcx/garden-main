@@ -1,0 +1,572 @@
+{
+  "schema": "GardenBasePinnedHumanAdmission/v1",
+  "receipt_id": "HUMAN-ADMISSION-PR72-2026-09-15",
+  "decision": "HUMAN_ADMITTED",
+  "kind": "HUMAN_SIGNOFF",
+  "repository": "ankitdcx/garden-main",
+  "pull_request": 72,
+  "design_epoch": "v15.5",
+  "canonical_source_root_sha256": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+  "expires_at": "2026-09-22T23:59:59Z",
+  "attestor_ref": "agent:codex:human-instruction-recorder",
+  "observed_human_instruction": {
+    "channel": "Current authenticated user conversation",
+    "preceding_request": "Connect Garden\u2019s approval gate to a verifiable record of existing authorization, rerun checks and merge PR #72.",
+    "human_reply": "Yes, so do it.",
+    "scope": "Complete v15.7 candidate publication, reference updates, neutral human-role terminology cleanup, narrowly scoped approval wiring and merge of PR72 after checks.",
+    "recording_boundary": "Agent record of an observed user instruction; not a human digital signature, independent review or cryptographic proof of identity."
+  },
+  "process_authority": "governance/GardenCanonicalUpdateProcess_v1.4.json#human_root_authority",
+  "bootstrap_scope": {
+    "files": [
+      "implementation/garden_kernel/base_admission.py",
+      "implementation/tests/test_base_admission.py",
+      "scripts/gate_human_admitted_update.py",
+      ".github/workflows/trusted-human-admission.yml",
+      "reviews/evolution/production/2026-09-15-human-admission-bootstrap-propose.json",
+      "reviews/evolution/reasoning/2026-09-15-human-admission-bootstrap-propose.json",
+      "reviews/evolution/algebra/2026-09-15-human-admission-bootstrap-propose.json",
+      "reviews/evolution/assurance/2026-09-15-human-admission-bootstrap-propose.json"
+    ],
+    "purpose": "Install trusted base-only verifier and record human-root admission before verifying candidate. Existing gate remains unchanged in this bootstrap.",
+    "not_self_authorized": "Authorization is the external user instruction under existing HUMAN root; the new verifier or its output does not authorize its own installation."
+  },
+  "canonical_promotion": false,
+  "independent_review": false,
+  "base_tree_without_admission": "7266858a853c29ad4f284cc0fde561128e63eac6893eca445e6043a11a202a27",
+  "changes": {
+    "CONTRIBUTING.md": {
+      "before": "8d6f72a217c55856115d6828bc58f1e75a7fd7a0",
+      "after": "90d5d7a54464d527bc2623c644483ce3696f8e53",
+      "before_mode": "100644",
+      "after_mode": "100644"
+    },
+    "GARDEN_HITL.md": {
+      "before": "9fde2a311f4e37a1eb8fbe046446cdf4d63c29ea",
+      "after": "e14d5bbdf415fc2de79ce04fd5323b7165915145",
+      "before_mode": "100644",
+      "after_mode": "100644"
+    },
+    "IP_BOUNDARY.md": {
+      "before": "b522140114a43e4a51507a486cf4d9ff15c0dec8",
+      "after": "3b0b536adf5b1f3c197e9b32623eeb6c635cf131",
+      "before_mode": "100644",
+      "after_mode": "100644"
+    },
+    "README.md": {
+      "before": "04cbf7caebc44c00d8f6619f3eda6567550c050d",
+      "after": "81748d71ab21d73ab8b7ffaa8c0f77d4e17388f2",
+      "before_mode": "100644",
+      "after_mode": "100644"
+    },
+    "Read-me-originator-note": {
+      "before": "5c964a9a25774617d411bdc72821b64158393e20",
+      "after": null,
+      "before_mode": "100644",
+      "after_mode": "000000"
+    },
+    "Read-me-steward-note": {
+      "before": null,
+      "after": "0e5e4859c0fe30b4d0ef5aa59f8df0e2556e6124",
+      "before_mode": "000000",
+      "after_mode": "100644"
+    },
+    "canonical/archive/v15.5/Garden_Annexure_v15.5_FULL_2026-09-12.txt": {
+      "before": null,
+      "after": "ab770b4a58095902c150415f7495eb013da6bd0f",
+      "before_mode": "000000",
+      "after_mode": "100644"
+    },
+    "canonical/archive/v15.5/Garden_System_v15.5_FULL_2026-09-12.txt": {
+      "before": null,
+      "after": "5373643bf0b57d161e8cdffbda4edc578892e3e1",
+      "before_mode": "000000",
+      "after_mode": "100644"
+    },
+    "canonical/archive/v15.5/Garden_Technical_v15.5_FULL_2026-09-12.txt": {
+      "before": null,
+      "after": "f6f56f697bec89b456b449d35850002feb19f22a",
+      "before_mode": "000000",
+      "after_mode": "100644"
+    },
+    "canonical/archive/v15.5/Garden_Theories_v15.5_FULL_2026-09-12.txt": {
+      "before": null,
+      "after": "362a5f380ef658cb0798924caadb3028b4e02bfd",
+      "before_mode": "000000",
+      "after_mode": "100644"
+    },
+    "canonical/archive/v15.5/Garden_User_v15.5_FULL_2026-09-12.txt": {
+      "before": null,
+      "after": "7a185ab02b39b7ec01c7302be79b434aa126644d",
+      "before_mode": "000000",
+      "after_mode": "100644"
+    },
+    "canonical/archive/v15.5/README.md": {
+      "before": null,
+      "after": "f183b778079cbf363e0073653e8b573128c76813",
+      "before_mode": "000000",
+      "after_mode": "100644"
+    },
+    "canonical/archive/v15.5/SOURCE_MANIFEST.json": {
+      "before": null,
+      "after": "81f5df152b4df477008554661644b0175bb96dda",
+      "before_mode": "000000",
+      "after_mode": "100644"
+    },
+    "canonical/candidates/CURRENT_CANDIDATE.json": {
+      "before": null,
+      "after": "bb5704a0c6374aa3f772b4dcda0fd0833e5a8985",
+      "before_mode": "000000",
+      "after_mode": "100644"
+    },
+    "canonical/candidates/v15.6/Garden_Annexure_v15.6_FULL_CANDIDATE_2026-09-15.txt": {
+      "before": null,
+      "after": "2d5f4c8286800a17389b4f081dd62692986c1156",
+      "before_mode": "000000",
+      "after_mode": "100644"
+    },
+    "canonical/candidates/v15.6/Garden_System_v15.6_FULL_CANDIDATE_2026-09-15.txt": {
+      "before": null,
+      "after": "4d48fb6167aac9487260f92b8d1e4ace5c4bd0c1",
+      "before_mode": "000000",
+      "after_mode": "100644"
+    },
+    "canonical/candidates/v15.6/Garden_Technical_v15.6_FULL_CANDIDATE_2026-09-15.txt": {
+      "before": null,
+      "after": "1f8781cf814b4263f3ca4d19d1b488aeea6b0fdc",
+      "before_mode": "000000",
+      "after_mode": "100644"
+    },
+    "canonical/candidates/v15.6/Garden_Theories_v15.6_FULL_CANDIDATE_2026-09-15.txt": {
+      "before": null,
+      "after": "47fc0646e8c7c206504ff95fc5e734ee13b46ceb",
+      "before_mode": "000000",
+      "after_mode": "100644"
+    },
+    "canonical/candidates/v15.6/Garden_User_v15.6_FULL_CANDIDATE_2026-09-15.txt": {
+      "before": null,
+      "after": "fab38252735eb864e665ff5ee54eae2e2f55011d",
+      "before_mode": "000000",
+      "after_mode": "100644"
+    },
+    "canonical/candidates/v15.6/README.md": {
+      "before": null,
+      "after": "fc9fb1caa3f4ca38b0cc4034a6a5e3ef672ad2f0",
+      "before_mode": "000000",
+      "after_mode": "100644"
+    },
+    "canonical/candidates/v15.6/SOURCE_MANIFEST.json": {
+      "before": null,
+      "after": "f3c7519c31f5da813b9970e2416fd411f476d332",
+      "before_mode": "000000",
+      "after_mode": "100644"
+    },
+    "canonical/candidates/v15.7/Garden_Annexure_v15.7_FULL_CANDIDATE_2026-09-15.txt": {
+      "before": null,
+      "after": "b1cee087437159df157bc6733c635727e8885b12",
+      "before_mode": "000000",
+      "after_mode": "100644"
+    },
+    "canonical/candidates/v15.7/Garden_System_v15.7_FULL_CANDIDATE_2026-09-15.txt": {
+      "before": null,
+      "after": "558b4f5bc852a5b760b6874a920983b7205296a0",
+      "before_mode": "000000",
+      "after_mode": "100644"
+    },
+    "canonical/candidates/v15.7/Garden_Technical_v15.7_FULL_CANDIDATE_2026-09-15.txt": {
+      "before": null,
+      "after": "b98fa80b9947a7dc992753a7cea2172daedcccff",
+      "before_mode": "000000",
+      "after_mode": "100644"
+    },
+    "canonical/candidates/v15.7/Garden_Theories_v15.7_FULL_CANDIDATE_2026-09-15.txt": {
+      "before": null,
+      "after": "c5bdd05bdbf1f6abf69adfa98d7dd6fb1939e238",
+      "before_mode": "000000",
+      "after_mode": "100644"
+    },
+    "canonical/candidates/v15.7/Garden_User_v15.7_FULL_CANDIDATE_2026-09-15.txt": {
+      "before": null,
+      "after": "1ef64f8ff0f4570f2e8758d1b5542f65425a4571",
+      "before_mode": "000000",
+      "after_mode": "100644"
+    },
+    "canonical/candidates/v15.7/README.md": {
+      "before": null,
+      "after": "0a4ab6ea2782b303119b7b7636c2ae3e698342f3",
+      "before_mode": "000000",
+      "after_mode": "100644"
+    },
+    "canonical/candidates/v15.7/SOURCE_MANIFEST.json": {
+      "before": null,
+      "after": "39af30390911e9410c14157b14376a85bc3976b1",
+      "before_mode": "000000",
+      "after_mode": "100644"
+    },
+    "design_deltas/v15.6/DELTASET-2026-09-14-GAIA-NAMING.json": {
+      "before": "53c65a00c0eca5798913ac7c04a9df21820ff9d3",
+      "after": "d3be0565611e6240420b9ac778fa944054c47d56",
+      "before_mode": "100644",
+      "after_mode": "100644"
+    },
+    "design_deltas/v15.6/DELTASET-2026-09-15-ENGINEERING-HARDENING.json": {
+      "before": null,
+      "after": "c4896584afbee4b2ce48b63a7ae6c95159907ccf",
+      "before_mode": "000000",
+      "after_mode": "100644"
+    },
+    "design_deltas/v15.6/ENGINEERING-HARDENING-SPECIFICATION.txt": {
+      "before": null,
+      "after": "064ece9ab3a4395e59c1cfde2fed64866e43f455",
+      "before_mode": "000000",
+      "after_mode": "100644"
+    },
+    "design_deltas/v15.6/PENDING-CONSOLIDATED-SPECIFICATION.txt": {
+      "before": null,
+      "after": "a618e01d5ea144544adabff3fd30c7718148ecc2",
+      "before_mode": "000000",
+      "after_mode": "100644"
+    },
+    "design_deltas/v15.6/PENDING-RECONCILIATION-2026-09-15.json": {
+      "before": null,
+      "after": "74f65218bc08018a292a1c33b39f820879850567",
+      "before_mode": "000000",
+      "after_mode": "100644"
+    },
+    "design_deltas/v15.6/PENDING_CANDIDATE_INDEX.json": {
+      "before": "16d21012d50a01edfdbeef919e1a3cbb67049bcd",
+      "after": "545b39acb08bed3ce204323f3719a1d310ead7dd",
+      "before_mode": "100644",
+      "after_mode": "100644"
+    },
+    "design_deltas/v15.7/COGNITIVE-COMPARE-CANDIDATE.md": {
+      "before": "152cdee5f535b0679ebbb5a569dec2a7c6c82aa0",
+      "after": "887e267796da40df4109eda4390e9c3ecae2fad9",
+      "before_mode": "100644",
+      "after_mode": "100644"
+    },
+    "design_deltas/v15.7/COGNITIVE-CORE-CANDIDATE.md": {
+      "before": "4fba853e8f07dd69983b28dc929c67b8e1b5537c",
+      "after": "6d5edf0dc8c0ca468e6f8e6fe5bf93c86f702422",
+      "before_mode": "100644",
+      "after_mode": "100644"
+    },
+    "design_deltas/v15.7/COGNITIVE-INCREMENT-CANDIDATE.md": {
+      "before": "3bec28d954b9e431fdd9d49f0a5de352930eb774",
+      "after": "a2e1581cdb4f26d928091d5f1bb61c94f41b6b95",
+      "before_mode": "100644",
+      "after_mode": "100644"
+    },
+    "design_deltas/v15.7/DESIGN-CLOSURE-CANDIDATE.md": {
+      "before": "3d12e04e61301c8d4e1cfc5c164ba05f96769ee7",
+      "after": "61a39e54caf1e18d145bd707a3941dd25b1f2fd0",
+      "before_mode": "100644",
+      "after_mode": "100644"
+    },
+    "design_deltas/v15.7/PENDING_CANDIDATE_INDEX.json": {
+      "before": "0a80a30b4499ce01974d251dfcd2fa8df3c9aac9",
+      "after": "918711a97ebbcc6c870485a2c9d393b9580b43b2",
+      "before_mode": "100644",
+      "after_mode": "100644"
+    },
+    "design_deltas/v15.7/TRACE-CANDIDATE.md": {
+      "before": "519a59e13cc6647df92094c7f13754f39ab721a1",
+      "after": "d62bf174bd361b8418e4d09cac388d972bfa77fa",
+      "before_mode": "100644",
+      "after_mode": "100644"
+    },
+    "docs/IP_PROVENANCE_AND_PATENT_CANDIDATE_REGISTER_2026-09-14.md": {
+      "before": "541c75afe2dc5bd8168e0de416e260d9e9350d25",
+      "after": "6e7f2fa671195c007d2093c63a877287348ae610",
+      "before_mode": "100644",
+      "after_mode": "100644"
+    },
+    "governance/evolution_authority_registry.json": {
+      "before": "07736ee5bbbc1e0fcca0f7128ca161e770780053",
+      "after": "843f214ad5b064a5daa5769e7c377563c73e13a8",
+      "before_mode": "100644",
+      "after_mode": "100644"
+    },
+    "implementation/garden_kernel/evolution_trust.py": {
+      "before": "93d986b88c38a053ab78d76041e2a0ca05886365",
+      "after": "c65aa19e6ab943bf46baaf51400741721cd7b03d",
+      "before_mode": "100644",
+      "after_mode": "100644"
+    },
+    "implementation/tests/test_production_evolution_transport.py": {
+      "before": "9dee6669ffa730121a58f43502191d63f72006f6",
+      "after": "85bd15ffa0d631fc066a8798f5916dfa0d608e68",
+      "before_mode": "100644",
+      "after_mode": "100644"
+    },
+    "implementation/tests/test_successor_diff_scope.py": {
+      "before": null,
+      "after": "ffab05d4bdae9e9b61cdd1afbc7285b4c91eff76",
+      "before_mode": "000000",
+      "after_mode": "100644"
+    },
+    "reviews/branch_archive/2026-09-15/evidence__review-packet__GARDEN-CYCLE-9808F68B96C2B1AD7FA2/evidence/review-packets/GARDEN-CYCLE-9808F68B96C2B1AD7FA2/GardenReviewPacket.json.txt": {
+      "before": "bd441f79900c23307f7c8c937af0231a0b763e9f",
+      "after": "7894eb9e16061816dce043318eb3567d3d74bead",
+      "before_mode": "100644",
+      "after_mode": "100644"
+    },
+    "reviews/evolution/algebra/2026-09-15-v157-candidate-publication-propose.json": {
+      "before": null,
+      "after": "3611eba4bf9da7aea82532b2013931e33f796d5d",
+      "before_mode": "000000",
+      "after_mode": "100644"
+    },
+    "reviews/evolution/assurance/2026-09-15-v157-candidate-publication-propose.json": {
+      "before": null,
+      "after": "fb6f94784a3ce9b7c82caa2665bcbb77750cf142",
+      "before_mode": "000000",
+      "after_mode": "100644"
+    },
+    "reviews/evolution/production/2026-09-15-v157-candidate-publication-propose.json": {
+      "before": null,
+      "after": "c6a1593661967b75cb718121c26113590b2f8cde",
+      "before_mode": "000000",
+      "after_mode": "100644"
+    },
+    "reviews/evolution/reasoning/2026-09-15-v157-candidate-publication-propose.json": {
+      "before": null,
+      "after": "9dadad5b5ecd40013bb0d10df93457552e2f8d59",
+      "before_mode": "000000",
+      "after_mode": "100644"
+    },
+    "reviews/v15.6/CYCLE-BINDING.json": {
+      "before": null,
+      "after": "5e561f347423f2f2448481d3601a9f97f0f0f0d8",
+      "before_mode": "000000",
+      "after_mode": "100644"
+    },
+    "reviews/v15.6/DIFF-IDENTITY-RECEIPT.json": {
+      "before": null,
+      "after": "63bf51dbebb7fd683d021ce1bbec8979d74202bd",
+      "before_mode": "000000",
+      "after_mode": "100644"
+    },
+    "reviews/v15.6/EXPECTED-CANDIDATE-DIFF.json": {
+      "before": null,
+      "after": "4220f3cc22ede1b2fcbadcf415427f30423a7938",
+      "before_mode": "000000",
+      "after_mode": "100644"
+    },
+    "reviews/v15.6/REFERENCE-CLOSURE-RECEIPT.json": {
+      "before": null,
+      "after": "c61ae324427fa40f39881254b4d59175d10297a2",
+      "before_mode": "000000",
+      "after_mode": "100644"
+    },
+    "reviews/v15.6/REFERENCE-MIGRATION-INVENTORY.json": {
+      "before": null,
+      "after": "414601ea7f16a02cefdbed2a757a28eca76a8db5",
+      "before_mode": "000000",
+      "after_mode": "100644"
+    },
+    "reviews/v15.6/RELEASE-STATUS.md": {
+      "before": null,
+      "after": "3d4ce6baba9641b9b5055754859588036e3bcac1",
+      "before_mode": "000000",
+      "after_mode": "100644"
+    },
+    "reviews/v15.6/RETENTION-RECEIPT.json": {
+      "before": null,
+      "after": "fb34cef55a1fddad0ba9239a3cdf97aa0fd3b028",
+      "before_mode": "000000",
+      "after_mode": "100644"
+    },
+    "reviews/v15.6/SECTION-INVENTORY.json": {
+      "before": null,
+      "after": "50f75638e956774fc9cb6ee483df6f8f7552907a",
+      "before_mode": "000000",
+      "after_mode": "100644"
+    },
+    "reviews/v15.6/TEST-RECEIPT.json": {
+      "before": null,
+      "after": "f8b3895c18b3ce7ab00ddd6919a4bd6f7502cd64",
+      "before_mode": "000000",
+      "after_mode": "100644"
+    },
+    "reviews/v15.6/sol-blind-review.json": {
+      "before": null,
+      "after": "b8599ce5af9de343573400d900bfe2d124cc71c7",
+      "before_mode": "000000",
+      "after_mode": "100644"
+    },
+    "reviews/v15.6/sol-followup-review.json": {
+      "before": null,
+      "after": "a93dc3eef31e73e3724ae21ec4ed842f9ebf83cb",
+      "before_mode": "000000",
+      "after_mode": "100644"
+    },
+    "reviews/v15.6/terra-blind-review.json": {
+      "before": null,
+      "after": "fa24b528953aa0a2410b853edb570ec40433efe3",
+      "before_mode": "000000",
+      "after_mode": "100644"
+    },
+    "reviews/v15.6/terra-cross-examination.json": {
+      "before": null,
+      "after": "760687682393104b6f2dde59cce363f8309ee11d",
+      "before_mode": "000000",
+      "after_mode": "100644"
+    },
+    "reviews/v15.7/APPROVAL-WIRING-REVIEW.json": {
+      "before": null,
+      "after": "da829d86c33d46d7002fd00c6e2a3cd064888545",
+      "before_mode": "000000",
+      "after_mode": "100644"
+    },
+    "reviews/v15.7/APPROVAL-WIRING-TESTS.json": {
+      "before": null,
+      "after": "14fc3e7a93fceaca2ac417c8ebc0a2b80644d8dd",
+      "before_mode": "000000",
+      "after_mode": "100644"
+    },
+    "reviews/v15.7/FINAL-ACTIONGATE-RECEIPT.json": {
+      "before": null,
+      "after": "3e75af5c496b2da481e07e00dc879fc9e334511f",
+      "before_mode": "000000",
+      "after_mode": "100644"
+    },
+    "reviews/v15.7/FINAL-ALGEBRA-RECEIPT.json": {
+      "before": null,
+      "after": "113cc0e1b8fa00e7ca6239f32aa368e94d93507a",
+      "before_mode": "000000",
+      "after_mode": "100644"
+    },
+    "reviews/v15.7/FINAL-ASSURANCE-RECEIPT.json": {
+      "before": null,
+      "after": "bc5f4a46f163eb55237eea009a8b012beca6414d",
+      "before_mode": "000000",
+      "after_mode": "100644"
+    },
+    "reviews/v15.7/FINAL-MODEL-REVIEW.json": {
+      "before": null,
+      "after": "41311263a34d1cc67ec02e63b26bf0746facb293",
+      "before_mode": "000000",
+      "after_mode": "100644"
+    },
+    "reviews/v15.7/FINAL-REASONING-RECEIPT.json": {
+      "before": null,
+      "after": "89d186f12b2464db499b7a4230d5f972ff3cb262",
+      "before_mode": "000000",
+      "after_mode": "100644"
+    },
+    "reviews/v15.7/FINAL-REFERENCE-CHECK.json": {
+      "before": null,
+      "after": "75b81fecb57971f630b36afeb5ac77f5a57a4b74",
+      "before_mode": "000000",
+      "after_mode": "100644"
+    },
+    "reviews/v15.7/FINAL-TEST-RECEIPT.json": {
+      "before": null,
+      "after": "e556acf41d6e64055d384eed6fab5afe1a1683de",
+      "before_mode": "000000",
+      "after_mode": "100644"
+    },
+    "reviews/v15.7/REFERENCE-CLOSURE-RECEIPT.json": {
+      "before": null,
+      "after": "66ef5074dc5d4039949c2320de5273d3183bb58b",
+      "before_mode": "000000",
+      "after_mode": "100644"
+    },
+    "reviews/v15.7/RELEASE-STATUS.md": {
+      "before": null,
+      "after": "16c5f2bc2e2b5233b8f88f3f3efdef55eba0268e",
+      "before_mode": "000000",
+      "after_mode": "100644"
+    },
+    "reviews/v15.7/RETENTION-RECEIPT.json": {
+      "before": null,
+      "after": "5f1f7f0d7c1d1d72dc4e1ff3c107e4cca261157f",
+      "before_mode": "000000",
+      "after_mode": "100644"
+    },
+    "reviews/v15.7/REVIEW-RESOLUTION.json": {
+      "before": null,
+      "after": "45596a651221a7a92e93cb62981d1774d3886786",
+      "before_mode": "000000",
+      "after_mode": "100644"
+    },
+    "reviews/v15.7/ROLE-REFERENCE-EDIT-RECEIPT.json": {
+      "before": null,
+      "after": "55be1293bb9b592aa7932b4e4025d1846eb88ce2",
+      "before_mode": "000000",
+      "after_mode": "100644"
+    },
+    "reviews/v15.7/SOURCE-INTEGRATION-RECEIPT.json": {
+      "before": null,
+      "after": "3ff93003e1199c7c160abb35d735082e21d8b28f",
+      "before_mode": "000000",
+      "after_mode": "100644"
+    },
+    "reviews/v15.7/sol-candidate-review.json": {
+      "before": null,
+      "after": "51f06e47a01e8c52a9f28348fb50fbbd7bd29a23",
+      "before_mode": "000000",
+      "after_mode": "100644"
+    },
+    "scripts/build_v15_6_candidate.py": {
+      "before": null,
+      "after": "ed15ec61878ca3cf6e66728d882c8cd3462b26f7",
+      "before_mode": "000000",
+      "after_mode": "100644"
+    },
+    "scripts/build_v15_7_candidate.py": {
+      "before": null,
+      "after": "e15c071c1908c371be114e646c6135b618b69ef4",
+      "before_mode": "000000",
+      "after_mode": "100644"
+    },
+    "scripts/check_successor_drift.py": {
+      "before": "98343ae569218aca1e7b060fbb5bfddc551c3593",
+      "after": "a16321dd4a84768f503aad403b56090ce4c4391a",
+      "before_mode": "100644",
+      "after_mode": "100644"
+    },
+    "scripts/gate_hourly_evolution.py": {
+      "before": "de66ff28b5be749c390ee7344daa1d290a834b68",
+      "after": "072026c96dc0eea6591e812adb621151507ffba9",
+      "before_mode": "100644",
+      "after_mode": "100644"
+    },
+    "scripts/inventory_release_references.py": {
+      "before": null,
+      "after": "6b36921eeb069607c8288e9298cef9470ac03a15",
+      "before_mode": "000000",
+      "after_mode": "100644"
+    }
+  },
+  "action_request_sha256": {
+    "GARDEN-HOURLY-2026-09-13-MERGE-WALL-PROPOSE-001": "85bfe62818a329c096e96ccfa7a2bbf8ab16bf76f755a0eda6a8db4f415066b7",
+    "GARDEN-HOURLY-2026-09-13-WP008-PROPOSE-001": "9a677b82802c7bb4b30f62841b1f04548d95d8c757b87d110ee49c17bcafdb04",
+    "GARDEN-HOURLY-2026-09-13-WP008-TRIAGE-001": "67193de056370abdd4d13c46a8fb6bb8b44169546c107031733ab83502724eee",
+    "GARDEN-HOURLY-2026-09-13-WP009B-PROPOSE-001": "d6c888f10f19e5d1f6860cd3903b993726b18702c3420ec633d68d7745a1c414",
+    "GARDEN-HOURLY-2026-09-13-WP009B-TRIAGE-001": "e7a169b3f22d815f34e249a19424f491998807d8998d0f19420c83206dcea85f",
+    "GARDEN-HOURLY-2026-09-13-WP009C-PROPOSE-001": "1049624af35f6ba70a7416eb3d03a76d3d756a9a8eb18c34ebe68bab29138919",
+    "GARDEN-HOURLY-2026-09-13-WP009C-TRIAGE-001": "f0893cd62d2b343016e6eb57740e74482833be8075d602fd2fd427fe2aae7c1e",
+    "GARDEN-HOURLY-2026-09-13-WP009D-PROPOSE-001": "c956abed61689bff8740b4f6f19c0ad16a0d956b6044c057564e00e2d3ed2f41",
+    "GARDEN-HOURLY-2026-09-13-WP009D-TRIAGE-001": "a7323bcb4b4b9ec156f8774b4b72021ba2622d5b9f81df353cb5040197d5721d",
+    "GARDEN-HOURLY-2026-09-13-WP009E-PROPOSE-001": "c5f7a989fcd219d576dde20bf62610e05004bbd622c1dd47d16cf49731f52d1d",
+    "GARDEN-HOURLY-2026-09-13-WP009E-TRIAGE-001": "b37424059d036906eebc044c5dc9bf746b9a247dd2a624e2c382cb3414e03105",
+    "GARDEN-HOURLY-2026-09-13-WP009F-PROPOSE-001": "1edf5d4e509f9f600b809c15de086687e9b7bab08108acbe19cb3b7bece058ab",
+    "GARDEN-HOURLY-2026-09-13-WP009F-TRIAGE-001": "c29f40b1b64ccb77aaf09cde9d212ce53cfb2bda856eff7840bc0700548170fb",
+    "GARDEN-HOURLY-2026-09-13-WP009G-PROPOSE-001": "165ba6799433608d0ac1e48ffc16f491e6b0178e1d24334223fd311c74008743",
+    "GARDEN-HOURLY-2026-09-13-WP009H-PROPOSE-001": "a101663d4f138be2871abfe2c649dc785a08bb27b180f66ec35af4ac6cc46023",
+    "GARDEN-HOURLY-2026-09-13-WP009H-TRIAGE-001": "5330e5a86c8904e592ec595c7d0918b6ebceae8da0cc5795174aaf3fc37bf9f7",
+    "GARDEN-2026-09-15-ALGEBRA-BOUND-UPDATE-REPAIR-PROPOSE-001": "5e9b3db47c4ce58b5f8bc7c17011b75fe486e620807898d19ccee0b954c300f7",
+    "GARDEN-2026-09-15-AUTOMATION-ENGINE-BINDING-PROPOSE-001": "ca023ab706e3f0bb9a157cc607dfa0e95746aef8edb9ab68954775383b02b7b6",
+    "GARDEN-2026-09-15-COMPLETION-EXECUTION-001": "dd2cefcd422b38fcbcb59ee7889523b78c3f0452bd889d6005f67b47c2f2c737",
+    "GARDEN-2026-09-15-HUMAN-ADMISSION-BOOTSTRAP-PROPOSE-001": "71ebcb8ecfda9086efbad5ab4bb4d588061e6bbbbd64d73fe9b091ff38342837",
+    "GARDEN-2026-09-15-PIPELINE-HEALTH-PUBLISH-001": "c723e34a7f2902e9151604efb31e9774296f332858f2bc3587b36edd2f61d3b5",
+    "GARDEN-2026-09-15-PROCESS-ENGINE-IMPLEMENT-001": "c9b513367e651127dc67aff54abd37a7f490c5d4b7b150947781852ecd32f5db",
+    "GARDEN-2026-09-15-PROCESS-V1.4-ADMISSION-PROPOSE-001": "a891ffd03b12ea4b8e08239b88a1577a279a744a9aa30c97ee66b0b6c5b6f430",
+    "GARDEN-2026-09-15-PROJECT-AUDIT-RECOVERY-PROPOSE-001": "f547ba2a6e336a4460ba1e02dddd46e0485fb6de7b106d7be6e86cec0367a93c",
+    "GARDEN-2026-09-15-SECTION-UNIT-ENUMERATOR-PROPOSE-001": "ebdd04b18eac185a4b0c9643e00fd912e773bf09c904a10e7b72f2af219ca663",
+    "GARDEN-2026-09-15-SERIAL-SCHEDULER-PROPOSE-001": "9b21c1dff203891c546c5316fe988dbd3edcf8b404e47fa7c4c79d0fbcc87730",
+    "GARDEN-2026-09-15-V157-CANDIDATE-PUBLICATION-PROPOSE-001": "5cd82b54dde850fbd7485c6cd68cbfe293a96100e7cc75e1c743c47c0be38a07"
+  }
+}
