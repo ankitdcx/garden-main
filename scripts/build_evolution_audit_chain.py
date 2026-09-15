@@ -22,6 +22,14 @@ def _record_paths(values: list[str]) -> list[Path]:
             paths.update(p for p in path.rglob("*.json") if p.is_file())
         elif path.is_file():
             paths.add(path)
+        elif path.is_absolute():
+            # CI may pass optional absolute /tmp paths that do not exist for a
+            # particular run. Never feed an absolute pattern into ROOT.glob().
+            # If the absolute value is a glob, evaluate it from its own parent;
+            # otherwise a missing absolute path simply contributes no records.
+            parent = path.parent
+            if parent.is_dir() and any(ch in path.name for ch in "*?["):
+                paths.update(p for p in parent.glob(path.name) if p.is_file())
         else:
             paths.update(p for p in ROOT.glob(value) if p.is_file())
     return sorted(paths, key=lambda p: p.as_posix())

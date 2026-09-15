@@ -1,0 +1,62 @@
+{
+  "schema": "ProcessVersion/v1",
+  "process_id": "GardenCanonicalUpdateProcess",
+  "version": "1.4",
+  "status": "HUMAN_ADMITTED_CURRENT_GOVERNING_PROCESS",
+  "authority_source": "HUMAN",
+  "admitted_on": "2026-09-15",
+  "timezone": "Asia/Kolkata",
+  "admitted_from": "design_deltas/v15.6/PROCESS-CANDIDATE-GardenCanonicalUpdateProcess-v1.4.json",
+  "candidate_lineage": [
+    "design_deltas/v15.6/PROCESS-CANDIDATE-GardenCanonicalUpdateProcess-v1.0.json",
+    "design_deltas/v15.6/PROCESS-CANDIDATE-GardenCanonicalUpdateProcess-v1.1.json",
+    "design_deltas/v15.6/PROCESS-CANDIDATE-GardenCanonicalUpdateProcess-v1.2.json",
+    "design_deltas/v15.6/PROCESS-CANDIDATE-GardenCanonicalUpdateProcess-v1.3.json",
+    "design_deltas/v15.6/PROCESS-CANDIDATE-GardenCanonicalUpdateProcess-v1.4.json"
+  ],
+  "governs": {
+    "canonical_baseline": "Garden v15.5",
+    "bound_design_epoch": "Garden-v15.5@63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+    "successor_work": "Garden v15.6 and later until superseded by a separately admitted ProcessVersion",
+    "canonical_design_effect": "NONE_BY_PROCESS_ADMISSION_ALONE"
+  },
+  "cycle_binding": {
+    "schema": "CycleBinding/v1",
+    "creation_requires": ["CycleID", "ProcessVersion", "DesignEpoch", "source_root_sha256", "public_repo_sha_if_in_scope", "private_repo_sha_if_in_scope"],
+    "immutable_after_creation": true,
+    "mid_cycle_process_or_design_epoch_change": "Either finish only under an explicitly permitted grandfathering receipt or terminate and create a new CycleID bound to the new state; never rewrite an existing CycleID binding."
+  },
+  "authoritative_semantics": {
+    "routing_packet_evidence_and_successor_rules": "v1.2 candidate incorporated by admission",
+    "enforcement_authority_lane_and_budget_rules": "v1.3 candidate incorporated by admission",
+    "simplification_audit_binding_health_lane_derivation_reduced_assurance_and_execution_first": "v1.4 candidate incorporated by admission",
+    "earlier_v1_0_v1_1_rules": "retained except where explicitly refined by later versions"
+  },
+  "human_root_authority": {
+    "protected_process_change_admission": "HUMAN_ONLY",
+    "delegation_envelope_admission": "HUMAN_ONLY",
+    "audit_rule_root": "HUMAN_ADMITTED",
+    "broad_process_design_reopen": "HUMAN_ONLY",
+    "execution_derived_process_repair": "Validated E2+ execution evidence may create a bounded proposal, but does not itself reopen broad speculative process design or grant admission authority."
+  },
+  "v15_6_simplification_bootstrap": {
+    "receipt": "design_deltas/v15.6/SIMPLIFICATION-RECEIPT-v15.6-BOOTSTRAP-2026-09-15.json",
+    "credited_consolidations": ["Garden Integrator & Build", "Garden Audit Challenger", "older duplicate Garden Hourly Cross-Exam"],
+    "not_credited": ["Garden AGI Relay"],
+    "gate_status": "EVIDENCE_RECORDED_PENDING_INDEPENDENT_COVERAGE_VERIFICATION_BEFORE_MAJOR_PROMOTION"
+  },
+  "execution_first": {
+    "enabled": true,
+    "default": "Do not add speculative process rules. Prefer implementation, enforcement, audit and re-verification of existing rules.",
+    "new_process_semantic_rule_requires": "Validated execution-derived E2+ evidence of a distinct defect class, unless HUMAN explicitly reopens process-design review."
+  },
+  "implementation_priority": [
+    "ProcessRouteTable/v1",
+    "PacketCompletenessProof/v1",
+    "EvidenceRequirementMatrix/v1",
+    "RuleEnforcementCoverageReceipt/v1",
+    "PipelineHealthReceipt/v1"
+  ],
+  "release_milestones": ["DELTA_POOL", "WORKING_FIVE_FILE_CANDIDATE", "FULL_DESIGN_SWEEP_COMPLETE_FOR_TIER_A", "FULL_ALL_TIER_COMPLETE", "CANONICAL_AFTER_AUTHORIZED_PROMOTION"],
+  "promotion_boundary": "Process admission does not promote Garden v15.6, admit any pending source-design delta, create a delegation envelope, or modify immutable Garden v15.5."
+}

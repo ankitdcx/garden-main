@@ -1,0 +1,89 @@
+{
+  "schema": "GardenEvolutionReasoningBundle/v1",
+  "bundle_id": "GARDEN-2026-09-15-PROCESS-V1.4-ADMISSION-REASONING-001",
+  "action_id": "GARDEN-2026-09-15-PROCESS-V1.4-ADMISSION-PROPOSE-001",
+  "design_epoch": "v15.5",
+  "canonical_source_root_sha256": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+  "source_obligation_refs": [
+    "design_deltas/v15.6/PROCESS-CANDIDATE-GardenCanonicalUpdateProcess-v1.4.json",
+    "governance/PROCESS-ADMISSION-RECEIPT-v1.4-2026-09-15.json",
+    "canonical/current/Garden_System_v15.5_FULL_2026-09-12.txt:AAP v1.0"
+  ],
+  "compare": {
+    "schema": "GardenEvolutionCompareReceipt/v1",
+    "action_id": "GARDEN-2026-09-15-PROCESS-V1.4-ADMISSION-PROPOSE-001",
+    "design_epoch": "v15.5",
+    "canonical_source_root_sha256": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+    "predecessor_ref": "git:ankitdcx/garden-main@af9e18e91927fa39065ea5c1218cc2025258b18b",
+    "alternatives": [
+      {"alternative_id":"DO_NOTHING","description":"Leave v1.4 as a tracking-only candidate with scheduled lanes referring to candidate semantics.","projected_effect":"Process remains operationally ambiguous because no human-admitted current-process pointer exists.","risk":"Cycles and enforcement receipts may bind to a candidate rather than an admitted governing process."},
+      {"alternative_id":"ADMIT_V1_4_PROCESS","description":"Record HUMAN admission of v1.4 as governing canonical-update process while preserving v15.5 canon and all promotion boundaries.","projected_effect":"Cycles and scheduled lanes gain one explicit governing ProcessVersion and execution-first boundary.","risk":"Governance process becomes load-bearing and must maintain enforcement/audit freshness; this receipt does not itself prove every rule is enforced."}
+    ],
+    "bidirectional_gaps": [
+      {"from":"DO_NOTHING","to":"ADMIT_V1_4_PROCESS","gap":"DO_NOTHING lacks an admitted current-process pointer and explicit human root admission record."},
+      {"from":"ADMIT_V1_4_PROCESS","to":"DO_NOTHING","gap":"Admission adds governance maintenance and enforcement obligations absent from leaving the candidate non-operative."}
+    ]
+  },
+  "reason": {
+    "schema": "GardenEvolutionReasonReceipt/v1",
+    "action_id": "GARDEN-2026-09-15-PROCESS-V1.4-ADMISSION-PROPOSE-001",
+    "design_epoch": "v15.5",
+    "canonical_source_root_sha256": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+    "strategy": "HUMAN_ROOTED_PROCESS_ADMISSION_WITH_EXECUTION_FIRST_BOUNDARY",
+    "tier": "PROTECTED_PROCESS_GOVERNANCE",
+    "assumptions": [
+      "Garden v15.5 remains immutable canonical design.",
+      "The user's explicit instruction supplies the protected HUMAN admission authority for ProcessVersion v1.4.",
+      "Process admission does not admit v15.6 source-design deltas or promote canon.",
+      "Production transport, reasoning, algebra and AAP receipts are conformance evidence only and cannot mint the HUMAN admission."
+    ],
+    "uncertainty": "RuleEnforcementCoverage and independent verification of the v15.6 simplification receipt remain execution obligations; process admission does not imply those gates are already satisfied.",
+    "counterexamples": [
+      "A process pointer that also promotes v15.6 would exceed the human instruction and must be rejected.",
+      "A transport receipt claiming it granted HUMAN authority would be invalid.",
+      "A cycle created under an older ProcessVersion must not be silently rebound to v1.4.",
+      "Speculative v1.5 process growth without execution-derived E2+ evidence must be rejected absent explicit HUMAN reopening."
+    ],
+    "dependency_refs": [
+      "governance/GardenCanonicalUpdateProcess_v1.4.json",
+      "governance/PROCESS-ADMISSION-RECEIPT-v1.4-2026-09-15.json",
+      "governance/PROCESS_CURRENT.json",
+      "design_deltas/v15.6/PROCESS-CANDIDATE-GardenCanonicalUpdateProcess-v1.4.json"
+    ],
+    "conclusion": "Record v1.4 as the HUMAN-admitted governing canonical-update process, keep v15.5 canonical, and shift scheduled work to execution-first implementation and verification.",
+    "authorization_effect": "NONE"
+  },
+  "proof": {
+    "schema": "GardenEvolutionProofReceipt/v1",
+    "action_id": "GARDEN-2026-09-15-PROCESS-V1.4-ADMISSION-PROPOSE-001",
+    "design_epoch": "v15.5",
+    "canonical_source_root_sha256": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+    "obligations": [
+      {"obligation_id":"PO-PROCESS-V14-001","statement":"Current-process pointer and admission receipt preserve Garden v15.5 canonical pointer and do not promote v15.6.","verifier_class":"CI_CONFORMANCE_AUDIT","result":"UNKNOWN","evidence_refs":[]},
+      {"obligation_id":"PO-PROCESS-V14-002","statement":"CycleID binding is immutable across ProcessVersion/DesignEpoch changes absent explicit grandfathering.","verifier_class":"EXECUTABLE_CONTRACT_TEST","result":"UNKNOWN","evidence_refs":[]},
+      {"obligation_id":"PO-PROCESS-V14-003","statement":"Only HUMAN can reopen broad process-design review or admit protected process-rule changes.","verifier_class":"PROTECTED_AUTHORITY_AUDIT","result":"UNKNOWN","evidence_refs":[]}
+    ],
+    "overall_result": "UNKNOWN",
+    "authorization_effect": "NONE"
+  },
+  "evidence": {
+    "schema": "GardenEvolutionEvidenceReceipt/v1",
+    "action_id": "GARDEN-2026-09-15-PROCESS-V1.4-ADMISSION-PROPOSE-001",
+    "design_epoch": "v15.5",
+    "canonical_source_root_sha256": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+    "items": [
+      {"kind":"HUMAN_DIRECTIVE","ref":"human:process-v1.4-admission:2026-09-15","claim_scope":"Explicit instruction to finalize the agreed canonical-update process, update the repository, and schedule jobs."},
+      {"kind":"PROCESS_CANDIDATE","ref":"design_deltas/v15.6/PROCESS-CANDIDATE-GardenCanonicalUpdateProcess-v1.4.json","claim_scope":"Final reviewed process candidate before execution-first transition."},
+      {"kind":"SIMPLIFICATION_EVIDENCE","ref":"design_deltas/v15.6/SIMPLIFICATION-RECEIPT-v15.6-BOOTSTRAP-2026-09-15.json","claim_scope":"Records v15.6 bootstrap lane consolidation evidence; independent gate verification remains pending."}
+    ],
+    "proof_effect": "NONE",
+    "authorization_effect": "NONE"
+  },
+  "separation_assertions": {
+    "compare_is_not_decision": true,
+    "reason_is_not_authorization": true,
+    "evidence_is_not_proof": true,
+    "proof_is_not_authorization": true,
+    "actiongate_owns_authorization": true
+  }
+}

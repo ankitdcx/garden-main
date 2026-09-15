@@ -1,0 +1,27 @@
+{
+  "schema": "ProcessAdmissionReceipt/v1",
+  "receipt_id": "PROCESS-ADMISSION-GardenCanonicalUpdateProcess-v1.4-2026-09-15",
+  "process_ref": "governance/GardenCanonicalUpdateProcess_v1.4.json",
+  "candidate_ref": "design_deltas/v15.6/PROCESS-CANDIDATE-GardenCanonicalUpdateProcess-v1.4.json",
+  "decision": "HUMAN_ADMIT_AS_CURRENT_GOVERNING_UPDATE_PROCESS",
+  "authority_source": "HUMAN",
+  "decision_date": "2026-09-15",
+  "timezone": "Asia/Kolkata",
+  "scope": ["canonical update routing", "review packet construction", "evidence adjudication", "successor admission workflow", "process enforcement maturity", "lane coordination", "budget assurance", "pipeline health", "execution-first transition"],
+  "explicit_boundaries": [
+    "Garden v15.5 remains canonical and immutable.",
+    "No Garden v15.6 source-design delta is admitted by this receipt.",
+    "No canonical promotion is executed by this receipt.",
+    "No CanonicalPromotionDelegationEnvelope is created by this receipt.",
+    "Protected process changes after v1.4 still require HUMAN admission.",
+    "Broad speculative process-design review may be reopened only by HUMAN."
+  ],
+  "cycle_transition_rule": "Cycles created before this admission retain their original ProcessVersion binding and may finish only if a valid grandfathering rule permits it; otherwise terminate and restart with a new CycleID under ProcessVersion 1.4.",
+  "execution_mode": "EXECUTION_FIRST",
+  "implementation_priority": ["ProcessRouteTable/v1", "PacketCompletenessProof/v1", "EvidenceRequirementMatrix/v1", "RuleEnforcementCoverageReceipt/v1", "PipelineHealthReceipt/v1"],
+  "provenance": {
+    "candidate_prs": [36, 37, 38, 39, 40],
+    "v15_6_simplification_evidence_pr": 42,
+    "v15_6_simplification_gate": "PENDING_INDEPENDENT_COVERAGE_VERIFICATION"
+  }
+}

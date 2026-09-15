@@ -1,0 +1,20 @@
+{
+  "schema": "GardenEvolutionAlgebraUsageReceipt/v1",
+  "action_id": "GARDEN-2026-09-15-PROCESS-V1.4-ADMISSION-PROPOSE-001",
+  "design_epoch": "v15.5",
+  "canonical_source_root_sha256": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+  "source_obligation_refs": [
+    "design_deltas/v15.6/PROCESS-CANDIDATE-GardenCanonicalUpdateProcess-v1.4.json",
+    "governance/PROCESS-ADMISSION-RECEIPT-v1.4-2026-09-15.json",
+    "canonical/current/Garden_System_v15.5_FULL_2026-09-12.txt:REG-ALGEBRA-001"
+  ],
+  "entries": [
+    {"algebra":"Process","status":"APPLIED","operators":["SEQUENCE","DO_NOTHING"],"law_claims":[],"non_law_acknowledgements":["PARALLEL_EFFECT_COMMUTATIVITY_NOT_UNIVERSAL"],"applicability_reason":"The admission flow explicitly compares DO_NOTHING with admission and sequences human admission, repository transport, checks, merge and scheduled execution."},
+    {"algebra":"Policy","status":"FRONTIER","operators":[],"law_claims":[],"non_law_acknowledgements":[],"applicability_reason":"Protected process policy constrains admission, but no executable Policy Algebra operator is newly invoked by this bounded transport.","frontier_reason":"Policy semantics remain governed by existing protected authority and ActionGate boundaries rather than a newly bound Policy Algebra operator."},
+    {"algebra":"Decision","status":"FRONTIER","operators":[],"law_claims":[],"non_law_acknowledgements":[],"applicability_reason":"Admission and CI produce typed decisions, but exact executable Decision Algebra operators remain outside this bounded transport.","frontier_reason":"No Level-3 Decision Algebra operator is claimed."},
+    {"algebra":"Conformance","status":"APPLIED","operators":["BIND_EVIDENCE","BIND_PROOF","GAP","COVERAGE"],"law_claims":[],"non_law_acknowledgements":["CONFORMANCE_IS_NOT_BINARY_ONLY","AUDIT_IS_NOT_A_SEPARATE_ALGEBRA"],"applicability_reason":"The process admission binds evidence/proof separately and preserves explicit coverage gaps and non-binary enforcement maturity."},
+    {"algebra":"Evidence","status":"FRONTIER","operators":[],"law_claims":[],"non_law_acknowledgements":[],"applicability_reason":"Evidence receipts are recorded but no Level-3 Evidence Algebra composition operator is executed here.","frontier_reason":"Executable Evidence Algebra composition remains unbound for this transport."},
+    {"algebra":"Bridge","status":"NOT_APPLICABLE","operators":[],"law_claims":[],"non_law_acknowledgements":[],"applicability_reason":"This repository governance admission uses typed JSON and no semantic-to-vector bridge operation."}
+  ],
+  "semantic_compliance_proved": false
+}
