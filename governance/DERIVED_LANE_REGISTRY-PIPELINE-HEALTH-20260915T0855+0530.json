@@ -1,0 +1,52 @@
+{
+  "schema": "DerivedLaneRegistry/v1",
+  "registry_id": "DLR-PIPELINE-HEALTH-20260915T0855+0530",
+  "generated_at": "2026-09-15T08:55:00+05:30",
+  "process_binding": {
+    "process_id": "GardenCanonicalUpdateProcess",
+    "process_version": "1.4",
+    "status": "HUMAN_ADMITTED_CURRENT",
+    "design_epoch": "Garden-v15.5@63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598"
+  },
+  "source_bindings": {
+    "garden_main_head": "b92a799582a07c6bfddcbc06b09a1b917cfe31f6",
+    "garden_swarm_head": "2aebb9aa92f200149869179092d454ab90c5593c",
+    "garden_main_workflow_tree": "ebc186d61abda7b1a86e1d1dd6feecc768d8f4ff",
+    "garden_swarm_workflow_tree": "a196867bb409f9105364c33c93c9991f43db7dbd",
+    "active_chatgpt_automations": 14
+  },
+  "chatgpt_automation_lanes": [
+    {"id":"6aa89f8d02688191927ec07da2cb9a99","title":"Garden Post-Merge Verifier","stage":"VERIFY"},
+    {"id":"6aa8a069d1d88191927f77a1ac724ea6","title":"Garden Canonical Design Sweep","stage":"OBSERVE_DISCOVER"},
+    {"id":"6aa68e09473c8191ae77494704e6f808","title":"Garden Daily Candidate","stage":"SUCCESSOR_PROMOTION"},
+    {"id":"6aa8a79303b88191ba498dd919efb861","title":"Garden Pipeline Health","stage":"PIPELINE_HEALTH"},
+    {"id":"6aa89d7c7ccc81918cce4b519a403ae5","title":"Garden Hourly Builder","stage":"BUILD_REPAIR"},
+    {"id":"6aa89d938ae08191aa10d0f7d1c760bd","title":"Garden Hourly Cross-Exam","stage":"CROSS_EXAM"},
+    {"id":"6aa8a6d1ab7881918d82e44613a46fd6","title":"Garden ReviewPacket Builder","stage":"PACKETIZE"},
+    {"id":"6aa68f41559c8191860a5fd429db0246","title":"Garden Daily Repo Review","stage":"PIPELINE_HEALTH_HYGIENE"},
+    {"id":"6aa89f6c40a8819183afc1853b319f05","title":"Garden Research Scout","stage":"OBSERVE_DISCOVER"},
+    {"id":"6aa8a7a5e4248191b9244a048e5b3f74","title":"Garden Pipeline Simplification","stage":"PIPELINE_HEALTH_HYGIENE"},
+    {"id":"6aa69eb215788191a67b100206958866","title":"Garden ChatGPT Reviewer","stage":"BLIND_REVIEW"},
+    {"id":"6aa8a5fb3db88191b62c284b23ca54d6","title":"Garden Protocol Simplifier","stage":"PIPELINE_HEALTH_HYGIENE"},
+    {"id":"6aa7a049de8881918969f916789d51e6","title":"Garden Hourly Branch Hygiene","stage":"PIPELINE_HEALTH_HYGIENE"},
+    {"id":"6a81e57a93e881919c57c1df91465cc9","title":"AI Architecture Brief","stage":"OBSERVE_DISCOVER"}
+  ],
+  "github_workflow_lanes": {
+    "ankitdcx/garden-main": ["integration-provenance.yml","kernel-ci.yml","publication-readiness.yml","seed-ci.yml","source-extraction-ci.yml"],
+    "ankitdcx/garden-swarm": ["branch-lifecycle.yml","constitutional-path-guard.yml","discovery-server.yml","hourly-free-agent-review.yml","hourly-specialist-agent-sweep.yml","integration-provenance.yml","integrity.yml","ip-origin-multi-agent-review.yml","live-mcp-verification.yml","one-use-ip-provenance-deepseek-review.yml","prototype-adversarial.yml","swarm-dry-run.yml","swarm-free-public-calibration.yml","swarm-free-zdr-probe.yml"]
+  },
+  "derived_counts": {"active_chatgpt_automations":14,"github_workflow_files":19,"total_entries":33},
+  "overlap_findings": [
+    {
+      "scope":"BLIND_REVIEW",
+      "classification":"INTENTIONAL_DIFFERENT_FAMILY_WORKERS",
+      "lanes":["Garden ChatGPT Reviewer","hourly-free-agent-review.yml","hourly-specialist-agent-sweep.yml"],
+      "composition_rule":"Worker findings are proposal/evidence only; Garden Hourly Cross-Exam is the single authoritative cross-exam stage owner."
+    }
+  ],
+  "unregistered_runnable_lanes": [],
+  "enforcement_gap": "Registry is mechanically derived here, but no activation-time repository guard currently enforces registry membership before every runnable lane executes.",
+  "legacy_note": "one-use-ip-provenance-deepseek-review.yml remains runnable only on its narrow PR path and is classified proposal-only; it has no authoritative disposition effect.",
+  "auditor_boundary": "Garden Pipeline Health does not certify its own closure counts.",
+  "authority_effect": "NONE"
+}
