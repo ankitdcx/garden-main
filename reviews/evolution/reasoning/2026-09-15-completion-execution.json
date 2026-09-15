@@ -1,0 +1,130 @@
+{
+  "schema": "GardenEvolutionReasoningBundle/v1",
+  "bundle_id": "GARDEN-2026-09-15-COMPLETION-REASONING-001",
+  "action_id": "GARDEN-2026-09-15-COMPLETION-EXECUTION-001",
+  "design_epoch": "v15.5",
+  "canonical_source_root_sha256": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+  "source_obligation_refs": [
+    "governance/PROCESS_CURRENT.json",
+    "governance/GardenCanonicalUpdateProcess_v1.4.json",
+    "canonical/current/Garden_System_v15.5_FULL_2026-09-12.txt:REG-ALGEBRA-001"
+  ],
+  "compare": {
+    "schema": "GardenEvolutionCompareReceipt/v1",
+    "action_id": "GARDEN-2026-09-15-COMPLETION-EXECUTION-001",
+    "design_epoch": "v15.5",
+    "canonical_source_root_sha256": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+    "predecessor_ref": "git:ankitdcx/garden-main@09543507465fd0845cbcc75936ecc8a927e3c9b9",
+    "alternatives": [
+      {
+        "alternative_id": "DO_NOTHING",
+        "description": "Keep paused hourly configuration and non-durable execution.",
+        "projected_effect": "No new execution risk, but no completion-driven progress.",
+        "risk": "Recovery, duplicate calls and shared accounting remain unimplemented."
+      },
+      {
+        "alternative_id": "DURABLE_COMPLETION_SUBSTRATE",
+        "description": "Add one transactional worker store, dependency joins, pre-call reservations and strict existing algebra input checks.",
+        "projected_effect": "Deterministic local completion chaining with bounded recovery and accounting.",
+        "risk": "Deployment and trusted provider/gate adapters remain necessary; tests do not qualify a live system."
+      }
+    ],
+    "bidirectional_gaps": [
+      {
+        "from": "DO_NOTHING",
+        "to": "DURABLE_COMPLETION_SUBSTRATE",
+        "gap": "No durable claim/cooldown/accounting or automatic sequential handoff."
+      },
+      {
+        "from": "DURABLE_COMPLETION_SUBSTRATE",
+        "to": "DO_NOTHING",
+        "gap": "Additional database and adapter qualification obligations."
+      }
+    ]
+  },
+  "reason": {
+    "schema": "GardenEvolutionReasonReceipt/v1",
+    "action_id": "GARDEN-2026-09-15-COMPLETION-EXECUTION-001",
+    "design_epoch": "v15.5",
+    "canonical_source_root_sha256": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+    "strategy": "EXECUTION_FIRST_DURABLE_COMPLETION",
+    "tier": "IMPLEMENTATION_CONFORMANCE",
+    "assumptions": [
+      "GardenCanonicalUpdateProcess@1.4 is the HUMAN-admitted current governing process.",
+      "Garden v15.5 remains the immutable canonical design baseline.",
+      "The engine implements admitted process semantics and does not create new canonical Garden semantics.",
+      "Process Algebra validation is conformance evidence only and cannot grant authority or prove complete semantic compliance.",
+      "MAJOR_DELEGABLE and MAJOR_PROTECTED must remain sibling route implementations so protected authority cannot leak through inheritance."
+    ],
+    "uncertainty": "No live provider adapter or persistent host is installed. Whole-source packet closure and general rollback/compensation remain frontiered.",
+    "counterexamples": [
+      "Two workers both claim one task.",
+      "Crash repeats possibly charged call.",
+      "429 advances process state.",
+      "Unknown balance permits paid call.",
+      "Wrong cycle or incomplete blind set passes cross-examination.",
+      "Integer gate or duplicate-only set becomes accepted evidence.",
+      "Valid ordered operator trace rejects repeated SEQUENCE."
+    ],
+    "dependency_refs": [
+      "governance/PROCESS_CURRENT.json",
+      "governance/GardenCanonicalUpdateProcess_v1.4.json",
+      "gsl/EVOLUTION_ALGEBRA_PROFILE.json",
+      "implementation/garden_kernel/evolution_algebra.py",
+      "implementation/garden_kernel/evolution_authority.py"
+    ],
+    "conclusion": "Propose and test the substrate; retain pause until durable host and independent evidence adapters are qualified.",
+    "authorization_effect": "NONE"
+  },
+  "proof": {
+    "schema": "GardenEvolutionProofReceipt/v1",
+    "action_id": "GARDEN-2026-09-15-COMPLETION-EXECUTION-001",
+    "design_epoch": "v15.5",
+    "canonical_source_root_sha256": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+    "obligations": [
+      {
+        "obligation_id": "PO-COMPLETION-001",
+        "statement": "One claim, committed reservation, dependency join and strict cycle binding survive restart without duplicate effects.",
+        "verifier_class": "EXECUTABLE_CONTRACT_TEST",
+        "result": "UNKNOWN",
+        "evidence_refs": [
+          "implementation/tests/test_completion_runner.py"
+        ]
+      }
+    ],
+    "overall_result": "UNKNOWN",
+    "authorization_effect": "NONE"
+  },
+  "evidence": {
+    "schema": "GardenEvolutionEvidenceReceipt/v1",
+    "action_id": "GARDEN-2026-09-15-COMPLETION-EXECUTION-001",
+    "design_epoch": "v15.5",
+    "canonical_source_root_sha256": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+    "items": [
+      {
+        "kind": "HUMAN_DIRECTIVE",
+        "ref": "human:completion-driven-process-algebra-repairs:2026-09-15",
+        "claim_scope": "User explicitly requested completion-driven execution and pending algebra fixes."
+      },
+      {
+        "kind": "IMPLEMENTATION",
+        "ref": "implementation/garden_kernel/completion_runner.py",
+        "claim_scope": "Durable substrate; not deployed."
+      },
+      {
+        "kind": "EXECUTABLE_TEST",
+        "ref": "implementation/tests/test_completion_runner.py",
+        "claim_scope": "Controlled local counterexamples, not independent qualification."
+      }
+    ],
+    "proof_effect": "NONE",
+    "authorization_effect": "NONE"
+  },
+  "separation_assertions": {
+    "compare_is_not_decision": true,
+    "reason_is_not_authorization": true,
+    "evidence_is_not_proof": true,
+    "proof_is_not_authorization": true,
+    "actiongate_owns_authorization": true
+  }
+}
