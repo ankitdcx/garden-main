@@ -1,0 +1,62 @@
+{
+  "schema": "SimplificationReceipt/v1",
+  "receipt_id": "SIMPLIFICATION-v15.6-BOOTSTRAP-2026-09-15",
+  "candidate_release": "Garden v15.6",
+  "predecessor_release": "Garden v15.5",
+  "predecessor_source_root_sha256": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+  "process_candidate": "GardenCanonicalUpdateProcess v1.4-candidate",
+  "status": "TRACKING_EVIDENCE_PENDING_SUCCESSOR_ADMISSION",
+  "purpose": "Satisfy the first MAJOR successor simplification gate with completed lane consolidation rather than a first-release exemption or dishonest impact downgrade.",
+  "simplifications": [
+    {
+      "object_kind": "AUTOMATION_LANE",
+      "object": "Garden Integrator & Build",
+      "action": "DEPRECATED_AND_DISABLED",
+      "replacement_coverage": [
+        "Garden ReviewPacket Builder",
+        "Garden Hourly Cross-Exam",
+        "Garden Hourly Builder",
+        "Garden Post-Merge Verifier",
+        "Garden Pipeline Health"
+      ],
+      "coverage_rationale": "The former monolithic integration lane is decomposed into packet construction, independent adjudication, bounded build/integration, post-merge verification and independent pipeline-health control with explicit CycleID/packet/evidence bindings."
+    },
+    {
+      "object_kind": "AUTOMATION_LANE",
+      "object": "Garden Audit Challenger",
+      "action": "DEPRECATED_AND_DISABLED",
+      "replacement_coverage": [
+        "Garden Hourly Cross-Exam",
+        "Garden Daily Repo Review",
+        "Garden Post-Merge Verifier"
+      ],
+      "coverage_rationale": "Adversarial challenge, daily deep audit and independent outcome verification are now split across explicit lanes with clearer authority and evidence boundaries."
+    },
+    {
+      "object_kind": "AUTOMATION_LANE",
+      "object": "legacy Garden Hourly Cross-Exam",
+      "action": "DUPLICATE_LANE_DISABLED",
+      "replacement_coverage": [
+        "current Garden Hourly Cross-Exam"
+      ],
+      "coverage_rationale": "A duplicate same-stage cross-examination lane was disabled so one authoritative cross-exam disposition exists per CycleID/stage; intentional multi-model challenge remains inside the current governed cross-exam lane."
+    }
+  ],
+  "not_counted_as_simplification": [
+    {
+      "object": "Garden AGI Relay",
+      "reason": "Disabled, but its external-relay/engagement-monitoring purpose is not equivalent to the successor review/build assurance chain; disabling alone is not counted as semantic/process simplification without demonstrated replacement coverage."
+    }
+  ],
+  "gate_result": "CANDIDATE_GATE_SATISFIED_IF_INDEPENDENT_REVIEW_CONFIRMS_REPLACEMENT_COVERAGE_AND_NO_PROTECTED_BOUNDARY_REGRESSION",
+  "classification_rule": "Garden v15.6 remains MAJOR if its admitted semantic impact is MAJOR; this receipt never downgrades successor classification.",
+  "required_confirmation": [
+    "DerivedLaneRegistry confirms all three simplified lanes are inactive",
+    "replacement lanes are active and registered",
+    "LaneOverlapAssessment confirms no competing authoritative same-stage disposition remains",
+    "independent review confirms no authority/privacy/HSA/safety boundary weakened",
+    "post-change PipelineHealthReceipt shows replacement lanes can execute their declared contracts"
+  ],
+  "authority_effect": "NONE_TRACKING_EVIDENCE_ONLY",
+  "canonical_effect": "NONE_UNTIL_SUCCESSOR_ADMISSION_AND_PROMOTION"
+}
