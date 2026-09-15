@@ -509,12 +509,6 @@
       "before_mode": "000000",
       "after_mode": "100644"
     },
-    "scripts/build_evolution_audit_chain.py": {
-      "before": "82a9f5980521aee0f5c4b6771b2ce1cdc0ef9158",
-      "after": "82a9f5980521aee0f5c4b6771b2ce1cdc0ef9158",
-      "before_mode": "100755",
-      "after_mode": "100644"
-    },
     "scripts/build_v15_6_candidate.py": {
       "before": null,
       "after": "ed15ec61878ca3cf6e66728d882c8cd3462b26f7",
