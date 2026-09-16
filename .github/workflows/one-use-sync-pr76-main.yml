@@ -1,0 +1,26 @@
+name: One-use synchronize PR76 with current main
+on:
+  push:
+    branches: [codex/v15.7-five-doc-assurance-20260916]
+permissions:
+  contents: write
+jobs:
+  sync:
+    if: github.actor == 'ankitdcx'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: codex/v15.7-five-doc-assurance-20260916
+          fetch-depth: 0
+      - name: Merge current main and remove one-use workflow
+        run: |
+          set -euo pipefail
+          git config user.name 'ankitdcx'
+          git config user.email '328232957+ankitdcx@users.noreply.github.com'
+          git fetch origin main
+          git merge --no-edit origin/main
+          git rm .github/workflows/one-use-sync-pr76-main.yml
+          git commit -m 'Remove one-use PR76 synchronization workflow'
+          git push origin HEAD:codex/v15.7-five-doc-assurance-20260916
