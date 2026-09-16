@@ -1,0 +1,67 @@
+{
+  "schema": "GardenEvolutionAlgebraUsageReceipt/v1",
+  "action_id": "GARDEN-2026-09-16-EVENT-DELTA-GENERALIZATION-001",
+  "design_epoch": "v15.5",
+  "canonical_source_root_sha256": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+  "source_obligation_refs": [
+    "governance/PROCESS_CURRENT.json",
+    "governance/GardenCanonicalUpdateProcess_v1.4.json",
+    "governance/PROCESS_ENGINE_IMPLEMENTATION_v1.json",
+    "governance/EVENT_DRIVEN_WORK_POLICY_v1.json",
+    "canonical/current/Garden_System_v15.5_FULL_2026-09-12.txt:REG-ALGEBRA-001"
+  ],
+  "entries": [
+    {
+      "algebra": "Process",
+      "status": "APPLIED",
+      "operators": ["SEQUENCE", "BRANCH"],
+      "law_claims": [],
+      "non_law_acknowledgements": ["PARALLEL_EFFECT_COMMUTATIVITY_NOT_UNIVERSAL"],
+      "applicability_reason": "The coordinator sequences one bounded material work unit and branches on deduplication, materiality, freshness, dependency closure, cooldown and fail-closed eligibility. No new parallel-effect law is claimed."
+    },
+    {
+      "algebra": "Policy",
+      "status": "FRONTIER",
+      "operators": [],
+      "law_claims": [],
+      "non_law_acknowledgements": [],
+      "applicability_reason": "Materiality/context rules are represented as an implementation profile, not relabeled as executable Garden Policy Algebra operators.",
+      "frontier_reason": "No new Level-3 Policy Algebra operator is bound by this proposal."
+    },
+    {
+      "algebra": "Decision",
+      "status": "FRONTIER",
+      "operators": [],
+      "law_claims": [],
+      "non_law_acknowledgements": [],
+      "applicability_reason": "NO_CHANGE, expand-context and handoff eligibility are typed routing outcomes; executable Decision Algebra signatures are not newly claimed.",
+      "frontier_reason": "No Level-3 Decision Algebra operator is claimed."
+    },
+    {
+      "algebra": "Conformance",
+      "status": "APPLIED",
+      "operators": ["BIND_EVIDENCE", "COVERAGE", "GAP"],
+      "law_claims": [],
+      "non_law_acknowledgements": ["CONFORMANCE_IS_NOT_BINARY_ONLY", "AUDIT_IS_NOT_A_SEPARATE_ALGEBRA"],
+      "applicability_reason": "The profile binds materiality and closure evidence, records coverage and explicit context/verification gaps, and never treats a compact packet or passing test as semantic compliance."
+    },
+    {
+      "algebra": "Evidence",
+      "status": "FRONTIER",
+      "operators": [],
+      "law_claims": [],
+      "non_law_acknowledgements": [],
+      "applicability_reason": "Source/evidence ancestry is preserved and transported, but no new executable Evidence Algebra composition operator is invoked.",
+      "frontier_reason": "Evidence Algebra executable composition remains FRONTIER."
+    },
+    {
+      "algebra": "Bridge",
+      "status": "NOT_APPLICABLE",
+      "operators": [],
+      "law_claims": [],
+      "non_law_acknowledgements": [],
+      "applicability_reason": "This change modifies process/context routing profiles and documentation; it performs no semantic-to-representation Garden Bridge operation."
+    }
+  ],
+  "semantic_compliance_proved": false
+}
