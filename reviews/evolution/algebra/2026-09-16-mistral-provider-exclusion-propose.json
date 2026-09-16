@@ -1,0 +1,66 @@
+{
+  "schema": "GardenEvolutionAlgebraUsageReceipt/v1",
+  "action_id": "GARDEN-2026-09-16-MISTRAL-EXCLUSION-PROPOSE-001",
+  "design_epoch": "v15.5",
+  "canonical_source_root_sha256": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+  "source_obligation_refs": [
+    "governance/PROVIDER_EXCLUSION_POLICY_v1.json",
+    "governance/PROCESS_CURRENT.json",
+    "governance/GardenCanonicalUpdateProcess_v1.4.json",
+    "canonical/current/Garden_System_v15.5_FULL_2026-09-12.txt:REG-ALGEBRA-001"
+  ],
+  "entries": [
+    {
+      "algebra": "Process",
+      "status": "APPLIED",
+      "operators": ["BRANCH", "SEQUENCE"],
+      "law_claims": [],
+      "non_law_acknowledgements": ["PARALLEL_EFFECT_COMMUTATIVITY_NOT_UNIVERSAL"],
+      "applicability_reason": "Outbound Garden work branches on allowed versus excluded provider/model identity before any provider call. Extending the same owner to Mistral adds no new process operator or authority source."
+    },
+    {
+      "algebra": "Policy",
+      "status": "FRONTIER",
+      "operators": [],
+      "law_claims": [],
+      "non_law_acknowledgements": [],
+      "applicability_reason": "The Mistral exclusion extends the existing human operator routing constraint; it is not relabeled as a new canonical Policy Algebra operator.",
+      "frontier_reason": "No new Level-3 Policy Algebra operator is introduced."
+    },
+    {
+      "algebra": "Decision",
+      "status": "FRONTIER",
+      "operators": [],
+      "law_claims": [],
+      "non_law_acknowledgements": [],
+      "applicability_reason": "ALLOW/DENY provider eligibility remains an implementation routing outcome under the existing owner.",
+      "frontier_reason": "No new executable Decision Algebra signature is claimed."
+    },
+    {
+      "algebra": "Conformance",
+      "status": "APPLIED",
+      "operators": ["BIND_EVIDENCE", "COVERAGE", "GAP"],
+      "law_claims": [],
+      "non_law_acknowledgements": ["CONFORMANCE_IS_NOT_BINARY_ONLY", "AUDIT_IS_NOT_A_SEPARATE_ALGEBRA"],
+      "applicability_reason": "The human directive is bound to the existing policy artifact and downstream runtime enforcement remains separately verifiable. Unknown third-party routing lineage remains an explicit gap."
+    },
+    {
+      "algebra": "Evidence",
+      "status": "FRONTIER",
+      "operators": [],
+      "law_claims": [],
+      "non_law_acknowledgements": [],
+      "applicability_reason": "The human directive and repository artifacts are evidence; no new Evidence Algebra composition operator is claimed.",
+      "frontier_reason": "Evidence Algebra executable composition remains FRONTIER."
+    },
+    {
+      "algebra": "Bridge",
+      "status": "NOT_APPLICABLE",
+      "operators": [],
+      "law_claims": [],
+      "non_law_acknowledgements": [],
+      "applicability_reason": "No semantic-to-representation Garden Bridge operation is introduced."
+    }
+  ],
+  "semantic_compliance_proved": false
+}
