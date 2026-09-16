@@ -52,6 +52,15 @@
       "status": "CANDIDATE_USER_REQUESTED_TRACKING_PENDING_RECONCILIATION",
       "summary": "Revision 2 plus final clarifications: bounded mechanism/composition checks, requirement-level joined decisions, earned complexity, no-comparator distinction and independent progress.",
       "work_package_id": "WP-DESIGN-CLOSURE-V15-7"
+    },
+    {
+      "candidate_id": "CAND-EDCR-001",
+      "kind": "EVENT_DRIVEN_CONTEXT_ROUTING_CANDIDATE",
+      "next_action": "Qualify the public OpenRouter adapter: deterministic normalized observations, deduplication/materiality receipts, provenance-preserving compact context packets, selective Astra synthesis, cost/quality measurements and fail-closed provider handling.",
+      "source": "design_deltas/v15.7/EVENT-DRIVEN-CONTEXT-ROUTING-CANDIDATE.md",
+      "status": "CANDIDATE_USER_REQUESTED_IMPLEMENTATION_AND_QUALIFICATION_PENDING",
+      "summary": "Reuse completion-driven execution, AttestedObservation/Evidence and GSL-KR so cheap workers normalize events and frontier models see only material context deltas; compression cannot erase evidence, contradiction, freshness or authority boundaries.",
+      "work_package_id": "WP-EVENT-DRIVEN-CONTEXT-ROUTING-V15-7"
     }
   ],
   "canonical_promotion": "Separate governed act; registration grants no admission or execution authority.",
