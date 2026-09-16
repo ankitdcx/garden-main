@@ -1,0 +1,111 @@
+{
+  "schema": "GardenPendingClosureCheckpoint/v1",
+  "date": "2026-09-16",
+  "status": "PARTIAL_CLOSURE_WITH_EXPLICIT_BLOCKERS",
+  "all_pending_closed": false,
+  "canonical_promotion": false,
+  "canonical_predecessor": "Garden v15.5",
+  "source_chat_coverage": "PARTIAL_RETRIEVAL_C4_C5_AND_FULL_CALIBRATION_WORDING_NOT_RECOVERED",
+  "merged_review_fix": {
+    "repository": "ankitdcx/garden-swarm",
+    "pull_request": 215,
+    "commit": "d4b981d7c605e1c7ed1bd253bdb9c3681669b03d",
+    "scope": "Committed baseline disclosure, original-finding retention, disposition audit and labeled post-blind cross-examination",
+    "offline_tests_passed": 211,
+    "gsl_application_conformance": "PASS",
+    "reference_closure_unresolved": 0,
+    "live_provider_validation": false
+  },
+  "candidate_register_snapshot": {
+    "repository": "ankitdcx/garden-main",
+    "pull_request": 76,
+    "commit": "60f437361107b13cd54aa36fbb345e8496bdeca3",
+    "path": "reviews/v15.7/qualification/OBLIGATION-REGISTER.json",
+    "sha256": "f0b9881dc2a8b398459391745580e313f3738d04874f5d4fce9dc81ab8b9761f",
+    "rows": 368,
+    "unique_requirement_ids": 368,
+    "counts_by_status": {
+      "PARTIAL": 135,
+      "SPECIFIED": 218,
+      "DEFERRED": 10,
+      "IMPLEMENTED": 5
+    },
+    "closed_rows": 0,
+    "all_rows_have_next_action": true,
+    "availability": "OPEN_PR_ONLY_NOT_DEFAULT_BRANCH",
+    "coverage_limit": "These counts describe the existing register only, not exhaustive chat coverage or completed qualification."
+  },
+  "added_candidate_index_entries": [
+    {
+      "candidate_id": "CAND-HEC-001",
+      "source": "design_deltas/v15.7/HUMAN-EFFECT-CLOSURE-CANDIDATE-2026-09-16.md",
+      "sha256": "425a719b52bfe9764f37e916a5c0b8161f4a6e31df9ca5299b474333e055ef4e"
+    },
+    {
+      "candidate_id": "CAND-JECAO-001",
+      "source": "design_deltas/v15.7/JUSTICE-EVIDENCE-CONTINUITY-ANTI-OBSTRUCTION-CANDIDATE-2026-09-16.md",
+      "sha256": "d620dc3a735562e0c313c367222130d82c764c84b505ff2e4f13b7e9829fb8c3"
+    },
+    {
+      "candidate_id": "CAND-REPUTATION-AGENCY-001",
+      "source": "design_deltas/v15.7/REPUTATION-AGENCY-LOG-SCALE-CANDIDATE-2026-09-16.md",
+      "sha256": "ef71a304847aa3e336ff2737f766d9af693ba1b79405f0f2f140273329cd3c57"
+    },
+    {
+      "candidate_id": "CAND-WEG-001",
+      "source": "design_deltas/v15.7/WORLD-EVIDENCE-GRAPH-CANDIDATE-2026-09-16.md",
+      "sha256": "35fe65b472e4459f4dd1e5681a0988dfe393bbb92b5b88a69de454a2f4fa6c95"
+    },
+    {
+      "candidate_id": "CAND-LFD-001",
+      "source": "design_deltas/v15.7/LETHAL-FORCE-DISARMAMENT-CANDIDATE-2026-09-16.md",
+      "sha256": "fa6c9acd4da9a26f190a426b28775bc9ac6aecfeba1b715a6d4c0d3433e41836"
+    },
+    {
+      "candidate_id": "CAND-PFM-001",
+      "source": "design_deltas/v15.7/PRIVACY-FIRST-PEACEFUL-MIGRATION-CANDIDATE-2026-09-16.md",
+      "sha256": "a702176310ed07cec7057bb15aeaa32e6886a508aae38328061f429420556199"
+    }
+  ],
+  "remaining_obligations": [
+    {
+      "id": "CLOSURE-01",
+      "status": "BLOCKED_EXTERNAL_EVIDENCE",
+      "scope": "Historical Qwen completion and billing",
+      "evidence": "garden-swarm garden-review-state ledger: run 35097998039, status UNKNOWN, no response_id, cost null",
+      "next_action": "Obtain provider activity/status/cost and generation identity if any for the 2026-09-16 12:48:50 UTC attempt; reconcile without assuming zero cost."
+    },
+    {
+      "id": "CLOSURE-02",
+      "status": "BLOCKED_TRUSTED_ADMISSION_BOOTSTRAP_AND_STALE_BASE",
+      "scope": "PR84 prerequisite human-admission record and PR76 candidate merge",
+      "evidence": "PR84 trusted-base-admission job 104833720089 rejected. Base-pinned verifier reads PR84 approval only from trusted base; none exists. Current main is not an ancestor of PR84 or PR76.",
+      "next_action": "Use an independently governed human-root admission path; no candidate self-approval, gate weakening or fabricated receipt. Then forward-compose current main, regenerate exact changed-blob/action/base bindings and re-run required checks. Existing human intent is recorded; repeatedly asking for the same consent does not repair this mechanism."
+    },
+    {
+      "id": "CLOSURE-03",
+      "status": "REGISTERED_NOT_MATERIALIZED",
+      "scope": "Six chat-derived amendments",
+      "next_action": "Complete owner/registry/contract reconciliation, affected five-file materialization, tests and independent review. Preserve all existing main and PR76 fields."
+    },
+    {
+      "id": "CLOSURE-04",
+      "status": "NOT_EXECUTED",
+      "scope": "Live four-family convergence, independent-origin challenger qualification and reviewer quality benchmark",
+      "next_action": "Resolve billing, stage fresh source/executor-bound directives, execute permitted models and preserve actual outputs; no silent slot replacement or synthetic benchmark claim."
+    },
+    {
+      "id": "CLOSURE-05",
+      "status": "SOURCE_DETAIL_NOT_RECOVERED",
+      "scope": "Exact C4/C5 and full calibration wording from the final critique",
+      "next_action": "Recover original text and map each clause to an implementation/test or explicit deferral before exhaustive closure."
+    },
+    {
+      "id": "CLOSURE-06",
+      "status": "QUALIFICATION_PENDING",
+      "scope": "TRACE, cognitive increment/qualification, comparator experiments, semantic closure, physical/hardware assurance and deferred integrations",
+      "next_action": "Execute each register row against its declared owner, evidence and next action. Local fixtures do not substitute for real hardware or external empirical results. Temporal/seL4 deferrals remain explicit."
+    }
+  ],
+  "claim_boundary": "Tracking, code tests and repository merge are distinct from live validation, qualification and canonical promotion."
+}
