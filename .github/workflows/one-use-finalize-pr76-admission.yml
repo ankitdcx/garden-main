@@ -1,0 +1,85 @@
+name: One-use finalize PR76 admission binding
+on:
+  push:
+    branches: [governance/pr76-human-admission-20260916]
+permissions:
+  contents: write
+jobs:
+  finalize:
+    if: github.actor == 'ankitdcx'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: governance/pr76-human-admission-20260916
+          fetch-depth: 0
+      - name: Recompute admission against prospective trusted base
+        env:
+          EXPECTED_MAIN: 46516375cf0c0db387c6c2fc665282409da7278a
+          EXPECTED_PR76: 60f437361107b13cd54aa36fbb345e8496bdeca3
+        run: |
+          set -euo pipefail
+          git config user.name 'ankitdcx'
+          git config user.email '328232957+ankitdcx@users.noreply.github.com'
+          git fetch origin main codex/v15.7-five-doc-assurance-20260916
+          test "$(git rev-parse origin/main^{commit})" = "$EXPECTED_MAIN"
+          test "$(git rev-parse origin/codex/v15.7-five-doc-assurance-20260916^{commit})" = "$EXPECTED_PR76"
+
+          branch=governance/pr76-human-admission-20260916
+          workflow=.github/workflows/one-use-finalize-pr76-admission.yml
+          git rm "$workflow"
+          git commit -m 'Remove one-use PR76 admission binding workflow'
+          prospective_base=$(git rev-parse HEAD)
+
+          git checkout -b __prospective_pr76 origin/codex/v15.7-five-doc-assurance-20260916
+          git merge --no-edit "$prospective_base"
+          prospective_candidate=$(git rev-parse HEAD)
+          export PROSPECTIVE_BASE="$prospective_base" PROSPECTIVE_CANDIDATE="$prospective_candidate"
+
+          python - <<'PY'
+          import hashlib, json, os, subprocess
+          from pathlib import Path
+          base=os.environ['PROSPECTIVE_BASE']; head=os.environ['PROSPECTIVE_CANDIDATE']
+          admission='governance/human_admissions/PR-76.json'
+          def git(*args): return subprocess.check_output(['git',*args],text=True).strip()
+          subprocess.run(['git','merge-base','--is-ancestor',base,head],check=True)
+          tree=subprocess.check_output(['git','ls-tree','-r','-z',base])
+          rows=[x.decode() for x in tree.split(b'\0') if x]
+          bound=sorted(x for x in rows if x.split('\t',1)[1] != admission)
+          baseline=hashlib.sha256('\0'.join(bound).encode()).hexdigest()
+          raw=subprocess.check_output(['git','diff','--raw','--no-abbrev','--no-renames','-z',base,head])
+          parts=raw.split(b'\0'); changes={}
+          for i in range(0,len(parts)-1,2):
+              if not parts[i]: continue
+              meta=parts[i].decode(); path=parts[i+1].decode()
+              before_mode,after_mode,before,after,_status=meta.split()
+              changes[hashlib.sha256(path.encode()).hexdigest()]={
+                  'before': None if set(before)=={'0'} else before,
+                  'after': None if set(after)=={'0'} else after,
+                  'before_mode': before_mode.lstrip(':'),
+                  'after_mode': after_mode,
+              }
+          action_hashes={}
+          paths=[x for x in git('ls-tree','-r','--name-only',head,'reviews/evolution/production').splitlines() if x.endswith('.json')]
+          for path in paths:
+              req=json.loads(git('show',head+':'+path)); action=req.get('action',{}); aid=action.get('action_id')
+              if not isinstance(aid,str) or not aid: raise SystemExit('invalid action id '+path)
+              digest=hashlib.sha256(json.dumps(req,sort_keys=True,separators=(',',':'),ensure_ascii=False).encode()).hexdigest()
+              prior=action_hashes.setdefault(aid,digest)
+              if prior != digest: raise SystemExit('duplicate action id mismatch '+aid)
+          record=json.loads(git('show',base+':'+admission))
+          record.pop('approved_base_sha',None); record.pop('approved_head_sha',None)
+          record['base_tree_without_admission']=baseline
+          record['change_path_encoding']='SHA256_UTF8'
+          record['changes']=changes
+          record['action_request_sha256']=action_hashes
+          Path('/tmp/PR-76.json').write_text(json.dumps(record,indent=2)+'\n')
+          print(json.dumps({'prospective_base_tree_without_admission':baseline,'candidate_change_count':len(changes),'action_count':len(action_hashes)}))
+          PY
+
+          git checkout "$branch"
+          cp /tmp/PR-76.json governance/human_admissions/PR-76.json
+          git add governance/human_admissions/PR-76.json
+          git commit -m 'Finalize exact PR76 human admission binding'
+          git push origin HEAD:"$branch"
