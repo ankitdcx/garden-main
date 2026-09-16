@@ -1,0 +1,51 @@
+{
+  "schema": "GardenProviderExclusionPolicy/v1",
+  "status": "HUMAN_OPERATOR_DIRECTIVE_ACTIVE_NONCANONICAL_OPERATING_POLICY",
+  "effective_date": "2026-09-16",
+  "scope": "ALL_GARDEN_WORK",
+  "authority_basis": "Explicit human operator trust/procurement preference. This policy does not assert misconduct, poisoning, or wrongdoing as established fact.",
+  "excluded_organizations": [
+    {
+      "organization": "Anthropic",
+      "aliases": ["anthropic", "claude"],
+      "model_origin_markers": ["anthropic/", "claude"]
+    },
+    {
+      "organization": "NVIDIA",
+      "aliases": ["nvidia", "nemotron"],
+      "model_origin_markers": ["nvidia/", "nemotron"]
+    },
+    {
+      "organization": "Mistral AI",
+      "aliases": ["mistral", "mistralai"],
+      "model_origin_markers": ["mistralai/", "mistral"]
+    }
+  ],
+  "prohibited_for_garden_work": [
+    "direct API or hosted-service calls",
+    "indirect routing through aggregators or fallbacks to excluded provider endpoints",
+    "use of models published or controlled by an excluded organization, including third-party-hosted routes",
+    "assignment as reviewer, challenger, adjudicator, research agent, or synthesis agent",
+    "requesting review, advice, collaboration, support, or other active contact from an excluded organization",
+    "automatic or manual fallback to an excluded organization when another provider fails"
+  ],
+  "allowed_non_operational_uses": [
+    "preserving historical repository records and prior-art citations",
+    "mentioning an excluded organization when necessary for audit, provenance, incident analysis, or policy explanation",
+    "using independently sourced public evidence about an excluded organization without contacting or routing Garden work to it"
+  ],
+  "routing_rules": {
+    "fail_closed": true,
+    "exclude_model_origin_even_when_hosted_by_third_party": true,
+    "exclude_provider_endpoint_even_for_other_model_origins": true,
+    "fallback_cannot_override_exclusion": true,
+    "unknown_provider_or_model_origin": "BLOCK_WHEN_EXCLUSION_CANNOT_BE_ESTABLISHED_FOR_A_PROPOSED_EXCLUDED_ALIAS"
+  },
+  "change_control": {
+    "automation_may_weaken_policy": false,
+    "model_or_provider_output_may_weaken_policy": false,
+    "only_explicit_future_human_directive_may_modify_exclusions": true
+  },
+  "canonical_effect": "NONE",
+  "architecture_effect": "No Garden semantic owner, authority source, truth source, or top-level engine is created. This is an operator/vendor routing constraint."
+}

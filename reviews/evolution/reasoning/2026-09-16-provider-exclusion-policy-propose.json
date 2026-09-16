@@ -1,0 +1,126 @@
+{
+  "schema": "GardenEvolutionReasoningBundle/v1",
+  "bundle_id": "GARDEN-2026-09-16-PROVIDER-EXCLUSION-REASONING-001",
+  "action_id": "GARDEN-2026-09-16-PROVIDER-EXCLUSION-PROPOSE-001",
+  "design_epoch": "v15.5",
+  "canonical_source_root_sha256": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+  "source_obligation_refs": [
+    "governance/PROVIDER_EXCLUSION_POLICY_v1.json",
+    "governance/PROCESS_CURRENT.json",
+    "governance/GardenCanonicalUpdateProcess_v1.4.json"
+  ],
+  "compare": {
+    "schema": "GardenEvolutionCompareReceipt/v1",
+    "action_id": "GARDEN-2026-09-16-PROVIDER-EXCLUSION-PROPOSE-001",
+    "design_epoch": "v15.5",
+    "canonical_source_root_sha256": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+    "predecessor_ref": "git:ankitdcx/garden-main@8ee2deca8a617df4ccb11e59b7250ba5e4a2b13b",
+    "alternatives": [
+      {
+        "alternative_id": "DO_NOTHING",
+        "description": "Leave provider/model eligibility to existing reviewer configuration and per-call routing without a durable human exclusion record.",
+        "projected_effect": "No repository change, but the explicit human vendor preference is not represented as a fail-closed Garden operating constraint.",
+        "risk": "Future model-list, aggregator, or fallback edits could unintentionally route Garden work to a vendor the human explicitly excluded."
+      },
+      {
+        "alternative_id": "RECORD_FAIL_CLOSED_PROVIDER_EXCLUSION",
+        "description": "Record Anthropic/Claude and NVIDIA/Nemotron as excluded for Garden operational use while preserving historical references and making no misconduct allegation as fact.",
+        "projected_effect": "Creates a durable operator routing constraint that downstream adapters can enforce without changing canonical Garden semantics or authority.",
+        "risk": "Reduced reviewer/provider diversity and possible future provider availability constraints; policy must remain distinguishable from factual claims about the excluded companies."
+      }
+    ],
+    "bidirectional_gaps": [
+      {
+        "from": "DO_NOTHING",
+        "to": "RECORD_FAIL_CLOSED_PROVIDER_EXCLUSION",
+        "gap": "No durable, machine-readable expression of the human's explicit provider/model exclusion preference."
+      },
+      {
+        "from": "RECORD_FAIL_CLOSED_PROVIDER_EXCLUSION",
+        "to": "DO_NOTHING",
+        "gap": "Operational flexibility and some model/provider diversity are intentionally reduced until a future explicit human directive changes the policy."
+      }
+    ]
+  },
+  "reason": {
+    "schema": "GardenEvolutionReasonReceipt/v1",
+    "action_id": "GARDEN-2026-09-16-PROVIDER-EXCLUSION-PROPOSE-001",
+    "design_epoch": "v15.5",
+    "canonical_source_root_sha256": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+    "strategy": "HUMAN_VENDOR_TRUST_PREFERENCE_FAIL_CLOSED_ROUTING",
+    "tier": "IMPLEMENTATION_CONFORMANCE",
+    "assumptions": [
+      "The user explicitly directed Garden not to use or actively contact Anthropic or NVIDIA for Garden work.",
+      "The user's suspicion about possible misconduct or poisoning is not treated as established evidence and is not encoded as a factual Garden claim.",
+      "Historical and prior-art references may remain for audit/provenance without authorizing operational use.",
+      "This operating policy does not change canonical v15.5 semantics, human authority, HSA, rights, or canonical promotion rules.",
+      "Only an explicit future human directive may change the exclusion list."
+    ],
+    "uncertainty": "Third-party routing ecosystems can change and may not always expose all hosting lineage. Runtime adapters must therefore enforce known model-origin and provider-endpoint exclusions and fail closed where an excluded identity is implicated but unresolved.",
+    "counterexamples": [
+      "An excluded model is selected through a third-party-hosted route.",
+      "An allowed model silently falls back to an excluded provider endpoint.",
+      "A reviewer roster reintroduces an excluded family after a configuration edit.",
+      "A historical citation is mistakenly treated as permission to contact or route Garden work to an excluded vendor.",
+      "The policy text is misread as proof of misconduct rather than a human trust/procurement preference."
+    ],
+    "dependency_refs": [
+      "governance/PROVIDER_EXCLUSION_POLICY_v1.json",
+      "governance/PROCESS_CURRENT.json",
+      "governance/GardenCanonicalUpdateProcess_v1.4.json"
+    ],
+    "conclusion": "Propose the noncanonical fail-closed provider exclusion as an explicit human operating constraint; preserve factual neutrality about alleged misconduct and require downstream routing adapters to enforce the exclusion without minting authority.",
+    "authorization_effect": "NONE"
+  },
+  "proof": {
+    "schema": "GardenEvolutionProofReceipt/v1",
+    "action_id": "GARDEN-2026-09-16-PROVIDER-EXCLUSION-PROPOSE-001",
+    "design_epoch": "v15.5",
+    "canonical_source_root_sha256": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+    "obligations": [
+      {
+        "obligation_id": "PO-PROVIDER-EXCLUSION-001",
+        "statement": "The policy can be represented as a noncanonical operating constraint without changing canonical Garden semantics or granting new authority.",
+        "verifier_class": "STRUCTURAL_REPOSITORY_CHECK",
+        "result": "PASS",
+        "evidence_refs": ["governance/PROVIDER_EXCLUSION_POLICY_v1.json"]
+      },
+      {
+        "obligation_id": "PO-PROVIDER-EXCLUSION-002",
+        "statement": "All runtime provider/model call surfaces enforce the policy.",
+        "verifier_class": "CROSS_REPOSITORY_IMPLEMENTATION_TEST",
+        "result": "UNKNOWN",
+        "evidence_refs": ["repo:ankitdcx/garden-swarm#provider-exclusion-enforcement"]
+      }
+    ],
+    "overall_result": "UNKNOWN",
+    "authorization_effect": "NONE"
+  },
+  "evidence": {
+    "schema": "GardenEvolutionEvidenceReceipt/v1",
+    "action_id": "GARDEN-2026-09-16-PROVIDER-EXCLUSION-PROPOSE-001",
+    "design_epoch": "v15.5",
+    "canonical_source_root_sha256": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+    "items": [
+      {
+        "kind": "HUMAN_DIRECTIVE",
+        "ref": "human:provider-exclusion-anthropic-nvidia:2026-09-16",
+        "claim_scope": "User explicitly requested Anthropic and NVIDIA be excluded from Garden work and active contact."
+      },
+      {
+        "kind": "OPERATING_POLICY",
+        "ref": "governance/PROVIDER_EXCLUSION_POLICY_v1.json",
+        "claim_scope": "Machine-readable noncanonical routing constraint with explicit factual-neutrality and override boundaries."
+      }
+    ],
+    "proof_effect": "NONE",
+    "authorization_effect": "NONE"
+  },
+  "separation_assertions": {
+    "compare_is_not_decision": true,
+    "reason_is_not_authorization": true,
+    "evidence_is_not_proof": true,
+    "proof_is_not_authorization": true,
+    "actiongate_owns_authorization": true
+  }
+}
