@@ -1,0 +1,98 @@
+{
+  "schema": "GardenIndependentModelFollowupReview/v1",
+  "review_id": "GARDEN-V15.7-EDCR-GPT56SOL-FOLLOWUP-20260916-001",
+  "review_date": "2026-09-16",
+  "model_identity": {
+    "declared_model": "gpt-5.6-sol",
+    "provider_family": "OpenAI",
+    "identity_source": "System and delegated-task context available to this reviewer",
+    "independent_serving_build_attestation": false
+  },
+  "prior_review": {
+    "path": "reviews/v15.7/qualification/INDEPENDENT-MODEL-REVIEW.json",
+    "sha256": "a2b7a3030ac29c9826446c65036b13eee9e9916ff1b21c23d386ae327d50d5d5",
+    "status": "HISTORICAL_HASH_BOUND_SNAPSHOT_PRESERVED",
+    "note": "This follow-up reviews the later EDCR correction only and does not rewrite or transfer the prior review to changed bytes."
+  },
+  "scope": "Focused follow-up on corrected context routing: bounded specialist versus manual external ChatGPT lane separation, closure-default fail-closed behavior, DesignEpoch/source-root and dependency drift, canonical relation-alias mapping, and pre-handoff policy drift.",
+  "disposition": "PASS_BOUNDED_FOCUSED_FOLLOWUP",
+  "open_blockers": [],
+  "focused_checks": [
+    {
+      "id": "EDCR-FOLLOWUP-001",
+      "check": "Manual ChatGPT lane separation",
+      "result": "PASS",
+      "evidence": "route queues only handler context_specialist_public. frontier_request requires that specialist task to be SUCCEEDED and returns GardenFrontierReviewRequest/v1 with lane EXTERNAL_CHATGPT_FRONTIER_REVIEW, status MANUAL_HANDOFF_REQUEST_NOT_SENT and provider_boundary NOT_OPENROUTER. It does not enqueue another task, select a model ID, carry credentials, send the request, or claim a completed frontier review."
+    },
+    {
+      "id": "EDCR-FOLLOWUP-002",
+      "check": "Unknown or insufficient closure fails closed",
+      "result": "PASS",
+      "evidence": "Missing/malformed closure defaults to CLOSURE_UNKNOWN. Unknown, incomplete, whole-context-required, cross-owner-high-risk, unbounded-scope, or insufficient-contradiction inputs produce PACKET_INCOMPLETE/context expansion with no packet or queued specialist task."
+    },
+    {
+      "id": "EDCR-FOLLOWUP-003",
+      "check": "Source and dependency drift",
+      "result": "PASS",
+      "evidence": "The route and packet bind DesignEpoch, source-root, repo heads, closure evidence and dependency root. validate_claim and frontier_request rerun adequacy and reject changed source bindings, closure/dependency roots, context state or relations."
+    },
+    {
+      "id": "EDCR-FOLLOWUP-004",
+      "check": "Canonical relation mapping",
+      "result": "PASS",
+      "evidence": "Original contradiction, supersession and parent IDs remain visible while relation_bindings maps resolved aliases to immutable fingerprints and canonical observation IDs. Unknown or withheld relations remain explicit, and a later alias resolution invalidates an already queued packet."
+    },
+    {
+      "id": "EDCR-FOLLOWUP-005",
+      "check": "Authority and epistemic boundary",
+      "result": "PASS",
+      "evidence": "Packets and model outputs remain proposal/context material with authorization_effect NONE and canonical_admission false. Compact context explicitly does not satisfy whole-source review, truth, proof, authority or canon."
+    }
+  ],
+  "finding": {
+    "id": "SOL-V157-EDCR-FOLLOWUP-001",
+    "initial_severity": "HIGH",
+    "finding": "frontier_request originally rechecked closure, source, context, relations and packet identity but did not compare the receipt's bound routing policy to the current RoutingPolicy. A changed policy after specialist completion could therefore yield a manual ChatGPT handoff from a stale packet.",
+    "bounded_fix": "Require b['policy'] == asdict(self.policy) in the final handoff stale-context guard and add a changed-policy-after-specialist regression.",
+    "status": "VERIFIED_FIXED",
+    "verification": "The final source performs the policy comparison before producing the handoff request. test_changed_policy_blocks_manual_handoff_after_specialist_completion passes."
+  },
+  "verification": {
+    "command": "PYTHONPATH=implementation python -m unittest implementation.tests.test_context_routing -v",
+    "result": "PASS",
+    "tests_run": 23,
+    "tests_skipped": 0,
+    "live_provider_calls": 0,
+    "qualification_receipt_identity_check": "PASS",
+    "function_contract_coverage": {
+      "scoped_public_functions": 6,
+      "declared_contracts": 6,
+      "frontier_functions": 0,
+      "semantic_compliance_proved": false
+    }
+  },
+  "source_sha256": {
+    "implementation/garden_kernel/context_routing.py": "d86400241ea32447318366994e11c18e5d701747c9786279eb05d880e9a1dfcf",
+    "implementation/garden_kernel/completion_runner.py": "c78ca5bdbd4fd9979bb0f7545037cfe31bb6aaac636d6043a5a4d453027f8546",
+    "implementation/tests/test_context_routing.py": "aff7b15c9f20c87e1643e0bbc05923e6f3037237eccff5a4000cf9d65f737715",
+    "scripts/qualify_context_routing.py": "3d4a8b73c48b9ab83abe3b95a3f50cdd94b8015702308f7ee192d0ff7aebcc1c",
+    "design_deltas/v15.7/BOUNDED-IMPLEMENTATION-CONTRACTS.md": "255ffdcbb507c96784aa110746793395b89dc09b5ae45c8bdc089e1a3f9d9795",
+    "design_deltas/v15.7/EVENT-DRIVEN-CONTEXT-ROUTING-CANDIDATE.md": "0689f85bf5130c50b087bd0d6e0e832fd8ef3096f9b603db7d73c5943cffc953",
+    "design_deltas/v15.7/EVENT-DRIVEN-CONTEXT-ROUTING-CORRECTION-2026-09-16.md": "c9800f8a8247f8b524cc4ae1586e2024c420e6fdf35185ab66b2b9dae20ffee9",
+    "governance/EVENT_DRIVEN_WORK_POLICY_v1.json": "b9954c0befb82b0f23e50d5ddba81063da183d87737dd5e97853b7a6eee62169",
+    "reviews/v15.7/qualification/context-routing/FUNCTION-CONTRACTS.json": "93c18659a963212fe19bdb968716c01d479457c31847f745c2f16944cba720e3",
+    "reviews/v15.7/qualification/context-routing/FUNCTION-COVERAGE.json": "a7e52be2e13a30b744796b2eefc58083de34f4434dd2084a56efb0d861200f87",
+    "reviews/v15.7/qualification/context-routing/context-routing-receipt.json": "cf04ad767f3b9e0909d58bd65759c28759332ba47524c3b4356d65c4e394e8f6",
+    "reviews/v15.7/qualification/context-routing/README.md": "d8357546ac5c71b71bff23d076989a2ddb894edf9e3b970c0a1576ad6b9c1616",
+    "reviews/v15.7/qualification/context-routing/unit-scenarios.txt": "737b77e8febcca5e4cdb1701d9aeeb9727e8c324728abd931abeef4f4c2733c6"
+  },
+  "review_limitations": [
+    "This follow-up is limited to the corrected EDCR reference and the exact hashes recorded here. It does not reopen or broaden the other v15.7 review scopes.",
+    "Closure sufficiency and observed source binding enter through trusted seams. The reference checks structure and consistency; it does not authenticate a production closure verifier or independently determine semantic truth.",
+    "The bounded specialist adapter and external ChatGPT handoff are not live or production-qualified. No provider was called and no frontier quality, cost, latency, delivery or response claim is made.",
+    "A GardenFrontierReviewRequest is an unsent manual handoff artifact and grants no authority, admission, promotion or independent-family credit.",
+    "This is one OpenAI-family gpt-5.6-sol follow-up. It does not establish an effective three-family review quorum, full semantic closure, production qualification or canonical promotion."
+  ],
+  "authorization_effect": "NONE",
+  "canonical_promotion_authorized": false
+}

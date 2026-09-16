@@ -1,0 +1,42 @@
+{
+  "schema": "GardenV157RepositoryVerification/v1",
+  "status": "PASS",
+  "candidate_source_root_sha256": "99e42cdb9ba0b9603ae2b90484bddedeef6c5721aa2b0f6a547a956914d1b9d6",
+  "manifests": [
+    {
+      "manifest": "canonical/current/SOURCE_MANIFEST.json",
+      "files": 5,
+      "source_root_sha256": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+      "status": "PASS"
+    },
+    {
+      "manifest": "canonical/archive/v15.5/SOURCE_MANIFEST.json",
+      "files": 5,
+      "source_root_sha256": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+      "status": "PASS"
+    },
+    {
+      "manifest": "canonical/candidates/v15.6/SOURCE_MANIFEST.json",
+      "files": 5,
+      "source_root_sha256": "d4f054f21247948426abbe4c842ac65f4daa83f521f73bc3ac57e2d5860bdf6b",
+      "status": "PASS"
+    },
+    {
+      "manifest": "canonical/candidates/v15.7/SOURCE_MANIFEST.json",
+      "files": 5,
+      "source_root_sha256": "99e42cdb9ba0b9603ae2b90484bddedeef6c5721aa2b0f6a547a956914d1b9d6",
+      "status": "PASS"
+    },
+    {
+      "manifest": "canonical/candidates/archive/v15.7-2026-09-15/SOURCE_MANIFEST.json",
+      "files": 5,
+      "source_root_sha256": "eb4d5306a8f7dcca75f8cf7d60f6441bdf5b35bccb86ac2362b33f241af1591a",
+      "status": "PASS"
+    }
+  ],
+  "current_candidate_pointer_matches": true,
+  "text_files_scanned": 453,
+  "removed_role_term_matches": 0,
+  "historical_git_commits_rewritten": false,
+  "scope": "Current materialized repository text, five-file source hashes, archives and current candidate routing. Historical receipt identities remain historical."
+}

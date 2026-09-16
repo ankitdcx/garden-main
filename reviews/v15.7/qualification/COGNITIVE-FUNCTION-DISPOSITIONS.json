@@ -260,7 +260,7 @@
         {
           "path": "reviews/v15.7/qualification/recovery-runtime/RUNTIME-RECEIPT.json",
           "availability": "PRESENT",
-          "sha256": "7778c79b18892130a4e18a26dff3ca402989660bdc54326d2ca7bc6667ca322f"
+          "sha256": "252afed4a5146b443bffb99b2df0ea6d2413a70c74705f31e81e07f59c929558"
         }
       ],
       "limits": "Local recovery reference is not evidence of long-horizon intelligence; no cognitive gain is measured."

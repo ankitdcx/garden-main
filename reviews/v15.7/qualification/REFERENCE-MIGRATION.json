@@ -2,7 +2,7 @@
   "schema": "GardenCandidateReferenceMigration/v1",
   "date": "2026-09-16",
   "previous_root": "eb4d5306a8f7dcca75f8cf7d60f6441bdf5b35bccb86ac2362b33f241af1591a",
-  "current_root": "ef1956960c6b91147a4868092519aec9d621ab097a48c2a96ab8049b307d03d1",
+  "current_root": "99e42cdb9ba0b9603ae2b90484bddedeef6c5721aa2b0f6a547a956914d1b9d6",
   "five_documents": [
     {
       "role": "User",
@@ -26,7 +26,7 @@
       "archived_path": "canonical/candidates/archive/v15.7-2026-09-15/Garden_Technical_v15.7_FULL_CANDIDATE_2026-09-15.txt",
       "current_path": "canonical/candidates/v15.7/Garden_Technical_v15.7_FULL_CANDIDATE_2026-09-16.txt",
       "prior_sha256": "57535dc10839a6b278b0e05d257db5455e48cf376fdf1112f447e8b6257da68f",
-      "current_sha256": "3edd09a54dd797a4988eb2ac3fa7c8ebf6f9728e568a0158f8b03e139b25105d"
+      "current_sha256": "c9057e21ea32dd456dbc2f45d09bd4e2d272ba5d4a8d63f55f349cde60db2f96"
     },
     {
       "role": "Annexure",
@@ -34,7 +34,7 @@
       "archived_path": "canonical/candidates/archive/v15.7-2026-09-15/Garden_Annexure_v15.7_FULL_CANDIDATE_2026-09-15.txt",
       "current_path": "canonical/candidates/v15.7/Garden_Annexure_v15.7_FULL_CANDIDATE_2026-09-16.txt",
       "prior_sha256": "40bfad13812e022fa302ccb12ddbfb21f88913ba91e0d8f0f884e113604895fe",
-      "current_sha256": "e64bba7111074cc794ade7471e5699154ef93ba302e4c101a0776d5c877c26e7"
+      "current_sha256": "8b127a0850b0614fd2de1578245460f1dbbb05e8dce33fc38c2bf78a1de58bad"
     },
     {
       "role": "Theories",

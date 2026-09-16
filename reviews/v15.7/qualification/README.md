@@ -2,13 +2,13 @@
 
 This is an evidence snapshot and pending-work register. It does not declare all pending work complete or promote a canonical release.
 
-Accounted for: **20 engineering profiles, all 38 individual user work items, 174 inherited queue dispositions, six v15.7 programs, seven cognitive functions, seven baseline matching axes, ten comparator scopes and eleven design-decision rows**. There are 328 register rows.
+Accounted for: **20 engineering profiles, all 38 individual user work items, 174 inherited queue dispositions, six v15.7 programs, seven cognitive functions, seven baseline matching axes, ten comparator scopes and eleven design-decision rows**. There are 368 register rows, including 62 corrected EDCR source blocks and 14 explicit workflow integration obligations.
 
 | Status | Register rows |
 |---|---:|
 | DEFERRED | 10 |
 | IMPLEMENTED | 5 |
-| PARTIAL | 95 |
+| PARTIAL | 135 |
 | SPECIFIED | 218 |
 
 Five IMPLEMENTED rows concern only the named finite model or reference-simulation deliverable. PARTIAL means useful work exists and material obligations remain. Source blocks retain their exact text/span/hash, including metadata; accounting rows are not independent defects.
@@ -35,4 +35,10 @@ Files in this accounting package:
 
 Temporal, seL4 and incompletely defined historical profiles remain explicitly deferred. Canonical v15.5 remains the authority baseline. The v15.7 working-candidate source root is bound as a source identity, not an accepted DesignEpoch.
 
-Snapshot revision: **2026-09-16-accounting-freeze-1**. Evidence hashes were checked when recorded; model/runtime checker work and independent review may still update files after this snapshot. Before publication or admission, refresh each changed receipt by rerunning its qualification, verify its source bindings, and then refresh the register hash. Merely replacing a stale hash is not requalification.
+Snapshot revision: **2026-09-16-accounting-r2-EDCR-policy-guard-final**. Evidence hashes were checked when recorded; model/runtime checker work and independent review may still update files after this snapshot. Before publication or admission, refresh each changed receipt by rerunning its qualification, verify its source bindings, and then refresh the register hash. Merely replacing a stale hash is not requalification.
+
+EDCR correction: frontier review means external ChatGPT, never an OpenRouter surrogate or hardcoded product model. Mandatory wider/full context overrides compaction. Fourteen actual workflow integrations remain PARTIAL. Old source blocks are preserved as superseded history. Corrected core has 23 passing local scenarios, including separate specialist/provider and external ChatGPT request paths, source/epoch invalidation and required whole-context expansion. This does not qualify all 14 workflow integrations.
+
+Final corrected-context evidence was parsed and every source pin checked; all current-evidence register paths/hashes match this snapshot. Historical superseded rows and evidence keep their old hashes for lineage.
+
+Final policy-guard refresh: corrected context receipt now records 23 local scenarios; every bound source hash and all active register evidence paths/hashes were checked again. Obligation counts and candidate source root are unchanged.

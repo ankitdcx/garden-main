@@ -262,7 +262,7 @@ class ContextRouter:
         truth of closure evidence. Deployment must authenticate that verifier.
         """
         fields={'status','evidence_ref','dependency_root','design_epoch','source_root_sha256',
-                'whole_context_required','cross_owner_high_risk','affected_scope_bounded','contradictions_resolved'}
+                'whole_context_required','cross_owner_high_risk','affected_scope_bounded','contradiction_context_sufficient'}
         if not isinstance(closure,dict) or set(closure)!=fields or observed_binding is None:
             return {'status':'UNKNOWN'},None,['CLOSURE_UNKNOWN']
         closure=json.loads(encoded(closure))
@@ -273,7 +273,7 @@ class ContextRouter:
         if not isinstance(closure['evidence_ref'],str) or not closure['evidence_ref'].strip():failures.append('CLOSURE_EVIDENCE_UNKNOWN')
         h=closure['dependency_root']
         if not isinstance(h,str) or len(h)!=64 or any(c not in '0123456789abcdef' for c in h):failures.append('DEPENDENCY_ROOT_UNKNOWN')
-        for key,required in [('whole_context_required',False),('cross_owner_high_risk',False),('affected_scope_bounded',True),('contradictions_resolved',True)]:
+        for key,required in [('whole_context_required',False),('cross_owner_high_risk',False),('affected_scope_bounded',True),('contradiction_context_sufficient',True)]:
             if closure[key] is not required:failures.append(key.upper())
         row=self.db.execute('SELECT record FROM cycles WHERE id=?',(cycle_id,)).fetchone()
         existing=json.loads(row[0])['binding'] if row else {}
@@ -296,7 +296,7 @@ class ContextRouter:
         if not task or task['state']!='SUCCEEDED':raise SemanticError('bounded specialist review not complete')
         cb,sb,failures=self._adequacy(closure,observed_binding,b['cycle_id'])
         _,state,missing,relations=self._context(b['subject'],now)
-        if failures or cb!=b['closure'] or sb!=b['source_binding'] or state!=b['state'] or missing!=b['missing_contradictions'] or relations!=b['relation_bindings']:
+        if failures or b['policy']!=asdict(self.policy) or cb!=b['closure'] or sb!=b['source_binding'] or state!=b['state'] or missing!=b['missing_contradictions'] or relations!=b['relation_bindings']:
             raise SemanticError('handoff context inadequate or stale; request expansion')
         if packet['packet_hash']!=digest({k:v for k,v in packet.items() if k!='packet_hash'}):raise SemanticError('packet hash mismatch')
         request={'schema':'GardenFrontierReviewRequest/v1','lane':'EXTERNAL_CHATGPT_FRONTIER_REVIEW',

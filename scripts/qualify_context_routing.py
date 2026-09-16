@@ -14,7 +14,7 @@ sys.path.insert(0,str(ROOT/'implementation'))
 sys.path.insert(0,str(ROOT/'implementation/tests'))
 from garden_kernel.context_routing import ContextRouter,RoutingPolicy
 from garden_kernel.completion_runner import CompletionStore,Limits,encoded
-from test_context_routing import observation,BINDING,PROFILE
+from test_context_routing import observation,BINDING,PROFILE,CLOSURE
 
 class RecordedResults(unittest.TextTestResult):
     def __init__(self,*args,**kwargs):
@@ -36,11 +36,13 @@ def main():
         router=ContextRouter(store,RoutingPolicy(per_call_micro_usd=100))
         obs=[observation('a',summary=('first '*300).strip()),observation('b',contradicts=['a'],summary=('counter '*300).strip())]
         raw=[router.ingest(o) for o in obs];raw.append(router.ingest(obs[0]))
-        r=router.route(cycle_id=BINDING.cycle_id,question='Fixture contradiction?',subject='permission',now=100,cost_bound_micro_usd=100)
+        r=router.route(cycle_id=BINDING.cycle_id,question='Fixture contradiction?',subject='permission',now=100,cost_bound_micro_usd=100,closure=CLOSURE,observed_binding=BINDING)
         packet=r['packet'];store.close()
     paths=['implementation/garden_kernel/context_routing.py','implementation/garden_kernel/completion_runner.py',
            'implementation/tests/test_context_routing.py','scripts/qualify_context_routing.py',
-           'design_deltas/v15.7/EVENT-DRIVEN-CONTEXT-ROUTING-CANDIDATE.md']
+           'design_deltas/v15.7/EVENT-DRIVEN-CONTEXT-ROUTING-CANDIDATE.md',
+           'design_deltas/v15.7/EVENT-DRIVEN-CONTEXT-ROUTING-CORRECTION-2026-09-16.md',
+           'governance/EVENT_DRIVEN_WORK_POLICY_v1.json']
     implementation_path='implementation/garden_kernel/context_routing.py'
     impl_hash=hashlib.sha256((ROOT/implementation_path).read_bytes()).hexdigest()
     specs=[
@@ -56,7 +58,7 @@ def main():
          'Writes bounded context index and audit event; never deletes external evidence',
          ['test_duplicate_does_not_expand_or_add_task_even_after_restart']),
         ('ROUTE','ContextRouter.route','Capability.Compute.Execution','[T-PROCESS]',
-         ['Bounded question and current cycle; explicit policy; declared trusted cost upper bound for queued external review'],
+         ['Bounded question and current cycle; explicit policy; trusted cost upper bound for queued specialist review; explicit sufficient closure and current source binding'],
          ['Reason-coded materiality; NOT_MATERIAL produces no task','Required contradictory/provenance data retained or packet blocked; all original relation IDs resolve through hash-bound alias mapping or remain explicitly unknown','Deterministic task identity and packet hash; no process advancement'],
          ['BLOCKED for missing contradictions, envelope restriction, packet bounds or unknown/excessive cost','SemanticError or SQLite error for malformed input/persistence failure'],
          'Writes routing/audit record and optionally idempotent external-review task; does not call provider',
@@ -67,6 +69,12 @@ def main():
          ['SemanticError on unclaimed/stale token, context drift or hash/spec mismatch'],
          'Read-only validation; grants no authority and performs no network effect',
          ['test_dispatch_rechecks_expiry_and_new_evidence','test_resolved_parent_alias_invalidates_queued_packet']),
+        ('FRONTIER-REQUEST','ContextRouter.frontier_request','Capability.Compute.Execution','[T-PROCESS]',
+         ['Material receipt; sufficient explicitly verified bounded closure; current source binding; specialist task succeeded'],
+         ['Deterministic manual GardenFrontierReviewRequest/v1; no credential or provider-model routing fields','No queue insertion, automatic ChatGPT invocation, authority or canonical admission'],
+         ['SemanticError on missing specialist completion, stale source/closure/context or inadequate packet'],
+         'Returns manual handoff artifact only; does not send it',
+         ['test_specialist_queue_is_separate_from_manual_chatgpt_request','test_source_epoch_and_closure_drift_reject_dispatch','test_changed_policy_blocks_manual_handoff_after_specialist_completion']),
         ('MODEL-OUTPUT','ContextRouter.model_output_observation','Capability.Knowledge','[T-KNOWLEDGE]',
          ['Bounded provider text; model identity and response reference supplied'],
          ['Output always UNVERIFIED_MODEL_PROPOSAL with authority NONE and canonical_admission false'],
@@ -122,11 +130,13 @@ def main():
         'owner_anchors':['[T-PROCESS]','[T-KNOWLEDGE]','[T-EVENT-CONTRACT]','[T-FUNCTION-CONTRACT]','[T-PROVENANCE-EXT]'],
         'runtime_seams':{'ingress':'ContextRouter.ingest requires trusted classification/provenance input',
             'admission':'ContextRouter.route -> CompletionStore.enqueue with deterministic task and packet identity',
-            'dispatch':'CompletionStore.claim -> ContextRouter.validate_claim -> existing separately qualified public adapter',
+            'dispatch':'CompletionStore.claim -> ContextRouter.validate_claim with fresh source/closure -> separately qualified context_specialist_public adapter; frontier_request returns separate manual ChatGPT artifact',
             'completion':'CompletionStore.finish preserves rate-limit/unknown-charge state; no automatic Process.advance',
             'retention':'Bounded indexed observation view; never deletes external raw evidence; capacity rejects new intake'},
         'limitations':['Local fixture results are not external provider results.',
             'No truth verification, production trust-boundary isolation or whole-source completeness claim.',
+            'Whole-repository generalization remains partial/unimplemented; source correction is enforced only by this bounded core.',
+            'Closure sufficiency is supplied by a trusted verifier seam, not proved by self-asserted observation/model content.',
             'No live provider adapter activated. It must enforce validate_claim immediately before its single call and ordinary provider/publication guards.',
             'Future adversarial caller changes between check and external call require deployment-level serialized ingress or equivalent fencing; no distributed atomicity proof.',
             'Automatic active-high-value maximum-staleness scheduling and durable batch-provider adapter remain deferred.',
@@ -137,7 +147,7 @@ def main():
     receipt['function_contract_declarations_sha256']=hashlib.sha256((out/'FUNCTION-CONTRACTS.json').read_bytes()).hexdigest()
     (out/'context-routing-receipt.json').write_text(json.dumps(receipt,indent=2)+'\n')
     (out/'unit-scenarios.txt').write_text(stream.getvalue())
-    (out/'README.md').write_text('# Bounded EDCR reference qualification\n\nRun `python scripts/qualify_context_routing.py`. Receipts cover deterministic local source-sensitive deduplication, bounded context, provenance/contradiction/freshness handling and the shared completion executor’s conservative budget/recovery paths. Provider responses in tests are explicitly fixtures. No external provider was called; no frontier quality or cost benchmark is claimed.\n\nExisting owner anchors: Technical `[T-PROCESS]`, `[T-KNOWLEDGE]`, `[T-EVENT-CONTRACT]`, `[T-FUNCTION-CONTRACT]`, `[T-PROVENANCE-EXT]`. This indexed observation view creates no new truth or authority owner. Model outputs remain unverified proposals.\n\nDispatch seam: `CompletionStore.claim` then mandatory `ContextRouter.validate_claim` in the trusted public adapter immediately before its one provider call; `CompletionStore.finish` handles accounting/unknown outcome. The reference does not activate or qualify a live public adapter.\n')
+    (out/'README.md').write_text('# Bounded EDCR reference qualification\n\nRun `python scripts/qualify_context_routing.py`. Receipts cover deterministic local source-sensitive deduplication, bounded context, provenance/contradiction/freshness handling and the shared completion executor’s conservative budget/recovery paths. Provider responses in tests are explicitly fixtures. No external provider was called; no frontier quality or cost benchmark is claimed.\n\nExisting owner anchors: Technical `[T-PROCESS]`, `[T-KNOWLEDGE]`, `[T-EVENT-CONTRACT]`, `[T-FUNCTION-CONTRACT]`, `[T-PROVENANCE-EXT]`. This indexed observation view creates no new truth or authority owner. Model outputs remain unverified proposals.\n\nDispatch seam: `CompletionStore.claim` then mandatory `ContextRouter.validate_claim` in the trusted public specialist adapter with explicit trusted closure/source binding immediately before its one provider call; frontier_request creates a separate manual ChatGPT request after specialist completion; `CompletionStore.finish` handles accounting/unknown outcome. The reference does not activate or qualify a live public adapter.\n')
     print(json.dumps({'status':receipt['status'],'tests_run':result.testsRun,'live_provider_calls':0,'receipt':str(out/'context-routing-receipt.json')}))
     return 0 if result.wasSuccessful() else 1
 if __name__=='__main__':raise SystemExit(main())

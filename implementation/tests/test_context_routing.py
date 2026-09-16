@@ -13,6 +13,10 @@ ROOT=Path(__file__).resolve().parents[2]
 PROFILE=json.loads((ROOT/'gsl/EVOLUTION_ALGEBRA_PROFILE.json').read_text())
 BINDING=CycleBinding('context-cycle','1.4','v15.5',PROFILE['canonical_source_root_sha256'],{'garden-main':'a'*40})
 
+CLOSURE={'status':'SUFFICIENT_BOUNDED','evidence_ref':'fixture:trusted-closure-verifier','dependency_root':'c'*64,
+         'design_epoch':BINDING.design_epoch,'source_root_sha256':BINDING.source_root_sha256,
+         'whole_context_required':False,'cross_owner_high_risk':False,'affected_scope_bounded':True,'contradiction_context_sufficient':True}
+
 def observation(oid='a', **changes):
     o=dict(observation_id=oid,subject='permission',event_kind='CHANGED',event_time=90,
         valid_from=90,observed_at=100,expires_at=500,changed_fields=['lease'],
@@ -32,7 +36,7 @@ class ContextRoutingTests(unittest.TestCase):
     def tearDown(self):
         self.store.close();self.temp.cleanup()
     def route(self, **kwargs):
-        args=dict(cycle_id=BINDING.cycle_id,question='Does permission require revalidation?',subject='permission',now=100,cost_bound_micro_usd=100)
+        args=dict(cycle_id=BINDING.cycle_id,question='Does permission require revalidation?',subject='permission',now=100,cost_bound_micro_usd=100,closure=CLOSURE,observed_binding=BINDING)
         args.update(kwargs);return self.router.route(**args)
     def claim(self,now=100):
         return self.store.claim(now,{BINDING.cycle_id:BINDING},PROFILE)
@@ -70,7 +74,7 @@ class ContextRoutingTests(unittest.TestCase):
         self.assertEqual(binding['status'],'IN_PACKET')
         self.assertIn(binding['fingerprint'],{o['fingerprint'] for o in packet['observations']})
         self.assertEqual(next(o for o in packet['observations'] if o['observation_id']=='b')['contradicts'],['alias'])
-        self.router.validate_claim(self.claim(),now=100)
+        self.router.validate_claim(self.claim(),now=100,closure=CLOSURE,observed_binding=BINDING)
 
     def test_duplicate_alias_supersession_and_parent_resolve(self):
         a=observation('a');self.router.ingest(a)
@@ -88,7 +92,7 @@ class ContextRoutingTests(unittest.TestCase):
         self.router.ingest(observation('b',parents=['later-alias']))
         self.route();claim=self.claim()
         self.router.ingest({**a,'observation_id':'later-alias'})
-        with self.assertRaises(SemanticError):self.router.validate_claim(claim,now=100)
+        with self.assertRaises(SemanticError):self.router.validate_claim(claim,now=100,closure=CLOSURE,observed_binding=BINDING)
 
     def test_no_change_and_clock_passage_do_not_spend(self):
         self.router.ingest(observation(event_kind='NO_CHANGE',changed_fields=[],risk='LOW'))
@@ -120,7 +124,7 @@ class ContextRoutingTests(unittest.TestCase):
     def test_unknown_charge_and_429_fixture_do_not_advance_process(self):
         self.router.ingest(observation());self.route();claim=self.claim()
         before=self.store.db.execute('SELECT record FROM cycles').fetchone()[0]
-        self.router.validate_claim(claim,now=100)
+        self.router.validate_claim(claim,now=100,closure=CLOSURE,observed_binding=BINDING)
         state=self.store.finish(claim,now=100,status='RATE_LIMITED',result={'fixture_http':429},actual_micro_usd=None)
         self.assertEqual(state,'UNKNOWN');self.assertIsNone(self.claim(200))
         self.assertEqual(before,self.store.db.execute('SELECT record FROM cycles').fetchone()[0])
@@ -157,10 +161,45 @@ class ContextRoutingTests(unittest.TestCase):
 
     def test_dispatch_rechecks_expiry_and_new_evidence(self):
         self.router.ingest(observation(expires_at=150));self.route();claim=self.claim()
-        self.router.validate_claim(claim,now=100)
-        with self.assertRaises(SemanticError):self.router.validate_claim(claim,now=150)
+        self.router.validate_claim(claim,now=100,closure=CLOSURE,observed_binding=BINDING)
+        with self.assertRaises(SemanticError):self.router.validate_claim(claim,now=150,closure=CLOSURE,observed_binding=BINDING)
         self.router.ingest(observation('b'))
-        with self.assertRaises(SemanticError):self.router.validate_claim(claim,now=101)
+        with self.assertRaises(SemanticError):self.router.validate_claim(claim,now=101,closure=CLOSURE,observed_binding=BINDING)
+
+    def test_unknown_or_whole_context_closure_requests_expansion(self):
+        self.router.ingest(observation())
+        for c in [None,{**CLOSURE,'status':'UNKNOWN'},{**CLOSURE,'whole_context_required':True},
+                  {**CLOSURE,'cross_owner_high_risk':True},{**CLOSURE,'affected_scope_bounded':False}]:
+            r=self.route(closure=c)
+            self.assertEqual(r['status'],'PACKET_INCOMPLETE')
+            self.assertIsNone(r['packet']);self.assertIn('context_expansion_request',r)
+        self.assertEqual(self.count('tasks'),0)
+
+    def test_source_epoch_and_closure_drift_reject_dispatch(self):
+        self.router.ingest(observation());self.route();claim=self.claim()
+        other=CycleBinding(BINDING.cycle_id,'1.4','changed-epoch','d'*64,{'garden-main':'e'*40})
+        with self.assertRaises(SemanticError):self.router.validate_claim(claim,now=100,closure=CLOSURE,observed_binding=other)
+        with self.assertRaises(SemanticError):self.router.validate_claim(claim,now=100,closure={**CLOSURE,'dependency_root':'f'*64},observed_binding=BINDING)
+
+    def test_specialist_queue_is_separate_from_manual_chatgpt_request(self):
+        self.router.ingest(observation());r=self.route();claim=self.claim()
+        self.assertEqual(claim['spec']['handler'],'context_specialist_public')
+        with self.assertRaises(SemanticError):self.router.frontier_request(r['route_key'],now=100,closure=CLOSURE,observed_binding=BINDING)
+        self.store.finish(claim,now=100,status='SUCCEEDED',result={'fixture':'specialist proposal'},actual_micro_usd=100)
+        request=self.router.frontier_request(r['route_key'],now=100,closure=CLOSURE,observed_binding=BINDING)
+        self.assertEqual(request['schema'],'GardenFrontierReviewRequest/v1')
+        self.assertEqual(request['lane'],'EXTERNAL_CHATGPT_FRONTIER_REVIEW')
+        self.assertEqual(request['status'],'MANUAL_HANDOFF_REQUEST_NOT_SENT')
+        self.assertNotIn('model_id',request);self.assertNotIn('credentials',request)
+        self.assertEqual(self.count('tasks'),1)
+        self.assertEqual(request,self.router.frontier_request(r['route_key'],now=101,closure=CLOSURE,observed_binding=BINDING))
+
+    def test_changed_policy_blocks_manual_handoff_after_specialist_completion(self):
+        self.router.ingest(observation());r=self.route();claim=self.claim()
+        self.store.finish(claim,now=100,status='SUCCEEDED',result={'fixture':'specialist proposal'},actual_micro_usd=100)
+        self.router=ContextRouter(self.store,replace(self.router.policy,version='EDCR-REFERENCE-2'))
+        with self.assertRaises(SemanticError):
+            self.router.frontier_request(r['route_key'],now=100,closure=CLOSURE,observed_binding=BINDING)
 
     def test_input_rebinding_and_unknown_trigger_rejected(self):
         self.router.ingest(observation())

@@ -1,0 +1,456 @@
+{
+  "schema": "GardenV157ReferenceTestReceipt/v1",
+  "status": "PASS",
+  "candidate_source_root_sha256": "99e42cdb9ba0b9603ae2b90484bddedeef6c5721aa2b0f6a547a956914d1b9d6",
+  "command": [
+    "/tmp/garden-assurance-venv/bin/python",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "implementation/tests",
+    "-v"
+  ],
+  "exit_code": 0,
+  "tests_run": 273,
+  "skipped": [
+    "test_ci_emits_canonical_section_inventory_artifacts (test_section_units.SectionUnitInventoryTests.test_ci_emits_canonical_section_inventory_artifacts) ... skipped 'CI artifact emission'"
+  ],
+  "output_sha256": "9d20718b4310d7acb25f80a537b1144320b7ab1742373650866c1262486217d8",
+  "source_files": [
+    {
+      "path": "formal/permission_recovery/Recovery.cfg",
+      "sha256": "fde688fcd583e9d36bfaf2e54ecf6f2909e835df5295376ad848dad00c1e1021"
+    },
+    {
+      "path": "formal/permission_recovery/Recovery.tla",
+      "sha256": "09546470ca0ea960818a15b744bbf522b2afe59415a7c5e2614a9671b49717c1"
+    },
+    {
+      "path": "implementation/garden_kernel/__init__.py",
+      "sha256": "ee0233d7bae4eb4f338f5136453fd4d05356f4e68c1ee827539c06fc55147333"
+    },
+    {
+      "path": "implementation/garden_kernel/algebra_bound_update.py",
+      "sha256": "58f2d7c96e61d36c664c3fd255e84e3dbbe1951d5807e6851484d549b0c7db1b"
+    },
+    {
+      "path": "implementation/garden_kernel/authority_path.py",
+      "sha256": "1479a250391e9f0ac33d1bcaec5e1a0fd109b7fb4a0bd098bef4ba0bffbc9c3d"
+    },
+    {
+      "path": "implementation/garden_kernel/base_admission.py",
+      "sha256": "b57b061ef03eba36cae948ffc101ff52c312dd2f44f795265ea0f05dabffe87e"
+    },
+    {
+      "path": "implementation/garden_kernel/bootstrap_trust.py",
+      "sha256": "dc9e9c1aa4e76b5ca734cf91f02c5c5d46c46a7be3735aab9b7cc4d712b5187c"
+    },
+    {
+      "path": "implementation/garden_kernel/causality.py",
+      "sha256": "52330ca5ab6fc5ef2c965ff1e5411261bb7d52f736c147fac7f87ca89797e1d6"
+    },
+    {
+      "path": "implementation/garden_kernel/completion_runner.py",
+      "sha256": "c78ca5bdbd4fd9979bb0f7545037cfe31bb6aaac636d6043a5a4d453027f8546"
+    },
+    {
+      "path": "implementation/garden_kernel/context_routing.py",
+      "sha256": "d86400241ea32447318366994e11c18e5d701747c9786279eb05d880e9a1dfcf"
+    },
+    {
+      "path": "implementation/garden_kernel/core.py",
+      "sha256": "ea56eecde7cc220497146bc243645c8a31aa2636792f7669eb7ba5ea7b08d20a"
+    },
+    {
+      "path": "implementation/garden_kernel/evolution_actions.py",
+      "sha256": "d42e52c0687fbcfd4f2c01902a53d9df60db0f3020646def7cffc33590e7ea6a"
+    },
+    {
+      "path": "implementation/garden_kernel/evolution_algebra.py",
+      "sha256": "6f18e33c6e99f889bc498db883bf22b6ad3f80a146fab83378c0582c72085449"
+    },
+    {
+      "path": "implementation/garden_kernel/evolution_assurance.py",
+      "sha256": "65c995417f12b5f2fb747e7b8d5e6ed15445709dae3a4f7f1b7767d121ad4f0e"
+    },
+    {
+      "path": "implementation/garden_kernel/evolution_audit.py",
+      "sha256": "31b032d135c2ec7a0eaf2adb2d57f1486d39e86e0c1667a78ab7d1fd32aff8b9"
+    },
+    {
+      "path": "implementation/garden_kernel/evolution_authority.py",
+      "sha256": "e4dd083e98a0b5a5b2df8063dd286b5d42af8479a92399c88d7627ede5ce1fc9"
+    },
+    {
+      "path": "implementation/garden_kernel/evolution_config.py",
+      "sha256": "eb3615011ad83d61d30d389144f57d66c4fba8fd66a80e2cd5a11d1b7d4416ab"
+    },
+    {
+      "path": "implementation/garden_kernel/evolution_constitution.py",
+      "sha256": "b9b3a448bcfe0b4be7cd47ffa23e067102512867b042f72216175a6b7a7f3d85"
+    },
+    {
+      "path": "implementation/garden_kernel/evolution_epoch.py",
+      "sha256": "e87e060e380e4cc2d55193bcc7ec01b97ee0f45c59f601bcc77f17db56ac482e"
+    },
+    {
+      "path": "implementation/garden_kernel/evolution_gate.py",
+      "sha256": "7c7ba8b0029f36db5954fc394220fa1caae831401dd45c2d56e6296687a7be82"
+    },
+    {
+      "path": "implementation/garden_kernel/evolution_reasoning.py",
+      "sha256": "b8b7a8eeae9a2babeb06913935cf2803b11718d03c44545a87684555210c6d2d"
+    },
+    {
+      "path": "implementation/garden_kernel/evolution_transport.py",
+      "sha256": "de528d4cf7dd3a52e9e1e8ea0e084b30e0e7a909aea79911f8051b3fea87320d"
+    },
+    {
+      "path": "implementation/garden_kernel/evolution_trust.py",
+      "sha256": "26de06003d021e6cdd9120604b2d87e443ca3791b034d4f5e6ffd694427c9244"
+    },
+    {
+      "path": "implementation/garden_kernel/extractor.py",
+      "sha256": "9e9a7ce63926ae6c40b0d19695dd88d454f815ea5e0cabf225531cc124dd80a9"
+    },
+    {
+      "path": "implementation/garden_kernel/function_contracts.py",
+      "sha256": "b974f74061dea9e2ceb3cb96bb22f15cdb2f49a29e82d5ffbd97df5c50c23aff"
+    },
+    {
+      "path": "implementation/garden_kernel/integration_provenance.py",
+      "sha256": "c0c5a1fc0c5a53911f6915db805587de0cc42096c006579372aa75e6d052ec58"
+    },
+    {
+      "path": "implementation/garden_kernel/language_semantics.py",
+      "sha256": "0e5807584164f5b638c8dcd8c020791ad4852347a9c32bfccd9df759dff493a0"
+    },
+    {
+      "path": "implementation/garden_kernel/permission_recovery.py",
+      "sha256": "22d145602f34acf81267686be7d732ac499aafb01087193e793253732ed42ff4"
+    },
+    {
+      "path": "implementation/garden_kernel/physical_assurance.py",
+      "sha256": "ba2129012be03e75bdd2a873d84639b8062dec6f125616368ec516be61b3029d"
+    },
+    {
+      "path": "implementation/garden_kernel/process_engine.py",
+      "sha256": "2712ec7430b6ff04f619c121b2c9f61836e2413506c9121dcfa0d12320f284c5"
+    },
+    {
+      "path": "implementation/garden_kernel/provenance_manifest.py",
+      "sha256": "bb269f3c34e335f358111834c1168f06f1d7bfd1f35d96007d66e3ade45925a9"
+    },
+    {
+      "path": "implementation/garden_kernel/reasoning_profile.py",
+      "sha256": "ca97a0529a0e16da28b0b53f0b05cdbbbb4dc46208a7a310a4cbddd735cc6531"
+    },
+    {
+      "path": "implementation/garden_kernel/release_verification.py",
+      "sha256": "690ed42b3a67d1703427b991b1283ac74a5bd0fef109bad10595eab51783694b"
+    },
+    {
+      "path": "implementation/garden_kernel/repo_conformance.py",
+      "sha256": "61596371c4b30151933d4c9ee4c32b1f725bb2e11341950ac16a2ccf162890d1"
+    },
+    {
+      "path": "implementation/garden_kernel/review_packet.py",
+      "sha256": "a232f70a0601fa27b0ebf4a5b6f0f6f90e4456a13376a94992765c7bdea0e402"
+    },
+    {
+      "path": "implementation/garden_kernel/section_units.py",
+      "sha256": "0c945da34194fe6f8523fb5515574f319402554a8b4f61a4469a170c8617d460"
+    },
+    {
+      "path": "implementation/garden_kernel/source_binding.py",
+      "sha256": "194bc56020c2363a0ff0ea915d2252ae867e8bb73e269fbabedf329438358316"
+    },
+    {
+      "path": "implementation/garden_kernel/store.py",
+      "sha256": "e68f73c4782bdb3550029937680a7d44f8346ff106d08031bd0da8bf0cbcb3d1"
+    },
+    {
+      "path": "implementation/garden_kernel/verifier.py",
+      "sha256": "f8e9c6e8dc23f0e3e23b37a231f8b5f6b8da22cddff4f80a47eaf6303c0b09c5"
+    },
+    {
+      "path": "implementation/tests/supply_chain_fixture.py",
+      "sha256": "2d721a9b1c2aaea8115b22c9566cd65815ec1392635e6401c67f777c4437c09f"
+    },
+    {
+      "path": "implementation/tests/test_algebra_bound_update.py",
+      "sha256": "a849745c01d116ea78f0f6a59fc67bc5ae01ef202c4fdf732779099a232a0a01"
+    },
+    {
+      "path": "implementation/tests/test_automation_engine_binding.py",
+      "sha256": "87b277b6e232272596303002b9e5745b3d65892dc5cd348e06ec664c5948bebe"
+    },
+    {
+      "path": "implementation/tests/test_backfilled_algebra_bound_receipts.py",
+      "sha256": "e569f98a7ba34a086da12dcffb9f79402969629af7c4bb75d6443feff8566c31"
+    },
+    {
+      "path": "implementation/tests/test_base_admission.py",
+      "sha256": "bd44fd48b79d63a90dc921d3ce7d11105708eb499b04c561c87cab52f23fec45"
+    },
+    {
+      "path": "implementation/tests/test_build_evolution_audit_chain_paths.py",
+      "sha256": "83f4a2ac58a0e2ccaaf08e3a4a7899f6bdd171bbc6d5abc242ae79d298c291c7"
+    },
+    {
+      "path": "implementation/tests/test_candidate_references.py",
+      "sha256": "c4770f87e4d52246cfdac6f16a00e192aac00fb440e59864fed700d308684e3c"
+    },
+    {
+      "path": "implementation/tests/test_completion_runner.py",
+      "sha256": "574a113712ec416ddf8336cb9a2598edc0bea9620e9fdea37f527883b4ebf027"
+    },
+    {
+      "path": "implementation/tests/test_context_routing.py",
+      "sha256": "aff7b15c9f20c87e1643e0bbc05923e6f3037237eccff5a4000cf9d65f737715"
+    },
+    {
+      "path": "implementation/tests/test_delta_source_obligation.py",
+      "sha256": "65c438eebdcffb528f4c4fb4871458317cbfc21417715a4a4b54768701e92c1d"
+    },
+    {
+      "path": "implementation/tests/test_design_delta_artifacts.py",
+      "sha256": "235f15753085aef6ec825782278f8e45b2ac3b1276891cc920626b8b65a41b65"
+    },
+    {
+      "path": "implementation/tests/test_evolution_actions.py",
+      "sha256": "e911eb940ce20185a67093a912bd84a17b3e60917577781a5124953d56be411f"
+    },
+    {
+      "path": "implementation/tests/test_evolution_algebra.py",
+      "sha256": "088de614e1e63a394884607a0c9176d27d7cda1991ae52bbacf4267649a05f4c"
+    },
+    {
+      "path": "implementation/tests/test_evolution_assurance.py",
+      "sha256": "65bf7454b9680dc0163402103e6657ca6e07b4e6ee08d8c141faa9ec4a2ba926"
+    },
+    {
+      "path": "implementation/tests/test_evolution_audit.py",
+      "sha256": "77bf8d8878e1e24efb45df77be5f7f58e1bafdd4e69748a361eb355385f0766b"
+    },
+    {
+      "path": "implementation/tests/test_evolution_authority.py",
+      "sha256": "2f786258a1f3859eac899516c9e3779eda40e821f5f153e55a9891bd495f83c2"
+    },
+    {
+      "path": "implementation/tests/test_evolution_config.py",
+      "sha256": "dd4b90cc4af16f6f401ebb0065d43702979c94b8e4280ea62646c189e4c6bef6"
+    },
+    {
+      "path": "implementation/tests/test_evolution_constitution.py",
+      "sha256": "6902c117ac601fbc1f28281675d00c1c560f60098152a051b0f6ff909615796b"
+    },
+    {
+      "path": "implementation/tests/test_evolution_reasoning.py",
+      "sha256": "402dd5e6878e893996860deb42c319da4bfcdfb7b11e9367b6df4dff29e6988e"
+    },
+    {
+      "path": "implementation/tests/test_function_contract_coverage.py",
+      "sha256": "78558bdc47c83c54607094ccf5b4394bcf6702170b8393240d0c39bb91c661e5"
+    },
+    {
+      "path": "implementation/tests/test_function_contracts.py",
+      "sha256": "c0b391915842fae4405c1531dc882a5a4a459f5ebe67cdc80af01030a46b41d2"
+    },
+    {
+      "path": "implementation/tests/test_gap_closure_v156.py",
+      "sha256": "17ab8a9cf9a9671377fa6bb1e4739385521ecb717eee4498beaa01f17df7570d"
+    },
+    {
+      "path": "implementation/tests/test_gate_behavior.py",
+      "sha256": "536c8f97ccdc6c4d9c970e12bb8f7e3bb33dfe4b846e35248a434c0116f5cff8"
+    },
+    {
+      "path": "implementation/tests/test_gate_smoke.py",
+      "sha256": "835c1caa899982118c31a74329d4fad9ead0d8a2dbbfcd9171821010a091026d"
+    },
+    {
+      "path": "implementation/tests/test_integration_provenance.py",
+      "sha256": "ca680b05b5ed48d74a1556cde622080f1286f2a267f1e7b63b59f61e07d513b4"
+    },
+    {
+      "path": "implementation/tests/test_kernel.py",
+      "sha256": "367fc491084132b1177bc67909c6e029159e014c9873b449aa1d0f189832cc72"
+    },
+    {
+      "path": "implementation/tests/test_multi_agent_pr_check.py",
+      "sha256": "ae5c6ae1bc36f2c4a2db46e55a4bc4efe4c207ceada1b1a2ba35b0b5723166fe"
+    },
+    {
+      "path": "implementation/tests/test_permission_recovery.py",
+      "sha256": "f3b8ea83c3a6a8bf6e20a51d959b70746757e9e727eb88b8af08980906e15e86"
+    },
+    {
+      "path": "implementation/tests/test_permission_recovery_checker.py",
+      "sha256": "2bd0d55533847ddbf7bd7e582c83ff2a3581c7b9f36ede86eb19b725752f0485"
+    },
+    {
+      "path": "implementation/tests/test_physical_assurance.py",
+      "sha256": "0fa2c4b3791f9ea4b927664f81277667924e0ca3e55c88db636c1de817931abf"
+    },
+    {
+      "path": "implementation/tests/test_process_engine.py",
+      "sha256": "432849015e866c49b559524f47c2ece88ffc74138d4161c2c5b7b90072ea8ccd"
+    },
+    {
+      "path": "implementation/tests/test_process_restore.py",
+      "sha256": "28e1ffa040323042296e0d51fab82d5129578245048903354a837ec4abd2c06d"
+    },
+    {
+      "path": "implementation/tests/test_production_evolution_transport.py",
+      "sha256": "8c26039714a245fb5da9dcdf3aef5a8583acc8f5b82e059dc2b218a2d5e64cc8"
+    },
+    {
+      "path": "implementation/tests/test_release_verification.py",
+      "sha256": "6461bfe85ef7a8a3ccb6ba86d4cefa3a2f49a9c20bf07f1a979ef82812c0d0ff"
+    },
+    {
+      "path": "implementation/tests/test_repo_conformance.py",
+      "sha256": "8c96143afd45bc8c823e58cf12631abe2dc4eaded48e71586147e35539455acb"
+    },
+    {
+      "path": "implementation/tests/test_section_units.py",
+      "sha256": "56fa014c6c4fb01f8b4d87c4e642123924e074c8b3f2984de9f94aad83dc22f0"
+    },
+    {
+      "path": "implementation/tests/test_shared_conformance_vectors.py",
+      "sha256": "f21b9707b922d394cc3e60a481449617afc29bae410d77735553204886638b32"
+    },
+    {
+      "path": "implementation/tests/test_source_binding.py",
+      "sha256": "4794c69bbcec357e69a15d08d82720371902c9b22796de0c8d0eb92cbfa2194d"
+    },
+    {
+      "path": "implementation/tests/test_successor_diff_scope.py",
+      "sha256": "ad4f01071e6fb07b8561e989faf7ec8c3d0343421b041c8f853f9c503c40b3f3"
+    },
+    {
+      "path": "requirements/assurance.txt",
+      "sha256": "a9490d3402b53d84c706e540466442fa28875e4ea4dea428367d8f6db86b80ee"
+    },
+    {
+      "path": "scripts/audit_duplicate_semantics.py",
+      "sha256": "3434b39c9dafddba37d90aae2e7fd4db7249284fbd7ca950fa39e56922e92158"
+    },
+    {
+      "path": "scripts/audit_evolution_algebra.py",
+      "sha256": "f0b9f99b7318d35d5d3d8742b5b5255a0c35b0ec13aa96309a50de8c4c0b13be"
+    },
+    {
+      "path": "scripts/audit_evolution_assurance.py",
+      "sha256": "563daf24a0eb20c19db8be35b27985036b5f148d39894c4b1aff5de3937d09d9"
+    },
+    {
+      "path": "scripts/audit_evolution_reasoning.py",
+      "sha256": "ac8fb11dea10707b4568e4bdc5b271667f3589c9075d5910751386c02930d879"
+    },
+    {
+      "path": "scripts/audit_function_contract_coverage.py",
+      "sha256": "435e3490adb4d0b98cc3262db70f59ec5586abb2e49ee7bf8e008fe662852ed9"
+    },
+    {
+      "path": "scripts/audit_publication_history.py",
+      "sha256": "521a7cc30f7bfb3e6e3c812b377e7dd3d051c3caeaa028429e4460aee5105689"
+    },
+    {
+      "path": "scripts/audit_repo_gsl.py",
+      "sha256": "91eceac3b59eb88d954a3fe316a4d0a4c4bc27a8a94db22cdb276d7f7cd4c220"
+    },
+    {
+      "path": "scripts/build_canonical_section_units.py",
+      "sha256": "e8f25e4c7f8153e62b7084e3334525e1e597ec48556cc2f004daea4288ce5c7c"
+    },
+    {
+      "path": "scripts/build_evolution_audit_chain.py",
+      "sha256": "2a8e22006f1b3f087455435f32e32e3127a662d59af42417bbf92f5e60eeb367"
+    },
+    {
+      "path": "scripts/build_rights_view.py",
+      "sha256": "8fcc3d4f134d246393707ed4bea1f2a592eb2548ca6a8156e9d82f8dddcc907b"
+    },
+    {
+      "path": "scripts/build_source_manifest.py",
+      "sha256": "a73bfc510f2a472eb46939a5b24ebeeb3fd3cd22809ec14042f17c7328fb749e"
+    },
+    {
+      "path": "scripts/build_v15_6_candidate.py",
+      "sha256": "12e44c56e263249165a734846c940c9693719311bc43183ac78c06d4f9dc9bef"
+    },
+    {
+      "path": "scripts/build_v15_7_candidate.py",
+      "sha256": "8787442741f75f469b2ce1cb1535b1712e1cfeab3252af84fa2f39f7da7734f5"
+    },
+    {
+      "path": "scripts/check_candidate_references.py",
+      "sha256": "1a4b482f924c0d1145225c1d6268cf9d63eca4ef466958484a3d3fae584bbf08"
+    },
+    {
+      "path": "scripts/check_multi_agent_pr.py",
+      "sha256": "262f7f4e21788a2ab482ab1f3fceca70b7dd2340fecf8c2c6580f817bd9b7886"
+    },
+    {
+      "path": "scripts/check_permission_recovery.py",
+      "sha256": "3e2be498a162537d7d3341210582d070c38e0419deec71443f83e4d75d527775"
+    },
+    {
+      "path": "scripts/check_successor_drift.py",
+      "sha256": "3349faf94b4c10d8525837e60c2fca11f567dfef609f9119a6b759c7deeeb34d"
+    },
+    {
+      "path": "scripts/compare_obligation_extractions.py",
+      "sha256": "69fced0d87c918e3fda46b472660010f9855df43965bec2619376f3c62c34c06"
+    },
+    {
+      "path": "scripts/extract_obligations.py",
+      "sha256": "a7c08685d1e0f5b47b9e282c8cb1907cf7bf5a367978760c610847d798858cb2"
+    },
+    {
+      "path": "scripts/gate_hourly_evolution.py",
+      "sha256": "ff135041d0941ace4f999c6002821083dd1cc212506aa642e06db91c0daef45a"
+    },
+    {
+      "path": "scripts/gate_human_admitted_update.py",
+      "sha256": "0b0208aa3d24fa405654e3f81ba11af543a07a64093456f9cff47672ffc6d642"
+    },
+    {
+      "path": "scripts/inventory_release_references.py",
+      "sha256": "51b0d4ec8f0877f569412b83f945db81ac0d6af16dc8c34a4ec5feaa536067f8"
+    },
+    {
+      "path": "scripts/qualify_context_routing.py",
+      "sha256": "3d4a8b73c48b9ab83abe3b95a3f50cdd94b8015702308f7ee192d0ff7aebcc1c"
+    },
+    {
+      "path": "scripts/qualify_permission_recovery.py",
+      "sha256": "ab3d1fcfd549d7e7900754d9c1e3423764d5858010587d7db3d188307fa3224b"
+    },
+    {
+      "path": "scripts/qualify_physical_assurance.py",
+      "sha256": "d7c515bf47ee106c806292b579a13f91fdee3ba65358329e3104167f192a40dd"
+    },
+    {
+      "path": "scripts/qualify_release_verification.py",
+      "sha256": "df6162f6f465f25c5f7812bca5125b323854a1824cda3e6beba7afd098f683fd"
+    },
+    {
+      "path": "scripts/search_canonical.py",
+      "sha256": "c2468493bee740e8911221d2ee3d362a0f73c1fe2ec141850568fdd8f62a121b"
+    },
+    {
+      "path": "scripts/validate_integration_receipts.py",
+      "sha256": "6548ac84e2e808f0656e2f7966e904230df2a20f6ac3d8239564d2cce7561a20"
+    },
+    {
+      "path": "scripts/validate_work_packages.py",
+      "sha256": "42cad7dde756d2070637def5230d91a4bbdc912fa2c3fd583fb381db72cd73b9"
+    }
+  ],
+  "scope": "Executed reference suite with pinned assurance dependencies installed. No full semantic conformance, production qualification, live provider result, hardware assurance or promotion claim.",
+  "canonical_promotion_authorized": false
+}

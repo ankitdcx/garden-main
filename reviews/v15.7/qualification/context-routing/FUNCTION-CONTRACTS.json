@@ -18,7 +18,7 @@
       "version": "1.0.0",
       "function": "normalize",
       "path": "implementation/garden_kernel/context_routing.py",
-      "source_sha256": "80bb2a1baf029b688d496a2778f2d6876c93ca7e3a59ffb5ab9e3ebc198b46fa",
+      "source_sha256": "d86400241ea32447318366994e11c18e5d701747c9786279eb05d880e9a1dfcf",
       "owner": "Capability.Knowledge",
       "owner_anchor": "[T-KNOWLEDGE]",
       "source_schema_reference": "FunctionContract SCHEMA-AF063594FE",
@@ -84,14 +84,14 @@
         "ContextRoutingTests.test_identical_prose_changed_source_hash_reevaluates"
       ],
       "body_hash_algorithm": "sha256(canonical-json(contract excluding body_sha256))",
-      "body_sha256": "46bca702999c6dcdaf01f5f3a51d869db1a42c6c2c13d890c7853944a72e518d"
+      "body_sha256": "b1d6c690d13524a0d97792d7528e754af64b50498364dd0ccd3709fdbe818958"
     },
     {
       "contract_id": "QEDCR-FC-INGEST",
       "version": "1.0.0",
       "function": "ContextRouter.ingest",
       "path": "implementation/garden_kernel/context_routing.py",
-      "source_sha256": "80bb2a1baf029b688d496a2778f2d6876c93ca7e3a59ffb5ab9e3ebc198b46fa",
+      "source_sha256": "d86400241ea32447318366994e11c18e5d701747c9786279eb05d880e9a1dfcf",
       "owner": "Capability.Knowledge",
       "owner_anchor": "[T-KNOWLEDGE]",
       "source_schema_reference": "FunctionContract SCHEMA-AF063594FE",
@@ -157,20 +157,20 @@
         "ContextRoutingTests.test_duplicate_does_not_expand_or_add_task_even_after_restart"
       ],
       "body_hash_algorithm": "sha256(canonical-json(contract excluding body_sha256))",
-      "body_sha256": "5f917b5f80d9e6511b33e93162393d7c47b98318252cbb7c537cd9496b855122"
+      "body_sha256": "50975e4964e9c3fd4ef879a9efc17273843829d270376fe7e20df6e8040cf415"
     },
     {
       "contract_id": "QEDCR-FC-ROUTE",
       "version": "1.0.0",
       "function": "ContextRouter.route",
       "path": "implementation/garden_kernel/context_routing.py",
-      "source_sha256": "80bb2a1baf029b688d496a2778f2d6876c93ca7e3a59ffb5ab9e3ebc198b46fa",
+      "source_sha256": "d86400241ea32447318366994e11c18e5d701747c9786279eb05d880e9a1dfcf",
       "owner": "Capability.Compute.Execution",
       "owner_anchor": "[T-PROCESS]",
       "source_schema_reference": "FunctionContract SCHEMA-AF063594FE",
       "public_consequential_boundary": "ContextRouter.route",
       "preconditions": [
-        "Bounded question and current cycle; explicit policy; declared trusted cost upper bound for queued external review"
+        "Bounded question and current cycle; explicit policy; trusted cost upper bound for queued specialist review; explicit sufficient closure and current source binding"
       ],
       "postconditions": [
         "Reason-coded materiality; NOT_MATERIAL produces no task",
@@ -182,7 +182,7 @@
         "AUDIT",
         "REVIEW_ADMISSION"
       ],
-      "input_semantics": "Bounded question and current cycle; explicit policy; declared trusted cost upper bound for queued external review",
+      "input_semantics": "Bounded question and current cycle; explicit policy; trusted cost upper bound for queued specialist review; explicit sufficient closure and current source binding",
       "output_semantics": "Reason-coded materiality; NOT_MATERIAL produces no task; Required contradictory/provenance data retained or packet blocked; all original relation IDs resolve through hash-bound alias mapping or remain explicitly unknown; Deterministic task identity and packet hash; no process advancement",
       "proof_obligations": [
         "context-is-not-authority",
@@ -236,14 +236,14 @@
         "ContextRoutingTests.test_duplicate_alias_supersession_and_parent_resolve"
       ],
       "body_hash_algorithm": "sha256(canonical-json(contract excluding body_sha256))",
-      "body_sha256": "5d56bdb1d60648957361de1d41afb26284170da6a3c0e353b1429b0484f2684f"
+      "body_sha256": "0ee10312d034ed5dd9ba340131625d8bb5f044f90e850796c13bd61eac200212"
     },
     {
       "contract_id": "QEDCR-FC-VALIDATE",
       "version": "1.0.0",
       "function": "ContextRouter.validate_claim",
       "path": "implementation/garden_kernel/context_routing.py",
-      "source_sha256": "80bb2a1baf029b688d496a2778f2d6876c93ca7e3a59ffb5ab9e3ebc198b46fa",
+      "source_sha256": "d86400241ea32447318366994e11c18e5d701747c9786279eb05d880e9a1dfcf",
       "owner": "Capability.Compute.Execution",
       "owner_anchor": "[T-FUNCTION-CONTRACT]",
       "source_schema_reference": "FunctionContract SCHEMA-AF063594FE",
@@ -309,14 +309,88 @@
         "ContextRoutingTests.test_resolved_parent_alias_invalidates_queued_packet"
       ],
       "body_hash_algorithm": "sha256(canonical-json(contract excluding body_sha256))",
-      "body_sha256": "65a77659609ef1e00abec907f25564f0a8eebf9e00c67559450b9b8c1a379865"
+      "body_sha256": "8ab5a05b24deb19e055666d6353f69153c4356c031422db9f7f658593ee5235c"
+    },
+    {
+      "contract_id": "QEDCR-FC-FRONTIER-REQUEST",
+      "version": "1.0.0",
+      "function": "ContextRouter.frontier_request",
+      "path": "implementation/garden_kernel/context_routing.py",
+      "source_sha256": "d86400241ea32447318366994e11c18e5d701747c9786279eb05d880e9a1dfcf",
+      "owner": "Capability.Compute.Execution",
+      "owner_anchor": "[T-PROCESS]",
+      "source_schema_reference": "FunctionContract SCHEMA-AF063594FE",
+      "public_consequential_boundary": "ContextRouter.frontier_request",
+      "preconditions": [
+        "Material receipt; sufficient explicitly verified bounded closure; current source binding; specialist task succeeded"
+      ],
+      "postconditions": [
+        "Deterministic manual GardenFrontierReviewRequest/v1; no credential or provider-model routing fields",
+        "No queue insertion, automatic ChatGPT invocation, authority or canonical admission"
+      ],
+      "affects": [
+        "CONTEXT",
+        "AUDIT",
+        "REVIEW_ADMISSION"
+      ],
+      "input_semantics": "Material receipt; sufficient explicitly verified bounded closure; current source binding; specialist task succeeded",
+      "output_semantics": "Deterministic manual GardenFrontierReviewRequest/v1; no credential or provider-model routing fields; No queue insertion, automatic ChatGPT invocation, authority or canonical admission",
+      "proof_obligations": [
+        "context-is-not-authority",
+        "source-provenance-preserved",
+        "unknowns-not-promoted",
+        "declared-resource-bounds"
+      ],
+      "failures": [
+        "SemanticError on missing specialist completion, stale source/closure/context or inadequate packet"
+      ],
+      "error_semantics": "SemanticError on missing specialist completion, stale source/closure/context or inadequate packet",
+      "unknown_semantics": "Unknown cost blocks queueing; unknown external charge is retained by CompletionStore; source/hash uncertainty and historical observations remain explicit; no unknown becomes truth or authority.",
+      "effect_semantics": "Returns manual handoff artifact only; does not send it",
+      "resources_and_termination": {
+        "observation_input_max_chars": 32000,
+        "summary_max_chars": 4096,
+        "source_ref_max_count": 16,
+        "list_max_count": 64,
+        "default_ledger_observations": 2048,
+        "default_packet_observations": 32,
+        "default_packet_chars": 16000,
+        "question_max_chars": 2000,
+        "algorithm": "Finite bounded ledger scan and fixed-point relation closure; SQLite timeout inherited from CompletionStore; no external retries here."
+      },
+      "dependencies": [
+        "CompletionStore.transaction/event/enqueue/claim/finish",
+        "completion_runner.digest/encoded validation helpers",
+        "SemanticError",
+        "SQLite",
+        "versioned RoutingPolicy"
+      ],
+      "invalidators": [
+        "implementation or contract body change",
+        "policy version/threshold/budget change",
+        "source observation/freshness/contradiction/supersession change",
+        "cycle/packet/token/lease drift",
+        "authority/public-processing envelope change"
+      ],
+      "authority_and_consent": "Public review envelope required; no grants created; existing process/ActionGate/provider guards remain controlling.",
+      "provenance": "Source file SHA-256, candidate ID, owner anchor, observation source/model ancestry, routing receipt and packet hash; external results must carry actual provider response identity.",
+      "test_refs": [
+        "implementation/tests/test_context_routing.py"
+      ],
+      "test_cases": [
+        "ContextRoutingTests.test_specialist_queue_is_separate_from_manual_chatgpt_request",
+        "ContextRoutingTests.test_source_epoch_and_closure_drift_reject_dispatch",
+        "ContextRoutingTests.test_changed_policy_blocks_manual_handoff_after_specialist_completion"
+      ],
+      "body_hash_algorithm": "sha256(canonical-json(contract excluding body_sha256))",
+      "body_sha256": "de47ad17175587aa758216f8ecef1a085d0d07c3f1de403be31a2a81cbe0a3a5"
     },
     {
       "contract_id": "QEDCR-FC-MODEL-OUTPUT",
       "version": "1.0.0",
       "function": "ContextRouter.model_output_observation",
       "path": "implementation/garden_kernel/context_routing.py",
-      "source_sha256": "80bb2a1baf029b688d496a2778f2d6876c93ca7e3a59ffb5ab9e3ebc198b46fa",
+      "source_sha256": "d86400241ea32447318366994e11c18e5d701747c9786279eb05d880e9a1dfcf",
       "owner": "Capability.Knowledge",
       "owner_anchor": "[T-KNOWLEDGE]",
       "source_schema_reference": "FunctionContract SCHEMA-AF063594FE",
@@ -380,7 +454,7 @@
         "ContextRoutingTests.test_provider_authority_claim_remains_unverified_proposal"
       ],
       "body_hash_algorithm": "sha256(canonical-json(contract excluding body_sha256))",
-      "body_sha256": "66e66106719c26b8c0241c4dabf9e9714eabd7ed1ef78823bcaf7f3986d5c6cc"
+      "body_sha256": "0ac2cc5a798b76945cc9f5221d345aab04c21d4aa80612eff5cf7927fe17d552"
     }
   ],
   "limitations": [

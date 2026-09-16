@@ -1,3 +1,4 @@
+test_changed_policy_blocks_manual_handoff_after_specialist_completion (test_context_routing.ContextRoutingTests.test_changed_policy_blocks_manual_handoff_after_specialist_completion) ... ok
 test_compression_keeps_provenance_and_declares_loss (test_context_routing.ContextRoutingTests.test_compression_keeps_provenance_and_declares_loss) ... ok
 test_contradiction_keeps_both_sides_cross_subject (test_context_routing.ContextRoutingTests.test_contradiction_keeps_both_sides_cross_subject) ... ok
 test_daily_cap_applies_at_shared_executor (test_context_routing.ContextRoutingTests.test_daily_cap_applies_at_shared_executor) ... ok
@@ -15,10 +16,13 @@ test_no_change_and_clock_passage_do_not_spend (test_context_routing.ContextRouti
 test_oversized_contradiction_packet_blocks_not_silent_drop (test_context_routing.ContextRoutingTests.test_oversized_contradiction_packet_blocks_not_silent_drop) ... ok
 test_provider_authority_claim_remains_unverified_proposal (test_context_routing.ContextRoutingTests.test_provider_authority_claim_remains_unverified_proposal) ... ok
 test_resolved_parent_alias_invalidates_queued_packet (test_context_routing.ContextRoutingTests.test_resolved_parent_alias_invalidates_queued_packet) ... ok
+test_source_epoch_and_closure_drift_reject_dispatch (test_context_routing.ContextRoutingTests.test_source_epoch_and_closure_drift_reject_dispatch) ... ok
+test_specialist_queue_is_separate_from_manual_chatgpt_request (test_context_routing.ContextRoutingTests.test_specialist_queue_is_separate_from_manual_chatgpt_request) ... ok
 test_unknown_and_per_call_cost_bounds_block (test_context_routing.ContextRoutingTests.test_unknown_and_per_call_cost_bounds_block) ... ok
 test_unknown_charge_and_429_fixture_do_not_advance_process (test_context_routing.ContextRoutingTests.test_unknown_charge_and_429_fixture_do_not_advance_process) ... ok
+test_unknown_or_whole_context_closure_requests_expansion (test_context_routing.ContextRoutingTests.test_unknown_or_whole_context_closure_requests_expansion) ... ok
 
 ----------------------------------------------------------------------
-Ran 19 tests in 0.051s
+Ran 23 tests in 0.069s
 
 OK
