@@ -1,0 +1,55 @@
+{
+  "schema": "GardenEvolutionAAPSelectionReceipt/v1",
+  "action_id": "GARDEN-2026-09-16-EVENT-DELTA-GENERALIZATION-001",
+  "design_epoch": "v15.5",
+  "canonical_source_root_sha256": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+  "source_obligation_refs": [
+    "governance/PROCESS_CURRENT.json",
+    "governance/GardenCanonicalUpdateProcess_v1.4.json",
+    "governance/PROCESS_ENGINE_IMPLEMENTATION_v1.json",
+    "governance/EVENT_DRIVEN_WORK_POLICY_v1.json",
+    "canonical/current/Garden_System_v15.5_FULL_2026-09-12.txt:AAP v1.0"
+  ],
+  "impact": {
+    "consequence": "HIGH",
+    "irreversibility": "LOW",
+    "authority": "HIGH",
+    "novelty": "MEDIUM",
+    "uncertainty": "MEDIUM",
+    "sensitivity": "HIGH",
+    "dependency_impact": "HIGH",
+    "disagreement": "LOW",
+    "hard_policy": true,
+    "constitutional": false,
+    "physical_safety": false
+  },
+  "selected": {
+    "reason_tier": "R4",
+    "verity_tier": "V4",
+    "safety_tier": "S3",
+    "modules": [
+      "SOURCE_IDENTITY",
+      "GSL_TYPING",
+      "DESIGN_EPOCH",
+      "SOURCE_OBLIGATION",
+      "COMPARE",
+      "REASON",
+      "PROOF",
+      "EVIDENCE",
+      "AAP",
+      "AUTHORITY",
+      "ACTION_GATE",
+      "PROCESS_ALGEBRA",
+      "CONFORMANCE_ALGEBRA",
+      "INDEPENDENT_REVIEW_REQUIREMENT",
+      "POLICY_CHECK"
+    ]
+  },
+  "resource_budget": {
+    "status": "SUFFICIENT",
+    "basis": "Bounded profile/document/test changes and CI validation are available. Live provider execution, external ChatGPT handoff, durable event delivery and empirical compute/quality savings remain separately unqualified."
+  },
+  "degradation_disposition": "NONE",
+  "authorization_effect": "NONE",
+  "semantic_compliance_proved": false
+}
