@@ -1,21 +1,16 @@
 {
-  "schema": "GardenChatGPTWorkstreamIntent/v1",
-  "workstream_id": "chatgpt:git-process-v2-main:20260916",
-  "work_package_id": "GARDEN-GIT-PROCESS-V2-20260916",
-  "branch": "chatgpt/git-process-v2-20260916",
   "base_sha": "1034bae620bc794637c4c1e056f9467e369eca8b",
+  "branch": "chatgpt/git-process-v2-20260916",
   "dependency_intent_ids": [],
-  "integration_strategy": "INTEGRATION_BRANCH_IF_COLLISION",
+  "draft_opened_at": "2026-09-16T15:24:31Z",
   "draft_pr_created_before_substantial_edit": true,
-  "substantial_edit_started": false,
+  "draft_pr_number": 87,
+  "integration_strategy": "INTEGRATION_BRANCH_IF_COLLISION",
+  "last_activity_at": "2026-09-16T15:24:31Z",
+  "schema": "GardenChatGPTWorkstreamIntent/v1",
+  "scope": ["GIT_OPERATING_CONTEXT_REVISION","PREFLIGHT_RECEIPT","PROCESS_LOADING_ORDER","BAD_MERGE_RECOVERY","WORKSTREAM_LIFECYCLE","SECRET_SCANNING","BRANCH_NAMING"],
   "status": "ACTIVE",
-  "scope": [
-    "GIT_OPERATING_CONTEXT_REVISION",
-    "PREFLIGHT_RECEIPT",
-    "PROCESS_LOADING_ORDER",
-    "BAD_MERGE_RECOVERY",
-    "WORKSTREAM_LIFECYCLE",
-    "SECRET_SCANNING",
-    "BRANCH_NAMING"
-  ]
+  "substantial_edit_started": true,
+  "work_package_id": "GARDEN-GIT-PROCESS-V2-20260916",
+  "workstream_id": "chatgpt:git-process-v2-main:20260916"
 }
