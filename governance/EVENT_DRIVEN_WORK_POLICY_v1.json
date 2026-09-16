@@ -1,0 +1,170 @@
+{
+  "schema": "GardenEventDrivenWorkPolicy/v1",
+  "status": "NON_CANONICAL_IMPLEMENTATION_PROFILE_BOUND_TO_V15_7_CANDIDATE",
+  "design_epoch": "v15.5",
+  "candidate_refs": [
+    "design_deltas/v15.7/EVENT-DRIVEN-CONTEXT-ROUTING-CANDIDATE.md",
+    "design_deltas/v15.7/EVENT-DRIVEN-CONTEXT-ROUTING-CORRECTION-2026-09-16.md"
+  ],
+  "default_rule": "EVENT_WAKE_THEN_DELTA_FIRST_THEN_MATERIALITY_GATE",
+  "wake_sources": [
+    "repository_or_pull_request_state_change",
+    "task_or_review_completion",
+    "verification_or_test_result",
+    "new_or_overturning_evidence",
+    "dependency_invalidation",
+    "cooldown_expiry",
+    "freshness_deadline_becoming_due",
+    "explicit_human_directive"
+  ],
+  "non_triggers": [
+    "mere_clock_tick",
+    "unchanged_repository_state",
+    "duplicate_event_fingerprint",
+    "unchanged_cached_context",
+    "available_token_budget_by_itself"
+  ],
+  "context_rule": {
+    "reuse_previous_validated_context": true,
+    "default_input": "smallest sufficient changed observations plus affected dependency closure",
+    "preserve_source_and_evidence_backpointers": true,
+    "preserve_relevant_contradictions": true,
+    "record_omissions_and_compression_policy": true,
+    "stale_context_requires_revalidation": true,
+    "unchanged_context_is_not_resent_by_default": true
+  },
+  "materiality_rule": {
+    "required_before_frontier_or_expensive_synthesis": true,
+    "material_examples": [
+      "semantic or governing-assumption change",
+      "rights authority privacy or security boundary change",
+      "failed test invariant proof obligation or independent verification",
+      "new evidence capable of overturning a conclusion",
+      "relevant contradiction",
+      "dependency change invalidating a reusable result",
+      "high or unresolved uncertainty above the owning profile threshold",
+      "freshness expiry for an active high-value question"
+    ],
+    "not_material_examples": [
+      "identical replay",
+      "same source hash and same relevant state",
+      "no-change reviewer result with no new evidence",
+      "elapsed time below an applicable freshness deadline"
+    ]
+  },
+  "frontier_handoff": {
+    "lane": "EXTERNAL_CHATGPT_FRONTIER_REVIEW",
+    "provider_boundary": "NOT_OPENROUTER",
+    "model_identity": "USER_SELECTED_CHATGPT_MODEL_NOT_HARDCODED_BY_REPOSITORY",
+    "request_schema": "GardenFrontierReviewRequest/v1",
+    "response_schema": "GardenFrontierReviewResponse/v1",
+    "max_handoffs_per_material_event": 1,
+    "requires_materiality_receipt": true,
+    "cannot_replace_independent_review": true,
+    "cannot_grant_authority_or_promote_canon": true
+  },
+  "full_context_fallback": {
+    "required_when": [
+      "dependency closure is unknown or incomplete",
+      "DesignEpoch or canonical source root changed",
+      "high-risk semantic change crosses multiple owners or files",
+      "bounded context cannot establish whether an invariant or contract is affected",
+      "whole-source Compare Proof Evidence or Tier-A closure is explicitly required",
+      "periodic assurance or audit obligation explicitly requires full revalidation",
+      "contradiction or contamination cannot be resolved from the compact packet"
+    ],
+    "rule": "Delta-first optimization MUST NOT weaken whole-source or closure requirements. If sufficiency is uncertain, expand context or stop with PACKET_INCOMPLETE/UNKNOWN rather than guessing."
+  },
+  "applicability": {
+    "post_merge_verification": {
+      "wake_on": "merge or candidate-head change",
+      "default_context": "changed paths, affected contracts/invariants, original finding and exact-head evidence",
+      "avoid": "re-reviewing unrelated unchanged repository content"
+    },
+    "canonical_design_review": {
+      "wake_on": "material design delta, unresolved finding or dependency invalidation",
+      "default_context": "bounded SectionUnit plus affected dependency closure",
+      "full_context_fallback": "mandatory when semantic closure cannot be bounded"
+    },
+    "research_intake": {
+      "wake_on": "new unique source/evidence or expiry of an active research claim",
+      "default_context": "new evidence, prior conclusion if needed, contradictions and provenance",
+      "avoid": "resummarizing already-seen sources with unchanged fingerprints"
+    },
+    "review_packet_construction": {
+      "wake_on": "work item or closure frontier change",
+      "default_context": "changed closure frontier plus required dependencies",
+      "full_context_fallback": "COHERENT_COMPLETE requirements remain unchanged"
+    },
+    "blind_review": {
+      "wake_on": "new material packet or missing required independent family",
+      "default_context": "byte-identical bounded packet",
+      "avoid": "rerunning completed families on unchanged packet hashes"
+    },
+    "cross_examination": {
+      "wake_on": "new independent finding, contradiction or reviewer challenge",
+      "default_context": "own finding plus only relevant peer findings and source packet",
+      "avoid": "cross-examination with no new independent evidence"
+    },
+    "branch_pr_hygiene": {
+      "wake_on": "branch/PR state change or freshness deadline",
+      "default_context": "changed/open branch and PR metadata",
+      "avoid": "full branch inventory rescans when state fingerprints are unchanged"
+    },
+    "implementation_and_integration": {
+      "wake_on": "validated change request, failing verification or dependency change",
+      "default_context": "changed paths, affected symbols/contracts/tests and integration collisions",
+      "full_context_fallback": "expand tests/context when impact analysis is incomplete"
+    },
+    "pipeline_health": {
+      "wake_on": "health signal change or freshness deadline",
+      "default_context": "changed/stale health receipts and failing lanes",
+      "full_context_fallback": "full audit when health evidence is stale, missing or contradictory"
+    },
+    "repo_reconciliation": {
+      "wake_on": "new receipts, state drift, pending-work change or freshness deadline",
+      "default_context": "changed receipts and unresolved identities",
+      "avoid": "rebuilding unchanged reconciliation state"
+    },
+    "protocol_and_pipeline_simplification": {
+      "wake_on": "measured complexity/growth change or applicable freshness deadline",
+      "default_context": "changed process artifacts and measured duplication",
+      "avoid": "speculative simplification without execution evidence"
+    },
+    "successor_composition": {
+      "wake_on": "new admitted semantic delta or material predecessor change",
+      "default_context": "admitted deltas plus affected five-file closure",
+      "full_context_fallback": "release materialization still requires complete release/reference checks"
+    },
+    "knowledge_refresh": {
+      "wake_on": "new, overturned, expired or dependency-invalidating knowledge",
+      "default_context": "affected dependency subtree and evidence ancestry",
+      "avoid": "global knowledge rebuild when unaffected records remain fresh"
+    },
+    "frontier_chatgpt_review": {
+      "wake_on": "qualified materiality receipt and compact request availability",
+      "default_context": "GardenFrontierReviewRequest/v1",
+      "avoid": "using ChatGPT as a universal hop between agents"
+    }
+  },
+  "measurement": {
+    "record_event_and_duplicate_counts": true,
+    "record_context_before_after_compaction": true,
+    "record_calls_avoided": true,
+    "record_full_context_fallbacks_and_reasons": true,
+    "record_cost_latency_and_quality_regressions": true
+  },
+  "invariants": [
+    "EDW-001 no recurring clock is required to process unchanged state",
+    "EDW-002 duplicate event fingerprints do not create duplicate governed work",
+    "EDW-003 expensive/frontier synthesis requires an explicit materiality receipt",
+    "EDW-004 compact context preserves evidence ancestry and relevant contradictions",
+    "EDW-005 stale context cannot support current claims without revalidation",
+    "EDW-006 delta-first processing never weakens required whole-source closure",
+    "EDW-007 OpenRouter and the external ChatGPT frontier lane remain distinct provider/authority surfaces",
+    "EDW-008 ChatGPT frontier review is proposal evidence only and cannot replace independent-family requirements",
+    "EDW-009 due intervals are freshness constraints, not polling instructions",
+    "EDW-010 no cost or compute saving claim is accepted without measured receipts"
+  ],
+  "authority_boundary": "This implementation profile changes scheduling/context economy only. It grants no truth, Proof, authority, semantic admission, canonical promotion or deployment permission."
+}
