@@ -1,0 +1,108 @@
+{
+  "schema": "GardenBaselineMatching/v1",
+  "baselines": {
+    "B0": "Direct underlying model",
+    "B1": "Fixed ReAct-style tool loop",
+    "B2": "Garden-bound cognitive configuration"
+  },
+  "selected_model_pin": null,
+  "selected_model_pin_status": "UNRESOLVED",
+  "rows": [
+    {
+      "axis": "model_weights_version",
+      "B0": "UNSELECTED_OR_UNMEASURED",
+      "B1": "UNSELECTED_OR_UNMEASURED",
+      "B2": "UNSELECTED_OR_UNMEASURED",
+      "matching_status": "UNKNOWN",
+      "mismatch_magnitude": "UNKNOWN",
+      "claim_effect": "PROHIBIT causal attribution of performance differences to Garden on this axis until matched or experimentally bounded.",
+      "resolution": "Pin model_weights_version for all three configurations before trials; record unavoidable differences and narrow each affected claim."
+    },
+    {
+      "axis": "tools",
+      "B0": "UNSELECTED_OR_UNMEASURED",
+      "B1": "UNSELECTED_OR_UNMEASURED",
+      "B2": "UNSELECTED_OR_UNMEASURED",
+      "matching_status": "UNKNOWN",
+      "mismatch_magnitude": "UNKNOWN",
+      "claim_effect": "PROHIBIT causal attribution of performance differences to Garden on this axis until matched or experimentally bounded.",
+      "resolution": "Pin tools for all three configurations before trials; record unavoidable differences and narrow each affected claim."
+    },
+    {
+      "axis": "information_access",
+      "B0": "UNSELECTED_OR_UNMEASURED",
+      "B1": "UNSELECTED_OR_UNMEASURED",
+      "B2": "UNSELECTED_OR_UNMEASURED",
+      "matching_status": "UNKNOWN",
+      "mismatch_magnitude": "UNKNOWN",
+      "claim_effect": "PROHIBIT causal attribution of performance differences to Garden on this axis until matched or experimentally bounded.",
+      "resolution": "Pin information_access for all three configurations before trials; record unavoidable differences and narrow each affected claim."
+    },
+    {
+      "axis": "memory",
+      "B0": "UNSELECTED_OR_UNMEASURED",
+      "B1": "UNSELECTED_OR_UNMEASURED",
+      "B2": "UNSELECTED_OR_UNMEASURED",
+      "matching_status": "UNKNOWN",
+      "mismatch_magnitude": "UNKNOWN",
+      "claim_effect": "PROHIBIT causal attribution of performance differences to Garden on this axis until matched or experimentally bounded.",
+      "resolution": "Pin memory for all three configurations before trials; record unavoidable differences and narrow each affected claim."
+    },
+    {
+      "axis": "compute",
+      "B0": "UNSELECTED_OR_UNMEASURED",
+      "B1": "UNSELECTED_OR_UNMEASURED",
+      "B2": "UNSELECTED_OR_UNMEASURED",
+      "matching_status": "UNKNOWN",
+      "mismatch_magnitude": "UNKNOWN",
+      "claim_effect": "PROHIBIT causal attribution of performance differences to Garden on this axis until matched or experimentally bounded.",
+      "resolution": "Pin compute for all three configurations before trials; record unavoidable differences and narrow each affected claim."
+    },
+    {
+      "axis": "time",
+      "B0": "UNSELECTED_OR_UNMEASURED",
+      "B1": "UNSELECTED_OR_UNMEASURED",
+      "B2": "UNSELECTED_OR_UNMEASURED",
+      "matching_status": "UNKNOWN",
+      "mismatch_magnitude": "UNKNOWN",
+      "claim_effect": "PROHIBIT causal attribution of performance differences to Garden on this axis until matched or experimentally bounded.",
+      "resolution": "Pin time for all three configurations before trials; record unavoidable differences and narrow each affected claim."
+    },
+    {
+      "axis": "evaluation_conditions",
+      "B0": "UNSELECTED_OR_UNMEASURED",
+      "B1": "UNSELECTED_OR_UNMEASURED",
+      "B2": "UNSELECTED_OR_UNMEASURED",
+      "matching_status": "UNKNOWN",
+      "mismatch_magnitude": "UNKNOWN",
+      "claim_effect": "PROHIBIT causal attribution of performance differences to Garden on this axis until matched or experimentally bounded.",
+      "resolution": "Pin evaluation_conditions for all three configurations before trials; record unavoidable differences and narrow each affected claim."
+    }
+  ],
+  "claim_limitations": [
+    {
+      "claim": "Garden improves correctness, efficiency, retention, transfer or robustness over B0/B1",
+      "status": "PROHIBITED_WITH_CURRENT_EVIDENCE",
+      "reason": "No pinned live model, matched runs, protected distribution or actual measurements.",
+      "affected_axes": [
+        "model_weights_version",
+        "tools",
+        "information_access",
+        "memory",
+        "compute",
+        "time",
+        "evaluation_conditions"
+      ]
+    },
+    {
+      "claim": "Local reference recovery/simulation controls execute on declared fixtures",
+      "status": "PERMITTED_ONLY_WITH_EXACT_CURRENT_RECEIPT",
+      "reason": "Fixture results do not compare cognitive capability."
+    }
+  ],
+  "evaluation_owner": "UNRESOLVED_PROTECTED_IDENTITY_AND_AUTHORIZATION",
+  "budget_approval": "UNRESOLVED_SCOPE_SPECIFIC_EXTERNAL_GRANT",
+  "regression_thresholds": "UNRESOLVED_PREDECLARED_TASK_METRICS",
+  "completion": "MATCHING_PLAN_RECORDED_NO_COMPARATIVE_TRIALS",
+  "authority_effect": "NONE"
+}

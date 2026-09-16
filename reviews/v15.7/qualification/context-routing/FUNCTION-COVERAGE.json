@@ -1,0 +1,73 @@
+{
+  "schema": "GardenFunctionContractCoverageReport/v1",
+  "registry_id": "GARDEN-EDCR-BOUNDED-DECLARATIONS-v1",
+  "design_epoch": "v15.5",
+  "canonical_source_root_sha256": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+  "scoped_function_count": 5,
+  "declared_contract_count": 5,
+  "frontier_function_count": 0,
+  "declaration_coverage_ratio": 1.0,
+  "semantic_compliance_proved": false,
+  "functions": [
+    {
+      "identity": "implementation/garden_kernel/context_routing.py::ContextRouter.ingest",
+      "path": "implementation/garden_kernel/context_routing.py",
+      "function": "ContextRouter.ingest",
+      "signature": "(self: <untyped>, observation: <untyped>) -> <untyped>",
+      "source_sha256": "80bb2a1baf029b688d496a2778f2d6876c93ca7e3a59ffb5ab9e3ebc198b46fa",
+      "coverage_state": "DECLARED_REFERENCE",
+      "contract_id": "QEDCR-FC-INGEST",
+      "test_refs": [
+        "implementation/tests/test_context_routing.py"
+      ]
+    },
+    {
+      "identity": "implementation/garden_kernel/context_routing.py::ContextRouter.model_output_observation",
+      "path": "implementation/garden_kernel/context_routing.py",
+      "function": "ContextRouter.model_output_observation",
+      "signature": "(output: <untyped>, *, model: <untyped>, response_ref: <untyped>) -> <untyped>",
+      "source_sha256": "80bb2a1baf029b688d496a2778f2d6876c93ca7e3a59ffb5ab9e3ebc198b46fa",
+      "coverage_state": "DECLARED_REFERENCE",
+      "contract_id": "QEDCR-FC-MODEL-OUTPUT",
+      "test_refs": [
+        "implementation/tests/test_context_routing.py"
+      ]
+    },
+    {
+      "identity": "implementation/garden_kernel/context_routing.py::ContextRouter.route",
+      "path": "implementation/garden_kernel/context_routing.py",
+      "function": "ContextRouter.route",
+      "signature": "(self: <untyped>, *, cycle_id: <untyped>, question: <untyped>, subject: <untyped>, now: <untyped>, cost_bound_micro_usd: <untyped>=<default>) -> <untyped>",
+      "source_sha256": "80bb2a1baf029b688d496a2778f2d6876c93ca7e3a59ffb5ab9e3ebc198b46fa",
+      "coverage_state": "DECLARED_REFERENCE",
+      "contract_id": "QEDCR-FC-ROUTE",
+      "test_refs": [
+        "implementation/tests/test_context_routing.py"
+      ]
+    },
+    {
+      "identity": "implementation/garden_kernel/context_routing.py::ContextRouter.validate_claim",
+      "path": "implementation/garden_kernel/context_routing.py",
+      "function": "ContextRouter.validate_claim",
+      "signature": "(self: <untyped>, claim: <untyped>, *, now: <untyped>) -> <untyped>",
+      "source_sha256": "80bb2a1baf029b688d496a2778f2d6876c93ca7e3a59ffb5ab9e3ebc198b46fa",
+      "coverage_state": "DECLARED_REFERENCE",
+      "contract_id": "QEDCR-FC-VALIDATE",
+      "test_refs": [
+        "implementation/tests/test_context_routing.py"
+      ]
+    },
+    {
+      "identity": "implementation/garden_kernel/context_routing.py::normalize",
+      "path": "implementation/garden_kernel/context_routing.py",
+      "function": "normalize",
+      "signature": "(observation: <untyped>) -> <untyped>",
+      "source_sha256": "80bb2a1baf029b688d496a2778f2d6876c93ca7e3a59ffb5ab9e3ebc198b46fa",
+      "coverage_state": "DECLARED_REFERENCE",
+      "contract_id": "QEDCR-FC-NORMALIZE",
+      "test_refs": [
+        "implementation/tests/test_context_routing.py"
+      ]
+    }
+  ]
+}

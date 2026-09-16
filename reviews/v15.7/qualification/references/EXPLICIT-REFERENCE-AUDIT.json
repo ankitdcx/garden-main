@@ -1,0 +1,403 @@
+{
+  "authorization_effect": "NONE",
+  "candidate_source_root_sha256": "99e42cdb9ba0b9603ae2b90484bddedeef6c5721aa2b0f6a547a956914d1b9d6",
+  "checked_source_sha256": {
+    "canonical/candidates/v15.7/Garden_Annexure_v15.7_FULL_CANDIDATE_2026-09-16.txt": "8b127a0850b0614fd2de1578245460f1dbbb05e8dce33fc38c2bf78a1de58bad",
+    "canonical/candidates/v15.7/Garden_System_v15.7_FULL_CANDIDATE_2026-09-16.txt": "49edf13e64dea58d35d9dba74394d1b4ef12cf4c986f4f05129c2fcd63593747",
+    "canonical/candidates/v15.7/Garden_Technical_v15.7_FULL_CANDIDATE_2026-09-16.txt": "c9057e21ea32dd456dbc2f45d09bd4e2d272ba5d4a8d63f55f349cde60db2f96",
+    "canonical/candidates/v15.7/Garden_Theories_v15.7_FULL_CANDIDATE_2026-09-16.txt": "af7e1f6c954ea16bac290ae095101afddb59219217248fbae66384895f7f2a77",
+    "canonical/candidates/v15.7/Garden_User_v15.7_FULL_CANDIDATE_2026-09-16.txt": "b07e033ceeb14822216a2ef0a74853f09e8b5f81477c4546fee8815236b944a4"
+  },
+  "counts": {
+    "intentionally_not_defined": 1,
+    "reported": 55,
+    "resolved_explicit_definitions": 54,
+    "still_unresolved": 0
+  },
+  "full_type_owner_gsl_validation_complete": false,
+  "input_receipt": "reviews/v15.7/REFERENCE-CLOSURE-RECEIPT.json",
+  "input_receipt_sha256": "872184458c527e3a9b883610981c1905b258e5ea7c7797241fba56f7c1bad8e4",
+  "intentionally_not_defined": [
+    {
+      "anchor": "[T-REGULATION-COUPLING]",
+      "evidence_refs": [
+        "canonical/candidates/v15.7/Garden_Annexure_v15.7_FULL_CANDIDATE_2026-09-16.txt:6125"
+      ]
+    }
+  ],
+  "manifest": "canonical/candidates/v15.7/SOURCE_MANIFEST.json",
+  "manifest_sha256": "cc2de0ca6ca04098bc279aaace04ff0d5e986e1a65272a9b34aba9dc06983b09",
+  "qualification_effect": "NONE",
+  "resolved_explicit_definitions": [
+    {
+      "anchor": "[A-AGI-HARDENING]",
+      "definition_refs": [
+        "canonical/candidates/v15.7/Garden_Annexure_v15.7_FULL_CANDIDATE_2026-09-16.txt:5764"
+      ]
+    },
+    {
+      "anchor": "[A-AI-DEV]",
+      "definition_refs": [
+        "canonical/candidates/v15.7/Garden_Annexure_v15.7_FULL_CANDIDATE_2026-09-16.txt:5566"
+      ]
+    },
+    {
+      "anchor": "[A-ASSURANCE-HARDENING]",
+      "definition_refs": [
+        "canonical/candidates/v15.7/Garden_Annexure_v15.7_FULL_CANDIDATE_2026-09-16.txt:5725"
+      ]
+    },
+    {
+      "anchor": "[A-BOUNDARIES]",
+      "definition_refs": [
+        "canonical/candidates/v15.7/Garden_Annexure_v15.7_FULL_CANDIDATE_2026-09-16.txt:4234"
+      ]
+    },
+    {
+      "anchor": "[A-BRIDGE]",
+      "definition_refs": [
+        "canonical/candidates/v15.7/Garden_Annexure_v15.7_FULL_CANDIDATE_2026-09-16.txt:5499"
+      ]
+    },
+    {
+      "anchor": "[A-EMG-ADM]",
+      "definition_refs": [
+        "canonical/candidates/v15.7/Garden_Annexure_v15.7_FULL_CANDIDATE_2026-09-16.txt:4994"
+      ]
+    },
+    {
+      "anchor": "[A-ENG-DES]",
+      "definition_refs": [
+        "canonical/candidates/v15.7/Garden_Annexure_v15.7_FULL_CANDIDATE_2026-09-16.txt:5636"
+      ]
+    },
+    {
+      "anchor": "[A-EPISTEMIC]",
+      "definition_refs": [
+        "canonical/candidates/v15.7/Garden_Annexure_v15.7_FULL_CANDIDATE_2026-09-16.txt:3476"
+      ]
+    },
+    {
+      "anchor": "[A-FIN]",
+      "definition_refs": [
+        "canonical/candidates/v15.7/Garden_Annexure_v15.7_FULL_CANDIDATE_2026-09-16.txt:4276"
+      ]
+    },
+    {
+      "anchor": "[A-FUNC]",
+      "definition_refs": [
+        "canonical/candidates/v15.7/Garden_Annexure_v15.7_FULL_CANDIDATE_2026-09-16.txt:4960"
+      ]
+    },
+    {
+      "anchor": "[A-HSA]",
+      "definition_refs": [
+        "canonical/candidates/v15.7/Garden_Annexure_v15.7_FULL_CANDIDATE_2026-09-16.txt:4245"
+      ]
+    },
+    {
+      "anchor": "[A-HUMAN-IN]",
+      "definition_refs": [
+        "canonical/candidates/v15.7/Garden_Annexure_v15.7_FULL_CANDIDATE_2026-09-16.txt:5020"
+      ]
+    },
+    {
+      "anchor": "[A-INVARIANTS]",
+      "definition_refs": [
+        "canonical/candidates/v15.7/Garden_Annexure_v15.7_FULL_CANDIDATE_2026-09-16.txt:3241"
+      ]
+    },
+    {
+      "anchor": "[A-PARAM]",
+      "definition_refs": [
+        "canonical/candidates/v15.7/Garden_Annexure_v15.7_FULL_CANDIDATE_2026-09-16.txt:4982"
+      ]
+    },
+    {
+      "anchor": "[A-PROOF]",
+      "definition_refs": [
+        "canonical/candidates/v15.7/Garden_Annexure_v15.7_FULL_CANDIDATE_2026-09-16.txt:2631"
+      ]
+    },
+    {
+      "anchor": "[A-REGULATION-1483]",
+      "definition_refs": [
+        "canonical/candidates/v15.7/Garden_Annexure_v15.7_FULL_CANDIDATE_2026-09-16.txt:6021"
+      ]
+    },
+    {
+      "anchor": "[A-RESULT]",
+      "definition_refs": [
+        "canonical/candidates/v15.7/Garden_Annexure_v15.7_FULL_CANDIDATE_2026-09-16.txt:4972"
+      ]
+    },
+    {
+      "anchor": "[A-RRCTX]",
+      "definition_refs": [
+        "canonical/candidates/v15.7/Garden_Annexure_v15.7_FULL_CANDIDATE_2026-09-16.txt:5751"
+      ]
+    },
+    {
+      "anchor": "[A-STD-MAPPINGS]",
+      "definition_refs": [
+        "canonical/candidates/v15.7/Garden_Annexure_v15.7_FULL_CANDIDATE_2026-09-16.txt:5605"
+      ]
+    },
+    {
+      "anchor": "[A-STD]",
+      "definition_refs": [
+        "canonical/candidates/v15.7/Garden_Annexure_v15.7_FULL_CANDIDATE_2026-09-16.txt:5587"
+      ]
+    },
+    {
+      "anchor": "[A-THEORY-1481]",
+      "definition_refs": [
+        "canonical/candidates/v15.7/Garden_Annexure_v15.7_FULL_CANDIDATE_2026-09-16.txt:5817"
+      ]
+    },
+    {
+      "anchor": "[A-THEORY-EQ]",
+      "definition_refs": [
+        "canonical/candidates/v15.7/Garden_Annexure_v15.7_FULL_CANDIDATE_2026-09-16.txt:5006"
+      ]
+    },
+    {
+      "anchor": "[A-THEORY]",
+      "definition_refs": [
+        "canonical/candidates/v15.7/Garden_Annexure_v15.7_FULL_CANDIDATE_2026-09-16.txt:4001"
+      ]
+    },
+    {
+      "anchor": "[H-01]",
+      "definition_refs": [
+        "canonical/candidates/v15.7/Garden_User_v15.7_FULL_CANDIDATE_2026-09-16.txt:49",
+        "canonical/candidates/v15.7/Garden_User_v15.7_FULL_CANDIDATE_2026-09-16.txt:114"
+      ]
+    },
+    {
+      "anchor": "[H-02]",
+      "definition_refs": [
+        "canonical/candidates/v15.7/Garden_User_v15.7_FULL_CANDIDATE_2026-09-16.txt:50",
+        "canonical/candidates/v15.7/Garden_User_v15.7_FULL_CANDIDATE_2026-09-16.txt:307"
+      ]
+    },
+    {
+      "anchor": "[H-03]",
+      "definition_refs": [
+        "canonical/candidates/v15.7/Garden_User_v15.7_FULL_CANDIDATE_2026-09-16.txt:51",
+        "canonical/candidates/v15.7/Garden_User_v15.7_FULL_CANDIDATE_2026-09-16.txt:347"
+      ]
+    },
+    {
+      "anchor": "[H-04]",
+      "definition_refs": [
+        "canonical/candidates/v15.7/Garden_User_v15.7_FULL_CANDIDATE_2026-09-16.txt:52",
+        "canonical/candidates/v15.7/Garden_User_v15.7_FULL_CANDIDATE_2026-09-16.txt:400"
+      ]
+    },
+    {
+      "anchor": "[H-05]",
+      "definition_refs": [
+        "canonical/candidates/v15.7/Garden_User_v15.7_FULL_CANDIDATE_2026-09-16.txt:53",
+        "canonical/candidates/v15.7/Garden_User_v15.7_FULL_CANDIDATE_2026-09-16.txt:460"
+      ]
+    },
+    {
+      "anchor": "[H-06]",
+      "definition_refs": [
+        "canonical/candidates/v15.7/Garden_User_v15.7_FULL_CANDIDATE_2026-09-16.txt:54",
+        "canonical/candidates/v15.7/Garden_User_v15.7_FULL_CANDIDATE_2026-09-16.txt:508"
+      ]
+    },
+    {
+      "anchor": "[H-07]",
+      "definition_refs": [
+        "canonical/candidates/v15.7/Garden_User_v15.7_FULL_CANDIDATE_2026-09-16.txt:55",
+        "canonical/candidates/v15.7/Garden_User_v15.7_FULL_CANDIDATE_2026-09-16.txt:543"
+      ]
+    },
+    {
+      "anchor": "[H-08]",
+      "definition_refs": [
+        "canonical/candidates/v15.7/Garden_User_v15.7_FULL_CANDIDATE_2026-09-16.txt:56",
+        "canonical/candidates/v15.7/Garden_User_v15.7_FULL_CANDIDATE_2026-09-16.txt:628"
+      ]
+    },
+    {
+      "anchor": "[H-09]",
+      "definition_refs": [
+        "canonical/candidates/v15.7/Garden_User_v15.7_FULL_CANDIDATE_2026-09-16.txt:57",
+        "canonical/candidates/v15.7/Garden_User_v15.7_FULL_CANDIDATE_2026-09-16.txt:657"
+      ]
+    },
+    {
+      "anchor": "[H-10]",
+      "definition_refs": [
+        "canonical/candidates/v15.7/Garden_User_v15.7_FULL_CANDIDATE_2026-09-16.txt:58",
+        "canonical/candidates/v15.7/Garden_User_v15.7_FULL_CANDIDATE_2026-09-16.txt:710"
+      ]
+    },
+    {
+      "anchor": "[H-11]",
+      "definition_refs": [
+        "canonical/candidates/v15.7/Garden_User_v15.7_FULL_CANDIDATE_2026-09-16.txt:59",
+        "canonical/candidates/v15.7/Garden_User_v15.7_FULL_CANDIDATE_2026-09-16.txt:740"
+      ]
+    },
+    {
+      "anchor": "[H-12]",
+      "definition_refs": [
+        "canonical/candidates/v15.7/Garden_User_v15.7_FULL_CANDIDATE_2026-09-16.txt:60",
+        "canonical/candidates/v15.7/Garden_User_v15.7_FULL_CANDIDATE_2026-09-16.txt:790"
+      ]
+    },
+    {
+      "anchor": "[H-13]",
+      "definition_refs": [
+        "canonical/candidates/v15.7/Garden_User_v15.7_FULL_CANDIDATE_2026-09-16.txt:61",
+        "canonical/candidates/v15.7/Garden_User_v15.7_FULL_CANDIDATE_2026-09-16.txt:830"
+      ]
+    },
+    {
+      "anchor": "[H-14]",
+      "definition_refs": [
+        "canonical/candidates/v15.7/Garden_User_v15.7_FULL_CANDIDATE_2026-09-16.txt:78",
+        "canonical/candidates/v15.7/Garden_User_v15.7_FULL_CANDIDATE_2026-09-16.txt:1436"
+      ]
+    },
+    {
+      "anchor": "[H-15]",
+      "definition_refs": [
+        "canonical/candidates/v15.7/Garden_User_v15.7_FULL_CANDIDATE_2026-09-16.txt:79",
+        "canonical/candidates/v15.7/Garden_User_v15.7_FULL_CANDIDATE_2026-09-16.txt:1461"
+      ]
+    },
+    {
+      "anchor": "[H-AI-DEV]",
+      "definition_refs": [
+        "canonical/candidates/v15.7/Garden_User_v15.7_FULL_CANDIDATE_2026-09-16.txt:63",
+        "canonical/candidates/v15.7/Garden_User_v15.7_FULL_CANDIDATE_2026-09-16.txt:977"
+      ]
+    },
+    {
+      "anchor": "[H-AR]",
+      "definition_refs": [
+        "canonical/candidates/v15.7/Garden_System_v15.7_FULL_CANDIDATE_2026-09-16.txt:631",
+        "canonical/candidates/v15.7/Garden_User_v15.7_FULL_CANDIDATE_2026-09-16.txt:76",
+        "canonical/candidates/v15.7/Garden_User_v15.7_FULL_CANDIDATE_2026-09-16.txt:1402"
+      ]
+    },
+    {
+      "anchor": "[H-ASSURANCE-HARDENING]",
+      "definition_refs": [
+        "canonical/candidates/v15.7/Garden_User_v15.7_FULL_CANDIDATE_2026-09-16.txt:66",
+        "canonical/candidates/v15.7/Garden_User_v15.7_FULL_CANDIDATE_2026-09-16.txt:1107"
+      ]
+    },
+    {
+      "anchor": "[H-BRIDGE]",
+      "definition_refs": [
+        "canonical/candidates/v15.7/Garden_User_v15.7_FULL_CANDIDATE_2026-09-16.txt:62",
+        "canonical/candidates/v15.7/Garden_User_v15.7_FULL_CANDIDATE_2026-09-16.txt:893"
+      ]
+    },
+    {
+      "anchor": "[H-CSR]",
+      "definition_refs": [
+        "canonical/candidates/v15.7/Garden_System_v15.7_FULL_CANDIDATE_2026-09-16.txt:630",
+        "canonical/candidates/v15.7/Garden_User_v15.7_FULL_CANDIDATE_2026-09-16.txt:75",
+        "canonical/candidates/v15.7/Garden_User_v15.7_FULL_CANDIDATE_2026-09-16.txt:1382"
+      ]
+    },
+    {
+      "anchor": "[H-EC]",
+      "definition_refs": [
+        "canonical/candidates/v15.7/Garden_System_v15.7_FULL_CANDIDATE_2026-09-16.txt:629",
+        "canonical/candidates/v15.7/Garden_User_v15.7_FULL_CANDIDATE_2026-09-16.txt:74",
+        "canonical/candidates/v15.7/Garden_User_v15.7_FULL_CANDIDATE_2026-09-16.txt:1362"
+      ]
+    },
+    {
+      "anchor": "[H-ENG-DES]",
+      "definition_refs": [
+        "canonical/candidates/v15.7/Garden_User_v15.7_FULL_CANDIDATE_2026-09-16.txt:65",
+        "canonical/candidates/v15.7/Garden_User_v15.7_FULL_CANDIDATE_2026-09-16.txt:1073"
+      ]
+    },
+    {
+      "anchor": "[H-MAC]",
+      "definition_refs": [
+        "canonical/candidates/v15.7/Garden_System_v15.7_FULL_CANDIDATE_2026-09-16.txt:625",
+        "canonical/candidates/v15.7/Garden_User_v15.7_FULL_CANDIDATE_2026-09-16.txt:70",
+        "canonical/candidates/v15.7/Garden_User_v15.7_FULL_CANDIDATE_2026-09-16.txt:1293"
+      ]
+    },
+    {
+      "anchor": "[H-MI]",
+      "definition_refs": [
+        "canonical/candidates/v15.7/Garden_System_v15.7_FULL_CANDIDATE_2026-09-16.txt:632",
+        "canonical/candidates/v15.7/Garden_User_v15.7_FULL_CANDIDATE_2026-09-16.txt:77",
+        "canonical/candidates/v15.7/Garden_User_v15.7_FULL_CANDIDATE_2026-09-16.txt:1417"
+      ]
+    },
+    {
+      "anchor": "[H-NRS]",
+      "definition_refs": [
+        "canonical/candidates/v15.7/Garden_System_v15.7_FULL_CANDIDATE_2026-09-16.txt:626",
+        "canonical/candidates/v15.7/Garden_User_v15.7_FULL_CANDIDATE_2026-09-16.txt:71",
+        "canonical/candidates/v15.7/Garden_User_v15.7_FULL_CANDIDATE_2026-09-16.txt:1308"
+      ]
+    },
+    {
+      "anchor": "[H-RRCTX]",
+      "definition_refs": [
+        "canonical/candidates/v15.7/Garden_User_v15.7_FULL_CANDIDATE_2026-09-16.txt:67",
+        "canonical/candidates/v15.7/Garden_User_v15.7_FULL_CANDIDATE_2026-09-16.txt:1232"
+      ]
+    },
+    {
+      "anchor": "[H-SEA]",
+      "definition_refs": [
+        "canonical/candidates/v15.7/Garden_System_v15.7_FULL_CANDIDATE_2026-09-16.txt:624",
+        "canonical/candidates/v15.7/Garden_User_v15.7_FULL_CANDIDATE_2026-09-16.txt:69",
+        "canonical/candidates/v15.7/Garden_User_v15.7_FULL_CANDIDATE_2026-09-16.txt:1272"
+      ]
+    },
+    {
+      "anchor": "[H-SHE]",
+      "definition_refs": [
+        "canonical/candidates/v15.7/Garden_System_v15.7_FULL_CANDIDATE_2026-09-16.txt:628",
+        "canonical/candidates/v15.7/Garden_User_v15.7_FULL_CANDIDATE_2026-09-16.txt:73",
+        "canonical/candidates/v15.7/Garden_User_v15.7_FULL_CANDIDATE_2026-09-16.txt:1347"
+      ]
+    },
+    {
+      "anchor": "[H-STD]",
+      "definition_refs": [
+        "canonical/candidates/v15.7/Garden_User_v15.7_FULL_CANDIDATE_2026-09-16.txt:64",
+        "canonical/candidates/v15.7/Garden_User_v15.7_FULL_CANDIDATE_2026-09-16.txt:1043"
+      ]
+    },
+    {
+      "anchor": "[H-TED]",
+      "definition_refs": [
+        "canonical/candidates/v15.7/Garden_System_v15.7_FULL_CANDIDATE_2026-09-16.txt:623",
+        "canonical/candidates/v15.7/Garden_User_v15.7_FULL_CANDIDATE_2026-09-16.txt:68",
+        "canonical/candidates/v15.7/Garden_User_v15.7_FULL_CANDIDATE_2026-09-16.txt:1252"
+      ]
+    },
+    {
+      "anchor": "[H-VIP]",
+      "definition_refs": [
+        "canonical/candidates/v15.7/Garden_System_v15.7_FULL_CANDIDATE_2026-09-16.txt:627",
+        "canonical/candidates/v15.7/Garden_User_v15.7_FULL_CANDIDATE_2026-09-16.txt:72",
+        "canonical/candidates/v15.7/Garden_User_v15.7_FULL_CANDIDATE_2026-09-16.txt:1328"
+      ]
+    }
+  ],
+  "schema": "GardenCandidateExplicitReferenceAudit/v1",
+  "scope": "Exact syntactic recheck of references previously reported unresolved; not a full type, owner, GSL, or semantic closure validator.",
+  "semantic_closure_complete": false,
+  "status": "INCONCLUSIVE",
+  "still_unresolved": []
+}

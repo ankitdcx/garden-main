@@ -1,10 +1,10 @@
 {
   "status": "CANDIDATE_MATERIALIZED_NOT_ADMITTED",
-  "repository_registration_base": "5a5fb60d54f9bb9310ea734657394c1c2de2f4fd",
-  "registration_base_scope": "Historical GitHub source-registration base, not the local build commit",
-  "workspace_commit": "02c3d3d5dee9685a987bd17145fbec9e33b69cf9",
+  "repository_registration_base": "5caf3845c2c43e6a6fe91ced3b79760527d680d2",
+  "registration_base_scope": "GitHub input snapshot containing six registered candidates; local history uses a materialized snapshot",
+  "workspace_commit": "2275a22b1a10f27f15a53e30f6e16e81677e6f4a",
   "workspace_dirty": true,
-  "builder_sha256": "4e5c4304967da4da81621c2084322a6b4d655be79bf69609f374c717e1f900f0",
+  "builder_sha256": "8787442741f75f469b2ce1cb1535b1712e1cfeab3252af84fa2f39f7da7734f5",
   "new_programs": [
     {
       "path": "design_deltas/v15.7/TRACE-CANDIDATE.md",
@@ -28,11 +28,26 @@
     },
     {
       "path": "design_deltas/v15.7/DESIGN-CLOSURE-CANDIDATE.md",
-      "sha256": "f0e75e487fcffed030af1c3f02fe9aa64d1dd6562235ad087aac3813262dd824",
+      "sha256": "64a06843954ed18e13a3e36a7ba5070cc992ec06cb717b1fda431661457c8e5b",
+      "incorporated_complete_text": true
+    },
+    {
+      "path": "design_deltas/v15.7/EVENT-DRIVEN-CONTEXT-ROUTING-CANDIDATE.md",
+      "sha256": "0689f85bf5130c50b087bd0d6e0e832fd8ef3096f9b603db7d73c5943cffc953",
+      "incorporated_complete_text": true
+    },
+    {
+      "path": "design_deltas/v15.7/BOUNDED-IMPLEMENTATION-CONTRACTS.md",
+      "sha256": "255ffdcbb507c96784aa110746793395b89dc09b5ae45c8bdc089e1a3f9d9795",
+      "incorporated_complete_text": true
+    },
+    {
+      "path": "design_deltas/v15.7/EVENT-DRIVEN-CONTEXT-ROUTING-CORRECTION-2026-09-16.md",
+      "sha256": "c9800f8a8247f8b524cc4ae1586e2024c420e6fdf35185ab66b2b9dae20ffee9",
       "incorporated_complete_text": true
     }
   ],
   "carried_forward_draft": "d4f054f21247948426abbe4c842ac65f4daa83f521f73bc3ac57e2d5860bdf6b",
-  "candidate_source_root_sha256": "eb4d5306a8f7dcca75f8cf7d60f6441bdf5b35bccb86ac2362b33f241af1591a",
-  "comparison": "Retain five programs independently; no-addition leaves agreed work scattered, standalone replacement loses inherited work. Full cumulative draft selected; no superiority or completion claims."
+  "candidate_source_root_sha256": "99e42cdb9ba0b9603ae2b90484bddedeef6c5721aa2b0f6a547a956914d1b9d6",
+  "comparison": "Retain six programs independently; no-addition leaves agreed work scattered, standalone replacement loses inherited work. Full cumulative draft selected; no superiority or completion claims."
 }

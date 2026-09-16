@@ -1,0 +1,63 @@
+{
+  "schema": "GardenCandidateReferenceMigration/v1",
+  "date": "2026-09-16",
+  "previous_root": "eb4d5306a8f7dcca75f8cf7d60f6441bdf5b35bccb86ac2362b33f241af1591a",
+  "current_root": "ef1956960c6b91147a4868092519aec9d621ab097a48c2a96ab8049b307d03d1",
+  "five_documents": [
+    {
+      "role": "User",
+      "previous_path": "canonical/candidates/v15.7/Garden_User_v15.7_FULL_CANDIDATE_2026-09-15.txt",
+      "archived_path": "canonical/candidates/archive/v15.7-2026-09-15/Garden_User_v15.7_FULL_CANDIDATE_2026-09-15.txt",
+      "current_path": "canonical/candidates/v15.7/Garden_User_v15.7_FULL_CANDIDATE_2026-09-16.txt",
+      "prior_sha256": "fd55072ea37c0bbd6f6b1b2aa233afd2b23d22b6a76f23d364ad92e33b9a9d6b",
+      "current_sha256": "b07e033ceeb14822216a2ef0a74853f09e8b5f81477c4546fee8815236b944a4"
+    },
+    {
+      "role": "System",
+      "previous_path": "canonical/candidates/v15.7/Garden_System_v15.7_FULL_CANDIDATE_2026-09-15.txt",
+      "archived_path": "canonical/candidates/archive/v15.7-2026-09-15/Garden_System_v15.7_FULL_CANDIDATE_2026-09-15.txt",
+      "current_path": "canonical/candidates/v15.7/Garden_System_v15.7_FULL_CANDIDATE_2026-09-16.txt",
+      "prior_sha256": "b4fee8b2b5f75fe56485ad80c375e7e0188c54b97a7b4295ace1e74bb305a312",
+      "current_sha256": "49edf13e64dea58d35d9dba74394d1b4ef12cf4c986f4f05129c2fcd63593747"
+    },
+    {
+      "role": "Technical",
+      "previous_path": "canonical/candidates/v15.7/Garden_Technical_v15.7_FULL_CANDIDATE_2026-09-15.txt",
+      "archived_path": "canonical/candidates/archive/v15.7-2026-09-15/Garden_Technical_v15.7_FULL_CANDIDATE_2026-09-15.txt",
+      "current_path": "canonical/candidates/v15.7/Garden_Technical_v15.7_FULL_CANDIDATE_2026-09-16.txt",
+      "prior_sha256": "57535dc10839a6b278b0e05d257db5455e48cf376fdf1112f447e8b6257da68f",
+      "current_sha256": "3edd09a54dd797a4988eb2ac3fa7c8ebf6f9728e568a0158f8b03e139b25105d"
+    },
+    {
+      "role": "Annexure",
+      "previous_path": "canonical/candidates/v15.7/Garden_Annexure_v15.7_FULL_CANDIDATE_2026-09-15.txt",
+      "archived_path": "canonical/candidates/archive/v15.7-2026-09-15/Garden_Annexure_v15.7_FULL_CANDIDATE_2026-09-15.txt",
+      "current_path": "canonical/candidates/v15.7/Garden_Annexure_v15.7_FULL_CANDIDATE_2026-09-16.txt",
+      "prior_sha256": "40bfad13812e022fa302ccb12ddbfb21f88913ba91e0d8f0f884e113604895fe",
+      "current_sha256": "e64bba7111074cc794ade7471e5699154ef93ba302e4c101a0776d5c877c26e7"
+    },
+    {
+      "role": "Theories",
+      "previous_path": "canonical/candidates/v15.7/Garden_Theories_v15.7_FULL_CANDIDATE_2026-09-15.txt",
+      "archived_path": "canonical/candidates/archive/v15.7-2026-09-15/Garden_Theories_v15.7_FULL_CANDIDATE_2026-09-15.txt",
+      "current_path": "canonical/candidates/v15.7/Garden_Theories_v15.7_FULL_CANDIDATE_2026-09-16.txt",
+      "prior_sha256": "670997310d2b264dfdddcc89a05ffbb881426560ba2dc4a213ee655702555345",
+      "current_sha256": "af7e1f6c954ea16bac290ae095101afddb59219217248fbae66384895f7f2a77"
+    }
+  ],
+  "historical_receipts_preserved": [
+    "reviews/v15.7/FINAL-ALGEBRA-RECEIPT.json",
+    "reviews/v15.7/ROLE-REFERENCE-EDIT-RECEIPT.json",
+    "reviews/v15.7/FINAL-MODEL-REVIEW.json",
+    "reviews/v15.7/FINAL-ASSURANCE-RECEIPT.json",
+    "reviews/v15.7/FINAL-REFERENCE-CHECK.json",
+    "reviews/v15.7/FINAL-REASONING-RECEIPT.json",
+    "reviews/v15.7/REVIEW-RESOLUTION.json"
+  ],
+  "historical_resolution": "Historical source identities resolve against the archived manifest, never against revised current bytes. Old receipt contents remain unchanged.",
+  "canonical_source_change": false,
+  "role_term_scan": {
+    "current_tree_matches": 0,
+    "scope": "Text files in the materialized repository tree; historical Git commits are not rewritten."
+  }
+}

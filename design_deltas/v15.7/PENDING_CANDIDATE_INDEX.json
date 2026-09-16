@@ -7,7 +7,8 @@
       "source": "design_deltas/v15.7/TRACE-CANDIDATE.md",
       "status": "CANDIDATE_USER_REQUESTED_TRACKING_PENDING_RECONCILIATION_AND_ADMISSION",
       "summary": "TRACE revision 3 plus final clarifications: bounded runtime, external authorization, evidence/receipt hardening and compromise-scoped assurance.",
-      "work_package_id": "WP-TRACE-V15-7-CANDIDATE"
+      "work_package_id": "WP-TRACE-V15-7-CANDIDATE",
+      "disposition_record": "reviews/v15.7/qualification/OBLIGATION-REGISTER.json"
     },
     {
       "candidate_id": "CAND-COGNITIVE-INCREMENT-001",
@@ -17,7 +18,8 @@
       "status": "CANDIDATE_USER_REQUESTED_TRACKING_PENDING_RECONCILIATION_AND_ADMISSION",
       "summary": "Revision 3: active explanation competition and qualified skill acquisition; four conditional owner amendments; broader capability-boundary work deferred.",
       "supersedes": "Earlier six-package conversational proposal; not TRACE.",
-      "work_package_id": "WP-COGNITIVE-V15-7-CANDIDATE"
+      "work_package_id": "WP-COGNITIVE-V15-7-CANDIDATE",
+      "disposition_record": "reviews/v15.7/qualification/OBLIGATION-REGISTER.json"
     },
     {
       "candidate_id": "CAND-COGNITIVE-CORE-001",
@@ -27,7 +29,8 @@
       "source": "design_deltas/v15.7/COGNITIVE-CORE-CANDIDATE.md",
       "status": "CANDIDATE_USER_REQUESTED_TRACKING_PENDING_RECONCILIATION",
       "summary": "Candidate A: seven existing cognitive qualification targets, baseline limitation propagation, per-function bindings and separate component/integrated admission.",
-      "work_package_id": "WP-COGNITIVE-QUALIFICATION-COMPARISON-V15-7"
+      "work_package_id": "WP-COGNITIVE-QUALIFICATION-COMPARISON-V15-7",
+      "disposition_record": "reviews/v15.7/qualification/OBLIGATION-REGISTER.json"
     },
     {
       "candidate_id": "CAND-COGNITIVE-COMPARE-001",
@@ -37,7 +40,8 @@
       "source": "design_deltas/v15.7/COGNITIVE-COMPARE-CANDIDATE.md",
       "status": "CANDIDATE_USER_REQUESTED_TRACKING_PENDING_RECONCILIATION",
       "summary": "Candidate B: ten bounded comparators, scope/type-constrained dispositions and accounted coverage report; no adequacy claim.",
-      "work_package_id": "WP-COGNITIVE-QUALIFICATION-COMPARISON-V15-7"
+      "work_package_id": "WP-COGNITIVE-QUALIFICATION-COMPARISON-V15-7",
+      "disposition_record": "reviews/v15.7/qualification/OBLIGATION-REGISTER.json"
     },
     {
       "candidate_id": "CAND-DESIGN-CLOSURE-001",
@@ -51,7 +55,8 @@
       "source": "design_deltas/v15.7/DESIGN-CLOSURE-CANDIDATE.md",
       "status": "CANDIDATE_USER_REQUESTED_TRACKING_PENDING_RECONCILIATION",
       "summary": "Revision 2 plus final clarifications: bounded mechanism/composition checks, requirement-level joined decisions, earned complexity, no-comparator distinction and independent progress.",
-      "work_package_id": "WP-DESIGN-CLOSURE-V15-7"
+      "work_package_id": "WP-DESIGN-CLOSURE-V15-7",
+      "disposition_record": "reviews/v15.7/qualification/OBLIGATION-REGISTER.json"
     },
     {
       "candidate_id": "CAND-EDCR-001",
@@ -60,9 +65,10 @@
       "source": "design_deltas/v15.7/EVENT-DRIVEN-CONTEXT-ROUTING-CANDIDATE.md",
       "amendment": "design_deltas/v15.7/EVENT-DRIVEN-CONTEXT-ROUTING-CORRECTION-2026-09-16.md",
       "implementation_profile": "governance/EVENT_DRIVEN_WORK_POLICY_v1.json",
-      "status": "CANDIDATE_USER_REQUESTED_IMPLEMENTATION_AND_QUALIFICATION_PENDING",
+      "status": "PARTIAL_REFERENCE_CORE_TESTED_CORRECTED_LANE_AND_LIVE_QUALIFICATION_PENDING",
       "summary": "Reuse completion-driven execution, AttestedObservation/Evidence and GSL-KR so unchanged context is reused, changed evidence is processed incrementally, and expensive/frontier reasoning happens only after materiality. The ChatGPT frontier role is external to OpenRouter; whole-source closure remains mandatory when compact context is insufficient.",
-      "work_package_id": "WP-EVENT-DRIVEN-CONTEXT-ROUTING-V15-7"
+      "work_package_id": "WP-EVENT-DRIVEN-CONTEXT-ROUTING-V15-7",
+      "disposition_record": "reviews/v15.7/qualification/OBLIGATION-REGISTER.json"
     }
   ],
   "canonical_promotion": "Separate governed act; registration grants no admission or execution authority.",
@@ -78,5 +84,7 @@
     "source_root_sha256": "d4f054f21247948426abbe4c842ac65f4daa83f521f73bc3ac57e2d5860bdf6b",
     "canonical": false
   },
-  "working_candidate": "canonical/candidates/v15.7/SOURCE_MANIFEST.json"
+  "working_candidate": "canonical/candidates/v15.7/SOURCE_MANIFEST.json",
+  "qualification_register": "reviews/v15.7/qualification/OBLIGATION-REGISTER.json",
+  "reference_implementation_status": "BOUNDED_REFERENCE_EVIDENCE_AVAILABLE_NOT_FULL_QUALIFICATION"
 }

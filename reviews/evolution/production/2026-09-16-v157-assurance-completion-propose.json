@@ -1,0 +1,41 @@
+{
+  "schema": "GardenEvolutionProductionAction/v1",
+  "design_epoch": "v15.5",
+  "dependencies": {
+    "canonical_source_root": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598"
+  },
+  "action": {
+    "action_id": "GARDEN-2026-09-16-V157-ASSURANCE-COMPLETION-PROPOSE-001",
+    "verb": "PROPOSE",
+    "actor_ref": "agent:garden-integrator-build",
+    "subject_ref": "repo:ankitdcx/garden-main",
+    "input_refs": [
+      "canonical/candidates/v15.7/SOURCE_MANIFEST.json",
+      "canonical/candidates/CURRENT_CANDIDATE.json",
+      "design_deltas/v15.7/BOUNDED-IMPLEMENTATION-CONTRACTS.md",
+      "reviews/v15.7/qualification/OBLIGATION-REGISTER.json",
+      "reviews/v15.7/RELEASE-STATUS.md",
+      "reviews/evolution/reasoning/2026-09-16-v157-assurance-completion-propose.json",
+      "reviews/evolution/algebra/2026-09-16-v157-assurance-completion-propose.json",
+      "reviews/evolution/assurance/2026-09-16-v157-assurance-completion-propose.json"
+    ],
+    "provenance_refs": [
+      "git:ankitdcx/garden-main@5caf3845c2c43e6a6fe91ced3b79760527d680d2",
+      "governance/GardenCanonicalUpdateProcess_v1.4.json"
+    ],
+    "satisfied_preconditions": [
+      "ACTOR_IDENTIFIED",
+      "SUBJECT_IDENTIFIED",
+      "PROVENANCE_PRESENT",
+      "INPUT_REFS_TYPED"
+    ],
+    "claimed_postconditions": [
+      "CANDIDATE_RECORDED",
+      "NO_AUTHORITY_EXPANSION",
+      "CANONICAL_POINTER_UNCHANGED"
+    ]
+  },
+  "authority_ref": "AUTH-GARDEN-HOURLY-REVIEWER-v15.5",
+  "bound_inputs": [],
+  "boundary": "PROPOSE bounded executable reference packages and revised five-file candidate. No live integration, merge admission or canonical promotion granted."
+}

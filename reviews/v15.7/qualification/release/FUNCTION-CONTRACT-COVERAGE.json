@@ -1,0 +1,27 @@
+{
+  "schema": "GardenFunctionContractCoverageReport/v1",
+  "registry_id": "GARDEN-V15.7-RELEASE-VERIFICATION-FUNCTION-CONTRACTS-v1",
+  "design_epoch": "v15.5",
+  "canonical_source_root_sha256": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+  "scoped_function_count": 1,
+  "declared_contract_count": 1,
+  "frontier_function_count": 0,
+  "declaration_coverage_ratio": 1.0,
+  "semantic_compliance_proved": false,
+  "functions": [
+    {
+      "identity": "implementation/garden_kernel/release_verification.py::verify_release",
+      "path": "implementation/garden_kernel/release_verification.py",
+      "function": "verify_release",
+      "signature": "(*, metadata_dir: <untyped>, metadata_url: <untyped>, fetcher: <untyped>, trusted_root: <untyped>, trusted_root_sha256: <untyped>, artifact_name: <untyped>, artifact_bytes: <untyped>, layout_path: <untyped>, layout_sha256: <untyped>, layout_keys: <untyped>, link_dir: <untyped>, expected_materials: <untyped>, expected_command: <untyped>) -> <untyped>",
+      "source_sha256": "690ed42b3a67d1703427b991b1283ac74a5bd0fef109bad10595eab51783694b",
+      "coverage_state": "DECLARED_REFERENCE",
+      "contract_id": "FC-V157-RELEASE-VERIFY-001",
+      "test_refs": [
+        "implementation/tests/test_release_verification.py",
+        "scripts/qualify_release_verification.py",
+        "reviews/v15.7/qualification/release/release-verification-receipt.json"
+      ]
+    }
+  ]
+}

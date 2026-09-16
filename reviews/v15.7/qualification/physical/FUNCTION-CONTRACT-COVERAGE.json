@@ -1,0 +1,155 @@
+{
+  "schema": "GardenFunctionContractCoverageReport/v1",
+  "registry_id": "GARDEN-V157-PHYSICAL-ASSURANCE-REFERENCE-v1",
+  "design_epoch": "v15.5",
+  "canonical_source_root_sha256": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+  "scoped_function_count": 13,
+  "declared_contract_count": 6,
+  "frontier_function_count": 7,
+  "declaration_coverage_ratio": 0.461538,
+  "semantic_compliance_proved": false,
+  "functions": [
+    {
+      "identity": "implementation/garden_kernel/physical_assurance.py::TankAssumptions.intervention_margin",
+      "path": "implementation/garden_kernel/physical_assurance.py",
+      "function": "TankAssumptions.intervention_margin",
+      "signature": "(self: <untyped>) -> float",
+      "source_sha256": "ba2129012be03e75bdd2a873d84639b8062dec6f125616368ec516be61b3029d",
+      "coverage_state": "FRONTIER",
+      "contract_id": null,
+      "test_refs": []
+    },
+    {
+      "identity": "implementation/garden_kernel/physical_assurance.py::TankAssumptions.lower_switch_threshold",
+      "path": "implementation/garden_kernel/physical_assurance.py",
+      "function": "TankAssumptions.lower_switch_threshold",
+      "signature": "(self: <untyped>) -> float",
+      "source_sha256": "ba2129012be03e75bdd2a873d84639b8062dec6f125616368ec516be61b3029d",
+      "coverage_state": "FRONTIER",
+      "contract_id": null,
+      "test_refs": []
+    },
+    {
+      "identity": "implementation/garden_kernel/physical_assurance.py::TankAssumptions.upper_switch_threshold",
+      "path": "implementation/garden_kernel/physical_assurance.py",
+      "function": "TankAssumptions.upper_switch_threshold",
+      "signature": "(self: <untyped>) -> float",
+      "source_sha256": "ba2129012be03e75bdd2a873d84639b8062dec6f125616368ec516be61b3029d",
+      "coverage_state": "FRONTIER",
+      "contract_id": null,
+      "test_refs": []
+    },
+    {
+      "identity": "implementation/garden_kernel/physical_assurance.py::TankAssumptions.worst_outward_speed",
+      "path": "implementation/garden_kernel/physical_assurance.py",
+      "function": "TankAssumptions.worst_outward_speed",
+      "signature": "(self: <untyped>) -> float",
+      "source_sha256": "ba2129012be03e75bdd2a873d84639b8062dec6f125616368ec516be61b3029d",
+      "coverage_state": "FRONTIER",
+      "contract_id": null,
+      "test_refs": []
+    },
+    {
+      "identity": "implementation/garden_kernel/physical_assurance.py::TankSimulation.actuator_command",
+      "path": "implementation/garden_kernel/physical_assurance.py",
+      "function": "TankSimulation.actuator_command",
+      "signature": "(self: <untyped>, controller: str, epoch: int, command: float) -> bool",
+      "source_sha256": "ba2129012be03e75bdd2a873d84639b8062dec6f125616368ec516be61b3029d",
+      "coverage_state": "DECLARED_REFERENCE",
+      "contract_id": "FC-PHYSICAL-ASSURANCE-ACTUATOR-FENCE-v1",
+      "test_refs": [
+        "implementation/tests/test_physical_assurance.py"
+      ]
+    },
+    {
+      "identity": "implementation/garden_kernel/physical_assurance.py::TankSimulation.receipt",
+      "path": "implementation/garden_kernel/physical_assurance.py",
+      "function": "TankSimulation.receipt",
+      "signature": "(self: <untyped>) -> dict[str, Any]",
+      "source_sha256": "ba2129012be03e75bdd2a873d84639b8062dec6f125616368ec516be61b3029d",
+      "coverage_state": "FRONTIER",
+      "contract_id": null,
+      "test_refs": []
+    },
+    {
+      "identity": "implementation/garden_kernel/physical_assurance.py::TankSimulation.request_primary_return",
+      "path": "implementation/garden_kernel/physical_assurance.py",
+      "function": "TankSimulation.request_primary_return",
+      "signature": "(self: <untyped>, *, revalidated: bool, fresh_authorization: bool, dwell_s: float) -> bool",
+      "source_sha256": "ba2129012be03e75bdd2a873d84639b8062dec6f125616368ec516be61b3029d",
+      "coverage_state": "DECLARED_REFERENCE",
+      "contract_id": "FC-PHYSICAL-ASSURANCE-PRIMARY-RETURN-v1",
+      "test_refs": [
+        "implementation/tests/test_physical_assurance.py"
+      ]
+    },
+    {
+      "identity": "implementation/garden_kernel/physical_assurance.py::TankSimulation.run",
+      "path": "implementation/garden_kernel/physical_assurance.py",
+      "function": "TankSimulation.run",
+      "signature": "(self: <untyped>, duration: float, *, inject_stale_primary: bool=<default>) -> dict[str, Any]",
+      "source_sha256": "ba2129012be03e75bdd2a873d84639b8062dec6f125616368ec516be61b3029d",
+      "coverage_state": "DECLARED_REFERENCE",
+      "contract_id": "FC-PHYSICAL-ASSURANCE-RUN-v1",
+      "test_refs": [
+        "implementation/tests/test_physical_assurance.py"
+      ]
+    },
+    {
+      "identity": "implementation/garden_kernel/physical_assurance.py::is_recoverable",
+      "path": "implementation/garden_kernel/physical_assurance.py",
+      "function": "is_recoverable",
+      "signature": "(estimate: float, remaining_delay: float, estimation_error: float, assumptions: TankAssumptions=<default>) -> bool",
+      "source_sha256": "ba2129012be03e75bdd2a873d84639b8062dec6f125616368ec516be61b3029d",
+      "coverage_state": "FRONTIER",
+      "contract_id": null,
+      "test_refs": []
+    },
+    {
+      "identity": "implementation/garden_kernel/physical_assurance.py::shared_actuator_decision",
+      "path": "implementation/garden_kernel/physical_assurance.py",
+      "function": "shared_actuator_decision",
+      "signature": "(agent_a: tuple[str, int, float], agent_b: tuple[str, int, float], *, actuator_limit: float=<default>, trusted_coordination: bool=<default>) -> dict[str, Any]",
+      "source_sha256": "ba2129012be03e75bdd2a873d84639b8062dec6f125616368ec516be61b3029d",
+      "coverage_state": "DECLARED_REFERENCE",
+      "contract_id": "FC-PHYSICAL-ASSURANCE-SHARED-ACTUATOR-v1",
+      "test_refs": [
+        "implementation/tests/test_physical_assurance.py"
+      ]
+    },
+    {
+      "identity": "implementation/garden_kernel/physical_assurance.py::signed_transfer",
+      "path": "implementation/garden_kernel/physical_assurance.py",
+      "function": "signed_transfer",
+      "signature": "(controller: str, epoch: int, level: float, observed_at: float, assumptions: TankAssumptions) -> Transfer",
+      "source_sha256": "ba2129012be03e75bdd2a873d84639b8062dec6f125616368ec516be61b3029d",
+      "coverage_state": "DECLARED_REFERENCE",
+      "contract_id": "FC-PHYSICAL-ASSURANCE-TRANSFER-v1",
+      "test_refs": [
+        "implementation/tests/test_physical_assurance.py"
+      ]
+    },
+    {
+      "identity": "implementation/garden_kernel/physical_assurance.py::takeover_recoverable_region",
+      "path": "implementation/garden_kernel/physical_assurance.py",
+      "function": "takeover_recoverable_region",
+      "signature": "(remaining_delay: float, estimation_error: float, assumptions: TankAssumptions=<default>) -> tuple[float, float] | None",
+      "source_sha256": "ba2129012be03e75bdd2a873d84639b8062dec6f125616368ec516be61b3029d",
+      "coverage_state": "FRONTIER",
+      "contract_id": null,
+      "test_refs": []
+    },
+    {
+      "identity": "implementation/garden_kernel/physical_assurance.py::transfer_is_authenticated",
+      "path": "implementation/garden_kernel/physical_assurance.py",
+      "function": "transfer_is_authenticated",
+      "signature": "(transfer: Transfer, assumptions: TankAssumptions) -> bool",
+      "source_sha256": "ba2129012be03e75bdd2a873d84639b8062dec6f125616368ec516be61b3029d",
+      "coverage_state": "DECLARED_REFERENCE",
+      "contract_id": "FC-PHYSICAL-ASSURANCE-TRANSFER-VERIFY-v1",
+      "test_refs": [
+        "implementation/tests/test_physical_assurance.py"
+      ]
+    }
+  ]
+}

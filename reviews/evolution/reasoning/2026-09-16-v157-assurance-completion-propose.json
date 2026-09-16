@@ -1,0 +1,134 @@
+{
+  "schema": "GardenEvolutionReasoningBundle/v1",
+  "bundle_id": "GARDEN-2026-09-16-V157-ASSURANCE-COMPLETION-PROPOSE-001-REASONING",
+  "action_id": "GARDEN-2026-09-16-V157-ASSURANCE-COMPLETION-PROPOSE-001",
+  "design_epoch": "v15.5",
+  "canonical_source_root_sha256": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+  "source_obligation_refs": [
+    "canonical/candidates/v15.7/SOURCE_MANIFEST.json",
+    "canonical/candidates/CURRENT_CANDIDATE.json",
+    "design_deltas/v15.7/BOUNDED-IMPLEMENTATION-CONTRACTS.md",
+    "reviews/v15.7/qualification/OBLIGATION-REGISTER.json",
+    "reviews/v15.7/RELEASE-STATUS.md"
+  ],
+  "compare": {
+    "schema": "GardenEvolutionCompareReceipt/v1",
+    "action_id": "GARDEN-2026-09-16-V157-ASSURANCE-COMPLETION-PROPOSE-001",
+    "design_epoch": "v15.5",
+    "canonical_source_root_sha256": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+    "predecessor_ref": "git:ankitdcx/garden-main@5caf3845c2c43e6a6fe91ced3b79760527d680d2",
+    "alternatives": [
+      {
+        "alternative_id": "DO_NOTHING",
+        "description": "Keep the previously published candidate and leave executable assurance work pending.",
+        "projected_effect": "No new evidence or EDCR integration.",
+        "risk": "Requirements remain untested."
+      },
+      {
+        "alternative_id": "PUBLISH_BOUNDED_CANDIDATE",
+        "description": "Publish scoped implementations, executed evidence, obligation accounting and all five revised documents.",
+        "projected_effect": "Selected boundaries become reproducibly testable; gaps remain explicit.",
+        "risk": "Reference results could be misread as production qualification."
+      }
+    ],
+    "bidirectional_gaps": [
+      {
+        "from": "DO_NOTHING",
+        "to": "PUBLISH_BOUNDED_CANDIDATE",
+        "gap": "No executable reference evidence or sixth-program integration."
+      },
+      {
+        "from": "PUBLISH_BOUNDED_CANDIDATE",
+        "to": "DO_NOTHING",
+        "gap": "Adds pinned dependencies and maintenance; requires protected merge admission."
+      }
+    ]
+  },
+  "reason": {
+    "schema": "GardenEvolutionReasonReceipt/v1",
+    "action_id": "GARDEN-2026-09-16-V157-ASSURANCE-COMPLETION-PROPOSE-001",
+    "design_epoch": "v15.5",
+    "canonical_source_root_sha256": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+    "strategy": "BOUNDED_CANDIDATE_PUBLICATION",
+    "tier": "V1_4_EXECUTION_FIRST_HIGH_DEPENDENCY",
+    "assumptions": [
+      "User requested completion of pending work and all five documents.",
+      "Canonical predecessor remains v15.5; candidate is v15.7.",
+      "Bounded reference evidence does not qualify external targets or a full cognitive system."
+    ],
+    "uncertainty": "Full semantic closure, effective independent-family qualification, production wiring and live comparative/provider evaluation remain incomplete.",
+    "counterexamples": [
+      "Lost acknowledgment cannot mean nonexecution.",
+      "Valid TUF and in-toto results with different artifact hashes cannot admit a release.",
+      "A model with disabled fencing must reveal a stale-worker counterexample."
+    ],
+    "dependency_refs": [
+      "canonical/candidates/v15.7/SOURCE_MANIFEST.json",
+      "canonical/candidates/CURRENT_CANDIDATE.json",
+      "design_deltas/v15.7/BOUNDED-IMPLEMENTATION-CONTRACTS.md",
+      "reviews/v15.7/qualification/OBLIGATION-REGISTER.json",
+      "reviews/v15.7/RELEASE-STATUS.md"
+    ],
+    "conclusion": "Publish tested reference mechanisms and exact remaining obligations under the existing admission boundary.",
+    "authorization_effect": "NONE"
+  },
+  "proof": {
+    "schema": "GardenEvolutionProofReceipt/v1",
+    "action_id": "GARDEN-2026-09-16-V157-ASSURANCE-COMPLETION-PROPOSE-001",
+    "design_epoch": "v15.5",
+    "canonical_source_root_sha256": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+    "obligations": [
+      {
+        "obligation_id": "PO-V157-COMPLETION-001",
+        "statement": "New mechanisms satisfy complete deployment assurance and semantic closure.",
+        "verifier_class": "COMPOSITE_QUALIFICATION",
+        "result": "UNKNOWN",
+        "evidence_refs": []
+      }
+    ],
+    "overall_result": "UNKNOWN",
+    "authorization_effect": "NONE"
+  },
+  "evidence": {
+    "schema": "GardenEvolutionEvidenceReceipt/v1",
+    "action_id": "GARDEN-2026-09-16-V157-ASSURANCE-COMPLETION-PROPOSE-001",
+    "design_epoch": "v15.5",
+    "canonical_source_root_sha256": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+    "items": [
+      {
+        "kind": "SOURCE_RECORD",
+        "ref": "canonical/candidates/v15.7/SOURCE_MANIFEST.json",
+        "claim_scope": "Candidate obligation or exact bounded reference evidence; no authority or complete qualification."
+      },
+      {
+        "kind": "SOURCE_RECORD",
+        "ref": "canonical/candidates/CURRENT_CANDIDATE.json",
+        "claim_scope": "Candidate obligation or exact bounded reference evidence; no authority or complete qualification."
+      },
+      {
+        "kind": "SOURCE_RECORD",
+        "ref": "design_deltas/v15.7/BOUNDED-IMPLEMENTATION-CONTRACTS.md",
+        "claim_scope": "Candidate obligation or exact bounded reference evidence; no authority or complete qualification."
+      },
+      {
+        "kind": "SOURCE_RECORD",
+        "ref": "reviews/v15.7/qualification/OBLIGATION-REGISTER.json",
+        "claim_scope": "Candidate obligation or exact bounded reference evidence; no authority or complete qualification."
+      },
+      {
+        "kind": "SOURCE_RECORD",
+        "ref": "reviews/v15.7/RELEASE-STATUS.md",
+        "claim_scope": "Candidate obligation or exact bounded reference evidence; no authority or complete qualification."
+      }
+    ],
+    "proof_effect": "NONE",
+    "authorization_effect": "NONE"
+  },
+  "separation_assertions": {
+    "compare_is_not_decision": true,
+    "reason_is_not_authorization": true,
+    "evidence_is_not_proof": true,
+    "proof_is_not_authorization": true,
+    "actiongate_owns_authorization": true
+  }
+}

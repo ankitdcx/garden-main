@@ -1,0 +1,54 @@
+{
+  "schema": "GardenEvolutionAAPSelectionReceipt/v1",
+  "action_id": "GARDEN-2026-09-16-V157-ASSURANCE-COMPLETION-PROPOSE-001",
+  "design_epoch": "v15.5",
+  "canonical_source_root_sha256": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+  "source_obligation_refs": [
+    "canonical/candidates/v15.7/SOURCE_MANIFEST.json",
+    "canonical/candidates/CURRENT_CANDIDATE.json",
+    "design_deltas/v15.7/BOUNDED-IMPLEMENTATION-CONTRACTS.md",
+    "reviews/v15.7/qualification/OBLIGATION-REGISTER.json",
+    "reviews/v15.7/RELEASE-STATUS.md"
+  ],
+  "impact": {
+    "consequence": "HIGH",
+    "irreversibility": "LOW",
+    "authority": "LOW",
+    "novelty": "MEDIUM",
+    "uncertainty": "HIGH",
+    "sensitivity": "MEDIUM",
+    "dependency_impact": "HIGH",
+    "disagreement": "LOW",
+    "hard_policy": false,
+    "constitutional": false,
+    "physical_safety": false
+  },
+  "selected": {
+    "reason_tier": "R3",
+    "verity_tier": "V3",
+    "safety_tier": "S2",
+    "modules": [
+      "SOURCE_IDENTITY",
+      "GSL_TYPING",
+      "DESIGN_EPOCH",
+      "SOURCE_OBLIGATION",
+      "COMPARE",
+      "REASON",
+      "PROOF",
+      "EVIDENCE",
+      "AAP",
+      "AUTHORITY",
+      "ACTION_GATE",
+      "PROCESS_ALGEBRA",
+      "CONFORMANCE_ALGEBRA",
+      "INDEPENDENT_REVIEW_REQUIREMENT"
+    ]
+  },
+  "resource_budget": {
+    "status": "SUFFICIENT",
+    "basis": "Bounded reference code, finite model, signed fixtures and simulated plant; no deployment or physical effect. Qualification gaps remain visible."
+  },
+  "degradation_disposition": "NONE",
+  "authorization_effect": "NONE",
+  "semantic_compliance_proved": false
+}

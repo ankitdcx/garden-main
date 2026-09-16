@@ -1,0 +1,25 @@
+{
+  "schema": "GardenReuseRecord/v1",
+  "scope": "Standard-library references used by the bounded physical simulation only",
+  "implementation": "CPython 3.12.14",
+  "implementation_source": "https://github.com/python/cpython/tree/v3.12.14",
+  "license": {
+    "identifier": "Python-2.0",
+    "name": "Python Software Foundation License Version 2",
+    "text_source": "https://docs.python.org/3/license.html"
+  },
+  "components": [
+    {"module": "dataclasses", "purpose": "immutable configuration and receipt projection"},
+    {"module": "hashlib", "purpose": "artifact hashing and SHA-256 primitive selection"},
+    {"module": "hmac", "purpose": "HMAC-SHA-256 simulation transfer authentication and compare_digest"},
+    {"module": "math", "purpose": "finite-number validation"},
+    {"module": "json", "purpose": "qualification receipt serialization"},
+    {"module": "pathlib", "purpose": "runner path handling"},
+    {"module": "platform", "purpose": "receipt runtime provenance"},
+    {"module": "sys", "purpose": "runner module path setup"},
+    {"module": "typing", "purpose": "type annotations"},
+    {"module": "unittest", "purpose": "test execution"}
+  ],
+  "provenance": "No third-party package, external model, data set, hardware interface, controller firmware, or physical artifact is reused by this assigned implementation.",
+  "patent_assessment": "UNKNOWN; no patent-clearance or ownership claim is made."
+}

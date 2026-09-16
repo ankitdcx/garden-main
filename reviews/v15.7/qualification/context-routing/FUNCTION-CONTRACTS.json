@@ -1,0 +1,390 @@
+{
+  "schema": "GardenFunctionContractRegistry/v1",
+  "registry_id": "GARDEN-EDCR-BOUNDED-DECLARATIONS-v1",
+  "design_epoch": "v15.5",
+  "canonical_source_root_sha256": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+  "scope_globs": [
+    "implementation/garden_kernel/context_routing.py"
+  ],
+  "semantic_compliance_proved": false,
+  "status": "DECLARATION_ONLY_NOT_MACHINE_ADMISSION",
+  "source_schema_reference": "FunctionContract SCHEMA-AF063594FE",
+  "source_delta_references": [
+    "CAND-EDCR-001"
+  ],
+  "contracts": [
+    {
+      "contract_id": "QEDCR-FC-NORMALIZE",
+      "version": "1.0.0",
+      "function": "normalize",
+      "path": "implementation/garden_kernel/context_routing.py",
+      "source_sha256": "80bb2a1baf029b688d496a2778f2d6876c93ca7e3a59ffb5ab9e3ebc198b46fa",
+      "owner": "Capability.Knowledge",
+      "owner_anchor": "[T-KNOWLEDGE]",
+      "source_schema_reference": "FunctionContract SCHEMA-AF063594FE",
+      "public_consequential_boundary": "normalize",
+      "preconditions": [
+        "Closed observation fields; bounded canonical strings/lists; valid UTC intervals; source refs with known hash or explicit None"
+      ],
+      "postconditions": [
+        "Deterministic source-sensitive fingerprint excludes only receipt ID/time",
+        "Observation remains unverified; model provenance retained"
+      ],
+      "affects": [
+        "CONTEXT",
+        "AUDIT",
+        "REVIEW_ADMISSION"
+      ],
+      "input_semantics": "Closed observation fields; bounded canonical strings/lists; valid UTC intervals; source refs with known hash or explicit None",
+      "output_semantics": "Deterministic source-sensitive fingerprint excludes only receipt ID/time; Observation remains unverified; model provenance retained",
+      "proof_obligations": [
+        "context-is-not-authority",
+        "source-provenance-preserved",
+        "unknowns-not-promoted",
+        "declared-resource-bounds"
+      ],
+      "failures": [
+        "SemanticError for malformed fields, oversized input or invalid interval"
+      ],
+      "error_semantics": "SemanticError for malformed fields, oversized input or invalid interval",
+      "unknown_semantics": "Unknown cost blocks queueing; unknown external charge is retained by CompletionStore; source/hash uncertainty and historical observations remain explicit; no unknown becomes truth or authority.",
+      "effect_semantics": "No persistent mutation; no network",
+      "resources_and_termination": {
+        "observation_input_max_chars": 32000,
+        "summary_max_chars": 4096,
+        "source_ref_max_count": 16,
+        "list_max_count": 64,
+        "default_ledger_observations": 2048,
+        "default_packet_observations": 32,
+        "default_packet_chars": 16000,
+        "question_max_chars": 2000,
+        "algorithm": "Finite bounded ledger scan and fixed-point relation closure; SQLite timeout inherited from CompletionStore; no external retries here."
+      },
+      "dependencies": [
+        "CompletionStore.transaction/event/enqueue/claim/finish",
+        "completion_runner.digest/encoded validation helpers",
+        "SemanticError",
+        "SQLite",
+        "versioned RoutingPolicy"
+      ],
+      "invalidators": [
+        "implementation or contract body change",
+        "policy version/threshold/budget change",
+        "source observation/freshness/contradiction/supersession change",
+        "cycle/packet/token/lease drift",
+        "authority/public-processing envelope change"
+      ],
+      "authority_and_consent": "Public review envelope required; no grants created; existing process/ActionGate/provider guards remain controlling.",
+      "provenance": "Source file SHA-256, candidate ID, owner anchor, observation source/model ancestry, routing receipt and packet hash; external results must carry actual provider response identity.",
+      "test_refs": [
+        "implementation/tests/test_context_routing.py"
+      ],
+      "test_cases": [
+        "ContextRoutingTests.test_input_rebinding_and_unknown_trigger_rejected",
+        "ContextRoutingTests.test_identical_prose_changed_source_hash_reevaluates"
+      ],
+      "body_hash_algorithm": "sha256(canonical-json(contract excluding body_sha256))",
+      "body_sha256": "46bca702999c6dcdaf01f5f3a51d869db1a42c6c2c13d890c7853944a72e518d"
+    },
+    {
+      "contract_id": "QEDCR-FC-INGEST",
+      "version": "1.0.0",
+      "function": "ContextRouter.ingest",
+      "path": "implementation/garden_kernel/context_routing.py",
+      "source_sha256": "80bb2a1baf029b688d496a2778f2d6876c93ca7e3a59ffb5ab9e3ebc198b46fa",
+      "owner": "Capability.Knowledge",
+      "owner_anchor": "[T-KNOWLEDGE]",
+      "source_schema_reference": "FunctionContract SCHEMA-AF063594FE",
+      "public_consequential_boundary": "ContextRouter.ingest",
+      "preconditions": [
+        "Trusted ingress classification/provenance; normalize succeeds; shared CompletionStore available"
+      ],
+      "postconditions": [
+        "Atomic immutable record plus source-sensitive aliases; replay deduplicated",
+        "Rebound observation IDs rejected; index capacity bounded"
+      ],
+      "affects": [
+        "CONTEXT",
+        "AUDIT",
+        "REVIEW_ADMISSION"
+      ],
+      "input_semantics": "Trusted ingress classification/provenance; normalize succeeds; shared CompletionStore available",
+      "output_semantics": "Atomic immutable record plus source-sensitive aliases; replay deduplicated; Rebound observation IDs rejected; index capacity bounded",
+      "proof_obligations": [
+        "context-is-not-authority",
+        "source-provenance-preserved",
+        "unknowns-not-promoted",
+        "declared-resource-bounds"
+      ],
+      "failures": [
+        "SemanticError on rebound ID or full bounded index",
+        "SQLite transaction failure rolls back mutation"
+      ],
+      "error_semantics": "SemanticError on rebound ID or full bounded index; SQLite transaction failure rolls back mutation",
+      "unknown_semantics": "Unknown cost blocks queueing; unknown external charge is retained by CompletionStore; source/hash uncertainty and historical observations remain explicit; no unknown becomes truth or authority.",
+      "effect_semantics": "Writes bounded context index and audit event; never deletes external evidence",
+      "resources_and_termination": {
+        "observation_input_max_chars": 32000,
+        "summary_max_chars": 4096,
+        "source_ref_max_count": 16,
+        "list_max_count": 64,
+        "default_ledger_observations": 2048,
+        "default_packet_observations": 32,
+        "default_packet_chars": 16000,
+        "question_max_chars": 2000,
+        "algorithm": "Finite bounded ledger scan and fixed-point relation closure; SQLite timeout inherited from CompletionStore; no external retries here."
+      },
+      "dependencies": [
+        "CompletionStore.transaction/event/enqueue/claim/finish",
+        "completion_runner.digest/encoded validation helpers",
+        "SemanticError",
+        "SQLite",
+        "versioned RoutingPolicy"
+      ],
+      "invalidators": [
+        "implementation or contract body change",
+        "policy version/threshold/budget change",
+        "source observation/freshness/contradiction/supersession change",
+        "cycle/packet/token/lease drift",
+        "authority/public-processing envelope change"
+      ],
+      "authority_and_consent": "Public review envelope required; no grants created; existing process/ActionGate/provider guards remain controlling.",
+      "provenance": "Source file SHA-256, candidate ID, owner anchor, observation source/model ancestry, routing receipt and packet hash; external results must carry actual provider response identity.",
+      "test_refs": [
+        "implementation/tests/test_context_routing.py"
+      ],
+      "test_cases": [
+        "ContextRoutingTests.test_duplicate_does_not_expand_or_add_task_even_after_restart"
+      ],
+      "body_hash_algorithm": "sha256(canonical-json(contract excluding body_sha256))",
+      "body_sha256": "5f917b5f80d9e6511b33e93162393d7c47b98318252cbb7c537cd9496b855122"
+    },
+    {
+      "contract_id": "QEDCR-FC-ROUTE",
+      "version": "1.0.0",
+      "function": "ContextRouter.route",
+      "path": "implementation/garden_kernel/context_routing.py",
+      "source_sha256": "80bb2a1baf029b688d496a2778f2d6876c93ca7e3a59ffb5ab9e3ebc198b46fa",
+      "owner": "Capability.Compute.Execution",
+      "owner_anchor": "[T-PROCESS]",
+      "source_schema_reference": "FunctionContract SCHEMA-AF063594FE",
+      "public_consequential_boundary": "ContextRouter.route",
+      "preconditions": [
+        "Bounded question and current cycle; explicit policy; declared trusted cost upper bound for queued external review"
+      ],
+      "postconditions": [
+        "Reason-coded materiality; NOT_MATERIAL produces no task",
+        "Required contradictory/provenance data retained or packet blocked; all original relation IDs resolve through hash-bound alias mapping or remain explicitly unknown",
+        "Deterministic task identity and packet hash; no process advancement"
+      ],
+      "affects": [
+        "CONTEXT",
+        "AUDIT",
+        "REVIEW_ADMISSION"
+      ],
+      "input_semantics": "Bounded question and current cycle; explicit policy; declared trusted cost upper bound for queued external review",
+      "output_semantics": "Reason-coded materiality; NOT_MATERIAL produces no task; Required contradictory/provenance data retained or packet blocked; all original relation IDs resolve through hash-bound alias mapping or remain explicitly unknown; Deterministic task identity and packet hash; no process advancement",
+      "proof_obligations": [
+        "context-is-not-authority",
+        "source-provenance-preserved",
+        "unknowns-not-promoted",
+        "declared-resource-bounds"
+      ],
+      "failures": [
+        "BLOCKED for missing contradictions, envelope restriction, packet bounds or unknown/excessive cost",
+        "SemanticError or SQLite error for malformed input/persistence failure"
+      ],
+      "error_semantics": "BLOCKED for missing contradictions, envelope restriction, packet bounds or unknown/excessive cost; SemanticError or SQLite error for malformed input/persistence failure",
+      "unknown_semantics": "Unknown cost blocks queueing; unknown external charge is retained by CompletionStore; source/hash uncertainty and historical observations remain explicit; no unknown becomes truth or authority.",
+      "effect_semantics": "Writes routing/audit record and optionally idempotent external-review task; does not call provider",
+      "resources_and_termination": {
+        "observation_input_max_chars": 32000,
+        "summary_max_chars": 4096,
+        "source_ref_max_count": 16,
+        "list_max_count": 64,
+        "default_ledger_observations": 2048,
+        "default_packet_observations": 32,
+        "default_packet_chars": 16000,
+        "question_max_chars": 2000,
+        "algorithm": "Finite bounded ledger scan and fixed-point relation closure; SQLite timeout inherited from CompletionStore; no external retries here."
+      },
+      "dependencies": [
+        "CompletionStore.transaction/event/enqueue/claim/finish",
+        "completion_runner.digest/encoded validation helpers",
+        "SemanticError",
+        "SQLite",
+        "versioned RoutingPolicy"
+      ],
+      "invalidators": [
+        "implementation or contract body change",
+        "policy version/threshold/budget change",
+        "source observation/freshness/contradiction/supersession change",
+        "cycle/packet/token/lease drift",
+        "authority/public-processing envelope change"
+      ],
+      "authority_and_consent": "Public review envelope required; no grants created; existing process/ActionGate/provider guards remain controlling.",
+      "provenance": "Source file SHA-256, candidate ID, owner anchor, observation source/model ancestry, routing receipt and packet hash; external results must carry actual provider response identity.",
+      "test_refs": [
+        "implementation/tests/test_context_routing.py"
+      ],
+      "test_cases": [
+        "ContextRoutingTests.test_no_change_and_clock_passage_do_not_spend",
+        "ContextRoutingTests.test_unknown_and_per_call_cost_bounds_block",
+        "ContextRoutingTests.test_oversized_contradiction_packet_blocks_not_silent_drop",
+        "ContextRoutingTests.test_daily_cap_applies_at_shared_executor",
+        "ContextRoutingTests.test_duplicate_alias_contradiction_resolves_both_sides",
+        "ContextRoutingTests.test_duplicate_alias_supersession_and_parent_resolve"
+      ],
+      "body_hash_algorithm": "sha256(canonical-json(contract excluding body_sha256))",
+      "body_sha256": "5d56bdb1d60648957361de1d41afb26284170da6a3c0e353b1429b0484f2684f"
+    },
+    {
+      "contract_id": "QEDCR-FC-VALIDATE",
+      "version": "1.0.0",
+      "function": "ContextRouter.validate_claim",
+      "path": "implementation/garden_kernel/context_routing.py",
+      "source_sha256": "80bb2a1baf029b688d496a2778f2d6876c93ca7e3a59ffb5ab9e3ebc198b46fa",
+      "owner": "Capability.Compute.Execution",
+      "owner_anchor": "[T-FUNCTION-CONTRACT]",
+      "source_schema_reference": "FunctionContract SCHEMA-AF063594FE",
+      "public_consequential_boundary": "ContextRouter.validate_claim",
+      "preconditions": [
+        "Claim matches persisted RUNNING token, lease and specification; trusted current clock; actual public adapter calls immediately before dispatch"
+      ],
+      "postconditions": [
+        "Reject drift in current context, expiry, policy or packet hash",
+        "Return detached bounded packet only for matching materiality receipt"
+      ],
+      "affects": [
+        "CONTEXT",
+        "AUDIT",
+        "REVIEW_ADMISSION"
+      ],
+      "input_semantics": "Claim matches persisted RUNNING token, lease and specification; trusted current clock; actual public adapter calls immediately before dispatch",
+      "output_semantics": "Reject drift in current context, expiry, policy or packet hash; Return detached bounded packet only for matching materiality receipt",
+      "proof_obligations": [
+        "context-is-not-authority",
+        "source-provenance-preserved",
+        "unknowns-not-promoted",
+        "declared-resource-bounds"
+      ],
+      "failures": [
+        "SemanticError on unclaimed/stale token, context drift or hash/spec mismatch"
+      ],
+      "error_semantics": "SemanticError on unclaimed/stale token, context drift or hash/spec mismatch",
+      "unknown_semantics": "Unknown cost blocks queueing; unknown external charge is retained by CompletionStore; source/hash uncertainty and historical observations remain explicit; no unknown becomes truth or authority.",
+      "effect_semantics": "Read-only validation; grants no authority and performs no network effect",
+      "resources_and_termination": {
+        "observation_input_max_chars": 32000,
+        "summary_max_chars": 4096,
+        "source_ref_max_count": 16,
+        "list_max_count": 64,
+        "default_ledger_observations": 2048,
+        "default_packet_observations": 32,
+        "default_packet_chars": 16000,
+        "question_max_chars": 2000,
+        "algorithm": "Finite bounded ledger scan and fixed-point relation closure; SQLite timeout inherited from CompletionStore; no external retries here."
+      },
+      "dependencies": [
+        "CompletionStore.transaction/event/enqueue/claim/finish",
+        "completion_runner.digest/encoded validation helpers",
+        "SemanticError",
+        "SQLite",
+        "versioned RoutingPolicy"
+      ],
+      "invalidators": [
+        "implementation or contract body change",
+        "policy version/threshold/budget change",
+        "source observation/freshness/contradiction/supersession change",
+        "cycle/packet/token/lease drift",
+        "authority/public-processing envelope change"
+      ],
+      "authority_and_consent": "Public review envelope required; no grants created; existing process/ActionGate/provider guards remain controlling.",
+      "provenance": "Source file SHA-256, candidate ID, owner anchor, observation source/model ancestry, routing receipt and packet hash; external results must carry actual provider response identity.",
+      "test_refs": [
+        "implementation/tests/test_context_routing.py"
+      ],
+      "test_cases": [
+        "ContextRoutingTests.test_dispatch_rechecks_expiry_and_new_evidence",
+        "ContextRoutingTests.test_resolved_parent_alias_invalidates_queued_packet"
+      ],
+      "body_hash_algorithm": "sha256(canonical-json(contract excluding body_sha256))",
+      "body_sha256": "65a77659609ef1e00abec907f25564f0a8eebf9e00c67559450b9b8c1a379865"
+    },
+    {
+      "contract_id": "QEDCR-FC-MODEL-OUTPUT",
+      "version": "1.0.0",
+      "function": "ContextRouter.model_output_observation",
+      "path": "implementation/garden_kernel/context_routing.py",
+      "source_sha256": "80bb2a1baf029b688d496a2778f2d6876c93ca7e3a59ffb5ab9e3ebc198b46fa",
+      "owner": "Capability.Knowledge",
+      "owner_anchor": "[T-KNOWLEDGE]",
+      "source_schema_reference": "FunctionContract SCHEMA-AF063594FE",
+      "public_consequential_boundary": "ContextRouter.model_output_observation",
+      "preconditions": [
+        "Bounded provider text; model identity and response reference supplied"
+      ],
+      "postconditions": [
+        "Output always UNVERIFIED_MODEL_PROPOSAL with authority NONE and canonical_admission false"
+      ],
+      "affects": [
+        "CONTEXT",
+        "AUDIT",
+        "REVIEW_ADMISSION"
+      ],
+      "input_semantics": "Bounded provider text; model identity and response reference supplied",
+      "output_semantics": "Output always UNVERIFIED_MODEL_PROPOSAL with authority NONE and canonical_admission false",
+      "proof_obligations": [
+        "context-is-not-authority",
+        "source-provenance-preserved",
+        "unknowns-not-promoted",
+        "declared-resource-bounds"
+      ],
+      "failures": [
+        "SemanticError for malformed or oversized output"
+      ],
+      "error_semantics": "SemanticError for malformed or oversized output",
+      "unknown_semantics": "Unknown cost blocks queueing; unknown external charge is retained by CompletionStore; source/hash uncertainty and historical observations remain explicit; no unknown becomes truth or authority.",
+      "effect_semantics": "Returns attributed proposal record only; no storage, admission or network",
+      "resources_and_termination": {
+        "observation_input_max_chars": 32000,
+        "summary_max_chars": 4096,
+        "source_ref_max_count": 16,
+        "list_max_count": 64,
+        "default_ledger_observations": 2048,
+        "default_packet_observations": 32,
+        "default_packet_chars": 16000,
+        "question_max_chars": 2000,
+        "algorithm": "Finite bounded ledger scan and fixed-point relation closure; SQLite timeout inherited from CompletionStore; no external retries here."
+      },
+      "dependencies": [
+        "CompletionStore.transaction/event/enqueue/claim/finish",
+        "completion_runner.digest/encoded validation helpers",
+        "SemanticError",
+        "SQLite",
+        "versioned RoutingPolicy"
+      ],
+      "invalidators": [
+        "implementation or contract body change",
+        "policy version/threshold/budget change",
+        "source observation/freshness/contradiction/supersession change",
+        "cycle/packet/token/lease drift",
+        "authority/public-processing envelope change"
+      ],
+      "authority_and_consent": "Public review envelope required; no grants created; existing process/ActionGate/provider guards remain controlling.",
+      "provenance": "Source file SHA-256, candidate ID, owner anchor, observation source/model ancestry, routing receipt and packet hash; external results must carry actual provider response identity.",
+      "test_refs": [
+        "implementation/tests/test_context_routing.py"
+      ],
+      "test_cases": [
+        "ContextRoutingTests.test_provider_authority_claim_remains_unverified_proposal"
+      ],
+      "body_hash_algorithm": "sha256(canonical-json(contract excluding body_sha256))",
+      "body_sha256": "66e66106719c26b8c0241c4dabf9e9714eabd7ed1ef78823bcaf7f3986d5c6cc"
+    }
+  ],
+  "limitations": [
+    "These local declarations do not allocate canonical machine FunctionContract identities or confer execution authority.",
+    "No external provider adapter or production trust-boundary qualification is established."
+  ]
+}

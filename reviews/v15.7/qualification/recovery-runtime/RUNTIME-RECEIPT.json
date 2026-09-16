@@ -1,0 +1,67 @@
+{
+  "schema": "GardenPermissionRecoveryRuntimeQualification/v1",
+  "result": "PASS",
+  "claim_boundary": "Single SQLite durability and atomic coordinator/reference-target transaction only; no distributed target, network partition, hardware, or exactly-once guarantee claimed.",
+  "tla_trace_mapping": {
+    "Claim": "claim",
+    "Admit": "admit",
+    "Revoke": "revoke",
+    "Dispatch": "dispatch",
+    "Ack": "acknowledge",
+    "LostAck": "dispatch(lose_ack=True)",
+    "Crash": "crash",
+    "Reconcile": "reconcile",
+    "LateDispatch": "stale attempt dispatch at target fence"
+  },
+  "formal_runtime_alignment": "Both the finite TLA model and runtime reference advance the per-effect target fence when a newer claim epoch is durably issued. Both reject an older worker immediately after issuance, before any newer dispatch. This is a bounded behavioral comparison, not an unbounded refinement proof.",
+  "source_sha256": {
+    "implementation/garden_kernel/permission_recovery.py": "22d145602f34acf81267686be7d732ac499aafb01087193e793253732ed42ff4",
+    "implementation/tests/test_permission_recovery.py": "f3b8ea83c3a6a8bf6e20a51d959b70746757e9e727eb88b8af08980906e15e86",
+    "reviews/v15.7/qualification/recovery-runtime/FUNCTION-CONTRACTS.json": "dd2aaa57a061077964bea5aa0911b6ee86942a33043e4697483947a73b15c48d"
+  },
+  "tests": {
+    "command": [
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+      "-m",
+      "unittest",
+      "implementation.tests.test_permission_recovery",
+      "-v"
+    ],
+    "exit_code": 0,
+    "output_sha256": "c36edfd0edd7111d1003ad2d68b78d964c3b8660cc760a1888026fca3941e561",
+    "output_tail": [
+      "test_boolean_controls_are_strict_and_state_unchanged (implementation.tests.test_permission_recovery.PermissionRecoveryTests.test_boolean_controls_are_strict_and_state_unchanged) ... ok",
+      "test_claim_task_field_cannot_be_rebound (implementation.tests.test_permission_recovery.PermissionRecoveryTests.test_claim_task_field_cannot_be_rebound) ... ok",
+      "test_crash_before_dispatch_requires_authoritative_nonexecution (implementation.tests.test_permission_recovery.PermissionRecoveryTests.test_crash_before_dispatch_requires_authoritative_nonexecution) ... ok",
+      "test_dispatch_ack_commit (implementation.tests.test_permission_recovery.PermissionRecoveryTests.test_dispatch_ack_commit) ... ok",
+      "test_duplicate_effect_different_task_is_typed (implementation.tests.test_permission_recovery.PermissionRecoveryTests.test_duplicate_effect_different_task_is_typed) ... ok",
+      "test_effect_identity_is_idempotent (implementation.tests.test_permission_recovery.PermissionRecoveryTests.test_effect_identity_is_idempotent) ... ok",
+      "test_fixture_permission_can_start_denied (implementation.tests.test_permission_recovery.PermissionRecoveryTests.test_fixture_permission_can_start_denied) ... ok",
+      "test_identity_rebinding_rejected (implementation.tests.test_permission_recovery.PermissionRecoveryTests.test_identity_rebinding_rejected) ... ok",
+      "test_lost_ack_is_unknown_then_reconciled (implementation.tests.test_permission_recovery.PermissionRecoveryTests.test_lost_ack_is_unknown_then_reconciled) ... ok",
+      "test_restart_preserves_unknown_and_fence (implementation.tests.test_permission_recovery.PermissionRecoveryTests.test_restart_preserves_unknown_and_fence) ... ok",
+      "test_revoke_after_commit_does_not_erase_effect (implementation.tests.test_permission_recovery.PermissionRecoveryTests.test_revoke_after_commit_does_not_erase_effect) ... ok",
+      "test_revoke_before_commit_blocks (implementation.tests.test_permission_recovery.PermissionRecoveryTests.test_revoke_before_commit_blocks) ... ok",
+      "test_stale_concurrent_worker_rejected (implementation.tests.test_permission_recovery.PermissionRecoveryTests.test_stale_concurrent_worker_rejected) ... ok",
+      "test_two_connections_issue_unique_ordered_epochs (implementation.tests.test_permission_recovery.PermissionRecoveryTests.test_two_connections_issue_unique_ordered_epochs) ... ok",
+      "test_uncertain_never_dispatches_without_reconciliation (implementation.tests.test_permission_recovery.PermissionRecoveryTests.test_uncertain_never_dispatches_without_reconciliation) ... ok",
+      "test_worker_identity_is_enforced (implementation.tests.test_permission_recovery.PermissionRecoveryTests.test_worker_identity_is_enforced) ... ok",
+      "",
+      "----------------------------------------------------------------------",
+      "Ran 16 tests in 0.031s",
+      "",
+      "OK"
+    ]
+  },
+  "qualified_semantics": [
+    "fresh permission recheck at commit boundary",
+    "monotonic persistent fencing epoch",
+    "effect identity idempotency",
+    "dispatch distinct from acknowledgement",
+    "lost acknowledgement remains uncertain",
+    "revoke before commit blocks",
+    "revoke after commit preserves effect",
+    "stale worker rejection",
+    "crash/restart reconciliation"
+  ]
+}

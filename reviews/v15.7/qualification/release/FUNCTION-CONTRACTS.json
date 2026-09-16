@@ -1,0 +1,63 @@
+{
+  "schema": "GardenFunctionContractRegistry/v1",
+  "registry_id": "GARDEN-V15.7-RELEASE-VERIFICATION-FUNCTION-CONTRACTS-v1",
+  "design_epoch": "v15.5",
+  "canonical_source_root_sha256": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+  "candidate_scope": {
+    "release": "Garden v15.7 working candidate",
+    "accepted_design_epoch": false,
+    "purpose": "Bounded declaration/qualification evidence only; does not assert a v15.7 canonical DesignEpoch or admission."
+  },
+  "scope_globs": [
+    "implementation/garden_kernel/release_verification.py"
+  ],
+  "semantic_compliance_proved": false,
+  "contracts": [
+    {
+      "contract_id": "FC-V157-RELEASE-VERIFY-001",
+      "contract_version": 1,
+      "path": "implementation/garden_kernel/release_verification.py",
+      "source_sha256": "690ed42b3a67d1703427b991b1283ac74a5bd0fef109bad10595eab51783694b",
+      "function": "verify_release",
+      "owners": [
+        "Capability.Trust.Security",
+        "Engine.Evolve"
+      ],
+      "affects": [
+        "RELEASE_VERIFICATION",
+        "SUPPLY_CHAIN_EVIDENCE",
+        "ADMISSION_INPUT"
+      ],
+      "authority_semantics": "Produces bounded release-verification evidence only. It cannot authorize canonical promotion, reset a compromised trust root, mint signing authority, or replace the existing release/admission owner.",
+      "input_semantics": "Caller supplies an authenticated pinned TUF bootstrap root and identity, persistent repository cache, metadata fetcher, immutable artifact bytes/name, hash-bound signed in-toto layout and verification keys, snapshotted link directory, expected source materials, and exact expected build command.",
+      "output_semantics": "Returns one GardenReleaseVerificationReceipt/v1 whose overall state is VERIFIED only when TUF, in-toto, and identical artifact identity checks are all VALID; binds bootstrap-root hash plus active trusted-root version/hash read from the caller-owned persistent cache after refresh; promotion_authorized is always false.",
+      "precondition_semantics": "Required upstream libraries are installed; artifact_bytes and trusted_root are bytes; paths, fetcher, keys, expected materials and command have the documented upstream-compatible and JSON-serializable shapes; trusted-root bytes match their declared SHA-256; the caller preserves the repository-specific persistent metadata cache; layout policy bytes match their declared SHA-256.",
+      "postcondition_semantics": "Every check has a visible typed status; observed trust/policy/source/artifact identities and tool versions are recorded; no input artifact or canonical state is mutated.",
+      "error_semantics": "Within the declared callable preconditions, TUF or in-toto verification failures—including missing policy/link files, expired or insufficiently signed metadata, rollback, unauthorized builder, mismatched materials/commands and substituted content—produce BLOCKED with INVALID or INCOMPLETE per-check evidence. Violations of the Python/API shape preconditions or absent upstream packages may raise before a receipt exists; they cannot yield VERIFIED and must be handled by the caller as invocation failure.",
+      "unknown_semantics": "Timeout becomes INCOMPLETE. Missing/unresolvable trust, metadata, policy, link, material, command, or artifact identity never becomes VALID. Total root compromise is not automatically recoverable.",
+      "effect_semantics": "Reads supplied artifact/policy inputs, snapshots layout and links into a temporary verification directory, and lets upstream TUF update the caller-owned persistent metadata cache. It performs no release publication, deployment, canonical pointer change, network action beyond the supplied fetcher, or promotion.",
+      "dependency_semantics": "Runtime behavior is bound to requirements/assurance.txt and the exact installed tuf, in-toto, and securesystemslib versions recorded by the qualification receipt and reuse manifest.",
+      "resource_bounds": {
+        "termination": "Bounded by supplied fetcher behavior, upstream verification termination, finite metadata/layout/link inputs, and caller execution limits; fetch timeout is represented as INCOMPLETE.",
+        "disk": "Persistent TUF cache plus one temporary copy of the signed layout and discovered link files.",
+        "memory": "Artifact bytes, trust metadata, policy keys, and one in-memory snapshot of layout/link bytes; caller must impose environment-appropriate size limits before production use.",
+        "network": "Only through the caller-supplied TUF FetcherInterface; deterministic qualification uses an in-memory fetcher.",
+        "unresolved": "Production input-size, wall-clock, memory, fetch, and cache quotas are not established by this bounded qualification."
+      },
+      "proof_obligations": [
+        "tuf-and-in-toto-and-artifact-identity-are-conjunctive",
+        "persistent-cache-rejects-version-rollback",
+        "root-rotation-satisfies-old-and-new-thresholds",
+        "old-online-role-keys-are-revoked-by-authorized-root-transition",
+        "layout-and-links-are-verified-from-one-read-snapshots",
+        "missing-inputs-fail-closed",
+        "receipt-never-authorizes-promotion"
+      ],
+      "test_refs": [
+        "implementation/tests/test_release_verification.py",
+        "scripts/qualify_release_verification.py",
+        "reviews/v15.7/qualification/release/release-verification-receipt.json"
+      ]
+    }
+  ]
+}

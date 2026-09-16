@@ -1,0 +1,255 @@
+{
+  "claim_boundary": "Version/license/notice provenance only; no patent clearance, ownership, or production qualification claim.",
+  "dependencies": [
+    {
+      "home_page": null,
+      "license_and_notice_files": [
+        {
+          "path": "attrs-26.1.0.dist-info/licenses/LICENSE",
+          "sha256": "882115c95dfc2af1eeb6714f8ec6d5cbcabf667caff8729f42420da63f714e9f"
+        }
+      ],
+      "license_expression": "MIT",
+      "license_metadata": null,
+      "name": "attrs",
+      "project_urls": [
+        "Documentation, https://www.attrs.org/",
+        "Changelog, https://www.attrs.org/en/stable/changelog.html",
+        "GitHub, https://github.com/python-attrs/attrs",
+        "Funding, https://github.com/sponsors/hynek",
+        "Tidelift, https://tidelift.com/subscription/pkg/pypi-attrs?utm_source=pypi-attrs&utm_medium=pypi"
+      ],
+      "provenance": "Installed distribution metadata in the executing assurance virtual environment.",
+      "version": "26.1.0"
+    },
+    {
+      "home_page": null,
+      "license_and_notice_files": [
+        {
+          "path": "cffi-2.1.1.dist-info/licenses/LICENSE",
+          "sha256": "5ba24ddc57067f9249add644c3afc41a5d6dc37e23433ef759d95df370b0af63"
+        }
+      ],
+      "license_expression": "MIT-0",
+      "license_metadata": null,
+      "name": "cffi",
+      "project_urls": [
+        "Documentation, https://cffi.readthedocs.io/",
+        "Changelog, https://cffi.readthedocs.io/en/latest/whatsnew.html",
+        "Download, https://github.com/python-cffi/cffi/releases",
+        "Contact, https://groups.google.com/forum/#!forum/python-cffi",
+        "Source Code, https://github.com/python-cffi/cffi",
+        "Issue Tracker, https://github.com/python-cffi/cffi/issues"
+      ],
+      "provenance": "Installed distribution metadata in the executing assurance virtual environment.",
+      "version": "2.1.1"
+    },
+    {
+      "home_page": null,
+      "license_and_notice_files": [
+        {
+          "path": "cryptography-50.0.1.dist-info/licenses/LICENSE",
+          "sha256": "3e0c7c091a948b82533ba98fd7cbb40432d6f1a9acbf85f5922d2f99a93ae6bb"
+        },
+        {
+          "path": "cryptography-50.0.1.dist-info/licenses/LICENSE.APACHE",
+          "sha256": "aac73b3148f6d1d7111dbca32099f68d26c644c6813ae1e4f05f6579aa2663fe"
+        },
+        {
+          "path": "cryptography-50.0.1.dist-info/licenses/LICENSE.BSD",
+          "sha256": "602c4c7482de6479dd2e9793cda275e5e63d773dacd1eca689232ab7008fb4fb"
+        }
+      ],
+      "license_expression": "Apache-2.0 OR BSD-3-Clause",
+      "license_metadata": null,
+      "name": "cryptography",
+      "project_urls": [
+        "changelog, https://cryptography.io/en/latest/changelog/",
+        "documentation, https://cryptography.io/",
+        "homepage, https://github.com/pyca/cryptography",
+        "issues, https://github.com/pyca/cryptography/issues",
+        "source, https://github.com/pyca/cryptography/"
+      ],
+      "provenance": "Installed distribution metadata in the executing assurance virtual environment.",
+      "version": "50.0.1"
+    },
+    {
+      "home_page": null,
+      "license_and_notice_files": [
+        {
+          "path": "in_toto-3.1.0.dist-info/licenses/LICENSE",
+          "sha256": "b5c26c8a2ad6dd7cac6646e470a32ee42d23c36124caac4e66c989b6545b2a44"
+        }
+      ],
+      "license_expression": "Apache-2.0",
+      "license_metadata": null,
+      "name": "in-toto",
+      "project_urls": [
+        "Bug Reports, https://github.com/in-toto/in-toto/issues",
+        "Homepage, https://in-toto.io",
+        "Source, https://github.com/in-toto/in-toto"
+      ],
+      "provenance": "Installed distribution metadata in the executing assurance virtual environment.",
+      "version": "3.1.0"
+    },
+    {
+      "home_page": "https://github.com/micktwomey/pyiso8601",
+      "license_and_notice_files": [
+        {
+          "path": "iso8601-2.1.0.dist-info/LICENSE",
+          "sha256": "516b02cd11e78c37a04f9effadd85af0483dda7ab1e715eef1cc94f97dc49e13"
+        }
+      ],
+      "license_expression": null,
+      "license_metadata": "MIT",
+      "name": "iso8601",
+      "project_urls": [
+        "Documentation, https://pyiso8601.readthedocs.io/en/latest/",
+        "Repository, https://github.com/micktwomey/pyiso8601"
+      ],
+      "provenance": "Installed distribution metadata in the executing assurance virtual environment.",
+      "version": "2.1.0"
+    },
+    {
+      "home_page": null,
+      "license_and_notice_files": [
+        {
+          "path": "pathspec-1.1.1.dist-info/licenses/LICENSE",
+          "sha256": "fab3dd6bdab226f1c08630b1dd917e11fcb4ec5e1e020e2c16f83a0a13863e85"
+        }
+      ],
+      "license_expression": null,
+      "license_metadata": null,
+      "name": "pathspec",
+      "project_urls": [
+        "Change Log, https://python-path-specification.readthedocs.io/en/latest/changes.html",
+        "Documentation, https://python-path-specification.readthedocs.io/en/latest/index.html",
+        "Issue Tracker, https://github.com/cpburnz/python-pathspec/issues",
+        "Source Code, https://github.com/cpburnz/python-pathspec"
+      ],
+      "provenance": "Installed distribution metadata in the executing assurance virtual environment.",
+      "version": "1.1.1"
+    },
+    {
+      "home_page": null,
+      "license_and_notice_files": [
+        {
+          "path": "pycparser-3.0.dist-info/licenses/LICENSE",
+          "sha256": "0c846399369ea76ddd7b5c44fe6d16497415fcf015f5cbb508c24bf98b81c5b1"
+        }
+      ],
+      "license_expression": "BSD-3-Clause",
+      "license_metadata": null,
+      "name": "pycparser",
+      "project_urls": [
+        "Homepage, https://github.com/eliben/pycparser"
+      ],
+      "provenance": "Installed distribution metadata in the executing assurance virtual environment.",
+      "version": "3.0"
+    },
+    {
+      "home_page": "https://github.com/dateutil/dateutil",
+      "license_and_notice_files": [
+        {
+          "path": "python_dateutil-2.9.0.post0.dist-info/LICENSE",
+          "sha256": "ba00f51a0d92823b5a1cde27d8b5b9d2321e67ed8da9bc163eff96d5e17e577e"
+        }
+      ],
+      "license_expression": null,
+      "license_metadata": "Dual License",
+      "name": "python-dateutil",
+      "project_urls": [
+        "Documentation, https://dateutil.readthedocs.io/en/stable/",
+        "Source, https://github.com/dateutil/dateutil"
+      ],
+      "provenance": "Installed distribution metadata in the executing assurance virtual environment.",
+      "version": "2.9.0.post0"
+    },
+    {
+      "home_page": null,
+      "license_and_notice_files": [
+        {
+          "path": "securesystemslib-1.5.1.dist-info/licenses/LICENSE",
+          "sha256": "6357addf59ba70a824bc678c35e0936916e1cc38182f503372147191ed227bd3"
+        },
+        {
+          "path": "securesystemslib/_vendor/ed25519/LICENSE",
+          "sha256": "a2010f343487d3f7618affe54f789f5487602331c0a8d03f49e9a7c547cf0499"
+        }
+      ],
+      "license_expression": "MIT",
+      "license_metadata": null,
+      "name": "securesystemslib",
+      "project_urls": [
+        "Homepage, https://github.com/secure-systems-lab/securesystemslib",
+        "Source, https://github.com/secure-systems-lab/securesystemslib",
+        "Issues, https://github.com/secure-systems-lab/securesystemslib/issues"
+      ],
+      "provenance": "Installed distribution metadata in the executing assurance virtual environment.",
+      "version": "1.5.1"
+    },
+    {
+      "home_page": "https://github.com/benjaminp/six",
+      "license_and_notice_files": [
+        {
+          "path": "six-1.17.0.dist-info/LICENSE",
+          "sha256": "4375ba20e2b9c6c4e7cad2940a628fd90e95cc3d50ee92aae755715d8ba1fbd0"
+        }
+      ],
+      "license_expression": null,
+      "license_metadata": "MIT",
+      "name": "six",
+      "project_urls": [],
+      "provenance": "Installed distribution metadata in the executing assurance virtual environment.",
+      "version": "1.17.0"
+    },
+    {
+      "home_page": null,
+      "license_and_notice_files": [
+        {
+          "path": "tuf-7.0.1.dist-info/licenses/LICENSE",
+          "sha256": "d3174ad63e721d4c9dccb8ad4320848992d314369bc46319720b5802c9153fe9"
+        },
+        {
+          "path": "tuf-7.0.1.dist-info/licenses/LICENSE-MIT",
+          "sha256": "ad52fe92b0d21a9b3733b484eb6f865e83855f4a6f9b9b8812b9012dc4587d27"
+        }
+      ],
+      "license_expression": "Apache-2.0 OR MIT",
+      "license_metadata": null,
+      "name": "tuf",
+      "project_urls": [
+        "Documentation, https://theupdateframework.readthedocs.io/en/stable/",
+        "Homepage, https://www.updateframework.com",
+        "Issues, https://github.com/theupdateframework/python-tuf/issues",
+        "Source, https://github.com/theupdateframework/python-tuf"
+      ],
+      "provenance": "Installed distribution metadata in the executing assurance virtual environment.",
+      "version": "7.0.1"
+    },
+    {
+      "home_page": null,
+      "license_and_notice_files": [
+        {
+          "path": "urllib3-2.8.0.dist-info/licenses/LICENSE.txt",
+          "sha256": "130e3a64d5fdd5d096a752694634a7d9df284469de86e5732100268041e3d686"
+        }
+      ],
+      "license_expression": "MIT",
+      "license_metadata": null,
+      "name": "urllib3",
+      "project_urls": [
+        "Changelog, https://github.com/urllib3/urllib3/blob/main/CHANGES.rst",
+        "Documentation, https://urllib3.readthedocs.io",
+        "Code, https://github.com/urllib3/urllib3",
+        "Issue tracker, https://github.com/urllib3/urllib3/issues",
+        "Security policy, https://urllib3.readthedocs.io/en/latest/security.html"
+      ],
+      "provenance": "Installed distribution metadata in the executing assurance virtual environment.",
+      "version": "2.8.0"
+    }
+  ],
+  "requirements_path": "requirements/assurance.txt",
+  "requirements_sha256": "a9490d3402b53d84c706e540466442fa28875e4ea4dea428367d8f6db86b80ee",
+  "schema": "GardenAssuranceDependencyReuseManifest/v1"
+}

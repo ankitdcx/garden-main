@@ -1,0 +1,72 @@
+{
+  "schema": "GardenFunctionContractRegistry/v1",
+  "registry_id": "GARDEN-V157-PHYSICAL-ASSURANCE-REFERENCE-v1",
+  "design_epoch": "v15.5",
+  "canonical_source_root_sha256": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+  "scope_globs": ["implementation/garden_kernel/physical_assurance.py"],
+  "semantic_compliance_proved": false,
+  "declaration_status": "REFERENCE_DECLARATIONS_ONLY_NOT_PRODUCTION_WIRED",
+  "source_schema_reference": "FunctionContract SCHEMA-AF063594FE",
+  "implementation_source_sha256": "ba2129012be03e75bdd2a873d84639b8062dec6f125616368ec516be61b3029d",
+  "owner_anchors": ["design_deltas/v15.6/DELTASET-2026-09-15-ENGINEERING-HARDENING.json#V156-EH-18", "design_deltas/v15.6/DELTASET-2026-09-15-ENGINEERING-HARDENING.json#V156-EH-19", "canonical/current/Garden_Technical_v15.5_FULL_2026-09-12.txt#Capability.Trust.Safety"],
+  "contracts": [
+    {
+      "contract_id": "FC-PHYSICAL-ASSURANCE-TRANSFER-v1", "contract_version": "1",
+      "path": "implementation/garden_kernel/physical_assurance.py", "function": "signed_transfer", "source_sha256": "ba2129012be03e75bdd2a873d84639b8062dec6f125616368ec516be61b3029d",
+      "affects": ["SAFETY", "AUTHENTICATION", "AUDIT"],
+      "input_semantics": "Finite observed level/time, non-empty controller identity, non-negative epoch, and local reference HMAC key.",
+      "output_semantics": "Returns an immutable HMAC-SHA-256 tagged simulation transfer binding controller, epoch, observation, and time.",
+      "error_semantics": "Malformed controller, epoch, level, or observation time raises ValueError.",
+      "unknown_semantics": "A transfer is a local simulation artifact and grants no authority or physical command permission.",
+      "effect_semantics": "Creates no physical effect; produces an in-memory reference-model transfer.",
+      "proof_obligations": ["transfer-inputs-finite", "epoch-bound-into-tag", "reference-token-not-production-credential"], "test_refs": ["implementation/tests/test_physical_assurance.py"],
+      "preconditions": ["finite observations", "bounded reference simulation"], "postconditions": ["tag binds controller, epoch, observation and time"], "body_hash_algorithm": "sha256(module source)", "body_sha256": "ba2129012be03e75bdd2a873d84639b8062dec6f125616368ec516be61b3029d"
+    },
+    {
+      "contract_id": "FC-PHYSICAL-ASSURANCE-TRANSFER-VERIFY-v1", "contract_version": "1",
+      "path": "implementation/garden_kernel/physical_assurance.py", "function": "transfer_is_authenticated", "source_sha256": "ba2129012be03e75bdd2a873d84639b8062dec6f125616368ec516be61b3029d",
+      "affects": ["SAFETY", "AUTHENTICATION"],
+      "input_semantics": "Transfer record and current local reference assumptions.", "output_semantics": "Returns true only for finite, structurally valid HMAC-matching fields using constant-time comparison.",
+      "error_semantics": "Malformed transfer returns false; malformed assumptions are rejected at construction.", "unknown_semantics": "Authentication failure is fail-closed and cannot establish current authority.", "effect_semantics": "Performs no effect; evaluates a local simulation token only.",
+      "proof_obligations": ["hmac-compare-digest", "nonfinite-transfer-rejected", "transfer-not-authority"], "test_refs": ["implementation/tests/test_physical_assurance.py"],
+      "preconditions": ["current simulation assumptions"], "postconditions": ["invalid transfer fails closed"], "body_hash_algorithm": "sha256(module source)", "body_sha256": "ba2129012be03e75bdd2a873d84639b8062dec6f125616368ec516be61b3029d"
+    },
+    {
+      "contract_id": "FC-PHYSICAL-ASSURANCE-ACTUATOR-FENCE-v1", "contract_version": "1",
+      "path": "implementation/garden_kernel/physical_assurance.py", "function": "TankSimulation.actuator_command", "source_sha256": "ba2129012be03e75bdd2a873d84639b8062dec6f125616368ec516be61b3029d",
+      "affects": ["SAFETY", "EXECUTION", "AUTHORITY"],
+      "input_semantics": "Finite bounded command, active controller identity, and current fencing epoch.", "output_semantics": "Accepts only the current active controller at the current epoch; stale or malformed commands are recorded as rejected.",
+      "error_semantics": "Invalid commands return false and are retained in rejected-command evidence.", "unknown_semantics": "Acceptance is reference-model admission, not physical actuation or external authority.", "effect_semantics": "Changes no external target; later Euler integration uses the admitted reference command.",
+      "proof_obligations": ["stale-epoch-rejected", "controller-match-required", "command-bounded"], "test_refs": ["implementation/tests/test_physical_assurance.py"],
+      "preconditions": ["current local epoch"], "postconditions": ["stale primary command fenced after fallback"], "body_hash_algorithm": "sha256(module source)", "body_sha256": "ba2129012be03e75bdd2a873d84639b8062dec6f125616368ec516be61b3029d"
+    },
+    {
+      "contract_id": "FC-PHYSICAL-ASSURANCE-RUN-v1", "contract_version": "1",
+      "path": "implementation/garden_kernel/physical_assurance.py", "function": "TankSimulation.run", "source_sha256": "ba2129012be03e75bdd2a873d84639b8062dec6f125616368ec516be61b3029d",
+      "affects": ["SAFETY", "EXECUTION", "RECOVERY", "AUDIT"],
+      "input_semantics": "Finite non-negative duration within max_duration_s and fully bounded configuration.", "output_semantics": "Produces trajectory with final-horizon sample and explicit assurance loss for bounded fault injections.",
+      "error_semantics": "Invalid duration raises ValueError; bounded faults enter assurance-loss minimum-risk mode.", "unknown_semantics": "Finite Euler samples do not prove continuous-time safety, hardware behavior, or fallback independence.", "effect_semantics": "In-memory reference simulation only; no hardware, network, or physical actuator effect.",
+      "proof_obligations": ["final-horizon-recorded", "monitor-schedule-persists-across-runs", "faults-record-assurance-loss", "duration-bounded"], "test_refs": ["implementation/tests/test_physical_assurance.py"],
+      "preconditions": ["declared uncertainty and delay bounds"], "postconditions": ["truthful bounded trajectory receipt"], "body_hash_algorithm": "sha256(module source)", "body_sha256": "ba2129012be03e75bdd2a873d84639b8062dec6f125616368ec516be61b3029d"
+    },
+    {
+      "contract_id": "FC-PHYSICAL-ASSURANCE-PRIMARY-RETURN-v1", "contract_version": "1",
+      "path": "implementation/garden_kernel/physical_assurance.py", "function": "TankSimulation.request_primary_return", "source_sha256": "ba2129012be03e75bdd2a873d84639b8062dec6f125616368ec516be61b3029d",
+      "affects": ["SAFETY", "AUTHORITY", "RECOVERY"],
+      "input_semantics": "Fallback state, finite dwell, explicit fixture revalidation/fresh-authorization, and current recoverable observation.", "output_semantics": "Returns true and advances epoch only when all local reference conditions hold; otherwise records blocked return.",
+      "error_semantics": "Non-finite dwell raises ValueError; invalid or stale return state is blocked.", "unknown_semantics": "Boolean attestations are fixtures, not evidence of real authority or root-cause closure.", "effect_semantics": "Changes reference-model controller/epoch only; no production controller transition.",
+      "proof_obligations": ["fresh-authorization-required", "recoverable-state-required", "return-epoch-advances"], "test_refs": ["implementation/tests/test_physical_assurance.py"],
+      "preconditions": ["safe return gate inputs"], "postconditions": ["unsafe return is blocked"], "body_hash_algorithm": "sha256(module source)", "body_sha256": "ba2129012be03e75bdd2a873d84639b8062dec6f125616368ec516be61b3029d"
+    },
+    {
+      "contract_id": "FC-PHYSICAL-ASSURANCE-SHARED-ACTUATOR-v1", "contract_version": "1",
+      "path": "implementation/garden_kernel/physical_assurance.py", "function": "shared_actuator_decision", "source_sha256": "ba2129012be03e75bdd2a873d84639b8062dec6f125616368ec516be61b3029d",
+      "affects": ["SAFETY", "AUTHORITY", "COORDINATION"],
+      "input_semantics": "Two agent identities, epochs, and proposed commands for one simulated actuator.", "output_semantics": "Rejects differing epoch or command proposals as conflicting shared-actuator commands.",
+      "error_semantics": "Conflict returns a typed rejection rather than selecting an arbitrary agent.", "unknown_semantics": "Identical local commands do not prove multi-agent coordination or external authorization.", "effect_semantics": "Produces only a reference decision; does not allocate an external resource.",
+      "proof_obligations": ["conflict-fails-closed", "shared-resource-not-double-commanded"], "test_refs": ["implementation/tests/test_physical_assurance.py"],
+      "preconditions": ["two declared simulation proposals plus explicit trusted coordination fixture"], "postconditions": ["untrusted equality and conflicting commands are blocked"], "body_hash_algorithm": "sha256(module source)", "body_sha256": "ba2129012be03e75bdd2a873d84639b8062dec6f125616368ec516be61b3029d"
+    }
+  ],
+  "limitations": ["Declarations are reference-only and semantic_compliance_proved remains false.", "Unbound public functions are reported as FRONTIER by the coverage audit.", "This registry neither changes the current canonical registry nor authorizes physical actuation or certification."]
+}

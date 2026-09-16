@@ -2,37 +2,37 @@
   "schema": "GardenCanonicalSourceManifest/v1",
   "release": "Garden v15.7",
   "gsl": "v45.1",
-  "date": "2026-09-15",
+  "date": "2026-09-16",
   "status": "WORKING_FIVE_FILE_CANDIDATE_NOT_CANONICAL",
   "files": {
     "User": {
-      "name": "Garden_User_v15.7_FULL_CANDIDATE_2026-09-15.txt",
-      "bytes": 108428,
-      "sha256": "fd55072ea37c0bbd6f6b1b2aa233afd2b23d22b6a76f23d364ad92e33b9a9d6b"
+      "name": "Garden_User_v15.7_FULL_CANDIDATE_2026-09-16.txt",
+      "bytes": 109040,
+      "sha256": "b07e033ceeb14822216a2ef0a74853f09e8b5f81477c4546fee8815236b944a4"
     },
     "System": {
-      "name": "Garden_System_v15.7_FULL_CANDIDATE_2026-09-15.txt",
-      "bytes": 250255,
-      "sha256": "b4fee8b2b5f75fe56485ad80c375e7e0188c54b97a7b4295ace1e74bb305a312"
+      "name": "Garden_System_v15.7_FULL_CANDIDATE_2026-09-16.txt",
+      "bytes": 250592,
+      "sha256": "49edf13e64dea58d35d9dba74394d1b4ef12cf4c986f4f05129c2fcd63593747"
     },
     "Technical": {
-      "name": "Garden_Technical_v15.7_FULL_CANDIDATE_2026-09-15.txt",
-      "bytes": 1012824,
-      "sha256": "57535dc10839a6b278b0e05d257db5455e48cf376fdf1112f447e8b6257da68f"
+      "name": "Garden_Technical_v15.7_FULL_CANDIDATE_2026-09-16.txt",
+      "bytes": 1036764,
+      "sha256": "c9057e21ea32dd456dbc2f45d09bd4e2d272ba5d4a8d63f55f349cde60db2f96"
     },
     "Annexure": {
-      "name": "Garden_Annexure_v15.7_FULL_CANDIDATE_2026-09-15.txt",
-      "bytes": 1267540,
-      "sha256": "40bfad13812e022fa302ccb12ddbfb21f88913ba91e0d8f0f884e113604895fe"
+      "name": "Garden_Annexure_v15.7_FULL_CANDIDATE_2026-09-16.txt",
+      "bytes": 1268181,
+      "sha256": "8b127a0850b0614fd2de1578245460f1dbbb05e8dce33fc38c2bf78a1de58bad"
     },
     "Theories": {
-      "name": "Garden_Theories_v15.7_FULL_CANDIDATE_2026-09-15.txt",
+      "name": "Garden_Theories_v15.7_FULL_CANDIDATE_2026-09-16.txt",
       "bytes": 186406,
-      "sha256": "670997310d2b264dfdddcc89a05ffbb881426560ba2dc4a213ee655702555345"
+      "sha256": "af7e1f6c954ea16bac290ae095101afddb59219217248fbae66384895f7f2a77"
     }
   },
   "source_root_algorithm": "sha256(canonical-json(sorted role/name/bytes/sha256 rows))",
-  "source_root_sha256": "eb4d5306a8f7dcca75f8cf7d60f6441bdf5b35bccb86ac2362b33f241af1591a",
+  "source_root_sha256": "99e42cdb9ba0b9603ae2b90484bddedeef6c5721aa2b0f6a547a956914d1b9d6",
   "predecessor_release": "Garden v15.5",
   "predecessor_source_root_sha256": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
   "retained_draft_source_root_sha256": "d4f054f21247948426abbe4c842ac65f4daa83f521f73bc3ac57e2d5860bdf6b"

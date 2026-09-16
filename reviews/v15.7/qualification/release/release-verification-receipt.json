@@ -1,0 +1,434 @@
+{
+  "canonical_promotion_authorized": false,
+  "cases": {
+    "cross_stage_mismatch": {
+      "expected_status": "BLOCKED",
+      "observed": {
+        "active_trusted_root_sha256": "b658b0becf395f1cfaa1e7f2575b6e428e025177e696296475f385b4a8b7bddf",
+        "active_trusted_root_version": 1,
+        "bootstrap_trusted_root_sha256": "b658b0becf395f1cfaa1e7f2575b6e428e025177e696296475f385b4a8b7bddf",
+        "checks": {
+          "artifact_identity": {
+            "status": "INVALID"
+          },
+          "in_toto": {
+            "status": "VALID"
+          },
+          "tuf": {
+            "status": "VALID"
+          }
+        },
+        "identities": {
+          "active_trusted_root_sha256": "b658b0becf395f1cfaa1e7f2575b6e428e025177e696296475f385b4a8b7bddf",
+          "active_trusted_root_version": 1,
+          "in_toto_artifact_sha256": "e7d21e1c33fcf70db3734a81652d3719f05510b4c24db0807b80596222a1361e",
+          "observed_artifact_sha256": "7ca295115a0f2414cd91494bb7f290653e325c066a28000db4427d4d30e8a9f1",
+          "tuf_artifact_sha256": "7ca295115a0f2414cd91494bb7f290653e325c066a28000db4427d4d30e8a9f1"
+        },
+        "layout_policy_sha256": "5aae3b40af4fb7e9dc21776ca12f44253b1d2b07f33736853acdf78bd8da85a8",
+        "layout_verification_keys_sha256": "280729a5e6a79b8a606f25092b4833f08b21eb8a2d92f593db8f1dccdad04cfe",
+        "promotion_authorized": false,
+        "python": "3.12.14",
+        "schema": "GardenReleaseVerificationReceipt/v1",
+        "source_policy_sha256": "3a6f69e45ab7de9905672e487901ef9d29a27214563f1abcf70b5f3ec4015211",
+        "status": "BLOCKED",
+        "tool_versions": {
+          "in-toto": "3.1.0",
+          "securesystemslib": "1.5.1",
+          "tuf": "7.0.1"
+        }
+      },
+      "result": "PASS"
+    },
+    "expired": {
+      "expected_status": "BLOCKED",
+      "observed": {
+        "active_trusted_root_sha256": null,
+        "active_trusted_root_version": null,
+        "bootstrap_trusted_root_sha256": "178922aac3ce98de150e78d9ddc13fc1d713ac6d77a800b89e582aeb83995bff",
+        "checks": {
+          "artifact_identity": {
+            "status": "INVALID"
+          },
+          "in_toto": {
+            "status": "VALID"
+          },
+          "tuf": {
+            "reason": "ExpiredMetadataError: New targets is expired",
+            "status": "INVALID"
+          }
+        },
+        "identities": {
+          "in_toto_artifact_sha256": "7ca295115a0f2414cd91494bb7f290653e325c066a28000db4427d4d30e8a9f1",
+          "observed_artifact_sha256": "7ca295115a0f2414cd91494bb7f290653e325c066a28000db4427d4d30e8a9f1"
+        },
+        "layout_policy_sha256": "455fcbfec2db4497d42bf51971c494a107a1ca650404eb888311592c8132a193",
+        "layout_verification_keys_sha256": "f50728ed3dd54f4e0a00f38536746332658fcaa2bc470b286316ce9012cb6c10",
+        "promotion_authorized": false,
+        "python": "3.12.14",
+        "schema": "GardenReleaseVerificationReceipt/v1",
+        "source_policy_sha256": "3a6f69e45ab7de9905672e487901ef9d29a27214563f1abcf70b5f3ec4015211",
+        "status": "BLOCKED",
+        "tool_versions": {
+          "in-toto": "3.1.0",
+          "securesystemslib": "1.5.1",
+          "tuf": "7.0.1"
+        }
+      },
+      "result": "PASS"
+    },
+    "insufficient_signatures": {
+      "expected_status": "BLOCKED",
+      "observed": {
+        "active_trusted_root_sha256": null,
+        "active_trusted_root_version": null,
+        "bootstrap_trusted_root_sha256": "36152d06fea53d25cd2ddaa2c9ac145662a8719578e87537aa3810fb44a1a557",
+        "checks": {
+          "artifact_identity": {
+            "status": "INVALID"
+          },
+          "in_toto": {
+            "status": "VALID"
+          },
+          "tuf": {
+            "reason": "UnsignedMetadataError: targets was signed by 1/2 keys",
+            "status": "INVALID"
+          }
+        },
+        "identities": {
+          "in_toto_artifact_sha256": "7ca295115a0f2414cd91494bb7f290653e325c066a28000db4427d4d30e8a9f1",
+          "observed_artifact_sha256": "7ca295115a0f2414cd91494bb7f290653e325c066a28000db4427d4d30e8a9f1"
+        },
+        "layout_policy_sha256": "4438dc1eee564f32567bf5099213f1f1611a338d1c4a141c3e99c55623b80212",
+        "layout_verification_keys_sha256": "97f65f888b87ce7e350ec2872bf3e660e673f1911de27c41fc049103abe114a5",
+        "promotion_authorized": false,
+        "python": "3.12.14",
+        "schema": "GardenReleaseVerificationReceipt/v1",
+        "source_policy_sha256": "3a6f69e45ab7de9905672e487901ef9d29a27214563f1abcf70b5f3ec4015211",
+        "status": "BLOCKED",
+        "tool_versions": {
+          "in-toto": "3.1.0",
+          "securesystemslib": "1.5.1",
+          "tuf": "7.0.1"
+        }
+      },
+      "result": "PASS"
+    },
+    "missing_step": {
+      "expected_status": "BLOCKED",
+      "observed": {
+        "active_trusted_root_sha256": "34ca161374d82a7f964cff0087ef84d715b285f48086aeb9c609d659bf6dba08",
+        "active_trusted_root_version": 1,
+        "bootstrap_trusted_root_sha256": "34ca161374d82a7f964cff0087ef84d715b285f48086aeb9c609d659bf6dba08",
+        "checks": {
+          "artifact_identity": {
+            "status": "INVALID"
+          },
+          "in_toto": {
+            "reason": "LinkNotFoundError: Step 'build' requires '1' link metadata file(s), found '0'.",
+            "status": "INVALID"
+          },
+          "tuf": {
+            "status": "VALID"
+          }
+        },
+        "identities": {
+          "active_trusted_root_sha256": "34ca161374d82a7f964cff0087ef84d715b285f48086aeb9c609d659bf6dba08",
+          "active_trusted_root_version": 1,
+          "observed_artifact_sha256": "7ca295115a0f2414cd91494bb7f290653e325c066a28000db4427d4d30e8a9f1",
+          "tuf_artifact_sha256": "7ca295115a0f2414cd91494bb7f290653e325c066a28000db4427d4d30e8a9f1"
+        },
+        "layout_policy_sha256": "a92508fbf5843047e8a1fedd3849d1c98fe396ddad296fdc934c2673262149ed",
+        "layout_verification_keys_sha256": "1538079cce4749d8c5d6cca0f2b629d5511f8d18b0ff818801e8efb07d890f51",
+        "promotion_authorized": false,
+        "python": "3.12.14",
+        "schema": "GardenReleaseVerificationReceipt/v1",
+        "source_policy_sha256": "3a6f69e45ab7de9905672e487901ef9d29a27214563f1abcf70b5f3ec4015211",
+        "status": "BLOCKED",
+        "tool_versions": {
+          "in-toto": "3.1.0",
+          "securesystemslib": "1.5.1",
+          "tuf": "7.0.1"
+        }
+      },
+      "result": "PASS"
+    },
+    "persistent_cache_version_rollback": {
+      "expected_status": "NEWER_VERIFIED_THEN_OLDER_BLOCKED",
+      "newer": {
+        "active_trusted_root_sha256": "97260f8d34f7acc4cabbe4369ab1166b2f08e80231638f5a1270092ff3ae542a",
+        "active_trusted_root_version": 1,
+        "bootstrap_trusted_root_sha256": "97260f8d34f7acc4cabbe4369ab1166b2f08e80231638f5a1270092ff3ae542a",
+        "checks": {
+          "artifact_identity": {
+            "status": "VALID"
+          },
+          "in_toto": {
+            "status": "VALID"
+          },
+          "tuf": {
+            "status": "VALID"
+          }
+        },
+        "identities": {
+          "active_trusted_root_sha256": "97260f8d34f7acc4cabbe4369ab1166b2f08e80231638f5a1270092ff3ae542a",
+          "active_trusted_root_version": 1,
+          "in_toto_artifact_sha256": "7ca295115a0f2414cd91494bb7f290653e325c066a28000db4427d4d30e8a9f1",
+          "observed_artifact_sha256": "7ca295115a0f2414cd91494bb7f290653e325c066a28000db4427d4d30e8a9f1",
+          "tuf_artifact_sha256": "7ca295115a0f2414cd91494bb7f290653e325c066a28000db4427d4d30e8a9f1"
+        },
+        "layout_policy_sha256": "ba41ff7c3f9e580792eca30fe991a6957c444a39090fb4bf7139cc719a4b5d02",
+        "layout_verification_keys_sha256": "492a3621be01fdb189f76671aca0ab510c48722e1db7571e1507ff0093db5ada",
+        "promotion_authorized": false,
+        "python": "3.12.14",
+        "schema": "GardenReleaseVerificationReceipt/v1",
+        "source_policy_sha256": "3a6f69e45ab7de9905672e487901ef9d29a27214563f1abcf70b5f3ec4015211",
+        "status": "VERIFIED",
+        "tool_versions": {
+          "in-toto": "3.1.0",
+          "securesystemslib": "1.5.1",
+          "tuf": "7.0.1"
+        }
+      },
+      "result": "PASS",
+      "rollback_attempt": {
+        "active_trusted_root_sha256": null,
+        "active_trusted_root_version": null,
+        "bootstrap_trusted_root_sha256": "97260f8d34f7acc4cabbe4369ab1166b2f08e80231638f5a1270092ff3ae542a",
+        "checks": {
+          "artifact_identity": {
+            "status": "INVALID"
+          },
+          "in_toto": {
+            "status": "VALID"
+          },
+          "tuf": {
+            "reason": "BadVersionNumberError: New timestamp version 1 must be >= 2",
+            "status": "INVALID"
+          }
+        },
+        "identities": {
+          "in_toto_artifact_sha256": "7ca295115a0f2414cd91494bb7f290653e325c066a28000db4427d4d30e8a9f1",
+          "observed_artifact_sha256": "7ca295115a0f2414cd91494bb7f290653e325c066a28000db4427d4d30e8a9f1"
+        },
+        "layout_policy_sha256": "8b26891f52f62493c611c662b20dab09bbb48d78ef8cb841dc99bda9ca686424",
+        "layout_verification_keys_sha256": "56cf39aaacf81cb099ba4923faeaeeaed75300efa0bcc8302b165821797346eb",
+        "promotion_authorized": false,
+        "python": "3.12.14",
+        "schema": "GardenReleaseVerificationReceipt/v1",
+        "source_policy_sha256": "3a6f69e45ab7de9905672e487901ef9d29a27214563f1abcf70b5f3ec4015211",
+        "status": "BLOCKED",
+        "tool_versions": {
+          "in-toto": "3.1.0",
+          "securesystemslib": "1.5.1",
+          "tuf": "7.0.1"
+        }
+      }
+    },
+    "signed_rotation_online_key_revocation": {
+      "cached_root_sha256": "3e673062eabf97801169074bec866fb55007b63865a911ce7ae17516d780cebb",
+      "expected_status": "VERIFIED_WITH_ROOT_V2_AND_OLD_TARGET_KEYS_REVOKED",
+      "observed": {
+        "active_trusted_root_sha256": "3e673062eabf97801169074bec866fb55007b63865a911ce7ae17516d780cebb",
+        "active_trusted_root_version": 2,
+        "bootstrap_trusted_root_sha256": "607cd2a21823147c51688297f3056bc80bee4b08b837d89df8449fc505f94f15",
+        "checks": {
+          "artifact_identity": {
+            "status": "VALID"
+          },
+          "in_toto": {
+            "status": "VALID"
+          },
+          "tuf": {
+            "status": "VALID"
+          }
+        },
+        "identities": {
+          "active_trusted_root_sha256": "3e673062eabf97801169074bec866fb55007b63865a911ce7ae17516d780cebb",
+          "active_trusted_root_version": 2,
+          "in_toto_artifact_sha256": "7ca295115a0f2414cd91494bb7f290653e325c066a28000db4427d4d30e8a9f1",
+          "observed_artifact_sha256": "7ca295115a0f2414cd91494bb7f290653e325c066a28000db4427d4d30e8a9f1",
+          "tuf_artifact_sha256": "7ca295115a0f2414cd91494bb7f290653e325c066a28000db4427d4d30e8a9f1"
+        },
+        "layout_policy_sha256": "231ad888f030f178ca950913ff56e4d8520f5b141c57c57a6b6a34f057308f75",
+        "layout_verification_keys_sha256": "dcb40802139f1cdcbe76489245d4a18503f0404cc97af83f646a31223434acfd",
+        "promotion_authorized": false,
+        "python": "3.12.14",
+        "schema": "GardenReleaseVerificationReceipt/v1",
+        "source_policy_sha256": "3a6f69e45ab7de9905672e487901ef9d29a27214563f1abcf70b5f3ec4015211",
+        "status": "VERIFIED",
+        "tool_versions": {
+          "in-toto": "3.1.0",
+          "securesystemslib": "1.5.1",
+          "tuf": "7.0.1"
+        }
+      },
+      "old_target_keyids_absent": true,
+      "result": "PASS"
+    },
+    "substituted_content": {
+      "expected_status": "BLOCKED",
+      "observed": {
+        "active_trusted_root_sha256": "1079e7eadb13c437c7432cb81145a100e53b563cdecd0a0b3b67713377ac4a90",
+        "active_trusted_root_version": 1,
+        "bootstrap_trusted_root_sha256": "1079e7eadb13c437c7432cb81145a100e53b563cdecd0a0b3b67713377ac4a90",
+        "checks": {
+          "artifact_identity": {
+            "status": "INVALID"
+          },
+          "in_toto": {
+            "status": "VALID"
+          },
+          "tuf": {
+            "reason": "LengthOrHashMismatchError: Observed length 11 does not match expected length 23",
+            "status": "INVALID"
+          }
+        },
+        "identities": {
+          "active_trusted_root_sha256": "1079e7eadb13c437c7432cb81145a100e53b563cdecd0a0b3b67713377ac4a90",
+          "active_trusted_root_version": 1,
+          "in_toto_artifact_sha256": "7ca295115a0f2414cd91494bb7f290653e325c066a28000db4427d4d30e8a9f1",
+          "observed_artifact_sha256": "40961b2f78daa25d1e47d9bf8d22d10a9d93c712a4887b45cb05336098f2bdca"
+        },
+        "layout_policy_sha256": "26e0e76b898bd4136a5ce5f018324c8733ac7359071acacac7379ab0817c123b",
+        "layout_verification_keys_sha256": "2f94a9e7b1633c0af2d9635342f87e84dbe65ed8d1fd4bec85b4bbea7efe5e1c",
+        "promotion_authorized": false,
+        "python": "3.12.14",
+        "schema": "GardenReleaseVerificationReceipt/v1",
+        "source_policy_sha256": "3a6f69e45ab7de9905672e487901ef9d29a27214563f1abcf70b5f3ec4015211",
+        "status": "BLOCKED",
+        "tool_versions": {
+          "in-toto": "3.1.0",
+          "securesystemslib": "1.5.1",
+          "tuf": "7.0.1"
+        }
+      },
+      "result": "PASS"
+    },
+    "unauthorized_builder": {
+      "expected_status": "BLOCKED",
+      "observed": {
+        "active_trusted_root_sha256": "93e835e103601ef1757b28f88d864b6576b385dc8de4af648e5f457ea524525b",
+        "active_trusted_root_version": 1,
+        "bootstrap_trusted_root_sha256": "93e835e103601ef1757b28f88d864b6576b385dc8de4af648e5f457ea524525b",
+        "checks": {
+          "artifact_identity": {
+            "status": "INVALID"
+          },
+          "in_toto": {
+            "reason": "ThresholdVerificationError: Step 'build' requires at least '1' links validly signed by different authorized functionaries. Only found '0'",
+            "status": "INVALID"
+          },
+          "tuf": {
+            "status": "VALID"
+          }
+        },
+        "identities": {
+          "active_trusted_root_sha256": "93e835e103601ef1757b28f88d864b6576b385dc8de4af648e5f457ea524525b",
+          "active_trusted_root_version": 1,
+          "observed_artifact_sha256": "7ca295115a0f2414cd91494bb7f290653e325c066a28000db4427d4d30e8a9f1",
+          "tuf_artifact_sha256": "7ca295115a0f2414cd91494bb7f290653e325c066a28000db4427d4d30e8a9f1"
+        },
+        "layout_policy_sha256": "2c0d8221b50851dd65d2372121979fb69923e5a9c0dbee280d52fe3381cf943b",
+        "layout_verification_keys_sha256": "449578d386a082330a1d1757b9fd9f78c82717c718342273f0d401a1d41fd8d8",
+        "promotion_authorized": false,
+        "python": "3.12.14",
+        "schema": "GardenReleaseVerificationReceipt/v1",
+        "source_policy_sha256": "3a6f69e45ab7de9905672e487901ef9d29a27214563f1abcf70b5f3ec4015211",
+        "status": "BLOCKED",
+        "tool_versions": {
+          "in-toto": "3.1.0",
+          "securesystemslib": "1.5.1",
+          "tuf": "7.0.1"
+        }
+      },
+      "result": "PASS"
+    },
+    "valid": {
+      "expected_status": "VERIFIED",
+      "observed": {
+        "active_trusted_root_sha256": "823ac8619aa182d2ab6d581377d93cb6a64578842b4d383fa48b5583824009d8",
+        "active_trusted_root_version": 1,
+        "bootstrap_trusted_root_sha256": "823ac8619aa182d2ab6d581377d93cb6a64578842b4d383fa48b5583824009d8",
+        "checks": {
+          "artifact_identity": {
+            "status": "VALID"
+          },
+          "in_toto": {
+            "status": "VALID"
+          },
+          "tuf": {
+            "status": "VALID"
+          }
+        },
+        "identities": {
+          "active_trusted_root_sha256": "823ac8619aa182d2ab6d581377d93cb6a64578842b4d383fa48b5583824009d8",
+          "active_trusted_root_version": 1,
+          "in_toto_artifact_sha256": "7ca295115a0f2414cd91494bb7f290653e325c066a28000db4427d4d30e8a9f1",
+          "observed_artifact_sha256": "7ca295115a0f2414cd91494bb7f290653e325c066a28000db4427d4d30e8a9f1",
+          "tuf_artifact_sha256": "7ca295115a0f2414cd91494bb7f290653e325c066a28000db4427d4d30e8a9f1"
+        },
+        "layout_policy_sha256": "ed2cb97d965e14cba413fac18f5576df7fa9b1448c31f02f7de690080792af1c",
+        "layout_verification_keys_sha256": "1a649c5b5d45b45014146b7bb70a3836fbfb77bb741c5b2c9d4623b05db1c285",
+        "promotion_authorized": false,
+        "python": "3.12.14",
+        "schema": "GardenReleaseVerificationReceipt/v1",
+        "source_policy_sha256": "3a6f69e45ab7de9905672e487901ef9d29a27214563f1abcf70b5f3ec4015211",
+        "status": "VERIFIED",
+        "tool_versions": {
+          "in-toto": "3.1.0",
+          "securesystemslib": "1.5.1",
+          "tuf": "7.0.1"
+        }
+      },
+      "result": "PASS"
+    }
+  },
+  "limitations": [
+    "Deterministic local fixtures do not establish production repository, HSM, network, clock, operator, build-worker, or deployment security.",
+    "Private fixture keys exist only in process memory to construct signed test histories.",
+    "The rotation case revokes old online role keys through a root transition authorized by both old and new root thresholds. It does not establish recovery from total root-key compromise; that requires an independently authenticated trust anchor or explicit out-of-band recovery, and no automatic trust reset is implemented.",
+    "The receipt is test evidence, not canonical admission or production qualification."
+  ],
+  "production_qualification": false,
+  "python": "3.12.14",
+  "reuse_manifest_sha256": "d94f6f5fce7358c8b7684e53e99b25005fe6ce7d2e4072bc03eb08c605bc1f01",
+  "schema": "GardenReleaseVerificationQualificationReceipt/v1",
+  "scope": "Bounded fixture qualification using real upstream TUF and in-toto libraries.",
+  "source_files": [
+    {
+      "path": "implementation/garden_kernel/release_verification.py",
+      "sha256": "690ed42b3a67d1703427b991b1283ac74a5bd0fef109bad10595eab51783694b"
+    },
+    {
+      "path": "implementation/tests/supply_chain_fixture.py",
+      "sha256": "2d721a9b1c2aaea8115b22c9566cd65815ec1392635e6401c67f777c4437c09f"
+    },
+    {
+      "path": "implementation/tests/test_release_verification.py",
+      "sha256": "6461bfe85ef7a8a3ccb6ba86d4cefa3a2f49a9c20bf07f1a979ef82812c0d0ff"
+    },
+    {
+      "path": "scripts/qualify_release_verification.py",
+      "sha256": "df6162f6f465f25c5f7812bca5125b323854a1824cda3e6beba7afd098f683fd"
+    },
+    {
+      "path": "requirements/assurance.txt",
+      "sha256": "a9490d3402b53d84c706e540466442fa28875e4ea4dea428367d8f6db86b80ee"
+    },
+    {
+      "path": "reviews/v15.7/qualification/release/FUNCTION-CONTRACTS.json",
+      "sha256": "3187be54d45109d94d5e3a955ca1494fd6f66e4d1005fb84cbd4542b6d7ebe82"
+    },
+    {
+      "path": "reviews/v15.7/qualification/release/FUNCTION-CONTRACT-COVERAGE.json",
+      "sha256": "7386e6aedac0a924ddeb61a1ad952e63186705dbf412b8484747dd295e29e3ef"
+    }
+  ],
+  "status": "PASS",
+  "tool_versions": {
+    "in-toto": "3.1.0",
+    "securesystemslib": "1.5.1",
+    "tuf": "7.0.1"
+  }
+}

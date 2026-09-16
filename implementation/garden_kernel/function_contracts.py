@@ -203,18 +203,22 @@ def enumerate_scoped_public_functions(
         rel = path.relative_to(base).as_posix()
         tree = ast.parse(path.read_text(encoding="utf-8"), filename=rel)
         digest = _source_digest(path)
+        functions: list[tuple[str, ast.FunctionDef | ast.AsyncFunctionDef]] = []
         for node in tree.body:
-            if not isinstance(node, (ast.FunctionDef, ast.AsyncFunctionDef)):
-                continue
-            if node.name.startswith("_"):
-                continue
-            identity = f"{rel}::{node.name}"
+            if isinstance(node, (ast.FunctionDef, ast.AsyncFunctionDef)) and not node.name.startswith("_"):
+                functions.append((node.name, node))
+            elif isinstance(node, ast.ClassDef) and not node.name.startswith("_"):
+                for member in node.body:
+                    if isinstance(member, (ast.FunctionDef, ast.AsyncFunctionDef)) and not member.name.startswith("_"):
+                        functions.append((f"{node.name}.{member.name}", member))
+        for function_name, node in functions:
+            identity = f"{rel}::{function_name}"
             contract = contracts.get(identity)
             records.append(
                 FunctionSurfaceRecord(
                     identity=identity,
                     path=rel,
-                    function=node.name,
+                    function=function_name,
                     signature=_signature(node),
                     source_sha256=digest,
                     coverage_state="DECLARED_REFERENCE" if contract else "FRONTIER",

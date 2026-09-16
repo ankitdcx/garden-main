@@ -1,0 +1,2764 @@
+{
+  "schema": "GardenPhysicalAssuranceReceipt/v1",
+  "kind": "BOUNDED_REFERENCE_SIMULATION_NOT_HARDWARE",
+  "status": "BOUNDED_SCENARIOS_EXECUTED_NOT_CERTIFIED",
+  "source_delta_refs": [
+    "V156-EH-18",
+    "V156-EH-19"
+  ],
+  "implementation_sha256": "ba2129012be03e75bdd2a873d84639b8062dec6f125616368ec516be61b3029d",
+  "runner_sha256": "d7c515bf47ee106c806292b579a13f91fdee3ba65358329e3104167f192a40dd",
+  "python": "3.12.14",
+  "platform": "Linux-6.18.44-x86_64-with-glibc2.39",
+  "stpa_unsafe_control_actions": {
+    "UCA-1-missing-or-late-switch": {
+      "constraint": "switch before bounded margin is consumed",
+      "test": "test_late_handoff_records_assurance_loss"
+    },
+    "UCA-2-early-return": {
+      "constraint": "return requires dwell, revalidation, and fresh authority",
+      "test": "test_primary_return_requires_revalidation_and_fresh_authority"
+    },
+    "UCA-3-conflicting-commands": {
+      "constraint": "one fenced epoch may command the actuator",
+      "test": "test_two_agent_shared_actuator_hazard_is_blocked"
+    },
+    "UCA-4-incorrect-transfer": {
+      "constraint": "handoff transfer must authenticate controller, epoch, level, and time",
+      "test": "test_bad_transfer_is_rejected"
+    },
+    "UCA-5-stale-sensor-or-command": {
+      "constraint": "old epoch commands are rejected at actuator boundary",
+      "test": "test_stale_primary_command_is_fenced_after_handoff"
+    },
+    "UCA-6-unsafe-shutdown": {
+      "constraint": "outside recoverable region enters minimum-risk mode with assurance loss",
+      "test": "test_outside_recoverable_region_records_minimum_risk"
+    },
+    "UCA-7-two-agent-shared-actuator": {
+      "constraint": "conflicting valid agents need coordinated exclusive allocation",
+      "test": "test_two_agent_shared_actuator_hazard_is_blocked"
+    }
+  },
+  "scenarios": {
+    "bounded_lower_handoff": {
+      "kind": "BOUNDED_REFERENCE_SIMULATION_NOT_HARDWARE",
+      "assumptions": {
+        "safe_low": 0.0,
+        "safe_high": 10.0,
+        "actuator_limit": 1.0,
+        "disturbance_limit": 0.1,
+        "fallback_magnitude": 0.2,
+        "sensor_error_bound": 0.05,
+        "sensor_age_bound": 0.1,
+        "monitor_period": 0.1,
+        "handoff_delay_bound": 0.2,
+        "dt": 0.01,
+        "max_duration_s": 60.0,
+        "transfer_key": "REDACTED_SIMULATION_TOKEN"
+      },
+      "derived": {
+        "worst_outward_speed_m_per_s": 1.1,
+        "intervention_margin_m": 0.49000000000000005,
+        "switch_thresholds_measured_m": [
+          0.49000000000000005,
+          9.51
+        ]
+      },
+      "events": [
+        {
+          "event": "handoff_requested",
+          "time_s": 0.1,
+          "measured_level_m": 0.48999999999999994,
+          "epoch": 0
+        },
+        {
+          "event": "handoff_completed",
+          "time_s": 0.3,
+          "epoch": 1
+        }
+      ],
+      "trajectory": [
+        {
+          "time_s": 0.0,
+          "level_m": 0.55,
+          "controller": "primary",
+          "epoch": 0,
+          "command_m_per_s": -1.0,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.01,
+          "level_m": 0.539,
+          "controller": "primary",
+          "epoch": 0,
+          "command_m_per_s": -1.0,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.02,
+          "level_m": 0.528,
+          "controller": "primary",
+          "epoch": 0,
+          "command_m_per_s": -1.0,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.03,
+          "level_m": 0.517,
+          "controller": "primary",
+          "epoch": 0,
+          "command_m_per_s": -1.0,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.04,
+          "level_m": 0.506,
+          "controller": "primary",
+          "epoch": 0,
+          "command_m_per_s": -1.0,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.05,
+          "level_m": 0.495,
+          "controller": "primary",
+          "epoch": 0,
+          "command_m_per_s": -1.0,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.06,
+          "level_m": 0.484,
+          "controller": "primary",
+          "epoch": 0,
+          "command_m_per_s": -1.0,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.07,
+          "level_m": 0.473,
+          "controller": "primary",
+          "epoch": 0,
+          "command_m_per_s": -1.0,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.08,
+          "level_m": 0.46199999999999997,
+          "controller": "primary",
+          "epoch": 0,
+          "command_m_per_s": -1.0,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.09,
+          "level_m": 0.45099999999999996,
+          "controller": "primary",
+          "epoch": 0,
+          "command_m_per_s": -1.0,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.1,
+          "level_m": 0.43999999999999995,
+          "controller": "primary",
+          "epoch": 0,
+          "command_m_per_s": -1.0,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.11,
+          "level_m": 0.42899999999999994,
+          "controller": "primary",
+          "epoch": 0,
+          "command_m_per_s": -1.0,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.12,
+          "level_m": 0.4179999999999999,
+          "controller": "primary",
+          "epoch": 0,
+          "command_m_per_s": -1.0,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.13,
+          "level_m": 0.4069999999999999,
+          "controller": "primary",
+          "epoch": 0,
+          "command_m_per_s": -1.0,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.14,
+          "level_m": 0.3959999999999999,
+          "controller": "primary",
+          "epoch": 0,
+          "command_m_per_s": -1.0,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.15,
+          "level_m": 0.3849999999999999,
+          "controller": "primary",
+          "epoch": 0,
+          "command_m_per_s": -1.0,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.16,
+          "level_m": 0.3739999999999999,
+          "controller": "primary",
+          "epoch": 0,
+          "command_m_per_s": -1.0,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.17,
+          "level_m": 0.3629999999999999,
+          "controller": "primary",
+          "epoch": 0,
+          "command_m_per_s": -1.0,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.18,
+          "level_m": 0.35199999999999987,
+          "controller": "primary",
+          "epoch": 0,
+          "command_m_per_s": -1.0,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.19,
+          "level_m": 0.34099999999999986,
+          "controller": "primary",
+          "epoch": 0,
+          "command_m_per_s": -1.0,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.2,
+          "level_m": 0.32999999999999985,
+          "controller": "primary",
+          "epoch": 0,
+          "command_m_per_s": -1.0,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.21,
+          "level_m": 0.31899999999999984,
+          "controller": "primary",
+          "epoch": 0,
+          "command_m_per_s": -1.0,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.22,
+          "level_m": 0.30799999999999983,
+          "controller": "primary",
+          "epoch": 0,
+          "command_m_per_s": -1.0,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.23,
+          "level_m": 0.2969999999999998,
+          "controller": "primary",
+          "epoch": 0,
+          "command_m_per_s": -1.0,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.24,
+          "level_m": 0.2859999999999998,
+          "controller": "primary",
+          "epoch": 0,
+          "command_m_per_s": -1.0,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.25,
+          "level_m": 0.2749999999999998,
+          "controller": "primary",
+          "epoch": 0,
+          "command_m_per_s": -1.0,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.26,
+          "level_m": 0.2639999999999998,
+          "controller": "primary",
+          "epoch": 0,
+          "command_m_per_s": -1.0,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.27,
+          "level_m": 0.2529999999999998,
+          "controller": "primary",
+          "epoch": 0,
+          "command_m_per_s": -1.0,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.28,
+          "level_m": 0.24199999999999977,
+          "controller": "primary",
+          "epoch": 0,
+          "command_m_per_s": -1.0,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.29,
+          "level_m": 0.23099999999999976,
+          "controller": "primary",
+          "epoch": 0,
+          "command_m_per_s": -1.0,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.3,
+          "level_m": 0.21999999999999975,
+          "controller": "fallback",
+          "epoch": 1,
+          "command_m_per_s": 0.2,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.31,
+          "level_m": 0.22099999999999975,
+          "controller": "fallback",
+          "epoch": 1,
+          "command_m_per_s": 0.2,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.32,
+          "level_m": 0.22199999999999975,
+          "controller": "fallback",
+          "epoch": 1,
+          "command_m_per_s": 0.2,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.33,
+          "level_m": 0.22299999999999975,
+          "controller": "fallback",
+          "epoch": 1,
+          "command_m_per_s": 0.2,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.34,
+          "level_m": 0.22399999999999975,
+          "controller": "fallback",
+          "epoch": 1,
+          "command_m_per_s": 0.2,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.35,
+          "level_m": 0.22499999999999976,
+          "controller": "fallback",
+          "epoch": 1,
+          "command_m_per_s": 0.2,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.36,
+          "level_m": 0.22599999999999976,
+          "controller": "fallback",
+          "epoch": 1,
+          "command_m_per_s": 0.2,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.37,
+          "level_m": 0.22699999999999976,
+          "controller": "fallback",
+          "epoch": 1,
+          "command_m_per_s": 0.2,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.38,
+          "level_m": 0.22799999999999976,
+          "controller": "fallback",
+          "epoch": 1,
+          "command_m_per_s": 0.2,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.39,
+          "level_m": 0.22899999999999976,
+          "controller": "fallback",
+          "epoch": 1,
+          "command_m_per_s": 0.2,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.4,
+          "level_m": 0.22999999999999976,
+          "controller": "fallback",
+          "epoch": 1,
+          "command_m_per_s": 0.2,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.41,
+          "level_m": 0.23099999999999976,
+          "controller": "fallback",
+          "epoch": 1,
+          "command_m_per_s": 0.2,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.42,
+          "level_m": 0.23199999999999976,
+          "controller": "fallback",
+          "epoch": 1,
+          "command_m_per_s": 0.2,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.43,
+          "level_m": 0.23299999999999976,
+          "controller": "fallback",
+          "epoch": 1,
+          "command_m_per_s": 0.2,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.44,
+          "level_m": 0.23399999999999976,
+          "controller": "fallback",
+          "epoch": 1,
+          "command_m_per_s": 0.2,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.45,
+          "level_m": 0.23499999999999976,
+          "controller": "fallback",
+          "epoch": 1,
+          "command_m_per_s": 0.2,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.46,
+          "level_m": 0.23599999999999977,
+          "controller": "fallback",
+          "epoch": 1,
+          "command_m_per_s": 0.2,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.47,
+          "level_m": 0.23699999999999977,
+          "controller": "fallback",
+          "epoch": 1,
+          "command_m_per_s": 0.2,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.48,
+          "level_m": 0.23799999999999977,
+          "controller": "fallback",
+          "epoch": 1,
+          "command_m_per_s": 0.2,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.49,
+          "level_m": 0.23899999999999977,
+          "controller": "fallback",
+          "epoch": 1,
+          "command_m_per_s": 0.2,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.5,
+          "level_m": 0.23999999999999977,
+          "controller": "fallback",
+          "epoch": 1,
+          "command_m_per_s": 0.2,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.51,
+          "level_m": 0.24099999999999977,
+          "controller": "fallback",
+          "epoch": 1,
+          "command_m_per_s": 0.2,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.52,
+          "level_m": 0.24199999999999977,
+          "controller": "fallback",
+          "epoch": 1,
+          "command_m_per_s": 0.2,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.53,
+          "level_m": 0.24299999999999977,
+          "controller": "fallback",
+          "epoch": 1,
+          "command_m_per_s": 0.2,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.54,
+          "level_m": 0.24399999999999977,
+          "controller": "fallback",
+          "epoch": 1,
+          "command_m_per_s": 0.2,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.55,
+          "level_m": 0.24499999999999977,
+          "controller": "fallback",
+          "epoch": 1,
+          "command_m_per_s": 0.2,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.56,
+          "level_m": 0.24599999999999977,
+          "controller": "fallback",
+          "epoch": 1,
+          "command_m_per_s": 0.2,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.57,
+          "level_m": 0.24699999999999978,
+          "controller": "fallback",
+          "epoch": 1,
+          "command_m_per_s": 0.2,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.58,
+          "level_m": 0.24799999999999978,
+          "controller": "fallback",
+          "epoch": 1,
+          "command_m_per_s": 0.2,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.59,
+          "level_m": 0.24899999999999978,
+          "controller": "fallback",
+          "epoch": 1,
+          "command_m_per_s": 0.2,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.6,
+          "level_m": 0.24999999999999978,
+          "controller": "fallback",
+          "epoch": 1,
+          "command_m_per_s": 0.2,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.61,
+          "level_m": 0.2509999999999998,
+          "controller": "fallback",
+          "epoch": 1,
+          "command_m_per_s": 0.2,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.62,
+          "level_m": 0.2519999999999998,
+          "controller": "fallback",
+          "epoch": 1,
+          "command_m_per_s": 0.2,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.63,
+          "level_m": 0.2529999999999998,
+          "controller": "fallback",
+          "epoch": 1,
+          "command_m_per_s": 0.2,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.64,
+          "level_m": 0.2539999999999998,
+          "controller": "fallback",
+          "epoch": 1,
+          "command_m_per_s": 0.2,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.65,
+          "level_m": 0.2549999999999998,
+          "controller": "fallback",
+          "epoch": 1,
+          "command_m_per_s": 0.2,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.66,
+          "level_m": 0.2559999999999998,
+          "controller": "fallback",
+          "epoch": 1,
+          "command_m_per_s": 0.2,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.67,
+          "level_m": 0.2569999999999998,
+          "controller": "fallback",
+          "epoch": 1,
+          "command_m_per_s": 0.2,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.68,
+          "level_m": 0.2579999999999998,
+          "controller": "fallback",
+          "epoch": 1,
+          "command_m_per_s": 0.2,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.69,
+          "level_m": 0.2589999999999998,
+          "controller": "fallback",
+          "epoch": 1,
+          "command_m_per_s": 0.2,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.7,
+          "level_m": 0.2599999999999998,
+          "controller": "fallback",
+          "epoch": 1,
+          "command_m_per_s": 0.2,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.71,
+          "level_m": 0.2609999999999998,
+          "controller": "fallback",
+          "epoch": 1,
+          "command_m_per_s": 0.2,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.72,
+          "level_m": 0.2619999999999998,
+          "controller": "fallback",
+          "epoch": 1,
+          "command_m_per_s": 0.2,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.73,
+          "level_m": 0.2629999999999998,
+          "controller": "fallback",
+          "epoch": 1,
+          "command_m_per_s": 0.2,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.74,
+          "level_m": 0.2639999999999998,
+          "controller": "fallback",
+          "epoch": 1,
+          "command_m_per_s": 0.2,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.75,
+          "level_m": 0.2649999999999998,
+          "controller": "fallback",
+          "epoch": 1,
+          "command_m_per_s": 0.2,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.76,
+          "level_m": 0.2659999999999998,
+          "controller": "fallback",
+          "epoch": 1,
+          "command_m_per_s": 0.2,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.77,
+          "level_m": 0.2669999999999998,
+          "controller": "fallback",
+          "epoch": 1,
+          "command_m_per_s": 0.2,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.78,
+          "level_m": 0.2679999999999998,
+          "controller": "fallback",
+          "epoch": 1,
+          "command_m_per_s": 0.2,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.79,
+          "level_m": 0.2689999999999998,
+          "controller": "fallback",
+          "epoch": 1,
+          "command_m_per_s": 0.2,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.8,
+          "level_m": 0.2699999999999998,
+          "controller": "fallback",
+          "epoch": 1,
+          "command_m_per_s": 0.2,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.81,
+          "level_m": 0.2709999999999998,
+          "controller": "fallback",
+          "epoch": 1,
+          "command_m_per_s": 0.2,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.82,
+          "level_m": 0.2719999999999998,
+          "controller": "fallback",
+          "epoch": 1,
+          "command_m_per_s": 0.2,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.83,
+          "level_m": 0.2729999999999998,
+          "controller": "fallback",
+          "epoch": 1,
+          "command_m_per_s": 0.2,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.84,
+          "level_m": 0.2739999999999998,
+          "controller": "fallback",
+          "epoch": 1,
+          "command_m_per_s": 0.2,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.85,
+          "level_m": 0.2749999999999998,
+          "controller": "fallback",
+          "epoch": 1,
+          "command_m_per_s": 0.2,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.86,
+          "level_m": 0.2759999999999998,
+          "controller": "fallback",
+          "epoch": 1,
+          "command_m_per_s": 0.2,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.87,
+          "level_m": 0.2769999999999998,
+          "controller": "fallback",
+          "epoch": 1,
+          "command_m_per_s": 0.2,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.88,
+          "level_m": 0.2779999999999998,
+          "controller": "fallback",
+          "epoch": 1,
+          "command_m_per_s": 0.2,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.89,
+          "level_m": 0.2789999999999998,
+          "controller": "fallback",
+          "epoch": 1,
+          "command_m_per_s": 0.2,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.9,
+          "level_m": 0.2799999999999998,
+          "controller": "fallback",
+          "epoch": 1,
+          "command_m_per_s": 0.2,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.91,
+          "level_m": 0.2809999999999998,
+          "controller": "fallback",
+          "epoch": 1,
+          "command_m_per_s": 0.2,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.92,
+          "level_m": 0.2819999999999998,
+          "controller": "fallback",
+          "epoch": 1,
+          "command_m_per_s": 0.2,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.93,
+          "level_m": 0.2829999999999998,
+          "controller": "fallback",
+          "epoch": 1,
+          "command_m_per_s": 0.2,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.94,
+          "level_m": 0.2839999999999998,
+          "controller": "fallback",
+          "epoch": 1,
+          "command_m_per_s": 0.2,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.95,
+          "level_m": 0.2849999999999998,
+          "controller": "fallback",
+          "epoch": 1,
+          "command_m_per_s": 0.2,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.96,
+          "level_m": 0.2859999999999998,
+          "controller": "fallback",
+          "epoch": 1,
+          "command_m_per_s": 0.2,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.97,
+          "level_m": 0.2869999999999998,
+          "controller": "fallback",
+          "epoch": 1,
+          "command_m_per_s": 0.2,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.98,
+          "level_m": 0.2879999999999998,
+          "controller": "fallback",
+          "epoch": 1,
+          "command_m_per_s": 0.2,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.99,
+          "level_m": 0.2889999999999998,
+          "controller": "fallback",
+          "epoch": 1,
+          "command_m_per_s": 0.2,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 1.0,
+          "level_m": 0.28999999999999976,
+          "controller": "fallback",
+          "epoch": 1,
+          "command_m_per_s": 0.2,
+          "disturbance_m_per_s": -0.1
+        }
+      ],
+      "safety_result": {
+        "envelope_held_at_sampled_points": true,
+        "minimum_level_m": 0.21999999999999975,
+        "maximum_level_m": 0.55,
+        "assurance_loss": [],
+        "rejected_stale_commands": 71,
+        "recorded_horizon_end_s": 1.0
+      },
+      "limitations": [
+        "Euler reference integration, not a continuous-time proof",
+        "No physical actuation or hardware independence claim",
+        "Authenticated transfer uses HMAC-SHA-256 only as a deterministic simulation token, not production key management or cryptography"
+      ]
+    },
+    "handoff_delay_counterexample": {
+      "kind": "BOUNDED_REFERENCE_SIMULATION_NOT_HARDWARE",
+      "assumptions": {
+        "safe_low": 0.0,
+        "safe_high": 10.0,
+        "actuator_limit": 1.0,
+        "disturbance_limit": 0.1,
+        "fallback_magnitude": 0.2,
+        "sensor_error_bound": 0.05,
+        "sensor_age_bound": 0.1,
+        "monitor_period": 0.1,
+        "handoff_delay_bound": 0.2,
+        "dt": 0.01,
+        "max_duration_s": 60.0,
+        "transfer_key": "REDACTED_SIMULATION_TOKEN"
+      },
+      "derived": {
+        "worst_outward_speed_m_per_s": 1.1,
+        "intervention_margin_m": 0.49000000000000005,
+        "switch_thresholds_measured_m": [
+          0.49000000000000005,
+          9.51
+        ]
+      },
+      "events": [
+        {
+          "event": "handoff_requested",
+          "time_s": 0.4,
+          "measured_level_m": 0.40999999999999964,
+          "epoch": 0
+        },
+        {
+          "event": "minimum_risk_fallback",
+          "time_s": 0.73,
+          "reason": "SAFE_ENVELOPE_VIOLATED",
+          "epoch": 1
+        }
+      ],
+      "trajectory": [
+        {
+          "time_s": 0.0,
+          "level_m": 0.8,
+          "controller": "primary",
+          "epoch": 0,
+          "command_m_per_s": -1.0,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.01,
+          "level_m": 0.789,
+          "controller": "primary",
+          "epoch": 0,
+          "command_m_per_s": -1.0,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.02,
+          "level_m": 0.778,
+          "controller": "primary",
+          "epoch": 0,
+          "command_m_per_s": -1.0,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.03,
+          "level_m": 0.767,
+          "controller": "primary",
+          "epoch": 0,
+          "command_m_per_s": -1.0,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.04,
+          "level_m": 0.756,
+          "controller": "primary",
+          "epoch": 0,
+          "command_m_per_s": -1.0,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.05,
+          "level_m": 0.745,
+          "controller": "primary",
+          "epoch": 0,
+          "command_m_per_s": -1.0,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.06,
+          "level_m": 0.734,
+          "controller": "primary",
+          "epoch": 0,
+          "command_m_per_s": -1.0,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.07,
+          "level_m": 0.723,
+          "controller": "primary",
+          "epoch": 0,
+          "command_m_per_s": -1.0,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.08,
+          "level_m": 0.712,
+          "controller": "primary",
+          "epoch": 0,
+          "command_m_per_s": -1.0,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.09,
+          "level_m": 0.701,
+          "controller": "primary",
+          "epoch": 0,
+          "command_m_per_s": -1.0,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.1,
+          "level_m": 0.69,
+          "controller": "primary",
+          "epoch": 0,
+          "command_m_per_s": -1.0,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.11,
+          "level_m": 0.6789999999999999,
+          "controller": "primary",
+          "epoch": 0,
+          "command_m_per_s": -1.0,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.12,
+          "level_m": 0.6679999999999999,
+          "controller": "primary",
+          "epoch": 0,
+          "command_m_per_s": -1.0,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.13,
+          "level_m": 0.6569999999999999,
+          "controller": "primary",
+          "epoch": 0,
+          "command_m_per_s": -1.0,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.14,
+          "level_m": 0.6459999999999999,
+          "controller": "primary",
+          "epoch": 0,
+          "command_m_per_s": -1.0,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.15,
+          "level_m": 0.6349999999999999,
+          "controller": "primary",
+          "epoch": 0,
+          "command_m_per_s": -1.0,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.16,
+          "level_m": 0.6239999999999999,
+          "controller": "primary",
+          "epoch": 0,
+          "command_m_per_s": -1.0,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.17,
+          "level_m": 0.6129999999999999,
+          "controller": "primary",
+          "epoch": 0,
+          "command_m_per_s": -1.0,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.18,
+          "level_m": 0.6019999999999999,
+          "controller": "primary",
+          "epoch": 0,
+          "command_m_per_s": -1.0,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.19,
+          "level_m": 0.5909999999999999,
+          "controller": "primary",
+          "epoch": 0,
+          "command_m_per_s": -1.0,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.2,
+          "level_m": 0.5799999999999998,
+          "controller": "primary",
+          "epoch": 0,
+          "command_m_per_s": -1.0,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.21,
+          "level_m": 0.5689999999999998,
+          "controller": "primary",
+          "epoch": 0,
+          "command_m_per_s": -1.0,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.22,
+          "level_m": 0.5579999999999998,
+          "controller": "primary",
+          "epoch": 0,
+          "command_m_per_s": -1.0,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.23,
+          "level_m": 0.5469999999999998,
+          "controller": "primary",
+          "epoch": 0,
+          "command_m_per_s": -1.0,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.24,
+          "level_m": 0.5359999999999998,
+          "controller": "primary",
+          "epoch": 0,
+          "command_m_per_s": -1.0,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.25,
+          "level_m": 0.5249999999999998,
+          "controller": "primary",
+          "epoch": 0,
+          "command_m_per_s": -1.0,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.26,
+          "level_m": 0.5139999999999998,
+          "controller": "primary",
+          "epoch": 0,
+          "command_m_per_s": -1.0,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.27,
+          "level_m": 0.5029999999999998,
+          "controller": "primary",
+          "epoch": 0,
+          "command_m_per_s": -1.0,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.28,
+          "level_m": 0.49199999999999977,
+          "controller": "primary",
+          "epoch": 0,
+          "command_m_per_s": -1.0,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.29,
+          "level_m": 0.48099999999999976,
+          "controller": "primary",
+          "epoch": 0,
+          "command_m_per_s": -1.0,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.3,
+          "level_m": 0.46999999999999975,
+          "controller": "primary",
+          "epoch": 0,
+          "command_m_per_s": -1.0,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.31,
+          "level_m": 0.45899999999999974,
+          "controller": "primary",
+          "epoch": 0,
+          "command_m_per_s": -1.0,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.32,
+          "level_m": 0.44799999999999973,
+          "controller": "primary",
+          "epoch": 0,
+          "command_m_per_s": -1.0,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.33,
+          "level_m": 0.4369999999999997,
+          "controller": "primary",
+          "epoch": 0,
+          "command_m_per_s": -1.0,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.34,
+          "level_m": 0.4259999999999997,
+          "controller": "primary",
+          "epoch": 0,
+          "command_m_per_s": -1.0,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.35,
+          "level_m": 0.4149999999999997,
+          "controller": "primary",
+          "epoch": 0,
+          "command_m_per_s": -1.0,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.36,
+          "level_m": 0.4039999999999997,
+          "controller": "primary",
+          "epoch": 0,
+          "command_m_per_s": -1.0,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.37,
+          "level_m": 0.3929999999999997,
+          "controller": "primary",
+          "epoch": 0,
+          "command_m_per_s": -1.0,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.38,
+          "level_m": 0.3819999999999997,
+          "controller": "primary",
+          "epoch": 0,
+          "command_m_per_s": -1.0,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.39,
+          "level_m": 0.37099999999999966,
+          "controller": "primary",
+          "epoch": 0,
+          "command_m_per_s": -1.0,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.4,
+          "level_m": 0.35999999999999965,
+          "controller": "primary",
+          "epoch": 0,
+          "command_m_per_s": -1.0,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.41,
+          "level_m": 0.34899999999999964,
+          "controller": "primary",
+          "epoch": 0,
+          "command_m_per_s": -1.0,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.42,
+          "level_m": 0.33799999999999963,
+          "controller": "primary",
+          "epoch": 0,
+          "command_m_per_s": -1.0,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.43,
+          "level_m": 0.3269999999999996,
+          "controller": "primary",
+          "epoch": 0,
+          "command_m_per_s": -1.0,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.44,
+          "level_m": 0.3159999999999996,
+          "controller": "primary",
+          "epoch": 0,
+          "command_m_per_s": -1.0,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.45,
+          "level_m": 0.3049999999999996,
+          "controller": "primary",
+          "epoch": 0,
+          "command_m_per_s": -1.0,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.46,
+          "level_m": 0.2939999999999996,
+          "controller": "primary",
+          "epoch": 0,
+          "command_m_per_s": -1.0,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.47,
+          "level_m": 0.2829999999999996,
+          "controller": "primary",
+          "epoch": 0,
+          "command_m_per_s": -1.0,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.48,
+          "level_m": 0.2719999999999996,
+          "controller": "primary",
+          "epoch": 0,
+          "command_m_per_s": -1.0,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.49,
+          "level_m": 0.26099999999999957,
+          "controller": "primary",
+          "epoch": 0,
+          "command_m_per_s": -1.0,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.5,
+          "level_m": 0.24999999999999956,
+          "controller": "primary",
+          "epoch": 0,
+          "command_m_per_s": -1.0,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.51,
+          "level_m": 0.23899999999999955,
+          "controller": "primary",
+          "epoch": 0,
+          "command_m_per_s": -1.0,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.52,
+          "level_m": 0.22799999999999954,
+          "controller": "primary",
+          "epoch": 0,
+          "command_m_per_s": -1.0,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.53,
+          "level_m": 0.21699999999999953,
+          "controller": "primary",
+          "epoch": 0,
+          "command_m_per_s": -1.0,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.54,
+          "level_m": 0.20599999999999952,
+          "controller": "primary",
+          "epoch": 0,
+          "command_m_per_s": -1.0,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.55,
+          "level_m": 0.1949999999999995,
+          "controller": "primary",
+          "epoch": 0,
+          "command_m_per_s": -1.0,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.56,
+          "level_m": 0.1839999999999995,
+          "controller": "primary",
+          "epoch": 0,
+          "command_m_per_s": -1.0,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.57,
+          "level_m": 0.1729999999999995,
+          "controller": "primary",
+          "epoch": 0,
+          "command_m_per_s": -1.0,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.58,
+          "level_m": 0.16199999999999948,
+          "controller": "primary",
+          "epoch": 0,
+          "command_m_per_s": -1.0,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.59,
+          "level_m": 0.15099999999999947,
+          "controller": "primary",
+          "epoch": 0,
+          "command_m_per_s": -1.0,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.6,
+          "level_m": 0.13999999999999946,
+          "controller": "primary",
+          "epoch": 0,
+          "command_m_per_s": -1.0,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.61,
+          "level_m": 0.12899999999999945,
+          "controller": "primary",
+          "epoch": 0,
+          "command_m_per_s": -1.0,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.62,
+          "level_m": 0.11799999999999945,
+          "controller": "primary",
+          "epoch": 0,
+          "command_m_per_s": -1.0,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.63,
+          "level_m": 0.10699999999999946,
+          "controller": "primary",
+          "epoch": 0,
+          "command_m_per_s": -1.0,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.64,
+          "level_m": 0.09599999999999946,
+          "controller": "primary",
+          "epoch": 0,
+          "command_m_per_s": -1.0,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.65,
+          "level_m": 0.08499999999999946,
+          "controller": "primary",
+          "epoch": 0,
+          "command_m_per_s": -1.0,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.66,
+          "level_m": 0.07399999999999947,
+          "controller": "primary",
+          "epoch": 0,
+          "command_m_per_s": -1.0,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.67,
+          "level_m": 0.06299999999999947,
+          "controller": "primary",
+          "epoch": 0,
+          "command_m_per_s": -1.0,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.68,
+          "level_m": 0.05199999999999947,
+          "controller": "primary",
+          "epoch": 0,
+          "command_m_per_s": -1.0,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.69,
+          "level_m": 0.04099999999999947,
+          "controller": "primary",
+          "epoch": 0,
+          "command_m_per_s": -1.0,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.7,
+          "level_m": 0.029999999999999465,
+          "controller": "primary",
+          "epoch": 0,
+          "command_m_per_s": -1.0,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.71,
+          "level_m": 0.018999999999999462,
+          "controller": "primary",
+          "epoch": 0,
+          "command_m_per_s": -1.0,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.72,
+          "level_m": 0.00799999999999946,
+          "controller": "primary",
+          "epoch": 0,
+          "command_m_per_s": -1.0,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.73,
+          "level_m": -0.0030000000000005404,
+          "controller": "primary",
+          "epoch": 0,
+          "command_m_per_s": -1.0,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.74,
+          "level_m": -0.014000000000000542,
+          "controller": "fallback",
+          "epoch": 1,
+          "command_m_per_s": 0.2,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.75,
+          "level_m": -0.013000000000000542,
+          "controller": "fallback",
+          "epoch": 1,
+          "command_m_per_s": 0.2,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.76,
+          "level_m": -0.012000000000000541,
+          "controller": "fallback",
+          "epoch": 1,
+          "command_m_per_s": 0.2,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.77,
+          "level_m": -0.01100000000000054,
+          "controller": "fallback",
+          "epoch": 1,
+          "command_m_per_s": 0.2,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.78,
+          "level_m": -0.01000000000000054,
+          "controller": "fallback",
+          "epoch": 1,
+          "command_m_per_s": 0.2,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.79,
+          "level_m": -0.009000000000000539,
+          "controller": "fallback",
+          "epoch": 1,
+          "command_m_per_s": 0.2,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.8,
+          "level_m": -0.008000000000000538,
+          "controller": "fallback",
+          "epoch": 1,
+          "command_m_per_s": 0.2,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.81,
+          "level_m": -0.007000000000000538,
+          "controller": "fallback",
+          "epoch": 1,
+          "command_m_per_s": 0.2,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.82,
+          "level_m": -0.006000000000000538,
+          "controller": "fallback",
+          "epoch": 1,
+          "command_m_per_s": 0.2,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.83,
+          "level_m": -0.005000000000000538,
+          "controller": "fallback",
+          "epoch": 1,
+          "command_m_per_s": 0.2,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.84,
+          "level_m": -0.004000000000000538,
+          "controller": "fallback",
+          "epoch": 1,
+          "command_m_per_s": 0.2,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.85,
+          "level_m": -0.003000000000000538,
+          "controller": "fallback",
+          "epoch": 1,
+          "command_m_per_s": 0.2,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.86,
+          "level_m": -0.002000000000000538,
+          "controller": "fallback",
+          "epoch": 1,
+          "command_m_per_s": 0.2,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.87,
+          "level_m": -0.0010000000000005378,
+          "controller": "fallback",
+          "epoch": 1,
+          "command_m_per_s": 0.2,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.88,
+          "level_m": -5.377642775528102e-16,
+          "controller": "fallback",
+          "epoch": 1,
+          "command_m_per_s": 0.2,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.89,
+          "level_m": 0.0009999999999994623,
+          "controller": "fallback",
+          "epoch": 1,
+          "command_m_per_s": 0.2,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.9,
+          "level_m": 0.0019999999999994623,
+          "controller": "fallback",
+          "epoch": 1,
+          "command_m_per_s": 0.2,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.91,
+          "level_m": 0.0029999999999994623,
+          "controller": "fallback",
+          "epoch": 1,
+          "command_m_per_s": 0.2,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.92,
+          "level_m": 0.003999999999999462,
+          "controller": "fallback",
+          "epoch": 1,
+          "command_m_per_s": 0.2,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.93,
+          "level_m": 0.004999999999999462,
+          "controller": "fallback",
+          "epoch": 1,
+          "command_m_per_s": 0.2,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.94,
+          "level_m": 0.005999999999999462,
+          "controller": "fallback",
+          "epoch": 1,
+          "command_m_per_s": 0.2,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.95,
+          "level_m": 0.006999999999999462,
+          "controller": "fallback",
+          "epoch": 1,
+          "command_m_per_s": 0.2,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.96,
+          "level_m": 0.007999999999999462,
+          "controller": "fallback",
+          "epoch": 1,
+          "command_m_per_s": 0.2,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.97,
+          "level_m": 0.008999999999999463,
+          "controller": "fallback",
+          "epoch": 1,
+          "command_m_per_s": 0.2,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.98,
+          "level_m": 0.009999999999999464,
+          "controller": "fallback",
+          "epoch": 1,
+          "command_m_per_s": 0.2,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.99,
+          "level_m": 0.010999999999999465,
+          "controller": "fallback",
+          "epoch": 1,
+          "command_m_per_s": 0.2,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 1.0,
+          "level_m": 0.011999999999999466,
+          "controller": "fallback",
+          "epoch": 1,
+          "command_m_per_s": 0.2,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 1.01,
+          "level_m": 0.012999999999999467,
+          "controller": "fallback",
+          "epoch": 1,
+          "command_m_per_s": 0.2,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 1.02,
+          "level_m": 0.013999999999999468,
+          "controller": "fallback",
+          "epoch": 1,
+          "command_m_per_s": 0.2,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 1.03,
+          "level_m": 0.014999999999999469,
+          "controller": "fallback",
+          "epoch": 1,
+          "command_m_per_s": 0.2,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 1.04,
+          "level_m": 0.01599999999999947,
+          "controller": "fallback",
+          "epoch": 1,
+          "command_m_per_s": 0.2,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 1.05,
+          "level_m": 0.01699999999999947,
+          "controller": "fallback",
+          "epoch": 1,
+          "command_m_per_s": 0.2,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 1.06,
+          "level_m": 0.01799999999999947,
+          "controller": "fallback",
+          "epoch": 1,
+          "command_m_per_s": 0.2,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 1.07,
+          "level_m": 0.018999999999999472,
+          "controller": "fallback",
+          "epoch": 1,
+          "command_m_per_s": 0.2,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 1.08,
+          "level_m": 0.019999999999999473,
+          "controller": "fallback",
+          "epoch": 1,
+          "command_m_per_s": 0.2,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 1.09,
+          "level_m": 0.020999999999999474,
+          "controller": "fallback",
+          "epoch": 1,
+          "command_m_per_s": 0.2,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 1.1,
+          "level_m": 0.0219999999999994,
+          "controller": "fallback",
+          "epoch": 1,
+          "command_m_per_s": 0.2,
+          "disturbance_m_per_s": -0.1
+        }
+      ],
+      "safety_result": {
+        "envelope_held_at_sampled_points": false,
+        "minimum_level_m": -0.014000000000000542,
+        "maximum_level_m": 0.8,
+        "assurance_loss": [
+          "LATE_HANDOFF",
+          "SAFE_ENVELOPE_VIOLATED"
+        ],
+        "rejected_stale_commands": 37,
+        "recorded_horizon_end_s": 1.1
+      },
+      "limitations": [
+        "Euler reference integration, not a continuous-time proof",
+        "No physical actuation or hardware independence claim",
+        "Authenticated transfer uses HMAC-SHA-256 only as a deterministic simulation token, not production key management or cryptography"
+      ]
+    },
+    "outside_recoverable_minimum_risk": {
+      "kind": "BOUNDED_REFERENCE_SIMULATION_NOT_HARDWARE",
+      "assumptions": {
+        "safe_low": 0.0,
+        "safe_high": 10.0,
+        "actuator_limit": 1.0,
+        "disturbance_limit": 0.1,
+        "fallback_magnitude": 0.2,
+        "sensor_error_bound": 0.05,
+        "sensor_age_bound": 0.1,
+        "monitor_period": 0.1,
+        "handoff_delay_bound": 0.2,
+        "dt": 0.01,
+        "max_duration_s": 60.0,
+        "transfer_key": "REDACTED_SIMULATION_TOKEN"
+      },
+      "derived": {
+        "worst_outward_speed_m_per_s": 1.1,
+        "intervention_margin_m": 0.49000000000000005,
+        "switch_thresholds_measured_m": [
+          0.49000000000000005,
+          9.51
+        ]
+      },
+      "events": [
+        {
+          "event": "minimum_risk_fallback",
+          "time_s": 0.0,
+          "reason": "OUTSIDE_RECOVERABLE_REGION",
+          "epoch": 1
+        }
+      ],
+      "trajectory": [
+        {
+          "time_s": 0.0,
+          "level_m": 0.2,
+          "controller": "fallback",
+          "epoch": 1,
+          "command_m_per_s": 0.2,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.01,
+          "level_m": 0.201,
+          "controller": "fallback",
+          "epoch": 1,
+          "command_m_per_s": 0.2,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.02,
+          "level_m": 0.202,
+          "controller": "fallback",
+          "epoch": 1,
+          "command_m_per_s": 0.2,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.03,
+          "level_m": 0.203,
+          "controller": "fallback",
+          "epoch": 1,
+          "command_m_per_s": 0.2,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.04,
+          "level_m": 0.20400000000000001,
+          "controller": "fallback",
+          "epoch": 1,
+          "command_m_per_s": 0.2,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.05,
+          "level_m": 0.20500000000000002,
+          "controller": "fallback",
+          "epoch": 1,
+          "command_m_per_s": 0.2,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.06,
+          "level_m": 0.20600000000000002,
+          "controller": "fallback",
+          "epoch": 1,
+          "command_m_per_s": 0.2,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.07,
+          "level_m": 0.20700000000000002,
+          "controller": "fallback",
+          "epoch": 1,
+          "command_m_per_s": 0.2,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.08,
+          "level_m": 0.20800000000000002,
+          "controller": "fallback",
+          "epoch": 1,
+          "command_m_per_s": 0.2,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.09,
+          "level_m": 0.20900000000000002,
+          "controller": "fallback",
+          "epoch": 1,
+          "command_m_per_s": 0.2,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.1,
+          "level_m": 0.21000000000000002,
+          "controller": "fallback",
+          "epoch": 1,
+          "command_m_per_s": 0.2,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.11,
+          "level_m": 0.21100000000000002,
+          "controller": "fallback",
+          "epoch": 1,
+          "command_m_per_s": 0.2,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.12,
+          "level_m": 0.21200000000000002,
+          "controller": "fallback",
+          "epoch": 1,
+          "command_m_per_s": 0.2,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.13,
+          "level_m": 0.21300000000000002,
+          "controller": "fallback",
+          "epoch": 1,
+          "command_m_per_s": 0.2,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.14,
+          "level_m": 0.21400000000000002,
+          "controller": "fallback",
+          "epoch": 1,
+          "command_m_per_s": 0.2,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.15,
+          "level_m": 0.21500000000000002,
+          "controller": "fallback",
+          "epoch": 1,
+          "command_m_per_s": 0.2,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.16,
+          "level_m": 0.21600000000000003,
+          "controller": "fallback",
+          "epoch": 1,
+          "command_m_per_s": 0.2,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.17,
+          "level_m": 0.21700000000000003,
+          "controller": "fallback",
+          "epoch": 1,
+          "command_m_per_s": 0.2,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.18,
+          "level_m": 0.21800000000000003,
+          "controller": "fallback",
+          "epoch": 1,
+          "command_m_per_s": 0.2,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.19,
+          "level_m": 0.21900000000000003,
+          "controller": "fallback",
+          "epoch": 1,
+          "command_m_per_s": 0.2,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.2,
+          "level_m": 0.22000000000000003,
+          "controller": "fallback",
+          "epoch": 1,
+          "command_m_per_s": 0.2,
+          "disturbance_m_per_s": -0.1
+        }
+      ],
+      "safety_result": {
+        "envelope_held_at_sampled_points": true,
+        "minimum_level_m": 0.2,
+        "maximum_level_m": 0.22000000000000003,
+        "assurance_loss": [
+          "OUTSIDE_RECOVERABLE_REGION"
+        ],
+        "rejected_stale_commands": 21,
+        "recorded_horizon_end_s": 0.2
+      },
+      "limitations": [
+        "Euler reference integration, not a continuous-time proof",
+        "No physical actuation or hardware independence claim",
+        "Authenticated transfer uses HMAC-SHA-256 only as a deterministic simulation token, not production key management or cryptography"
+      ]
+    },
+    "controller_timeout_minimum_risk": {
+      "kind": "BOUNDED_REFERENCE_SIMULATION_NOT_HARDWARE",
+      "assumptions": {
+        "safe_low": 0.0,
+        "safe_high": 10.0,
+        "actuator_limit": 1.0,
+        "disturbance_limit": 0.1,
+        "fallback_magnitude": 0.2,
+        "sensor_error_bound": 0.05,
+        "sensor_age_bound": 0.1,
+        "monitor_period": 0.1,
+        "handoff_delay_bound": 0.2,
+        "dt": 0.01,
+        "max_duration_s": 60.0,
+        "transfer_key": "REDACTED_SIMULATION_TOKEN"
+      },
+      "derived": {
+        "worst_outward_speed_m_per_s": 1.1,
+        "intervention_margin_m": 0.49000000000000005,
+        "switch_thresholds_measured_m": [
+          0.49000000000000005,
+          9.51
+        ]
+      },
+      "events": [
+        {
+          "event": "minimum_risk_fallback",
+          "time_s": 0.0,
+          "reason": "CONTROLLER_TIMEOUT",
+          "epoch": 1
+        }
+      ],
+      "trajectory": [
+        {
+          "time_s": 0.0,
+          "level_m": 5.0,
+          "controller": "fallback",
+          "epoch": 1,
+          "command_m_per_s": 0.2,
+          "disturbance_m_per_s": 0.0
+        },
+        {
+          "time_s": 0.01,
+          "level_m": 5.002,
+          "controller": "fallback",
+          "epoch": 1,
+          "command_m_per_s": -0.2,
+          "disturbance_m_per_s": 0.0
+        },
+        {
+          "time_s": 0.02,
+          "level_m": 5.0,
+          "controller": "fallback",
+          "epoch": 1,
+          "command_m_per_s": 0.2,
+          "disturbance_m_per_s": 0.0
+        },
+        {
+          "time_s": 0.03,
+          "level_m": 5.002,
+          "controller": "fallback",
+          "epoch": 1,
+          "command_m_per_s": -0.2,
+          "disturbance_m_per_s": 0.0
+        },
+        {
+          "time_s": 0.04,
+          "level_m": 5.0,
+          "controller": "fallback",
+          "epoch": 1,
+          "command_m_per_s": 0.2,
+          "disturbance_m_per_s": 0.0
+        },
+        {
+          "time_s": 0.05,
+          "level_m": 5.002,
+          "controller": "fallback",
+          "epoch": 1,
+          "command_m_per_s": -0.2,
+          "disturbance_m_per_s": 0.0
+        },
+        {
+          "time_s": 0.06,
+          "level_m": 5.0,
+          "controller": "fallback",
+          "epoch": 1,
+          "command_m_per_s": 0.2,
+          "disturbance_m_per_s": 0.0
+        },
+        {
+          "time_s": 0.07,
+          "level_m": 5.002,
+          "controller": "fallback",
+          "epoch": 1,
+          "command_m_per_s": -0.2,
+          "disturbance_m_per_s": 0.0
+        },
+        {
+          "time_s": 0.08,
+          "level_m": 5.0,
+          "controller": "fallback",
+          "epoch": 1,
+          "command_m_per_s": 0.2,
+          "disturbance_m_per_s": 0.0
+        },
+        {
+          "time_s": 0.09,
+          "level_m": 5.002,
+          "controller": "fallback",
+          "epoch": 1,
+          "command_m_per_s": -0.2,
+          "disturbance_m_per_s": 0.0
+        },
+        {
+          "time_s": 0.1,
+          "level_m": 5.0,
+          "controller": "fallback",
+          "epoch": 1,
+          "command_m_per_s": 0.2,
+          "disturbance_m_per_s": 0.0
+        },
+        {
+          "time_s": 0.11,
+          "level_m": 5.002,
+          "controller": "fallback",
+          "epoch": 1,
+          "command_m_per_s": -0.2,
+          "disturbance_m_per_s": 0.0
+        },
+        {
+          "time_s": 0.12,
+          "level_m": 5.0,
+          "controller": "fallback",
+          "epoch": 1,
+          "command_m_per_s": 0.2,
+          "disturbance_m_per_s": 0.0
+        },
+        {
+          "time_s": 0.13,
+          "level_m": 5.002,
+          "controller": "fallback",
+          "epoch": 1,
+          "command_m_per_s": -0.2,
+          "disturbance_m_per_s": 0.0
+        },
+        {
+          "time_s": 0.14,
+          "level_m": 5.0,
+          "controller": "fallback",
+          "epoch": 1,
+          "command_m_per_s": 0.2,
+          "disturbance_m_per_s": 0.0
+        },
+        {
+          "time_s": 0.15,
+          "level_m": 5.002,
+          "controller": "fallback",
+          "epoch": 1,
+          "command_m_per_s": -0.2,
+          "disturbance_m_per_s": 0.0
+        },
+        {
+          "time_s": 0.16,
+          "level_m": 5.0,
+          "controller": "fallback",
+          "epoch": 1,
+          "command_m_per_s": 0.2,
+          "disturbance_m_per_s": 0.0
+        },
+        {
+          "time_s": 0.17,
+          "level_m": 5.002,
+          "controller": "fallback",
+          "epoch": 1,
+          "command_m_per_s": -0.2,
+          "disturbance_m_per_s": 0.0
+        },
+        {
+          "time_s": 0.18,
+          "level_m": 5.0,
+          "controller": "fallback",
+          "epoch": 1,
+          "command_m_per_s": 0.2,
+          "disturbance_m_per_s": 0.0
+        },
+        {
+          "time_s": 0.19,
+          "level_m": 5.002,
+          "controller": "fallback",
+          "epoch": 1,
+          "command_m_per_s": -0.2,
+          "disturbance_m_per_s": 0.0
+        },
+        {
+          "time_s": 0.2,
+          "level_m": 5.0,
+          "controller": "fallback",
+          "epoch": 1,
+          "command_m_per_s": 0.2,
+          "disturbance_m_per_s": 0.0
+        }
+      ],
+      "safety_result": {
+        "envelope_held_at_sampled_points": true,
+        "minimum_level_m": 5.0,
+        "maximum_level_m": 5.002,
+        "assurance_loss": [
+          "CONTROLLER_TIMEOUT"
+        ],
+        "rejected_stale_commands": 21,
+        "recorded_horizon_end_s": 0.2
+      },
+      "limitations": [
+        "Euler reference integration, not a continuous-time proof",
+        "No physical actuation or hardware independence claim",
+        "Authenticated transfer uses HMAC-SHA-256 only as a deterministic simulation token, not production key management or cryptography"
+      ]
+    },
+    "failed_handoff_minimum_risk": {
+      "kind": "BOUNDED_REFERENCE_SIMULATION_NOT_HARDWARE",
+      "assumptions": {
+        "safe_low": 0.0,
+        "safe_high": 10.0,
+        "actuator_limit": 1.0,
+        "disturbance_limit": 0.1,
+        "fallback_magnitude": 0.2,
+        "sensor_error_bound": 0.05,
+        "sensor_age_bound": 0.1,
+        "monitor_period": 0.1,
+        "handoff_delay_bound": 0.2,
+        "dt": 0.01,
+        "max_duration_s": 60.0,
+        "transfer_key": "REDACTED_SIMULATION_TOKEN"
+      },
+      "derived": {
+        "worst_outward_speed_m_per_s": 1.1,
+        "intervention_margin_m": 0.49000000000000005,
+        "switch_thresholds_measured_m": [
+          0.49000000000000005,
+          9.51
+        ]
+      },
+      "events": [
+        {
+          "event": "handoff_requested",
+          "time_s": 0.1,
+          "measured_level_m": 0.48999999999999994,
+          "epoch": 0
+        },
+        {
+          "event": "minimum_risk_fallback",
+          "time_s": 0.3,
+          "reason": "HANDOFF_FAILED",
+          "epoch": 1
+        }
+      ],
+      "trajectory": [
+        {
+          "time_s": 0.0,
+          "level_m": 0.55,
+          "controller": "primary",
+          "epoch": 0,
+          "command_m_per_s": -1.0,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.01,
+          "level_m": 0.539,
+          "controller": "primary",
+          "epoch": 0,
+          "command_m_per_s": -1.0,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.02,
+          "level_m": 0.528,
+          "controller": "primary",
+          "epoch": 0,
+          "command_m_per_s": -1.0,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.03,
+          "level_m": 0.517,
+          "controller": "primary",
+          "epoch": 0,
+          "command_m_per_s": -1.0,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.04,
+          "level_m": 0.506,
+          "controller": "primary",
+          "epoch": 0,
+          "command_m_per_s": -1.0,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.05,
+          "level_m": 0.495,
+          "controller": "primary",
+          "epoch": 0,
+          "command_m_per_s": -1.0,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.06,
+          "level_m": 0.484,
+          "controller": "primary",
+          "epoch": 0,
+          "command_m_per_s": -1.0,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.07,
+          "level_m": 0.473,
+          "controller": "primary",
+          "epoch": 0,
+          "command_m_per_s": -1.0,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.08,
+          "level_m": 0.46199999999999997,
+          "controller": "primary",
+          "epoch": 0,
+          "command_m_per_s": -1.0,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.09,
+          "level_m": 0.45099999999999996,
+          "controller": "primary",
+          "epoch": 0,
+          "command_m_per_s": -1.0,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.1,
+          "level_m": 0.43999999999999995,
+          "controller": "primary",
+          "epoch": 0,
+          "command_m_per_s": -1.0,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.11,
+          "level_m": 0.42899999999999994,
+          "controller": "primary",
+          "epoch": 0,
+          "command_m_per_s": -1.0,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.12,
+          "level_m": 0.4179999999999999,
+          "controller": "primary",
+          "epoch": 0,
+          "command_m_per_s": -1.0,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.13,
+          "level_m": 0.4069999999999999,
+          "controller": "primary",
+          "epoch": 0,
+          "command_m_per_s": -1.0,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.14,
+          "level_m": 0.3959999999999999,
+          "controller": "primary",
+          "epoch": 0,
+          "command_m_per_s": -1.0,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.15,
+          "level_m": 0.3849999999999999,
+          "controller": "primary",
+          "epoch": 0,
+          "command_m_per_s": -1.0,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.16,
+          "level_m": 0.3739999999999999,
+          "controller": "primary",
+          "epoch": 0,
+          "command_m_per_s": -1.0,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.17,
+          "level_m": 0.3629999999999999,
+          "controller": "primary",
+          "epoch": 0,
+          "command_m_per_s": -1.0,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.18,
+          "level_m": 0.35199999999999987,
+          "controller": "primary",
+          "epoch": 0,
+          "command_m_per_s": -1.0,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.19,
+          "level_m": 0.34099999999999986,
+          "controller": "primary",
+          "epoch": 0,
+          "command_m_per_s": -1.0,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.2,
+          "level_m": 0.32999999999999985,
+          "controller": "primary",
+          "epoch": 0,
+          "command_m_per_s": -1.0,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.21,
+          "level_m": 0.31899999999999984,
+          "controller": "primary",
+          "epoch": 0,
+          "command_m_per_s": -1.0,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.22,
+          "level_m": 0.30799999999999983,
+          "controller": "primary",
+          "epoch": 0,
+          "command_m_per_s": -1.0,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.23,
+          "level_m": 0.2969999999999998,
+          "controller": "primary",
+          "epoch": 0,
+          "command_m_per_s": -1.0,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.24,
+          "level_m": 0.2859999999999998,
+          "controller": "primary",
+          "epoch": 0,
+          "command_m_per_s": -1.0,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.25,
+          "level_m": 0.2749999999999998,
+          "controller": "primary",
+          "epoch": 0,
+          "command_m_per_s": -1.0,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.26,
+          "level_m": 0.2639999999999998,
+          "controller": "primary",
+          "epoch": 0,
+          "command_m_per_s": -1.0,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.27,
+          "level_m": 0.2529999999999998,
+          "controller": "primary",
+          "epoch": 0,
+          "command_m_per_s": -1.0,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.28,
+          "level_m": 0.24199999999999977,
+          "controller": "primary",
+          "epoch": 0,
+          "command_m_per_s": -1.0,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.29,
+          "level_m": 0.23099999999999976,
+          "controller": "primary",
+          "epoch": 0,
+          "command_m_per_s": -1.0,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.3,
+          "level_m": 0.21999999999999975,
+          "controller": "fallback",
+          "epoch": 1,
+          "command_m_per_s": 0.2,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.31,
+          "level_m": 0.22099999999999975,
+          "controller": "fallback",
+          "epoch": 1,
+          "command_m_per_s": 0.2,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.32,
+          "level_m": 0.22199999999999975,
+          "controller": "fallback",
+          "epoch": 1,
+          "command_m_per_s": 0.2,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.33,
+          "level_m": 0.22299999999999975,
+          "controller": "fallback",
+          "epoch": 1,
+          "command_m_per_s": 0.2,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.34,
+          "level_m": 0.22399999999999975,
+          "controller": "fallback",
+          "epoch": 1,
+          "command_m_per_s": 0.2,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.35,
+          "level_m": 0.22499999999999976,
+          "controller": "fallback",
+          "epoch": 1,
+          "command_m_per_s": 0.2,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.36,
+          "level_m": 0.22599999999999976,
+          "controller": "fallback",
+          "epoch": 1,
+          "command_m_per_s": 0.2,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.37,
+          "level_m": 0.22699999999999976,
+          "controller": "fallback",
+          "epoch": 1,
+          "command_m_per_s": 0.2,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.38,
+          "level_m": 0.22799999999999976,
+          "controller": "fallback",
+          "epoch": 1,
+          "command_m_per_s": 0.2,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.39,
+          "level_m": 0.22899999999999976,
+          "controller": "fallback",
+          "epoch": 1,
+          "command_m_per_s": 0.2,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.4,
+          "level_m": 0.22999999999999976,
+          "controller": "fallback",
+          "epoch": 1,
+          "command_m_per_s": 0.2,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.41,
+          "level_m": 0.23099999999999976,
+          "controller": "fallback",
+          "epoch": 1,
+          "command_m_per_s": 0.2,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.42,
+          "level_m": 0.23199999999999976,
+          "controller": "fallback",
+          "epoch": 1,
+          "command_m_per_s": 0.2,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.43,
+          "level_m": 0.23299999999999976,
+          "controller": "fallback",
+          "epoch": 1,
+          "command_m_per_s": 0.2,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.44,
+          "level_m": 0.23399999999999976,
+          "controller": "fallback",
+          "epoch": 1,
+          "command_m_per_s": 0.2,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.45,
+          "level_m": 0.23499999999999976,
+          "controller": "fallback",
+          "epoch": 1,
+          "command_m_per_s": 0.2,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.46,
+          "level_m": 0.23599999999999977,
+          "controller": "fallback",
+          "epoch": 1,
+          "command_m_per_s": 0.2,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.47,
+          "level_m": 0.23699999999999977,
+          "controller": "fallback",
+          "epoch": 1,
+          "command_m_per_s": 0.2,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.48,
+          "level_m": 0.23799999999999977,
+          "controller": "fallback",
+          "epoch": 1,
+          "command_m_per_s": 0.2,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.49,
+          "level_m": 0.23899999999999977,
+          "controller": "fallback",
+          "epoch": 1,
+          "command_m_per_s": 0.2,
+          "disturbance_m_per_s": -0.1
+        },
+        {
+          "time_s": 0.5,
+          "level_m": 0.23999999999999974,
+          "controller": "fallback",
+          "epoch": 1,
+          "command_m_per_s": 0.2,
+          "disturbance_m_per_s": -0.1
+        }
+      ],
+      "safety_result": {
+        "envelope_held_at_sampled_points": true,
+        "minimum_level_m": 0.21999999999999975,
+        "maximum_level_m": 0.55,
+        "assurance_loss": [
+          "HANDOFF_FAILED"
+        ],
+        "rejected_stale_commands": 21,
+        "recorded_horizon_end_s": 0.5
+      },
+      "limitations": [
+        "Euler reference integration, not a continuous-time proof",
+        "No physical actuation or hardware independence claim",
+        "Authenticated transfer uses HMAC-SHA-256 only as a deterministic simulation token, not production key management or cryptography"
+      ]
+    }
+  },
+  "summary": {
+    "bounded_handoff_envelope_held": true,
+    "counterexample_records_loss": true,
+    "outside_region_records_loss": true,
+    "controller_timeout_records_loss": true,
+    "failed_handoff_records_loss": true
+  },
+  "limitations": [
+    "No hardware actuation",
+    "No claim of fallback independence or certification",
+    "Only declared finite scenarios and Euler samples were checked",
+    "This receipt does not discharge required continuous-time proof, STPA completeness, or production qualification."
+  ]
+}

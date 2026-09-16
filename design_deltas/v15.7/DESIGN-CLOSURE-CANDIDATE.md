@@ -22,7 +22,7 @@ Start with the seven functions, their immediate contracts and four explicit cros
 4. Admission and release dependencies.
 Record necessary outward dependencies; unresolved mandatory dependencies prevent affected closure. Scope expansion must be explicit, bounded and justified, not a hidden whole-architecture review.
 Check producer/consumer compatibility; circular authority delegation; learning access to protected criteria; compatible precedence of revocation/recovery/continuity; resource ownership and waiting; failure/uncertainty propagation.
-Distinguish legitimate feedback from circular justification. Verify exact source/applicability of cited RSN-005, K-INT-002 and REG-GSL-STRUCT-001 SCC/fixed-point provisions before binding them; reuse rather than restate divergent invariants. Check initial conditions, transition bounds and stopping/containment conditions under those owners. Extend only verified gaps.
+Distinguish legitimate feedback from circular justification. Bind cycle/fixed-point handling to GSL-STAT-011; use K-INT-002 only for contradiction handling, RSN-005 only for falsification/proof separation, and REG-GSL-STRUCT-001 only for the structural relation registry. Verify exact applicability before binding them; reuse rather than restate divergent invariants. Check initial conditions, transition bounds and stopping/containment conditions under those owners. Extend only verified gaps.
 Contradictory mandatory requirements block affected composition until existing policy owners resolve them. Do not silently weaken requirements.
 
 ## 3. Comparative design decisions

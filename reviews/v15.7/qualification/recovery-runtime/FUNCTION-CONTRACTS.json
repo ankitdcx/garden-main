@@ -1,0 +1,77 @@
+{
+  "schema": "GardenFunctionContractRegistry/v1",
+  "registry_id": "GARDEN-V157-PERMISSION-RECOVERY-REFERENCE-v1",
+  "design_epoch": "v15.5",
+  "canonical_source_root_sha256": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+  "scope_globs": ["implementation/garden_kernel/permission_recovery.py"],
+  "semantic_compliance_proved": false,
+  "declaration_status": "REFERENCE_DECLARATIONS_ONLY_NOT_PRODUCTION_WIRED",
+  "implementation_source_sha256": "22d145602f34acf81267686be7d732ac499aafb01087193e793253732ed42ff4",
+  "owner_anchors": [
+    "design_deltas/v15.6/DELTASET-2026-09-15-ENGINEERING-HARDENING.json#V156-EH-04",
+    "design_deltas/v15.6/DELTASET-2026-09-15-ENGINEERING-HARDENING.json#V156-EH-08",
+    "canonical/current/Garden_Technical_v15.5_FULL_2026-09-12.txt#Capability.Compute.Execution"
+  ],
+  "contracts": [
+    {
+      "contract_id": "FC-PERMISSION-RECOVERY-CLAIM-v1",
+      "contract_version": "1",
+      "path": "implementation/garden_kernel/permission_recovery.py",
+      "function": "PermissionRecoveryBoundary.claim",
+      "source_sha256": "22d145602f34acf81267686be7d732ac499aafb01087193e793253732ed42ff4",
+      "affects": ["ORCHESTRATION", "AUTHORITY"],
+      "input_semantics": "Existing immutable task identity and a nonempty worker identity in the local reference store.",
+      "output_semantics": "A durable claim with a unique monotonically issued fencing epoch; issuance advances the target fence for that effect.",
+      "error_semantics": "Unknown tasks and malformed identities raise SemanticError; SQLite transaction arbitration serializes concurrent issuers.",
+      "unknown_semantics": "Claim creation grants no permission and authorizes no effect.",
+      "effect_semantics": "Durably creates a Claimed attempt and advances the local reference target fence.",
+      "proof_obligations": ["epochs-unique-and-monotonic", "claim-is-not-authority", "older-issued-epoch-rejected"],
+      "test_refs": ["implementation/tests/test_permission_recovery.py"]
+    },
+    {
+      "contract_id": "FC-PERMISSION-RECOVERY-ADMIT-v1",
+      "contract_version": "1",
+      "path": "implementation/garden_kernel/permission_recovery.py",
+      "function": "PermissionRecoveryBoundary.admit",
+      "source_sha256": "22d145602f34acf81267686be7d732ac499aafb01087193e793253732ed42ff4",
+      "affects": ["AUTHORITY", "ADMISSION"],
+      "input_semantics": "Exact claim identity plus fixture permission and revocation state.",
+      "output_semantics": "Claim becomes Permitted only while fixture permission is present and not revoked.",
+      "error_semantics": "Rebound claims or unavailable permission raise SemanticError.",
+      "unknown_semantics": "Missing authority is denial; fixture permission is not an external grant.",
+      "effect_semantics": "Changes only local attempt state; performs no target effect.",
+      "proof_obligations": ["exact-claim-bound", "permission-required", "admission-is-not-commit"],
+      "test_refs": ["implementation/tests/test_permission_recovery.py"]
+    },
+    {
+      "contract_id": "FC-PERMISSION-RECOVERY-DISPATCH-v1",
+      "contract_version": "1",
+      "path": "implementation/garden_kernel/permission_recovery.py",
+      "function": "PermissionRecoveryBoundary.dispatch",
+      "source_sha256": "22d145602f34acf81267686be7d732ac499aafb01087193e793253732ed42ff4",
+      "affects": ["AUTHORITY", "EXECUTION", "AUDIT"],
+      "input_semantics": "Exact Permitted claim, current fixture permission, nonrevoked state, immutable effect identity and current fencing epoch.",
+      "output_semantics": "One idempotent local target effect is committed; acknowledgment may be observed or explicitly lost as Uncertain.",
+      "error_semantics": "Stale epoch, revoked permission, rebound identity or non-Permitted state raises SemanticError; stale rejection is durably traced.",
+      "unknown_semantics": "Lost acknowledgment remains Uncertain and is never automatically redispatched.",
+      "effect_semantics": "Atomic SQLite reference-target commit only; no distributed or physical target guarantee.",
+      "proof_obligations": ["permission-rechecked-at-commit", "stale-fence-rejected", "effect-idempotent", "dispatch-not-ack", "unknown-not-retried"],
+      "test_refs": ["implementation/tests/test_permission_recovery.py"]
+    },
+    {
+      "contract_id": "FC-PERMISSION-RECOVERY-RECONCILE-v1",
+      "contract_version": "1",
+      "path": "implementation/garden_kernel/permission_recovery.py",
+      "function": "PermissionRecoveryBoundary.reconcile",
+      "source_sha256": "22d145602f34acf81267686be7d732ac499aafb01087193e793253732ed42ff4",
+      "affects": ["EXECUTION", "RECOVERY", "AUDIT"],
+      "input_semantics": "Exact Uncertain attempt and local committed-effect evidence or explicit authoritative nonexecution evidence.",
+      "output_semantics": "Committed effect resolves Done; proven nonexecution resolves Idle for a future new claim.",
+      "error_semantics": "Non-Uncertain attempts or ambiguous nonexecution raise SemanticError.",
+      "unknown_semantics": "Ambiguity remains Uncertain; absence of a receipt is not proof of nonexecution.",
+      "effect_semantics": "Reconciles local durable state only and does not itself execute or compensate an effect.",
+      "proof_obligations": ["committed-effect-not-erased", "nonexecution-requires-authoritative-evidence", "recovery-mints-no-authority"],
+      "test_refs": ["implementation/tests/test_permission_recovery.py"]
+    }
+  ]
+}

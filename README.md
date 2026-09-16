@@ -4,7 +4,7 @@ Status: private implementation workspace.
 
 ## Latest working candidate: v15.7
 
-[Garden v15.7](canonical/candidates/v15.7/README.md) carries the complete prepared v15.6 draft forward and adds five registered programs: TRACE, focused cognitive increment, cognitive qualification, comparative coverage and design closure. The user authorized a direct version jump. Its canonical predecessor remains v15.5; no intermediate v15.6 promotion is claimed. See [integration evidence](reviews/v15.7/SOURCE-INTEGRATION-RECEIPT.json) and [release status](reviews/v15.7/RELEASE-STATUS.md).
+[Garden v15.7](canonical/candidates/v15.7/README.md) carries the complete prepared v15.6 draft forward and adds six registered programs: TRACE, focused cognitive increment, cognitive qualification, comparative coverage, design closure and event-driven context routing. The user authorized a direct version jump. Its canonical predecessor remains v15.5; no intermediate v15.6 promotion is claimed. The candidate consists of five separate design documents. Bounded recovery, release verification, physical simulation and context-routing implementations now have scoped evidence under [qualification](reviews/v15.7/qualification/README.md). See [integration evidence](reviews/v15.7/SOURCE-INTEGRATION-RECEIPT.json) and [release status](reviews/v15.7/RELEASE-STATUS.md).
 
 ## Retained v15.6 draft lineage
 

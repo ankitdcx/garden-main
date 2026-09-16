@@ -1,0 +1,668 @@
+{
+  "schema": "GardenDesignDecisionRows/v1",
+  "rows": [
+    {
+      "requirement_id": "COG-WORLD_MODEL",
+      "function_id": "WORLD_MODEL",
+      "source": {
+        "path": "design_deltas/v15.7/COGNITIVE-CORE-CANDIDATE.md",
+        "availability": "PRESENT",
+        "sha256": "1229f9c9dde63bb8eb2aff4545bb7ec726e5775b18bd2f7b4452211cba34bf32",
+        "anchor": "Seven qualification targets"
+      },
+      "intended_behavior": "Predictive world modelling",
+      "mandatory": true,
+      "mechanism_owner": "Engine.Research + Engine.Reason",
+      "procedure": "EvaluatePredictiveModel",
+      "completeness": "SPECIFICATION_INTERFACE_FOUND_CONCRETE_ALGORITHM_UNRESOLVED",
+      "composition": "Unresolved machine dependency/type/evaluator bindings block affected integrated qualification.",
+      "comparison_row_ids": [
+        "CMP-DREAMERV3",
+        "CMP-LECUN"
+      ],
+      "comparator_status": "UNRESOLVED",
+      "alternatives": {
+        "NO_ADDITION": {
+          "result": "Existing specification addresses function direction; does not supply missing concrete algorithm/evaluation evidence.",
+          "evidence": [
+            {
+              "path": "canonical/current/Garden_Technical_v15.5_FULL_2026-09-12.txt",
+              "availability": "PRESENT",
+              "sha256": "865f5ded862cb30d51ad213fa05cdc342983a31fb6a23bb9aad5b25a84d1cb9b",
+              "anchor": "CPI-P07",
+              "line": 12339,
+              "quote": "CPI-P07 \u2014 Predictive World-Model Learning",
+              "section_excerpt": "CPI-P07 \u2014 Predictive World-Model Learning\nPrimary owner: Engine.Research\nCooperating owners: Engine.Reason, Capability.Knowledge, Algebra.Bridge, Engine.Compare\nExisting anchors: [T-CAPABILITIES] [T-BRIDGE]\nConceptual references: R07, R08\n\nDelta and non-duplication: Add a concrete qualification interface for learned predictive models. This does not import a neural architecture, training corpus, checkpoint, or unpublished recipe.\n\nRequired operating method: Bind state and observation representations, actions, prediction horizon, data provenance, operating distribution, uncertainty, calibration, and drift tests. Learn candidate predictive models from authorised observations or lawfully created synthetic environments. Keep actual observations distinct from imagined trajectories. Evaluate held-out dynamics and control consequences against a simple comparator. Record data leakage checks and failure regions. Updating a model invalidates dependent rollout claims and any policy qualification that relied on its old dynamics. Prediction error and model confidence remain separate. Generated scenes cannot serve as external evidence that the world behaved as predicted.\n\nFunction contract (specification notation, not executable GSL):\n  EvaluatePredictiveModel(model_artifact_ref, CPI.PredictiveInterface, CPI.EvaluationPlan) -> model evaluation receipts and revised obligations. Effects: sandbox model trials; no autonomous physical deployment.\n"
+            },
+            {
+              "path": "canonical/current/Garden_Technical_v15.5_FULL_2026-09-12.txt",
+              "availability": "PRESENT",
+              "sha256": "865f5ded862cb30d51ad213fa05cdc342983a31fb6a23bb9aad5b25a84d1cb9b",
+              "anchor": "Prediction ownership:",
+              "line": 3983,
+              "quote": "Prediction ownership: Engine.Reason is primary for PredictionRequest/PredictionArtifact; every operational prediction is",
+              "section_excerpt": "Prediction ownership: Engine.Reason is primary for PredictionRequest/PredictionArtifact; every operational prediction is\nbound to DesignEpoch, KnowledgeSnapshot, EnvironmentCommitment and deterministic seed, and remains Prediction \u2260\nEvidence. Prediction tiers and safety gates are defined in [T-EVOLVE].\n\nSECTION III-F \u2014 THEORY CATALOGUE \u2014 CANONICAL BINDING STUB\n\nSemanticAnchor: [T-THEORY]\n\nOWNERSHIP CHANGE \u2014 introduced in v14.8.1; retained in v14.8.3\nComplete theory semantics are now owned by the companion:\n  Garden_Theories_v14.8.5_2026-08-27.txt\n\nCanonical theory anchors:"
+            }
+          ]
+        },
+        "SMALLER_SHARED_EXTENSION": {
+          "result": "Preferred bounded route: qualify existing interface and implement only demonstrated missing clauses.",
+          "costs": "Requires source mapping, per-function tests and integration evidence; amounts UNKNOWN."
+        },
+        "FULL_PROPOSAL": {
+          "result": "Not justified as seven new engines/features; reuse existing owners.",
+          "costs": "Potential duplicate representations/state, interfaces, trusted components, configuration and verification burden; unmeasured."
+        }
+      },
+      "decision": "RETAIN_EXISTING_OWNER_AND_RESOLVE_BOUNDED_QUALIFICATION",
+      "advantage_type": "NONE_DEMONSTRATED",
+      "structural_claim": "Source interfaces already exist; avoiding duplicate owners preserves traceability. No global minimality claim.",
+      "performance_claim": "NONE_MEASURED",
+      "remaining_design_work": [
+        "Choose and expose concrete decision/learning procedure and parameters without duplicating owner.",
+        "Resolve exact machine types/versions and evaluator authority, held-out distribution, budgets and thresholds."
+      ],
+      "remaining_implementation_work": [
+        "Implement bounded function plus integration adapters; use existing equivalents where present."
+      ],
+      "remaining_empirical_work": [
+        "Run component, integrated, ablation, negative-transfer/retention and matched B0/B1/B2 trials."
+      ],
+      "closed": false
+    },
+    {
+      "requirement_id": "COG-GROUNDING",
+      "function_id": "GROUNDING",
+      "source": {
+        "path": "design_deltas/v15.7/COGNITIVE-CORE-CANDIDATE.md",
+        "availability": "PRESENT",
+        "sha256": "1229f9c9dde63bb8eb2aff4545bb7ec726e5775b18bd2f7b4452211cba34bf32",
+        "anchor": "Seven qualification targets"
+      },
+      "intended_behavior": "Grounded understanding",
+      "mandatory": true,
+      "mechanism_owner": "Capability.Knowledge + Algebra.Bridge",
+      "procedure": "GroundObservation / CheckBridge",
+      "completeness": "SPECIFICATION_INTERFACE_FOUND_CONCRETE_ALGORITHM_UNRESOLVED",
+      "composition": "Unresolved machine dependency/type/evaluator bindings block affected integrated qualification.",
+      "comparison_row_ids": [
+        "CMP-HYPERON",
+        "CMP-SIMA2"
+      ],
+      "comparator_status": "UNRESOLVED",
+      "alternatives": {
+        "NO_ADDITION": {
+          "result": "Existing specification addresses function direction; does not supply missing concrete algorithm/evaluation evidence.",
+          "evidence": [
+            {
+              "path": "canonical/current/Garden_Technical_v15.5_FULL_2026-09-12.txt",
+              "availability": "PRESENT",
+              "sha256": "865f5ded862cb30d51ad213fa05cdc342983a31fb6a23bb9aad5b25a84d1cb9b",
+              "anchor": "CPI-P08",
+              "line": 12352,
+              "quote": "CPI-P08 \u2014 Sensorimotor Grounding and Active Observation",
+              "section_excerpt": "CPI-P08 \u2014 Sensorimotor Grounding and Active Observation\nPrimary owner: Capability.Knowledge\nCooperating owners: Capability.Compute.NativeInterface, Capability.Trust.Safety, Engine.Research, Algebra.Bridge\nExisting anchors: [T-KNOWLEDGE] [T-BRIDGE]\nConceptual references: R09\n\nDelta and non-duplication: Specify how embodied observations and active measurements enter the existing epistemic pipeline. No new physical kernel or replacement for TRAIN/GAIA is introduced.\n\nRequired operating method: Link observations to sensor identity, calibration, time, units, spatial frame, occlusion, and operational limits. Represent object identity hypotheses separately from raw sensor events. Propose information-gathering actions with explicit costs, permissions, and physical constraints. Where observations disagree or identity is ambiguous, reduce the scope of dependent conclusions and seek discriminating evidence when feasible. A signed observation proves a source binding, not that the sensor is calibrated or the interpretation is correct. Use sandbox or simulator work before any physical action; real experiments require the applicable pre-existing safety and authority path.\n\nFunction contract (specification notation, not executable GSL):\n  GroundObservation(observation_ref, environment_ref, sensor_profile_ref) -> grounded claim candidates and ambiguity obligations. Effects: knowledge candidates; active observations are separate authorised ACTION proposals.\n"
+            },
+            {
+              "path": "canonical/current/Garden_Technical_v15.5_FULL_2026-09-12.txt",
+              "availability": "PRESENT",
+              "sha256": "865f5ded862cb30d51ad213fa05cdc342983a31fb6a23bb9aad5b25a84d1cb9b",
+              "anchor": "CPI-P06",
+              "line": 12326,
+              "quote": "CPI-P06 \u2014 Hybrid Representation and Checked Semantic Bridges",
+              "section_excerpt": "CPI-P06 \u2014 Hybrid Representation and Checked Semantic Bridges\nPrimary owner: Algebra.Bridge\nCooperating owners: Engine.Reason, Engine.Compile, Engine.Proof, Capability.Compute.Runtime\nExisting anchors: [T-BRIDGE] [T-IMPLEMENT]\nConceptual references: R04, R05, R06, R17\n\nDelta and non-duplication: Unify interfaces where appropriate without equating symbolic rules, graph inference, neural representations, or proofs. Existing Bridge ownership remains authoritative.\n\nRequired operating method: Specify a typed representation mapping with source and target meanings, units, frame, approximation class, permitted operations, error bounds, and round-trip or refinement obligations. Permit opaque latent state as a referenced artifact, not as an unexplained replacement for required semantic evidence. Keep a narrow checking kernel separately pinned from proposer code. Prefer independent checker implementations for critical translations where feasible; identical model prompts do not establish independence. Switch between inexpensive qualified routines and fuller deliberation based on applicability and consequence. A fast path may not skip a mandatory guard. Any approximation affects the assurance statement explicitly.\n\nFunction contract (specification notation, not executable GSL):\n  CheckBridge(source_contract_ref, mapping_ref, target_artifact_ref, qualification_ref) -> an existing translation/proof receipt plus CPI.ObligationBundle. Effects: qualification records only.\n"
+            }
+          ]
+        },
+        "SMALLER_SHARED_EXTENSION": {
+          "result": "Preferred bounded route: qualify existing interface and implement only demonstrated missing clauses.",
+          "costs": "Requires source mapping, per-function tests and integration evidence; amounts UNKNOWN."
+        },
+        "FULL_PROPOSAL": {
+          "result": "Not justified as seven new engines/features; reuse existing owners.",
+          "costs": "Potential duplicate representations/state, interfaces, trusted components, configuration and verification burden; unmeasured."
+        }
+      },
+      "decision": "RETAIN_EXISTING_OWNER_AND_RESOLVE_BOUNDED_QUALIFICATION",
+      "advantage_type": "NONE_DEMONSTRATED",
+      "structural_claim": "Source interfaces already exist; avoiding duplicate owners preserves traceability. No global minimality claim.",
+      "performance_claim": "NONE_MEASURED",
+      "remaining_design_work": [
+        "Choose and expose concrete decision/learning procedure and parameters without duplicating owner.",
+        "Resolve exact machine types/versions and evaluator authority, held-out distribution, budgets and thresholds."
+      ],
+      "remaining_implementation_work": [
+        "Implement bounded function plus integration adapters; use existing equivalents where present."
+      ],
+      "remaining_empirical_work": [
+        "Run component, integrated, ablation, negative-transfer/retention and matched B0/B1/B2 trials."
+      ],
+      "closed": false
+    },
+    {
+      "requirement_id": "COG-SKILL_COMPOSITION",
+      "function_id": "SKILL_COMPOSITION",
+      "source": {
+        "path": "design_deltas/v15.7/COGNITIVE-CORE-CANDIDATE.md",
+        "availability": "PRESENT",
+        "sha256": "1229f9c9dde63bb8eb2aff4545bb7ec726e5775b18bd2f7b4452211cba34bf32",
+        "anchor": "Seven qualification targets"
+      },
+      "intended_behavior": "Skill composition",
+      "mandatory": true,
+      "mechanism_owner": "Engine.Compile + Compute.Runtime",
+      "procedure": "QualifyProcedure",
+      "completeness": "SPECIFICATION_INTERFACE_FOUND_CONCRETE_ALGORITHM_UNRESOLVED",
+      "composition": "Unresolved machine dependency/type/evaluator bindings block affected integrated qualification.",
+      "comparison_row_ids": [
+        "CMP-SIMA2"
+      ],
+      "comparator_status": "UNRESOLVED",
+      "alternatives": {
+        "NO_ADDITION": {
+          "result": "Existing specification addresses function direction; does not supply missing concrete algorithm/evaluation evidence.",
+          "evidence": [
+            {
+              "path": "canonical/current/Garden_Technical_v15.5_FULL_2026-09-12.txt",
+              "availability": "PRESENT",
+              "sha256": "865f5ded862cb30d51ad213fa05cdc342983a31fb6a23bb9aad5b25a84d1cb9b",
+              "anchor": "CPI-P03",
+              "line": 12287,
+              "quote": "CPI-P03 \u2014 Qualified Procedure Learning and Compilation",
+              "section_excerpt": "CPI-P03 \u2014 Qualified Procedure Learning and Compilation\nPrimary owner: Engine.Compile\nCooperating owners: Engine.Reason, Capability.Knowledge.Curation, Engine.Dependency, Engine.Compare\nExisting anchors: [T-AI-DEV] [T-KNOWLEDGE]\nConceptual references: R02\n\nDelta and non-duplication: Bind learning from successful work to explicit applicability and reusable execution. Reuse existing generation, proof, cache, and invalidation contracts rather than creating a second knowledge-admission system.\n\nRequired operating method: Extract a proposed method from a successful trace or independently specified solution. Keep the source task, assumptions, exceptional cases, evidence, and output semantics. Generalise only after tests or a stated proof establish the proposed scope; one successful episode is insufficient for a universal rule. Qualify a cheap applicability predicate with APPLICABLE, NOT_APPLICABLE, and UNKNOWN outcomes. Compile or implement the routine without importing external source code. Monitor each use and invalidate on dependency, environment, authority, or verifier changes. Compare fresh reasoning and reuse at matched quality and risk, accounting for discovery, qualification, checks, fallback, repair, and amortisation. Statistical qualification must retain its distributional limits. A seed does not turn unobserved external state into deterministic input.\n\nFunction contract (specification notation, not executable GSL):\n  QualifyProcedure(candidate_ref, applicability_spec, evaluation_plan_ref) -> CPI.QualifiedProcedure or a nonqualified candidate. Effects: candidate records; publication to an active knowledge view requires normal admission.\n"
+            }
+          ]
+        },
+        "SMALLER_SHARED_EXTENSION": {
+          "result": "Preferred bounded route: qualify existing interface and implement only demonstrated missing clauses.",
+          "costs": "Requires source mapping, per-function tests and integration evidence; amounts UNKNOWN."
+        },
+        "FULL_PROPOSAL": {
+          "result": "Not justified as seven new engines/features; reuse existing owners.",
+          "costs": "Potential duplicate representations/state, interfaces, trusted components, configuration and verification burden; unmeasured."
+        }
+      },
+      "decision": "RETAIN_EXISTING_OWNER_AND_RESOLVE_BOUNDED_QUALIFICATION",
+      "advantage_type": "NONE_DEMONSTRATED",
+      "structural_claim": "Source interfaces already exist; avoiding duplicate owners preserves traceability. No global minimality claim.",
+      "performance_claim": "NONE_MEASURED",
+      "remaining_design_work": [
+        "Choose and expose concrete decision/learning procedure and parameters without duplicating owner.",
+        "Resolve exact machine types/versions and evaluator authority, held-out distribution, budgets and thresholds."
+      ],
+      "remaining_implementation_work": [
+        "Implement bounded function plus integration adapters; use existing equivalents where present."
+      ],
+      "remaining_empirical_work": [
+        "Run component, integrated, ablation, negative-transfer/retention and matched B0/B1/B2 trials."
+      ],
+      "closed": false
+    },
+    {
+      "requirement_id": "COG-LONG_HORIZON",
+      "function_id": "LONG_HORIZON",
+      "source": {
+        "path": "design_deltas/v15.7/COGNITIVE-CORE-CANDIDATE.md",
+        "availability": "PRESENT",
+        "sha256": "1229f9c9dde63bb8eb2aff4545bb7ec726e5775b18bd2f7b4452211cba34bf32",
+        "anchor": "Seven qualification targets"
+      },
+      "intended_behavior": "Long-horizon reasoning",
+      "mandatory": true,
+      "mechanism_owner": "Engine.Reason + Compute.Runtime",
+      "procedure": "PlanBounded / AdvanceJob",
+      "completeness": "SPECIFICATION_INTERFACE_FOUND_CONCRETE_ALGORITHM_UNRESOLVED",
+      "composition": "Unresolved machine dependency/type/evaluator bindings block affected integrated qualification.",
+      "comparison_row_ids": [
+        "CMP-LECUN",
+        "CMP-REACT",
+        "CMP-LANGGRAPH"
+      ],
+      "comparator_status": "UNRESOLVED",
+      "alternatives": {
+        "NO_ADDITION": {
+          "result": "Existing specification addresses function direction; does not supply missing concrete algorithm/evaluation evidence.",
+          "evidence": [
+            {
+              "path": "canonical/current/Garden_Technical_v15.5_FULL_2026-09-12.txt",
+              "availability": "PRESENT",
+              "sha256": "865f5ded862cb30d51ad213fa05cdc342983a31fb6a23bb9aad5b25a84d1cb9b",
+              "anchor": "CPI-P09",
+              "line": 12365,
+              "quote": "CPI-P09 \u2014 Bounded Planning and Information-Gathering",
+              "section_excerpt": "CPI-P09 \u2014 Bounded Planning and Information-Gathering\nPrimary owner: Engine.Reason\nCooperating owners: Engine.Research, Engine.Compare, Engine.Orchestrate, Capability.Trust.Safety\nExisting anchors: [T-CAPABILITIES]\nConceptual references: R10, R11\n\nDelta and non-duplication: Implement action/search budget selection through existing decision machinery; do not add an infallible optimiser or duplicate the policy engine.\n\nRequired operating method: Represent plan alternatives with predictions, uncertainty, constraints, cost, time, dependencies, and information value. Allocate look-ahead by its expected effect on the decision, with explicit bounds and anytime outputs. Include observe, clarify, delay where safe, delegate, and stop as possible actions, but evaluate the effects of inaction too. Distinguish uncertainty from risk estimates and preserve hard constraints outside preference optimisation. Abort cannot be assumed safe in a moving physical system. When the same observations fit incompatible worlds, request distinguishing information or choose a qualified robust response rather than manufacture certainty.\n\nFunction contract (specification notation, not executable GSL):\n  PlanBounded(goal_ref, state_snapshot_ref, CPI.PredictiveInterface?, budget_ref) -> proposed action plan, alternatives, and residual obligations. Effects: proposals only.\n"
+            },
+            {
+              "path": "canonical/current/Garden_Technical_v15.5_FULL_2026-09-12.txt",
+              "availability": "PRESENT",
+              "sha256": "865f5ded862cb30d51ad213fa05cdc342983a31fb6a23bb9aad5b25a84d1cb9b",
+              "anchor": "CPI-P10",
+              "line": 12378,
+              "quote": "CPI-P10 \u2014 Durable Execution and Effect Reconciliation",
+              "section_excerpt": "CPI-P10 \u2014 Durable Execution and Effect Reconciliation\nPrimary owner: Capability.Compute.Runtime\nCooperating owners: Engine.Orchestrate, Capability.State.EventService, Engine.Transition, Capability.Trust.Security\nExisting anchors: [T-AI-DEV] [RA-GSL-AR]\nConceptual references: R12, R13\n\nDelta and non-duplication: Close the identified persistent-supervisor gap with explicit job identity, journal, budget ownership, crash recovery, and external-effect reconciliation. This is a runtime specialisation, not a second event ledger.\n\nRequired operating method: Bind each job to a stable identifier, principal, approved inputs, DesignEpoch, resource account, phase, and effect ledger. Journal intended effects before dispatch where the protocol permits; record acknowledged effects. Resume with a new fenced lease and current authorisation. Use idempotency only where the destination actually supports it. A crash between an external effect and receipt must become an uncertain outcome requiring reconciliation, not an automatic retry. A checkpoint is not authority to bypass revocation. Account for cumulative work across restarts, replicas, and children. Protect journals from candidate writes. Do not promise exactly-once effects across arbitrary external systems.\n\nFunction contract (specification notation, not executable GSL):\n  AdvanceJob(CPI.DurableJobRecord, authorised_transition, runtime_observation) -> next CPI.DurableJobRecord and existing action/effect receipts. Effects: only the individually authorised step.\n"
+            }
+          ]
+        },
+        "SMALLER_SHARED_EXTENSION": {
+          "result": "Preferred bounded route: qualify existing interface and implement only demonstrated missing clauses.",
+          "costs": "Requires source mapping, per-function tests and integration evidence; amounts UNKNOWN."
+        },
+        "FULL_PROPOSAL": {
+          "result": "Not justified as seven new engines/features; reuse existing owners.",
+          "costs": "Potential duplicate representations/state, interfaces, trusted components, configuration and verification burden; unmeasured."
+        }
+      },
+      "decision": "RETAIN_EXISTING_OWNER_AND_RESOLVE_BOUNDED_QUALIFICATION",
+      "advantage_type": "NONE_DEMONSTRATED",
+      "structural_claim": "Source interfaces already exist; avoiding duplicate owners preserves traceability. No global minimality claim.",
+      "performance_claim": "NONE_MEASURED",
+      "remaining_design_work": [
+        "Choose and expose concrete decision/learning procedure and parameters without duplicating owner.",
+        "Resolve exact machine types/versions and evaluator authority, held-out distribution, budgets and thresholds."
+      ],
+      "remaining_implementation_work": [
+        "Implement bounded function plus integration adapters; use existing equivalents where present."
+      ],
+      "remaining_empirical_work": [
+        "Run component, integrated, ablation, negative-transfer/retention and matched B0/B1/B2 trials."
+      ],
+      "closed": false
+    },
+    {
+      "requirement_id": "COG-CONTINUAL_LEARNING",
+      "function_id": "CONTINUAL_LEARNING",
+      "source": {
+        "path": "design_deltas/v15.7/COGNITIVE-CORE-CANDIDATE.md",
+        "availability": "PRESENT",
+        "sha256": "1229f9c9dde63bb8eb2aff4545bb7ec726e5775b18bd2f7b4452211cba34bf32",
+        "anchor": "Seven qualification targets"
+      },
+      "intended_behavior": "Continual learning",
+      "mandatory": true,
+      "mechanism_owner": "Knowledge.Curation + Evolve",
+      "procedure": "MaintainKnowledge / EvolveCandidate",
+      "completeness": "SPECIFICATION_INTERFACE_FOUND_CONCRETE_ALGORITHM_UNRESOLVED",
+      "composition": "Unresolved machine dependency/type/evaluator bindings block affected integrated qualification.",
+      "comparison_row_ids": [
+        "CMP-SOAR",
+        "CMP-ACT_R",
+        "CMP-HYPERON",
+        "CMP-ALPHAEVOLVE"
+      ],
+      "comparator_status": "UNRESOLVED",
+      "alternatives": {
+        "NO_ADDITION": {
+          "result": "Existing specification addresses function direction; does not supply missing concrete algorithm/evaluation evidence.",
+          "evidence": [
+            {
+              "path": "canonical/current/Garden_Technical_v15.5_FULL_2026-09-12.txt",
+              "availability": "PRESENT",
+              "sha256": "865f5ded862cb30d51ad213fa05cdc342983a31fb6a23bb9aad5b25a84d1cb9b",
+              "anchor": "CPI-P03",
+              "line": 12287,
+              "quote": "CPI-P03 \u2014 Qualified Procedure Learning and Compilation",
+              "section_excerpt": "CPI-P03 \u2014 Qualified Procedure Learning and Compilation\nPrimary owner: Engine.Compile\nCooperating owners: Engine.Reason, Capability.Knowledge.Curation, Engine.Dependency, Engine.Compare\nExisting anchors: [T-AI-DEV] [T-KNOWLEDGE]\nConceptual references: R02\n\nDelta and non-duplication: Bind learning from successful work to explicit applicability and reusable execution. Reuse existing generation, proof, cache, and invalidation contracts rather than creating a second knowledge-admission system.\n\nRequired operating method: Extract a proposed method from a successful trace or independently specified solution. Keep the source task, assumptions, exceptional cases, evidence, and output semantics. Generalise only after tests or a stated proof establish the proposed scope; one successful episode is insufficient for a universal rule. Qualify a cheap applicability predicate with APPLICABLE, NOT_APPLICABLE, and UNKNOWN outcomes. Compile or implement the routine without importing external source code. Monitor each use and invalidate on dependency, environment, authority, or verifier changes. Compare fresh reasoning and reuse at matched quality and risk, accounting for discovery, qualification, checks, fallback, repair, and amortisation. Statistical qualification must retain its distributional limits. A seed does not turn unobserved external state into deterministic input.\n\nFunction contract (specification notation, not executable GSL):\n  QualifyProcedure(candidate_ref, applicability_spec, evaluation_plan_ref) -> CPI.QualifiedProcedure or a nonqualified candidate. Effects: candidate records; publication to an active knowledge view requires normal admission.\n"
+            },
+            {
+              "path": "canonical/current/Garden_Technical_v15.5_FULL_2026-09-12.txt",
+              "availability": "PRESENT",
+              "sha256": "865f5ded862cb30d51ad213fa05cdc342983a31fb6a23bb9aad5b25a84d1cb9b",
+              "anchor": "CPI-P04",
+              "line": 12300,
+              "quote": "CPI-P04 \u2014 Bounded Knowledge Retrieval and Maintenance",
+              "section_excerpt": "CPI-P04 \u2014 Bounded Knowledge Retrieval and Maintenance\nPrimary owner: Capability.Knowledge.Curation\nCooperating owners: Capability.Knowledge, Engine.Dependency, Engine.Search, HumanCore.Privacy\nExisting anchors: [T-KNOWLEDGE] [RA-GSL-KR]\nConceptual references: R02\n\nDelta and non-duplication: Add a maintenance policy to the existing GSL-KR knowledge profile; do not replace claim semantics, duplicate the ledger, or assert that every stored item is verified truth.\n\nRequired operating method: Separate active qualified procedures, evidence, disputed claims, hypotheses, archived history, and quarantined material through existing epistemic views. Retrieve using relevance, provenance, cost, and applicable validity instead of frequency alone. Cache results only with their dependency and snapshot bindings. Propose abstraction of multiple methods only after preserving material exceptions and testing the proposed domain. Mark an archive move, supersession, correction, logical invalidation, and privacy deletion as distinct operations. Rare but high-consequence emergency knowledge must not be discarded solely for low usage. Keep change lineage subject to data-minimisation and deletion duties; an append-only design does not justify retaining every private payload forever. Query bounds return a frontier and incompleteness, not a closed-world assertion that missing facts are false.\n\nFunction contract (specification notation, not executable GSL):\n  MaintainKnowledge(snapshot_ref, budget_ref, retention_policy_ref) -> CPI.KnowledgeMaintenancePlan plus existing revalidation records. Effects: stage maintenance; commit only through knowledge/transition gates.\n"
+            },
+            {
+              "path": "canonical/current/Garden_Technical_v15.5_FULL_2026-09-12.txt",
+              "availability": "PRESENT",
+              "sha256": "865f5ded862cb30d51ad213fa05cdc342983a31fb6a23bb9aad5b25a84d1cb9b",
+              "anchor": "CPI-P12",
+              "line": 12404,
+              "quote": "CPI-P12 \u2014 Protected Automated Engineering and Evolution",
+              "section_excerpt": "CPI-P12 \u2014 Protected Automated Engineering and Evolution\nPrimary owner: Engine.Evolve\nCooperating owners: Capability.Platform.Development, Engine.Compile, Engine.Research, Engine.Proof\nExisting anchors: [T-EVOLVE] [T-AI-DEV]\nConceptual references: R14, R15\n\nDelta and non-duplication: Combine candidate generation, program search, experiments, and negative-result preservation under the existing frozen-evaluator and bounded evolution controls. No evaluator self-promotion is added.\n\nRequired operating method: Generate diverse candidate repairs or algorithms within an explicit write set. Maintain immutable evaluator versions, held-out tasks, baseline results, and cost/risk objectives. Run each candidate in an isolated workspace. Preserve failed trials, contamination findings, and raw outputs. Compare against current Garden and a simple baseline, not only a deliberately weak system. A passing score is insufficient when another contract fails. Refresh held-out evaluation independently to control adaptation to repeated tests. Checker changes follow the baseline external-certification path. Merge and deployment remain separate authorised transitions.\n\nFunction contract (specification notation, not executable GSL):\n  EvolveCandidate(work_package_ref, CPI.EvaluationPlan, population_budget_ref) -> CPI.ConstructionCandidate set and existing CIConformancePipelineReceipt records. Effects: candidates and experimental results only.\n"
+            }
+          ]
+        },
+        "SMALLER_SHARED_EXTENSION": {
+          "result": "Preferred bounded route: qualify existing interface and implement only demonstrated missing clauses.",
+          "costs": "Requires source mapping, per-function tests and integration evidence; amounts UNKNOWN."
+        },
+        "FULL_PROPOSAL": {
+          "result": "Not justified as seven new engines/features; reuse existing owners.",
+          "costs": "Potential duplicate representations/state, interfaces, trusted components, configuration and verification burden; unmeasured."
+        }
+      },
+      "decision": "RETAIN_EXISTING_OWNER_AND_RESOLVE_BOUNDED_QUALIFICATION",
+      "advantage_type": "NONE_DEMONSTRATED",
+      "structural_claim": "Source interfaces already exist; avoiding duplicate owners preserves traceability. No global minimality claim.",
+      "performance_claim": "NONE_MEASURED",
+      "remaining_design_work": [
+        "Choose and expose concrete decision/learning procedure and parameters without duplicating owner.",
+        "Resolve exact machine types/versions and evaluator authority, held-out distribution, budgets and thresholds."
+      ],
+      "remaining_implementation_work": [
+        "Implement bounded function plus integration adapters; use existing equivalents where present."
+      ],
+      "remaining_empirical_work": [
+        "Run component, integrated, ablation, negative-transfer/retention and matched B0/B1/B2 trials."
+      ],
+      "closed": false
+    },
+    {
+      "requirement_id": "COG-RESOURCE_ALLOCATION",
+      "function_id": "RESOURCE_ALLOCATION",
+      "source": {
+        "path": "design_deltas/v15.7/COGNITIVE-CORE-CANDIDATE.md",
+        "availability": "PRESENT",
+        "sha256": "1229f9c9dde63bb8eb2aff4545bb7ec726e5775b18bd2f7b4452211cba34bf32",
+        "anchor": "Seven qualification targets"
+      },
+      "intended_behavior": "Resource allocation",
+      "mandatory": true,
+      "mechanism_owner": "Engine.Reason + existing AAP owner",
+      "procedure": "InferWithinBudget / PlanBounded / SelectBackend",
+      "completeness": "SPECIFICATION_INTERFACE_FOUND_CONCRETE_ALGORITHM_UNRESOLVED",
+      "composition": "Unresolved machine dependency/type/evaluator bindings block affected integrated qualification.",
+      "comparison_row_ids": [
+        "CMP-SOAR",
+        "CMP-OPENNARS"
+      ],
+      "comparator_status": "UNRESOLVED",
+      "alternatives": {
+        "NO_ADDITION": {
+          "result": "Existing specification addresses function direction; does not supply missing concrete algorithm/evaluation evidence.",
+          "evidence": [
+            {
+              "path": "canonical/current/Garden_Technical_v15.5_FULL_2026-09-12.txt",
+              "availability": "PRESENT",
+              "sha256": "865f5ded862cb30d51ad213fa05cdc342983a31fb6a23bb9aad5b25a84d1cb9b",
+              "anchor": "CPI-P05",
+              "line": 12313,
+              "quote": "CPI-P05 \u2014 Resource-Bounded Revisable Inference",
+              "section_excerpt": "CPI-P05 \u2014 Resource-Bounded Revisable Inference\nPrimary owner: Engine.Reason\nCooperating owners: Engine.Proof, Engine.Dependency, Capability.Knowledge, Engine.Orchestrate\nExisting anchors: [T-CAPABILITIES] [T-KNOWLEDGE]\nConceptual references: R03\n\nDelta and non-duplication: Supply a budgeted inference operating policy inside the existing Reason machinery, not a new universal confidence calculus copied from another project.\n\nRequired operating method: Order pending inferences by consequence, expected decision improvement, cost, and urgency. Record logical premises separately from source trust and empirical confidence. Preserve contradictions and competing hypotheses when resolution is unavailable. Use typed probabilistic, interval, ordinal, or proof outcomes with declared semantics; do not convert all of them into one unqualified score. A bounded search may return a provisional answer with its unresolved frontier. Every promotion must follow the existing evidence policy. Repetition by other agents does not create independent support. A high-priority instruction can remain factually false. Deeper inference is selected when expected value or a mandatory obligation justifies it; mere trace length is not quality.\n\nFunction contract (specification notation, not executable GSL):\n  InferWithinBudget(query_ref, knowledge_snapshot_ref, budget_ref) -> existing InferenceResult and ReasoningTrace with remaining_obligations_ref. Effects: analysis only until separately admitted.\n"
+            },
+            {
+              "path": "canonical/current/Garden_Technical_v15.5_FULL_2026-09-12.txt",
+              "availability": "PRESENT",
+              "sha256": "865f5ded862cb30d51ad213fa05cdc342983a31fb6a23bb9aad5b25a84d1cb9b",
+              "anchor": "CPI-P09",
+              "line": 12365,
+              "quote": "CPI-P09 \u2014 Bounded Planning and Information-Gathering",
+              "section_excerpt": "CPI-P09 \u2014 Bounded Planning and Information-Gathering\nPrimary owner: Engine.Reason\nCooperating owners: Engine.Research, Engine.Compare, Engine.Orchestrate, Capability.Trust.Safety\nExisting anchors: [T-CAPABILITIES]\nConceptual references: R10, R11\n\nDelta and non-duplication: Implement action/search budget selection through existing decision machinery; do not add an infallible optimiser or duplicate the policy engine.\n\nRequired operating method: Represent plan alternatives with predictions, uncertainty, constraints, cost, time, dependencies, and information value. Allocate look-ahead by its expected effect on the decision, with explicit bounds and anytime outputs. Include observe, clarify, delay where safe, delegate, and stop as possible actions, but evaluate the effects of inaction too. Distinguish uncertainty from risk estimates and preserve hard constraints outside preference optimisation. Abort cannot be assumed safe in a moving physical system. When the same observations fit incompatible worlds, request distinguishing information or choose a qualified robust response rather than manufacture certainty.\n\nFunction contract (specification notation, not executable GSL):\n  PlanBounded(goal_ref, state_snapshot_ref, CPI.PredictiveInterface?, budget_ref) -> proposed action plan, alternatives, and residual obligations. Effects: proposals only.\n"
+            },
+            {
+              "path": "canonical/current/Garden_Technical_v15.5_FULL_2026-09-12.txt",
+              "availability": "PRESENT",
+              "sha256": "865f5ded862cb30d51ad213fa05cdc342983a31fb6a23bb9aad5b25a84d1cb9b",
+              "anchor": "CPI-P13",
+              "line": 12417,
+              "quote": "CPI-P13 \u2014 Backend Portfolio and Resource Efficiency",
+              "section_excerpt": "CPI-P13 \u2014 Backend Portfolio and Resource Efficiency\nPrimary owner: Engine.Orchestrate\nCooperating owners: Engine.Reason, Engine.Compare, Capability.Infrastructure.Hardware, Capability.Compute.Runtime\nExisting anchors: [T-CAPABILITIES] [T-AI-DEV]\nConceptual references: R16\n\nDelta and non-duplication: Compare reasoning backends, fast procedures, symbolic solvers, and learned models as replaceable mechanisms. No vendor model, checkpoint, training set, distillation output, or API entitlement is imported.\n\nRequired operating method: Bind each available mechanism to task eligibility, resource costs, quality/risk evidence, data permissions, retained state, and hardware limits. Select the smallest sufficient configuration using AAP rather than activating every subsystem. Treat imitation/distillation as a separately proposed process requiring rights to all teacher outputs and training data; absent those rights it is excluded. Preserve privacy between unrelated users and task domains. Measure end-to-end cost, latency, memory, energy, failure and fallback at matched utility. For a workload fraction f moved to a path with relative cost r and whole-workload overhead h, the illustrative compute saving is f(1-r)-h under the stated accounting assumptions. This formula is not an observed saving, does not account for everything by itself, and does not imply equivalent chip-purchase or electricity reductions.\n\nFunction contract (specification notation, not executable GSL):\n  SelectBackend(task_ref, qualified_mechanism_records, CPI.EvaluationPlan, budget_ref) -> selected mechanism and rationale, or explicit unavailability. Effects: selection; invocation uses existing runtime authorisation.\n"
+            }
+          ]
+        },
+        "SMALLER_SHARED_EXTENSION": {
+          "result": "Preferred bounded route: qualify existing interface and implement only demonstrated missing clauses.",
+          "costs": "Requires source mapping, per-function tests and integration evidence; amounts UNKNOWN."
+        },
+        "FULL_PROPOSAL": {
+          "result": "Not justified as seven new engines/features; reuse existing owners.",
+          "costs": "Potential duplicate representations/state, interfaces, trusted components, configuration and verification burden; unmeasured."
+        }
+      },
+      "decision": "RETAIN_EXISTING_OWNER_AND_RESOLVE_BOUNDED_QUALIFICATION",
+      "advantage_type": "NONE_DEMONSTRATED",
+      "structural_claim": "Source interfaces already exist; avoiding duplicate owners preserves traceability. No global minimality claim.",
+      "performance_claim": "NONE_MEASURED",
+      "remaining_design_work": [
+        "Choose and expose concrete decision/learning procedure and parameters without duplicating owner.",
+        "Resolve exact machine types/versions and evaluator authority, held-out distribution, budgets and thresholds."
+      ],
+      "remaining_implementation_work": [
+        "Implement bounded function plus integration adapters; use existing equivalents where present."
+      ],
+      "remaining_empirical_work": [
+        "Run component, integrated, ablation, negative-transfer/retention and matched B0/B1/B2 trials."
+      ],
+      "closed": false
+    },
+    {
+      "requirement_id": "COG-TRANSFER",
+      "function_id": "TRANSFER",
+      "source": {
+        "path": "design_deltas/v15.7/COGNITIVE-CORE-CANDIDATE.md",
+        "availability": "PRESENT",
+        "sha256": "1229f9c9dde63bb8eb2aff4545bb7ec726e5775b18bd2f7b4452211cba34bf32",
+        "anchor": "Seven qualification targets"
+      },
+      "intended_behavior": "Transfer and abstraction",
+      "mandatory": true,
+      "mechanism_owner": "Engine.Reason + Algebra.Bridge + CDDT",
+      "procedure": "QualifyProcedure / CheckBridge",
+      "completeness": "SPECIFICATION_INTERFACE_FOUND_CONCRETE_ALGORITHM_UNRESOLVED",
+      "composition": "Unresolved machine dependency/type/evaluator bindings block affected integrated qualification.",
+      "comparison_row_ids": [],
+      "comparator_status": "NO_COMPARATOR_IN_BOUNDED_SET",
+      "alternatives": {
+        "NO_ADDITION": {
+          "result": "Existing specification addresses function direction; does not supply missing concrete algorithm/evaluation evidence.",
+          "evidence": [
+            {
+              "path": "canonical/current/Garden_Technical_v15.5_FULL_2026-09-12.txt",
+              "availability": "PRESENT",
+              "sha256": "865f5ded862cb30d51ad213fa05cdc342983a31fb6a23bb9aad5b25a84d1cb9b",
+              "anchor": "CPI-P03",
+              "line": 12287,
+              "quote": "CPI-P03 \u2014 Qualified Procedure Learning and Compilation",
+              "section_excerpt": "CPI-P03 \u2014 Qualified Procedure Learning and Compilation\nPrimary owner: Engine.Compile\nCooperating owners: Engine.Reason, Capability.Knowledge.Curation, Engine.Dependency, Engine.Compare\nExisting anchors: [T-AI-DEV] [T-KNOWLEDGE]\nConceptual references: R02\n\nDelta and non-duplication: Bind learning from successful work to explicit applicability and reusable execution. Reuse existing generation, proof, cache, and invalidation contracts rather than creating a second knowledge-admission system.\n\nRequired operating method: Extract a proposed method from a successful trace or independently specified solution. Keep the source task, assumptions, exceptional cases, evidence, and output semantics. Generalise only after tests or a stated proof establish the proposed scope; one successful episode is insufficient for a universal rule. Qualify a cheap applicability predicate with APPLICABLE, NOT_APPLICABLE, and UNKNOWN outcomes. Compile or implement the routine without importing external source code. Monitor each use and invalidate on dependency, environment, authority, or verifier changes. Compare fresh reasoning and reuse at matched quality and risk, accounting for discovery, qualification, checks, fallback, repair, and amortisation. Statistical qualification must retain its distributional limits. A seed does not turn unobserved external state into deterministic input.\n\nFunction contract (specification notation, not executable GSL):\n  QualifyProcedure(candidate_ref, applicability_spec, evaluation_plan_ref) -> CPI.QualifiedProcedure or a nonqualified candidate. Effects: candidate records; publication to an active knowledge view requires normal admission.\n"
+            },
+            {
+              "path": "canonical/current/Garden_Technical_v15.5_FULL_2026-09-12.txt",
+              "availability": "PRESENT",
+              "sha256": "865f5ded862cb30d51ad213fa05cdc342983a31fb6a23bb9aad5b25a84d1cb9b",
+              "anchor": "CPI-P06",
+              "line": 12326,
+              "quote": "CPI-P06 \u2014 Hybrid Representation and Checked Semantic Bridges",
+              "section_excerpt": "CPI-P06 \u2014 Hybrid Representation and Checked Semantic Bridges\nPrimary owner: Algebra.Bridge\nCooperating owners: Engine.Reason, Engine.Compile, Engine.Proof, Capability.Compute.Runtime\nExisting anchors: [T-BRIDGE] [T-IMPLEMENT]\nConceptual references: R04, R05, R06, R17\n\nDelta and non-duplication: Unify interfaces where appropriate without equating symbolic rules, graph inference, neural representations, or proofs. Existing Bridge ownership remains authoritative.\n\nRequired operating method: Specify a typed representation mapping with source and target meanings, units, frame, approximation class, permitted operations, error bounds, and round-trip or refinement obligations. Permit opaque latent state as a referenced artifact, not as an unexplained replacement for required semantic evidence. Keep a narrow checking kernel separately pinned from proposer code. Prefer independent checker implementations for critical translations where feasible; identical model prompts do not establish independence. Switch between inexpensive qualified routines and fuller deliberation based on applicability and consequence. A fast path may not skip a mandatory guard. Any approximation affects the assurance statement explicitly.\n\nFunction contract (specification notation, not executable GSL):\n  CheckBridge(source_contract_ref, mapping_ref, target_artifact_ref, qualification_ref) -> an existing translation/proof receipt plus CPI.ObligationBundle. Effects: qualification records only.\n"
+            }
+          ]
+        },
+        "SMALLER_SHARED_EXTENSION": {
+          "result": "Preferred bounded route: qualify existing interface and implement only demonstrated missing clauses.",
+          "costs": "Requires source mapping, per-function tests and integration evidence; amounts UNKNOWN."
+        },
+        "FULL_PROPOSAL": {
+          "result": "Not justified as seven new engines/features; reuse existing owners.",
+          "costs": "Potential duplicate representations/state, interfaces, trusted components, configuration and verification burden; unmeasured."
+        }
+      },
+      "decision": "RETAIN_EXISTING_OWNER_AND_RESOLVE_BOUNDED_QUALIFICATION",
+      "advantage_type": "NONE_DEMONSTRATED",
+      "structural_claim": "Source interfaces already exist; avoiding duplicate owners preserves traceability. No global minimality claim.",
+      "performance_claim": "NONE_MEASURED",
+      "remaining_design_work": [
+        "Choose and expose concrete decision/learning procedure and parameters without duplicating owner.",
+        "Resolve exact machine types/versions and evaluator authority, held-out distribution, budgets and thresholds."
+      ],
+      "remaining_implementation_work": [
+        "Implement bounded function plus integration adapters; use existing equivalents where present."
+      ],
+      "remaining_empirical_work": [
+        "Run component, integrated, ablation, negative-transfer/retention and matched B0/B1/B2 trials."
+      ],
+      "closed": false
+    },
+    {
+      "requirement_id": "CROSSCUT-INTEGRATED_RECOVERY",
+      "function_id": null,
+      "title": "Integrated execution and recovery",
+      "source": {
+        "path": "design_deltas/v15.7/DESIGN-CLOSURE-CANDIDATE.md",
+        "availability": "PRESENT",
+        "sha256": "64a06843954ed18e13a3e36a7ba5070cc992ec06cb717b1fda431661457c8e5b",
+        "anchor": "2. Bounded composition review"
+      },
+      "mechanism": {
+        "path": "canonical/current/Garden_Technical_v15.5_FULL_2026-09-12.txt",
+        "availability": "PRESENT",
+        "sha256": "865f5ded862cb30d51ad213fa05cdc342983a31fb6a23bb9aad5b25a84d1cb9b",
+        "anchor": "CPI-P10"
+      },
+      "comparison_row_ids": [],
+      "comparator_status": "NO_COMPARATOR_IN_BOUNDED_SET",
+      "alternatives": {
+        "NO_ADDITION": "Keep existing contract; gaps in implementation/evidence remain.",
+        "SMALLER_SHARED_EXTENSION": "Complete existing binding and applicable bounded checks.",
+        "FULL_PROPOSAL": "No new parallel authority/review engine justified."
+      },
+      "decision": "RESOLVE_EXISTING_CONTRACT_BINDINGS",
+      "advantage_type": "NONE_DEMONSTRATED",
+      "remaining_work": "Validate outward dependencies, protected ownership and fresh evidence for affected scope.",
+      "closed": false
+    },
+    {
+      "requirement_id": "CROSSCUT-EVALUATION",
+      "function_id": null,
+      "title": "Evaluation and baseline bindings",
+      "source": {
+        "path": "design_deltas/v15.7/DESIGN-CLOSURE-CANDIDATE.md",
+        "availability": "PRESENT",
+        "sha256": "64a06843954ed18e13a3e36a7ba5070cc992ec06cb717b1fda431661457c8e5b",
+        "anchor": "2. Bounded composition review"
+      },
+      "mechanism": {
+        "path": "canonical/current/Garden_Technical_v15.5_FULL_2026-09-12.txt",
+        "availability": "PRESENT",
+        "sha256": "865f5ded862cb30d51ad213fa05cdc342983a31fb6a23bb9aad5b25a84d1cb9b",
+        "anchor": "CPI-P12"
+      },
+      "comparison_row_ids": [],
+      "comparator_status": "NO_COMPARATOR_IN_BOUNDED_SET",
+      "alternatives": {
+        "NO_ADDITION": "Keep existing contract; gaps in implementation/evidence remain.",
+        "SMALLER_SHARED_EXTENSION": "Complete existing binding and applicable bounded checks.",
+        "FULL_PROPOSAL": "No new parallel authority/review engine justified."
+      },
+      "decision": "RESOLVE_EXISTING_CONTRACT_BINDINGS",
+      "advantage_type": "NONE_DEMONSTRATED",
+      "remaining_work": "Validate outward dependencies, protected ownership and fresh evidence for affected scope.",
+      "closed": false
+    },
+    {
+      "requirement_id": "CROSSCUT-BUDGET_REGRESSION",
+      "function_id": null,
+      "title": "Budget and regression controls",
+      "source": {
+        "path": "design_deltas/v15.7/DESIGN-CLOSURE-CANDIDATE.md",
+        "availability": "PRESENT",
+        "sha256": "64a06843954ed18e13a3e36a7ba5070cc992ec06cb717b1fda431661457c8e5b",
+        "anchor": "2. Bounded composition review"
+      },
+      "mechanism": {
+        "path": "canonical/current/Garden_Technical_v15.5_FULL_2026-09-12.txt",
+        "availability": "PRESENT",
+        "sha256": "865f5ded862cb30d51ad213fa05cdc342983a31fb6a23bb9aad5b25a84d1cb9b",
+        "anchor": "CPI-P13"
+      },
+      "comparison_row_ids": [],
+      "comparator_status": "NO_COMPARATOR_IN_BOUNDED_SET",
+      "alternatives": {
+        "NO_ADDITION": "Keep existing contract; gaps in implementation/evidence remain.",
+        "SMALLER_SHARED_EXTENSION": "Complete existing binding and applicable bounded checks.",
+        "FULL_PROPOSAL": "No new parallel authority/review engine justified."
+      },
+      "decision": "RESOLVE_EXISTING_CONTRACT_BINDINGS",
+      "advantage_type": "NONE_DEMONSTRATED",
+      "remaining_work": "Validate outward dependencies, protected ownership and fresh evidence for affected scope.",
+      "closed": false
+    },
+    {
+      "requirement_id": "CROSSCUT-ADMISSION_RELEASE",
+      "function_id": null,
+      "title": "Admission and release dependencies",
+      "source": {
+        "path": "design_deltas/v15.7/DESIGN-CLOSURE-CANDIDATE.md",
+        "availability": "PRESENT",
+        "sha256": "64a06843954ed18e13a3e36a7ba5070cc992ec06cb717b1fda431661457c8e5b",
+        "anchor": "2. Bounded composition review"
+      },
+      "mechanism": {
+        "path": "canonical/current/Garden_Technical_v15.5_FULL_2026-09-12.txt",
+        "availability": "PRESENT",
+        "sha256": "865f5ded862cb30d51ad213fa05cdc342983a31fb6a23bb9aad5b25a84d1cb9b",
+        "anchor": "CPI-P14"
+      },
+      "comparison_row_ids": [],
+      "comparator_status": "NO_COMPARATOR_IN_BOUNDED_SET",
+      "alternatives": {
+        "NO_ADDITION": "Keep existing contract; gaps in implementation/evidence remain.",
+        "SMALLER_SHARED_EXTENSION": "Complete existing binding and applicable bounded checks.",
+        "FULL_PROPOSAL": "No new parallel authority/review engine justified."
+      },
+      "decision": "RESOLVE_EXISTING_CONTRACT_BINDINGS",
+      "advantage_type": "NONE_DEMONSTRATED",
+      "remaining_work": "Validate outward dependencies, protected ownership and fresh evidence for affected scope.",
+      "closed": false
+    }
+  ],
+  "counts": {
+    "total": 11,
+    "closed": 0,
+    "unresolved": 11,
+    "no_comparator_in_bounded_set": 4
+  },
+  "counting_rule": "Seven function requirements plus four explicit cross-cutting areas. No-comparator is a separate coverage property, not proof of failure or external validation.",
+  "reference_rules": [
+    {
+      "id": "GSL-STAT-011",
+      "source": {
+        "path": "canonical/current/Garden_Annexure_v15.5_FULL_2026-09-12.txt",
+        "availability": "PRESENT",
+        "sha256": "56aa88e3c63e8ec8540175c0fad7d9d06ead021c49756cb281f4276a5c8bd084",
+        "anchor": "GSL-STAT-011"
+      },
+      "meaning": "DependsOn cycles require declared fixed-point semantics and termination/liveness proof."
+    },
+    {
+      "id": "K-INT-002",
+      "source": {
+        "path": "canonical/current/Garden_Annexure_v15.5_FULL_2026-09-12.txt",
+        "availability": "PRESENT",
+        "sha256": "56aa88e3c63e8ec8540175c0fad7d9d06ead021c49756cb281f4276a5c8bd084",
+        "anchor": "K-INT-002"
+      },
+      "meaning": "Contradictions remain CONFLICTED/UNKNOWN pending resolution."
+    },
+    {
+      "id": "RSN-005",
+      "source": {
+        "path": "canonical/current/Garden_Annexure_v15.5_FULL_2026-09-12.txt",
+        "availability": "PRESENT",
+        "sha256": "56aa88e3c63e8ec8540175c0fad7d9d06ead021c49756cb281f4276a5c8bd084",
+        "anchor": "RSN-005"
+      },
+      "meaning": "Surviving falsification attempts is not proof."
+    },
+    {
+      "id": "REG-GSL-STRUCT-001",
+      "source": {
+        "path": "canonical/current/Garden_Annexure_v15.5_FULL_2026-09-12.txt",
+        "availability": "PRESENT",
+        "sha256": "56aa88e3c63e8ec8540175c0fad7d9d06ead021c49756cb281f4276a5c8bd084",
+        "anchor": "REG-GSL-STRUCT-001"
+      },
+      "meaning": "Structural relation registry only, not fixed-point authority."
+    },
+    {
+      "id": "RES-007",
+      "source": {
+        "path": "canonical/current/Garden_Annexure_v15.5_FULL_2026-09-12.txt",
+        "availability": "PRESENT",
+        "sha256": "56aa88e3c63e8ec8540175c0fad7d9d06ead021c49756cb281f4276a5c8bd084",
+        "anchor": "RES-007"
+      },
+      "meaning": "Observed failure does not prove root cause."
+    }
+  ],
+  "authority_effect": "NONE"
+}

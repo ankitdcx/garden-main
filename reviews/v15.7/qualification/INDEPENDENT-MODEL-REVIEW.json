@@ -1,0 +1,134 @@
+{
+  "schema": "GardenIndependentModelReview/v1",
+  "review_id": "GARDEN-V15.7-QUALIFICATION-GPT56SOL-20260916-001",
+  "review_date": "2026-09-16",
+  "model_identity": {
+    "declared_model": "gpt-5.6-sol",
+    "provider_family": "OpenAI",
+    "identity_source": "System and delegated-task context available to this reviewer",
+    "independent_serving_build_attestation": false
+  },
+  "review_character": {
+    "family_reviews_contributed": 1,
+    "effective_three_family_promotion_quorum": false,
+    "authorization_effect": "NONE",
+    "canonical_promotion_authorized": false,
+    "scope": "Independent source, contract, receipt, and adversarial review of the bounded v15.7 permission/recovery, release-verification, physical-assurance, context-routing, and FunctionContract surface-enumeration references."
+  },
+  "disposition": "PASS_BOUNDED_AFTER_VERIFIED_FIXES",
+  "open_blockers": [],
+  "findings": [
+    {
+      "id": "SOL-V157-Q-001",
+      "initial_severity": "HIGH",
+      "area": "physical-assurance monitoring grid",
+      "finding": "TankAssumptions originally accepted dt greater than monitor_period, and the simulation advanced only on dt. A permitted dt=1.0, monitor_period=0.1 scenario crossed the safe envelope before the next simulated monitor despite the intervention margin using the smaller monitoring bound.",
+      "bounded_fix": "Constrain dt to the declared monitoring/handoff grid and add adversarial regressions.",
+      "status": "VERIFIED_FIXED",
+      "verification": "TankAssumptions now rejects dt greater than monitor_period and non-dividing monitor/handoff grids; the new invalid-assumption cases pass."
+    },
+    {
+      "id": "SOL-V157-Q-002",
+      "initial_severity": "HIGH",
+      "area": "physical-assurance primary return",
+      "finding": "request_primary_return originally trusted caller-supplied dwell_s. A fallback entered at simulated time 0 could return immediately when the caller supplied dwell_s=1.0, contrary to the recorded dwell constraint.",
+      "bounded_fix": "Record fallback entry time and compare actual simulated elapsed dwell with both the minimum bound and the asserted dwell.",
+      "status": "VERIFIED_FIXED",
+      "verification": "fallback_entered_at is now recorded on handoff/minimum-risk entry; immediate return is rejected and return after elapsed dwell is accepted by regression."
+    },
+    {
+      "id": "SOL-V157-Q-003",
+      "initial_severity": "MEDIUM",
+      "area": "physical-assurance shared actuator",
+      "finding": "shared_actuator_decision originally accepted identical proposals as coordinated without coordination evidence and accepted identical non-finite or out-of-limit commands.",
+      "bounded_fix": "Validate proposal identity, epoch, finiteness and actuator bound, and fail closed unless trusted coordination is explicit.",
+      "status": "VERIFIED_FIXED",
+      "verification": "The function now rejects malformed, non-finite, out-of-limit, uncoordinated, and conflicting proposals; only bounded identical proposals with trusted_coordination=True pass."
+    },
+    {
+      "id": "SOL-V157-Q-004",
+      "initial_severity": "MEDIUM",
+      "area": "permission/recovery input semantics",
+      "finding": "claim originally accepted empty/non-string workers despite the FunctionContract requiring a nonempty worker identity. dispatch lose_ack and reconcile authoritative_not_executed also used generic truthiness, allowing non-boolean values to change safety-relevant state.",
+      "bounded_fix": "Require canonical nonempty worker strings and exact booleans before mutation; verify rejected inputs leave state unchanged.",
+      "status": "VERIFIED_FIXED",
+      "verification": "The reference now performs strict validation and the worker/boolean-control regressions pass."
+    },
+    {
+      "id": "SOL-V157-Q-005",
+      "initial_severity": "HIGH",
+      "area": "context-routing relation provenance",
+      "finding": "Deduplicated observation aliases were not retained in packets. A contradiction targeting a duplicate alias was reported as resolved, but the packet contained only the canonical observation ID and no alias binding, so a downstream reviewer could not follow the relation.",
+      "bounded_fix": "Bind each relation ID to its immutable fingerprint/canonical observation ID or explicitly classify it unknown/withheld, include that map in the packet and route identity, and recheck it before dispatch.",
+      "status": "VERIFIED_FIXED",
+      "verification": "relation_bindings now resolves contradiction, supersession and parent aliases; it is hash-bound, drift-checked, and covered by three alias regressions."
+    },
+    {
+      "id": "SOL-V157-Q-006",
+      "initial_severity": "HIGH",
+      "area": "TLC checker adjudication",
+      "finding": "The checker initially allowed the command-line expected hash to redefine the tool pin, did not type version-probe timeout/execution failure into a receipt, and accepted expected negative-control text without requiring the TLC counterexample exit or excluding other invariant violations.",
+      "bounded_fix": "Anchor PASS to the repository pin, type probe failures as INCOMPLETE, and require the exact named negative-control violation with the expected TLC exit.",
+      "status": "VERIFIED_FIXED",
+      "verification": "The final checker enforces the built-in pin, emits INCOMPLETE for tool/probe failures, distinguishes complete/counterexample/incomplete outcomes, and the current bounded TLC receipt reports PASS."
+    },
+    {
+      "id": "SOL-V157-Q-007",
+      "initial_severity": "MEDIUM",
+      "area": "TLC evidence identity",
+      "finding": "The TLC receipt originally bound model, configuration, tool and output but not the checker code that adjudicated them.",
+      "bounded_fix": "Include checker path and SHA-256 in the generated receipt and regenerate it.",
+      "status": "VERIFIED_FIXED",
+      "verification": "The current receipt binds scripts/check_permission_recovery.py at SHA-256 3e2be498a162537d7d3341210582d070c38e0419deec71443f83e4d75d527775."
+    }
+  ],
+  "no_finding_observations": [
+    "The release verifier remains conjunctive across TUF, in-toto and artifact identity, records active and bootstrap root identities, and never grants promotion authority.",
+    "The bounded Recovery.tla invariants and runtime/reference scopes do not claim an unbounded refinement proof or distributed exactly-once behavior.",
+    "The FunctionContract scanner's new class-method enumeration exposes public methods as declared or FRONTIER, excludes private/nested implementation details, and its dedicated and coverage regressions pass.",
+    "The final qualification receipts checked below bind their currently referenced sources without a detected hash mismatch."
+  ],
+  "verification": {
+    "targeted_unittest_command": "PYTHONPATH=implementation python -m unittest implementation.tests.test_permission_recovery implementation.tests.test_physical_assurance implementation.tests.test_context_routing implementation.tests.test_release_verification implementation.tests.test_function_contracts implementation.tests.test_function_contract_coverage",
+    "result": "PASS_WITH_EXPECTED_DEPENDENCY_SKIPS",
+    "tests_run": 66,
+    "tests_skipped": 11,
+    "skip_reason": "Release-verification upstream assurance packages were not installed in this review runtime.",
+    "independently_rerun_tlc": false,
+    "receipt_identity_consistency": "PASS"
+  },
+  "source_sha256": {
+    "implementation/garden_kernel/permission_recovery.py": "22d145602f34acf81267686be7d732ac499aafb01087193e793253732ed42ff4",
+    "implementation/garden_kernel/release_verification.py": "690ed42b3a67d1703427b991b1283ac74a5bd0fef109bad10595eab51783694b",
+    "implementation/garden_kernel/physical_assurance.py": "ba2129012be03e75bdd2a873d84639b8062dec6f125616368ec516be61b3029d",
+    "implementation/garden_kernel/context_routing.py": "80bb2a1baf029b688d496a2778f2d6876c93ca7e3a59ffb5ab9e3ebc198b46fa",
+    "implementation/garden_kernel/function_contracts.py": "b974f74061dea9e2ceb3cb96bb22f15cdb2f49a29e82d5ffbd97df5c50c23aff",
+    "implementation/tests/test_permission_recovery.py": "f3b8ea83c3a6a8bf6e20a51d959b70746757e9e727eb88b8af08980906e15e86",
+    "implementation/tests/test_release_verification.py": "6461bfe85ef7a8a3ccb6ba86d4cefa3a2f49a9c20bf07f1a979ef82812c0d0ff",
+    "implementation/tests/test_physical_assurance.py": "0fa2c4b3791f9ea4b927664f81277667924e0ca3e55c88db636c1de817931abf",
+    "implementation/tests/test_context_routing.py": "781f389588fa9c5d0f7c23861dc0f93aabe33666686047267475524a8bf4f701",
+    "implementation/tests/test_function_contracts.py": "c0b391915842fae4405c1531dc882a5a4a459f5ebe67cdc80af01030a46b41d2",
+    "implementation/tests/test_function_contract_coverage.py": "78558bdc47c83c54607094ccf5b4394bcf6702170b8393240d0c39bb91c661e5",
+    "implementation/tests/supply_chain_fixture.py": "2d721a9b1c2aaea8115b22c9566cd65815ec1392635e6401c67f777c4437c09f",
+    "formal/permission_recovery/Recovery.tla": "09546470ca0ea960818a15b744bbf522b2afe59415a7c5e2614a9671b49717c1",
+    "formal/permission_recovery/Recovery.cfg": "fde688fcd583e9d36bfaf2e54ecf6f2909e835df5295376ad848dad00c1e1021",
+    "scripts/check_permission_recovery.py": "3e2be498a162537d7d3341210582d070c38e0419deec71443f83e4d75d527775",
+    "design_deltas/v15.7/BOUNDED-IMPLEMENTATION-CONTRACTS.md": "ebad8a8f25ee1f9b78720a4c2d6e206d1ef95a8407a8483ee87db22302e8125b",
+    "reviews/v15.7/qualification/recovery-model/TLC-RECEIPT.json": "83f337941ab88cb3db6df7400a70c9d642aa8d52cd2a1d4874c998745ba68b76",
+    "reviews/v15.7/qualification/recovery-runtime/RUNTIME-RECEIPT.json": "252afed4a5146b443bffb99b2df0ea6d2413a70c74705f31e81e07f59c929558",
+    "reviews/v15.7/qualification/physical/physical-assurance-receipt.json": "fef22517c4c8e2281acbba66aba6128ae4af05a1ad3419f5bab68911bbbd497a",
+    "reviews/v15.7/qualification/context-routing/context-routing-receipt.json": "4c5f299a9a21b9f12660e4d03df2d804060da70c9c79bf24869fce9ef629fe09",
+    "reviews/v15.7/qualification/release/release-verification-receipt.json": "ab0bdfcd6670b200e1ae9319ab4a491835e4beb8c4954d6e2781e4533359776e",
+    "reviews/v15.7/qualification/recovery-runtime/FUNCTION-CONTRACTS.json": "dd2aaa57a061077964bea5aa0911b6ee86942a33043e4697483947a73b15c48d",
+    "reviews/v15.7/qualification/context-routing/FUNCTION-CONTRACTS.json": "2e20d7b4f4743de69b8625979795d5384a05daec7643cfafc07138a08dd41c26",
+    "reviews/v15.7/qualification/release/FUNCTION-CONTRACTS.json": "3187be54d45109d94d5e3a955ca1494fd6f66e4d1005fb84cbd4542b6d7ebe82"
+  },
+  "review_limitations": [
+    "This review covers the named bounded reference scopes and their evidence; it does not demand or assert implementation of the whole Garden design.",
+    "The release qualification's 11 dependency-backed tests could not be independently rerun in this runtime. Their current source/receipt identities and fail-closed logic were reviewed, but the prior upstream-library execution was not reproduced here.",
+    "The TLC jar was not present in this workspace, so the model checker run was not independently reproduced. The model, configuration, checker adjudication, pinned-tool identity and bound PASS receipt were reviewed.",
+    "SQLite shared-transaction behavior does not qualify a distributed target; the tank model does not qualify hardware or continuous-time safety; context routing does not qualify a live model/provider.",
+    "The model label is reported from system/delegation context. This reviewer cannot independently attest the serving build or establish a distinct non-OpenAI model family.",
+    "This single OpenAI-family review does not satisfy an effective three-family promotion requirement, semantic closure, production qualification, or canonical admission."
+  ]
+}

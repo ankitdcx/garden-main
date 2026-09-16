@@ -1,0 +1,131 @@
+{
+  "schema": "GardenFunctionContractCoverageReport/v1",
+  "registry_id": "GARDEN-V157-PERMISSION-RECOVERY-REFERENCE-v1",
+  "design_epoch": "v15.5",
+  "canonical_source_root_sha256": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+  "scoped_function_count": 11,
+  "declared_contract_count": 4,
+  "frontier_function_count": 7,
+  "declaration_coverage_ratio": 0.363636,
+  "semantic_compliance_proved": false,
+  "functions": [
+    {
+      "identity": "implementation/garden_kernel/permission_recovery.py::PermissionRecoveryBoundary.acknowledge",
+      "path": "implementation/garden_kernel/permission_recovery.py",
+      "function": "PermissionRecoveryBoundary.acknowledge",
+      "signature": "(self: <untyped>, claim: <untyped>) -> <untyped>",
+      "source_sha256": "22d145602f34acf81267686be7d732ac499aafb01087193e793253732ed42ff4",
+      "coverage_state": "FRONTIER",
+      "contract_id": null,
+      "test_refs": []
+    },
+    {
+      "identity": "implementation/garden_kernel/permission_recovery.py::PermissionRecoveryBoundary.admit",
+      "path": "implementation/garden_kernel/permission_recovery.py",
+      "function": "PermissionRecoveryBoundary.admit",
+      "signature": "(self: <untyped>, claim: <untyped>) -> <untyped>",
+      "source_sha256": "22d145602f34acf81267686be7d732ac499aafb01087193e793253732ed42ff4",
+      "coverage_state": "DECLARED_REFERENCE",
+      "contract_id": "FC-PERMISSION-RECOVERY-ADMIT-v1",
+      "test_refs": [
+        "implementation/tests/test_permission_recovery.py"
+      ]
+    },
+    {
+      "identity": "implementation/garden_kernel/permission_recovery.py::PermissionRecoveryBoundary.claim",
+      "path": "implementation/garden_kernel/permission_recovery.py",
+      "function": "PermissionRecoveryBoundary.claim",
+      "signature": "(self: <untyped>, task_id: <untyped>, worker: <untyped>) -> <untyped>",
+      "source_sha256": "22d145602f34acf81267686be7d732ac499aafb01087193e793253732ed42ff4",
+      "coverage_state": "DECLARED_REFERENCE",
+      "contract_id": "FC-PERMISSION-RECOVERY-CLAIM-v1",
+      "test_refs": [
+        "implementation/tests/test_permission_recovery.py"
+      ]
+    },
+    {
+      "identity": "implementation/garden_kernel/permission_recovery.py::PermissionRecoveryBoundary.close",
+      "path": "implementation/garden_kernel/permission_recovery.py",
+      "function": "PermissionRecoveryBoundary.close",
+      "signature": "(self: <untyped>) -> <untyped>",
+      "source_sha256": "22d145602f34acf81267686be7d732ac499aafb01087193e793253732ed42ff4",
+      "coverage_state": "FRONTIER",
+      "contract_id": null,
+      "test_refs": []
+    },
+    {
+      "identity": "implementation/garden_kernel/permission_recovery.py::PermissionRecoveryBoundary.crash",
+      "path": "implementation/garden_kernel/permission_recovery.py",
+      "function": "PermissionRecoveryBoundary.crash",
+      "signature": "(self: <untyped>, claim: <untyped>) -> <untyped>",
+      "source_sha256": "22d145602f34acf81267686be7d732ac499aafb01087193e793253732ed42ff4",
+      "coverage_state": "FRONTIER",
+      "contract_id": null,
+      "test_refs": []
+    },
+    {
+      "identity": "implementation/garden_kernel/permission_recovery.py::PermissionRecoveryBoundary.dispatch",
+      "path": "implementation/garden_kernel/permission_recovery.py",
+      "function": "PermissionRecoveryBoundary.dispatch",
+      "signature": "(self: <untyped>, claim: <untyped>, *, lose_ack: <untyped>=<default>) -> <untyped>",
+      "source_sha256": "22d145602f34acf81267686be7d732ac499aafb01087193e793253732ed42ff4",
+      "coverage_state": "DECLARED_REFERENCE",
+      "contract_id": "FC-PERMISSION-RECOVERY-DISPATCH-v1",
+      "test_refs": [
+        "implementation/tests/test_permission_recovery.py"
+      ]
+    },
+    {
+      "identity": "implementation/garden_kernel/permission_recovery.py::PermissionRecoveryBoundary.enqueue",
+      "path": "implementation/garden_kernel/permission_recovery.py",
+      "function": "PermissionRecoveryBoundary.enqueue",
+      "signature": "(self: <untyped>, task_id: <untyped>, effect_id: <untyped>, payload: <untyped>) -> <untyped>",
+      "source_sha256": "22d145602f34acf81267686be7d732ac499aafb01087193e793253732ed42ff4",
+      "coverage_state": "FRONTIER",
+      "contract_id": null,
+      "test_refs": []
+    },
+    {
+      "identity": "implementation/garden_kernel/permission_recovery.py::PermissionRecoveryBoundary.reconcile",
+      "path": "implementation/garden_kernel/permission_recovery.py",
+      "function": "PermissionRecoveryBoundary.reconcile",
+      "signature": "(self: <untyped>, claim: <untyped>, *, authoritative_not_executed: <untyped>=<default>) -> <untyped>",
+      "source_sha256": "22d145602f34acf81267686be7d732ac499aafb01087193e793253732ed42ff4",
+      "coverage_state": "DECLARED_REFERENCE",
+      "contract_id": "FC-PERMISSION-RECOVERY-RECONCILE-v1",
+      "test_refs": [
+        "implementation/tests/test_permission_recovery.py"
+      ]
+    },
+    {
+      "identity": "implementation/garden_kernel/permission_recovery.py::PermissionRecoveryBoundary.revoke",
+      "path": "implementation/garden_kernel/permission_recovery.py",
+      "function": "PermissionRecoveryBoundary.revoke",
+      "signature": "(self: <untyped>) -> <untyped>",
+      "source_sha256": "22d145602f34acf81267686be7d732ac499aafb01087193e793253732ed42ff4",
+      "coverage_state": "FRONTIER",
+      "contract_id": null,
+      "test_refs": []
+    },
+    {
+      "identity": "implementation/garden_kernel/permission_recovery.py::PermissionRecoveryBoundary.snapshot",
+      "path": "implementation/garden_kernel/permission_recovery.py",
+      "function": "PermissionRecoveryBoundary.snapshot",
+      "signature": "(self: <untyped>) -> <untyped>",
+      "source_sha256": "22d145602f34acf81267686be7d732ac499aafb01087193e793253732ed42ff4",
+      "coverage_state": "FRONTIER",
+      "contract_id": null,
+      "test_refs": []
+    },
+    {
+      "identity": "implementation/garden_kernel/permission_recovery.py::PermissionRecoveryBoundary.tx",
+      "path": "implementation/garden_kernel/permission_recovery.py",
+      "function": "PermissionRecoveryBoundary.tx",
+      "signature": "(self: <untyped>) -> <untyped>",
+      "source_sha256": "22d145602f34acf81267686be7d732ac499aafb01087193e793253732ed42ff4",
+      "coverage_state": "FRONTIER",
+      "contract_id": null,
+      "test_refs": []
+    }
+  ]
+}

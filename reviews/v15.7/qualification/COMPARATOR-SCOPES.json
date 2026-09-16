@@ -1,0 +1,412 @@
+{
+  "schema": "GardenComparatorScopeRegister/v1",
+  "scope_version": "fixed-ten-v1",
+  "source": {
+    "path": "design_deltas/v15.7/COGNITIVE-COMPARE-CANDIDATE.md",
+    "availability": "PRESENT",
+    "sha256": "aa9d2d864d79888e4e9aaf5c23f75daab91e658a0359578a2efbd3e19bc326b6"
+  },
+  "rows": [
+    {
+      "comparison_row_id": "CMP-SOAR",
+      "comparator_id": "SOAR",
+      "name": "Soar",
+      "initial_artifact_type": "Cognitive architecture",
+      "actual_accessible_artifact_type": "UNRESOLVED_NOT_FETCHED",
+      "artifact_pin": {
+        "paper_or_software_identity": null,
+        "revision_or_commit": null,
+        "content_sha256": null,
+        "retrieval_date": null,
+        "dependencies_and_configuration": null
+      },
+      "pin_status": "UNKNOWN",
+      "bounded_scope": "operator selection, memory, learning",
+      "reviewed_scope": "Approved local scope definition and Garden counterpart only; external artifact content has not been inspected in this pass.",
+      "out_of_scope": [
+        "whole-world architecture ranking",
+        "unrelated mechanisms",
+        "performance superiority without matched experiments"
+      ],
+      "Garden_function_ids": [
+        "RESOURCE_ALLOCATION",
+        "CONTINUAL_LEARNING"
+      ],
+      "Garden_counterpart_refs": [
+        "COGNITIVE-FUNCTION-DISPOSITIONS.json#RESOURCE_ALLOCATION",
+        "COGNITIVE-FUNCTION-DISPOSITIONS.json#CONTINUAL_LEARNING"
+      ],
+      "disposition": "UNRESOLVED",
+      "missing_evidence": "Exact immutable comparator artifact and mechanism-level inspection; runnable-access status, license and assumptions are not inferred from name.",
+      "resolution_work_item": "Pin one primary artifact/version/hash and review only operator selection, memory, learning; record applicable specification-level mapping before proposing experiments.",
+      "approved_exclusion": false,
+      "claim_limitations": [
+        "Unknown is not a Garden defect.",
+        "Framework orchestration cannot be counted as underlying-model intelligence.",
+        "No empirical deficit or superiority claimed."
+      ],
+      "forbidden_dispositions": []
+    },
+    {
+      "comparison_row_id": "CMP-ACT_R",
+      "comparator_id": "ACT_R",
+      "name": "ACT-R",
+      "initial_artifact_type": "Cognitive architecture",
+      "actual_accessible_artifact_type": "UNRESOLVED_NOT_FETCHED",
+      "artifact_pin": {
+        "paper_or_software_identity": null,
+        "revision_or_commit": null,
+        "content_sha256": null,
+        "retrieval_date": null,
+        "dependencies_and_configuration": null
+      },
+      "pin_status": "UNKNOWN",
+      "bounded_scope": "memory/processing and cognitive modelling",
+      "reviewed_scope": "Approved local scope definition and Garden counterpart only; external artifact content has not been inspected in this pass.",
+      "out_of_scope": [
+        "whole-world architecture ranking",
+        "unrelated mechanisms",
+        "performance superiority without matched experiments"
+      ],
+      "Garden_function_ids": [
+        "CONTINUAL_LEARNING"
+      ],
+      "Garden_counterpart_refs": [
+        "COGNITIVE-FUNCTION-DISPOSITIONS.json#CONTINUAL_LEARNING"
+      ],
+      "disposition": "UNRESOLVED",
+      "missing_evidence": "Exact immutable comparator artifact and mechanism-level inspection; runnable-access status, license and assumptions are not inferred from name.",
+      "resolution_work_item": "Pin one primary artifact/version/hash and review only memory/processing and cognitive modelling; record applicable specification-level mapping before proposing experiments.",
+      "approved_exclusion": false,
+      "claim_limitations": [
+        "Unknown is not a Garden defect.",
+        "Framework orchestration cannot be counted as underlying-model intelligence.",
+        "No empirical deficit or superiority claimed."
+      ],
+      "forbidden_dispositions": []
+    },
+    {
+      "comparison_row_id": "CMP-HYPERON",
+      "comparator_id": "HYPERON",
+      "name": "OpenCog Hyperon",
+      "initial_artifact_type": "Cognitive architecture",
+      "actual_accessible_artifact_type": "UNRESOLVED_NOT_FETCHED",
+      "artifact_pin": {
+        "paper_or_software_identity": null,
+        "revision_or_commit": null,
+        "content_sha256": null,
+        "retrieval_date": null,
+        "dependencies_and_configuration": null
+      },
+      "pin_status": "UNKNOWN",
+      "bounded_scope": "representations and integrated reasoning/learning",
+      "reviewed_scope": "Approved local scope definition and Garden counterpart only; external artifact content has not been inspected in this pass.",
+      "out_of_scope": [
+        "whole-world architecture ranking",
+        "unrelated mechanisms",
+        "performance superiority without matched experiments"
+      ],
+      "Garden_function_ids": [
+        "GROUNDING",
+        "CONTINUAL_LEARNING"
+      ],
+      "Garden_counterpart_refs": [
+        "COGNITIVE-FUNCTION-DISPOSITIONS.json#GROUNDING",
+        "COGNITIVE-FUNCTION-DISPOSITIONS.json#CONTINUAL_LEARNING"
+      ],
+      "disposition": "UNRESOLVED",
+      "missing_evidence": "Exact immutable comparator artifact and mechanism-level inspection; runnable-access status, license and assumptions are not inferred from name.",
+      "resolution_work_item": "Pin one primary artifact/version/hash and review only representations and integrated reasoning/learning; record applicable specification-level mapping before proposing experiments.",
+      "approved_exclusion": false,
+      "claim_limitations": [
+        "Unknown is not a Garden defect.",
+        "Framework orchestration cannot be counted as underlying-model intelligence.",
+        "No empirical deficit or superiority claimed."
+      ],
+      "forbidden_dispositions": []
+    },
+    {
+      "comparison_row_id": "CMP-OPENNARS",
+      "comparator_id": "OPENNARS",
+      "name": "OpenNARS",
+      "initial_artifact_type": "Reasoning architecture",
+      "actual_accessible_artifact_type": "UNRESOLVED_NOT_FETCHED",
+      "artifact_pin": {
+        "paper_or_software_identity": null,
+        "revision_or_commit": null,
+        "content_sha256": null,
+        "retrieval_date": null,
+        "dependencies_and_configuration": null
+      },
+      "pin_status": "UNKNOWN",
+      "bounded_scope": "uncertainty and resource-bounded reasoning/control",
+      "reviewed_scope": "Approved local scope definition and Garden counterpart only; external artifact content has not been inspected in this pass.",
+      "out_of_scope": [
+        "whole-world architecture ranking",
+        "unrelated mechanisms",
+        "performance superiority without matched experiments"
+      ],
+      "Garden_function_ids": [
+        "RESOURCE_ALLOCATION"
+      ],
+      "Garden_counterpart_refs": [
+        "COGNITIVE-FUNCTION-DISPOSITIONS.json#RESOURCE_ALLOCATION"
+      ],
+      "disposition": "UNRESOLVED",
+      "missing_evidence": "Exact immutable comparator artifact and mechanism-level inspection; runnable-access status, license and assumptions are not inferred from name.",
+      "resolution_work_item": "Pin one primary artifact/version/hash and review only uncertainty and resource-bounded reasoning/control; record applicable specification-level mapping before proposing experiments.",
+      "approved_exclusion": false,
+      "claim_limitations": [
+        "Unknown is not a Garden defect.",
+        "Framework orchestration cannot be counted as underlying-model intelligence.",
+        "No empirical deficit or superiority claimed."
+      ],
+      "forbidden_dispositions": []
+    },
+    {
+      "comparison_row_id": "CMP-DREAMERV3",
+      "comparator_id": "DREAMERV3",
+      "name": "DreamerV3",
+      "initial_artifact_type": "Learning algorithm/world-model system",
+      "actual_accessible_artifact_type": "UNRESOLVED_NOT_FETCHED",
+      "artifact_pin": {
+        "paper_or_software_identity": null,
+        "revision_or_commit": null,
+        "content_sha256": null,
+        "retrieval_date": null,
+        "dependencies_and_configuration": null
+      },
+      "pin_status": "UNKNOWN",
+      "bounded_scope": "predictive control",
+      "reviewed_scope": "Approved local scope definition and Garden counterpart only; external artifact content has not been inspected in this pass.",
+      "out_of_scope": [
+        "whole-world architecture ranking",
+        "unrelated mechanisms",
+        "performance superiority without matched experiments"
+      ],
+      "Garden_function_ids": [
+        "WORLD_MODEL"
+      ],
+      "Garden_counterpart_refs": [
+        "COGNITIVE-FUNCTION-DISPOSITIONS.json#WORLD_MODEL"
+      ],
+      "disposition": "UNRESOLVED",
+      "missing_evidence": "Exact immutable comparator artifact and mechanism-level inspection; runnable-access status, license and assumptions are not inferred from name.",
+      "resolution_work_item": "Pin one primary artifact/version/hash and review only predictive control; record applicable specification-level mapping before proposing experiments.",
+      "approved_exclusion": false,
+      "claim_limitations": [
+        "Unknown is not a Garden defect.",
+        "Framework orchestration cannot be counted as underlying-model intelligence.",
+        "No empirical deficit or superiority claimed."
+      ],
+      "forbidden_dispositions": []
+    },
+    {
+      "comparison_row_id": "CMP-SIMA2",
+      "comparator_id": "SIMA2",
+      "name": "SIMA 2",
+      "initial_artifact_type": "Documented embodied agent",
+      "actual_accessible_artifact_type": "UNRESOLVED_NOT_FETCHED",
+      "artifact_pin": {
+        "paper_or_software_identity": null,
+        "revision_or_commit": null,
+        "content_sha256": null,
+        "retrieval_date": null,
+        "dependencies_and_configuration": null
+      },
+      "pin_status": "UNKNOWN",
+      "bounded_scope": "instructed action in virtual environments",
+      "reviewed_scope": "Approved local scope definition and Garden counterpart only; external artifact content has not been inspected in this pass.",
+      "out_of_scope": [
+        "whole-world architecture ranking",
+        "unrelated mechanisms",
+        "performance superiority without matched experiments"
+      ],
+      "Garden_function_ids": [
+        "GROUNDING",
+        "SKILL_COMPOSITION"
+      ],
+      "Garden_counterpart_refs": [
+        "COGNITIVE-FUNCTION-DISPOSITIONS.json#GROUNDING",
+        "COGNITIVE-FUNCTION-DISPOSITIONS.json#SKILL_COMPOSITION"
+      ],
+      "disposition": "UNRESOLVED",
+      "missing_evidence": "Exact immutable comparator artifact and mechanism-level inspection; runnable-access status, license and assumptions are not inferred from name.",
+      "resolution_work_item": "Pin one primary artifact/version/hash and review only instructed action in virtual environments; record applicable specification-level mapping before proposing experiments.",
+      "approved_exclusion": false,
+      "claim_limitations": [
+        "Unknown is not a Garden defect.",
+        "Framework orchestration cannot be counted as underlying-model intelligence.",
+        "No empirical deficit or superiority claimed."
+      ],
+      "forbidden_dispositions": []
+    },
+    {
+      "comparison_row_id": "CMP-LECUN",
+      "comparator_id": "LECUN",
+      "name": "LeCun autonomous machine-intelligence proposal",
+      "initial_artifact_type": "SPECIFICATION_ONLY",
+      "actual_accessible_artifact_type": "UNRESOLVED_NOT_FETCHED",
+      "artifact_pin": {
+        "paper_or_software_identity": null,
+        "revision_or_commit": null,
+        "content_sha256": null,
+        "retrieval_date": null,
+        "dependencies_and_configuration": null
+      },
+      "pin_status": "UNKNOWN",
+      "bounded_scope": "proposed world-model/planning/learning architecture",
+      "reviewed_scope": "Approved local scope definition and Garden counterpart only; external artifact content has not been inspected in this pass.",
+      "out_of_scope": [
+        "whole-world architecture ranking",
+        "unrelated mechanisms",
+        "performance superiority without matched experiments"
+      ],
+      "Garden_function_ids": [
+        "WORLD_MODEL",
+        "LONG_HORIZON"
+      ],
+      "Garden_counterpart_refs": [
+        "COGNITIVE-FUNCTION-DISPOSITIONS.json#WORLD_MODEL",
+        "COGNITIVE-FUNCTION-DISPOSITIONS.json#LONG_HORIZON"
+      ],
+      "disposition": "UNRESOLVED",
+      "missing_evidence": "Exact immutable comparator artifact and mechanism-level inspection; runnable-access status, license and assumptions are not inferred from name.",
+      "resolution_work_item": "Pin one primary artifact/version/hash and review only proposed world-model/planning/learning architecture; record applicable specification-level mapping before proposing experiments.",
+      "approved_exclusion": false,
+      "claim_limitations": [
+        "Unknown is not a Garden defect.",
+        "Framework orchestration cannot be counted as underlying-model intelligence.",
+        "No empirical deficit or superiority claimed."
+      ],
+      "forbidden_dispositions": [
+        "MEASURED_DEFICIT",
+        "IMPLEMENTATION_GAP"
+      ]
+    },
+    {
+      "comparison_row_id": "CMP-REACT",
+      "comparator_id": "REACT",
+      "name": "ReAct",
+      "initial_artifact_type": "Agent method",
+      "actual_accessible_artifact_type": "UNRESOLVED_NOT_FETCHED",
+      "artifact_pin": {
+        "paper_or_software_identity": null,
+        "revision_or_commit": null,
+        "content_sha256": null,
+        "retrieval_date": null,
+        "dependencies_and_configuration": null
+      },
+      "pin_status": "UNKNOWN",
+      "bounded_scope": "reasoning/tool interaction",
+      "reviewed_scope": "Approved local scope definition and Garden counterpart only; external artifact content has not been inspected in this pass.",
+      "out_of_scope": [
+        "whole-world architecture ranking",
+        "unrelated mechanisms",
+        "performance superiority without matched experiments"
+      ],
+      "Garden_function_ids": [
+        "LONG_HORIZON"
+      ],
+      "Garden_counterpart_refs": [
+        "COGNITIVE-FUNCTION-DISPOSITIONS.json#LONG_HORIZON"
+      ],
+      "disposition": "UNRESOLVED",
+      "missing_evidence": "Exact immutable comparator artifact and mechanism-level inspection; runnable-access status, license and assumptions are not inferred from name.",
+      "resolution_work_item": "Pin one primary artifact/version/hash and review only reasoning/tool interaction; record applicable specification-level mapping before proposing experiments.",
+      "approved_exclusion": false,
+      "claim_limitations": [
+        "Unknown is not a Garden defect.",
+        "Framework orchestration cannot be counted as underlying-model intelligence.",
+        "No empirical deficit or superiority claimed."
+      ],
+      "forbidden_dispositions": []
+    },
+    {
+      "comparison_row_id": "CMP-ALPHAEVOLVE",
+      "comparator_id": "ALPHAEVOLVE",
+      "name": "AlphaEvolve",
+      "initial_artifact_type": "Evaluated search system",
+      "actual_accessible_artifact_type": "UNRESOLVED_NOT_FETCHED",
+      "artifact_pin": {
+        "paper_or_software_identity": null,
+        "revision_or_commit": null,
+        "content_sha256": null,
+        "retrieval_date": null,
+        "dependencies_and_configuration": null
+      },
+      "pin_status": "UNKNOWN",
+      "bounded_scope": "proposal/evaluation/search",
+      "reviewed_scope": "Approved local scope definition and Garden counterpart only; external artifact content has not been inspected in this pass.",
+      "out_of_scope": [
+        "whole-world architecture ranking",
+        "unrelated mechanisms",
+        "performance superiority without matched experiments"
+      ],
+      "Garden_function_ids": [
+        "CONTINUAL_LEARNING"
+      ],
+      "Garden_counterpart_refs": [
+        "COGNITIVE-FUNCTION-DISPOSITIONS.json#CONTINUAL_LEARNING"
+      ],
+      "disposition": "UNRESOLVED",
+      "missing_evidence": "Exact immutable comparator artifact and mechanism-level inspection; runnable-access status, license and assumptions are not inferred from name.",
+      "resolution_work_item": "Pin one primary artifact/version/hash and review only proposal/evaluation/search; record applicable specification-level mapping before proposing experiments.",
+      "approved_exclusion": false,
+      "claim_limitations": [
+        "Unknown is not a Garden defect.",
+        "Framework orchestration cannot be counted as underlying-model intelligence.",
+        "No empirical deficit or superiority claimed."
+      ],
+      "forbidden_dispositions": []
+    },
+    {
+      "comparison_row_id": "CMP-LANGGRAPH",
+      "comparator_id": "LANGGRAPH",
+      "name": "LangGraph",
+      "initial_artifact_type": "Agent framework",
+      "actual_accessible_artifact_type": "UNRESOLVED_NOT_FETCHED",
+      "artifact_pin": {
+        "paper_or_software_identity": null,
+        "revision_or_commit": null,
+        "content_sha256": null,
+        "retrieval_date": null,
+        "dependencies_and_configuration": null
+      },
+      "pin_status": "UNKNOWN",
+      "bounded_scope": "orchestration, persistent execution and integration only",
+      "reviewed_scope": "Approved local scope definition and Garden counterpart only; external artifact content has not been inspected in this pass.",
+      "out_of_scope": [
+        "whole-world architecture ranking",
+        "unrelated mechanisms",
+        "performance superiority without matched experiments"
+      ],
+      "Garden_function_ids": [
+        "LONG_HORIZON"
+      ],
+      "Garden_counterpart_refs": [
+        "COGNITIVE-FUNCTION-DISPOSITIONS.json#LONG_HORIZON"
+      ],
+      "disposition": "UNRESOLVED",
+      "missing_evidence": "Exact immutable comparator artifact and mechanism-level inspection; runnable-access status, license and assumptions are not inferred from name.",
+      "resolution_work_item": "Pin one primary artifact/version/hash and review only orchestration, persistent execution and integration only; record applicable specification-level mapping before proposing experiments.",
+      "approved_exclusion": false,
+      "claim_limitations": [
+        "Unknown is not a Garden defect.",
+        "Framework orchestration cannot be counted as underlying-model intelligence.",
+        "No empirical deficit or superiority claimed."
+      ],
+      "forbidden_dispositions": []
+    }
+  ],
+  "counts": {
+    "rows": 10,
+    "resolved": 0,
+    "unresolved": 10,
+    "excluded": 0
+  },
+  "counting_rule": "One scoped mechanism row per fixed comparator; no unresolved or excluded row counts as success.",
+  "specification_only_disposition_validation": "PASS_NO_FORBIDDEN_DISPOSITIONS",
+  "completion": "FIRST_PASS_SCOPE_ACCOUNTING_ONLY_NOT_SUBSTANTIVE_COMPARATIVE_COVERAGE",
+  "authority_effect": "NONE"
+}

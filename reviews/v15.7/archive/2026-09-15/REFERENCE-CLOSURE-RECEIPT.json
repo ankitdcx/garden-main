@@ -1,6 +1,6 @@
 {
   "status": "INCONCLUSIVE",
-  "source_root_sha256": "99e42cdb9ba0b9603ae2b90484bddedeef6c5721aa2b0f6a547a956914d1b9d6",
+  "source_root_sha256": "eb4d5306a8f7dcca75f8cf7d60f6441bdf5b35bccb86ac2362b33f241af1591a",
   "scope": "Existing bounded explicit anchor parser, not full semantic/GSL closure",
   "unresolved": [
     "[A-AGI-HARDENING]",
@@ -62,9 +62,9 @@
   "newly_unresolved": [],
   "counts": {
     "TOTAL": 296,
-    "TIER_A": 281,
+    "TIER_A": 280,
     "TIER_B": 14,
-    "TIER_C": 1
+    "TIER_C": 2
   },
   "qualified_review_units": 0,
   "semantic_closure_complete": false
