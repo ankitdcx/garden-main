@@ -1,0 +1,16 @@
+{
+  "schema":"GardenEvolutionAlgebraUsageReceipt/v1",
+  "action_id":"GARDEN-2026-09-16-PR76-HUMAN-ADMISSION-PROPOSE-001",
+  "design_epoch":"v15.5",
+  "canonical_source_root_sha256":"63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+  "source_obligation_refs":["governance/human_admissions/PR-76.json","governance/PROCESS_CURRENT.json"],
+  "entries":[
+    {"algebra":"Process","status":"APPLIED","operators":["SEQUENCE","DO_NOTHING"],"law_claims":[],"non_law_acknowledgements":["PARALLEL_EFFECT_COMMUTATIVITY_NOT_UNIVERSAL"],"applicability_reason":"Sequence external human instruction recording before exact trusted-base verification of PR76; retain DO_NOTHING as comparator."},
+    {"algebra":"Policy","status":"FRONTIER","operators":[],"law_claims":[],"non_law_acknowledgements":[],"applicability_reason":"Existing HUMAN root and ActionGate constrain the change; no new Policy Algebra operator is claimed.","frontier_reason":"Human authority is not silently relabeled as an algebraic operator."},
+    {"algebra":"Decision","status":"FRONTIER","operators":[],"law_claims":[],"non_law_acknowledgements":[],"applicability_reason":"Typed gate outcomes remain owner-qualified.","frontier_reason":"No executable Decision Algebra operator is claimed."},
+    {"algebra":"Conformance","status":"APPLIED","operators":["BIND_EVIDENCE","COVERAGE"],"law_claims":[],"non_law_acknowledgements":["CONFORMANCE_IS_NOT_BINARY_ONLY","AUDIT_IS_NOT_A_SEPARATE_ALGEBRA"],"applicability_reason":"Bind the human-instruction record to exact PR, source identity, candidate change set and production action hashes."},
+    {"algebra":"Evidence","status":"FRONTIER","operators":[],"law_claims":[],"non_law_acknowledgements":[],"applicability_reason":"The record is evidence of an observed instruction, not Proof or authority minted by evidence.","frontier_reason":"No executable Evidence Algebra composition is claimed."},
+    {"algebra":"Bridge","status":"NOT_APPLICABLE","operators":[],"law_claims":[],"non_law_acknowledgements":[],"applicability_reason":"No semantic-to-representation bridge is introduced."}
+  ],
+  "semantic_compliance_proved":false
+}
