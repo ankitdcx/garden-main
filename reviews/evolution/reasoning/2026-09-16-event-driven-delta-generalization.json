@@ -18,7 +18,7 @@
     "predecessor_ref": "git:ankitdcx/garden-main@bfd70856a995ca9c68ad4a0b6fe74ab682e0897c",
     "alternatives": [
       {
-        "alternative_id": "KEEP_PARTIAL_EVENT_DRIVEN_STATE",
+        "alternative_id": "DO_NOTHING",
         "description": "Keep completion-driven selection but retain stale hourly coordinator metadata and limit compact-context/materiality semantics to the initial adapter candidate.",
         "projected_effect": "Lower change surface, but clock-oriented metadata and repeated-context behavior remain inconsistent across Garden work roles.",
         "risk": "Agents may continue reprocessing unchanged state or misread the ChatGPT frontier role as an OpenRouter route."
@@ -32,13 +32,13 @@
     ],
     "bidirectional_gaps": [
       {
-        "from": "KEEP_PARTIAL_EVENT_DRIVEN_STATE",
+        "from": "DO_NOTHING",
         "to": "GENERALIZE_EVENT_DELTA_POLICY",
         "gap": "No repo-wide context reuse/materiality rule and stale clock metadata remains."
       },
       {
         "from": "GENERALIZE_EVENT_DELTA_POLICY",
-        "to": "KEEP_PARTIAL_EVENT_DRIVEN_STATE",
+        "to": "DO_NOTHING",
         "gap": "Additional event fingerprints, context invalidation and full-context-fallback qualification obligations."
       }
     ]
