@@ -1,0 +1,13 @@
+{
+  "schema": "GardenChatGPTWorkstreamIntent/v1",
+  "workstream_id": "chatgpt:v158-consolidation:20260916",
+  "work_package_id": "WP-V158-CONSOLIDATION",
+  "branch": "chatgpt/v158-consolidation-20260916",
+  "base_sha": "801f04e9b55988495fc7d30f800bb285a473c057",
+  "dependency_intent_ids": [
+    "AWI-V157-FIVE-DOC-ASSURANCE-20260916"
+  ],
+  "integration_strategy": "INTEGRATION_BRANCH_IF_COLLISION",
+  "draft_pr_created_before_substantial_edit": true,
+  "status": "ACTIVE"
+}
