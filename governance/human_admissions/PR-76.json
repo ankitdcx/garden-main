@@ -20,9 +20,7 @@
   "process_authority": "governance/GardenCanonicalUpdateProcess_v1.4.json#human_root_authority",
   "canonical_promotion": false,
   "independent_review": false,
-  "approved_base_sha": "46516375cf0c0db387c6c2fc665282409da7278a",
-  "approved_head_sha": "60f437361107b13cd54aa36fbb345e8496bdeca3",
-  "base_tree_without_admission": "296c1a0be63b2b550c61c20ded4d58788d32a09d8be9943ce0c35a0bfb3cd592",
+  "base_tree_without_admission": "3a70d573ac7e4aa9ca054d6caa55f648eeb114c251d70d881f2200f7c7f7c586",
   "change_path_encoding": "SHA256_UTF8",
   "changes": {
     "e06d4931226c260a6816dca94a51cb78876dd1b427cba557fed047ea0c15f8ee": {
@@ -626,6 +624,7 @@
     "GARDEN-2026-09-15-V157-CANDIDATE-PUBLICATION-PROPOSE-001": "5cd82b54dde850fbd7485c6cd68cbfe293a96100e7cc75e1c743c47c0be38a07",
     "GARDEN-2026-09-16-EVENT-DELTA-GENERALIZATION-001": "5eb5ee87ca47c2b385fb9dc7fe7a5963d1844e770692da845fe71669d5a6de25",
     "GARDEN-2026-09-16-MISTRAL-EXCLUSION-PROPOSE-001": "31d5335144e19c6573b2fc6957be40cfadab447c498e84f3e2abb90eaf520f27",
+    "GARDEN-2026-09-16-PR76-HUMAN-ADMISSION-PROPOSE-001": "a2c6db4665ac742c6cc8f9aab60a79aa6cd46bae8f5ec3ffe24f8bc2bdb0cdbe",
     "GARDEN-2026-09-16-PROVIDER-EXCLUSION-PROPOSE-001": "ac5504338b83e6b92cd07f1b86eab1e2c6c4cee7217c3e623f7309cb2096c85f",
     "GARDEN-2026-09-16-V157-ASSURANCE-COMPLETION-PROPOSE-001": "8eba255cb1d18ea93bbae421a00ec74e9e53dac821681efa97f1a227c9fad500"
   }
