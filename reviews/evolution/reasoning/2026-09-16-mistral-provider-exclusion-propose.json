@@ -1,0 +1,125 @@
+{
+  "schema": "GardenEvolutionReasoningBundle/v1",
+  "bundle_id": "GARDEN-2026-09-16-MISTRAL-EXCLUSION-REASONING-001",
+  "action_id": "GARDEN-2026-09-16-MISTRAL-EXCLUSION-PROPOSE-001",
+  "design_epoch": "v15.5",
+  "canonical_source_root_sha256": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+  "source_obligation_refs": [
+    "governance/PROVIDER_EXCLUSION_POLICY_v1.json",
+    "governance/PROCESS_CURRENT.json",
+    "governance/GardenCanonicalUpdateProcess_v1.4.json"
+  ],
+  "compare": {
+    "schema": "GardenEvolutionCompareReceipt/v1",
+    "action_id": "GARDEN-2026-09-16-MISTRAL-EXCLUSION-PROPOSE-001",
+    "design_epoch": "v15.5",
+    "canonical_source_root_sha256": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+    "predecessor_ref": "git:ankitdcx/garden-main@25d01e268fe23f78d8dabda6559f35efc3713c73",
+    "alternatives": [
+      {
+        "alternative_id": "DO_NOTHING",
+        "description": "Keep Mistral eligible while retaining the existing Anthropic and NVIDIA exclusions.",
+        "projected_effect": "Preserves one additional reviewer/provider family but conflicts with the latest explicit human vendor preference.",
+        "risk": "Garden work could continue routing to a vendor the human explicitly asked to exclude."
+      },
+      {
+        "alternative_id": "EXTEND_EXISTING_EXCLUSION_TO_MISTRAL",
+        "description": "Add Mistral AI/Mistral model and provider aliases to the existing fail-closed provider exclusion policy.",
+        "projected_effect": "Applies the same operator routing constraint uniformly without creating a new mechanism or canonical semantic rule.",
+        "risk": "Reviewer/provider diversity is reduced from the currently configured set; remaining review quorum must stay explicit."
+      }
+    ],
+    "bidirectional_gaps": [
+      {
+        "from": "DO_NOTHING",
+        "to": "EXTEND_EXISTING_EXCLUSION_TO_MISTRAL",
+        "gap": "The current policy does not represent the latest human directive concerning Mistral."
+      },
+      {
+        "from": "EXTEND_EXISTING_EXCLUSION_TO_MISTRAL",
+        "to": "DO_NOTHING",
+        "gap": "Operational provider diversity is intentionally reduced until a future explicit human directive changes the list."
+      }
+    ]
+  },
+  "reason": {
+    "schema": "GardenEvolutionReasonReceipt/v1",
+    "action_id": "GARDEN-2026-09-16-MISTRAL-EXCLUSION-PROPOSE-001",
+    "design_epoch": "v15.5",
+    "canonical_source_root_sha256": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+    "strategy": "EXTEND_EXISTING_HUMAN_VENDOR_EXCLUSION_WITHOUT_NEW_MECHANISM",
+    "tier": "IMPLEMENTATION_CONFORMANCE",
+    "assumptions": [
+      "The user explicitly directed Garden to block Mistral in addition to Anthropic and NVIDIA.",
+      "The directive is treated as a trust/procurement preference, not as proof of misconduct or model poisoning.",
+      "The existing provider exclusion owner remains the single mechanism; no parallel Mistral-specific authority or routing system is created.",
+      "Historical references may remain for audit/provenance but cannot authorize operational use.",
+      "Only a future explicit human directive may change the exclusion list."
+    ],
+    "uncertainty": "Aggregator and hosting metadata can change; downstream runtime guards must continue to block known Mistral model-origin/provider aliases and fail closed where an implicated identity cannot be resolved.",
+    "counterexamples": [
+      "A Mistral model is selected through a third-party-hosted route.",
+      "An allowed model falls back to a Mistral provider endpoint.",
+      "A paid or free reviewer roster reintroduces Mistral after configuration drift.",
+      "An archived Mistral reference is mistaken for operational permission."
+    ],
+    "dependency_refs": [
+      "governance/PROVIDER_EXCLUSION_POLICY_v1.json",
+      "governance/PROCESS_CURRENT.json",
+      "governance/GardenCanonicalUpdateProcess_v1.4.json"
+    ],
+    "conclusion": "Extend the existing noncanonical fail-closed provider exclusion to Mistral, preserve factual neutrality, and require downstream routing adapters to enforce the updated list.",
+    "authorization_effect": "NONE"
+  },
+  "proof": {
+    "schema": "GardenEvolutionProofReceipt/v1",
+    "action_id": "GARDEN-2026-09-16-MISTRAL-EXCLUSION-PROPOSE-001",
+    "design_epoch": "v15.5",
+    "canonical_source_root_sha256": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+    "obligations": [
+      {
+        "obligation_id": "PO-MISTRAL-EXCLUSION-001",
+        "statement": "Mistral can be added to the existing noncanonical exclusion policy without changing canonical Garden semantics or authority.",
+        "verifier_class": "STRUCTURAL_REPOSITORY_CHECK",
+        "result": "PASS",
+        "evidence_refs": ["governance/PROVIDER_EXCLUSION_POLICY_v1.json"]
+      },
+      {
+        "obligation_id": "PO-MISTRAL-EXCLUSION-002",
+        "statement": "Runtime provider/model call surfaces reject Mistral model origins and provider routes.",
+        "verifier_class": "CROSS_REPOSITORY_IMPLEMENTATION_TEST",
+        "result": "UNKNOWN",
+        "evidence_refs": ["repo:ankitdcx/garden-swarm#provider-exclusion-enforcement"]
+      }
+    ],
+    "overall_result": "UNKNOWN",
+    "authorization_effect": "NONE"
+  },
+  "evidence": {
+    "schema": "GardenEvolutionEvidenceReceipt/v1",
+    "action_id": "GARDEN-2026-09-16-MISTRAL-EXCLUSION-PROPOSE-001",
+    "design_epoch": "v15.5",
+    "canonical_source_root_sha256": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+    "items": [
+      {
+        "kind": "HUMAN_DIRECTIVE",
+        "ref": "human:provider-exclusion-mistral:2026-09-16",
+        "claim_scope": "User explicitly requested Mistral also be blocked for Garden work."
+      },
+      {
+        "kind": "OPERATING_POLICY",
+        "ref": "governance/PROVIDER_EXCLUSION_POLICY_v1.json",
+        "claim_scope": "Existing machine-readable routing constraint extended with Mistral aliases and model-origin markers."
+      }
+    ],
+    "proof_effect": "NONE",
+    "authorization_effect": "NONE"
+  },
+  "separation_assertions": {
+    "compare_is_not_decision": true,
+    "reason_is_not_authorization": true,
+    "evidence_is_not_proof": true,
+    "proof_is_not_authorization": true,
+    "actiongate_owns_authorization": true
+  }
+}
