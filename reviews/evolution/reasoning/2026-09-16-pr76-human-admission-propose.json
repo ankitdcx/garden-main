@@ -1,0 +1,56 @@
+{
+  "schema": "GardenEvolutionReasoningBundle/v1",
+  "bundle_id": "GARDEN-2026-09-16-PR76-HUMAN-ADMISSION-PROPOSE-001-REASONING",
+  "action_id": "GARDEN-2026-09-16-PR76-HUMAN-ADMISSION-PROPOSE-001",
+  "design_epoch": "v15.5",
+  "canonical_source_root_sha256": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+  "source_obligation_refs": ["governance/human_admissions/PR-76.json","governance/PROCESS_CURRENT.json"],
+  "compare": {
+    "schema":"GardenEvolutionCompareReceipt/v1",
+    "action_id":"GARDEN-2026-09-16-PR76-HUMAN-ADMISSION-PROPOSE-001",
+    "design_epoch":"v15.5",
+    "canonical_source_root_sha256":"63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+    "predecessor_ref":"git:ankitdcx/garden-main@46516375cf0c0db387c6c2fc665282409da7278a",
+    "alternatives":[
+      {"alternative_id":"DO_NOTHING","description":"Do not record the explicit PR76 approval.","projected_effect":"PR76 remains blocked at the protected human-signoff gate.","risk":"Approved noncanonical candidate work remains unmerged."},
+      {"alternative_id":"RECORD_SCOPED_ADMISSION","description":"Record the exact user instruction on trusted base, bound to PR76 and its exact candidate diff.","projected_effect":"Trusted-base verification can evaluate only the approved noncanonical PR76 candidate.","risk":"Admission must remain exact, bounded, expiring and noncanonical."}
+    ],
+    "bidirectional_gaps":[
+      {"from":"DO_NOTHING","to":"RECORD_SCOPED_ADMISSION","gap":"No executable record of the user's explicit approval."},
+      {"from":"RECORD_SCOPED_ADMISSION","to":"DO_NOTHING","gap":"Adds one bounded human-instruction record and its audit transport."}
+    ]
+  },
+  "reason": {
+    "schema":"GardenEvolutionReasonReceipt/v1",
+    "action_id":"GARDEN-2026-09-16-PR76-HUMAN-ADMISSION-PROPOSE-001",
+    "design_epoch":"v15.5",
+    "canonical_source_root_sha256":"63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+    "strategy":"EXACT_SCOPED_HUMAN_ADMISSION",
+    "tier":"V1_4_EXECUTION_FIRST_HIGH_DEPENDENCY",
+    "assumptions":["The authenticated user explicitly approved PR #76 for merge as a noncanonical v15.7 candidate.","The approval does not authorize canonical promotion or standing delegation.","Candidate code cannot authorize itself; the record must be admitted to trusted base first."],
+    "uncertainty":"The record is an agent transcription of an authenticated conversation, not a cryptographic human signature.",
+    "counterexamples":["A moved PR76 head must invalidate the admission.","A changed action payload must invalidate the admission.","Canonical promotion must remain independently human-controlled."],
+    "dependency_refs":["governance/human_admissions/PR-76.json","governance/PROCESS_CURRENT.json"],
+    "conclusion":"Record the exact bounded instruction on trusted base, then re-evaluate PR76 against that base.",
+    "authorization_effect":"NONE"
+  },
+  "proof": {
+    "schema":"GardenEvolutionProofReceipt/v1",
+    "action_id":"GARDEN-2026-09-16-PR76-HUMAN-ADMISSION-PROPOSE-001",
+    "design_epoch":"v15.5",
+    "canonical_source_root_sha256":"63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+    "obligations":[{"obligation_id":"PO-PR76-ADMISSION-001","statement":"The admission is exact-change, exact-PR, expiring, base-pinned and noncanonical.","verifier_class":"TRUSTED_BASE_GIT_VERIFIER","result":"UNKNOWN","evidence_refs":[]}],
+    "overall_result":"UNKNOWN",
+    "authorization_effect":"NONE"
+  },
+  "evidence": {
+    "schema":"GardenEvolutionEvidenceReceipt/v1",
+    "action_id":"GARDEN-2026-09-16-PR76-HUMAN-ADMISSION-PROPOSE-001",
+    "design_epoch":"v15.5",
+    "canonical_source_root_sha256":"63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+    "items":[{"kind":"SOURCE_RECORD","ref":"governance/human_admissions/PR-76.json","claim_scope":"Agent record of the observed scoped user approval; not independent qualification or canonical promotion."}],
+    "proof_effect":"NONE",
+    "authorization_effect":"NONE"
+  },
+  "separation_assertions":{"compare_is_not_decision":true,"reason_is_not_authorization":true,"evidence_is_not_proof":true,"proof_is_not_authorization":true,"actiongate_owns_authorization":true}
+}
