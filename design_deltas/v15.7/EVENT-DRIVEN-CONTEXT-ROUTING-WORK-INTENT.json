@@ -1,0 +1,22 @@
+{
+  "schema": "GardenWorkIntent/v1",
+  "work_package_id": "WP-EVENT-DRIVEN-CONTEXT-ROUTING-V15-7",
+  "candidate_id": "CAND-EDCR-001",
+  "release_line": "Garden v15.7 candidate",
+  "status": "NON_CANONICAL_CANDIDATE_IMPLEMENTATION_AND_QUALIFICATION_PENDING",
+  "source": "design_deltas/v15.7/EVENT-DRIVEN-CONTEXT-ROUTING-CANDIDATE.md",
+  "intent": "Bind existing completion-driven execution, AttestedObservation/Evidence semantics and GSL-KR into provenance-preserving event-driven context routing; qualify selective frontier-model escalation without creating a new top-level engine or authority source.",
+  "implementation_target": "ankitdcx/garden-swarm public OpenRouter review adapter",
+  "required_checks": [
+    "materiality gate is reason-coded and fail-closed",
+    "raw/evidence retention is not replaced by compression",
+    "stale and contradictory observations remain explicit",
+    "frontier synthesis is proposal evidence only",
+    "independent-family review requirements remain unchanged",
+    "OpenRouter daily/per-call budget controls remain fail-closed",
+    "provider 429/ambiguous charge preserves reconciliation semantics",
+    "measure context reduction, calls avoided, cost and quality regressions"
+  ],
+  "canonical_promotion_effect": "NONE",
+  "automatic_execution_authority": false
+}
