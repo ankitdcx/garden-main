@@ -4,10 +4,11 @@
   "engine_id": "GardenProcessEngine@1",
   "engine_profile": "governance/PROCESS_ENGINE_IMPLEMENTATION_v1.json",
   "automation_binding_manifest": "governance/AUTOMATION_ENGINE_BINDING_v1.json",
+  "event_driven_work_policy": "governance/EVENT_DRIVEN_WORK_POLICY_v1.json",
   "timezone": "Asia/Kolkata",
   "active_driver": {
     "lane": "Garden Coordinator",
-    "cadence": "EVENT_DRIVEN_COMPLETION",
+    "cadence": "EVENT_DRIVEN_COMPLETION_AND_MATERIAL_CHANGE",
     "mode": "ENGINE_SERIAL_COMPLETION_COORDINATOR",
     "max_material_work_units_per_run": 1,
     "max_external_provider_calls_in_parallel": 1,
@@ -23,59 +24,48 @@
     "branch/PR hygiene",
     "implementation/integration",
     "pipeline health/enforcement coverage",
-    "daily repo reconciliation",
+    "repo reconciliation",
     "negative-growth protocol simplification",
     "successor candidate composition",
-    "90-day pipeline simplification"
+    "90-day pipeline simplification",
+    "knowledge refresh",
+    "external ChatGPT frontier review handoff"
   ],
   "due_obligations": [
-    {
-      "name": "ENGINE_PIPELINE_HEALTH",
-      "cadence": "<=6h overdue"
-    },
-    {
-      "name": "BRANCH_PR_HYGIENE",
-      "cadence": "<=6h overdue when needed"
-    },
-    {
-      "name": "PUBLIC_RESEARCH_SCOUT",
-      "cadence": ">=12h between runs and only if higher-priority work absent"
-    },
-    {
-      "name": "LEGACY_PENDING_WORK_RECONCILIATION",
-      "cadence": "daily"
-    },
-    {
-      "name": "PROTOCOL_SIMPLIFICATION",
-      "cadence": "at most daily"
-    },
-    {
-      "name": "PIPELINE_SIMPLIFICATION",
-      "cadence": "when 90-day window due"
-    },
-    {
-      "name": "SUCCESSOR_COMPOSITION",
-      "cadence": "state-driven whenever admitted work is ready"
-    }
+    {"name":"ENGINE_PIPELINE_HEALTH","freshness":"<=6h","wake_rule":"state change or freshness deadline"},
+    {"name":"BRANCH_PR_HYGIENE","freshness":"<=6h when needed","wake_rule":"branch/PR state change or freshness deadline"},
+    {"name":"PUBLIC_RESEARCH_SCOUT","freshness":">=12h between runs","wake_rule":"new/expired material evidence and higher-priority work absent"},
+    {"name":"LEGACY_PENDING_WORK_RECONCILIATION","freshness":"<=1 day","wake_rule":"receipt/pending-state change or freshness deadline"},
+    {"name":"PROTOCOL_SIMPLIFICATION","freshness":"at most once per day","wake_rule":"measured growth/duplication evidence or due assurance check"},
+    {"name":"PIPELINE_SIMPLIFICATION","freshness":"90-day assurance window","wake_rule":"measured evidence or due assurance check"},
+    {"name":"SUCCESSOR_COMPOSITION","freshness":"state-driven","wake_rule":"new admitted semantic delta or material predecessor change"}
   ],
   "disabled_schedules": {
     "former_garden_lane_wakeups": "DISABLED_ABSORBED_BY_GARDEN_COORDINATOR",
     "AI Architecture Brief": "DISABLED_BY_HUMAN_REQUEST",
     "Garden Maintenance": "DISABLED_ABSORBED_BY_GARDEN_COORDINATOR"
   },
-  "selection_rule": "On completion, immediately select the next highest-priority eligible bounded work unit. Stop on unmet dependencies, missing evidence, budget exhaustion, cooldown or unknown outcome. No recurring clock is required.",
-  "blind_review_serialization": "Persist one independent family result per work unit. The next eligible family starts after completion; all allocated families must finish before cross-examination. Never lower review requirements to increase frequency.",
-  "transient_failure_rule": "429/TOO_MANY_REQUESTS never advances GardenProcess state. Persist Retry-After/exponential cooldown; resume only on an eligible wake after that deadline. Interrupted or ambiguously charged calls require reconciliation before retry.",
-  "state_gating": "Completion is a wake-up, not authority. CycleID, ProcessVersion, DesignEpoch, exact repository heads, packet and contiguous transition receipts determine eligibility.",
-  "algebra_rule": "Every governed transition validates through REG-ALGEBRA-001. Scheduling/algebra conformance grants no authority and does not prove full semantic compliance.",
+  "selection_rule": "On an eligible wake, first deduplicate the event/state fingerprint and reuse fresh validated context. Build only the changed observations plus affected dependency closure. If no material work remains, emit NO_CHANGE and stop. Otherwise select exactly one highest-priority eligible bounded work unit. Stop on unmet dependencies, incomplete closure, missing evidence, budget exhaustion, cooldown or unknown outcome. No recurring clock is required.",
+  "context_rule": "Default to the smallest sufficient evidence-bound delta. Expand to wider/full context whenever dependency closure is incomplete, DesignEpoch/source root changed, high-risk semantics cross owners, compact context cannot establish affected contracts/invariants, or whole-source assurance is required.",
+  "frontier_handoff_rule": "A GardenFrontierReviewRequest/v1 may be emitted only after an explicit materiality receipt. The target lane is external ChatGPT, not OpenRouter; repository configuration does not hardcode a ChatGPT product model name. Frontier output is proposal evidence only.",
+  "blind_review_serialization": "Persist one independent family result per material packet. Completed family results bound to an unchanged packet hash are reused. The next missing eligible family starts after completion; all allocated families must finish before cross-examination. Never lower review requirements to increase frequency or save compute.",
+  "cross_exam_rule": "Cross-examination is eligible only when a new independent finding, contradiction or challenge exists. Do not rerun it on an unchanged review set.",
+  "transient_failure_rule": "429/TOO_MANY_REQUESTS never advances GardenProcess state. Persist Retry-After/exponential cooldown; resume only on a single eligible wake after that deadline. Interrupted or ambiguously charged calls require reconciliation before retry.",
+  "state_gating": "Completion/materiality is a wake-up signal, not authority. CycleID, ProcessVersion, DesignEpoch, exact repository heads, packet hash, closure evidence and contiguous transition receipts determine eligibility.",
+  "algebra_rule": "Every governed transition validates through REG-ALGEBRA-001. Scheduling/materiality/algebra conformance grants no authority and does not prove full semantic compliance.",
   "runtime_implementation": "implementation/garden_kernel/completion_runner.py",
-  "execution_boundary": "Each work unit has one handler and at most one provider call; a bounded worker wake may chain completed units sequentially. This does not permit parallel calls or change route/gate semantics.",
+  "execution_boundary": "Each work unit has one handler and at most one provider call; a bounded worker wake may chain completed units sequentially. Event-driven context reuse does not permit parallel calls or change route/gate semantics.",
   "wakeup_contract": {
     "completion": "immediate within bounded worker wake",
-    "bounded_wake_exhaustion": "durable host must arrange continuation",
+    "repository_or_external_change": "wake once for a new durable event fingerprint",
+    "material_context": "frontier handoff only after reason-coded materiality receipt",
+    "bounded_wake_exhaustion": "durable host must arrange continuation only while eligible work remains",
     "cooldown": "one deferred wake at or after persisted deadline; never hourly polling",
-    "external_dependency": "relevant completion event",
-    "empty_queue": "stop until new work arrives"
+    "freshness_deadline": "wake only when an assurance/freshness obligation actually becomes due",
+    "empty_queue_or_unchanged_state": "stop until a new event, completion, invalidation, deadline or human directive arrives"
   },
-  "human_directive": "2026-09-15: Do not make it hourly; invoke each item when the last finishes; improve quality and throughput; fix pending process algebra."
+  "human_directives": [
+    "2026-09-15: Do not make it hourly; invoke each item when the last finishes; improve quality and throughput; fix pending process algebra.",
+    "2026-09-16: Apply event-driven/delta-first context reuse wherever appropriate; the frontier Astra/ChatGPT role is the ChatGPT-side lane, not an OpenRouter model hop."
+  ]
 }
