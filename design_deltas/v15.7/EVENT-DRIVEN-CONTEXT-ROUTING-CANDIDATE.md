@@ -4,6 +4,9 @@ Status: NON_CANONICAL_CANDIDATE / PROPOSAL_ONLY / NO_AUTHORITY / NO_PROMOTION
 Date: 2026-09-16
 Candidate ID: CAND-EDCR-001
 Work package: WP-EVENT-DRIVEN-CONTEXT-ROUTING-V15-7
+Amendment: `EVENT-DRIVEN-CONTEXT-ROUTING-CORRECTION-2026-09-16.md`
+
+**Current interpretation:** event/delta/context semantics in this file remain active, but any earlier reading that routed an Astra frontier reviewer through OpenRouter is superseded. The frontier role is the external ChatGPT lane; the repository does not hardcode a changing ChatGPT product model name. OpenRouter remains a separate worker/reviewer provider surface.
 
 ## 1. Purpose
 
@@ -24,7 +27,7 @@ Repeatedly sending unchanged or weakly relevant source material to many models w
 
 The candidate therefore optimizes **information movement before model choice**:
 
-`external/repository event -> cheap bounded normalization -> governed observation ledger -> relevance/materiality gate -> compact context delta -> specialist review -> frontier synthesis only when warranted -> reusable snapshot`
+`external/repository event -> cheap bounded normalization -> governed observation ledger -> relevance/materiality gate -> compact context delta -> specialist review -> external ChatGPT frontier synthesis only when warranted -> reusable snapshot`
 
 No event, observation, summary, reviewer agreement or frontier-model output becomes truth, proof, authority or canonical Garden semantics merely by entering this pipeline.
 
@@ -75,11 +78,11 @@ A frontier review is eligible only when a `MaterialContextChange` is supported b
 
 Mere clock passage, unchanged repository state, repeated identical news/input, reviewer count or token availability is not by itself a material event.
 
-The gate produces a reason-coded receipt. `NOT_MATERIAL` means no frontier call is made; it does not mean the underlying event was false or unimportant in every other context.
+The gate produces a reason-coded receipt. `NOT_MATERIAL` means no frontier handoff is made; it does not mean the underlying event was false or unimportant in every other context.
 
-## 6. Frontier council profile
+## 6. Frontier ChatGPT profile
 
-When materiality is established, one or more frontier reviewers may receive the **smallest sufficient context packet** rather than the whole corpus by default.
+When materiality is established, one external ChatGPT frontier reviewer may receive the **smallest sufficient context packet** rather than the whole corpus by default.
 
 The packet includes:
 - question/decision scope;
@@ -90,9 +93,9 @@ The packet includes:
 - prior conclusion only when needed to test whether it should change;
 - explicit unknowns and omitted-context declaration.
 
-For the current OpenRouter public-review profile, GPT-6 Astra is a **selective synthesis/escalation reviewer**, not a universal relay hop. Cheap/free model families remain preferred for repetitive normalization and bounded independent review. Astra is invoked only after materiality is established and cannot replace independent-family requirements, whole-source cross-reference, Proof/Evidence obligations, protected human authority, or canonical promotion.
+Garden represents this as `GardenFrontierReviewRequest/v1` targeting `EXTERNAL_CHATGPT_FRONTIER_REVIEW`. The concrete ChatGPT model is selected by the user/product context and is not a repository constant. If the user explicitly selects Astra in ChatGPT, Astra may fill the role; otherwise another current ChatGPT model may fill it. Garden therefore MUST NOT configure `openai/...astra` as an OpenRouter surrogate for this lane.
 
-A batch Astra route may be cheaper for non-urgent work but requires a separately qualified durable asynchronous adapter and retention/privacy review before activation. Until that adapter is qualified, batch is a declared candidate route only.
+OpenRouter cheap/free/paid families may perform normalization and bounded independent review, and may help produce the compact request. Their role ends at the OpenRouter provider boundary. ChatGPT frontier review remains separately attributable proposal evidence and cannot replace independent-family requirements, whole-source cross-reference, Proof/Evidence obligations, protected human authority, merge gates or canonical promotion.
 
 ## 7. Staleness and contamination controls
 
@@ -111,17 +114,24 @@ Efficiency claims are measured, not assumed. Each governed review cycle should r
 - raw event count;
 - normalized/deduplicated observation count;
 - context characters/tokens before and after compaction;
-- model calls avoided by `NOT_MATERIAL`;
-- frontier calls made and why;
-- input/output tokens and monetary cost;
-- cache/batch use where applicable;
+- model/reviewer calls or handoffs avoided by `NOT_MATERIAL`;
+- frontier handoffs made and why;
+- input/output tokens and monetary cost where a provider exposes them;
+- cache/batch use where applicable to provider lanes;
+- full-context fallback count/reason;
 - quality/regression outcomes against the prior routing policy.
 
 The optimization objective is not minimum spend alone. It is lower repeated compute **without weakening evidence, independence, freshness, falsification, authority or safety requirements**.
 
-## 9. Required invariants
+## 9. Repo-wide applicability
 
-EDCR-001: No materiality receipt -> no frontier-council call.
+The same pattern applies to post-merge verification, canonical design review, public research intake, ReviewPacket construction, blind review, cross-examination, branch/PR hygiene, implementation/integration, pipeline health, repo reconciliation, protocol/pipeline simplification, successor composition and knowledge refresh. The executable applicability profile is `governance/EVENT_DRIVEN_WORK_POLICY_v1.json`.
+
+Delta-first processing is only the default. Wider/full context is mandatory when dependency closure is unknown/incomplete, DesignEpoch or source root changed, HIGH/CRITICAL semantics cross owners/files, affected contracts/invariants cannot be bounded, whole-source Compare/Proof/Evidence/Tier-A closure is required, an assurance/audit obligation explicitly requires full revalidation, or contradiction/contamination cannot be resolved from the compact packet.
+
+## 10. Required invariants
+
+EDCR-001: No materiality receipt -> no frontier-review handoff.
 
 EDCR-002: A context snapshot cannot become authority, truth, Proof or canonical status by compression or model agreement.
 
@@ -133,29 +143,41 @@ EDCR-005: Contradictory relevant observations cannot be silently discarded by su
 
 EDCR-006: Expired/stale observations cannot support current claims without explicit revalidation or historical qualification.
 
-EDCR-007: Duplicate event fingerprints do not trigger repeated frontier calls unless a material binding changed.
+EDCR-007: Duplicate event fingerprints do not trigger repeated frontier handoffs unless a material binding changed.
 
 EDCR-008: Frontier review does not satisfy independent-family quorum by itself and never self-admits a semantic delta.
 
-EDCR-009: Budget exhaustion, provider ambiguity or unknown charge state fails closed and preserves retry/reconciliation semantics.
+EDCR-009: Budget exhaustion, provider ambiguity or unknown charge state in provider lanes fails closed and preserves retry/reconciliation semantics.
 
 EDCR-010: Materiality thresholds and compression policy are versioned profile inputs, not hidden prompt conventions.
 
-## 10. Minimum conformance tests
+EDCR-011: OpenRouter cannot stand in for the external ChatGPT frontier lane.
 
-1. Replaying an identical observation produces no new frontier call.
+EDCR-012: Garden does not hardcode a changing ChatGPT product model name as a semantic architecture dependency.
+
+EDCR-013: Due intervals are freshness constraints and do not authorize polling unchanged state.
+
+EDCR-014: Delta-first processing cannot weaken whole-source closure, Tier-A, Challenger, Proof, Evidence or protected-authority requirements.
+
+EDCR-015: Reusable context is invalidated by affected dependency change, source-root/DesignEpoch change, expiry or overturning evidence and must then be selectively or fully revalidated according to closure.
+
+## 11. Minimum conformance tests
+
+1. Replaying an identical observation produces no new frontier handoff.
 2. A changed source hash with identical prose remains distinguishable and is re-evaluated under policy.
 3. A HIGH-risk contradiction produces a materiality receipt and includes both sides in the frontier packet.
-4. An all-NO_CHANGE, unchanged, fresh snapshot produces `NOT_MATERIAL` and zero frontier spend.
+4. An all-NO_CHANGE, unchanged, fresh snapshot produces `NOT_MATERIAL` and zero frontier handoff.
 5. Expired evidence cannot silently survive into a present-tense snapshot.
 6. Compression preserves evidence references and records omitted-context policy.
 7. A frontier output that claims authority/canonical admission is rejected or stored only as proposal evidence.
-8. Provider 429/unknown charge never advances the governed process state.
-9. Daily and per-call budget caps remain fail-closed.
-10. Quality comparison measures whether compaction changed conclusions, false-negative rate, contradiction detection or required evidence coverage.
+8. Provider 429/unknown charge never advances governed process state.
+9. OpenRouter policy contains no Astra-as-frontier model binding.
+10. ChatGPT handoff request contains no provider credential or provider-side model route.
+11. A forced incomplete dependency closure expands context or blocks rather than silently compressing.
+12. Quality comparison measures whether compaction changed conclusions, false-negative rate, contradiction detection or required evidence coverage.
 
-## 11. Candidate disposition
+## 12. Candidate disposition
 
-This candidate is worthy because it strengthens mechanisms Garden already contains: completion-driven execution, observation/evidence separation, reusable governed knowledge, truth maintenance, freshness and dependency-aware revalidation. It should be implemented incrementally in the OpenRouter/public-review adapter first, measured there, and only then considered for wider admission.
+This candidate is worthy because it strengthens mechanisms Garden already contains: completion-driven execution, observation/evidence separation, reusable governed knowledge, truth maintenance, freshness and dependency-aware revalidation. It should be applied incrementally across the repository where repeated unchanged processing exists, measured there, and only then considered for canonical admission.
 
 Canonical promotion remains a separate governed act.

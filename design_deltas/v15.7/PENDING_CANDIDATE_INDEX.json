@@ -56,10 +56,12 @@
     {
       "candidate_id": "CAND-EDCR-001",
       "kind": "EVENT_DRIVEN_CONTEXT_ROUTING_CANDIDATE",
-      "next_action": "Qualify the public OpenRouter adapter: deterministic normalized observations, deduplication/materiality receipts, provenance-preserving compact context packets, selective Astra synthesis, cost/quality measurements and fail-closed provider handling.",
+      "next_action": "Qualify repo-wide event/delta behavior: durable event fingerprints, reusable context, materiality receipts, explicit whole-context fallbacks, provider-neutral external ChatGPT frontier handoff, cost/quality measurements and fail-closed handling. OpenRouter remains a worker/reviewer provider surface and MUST NOT impersonate the ChatGPT frontier lane.",
       "source": "design_deltas/v15.7/EVENT-DRIVEN-CONTEXT-ROUTING-CANDIDATE.md",
+      "amendment": "design_deltas/v15.7/EVENT-DRIVEN-CONTEXT-ROUTING-CORRECTION-2026-09-16.md",
+      "implementation_profile": "governance/EVENT_DRIVEN_WORK_POLICY_v1.json",
       "status": "CANDIDATE_USER_REQUESTED_IMPLEMENTATION_AND_QUALIFICATION_PENDING",
-      "summary": "Reuse completion-driven execution, AttestedObservation/Evidence and GSL-KR so cheap workers normalize events and frontier models see only material context deltas; compression cannot erase evidence, contradiction, freshness or authority boundaries.",
+      "summary": "Reuse completion-driven execution, AttestedObservation/Evidence and GSL-KR so unchanged context is reused, changed evidence is processed incrementally, and expensive/frontier reasoning happens only after materiality. The ChatGPT frontier role is external to OpenRouter; whole-source closure remains mandatory when compact context is insufficient.",
       "work_package_id": "WP-EVENT-DRIVEN-CONTEXT-ROUTING-V15-7"
     }
   ],

@@ -1,0 +1,128 @@
+{
+  "schema": "GardenEvolutionReasoningBundle/v1",
+  "bundle_id": "GARDEN-2026-09-16-EVENT-DELTA-REASONING-001",
+  "action_id": "GARDEN-2026-09-16-EVENT-DELTA-GENERALIZATION-001",
+  "design_epoch": "v15.5",
+  "canonical_source_root_sha256": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+  "source_obligation_refs": [
+    "governance/PROCESS_CURRENT.json",
+    "governance/GardenCanonicalUpdateProcess_v1.4.json",
+    "governance/PROCESS_ENGINE_IMPLEMENTATION_v1.json",
+    "design_deltas/v15.7/EVENT-DRIVEN-CONTEXT-ROUTING-CORRECTION-2026-09-16.md"
+  ],
+  "compare": {
+    "schema": "GardenEvolutionCompareReceipt/v1",
+    "action_id": "GARDEN-2026-09-16-EVENT-DELTA-GENERALIZATION-001",
+    "design_epoch": "v15.5",
+    "canonical_source_root_sha256": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+    "predecessor_ref": "git:ankitdcx/garden-main@bfd70856a995ca9c68ad4a0b6fe74ab682e0897c",
+    "alternatives": [
+      {
+        "alternative_id": "DO_NOTHING",
+        "description": "Keep completion-driven selection but retain stale hourly coordinator metadata and limit compact-context/materiality semantics to the initial adapter candidate.",
+        "projected_effect": "Lower change surface, but clock-oriented metadata and repeated-context behavior remain inconsistent across Garden work roles.",
+        "risk": "Agents may continue reprocessing unchanged state or misread the ChatGPT frontier role as an OpenRouter route."
+      },
+      {
+        "alternative_id": "GENERALIZE_EVENT_DELTA_POLICY",
+        "description": "Use one event/completion coordinator, reusable validated context, reason-coded materiality and dependency-aware compact deltas across applicable work roles; retain explicit full-context fallback.",
+        "projected_effect": "Reduces repeated context/compute and aligns scheduling metadata while preserving review, evidence and authority gates.",
+        "risk": "Over-aggressive compaction could hide dependencies unless closure-triggered context expansion remains fail-closed."
+      }
+    ],
+    "bidirectional_gaps": [
+      {
+        "from": "DO_NOTHING",
+        "to": "GENERALIZE_EVENT_DELTA_POLICY",
+        "gap": "No repo-wide context reuse/materiality rule and stale clock metadata remains."
+      },
+      {
+        "from": "GENERALIZE_EVENT_DELTA_POLICY",
+        "to": "DO_NOTHING",
+        "gap": "Additional event fingerprints, context invalidation and full-context-fallback qualification obligations."
+      }
+    ]
+  },
+  "reason": {
+    "schema": "GardenEvolutionReasonReceipt/v1",
+    "action_id": "GARDEN-2026-09-16-EVENT-DELTA-GENERALIZATION-001",
+    "design_epoch": "v15.5",
+    "canonical_source_root_sha256": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+    "strategy": "EVENT_DRIVEN_DELTA_FIRST_WITH_CLOSURE_FALLBACK",
+    "tier": "IMPLEMENTATION_CONFORMANCE",
+    "assumptions": [
+      "GardenCanonicalUpdateProcess@1.4 remains the HUMAN-admitted governing process.",
+      "Garden v15.5 remains the immutable canonical baseline and v15.7 EDCR remains non-canonical candidate work.",
+      "Completion, repository change, evidence change, invalidation, cooldown expiry and freshness deadlines can wake work without granting authority.",
+      "Compact context is safe only when the affected dependency closure is sufficient; otherwise context must expand or the result remains unknown/incomplete.",
+      "OpenRouter reviewer/provider work and the external ChatGPT frontier lane are distinct surfaces; the repository must not hardcode a changing ChatGPT product model name."
+    ],
+    "uncertainty": "Durable live event delivery, context-cache invalidation metrics and the external ChatGPT handoff are not yet deployment-qualified. Cost/quality savings require empirical receipts.",
+    "counterexamples": [
+      "Clock passage rotates target/model despite unchanged state.",
+      "Duplicate event fingerprint creates duplicate review work.",
+      "Compact packet omits an affected contract and prevents a required whole-source check.",
+      "Stale observation survives into a current conclusion.",
+      "OpenRouter is treated as the external ChatGPT frontier lane.",
+      "Frontier output is mistaken for independent quorum or canonical authority."
+    ],
+    "dependency_refs": [
+      "governance/PROCESS_CURRENT.json",
+      "governance/AUTOMATION_ENGINE_BINDING_v1.json",
+      "governance/PROCESS_EXECUTION_SCHEDULE_v1.json",
+      "governance/EVENT_DRIVEN_WORK_POLICY_v1.json",
+      "implementation/garden_kernel/completion_runner.py"
+    ],
+    "conclusion": "Propose the repo-wide event/delta profile and provider-boundary correction, keep the coordinator paused, require explicit whole-context fallback and independently qualify live handoff/efficiency before activation.",
+    "authorization_effect": "NONE"
+  },
+  "proof": {
+    "schema": "GardenEvolutionProofReceipt/v1",
+    "action_id": "GARDEN-2026-09-16-EVENT-DELTA-GENERALIZATION-001",
+    "design_epoch": "v15.5",
+    "canonical_source_root_sha256": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+    "obligations": [
+      {
+        "obligation_id": "PO-EVENT-DELTA-001",
+        "statement": "A sole coordinator can select event/material work without a recurring clock while preserving Process route/gate authority and explicit context-expansion conditions.",
+        "verifier_class": "EXECUTABLE_CONTRACT_TEST",
+        "result": "UNKNOWN",
+        "evidence_refs": ["implementation/tests/test_automation_engine_binding.py"]
+      }
+    ],
+    "overall_result": "UNKNOWN",
+    "authorization_effect": "NONE"
+  },
+  "evidence": {
+    "schema": "GardenEvolutionEvidenceReceipt/v1",
+    "action_id": "GARDEN-2026-09-16-EVENT-DELTA-GENERALIZATION-001",
+    "design_epoch": "v15.5",
+    "canonical_source_root_sha256": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+    "items": [
+      {
+        "kind": "HUMAN_DIRECTIVE",
+        "ref": "human:event-driven-delta-context-generalization:2026-09-16",
+        "claim_scope": "User requested the event-driven/context-reuse rule be committed and applied wherever it fits, and clarified the frontier role is the ChatGPT-side lane rather than OpenRouter."
+      },
+      {
+        "kind": "IMPLEMENTATION_PROFILE",
+        "ref": "governance/EVENT_DRIVEN_WORK_POLICY_v1.json",
+        "claim_scope": "Declares event wakes, delta-first context, materiality, applicability and mandatory full-context fallbacks; non-canonical implementation profile."
+      },
+      {
+        "kind": "EXECUTABLE_TEST",
+        "ref": "implementation/tests/test_automation_engine_binding.py",
+        "claim_scope": "Controlled binding and fail-closed tests; not independent deployment qualification."
+      }
+    ],
+    "proof_effect": "NONE",
+    "authorization_effect": "NONE"
+  },
+  "separation_assertions": {
+    "compare_is_not_decision": true,
+    "reason_is_not_authorization": true,
+    "evidence_is_not_proof": true,
+    "proof_is_not_authorization": true,
+    "actiongate_owns_authorization": true
+  }
+}
