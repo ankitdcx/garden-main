@@ -1,0 +1,83 @@
+name: One-use governed private branch cleanup v2 2026-09-16
+
+on:
+  pull_request:
+    types: [opened]
+    paths:
+      - '.github/workflows/one-use-governed-cleanup-v2-20260916.yml'
+
+permissions:
+  contents: read
+  pull-requests: read
+
+jobs:
+  cleanup:
+    if: github.event.pull_request.head.repo.full_name == github.repository && github.head_ref == 'cleanup/one-use-governed-cleanup-v2-20260916'
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    permissions:
+      contents: write
+      pull-requests: read
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+      - name: Delete exact safe refs using merged-PR proof
+        env:
+          GH_TOKEN: ${{ github.token }}
+          SELF_BRANCH: ${{ github.head_ref }}
+          SELF_SHA: ${{ github.event.pull_request.head.sha }}
+          CLEANUP_CONFIG: >-
+            {"repository":"ankitdcx/garden-main","main_sha":"46516375cf0c0db387c6c2fc665282409da7278a","targets":[{"name":"bind-edcr-gap-owners-20260916","sha":"8b886c4205e4fcc26b56109dd4aca83d921f5b3d","proof":"merged_pr","pr":77},{"name":"edcr-adapter-evolution-note-20260916","sha":"548bb5a0cb4f4a270db0d93be608d21f4a650498","proof":"merged_pr","pr":78},{"name":"event-driven-context-routing-20260916","sha":"558980fe5a74d188984314bd381b40be13f5f811","proof":"merged_pr","pr":74},{"name":"generalize-event-driven-delta-20260916","sha":"4592fa8b41fd8ce0a85a274befa274e9b033eca4","proof":"merged_pr","pr":75},{"name":"governance/pr72-human-admission","sha":"2bb62224a851fffc0392909c53fd530ffe3d5f87","proof":"merged_pr","pr":73},{"name":"policy/exclude-anthropic-nvidia-20260916","sha":"1ac27a3f25646a9bab6c0757d79bbf043b3188cf","proof":"merged_pr","pr":80},{"name":"policy/exclude-mistral-20260916","sha":"436ed523a85378ecf523aefcb6ff20bdd4c7faf8","proof":"merged_pr","pr":81},{"name":"release/v15.7-working-candidate-20260915","sha":"e53232759a5e932609d313aa09c8e156ca3bdddf","proof":"merged_pr","pr":72},{"name":"v15.7-chat-safety-justice-patches-20260916","sha":"e5cea9208a8ab6ce4fced668f6c18abb52361d38","proof":"merged_pr","pr":79},{"name":"cleanup/one-use-governed-cleanup-20260916","sha":"c3adee7d990ea247d5ed5ade0a7f585664caed0f","proof":"failed_cleanup","pr":82}],"preserve":["main","codex/v15.7-five-doc-assurance-20260916"]}
+        run: |
+          python - <<'PY'
+          import json, os, re, subprocess, urllib.request
+          from pathlib import Path
+          cfg=json.loads(os.environ['CLEANUP_CONFIG']); repo=os.environ['GITHUB_REPOSITORY']; base=cfg['main_sha']; assert repo==cfg['repository']
+          def git(*args): return subprocess.check_output(['git',*args],text=True).strip()
+          def heads():
+              d={}
+              for line in git('ls-remote','--heads','origin').splitlines():
+                  sha,ref=line.split(); d[ref.removeprefix('refs/heads/')]=sha
+              return d
+          def api(path):
+              req=urllib.request.Request('https://api.github.com/repos/'+repo+path,headers={'Authorization':'Bearer '+os.environ['GH_TOKEN'],'Accept':'application/vnd.github+json'})
+              with urllib.request.urlopen(req,timeout=30) as r: return json.load(r)
+          assert git('rev-parse','HEAD')==base
+          live=heads(); assert live.get('main')==base
+          open_heads=set()
+          for page in range(1,20):
+              rows=api(f'/pulls?state=open&per_page=100&page={page}')
+              for p in rows:
+                  if p.get('head',{}).get('repo') and p['head']['repo']['full_name']==repo: open_heads.add(p['head']['ref'])
+              if len(rows)<100: break
+          else: raise RuntimeError('open PR pagination not exhausted')
+          for name in cfg['preserve']: assert name in live, f'preserve missing: {name}'
+          delete=[]; absent=[]
+          for t in cfg['targets']:
+              name,sha=t['name'],t['sha']; assert re.fullmatch(r'[0-9a-f]{40}',sha)
+              if name not in live: absent.append(t); continue
+              assert live[name]==sha, f'branch moved: {name}'; assert name not in open_heads, f'open PR: {name}'
+              pr=api('/pulls/'+str(t['pr'])); assert pr['head']['ref']==name and pr['head']['sha']==sha and pr['state']=='closed'
+              if t['proof']=='merged_pr': assert pr.get('merged_at'), f'PR not merged: {t["pr"]}'
+              elif t['proof']=='failed_cleanup':
+                  assert not pr.get('merged_at'); marker=((pr.get('title') or '')+'\n'+(pr.get('body') or '')).lower(); assert 'failed' in marker and 'supersed' in marker
+              else: raise AssertionError('unknown proof')
+              delete.append({'name':name,'sha':sha,'proof':t['proof']})
+          assert heads().get('main')==base
+          self_name,self_sha=os.environ['SELF_BRANCH'],os.environ['SELF_SHA']; assert heads().get(self_name)==self_sha
+          refs=delete+[{'name':self_name,'sha':self_sha,'proof':'self_carrier'}]
+          cmd=['git','push','--atomic']+[f"--force-with-lease=refs/heads/{r['name']}:{r['sha']}" for r in refs]+['origin']+[f":refs/heads/{r['name']}" for r in refs]
+          subprocess.run(cmd,check=True)
+          remaining=heads(); assert remaining.get('main')==base; assert not any(r['name'] in remaining for r in refs); assert all(x in remaining for x in cfg['preserve'])
+          receipt={'schema':'BranchRetirementReceipt/v1','repository':repo,'main_sha':base,'deleted':refs,'already_absent':absent,'preserved':{k:remaining[k] for k in cfg['preserve']},'remaining_heads':remaining,'status':'VERIFIED','canonical_effect':'NONE','provider_calls':0}
+          Path('branch-retirement-receipt.json').write_text(json.dumps(receipt,indent=2)+'\n'); print(json.dumps(receipt,indent=2))
+          PY
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: governed-private-branch-cleanup-v2-${{ github.run_id }}
+          path: branch-retirement-receipt.json
+          if-no-files-found: error
+          retention-days: 90
