@@ -76,6 +76,14 @@
         ],
         "admission_boundary": "Candidate dependency only until separately admitted/promoted; EDCR cannot silently treat these successor semantics as published v15.5 canon."
       },
+      "adapter_evolution_dependency": {
+        "status": "DECLARED_TRANSITION_DEPENDENCY_NO_TYPED_EXTENSION_ADMITTED_YET",
+        "rule": "If a future EDCR adapter revision carries action-eligible artifacts, operational causes claims, protected/redacted provenance, embedded GSL declarations or another owner-qualified type, that revision must explicitly version its schema/profile and preserve the originating type, provenance and owner identity through normalization.",
+        "default_for_ordinary_observation": "NOT_ACTION_ELIGIBLE_AND_NOT_CAUSAL_UNLESS_EXPLICITLY_TYPED_AND_VALIDATED",
+        "required_existing_owner_checks": "Before downstream use, the applicable existing Compile, authority-provenance/intersection, causal-level, provenance-manifest, catalogue and assurance owners must validate the typed extension. Unrecognized or unresolved extensions fail closed.",
+        "no_new_authority_source": "Adapter parsing, normalization, routing, compression or model output cannot create authority, increase causal strength, create protected status or admit semantics. The adapter transports owner-qualified data; it does not become the owner.",
+        "runtime_transition": "Add executable owner invocation only when the corresponding typed field/class is actually introduced into the adapter; until then no dormant parallel authority/causal mechanism is implied."
+      },
       "successor_classification_note": "Route is derived from actual touched semantics. Depending on existing authority/HSA/protected owners does not by itself make EDCR MAJOR_PROTECTED. Any EDCR delta that changes authority, HSA, rights or constitutional semantics must route MAJOR_PROTECTED and obtain the existing protected HUMAN decision; other cross-cutting changes may still require MAJOR-level assurance/simplification under the normal classifier.",
       "status": "CANDIDATE_USER_REQUESTED_IMPLEMENTATION_AND_QUALIFICATION_PENDING",
       "summary": "Reuse completion-driven execution, AttestedObservation/Evidence and GSL-KR so unchanged context is reused, changed evidence is processed incrementally, and expensive/frontier reasoning happens only after materiality. The ChatGPT frontier role is external to OpenRouter; whole-source closure remains mandatory when compact context is insufficient; EDCR reuses rather than duplicates Garden's existing authority/bootstrap/provenance/causal/reason/language/catalogue owners.",
