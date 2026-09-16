@@ -6,14 +6,16 @@
   "engine_implementation": "implementation/garden_kernel/process_engine.py",
   "transition_receipt": "GardenProcessTransitionReceipt/v1",
   "algebra_registry_ref": "REG-ALGEBRA-001",
+  "event_driven_work_policy": "governance/EVENT_DRIVEN_WORK_POLICY_v1.json",
   "scheduling_topology": "SINGLE_SERIAL_COORDINATOR",
   "active_driver_count": 1,
   "active_bindings": [
     {
       "automation_id": "6aa8bfd0de048191be26d84162c1c4d6",
       "lane": "Garden Coordinator",
-      "mode": "ENGINE_SERIAL_COORDINATOR",
-      "schedule": "hourly at minute 10 Asia/Kolkata",
+      "mode": "ENGINE_SERIAL_EVENT_COORDINATOR",
+      "schedule": "EVENT_DRIVEN_NO_RECURRING_CLOCK",
+      "wake_sources": ["completion", "repository_state_change", "review_or_verification_result", "dependency_invalidation", "cooldown_expiry", "freshness_deadline", "explicit_human_directive"],
       "max_material_work_units_per_run": 1,
       "max_external_provider_calls_in_parallel": 1,
       "engine_state_authority": "ProcessFactory/GardenProcess only"
@@ -24,14 +26,14 @@
     {"automation_id":"6aa8a069d1d88191927f77a1ac724ea6","lane":"Garden Canonical Design Sweep","absorbed_as":"coordinator SECTION_UNIT_REVIEW role"},
     {"automation_id":"6aa89f6c40a8819183afc1853b319f05","lane":"Garden Research Scout","absorbed_as":"coordinator PRE_PROCESS research due role"},
     {"automation_id":"6aa8a6d1ab7881918d82e44613a46fd6","lane":"Garden ReviewPacket Builder","absorbed_as":"coordinator packet role"},
-    {"automation_id":"6aa69eb215788191a67b100206958866","lane":"Garden ChatGPT Reviewer","absorbed_as":"coordinator blind-review role"},
-    {"automation_id":"6aa89d938ae08191aa10d0f7d1c760bd","lane":"Garden Hourly Cross-Exam","absorbed_as":"coordinator cross-exam role"},
-    {"automation_id":"6aa7a049de8881918969f916789d51e6","lane":"Garden Hourly Branch Hygiene","absorbed_as":"coordinator hygiene due role"},
-    {"automation_id":"6aa89d7c7ccc81918cce4b519a403ae5","lane":"Garden Hourly Builder","absorbed_as":"coordinator implementation role"},
+    {"automation_id":"6aa69eb215788191a67b100206958866","lane":"Garden ChatGPT Reviewer","absorbed_as":"external ChatGPT frontier/blind-review role after materiality and route gates"},
+    {"automation_id":"6aa89d938ae08191aa10d0f7d1c760bd","lane":"Garden Hourly Cross-Exam","absorbed_as":"coordinator cross-exam role; legacy name only"},
+    {"automation_id":"6aa7a049de8881918969f916789d51e6","lane":"Garden Hourly Branch Hygiene","absorbed_as":"coordinator hygiene due role; legacy name only"},
+    {"automation_id":"6aa89d7c7ccc81918cce4b519a403ae5","lane":"Garden Hourly Builder","absorbed_as":"coordinator implementation role; legacy name only"},
     {"automation_id":"6aa8a79303b88191ba498dd919efb861","lane":"Garden Pipeline Health","absorbed_as":"coordinator health due role"},
-    {"automation_id":"6aa68f41559c8191860a5fd429db0246","lane":"Garden Daily Repo Review","absorbed_as":"coordinator daily reconciliation due role"},
-    {"automation_id":"6aa8a5fb3db88191b62c284b23ca54d6","lane":"Garden Protocol Simplifier","absorbed_as":"coordinator daily simplification due role"},
-    {"automation_id":"6aa68e09473c8191ae77494704e6f808","lane":"Garden Daily Candidate","absorbed_as":"coordinator successor-composition role"},
+    {"automation_id":"6aa68f41559c8191860a5fd429db0246","lane":"Garden Daily Repo Review","absorbed_as":"coordinator reconciliation due role; legacy name only"},
+    {"automation_id":"6aa8a5fb3db88191b62c284b23ca54d6","lane":"Garden Protocol Simplifier","absorbed_as":"coordinator simplification due role"},
+    {"automation_id":"6aa68e09473c8191ae77494704e6f808","lane":"Garden Daily Candidate","absorbed_as":"coordinator successor-composition role; legacy name only"},
     {"automation_id":"6aa8a7a5e4248191b9244a048e5b3f74","lane":"Garden Pipeline Simplification","absorbed_as":"coordinator 90-day simplification due role"},
     {"automation_id":"6aa8c14886708191a4fe9b41a2ea3a5b","lane":"Garden Maintenance","absorbed_as":"coordinator maintenance due roles"}
   ],
@@ -42,20 +44,25 @@
     "one_material_work_unit_per_run": true,
     "parallel_garden_stages": false,
     "parallel_external_provider_calls": false,
-    "blind_review_accumulation": "one missing independent review per run when needed; persist and continue on later runs",
+    "event_fingerprint_deduplication": "duplicate state/event fingerprints produce NO_CHANGE rather than duplicate work",
+    "context_reuse": "reuse fresh validated context and send only changed observations plus affected dependency closure by default",
+    "materiality_before_expensive_reasoning": true,
+    "whole_context_fallback": "expand when closure is incomplete, high-risk semantics cross owners, DesignEpoch/source root changes, or full assurance requires it",
+    "blind_review_accumulation": "one missing independent review per material packet when needed; persist completed family results and do not rerun unchanged packet hashes",
     "transient_rate_limit": "NO_STATE_ADVANCE_NO_IMMEDIATE_RETRY_RETAIN_NEXT_ACTION",
-    "retry_owner": "later Garden Coordinator occurrence after re-observing exact state"
+    "retry_owner": "single delayed event wake after cooldown and exact-state re-observation"
   },
   "due_obligations": {
-    "engine_pipeline_health": "at least every 6 hours",
-    "branch_pr_hygiene": "at least every 6 hours when needed",
-    "public_research_scout": "at most every 12 hours and only when higher-priority work is absent",
-    "legacy_pending_work_reconciliation": "at least daily",
-    "protocol_simplification": "at most once per Asia/Kolkata day",
-    "pipeline_simplification": "when 90-day window is due",
-    "successor_candidate_composition": "whenever admitted semantic work is ready; no separate clock wake-up"
+    "interpretation": "Freshness/assurance deadlines that may create work when due; they are not independent polling schedules.",
+    "engine_pipeline_health": "freshness <=6h; wake on health change or deadline",
+    "branch_pr_hygiene": "freshness <=6h when needed; wake on branch/PR change or deadline",
+    "public_research_scout": "at least 12h between runs and only for new/expired material evidence when higher-priority work is absent",
+    "legacy_pending_work_reconciliation": "freshness <=1 day; process changed receipts/pending identities first",
+    "protocol_simplification": "at most once per Asia/Kolkata day and only with measured growth/duplication evidence",
+    "pipeline_simplification": "when 90-day assurance window is due or measured evidence reopens it",
+    "successor_candidate_composition": "whenever new admitted semantic work is ready; no separate clock wake-up"
   },
-  "rule": "Only Garden Coordinator is an active Garden scheduler. Former lanes are worker roles/due obligations and carry no independent scheduling or route/state authority.",
-  "fail_closed": ["MULTIPLE_ACTIVE_GARDEN_SCHEDULERS","MISSING_ENGINE_BINDING","LOCAL_ROUTE_OVERRIDE","ILLEGAL_PROCESS_TRANSITION","MISSING_ENGINE_RECEIPT","STALE_CYCLE_BINDING","ALGEBRA_TRANSITION_INVALID","AUTHORITY_CLAIM_FROM_ALGEBRA","TRANSIENT_FAILURE_STATE_ADVANCE"],
-  "authority_boundary": "Scheduling and Process Algebra conformance cannot mint protected authority, alter ProcessVersion semantics, admit delegation envelopes, or promote canon."
+  "rule": "Only Garden Coordinator is an active Garden scheduler. It wakes from state/completion/freshness events, deduplicates unchanged state, applies the event-driven delta policy, and carries no independent route/state authority. Former lanes are worker roles/due obligations with no independent schedule.",
+  "fail_closed": ["MULTIPLE_ACTIVE_GARDEN_SCHEDULERS","MISSING_ENGINE_BINDING","LOCAL_ROUTE_OVERRIDE","ILLEGAL_PROCESS_TRANSITION","MISSING_ENGINE_RECEIPT","STALE_CYCLE_BINDING","ALGEBRA_TRANSITION_INVALID","AUTHORITY_CLAIM_FROM_ALGEBRA","TRANSIENT_FAILURE_STATE_ADVANCE","FRONTIER_WITHOUT_MATERIALITY_RECEIPT","CONTEXT_COMPACTION_WITHOUT_REQUIRED_CLOSURE"],
+  "authority_boundary": "Scheduling, context compression, materiality and Process Algebra conformance cannot mint protected authority, alter ProcessVersion semantics, admit delegation envelopes, or promote canon."
 }
