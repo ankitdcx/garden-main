@@ -1,0 +1,13 @@
+{
+  "schema":"GardenEvolutionAAPSelectionReceipt/v1",
+  "action_id":"GARDEN-2026-09-16-PR76-HUMAN-ADMISSION-PROPOSE-001",
+  "design_epoch":"v15.5",
+  "canonical_source_root_sha256":"63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+  "source_obligation_refs":["governance/human_admissions/PR-76.json","governance/PROCESS_CURRENT.json"],
+  "impact":{"consequence":"HIGH","irreversibility":"LOW","authority":"HIGH","novelty":"LOW","uncertainty":"MEDIUM","sensitivity":"MEDIUM","dependency_impact":"HIGH","disagreement":"LOW","hard_policy":true,"constitutional":true,"physical_safety":false},
+  "selected":{"reason_tier":"R4","verity_tier":"V4","safety_tier":"S4","modules":["SOURCE_IDENTITY","GSL_TYPING","DESIGN_EPOCH","SOURCE_OBLIGATION","COMPARE","REASON","PROOF","EVIDENCE","AAP","AUTHORITY","ACTION_GATE","PROCESS_ALGEBRA","CONFORMANCE_ALGEBRA","INDEPENDENT_REVIEW_REQUIREMENT"]},
+  "resource_budget":{"status":"SUFFICIENT","basis":"Single exact human-admission record plus typed audit transport; canonical v15.5 remains unchanged and PR76 verification remains separately fail-closed."},
+  "degradation_disposition":"NONE",
+  "authorization_effect":"NONE",
+  "semantic_compliance_proved":false
+}
