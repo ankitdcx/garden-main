@@ -8,6 +8,7 @@
   "algebra_registry_ref": "REG-ALGEBRA-001",
   "automation_binding_manifest": "governance/AUTOMATION_ENGINE_BINDING_v1.json",
   "execution_schedule": "governance/PROCESS_EXECUTION_SCHEDULE_v1.json",
+  "event_driven_work_policy": "governance/EVENT_DRIVEN_WORK_POLICY_v1.json",
   "architecture": {
     "root_abstract_contract": "GardenProcess",
     "construction": "ProcessFactory",
@@ -26,11 +27,15 @@
   "automation_execution_contract": {
     "route_state_owner": "GardenProcessEngine@1",
     "worker_prompt_scope": "Lane prompts may define role-specific work only and must not redefine route/state/gate semantics.",
+    "event_and_context_scope": "Event fingerprints, context reuse and materiality select work/context only; they never redefine GardenProcess route or authority semantics.",
+    "delta_first_rule": "Reuse fresh validated context and process changed observations plus affected dependency closure by default; expand when required closure cannot be bounded.",
+    "full_context_fallback_rule": "Whole-source or wider context remains mandatory when closure is incomplete, DesignEpoch/source root changes, high-risk semantics cross owners, affected contracts/invariants are uncertain, or an assurance rule explicitly requires it.",
+    "frontier_chatgpt_rule": "External ChatGPT frontier review consumes GardenFrontierReviewRequest/v1 only after materiality. It is not an OpenRouter provider route and cannot self-admit semantic deltas or authority.",
     "pre_process_exception": ["PRE_PROCESS_DISCOVERY"],
     "non_process_exception": ["EXTERNAL_RESEARCH_DELIVERY"],
-    "blind_review_rule": "Individual blind-review workers persist reviewer evidence but cannot alone advance BLIND_REVIEW_COMPLETE.",
+    "blind_review_rule": "Individual blind-review workers persist reviewer evidence but cannot alone advance BLIND_REVIEW_COMPLETE; completed results on an unchanged packet hash are reusable.",
     "audit_rule": "Independent audit lanes may inspect engine state/receipts but cannot certify their own health or mint authority.",
-    "fail_closed_codes": ["MISSING_ENGINE_BINDING","LOCAL_ROUTE_OVERRIDE","ILLEGAL_PROCESS_TRANSITION","MISSING_ENGINE_RECEIPT","STALE_CYCLE_BINDING","ALGEBRA_TRANSITION_INVALID","AUTHORITY_CLAIM_FROM_ALGEBRA"]
+    "fail_closed_codes": ["MISSING_ENGINE_BINDING","LOCAL_ROUTE_OVERRIDE","ILLEGAL_PROCESS_TRANSITION","MISSING_ENGINE_RECEIPT","STALE_CYCLE_BINDING","ALGEBRA_TRANSITION_INVALID","AUTHORITY_CLAIM_FROM_ALGEBRA","FRONTIER_WITHOUT_MATERIALITY_RECEIPT","CONTEXT_COMPACTION_WITHOUT_REQUIRED_CLOSURE"]
   },
   "process_algebra_binding": {
     "transition_operators": ["SEQUENCE","BRANCH","PARALLEL","COMPOSE","TERMINATE"],
@@ -58,7 +63,10 @@
       "MAJOR protected/delegable implementations are siblings",
       "protected promotion requires external HUMAN protected decision evidence",
       "MAJOR promotion readiness requires verified simplification and enforcement coverage",
-      "every scheduled Garden lane has exactly one automation-engine binding",
+      "the sole active Garden coordinator has no recurring clock schedule",
+      "due intervals are freshness constraints rather than pollers",
+      "event/context optimization cannot bypass required whole-source closure",
+      "frontier ChatGPT handoff is distinct from OpenRouter/provider routing",
       "pre-process discovery and external research tasks do not fabricate GardenProcess state"
     ]
   },
