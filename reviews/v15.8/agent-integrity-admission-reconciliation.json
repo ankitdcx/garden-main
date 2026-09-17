@@ -1,0 +1,207 @@
+{
+  "schema": "GardenCandidateAdmissionReconciliation/v1",
+  "candidate": "GARDEN-v15.8-UBC-ART-IIC-PIR-2026-09-17",
+  "revision": "0.3.4",
+  "status": "PARTIAL_CORPUS_RECONCILIATION_COMPLETE_EXACT_ID_AND_EXECUTABLE_ADMISSION_PENDING",
+  "base": {
+    "repository": "ankitdcx/garden-main",
+    "main_sha": "801f04e9b55988495fc7d30f800bb285a473c057",
+    "canonical_release": "Garden v15.5",
+    "source_root_sha256": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+    "design_epoch_ref": "Garden-v15.5@63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598"
+  },
+  "declared_collision": {
+    "pr": 89,
+    "intent_id": "chatgpt:v158-consolidation:20260916",
+    "resolution": "KEEP_SOURCE_WORKSTREAMS_SEPARATE_AND_COMPOSE_ON_FRESH_INTEGRATION_BRANCH"
+  },
+  "inspected_sources": [
+    "canonical/current/Garden_Technical_v15.5_FULL_2026-09-12.txt",
+    "canonical/current/Garden_System_v15.5_FULL_2026-09-12.txt",
+    "canonical/current/Garden_User_v15.5_FULL_2026-09-12.txt",
+    "canonical/current/SOURCE_MANIFEST.json",
+    "design_deltas/v15.6/PENDING-CONSOLIDATED-SPECIFICATION.txt",
+    "design_deltas/v15.7/HUMAN-EFFECT-CLOSURE-CANDIDATE-2026-09-16.md",
+    "design_deltas/v15.7/REPUTATION-AGENCY-LOG-SCALE-CANDIDATE-2026-09-16.md",
+    "design_deltas/v15.7/JUSTICE-EVIDENCE-CONTINUITY-ANTI-OBSTRUCTION-CANDIDATE-2026-09-16.md",
+    "design_deltas/v15.7/TRACE-CANDIDATE.md",
+    "reviews/PROJECT_WIDE_CHAT_UPGRADE_RECONCILIATION_2026-09-14.md"
+  ],
+  "artifact_name_scan": {
+    "TrustAllocationDecision/v1": "NO_EXACT_NAME_MATCH_FOUND_NEW_CANDIDATE_PENDING_SEMANTIC_DEDUP",
+    "ReputationAggregationPolicy/v1": "NO_EXACT_NAME_MATCH_FOUND_NEW_CANDIDATE_PENDING_SEMANTIC_DEDUP",
+    "EpochIndependenceClassification/v1": "NO_EXACT_NAME_MATCH_FOUND_NEW_CANDIDATE_PENDING_SEMANTIC_DEDUP",
+    "EpochIndependenceComparePolicy": "NEW_CANDIDATE_PENDING_SEMANTIC_DEDUP",
+    "ART_BOOTSTRAP_PROFILE/v1": "NEW_CANDIDATE_PENDING_SEMANTIC_DEDUP",
+    "EmergentStructureProfile/v1": "NEW_CANDIDATE_PENDING_SEMANTIC_DEDUP",
+    "IncentiveMaterialityPolicy/v1": "NEW_CANDIDATE_PENDING_SEMANTIC_DEDUP",
+    "IncentiveConsistencyAssessment/v1": "NEW_CANDIDATE_PENDING_SEMANTIC_DEDUP",
+    "IntegrityReport/v1": "NEW_CANDIDATE_PENDING_SEMANTIC_DEDUP",
+    "IntegrityChannelOwner/v1": "NEW_CANDIDATE_PENDING_SEMANTIC_DEDUP",
+    "ContainmentCredibilityPolicy/v1": "NEW_CANDIDATE_PENDING_SEMANTIC_DEDUP",
+    "ContainmentDecision/v1": "NEW_CANDIDATE_PENDING_SEMANTIC_DEDUP"
+  },
+  "semantic_reconciliation": [
+    {
+      "candidate": "UBC-INV-001",
+      "relation": "EXTENDS",
+      "existing": ["canonical Capability does not self-create authority", "v15.7 Human-Effect Closure capability/complexity cannot create exemption"],
+      "added_semantics": "explicit novel-mechanism closure across nonhuman as well as human-effect authority boundaries"
+    },
+    {
+      "candidate": "UBC-INV-002",
+      "relation": "REFINES",
+      "existing": ["COMPARE execution-control primitive", "ComparisonResult/materiality semantics"],
+      "added_semantics": "declared ComparePolicy-bound effect equivalence determines equal authority treatment independent of transport"
+    },
+    {
+      "candidate": "UBC-INV-003",
+      "relation": "EXTENDS",
+      "existing": ["delegates capability(delegate) subset capability(principal)", "Human-Effect Closure indirect/emergent causal closure"],
+      "added_semantics": "general indirect-executor/delegation closure for authority requirements"
+    },
+    {
+      "candidate": "UBC-INV-004",
+      "relation": "REFINES",
+      "existing": ["undeclared normative relation compositions raise CompositionError", "CLIC/process-policy algebra candidates"],
+      "added_semantics": "explicit independent authority evaluation of A composed with B even when A and B are individually allowed"
+    },
+    {
+      "candidate": "UBC-INV-005",
+      "relation": "EXTENDS",
+      "existing": ["Human-Effect Closure UNKNOWN human effect narrows authority"],
+      "added_semantics": "fail-closed rule for uncharacterizable irreversible effects where observation/testing may itself cause prohibited harm"
+    },
+    {
+      "candidate": "TSI-INV-001",
+      "relation": "REFINES_OR_EXTENDS_PENDING_EXACT_ID_AUDIT",
+      "existing": ["TRACE runtime self-report does not establish integrity", "TRACE role independence", "Justice evidence subject cannot be sole custodian/reviewer"],
+      "added_semantics": "consequential self-report cannot be the sole authoritative historical evidence"
+    },
+    {
+      "candidate": "TSI-INV-002",
+      "relation": "EXTENDS_PENDING_PROV_005_ADJUDICATION",
+      "existing": ["TRACE append-only committed observations/evaluations/receipts subject to privacy deletion", "PROV-005 protected provenance-gap semantics"],
+      "added_semantics": "representation changes cannot silently launder material accountability history; lawful deletion preserves strongest permitted tombstone/receipt"
+    },
+    {
+      "candidate": "TSI-INV-003",
+      "relation": "REFINES_OR_NEW",
+      "existing": ["TRACE self-report is not independent attestation"],
+      "added_semantics": "persistent self-authored memories/successor instructions remain provenance-marked claims and never become independent observation by persistence"
+    },
+    {
+      "candidate": "TIA-INV-001",
+      "relation": "NEW_OR_EXTENDS_INFORMATION_FLOW_RULES_PENDING_EXACT_CORPUS_AUDIT",
+      "existing": ["canonical privacy/authority/action-gate semantics"],
+      "added_semantics": "tool/channel permission never creates information-disclosure authority; authority follows information/effect across invented transports"
+    },
+    {
+      "candidate": "ART-INV-001",
+      "relation": "ALIASES_CORE_SEMANTIC_WITH_AGENT_APPLICATION",
+      "existing": ["canonical reputation cannot create authority over fundamental rights", "v15.7 Reputation candidate reputation != rights/sovereignty"],
+      "added_semantics": "no new core invariant required; agent trust application should cite canonical authority rule"
+    },
+    {
+      "candidate": "ART-INV-002",
+      "relation": "NEW",
+      "existing": [],
+      "added_semantics": "unknown AI agent/configuration starts under PROVISIONAL bootstrap rather than implicit trust"
+    },
+    {
+      "candidate": "ART-INV-003",
+      "relation": "EXTENDS",
+      "existing": ["TRACE configuration/DesignEpoch-bound admission evidence and explicit evidence reuse/revalidation assessment"],
+      "added_semantics": "reputation predictive eligibility becomes explicitly DesignEpoch-bound with stale/revalidation/classification lifecycle"
+    },
+    {
+      "candidate": "ART-INV-004",
+      "relation": "EXTENDS",
+      "existing": ["v15.7 Reputation candidate vector, scope, uncertainty, decay and dependence correction"],
+      "added_semantics": "canonical minimum reputation vector specialized for AI agents and trust allocation"
+    },
+    {
+      "candidate": "ART-INV-005",
+      "relation": "REFINES_EXISTING_DEPENDENCE_RULES",
+      "existing": ["TRACE correlated/shared-model/dependence evidence rules", "project-wide independent-review calibration/dependency rules"],
+      "added_semantics": "peer-agent agreement cannot count as independent corroboration without dependence analysis"
+    },
+    {
+      "candidate": "ART-INV-006",
+      "relation": "EXTENDS_PENDING_SEC_NAT_KINT_ADJUDICATION",
+      "existing": ["TRACE proposer cannot modify evaluators/criteria/verification records", "Justice self-custody conflict rule"],
+      "added_semantics": "agent cannot unilaterally weaken the evidence boundary supervising its own consequential behavior"
+    },
+    {
+      "candidate": "IIC-INV-001",
+      "relation": "NEW",
+      "existing": [],
+      "added_semantics": "systematic institutional reward advantage for violating protected constraints becomes a first-class institutional inconsistency event"
+    },
+    {
+      "candidate": "IIC-INV-002",
+      "relation": "NEW_OR_EXTENDS_DLR",
+      "existing": ["dependency-local reverification already appears in project-wide upgrade reconciliation"],
+      "added_semantics": "invalidated reward/action bases propagate bounded revalidation to dependent reputation/resource decisions"
+    },
+    {
+      "candidate": "PIR-INV-001",
+      "relation": "NEW_WITH_JUSTICE_DOMAIN_ADJACENCY",
+      "existing": ["Justice candidate whistleblower/witness protection and escalation concepts"],
+      "added_semantics": "general consequential multi-agent integrity channel must have bound owner and operational triage; dead inbox is noncompliant"
+    },
+    {
+      "candidate": "PIR-INV-002",
+      "relation": "NEW_REFINEMENT_OF_AUTHORITY_SEPARATION",
+      "existing": ["canonical recommendation/authorization/execution separation", "Justice allegations do not create guilt"],
+      "added_semantics": "right/ability to report does not create containment/sanction authority"
+    }
+  ],
+  "exact_id_adjudication_pending": [
+    {
+      "candidate": "TSI-INV-001",
+      "targets": ["K-INT-013"],
+      "reason": "exact canonical identifier text not reliably returned by GitHub code index for large source files"
+    },
+    {
+      "candidate": "TSI-INV-002",
+      "targets": ["PROV-005"]
+    },
+    {
+      "candidate": "ART-INV-006",
+      "targets": ["SEC-014", "NAT-001", "K-INT-013"],
+      "reason": "must resolve whether the agent-self-monitoring condition is stricter than existing security/natural-authority/epistemic rules"
+    },
+    {
+      "candidate": "TIA-INV-001",
+      "targets": ["existing information-flow/privacy/authority invariant family"],
+      "reason": "exact canonical family must be selected during complete corpus audit"
+    }
+  ],
+  "owner_binding_direction": {
+    "UBC": ["Engine.Compare/ComparePolicy", "CLIC", "Policy/Process Algebra", "ActionGate/AAP", "Proof"],
+    "TSI": ["Capability.State.EventService", "Capability.Knowledge", "Provenance", "Audit/Security"],
+    "TIA": ["information/privacy authority policy", "Engine.Compare", "ActionGate/AAP"],
+    "ART": ["DesignEpoch", "Reputation/DimensionAssessment canonical owner after reconciliation", "ActionGate/AAP", "Capability.Knowledge"],
+    "IIC": ["owner of affected protected rule", "EventService", "Knowledge", "Governance"],
+    "PIR": ["bound AGENCY via IntegrityChannelOwner/v1", "Governance/Audit", "ActionGate for containment"]
+  },
+  "known_nonduplicate_predecessor_relationships": [
+    "Human-Effect Closure remains authoritative for human consequences; UBC generalizes mechanism/effect closure and must not replace it.",
+    "v15.7 human Reputation candidate remains human-focused; ART reuses its vector/scope/dependence principles for AI-agent reliability and trust allocation without converting human reputation into agent reputation or authority.",
+    "Justice Evidence Continuity remains domain-specific; TSI/PIR generalize evidence independence/reporting patterns without weakening justice-specific rights and legal-process rules.",
+    "TRACE remains a runtime candidate; its role-independence, append-only and DesignEpoch evidence rules are reused where equivalent rather than duplicated."
+  ],
+  "remaining_admission_work": [
+    "complete exact-ID corpus audit and classify every invariant NEW/REFINES/EXTENDS/ALIASES/DUPLICATES",
+    "allocate unique SchemaIDs only after semantic deduplication",
+    "bind canonical owners and enforcement points",
+    "register profile/materiality/credibility/aggregation thresholds",
+    "create executable conformance tests and E4 receipts",
+    "run Reason/Algebra/AAP/Production evolution review",
+    "compose with PR89 on a fresh integration branch with IntegrationReceipt",
+    "obtain any exact protected/human admission required by trusted-base-admission before merge"
+  ],
+  "canonical_effect": "NONE",
+  "execution_authority": "NONE"
+}
