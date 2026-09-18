@@ -1,0 +1,43 @@
+{
+  "schema": "GardenEvolutionProductionAction/v1",
+  "design_epoch": "v15.5",
+  "dependencies": {
+    "canonical_source_root": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598"
+  },
+  "action": {
+    "action_id": "GARDEN-2026-09-18-GIT-PROCESS-V2-PROPOSE-001",
+    "verb": "PROPOSE",
+    "actor_ref": "agent:garden-integrator-build",
+    "subject_ref": "repo:ankitdcx/garden-main",
+    "input_refs": [
+      "GIT_OPERATING_CONTEXT_SOURCE.json",
+      "GIT_RECOVERY_POLICY.json",
+      "scripts/check_git_preflight_event.py",
+      "scripts/render_git_operating_context.py",
+      "scripts/secret_scan.py",
+      "implementation/tests/test_git_process_v2.py",
+      "reviews/evolution/reasoning/2026-09-18-git-process-v2-propose.json",
+      "reviews/evolution/algebra/2026-09-18-git-process-v2-propose.json",
+      "reviews/evolution/assurance/2026-09-18-git-process-v2-propose.json"
+    ],
+    "provenance_refs": [
+      "human:complete-merge-cleanup-request:2026-09-18",
+      "governance/PROCESS_CURRENT.json",
+      "git:ankitdcx/garden-main@801f04e9b55988495fc7d30f800bb285a473c057"
+    ],
+    "satisfied_preconditions": [
+      "ACTOR_IDENTIFIED",
+      "SUBJECT_IDENTIFIED",
+      "PROVENANCE_PRESENT",
+      "INPUT_REFS_TYPED"
+    ],
+    "claimed_postconditions": [
+      "CANDIDATE_RECORDED",
+      "NO_AUTHORITY_EXPANSION",
+      "CANONICAL_POINTER_UNCHANGED"
+    ]
+  },
+  "authority_ref": "AUTH-GARDEN-HOURLY-REVIEWER-v15.5",
+  "bound_inputs": [],
+  "boundary": "Operational Git/process proposal only. It grants no canonical-promotion authority, human approval, deployment authority, or waiver of trusted-base admission."
+}
