@@ -158,7 +158,7 @@
     "scan_changed_text_files": true,
     "test_fixtures_may_be_allowlisted_but_never_real_credentials": true
   },
-  "source_sha256": "4aec2359eebcc25693f13c18f86878999f11197a94d665eb8c9eb29f53748d3e",
+  "source_sha256": "8c53b9268b39231ff7a8d36ca0b1cdacad049f343e9dd7fd0a7d3351843e24c2",
   "workstreams": {
     "abandoned_review_after_days_without_activity": 14,
     "merge_train": {
