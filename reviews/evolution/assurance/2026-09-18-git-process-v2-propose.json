@@ -19,7 +19,6 @@
     "dependency_impact": "HIGH",
     "disagreement": "LOW",
     "hard_policy": true,
-    "constituitional": false,
     "constitutional": false,
     "physical_safety": false
   },
