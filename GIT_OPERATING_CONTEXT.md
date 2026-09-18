@@ -1,7 +1,7 @@
 # Garden Git Operating Context — revision 2
 
 **Revision ID:** `2026-09-16-r2`  
-**Source SHA-256:** `2881e9429a98a4d1e0f4d460c8d0ff8ea30b5d2c7bcb95f568a754c51a2b844f`  
+**Source SHA-256:** `8c53b9268b39231ff7a8d36ca0b1cdacad049f343e9dd7fd0a7d3351843e24c2`  
 **Normative source:** `ankitdcx/garden-main:GIT_OPERATING_CONTEXT_SOURCE.json`  
 **Status:** ACTIVE_NONCANONICAL_OPERATIONAL_PROCESS_SOURCE
 
@@ -24,25 +24,25 @@ The Git operating context is loaded first for mutation mechanics, but the curren
 
 ### `ankitdcx/garden-main`
 
-- **auto_merge:** `False`
+- **auto_merge:** `false`
 - **canonical_source_root_sha256:** `63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598`
 - **design_epoch_ref:** `Garden-v15.5@63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598`
-- **non_fast_forward_blocked:** `True`
+- **non_fast_forward_blocked:** `true`
 - **required_checks:** `validate`, `trusted-base-admission`
 - **revision_base_sha:** `1034bae620bc794637c4c1e056f9467e369eca8b`
-- **strict_required_status_checks:** `True`
+- **strict_required_status_checks:** `true`
 - **verified_merge_ruleset_id:** `23542743`
 - **work_branch_ruleset_id:** `23542796`
 
 ### `ankitdcx/garden-swarm`
 
-- **auto_merge:** `False`
-- **non_fast_forward_blocked:** `True`
+- **auto_merge:** `false`
+- **non_fast_forward_blocked:** `true`
 - **persistent_review_state_ruleset_id:** `23543091`
 - **required_checks:** `verify`, `guard`
 - **review_state_branch:** `garden-review-state`
 - **revision_base_sha:** `c2bcaa8dcfe1284e53523f3f075616899c2af56c`
-- **strict_required_status_checks:** `True`
+- **strict_required_status_checks:** `true`
 - **verified_merge_ruleset_id:** `23543047`
 - **work_branch_ruleset_id:** `23543069`
 
