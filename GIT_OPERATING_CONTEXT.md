@@ -24,25 +24,25 @@ The Git operating context is loaded first for mutation mechanics, but the curren
 
 ### `ankitdcx/garden-main`
 
-- **auto_merge:** `false`
+- **auto_merge:** `False`
 - **canonical_source_root_sha256:** `63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598`
 - **design_epoch_ref:** `Garden-v15.5@63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598`
-- **non_fast_forward_blocked:** `true`
+- **non_fast_forward_blocked:** `True`
 - **required_checks:** `validate`, `trusted-base-admission`
 - **revision_base_sha:** `1034bae620bc794637c4c1e056f9467e369eca8b`
-- **strict_required_status_checks:** `true`
+- **strict_required_status_checks:** `True`
 - **verified_merge_ruleset_id:** `23542743`
 - **work_branch_ruleset_id:** `23542796`
 
 ### `ankitdcx/garden-swarm`
 
-- **auto_merge:** `false`
-- **non_fast_forward_blocked:** `true`
+- **auto_merge:** `False`
+- **non_fast_forward_blocked:** `True`
 - **persistent_review_state_ruleset_id:** `23543091`
 - **required_checks:** `verify`, `guard`
 - **review_state_branch:** `garden-review-state`
 - **revision_base_sha:** `c2bcaa8dcfe1284e53523f3f075616899c2af56c`
-- **strict_required_status_checks:** `true`
+- **strict_required_status_checks:** `True`
 - **verified_merge_ruleset_id:** `23543047`
 - **work_branch_ruleset_id:** `23543069`
 
