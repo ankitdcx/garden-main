@@ -39,17 +39,22 @@ All retained theory equations, applicability conditions, assumptions, non-equiva
 ## G10 — Rights/authority/safety preservation
 No compaction weakens Constitution, human sovereignty, Human-Effect Closure, consent, privacy, authority, K0P, emergency, security, law/policy or required assurance.
 
-## G11 — Independent review
-Worker ChatGPT + DeepSeek + Qwen + Gemini each complete a frozen review or the unavailable lane is explicitly BLOCKED.
-A claimed "full board reviewed" status is forbidden if any required lane is blocked.
+## G11 — Independent specialist review
+GPT Worker + DeepSeek + Qwen + Gemini each complete a frozen review or the unavailable lane is explicitly BLOCKED.
+A claimed "full specialist board reviewed" status is forbidden if any required lane is blocked.
 
-## G12 — Re-review after integration
+## G12 — Independent GPT verification
+A separate GPT Verifier that did not draft/integrate the candidate must audit process integrity and attack the frozen integrated candidate.
+Positive release requires verifier PASS or PASS_WITH_CAVEATS with no unresolved material caveat.
+Verifier FAIL or UNKNOWN blocks COMPLETE_LOSSLESS_CANDIDATE.
+
+## G13 — Re-review after integration
 Material fixes are reviewed against the integrated candidate, not only against source fragments.
 
-## G13 — Machine checks
+## G14 — Machine checks
 Run identifier inventory, reference closure, duplicate-owner detection, forbidden-old-version scan, source-item coverage accounting and deterministic hashes over final text files.
 
-## G14 — Human decisions
+## G15 — Human decisions
 Any unresolved major architecture/constitutional/original-intent choice is presented to the human; it is not silently chosen by reviewers.
 
 ## Allowed completion labels
