@@ -91,13 +91,13 @@
         "obligation_id": "PO-PROVIDER-ROUTING-UPDATE-002",
         "statement": "The corresponding garden-swarm routing/runtime policy is aligned with the same human directive and passes its repository gates.",
         "verifier_class": "CROSS_REPOSITORY_IMPLEMENTATION_TEST",
-        "result": "SUPPORTED_NOT_CANONICAL_PROOF",
+        "result": "UNKNOWN",
         "evidence_refs": [
           "repo:ankitdcx/garden-swarm#openrouter-process-v2-20260919"
         ]
       }
     ],
-    "overall_result": "SUPPORTED_NOT_CANONICAL_PROOF",
+    "overall_result": "UNKNOWN",
     "authorization_effect": "NONE"
   },
   "evidence": {
