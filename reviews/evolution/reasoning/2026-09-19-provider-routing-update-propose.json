@@ -1,0 +1,130 @@
+{
+  "schema": "GardenEvolutionReasoningBundle/v1",
+  "bundle_id": "GARDEN-2026-09-19-PROVIDER-ROUTING-UPDATE-REASONING-001",
+  "action_id": "GARDEN-2026-09-19-PROVIDER-ROUTING-UPDATE-PROPOSE-001",
+  "design_epoch": "v15.5",
+  "canonical_source_root_sha256": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+  "source_obligation_refs": [
+    "governance/PROVIDER_EXCLUSION_POLICY_v1.json",
+    "governance/PROCESS_CURRENT.json",
+    "governance/GardenCanonicalUpdateProcess_v1.4.json"
+  ],
+  "compare": {
+    "schema": "GardenEvolutionCompareReceipt/v1",
+    "action_id": "GARDEN-2026-09-19-PROVIDER-ROUTING-UPDATE-PROPOSE-001",
+    "design_epoch": "v15.5",
+    "canonical_source_root_sha256": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+    "predecessor_ref": "governance/PROVIDER_EXCLUSION_POLICY_v1.json@2026-09-16",
+    "alternatives": [
+      {
+        "alternative_id": "DO_NOTHING",
+        "description": "Keep the 2026-09-16 NVIDIA and Mistral exclusions despite the later explicit human routing directive.",
+        "projected_effect": "garden-main would contradict the current human operator routing decision and garden-swarm's future low-cost reviewer board.",
+        "risk": "Future tooling may treat the stale source policy as controlling and incorrectly block authorized low-cost reviewers."
+      },
+      {
+        "alternative_id": "APPLY_2026_09_19_ROUTING_DIRECTIVE",
+        "description": "Re-authorize NVIDIA/Nemotron and Mistral for future low-cost Garden review while retaining Anthropic/Claude as excluded and preserving prior-policy lineage.",
+        "projected_effect": "The source operator-routing policy matches the latest explicit human directive without changing canonical Garden semantics.",
+        "risk": "Provider diversity changes and future model/provider identities still require fail-closed routing and explicit later human changes."
+      }
+    ],
+    "bidirectional_gaps": [
+      {
+        "from": "DO_NOTHING",
+        "to": "APPLY_2026_09_19_ROUTING_DIRECTIVE",
+        "gap": "The later human routing directive is not represented in the source policy."
+      },
+      {
+        "from": "APPLY_2026_09_19_ROUTING_DIRECTIVE",
+        "to": "DO_NOTHING",
+        "gap": "NVIDIA/Nemotron and Mistral become eligible for bounded review routing that the older policy prohibited."
+      }
+    ]
+  },
+  "reason": {
+    "schema": "GardenEvolutionReasonReceipt/v1",
+    "action_id": "GARDEN-2026-09-19-PROVIDER-ROUTING-UPDATE-PROPOSE-001",
+    "design_epoch": "v15.5",
+    "canonical_source_root_sha256": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+    "strategy": "LATEST_EXPLICIT_HUMAN_ROUTING_DIRECTIVE_WITH_HISTORICAL_LINEAGE",
+    "tier": "IMPLEMENTATION_CONFORMANCE",
+    "assumptions": [
+      "The user explicitly instructed Garden to finalize the future OpenRouter process around the cheapest useful reviewers and explicitly included DeepSeek; the finalized board approved by the user includes NVIDIA/Nemotron and Mistral.",
+      "This routing update is an operator/vendor preference, not evidence of provider misconduct, safety, quality, or trustworthiness.",
+      "Anthropic/Claude remains excluded unless a later explicit human directive changes that.",
+      "Historical 2026-09-16 exclusion records remain provenance and are marked superseded only for NVIDIA/Nemotron and Mistral.",
+      "The change is noncanonical and does not modify Garden constitutional semantics, HSA, rights, or canonical promotion rules."
+    ],
+    "uncertainty": "Provider/model routing catalogs can change. Runtime adapters must keep pinned model identities, enforce the current exclusion list fail-closed, and require explicit human action for future exclusion-list changes.",
+    "counterexamples": [
+      "A future adapter still blocks Nemotron or Mistral because it reads a stale 2026-09-16 mirror.",
+      "An aggregator silently routes an allowed model through Anthropic despite the current exclusion.",
+      "A historical exclusion record is mistaken for current routing authority.",
+      "The re-authorization is misrepresented as a claim that any provider is safe, trusted, or generally preferred.",
+      "Automation widens the allowed-provider set without another explicit human directive."
+    ],
+    "dependency_refs": [
+      "governance/PROVIDER_EXCLUSION_POLICY_v1.json",
+      "governance/PROCESS_CURRENT.json",
+      "governance/GardenCanonicalUpdateProcess_v1.4.json"
+    ],
+    "conclusion": "Propose updating the noncanonical provider-routing source to the latest explicit human directive: re-authorize NVIDIA/Nemotron and Mistral for bounded Garden review, keep Anthropic excluded, preserve lineage, and mint no new semantic authority.",
+    "authorization_effect": "NONE"
+  },
+  "proof": {
+    "schema": "GardenEvolutionProofReceipt/v1",
+    "action_id": "GARDEN-2026-09-19-PROVIDER-ROUTING-UPDATE-PROPOSE-001",
+    "design_epoch": "v15.5",
+    "canonical_source_root_sha256": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+    "obligations": [
+      {
+        "obligation_id": "PO-PROVIDER-ROUTING-UPDATE-001",
+        "statement": "The routing update remains a noncanonical operating constraint and does not change canonical Garden semantics or create action authority.",
+        "verifier_class": "STRUCTURAL_REPOSITORY_CHECK",
+        "result": "PASS",
+        "evidence_refs": [
+          "governance/PROVIDER_EXCLUSION_POLICY_v1.json"
+        ]
+      },
+      {
+        "obligation_id": "PO-PROVIDER-ROUTING-UPDATE-002",
+        "statement": "The corresponding garden-swarm routing/runtime policy is aligned with the same human directive and passes its repository gates.",
+        "verifier_class": "CROSS_REPOSITORY_IMPLEMENTATION_TEST",
+        "result": "SUPPORTED_NOT_CANONICAL_PROOF",
+        "evidence_refs": [
+          "repo:ankitdcx/garden-swarm#openrouter-process-v2-20260919"
+        ]
+      }
+    ],
+    "overall_result": "SUPPORTED_NOT_CANONICAL_PROOF",
+    "authorization_effect": "NONE"
+  },
+  "evidence": {
+    "schema": "GardenEvolutionEvidenceReceipt/v1",
+    "action_id": "GARDEN-2026-09-19-PROVIDER-ROUTING-UPDATE-PROPOSE-001",
+    "design_epoch": "v15.5",
+    "canonical_source_root_sha256": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+    "items": [
+      {
+        "kind": "HUMAN_DIRECTIVE",
+        "ref": "human:provider-routing-low-cost-board:2026-09-19",
+        "claim_scope": "User explicitly instructed Garden to finalize the future OpenRouter process around cheapest useful models and approved continuing with the low-cost board that includes Nemotron and Mistral."
+      },
+      {
+        "kind": "OPERATING_POLICY",
+        "ref": "governance/PROVIDER_EXCLUSION_POLICY_v1.json",
+        "claim_scope": "Machine-readable noncanonical routing constraint reflecting the latest exclusion/re-authorization state."
+      }
+    ],
+    "proof_effect": "NONE",
+    "authorization_effect": "NONE"
+  },
+  "separation_assertions": {
+    "compare_is_not_decision": true,
+    "reason_is_not_authorization": true,
+    "evidence_is_not_proof": true,
+    "proof_is_not_authorization": true,
+    "actiongate_owns_authorization": true
+  }
+}
