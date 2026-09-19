@@ -1,0 +1,5 @@
+source_item_id	source_locator	kind	semantic_name	current_v1510_owner	disposition	coverage_evidence	review_status	notes
+# One row per unique semantic item. Tabs separate fields.
+# Allowed disposition: RETAIN_CURRENT | MERGE_EQUIVALENT | CURRENT_ALIAS | CANDIDATE | DEFERRED | RESEARCH | SUPERSEDED_WITH_CURRENT_OWNER | REJECT_HISTORY_ONLY
+# Allowed review_status: UNACCOUNTED | EXTRACTED | MAPPED | VERIFIED | DISPUTED | NEEDS_HUMAN_DECISION
+# Release gate requires zero UNACCOUNTED and zero unresolved DISPUTED rows.
