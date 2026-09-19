@@ -2,8 +2,8 @@
 
 Status: ACTIVE / NONCANONICAL REVIEW PROJECT
 Lead: ChatGPT lead-integrator
-Durable coordination: GitHub repository only
-Human text relay: FORBIDDEN for reviewer outputs
+Durable coordination: GitHub repository for connected workers; file/share-link handoff for phone-app reviewers
+Human text relay: FORBIDDEN for long reviewer prompts/outputs
 
 ## Objective
 
@@ -75,7 +75,7 @@ Required inputs:
 
 A source item is not excluded merely because it is inconvenient or duplicated.
 
-## Roles
+## Board
 
 ### Lead — current ChatGPT chat
 Owns:
@@ -90,11 +90,22 @@ Owns:
 
 Lead does not gain truth/authority by role.
 
-### Worker ChatGPT
+### GPT Worker — separate ChatGPT chat
 Primary task:
 - exhaustive source extraction and source->v15.10 coverage accounting;
 - detect dropped exact details;
-- propose current owners without rewriting by summary.
+- propose current owners without rewriting by summary;
+- remain independent of the lead's integrated candidate during the initial worker phase.
+
+### GPT Verifier — second separate ChatGPT chat
+Primary task:
+- stay outside worker drafting/integration;
+- audit process integrity;
+- independently attack the integrated candidate after it is frozen;
+- verify source coverage, exact-detail preservation, current-owner completeness, reference closure, status preservation and old-version-dependency removal;
+- return PASS, PASS_WITH_CAVEATS, FAIL or UNKNOWN with evidence.
+
+Verifier is not counted as a second drafting worker and must not be used to manufacture agreement.
 
 ### DeepSeek app
 Primary task:
@@ -115,11 +126,27 @@ Primary task:
 - detect semantic collapse caused by overcompression;
 - check whether Book/Technical/Catalogue separation is understandable and current-owner-complete.
 
-## Blind phase
+## Review flow
 
-Workers receive the same frozen source packet for shared questions plus role-specific questions.
-They must not read peer outputs before freezing their own result.
+1. Lead freezes source universe and review packets.
+2. GPT Worker + DeepSeek + Qwen + Gemini review independently.
+3. Lead freezes raw outputs and reconciles findings.
+4. Lead produces integrated candidate and complete finding-disposition log.
+5. GPT Verifier receives:
+   - frozen source packet;
+   - frozen reviewer outputs;
+   - frozen integrated candidate;
+   - decision/disposition log.
+6. GPT Verifier audits process first, then attacks candidate.
+7. Any material verifier failure reopens the affected finding/coverage rows.
+8. Lead fixes and rechecks until release gates pass or the project is explicitly blocked.
+9. Major unresolved architecture/constitutional/original-intent choices go to the human.
+
+## Blindness / independence
+
+Initial reviewers do not receive peer outputs before freezing their own review.
 Agreement is not a quality score.
+The GPT Verifier is intentionally delayed until after integration and must not participate in candidate drafting.
 
 ## Reconciliation
 
@@ -132,7 +159,7 @@ Blocking/minority findings cannot be discarded without a recorded evidence-backe
 ## Final gate
 
 v15.10 is not called lossless/final while any source item is UNACCOUNTED, any current reference is dangling,
-any required current owner is missing, any old-version dependency remains in current design, or independent re-review
+any required current owner is missing, any old-version dependency remains in current design, or independent verification
 finds an unresolved material loss.
 
 This project produces review evidence and a candidate. Canonical admission remains a separate governed action.
