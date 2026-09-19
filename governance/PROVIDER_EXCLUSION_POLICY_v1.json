@@ -1,33 +1,40 @@
 {
   "schema": "GardenProviderExclusionPolicy/v1",
   "status": "HUMAN_OPERATOR_DIRECTIVE_ACTIVE_NONCANONICAL_OPERATING_POLICY",
-  "effective_date": "2026-09-16",
-  "scope": "ALL_GARDEN_WORK",
-  "authority_basis": "Explicit human operator trust/procurement preference. This policy does not assert misconduct, poisoning, or wrongdoing as established fact.",
+  "effective_date": "2026-09-19",
+  "scope": "ALL_GARDEN_MODEL_REVIEW_AND_CHALLENGE_ROUTING",
+  "authority_basis": "Explicit human operator routing preference. On 2026-09-19 the human explicitly re-authorized NVIDIA/Nemotron and Mistral/Mistral AI for future low-cost Garden review. This policy does not assert misconduct, poisoning, or wrongdoing as established fact.",
   "excluded_organizations": [
     {
       "organization": "Anthropic",
-      "aliases": ["anthropic", "claude"],
-      "model_origin_markers": ["anthropic/", "claude"]
-    },
+      "aliases": [
+        "anthropic",
+        "claude"
+      ],
+      "model_origin_markers": [
+        "anthropic/",
+        "claude"
+      ]
+    }
+  ],
+  "superseded_exclusions": [
     {
       "organization": "NVIDIA",
-      "aliases": ["nvidia", "nemotron"],
-      "model_origin_markers": ["nvidia/", "nemotron"]
+      "effective_end": "2026-09-19",
+      "basis": "Explicit human directive re-authorized Nemotron for future low-cost Garden review."
     },
     {
       "organization": "Mistral AI",
-      "aliases": ["mistral", "mistralai"],
-      "model_origin_markers": ["mistralai/", "mistral"]
+      "effective_end": "2026-09-19",
+      "basis": "Explicit human directive re-authorized Mistral for future low-cost Garden review."
     }
   ],
   "prohibited_for_garden_work": [
-    "direct API or hosted-service calls",
-    "indirect routing through aggregators or fallbacks to excluded provider endpoints",
-    "use of models published or controlled by an excluded organization, including third-party-hosted routes",
-    "assignment as reviewer, challenger, adjudicator, research agent, or synthesis agent",
-    "requesting review, advice, collaboration, support, or other active contact from an excluded organization",
-    "automatic or manual fallback to an excluded organization when another provider fails"
+    "direct API or hosted-service calls to currently excluded organizations",
+    "indirect routing through aggregators or fallbacks to currently excluded provider endpoints",
+    "use of models published or controlled by a currently excluded organization, including third-party-hosted routes",
+    "assignment of a currently excluded organization as reviewer, challenger, adjudicator, research agent, or synthesis agent",
+    "automatic or manual fallback to a currently excluded organization"
   ],
   "allowed_non_operational_uses": [
     "preserving historical repository records and prior-art citations",
@@ -44,7 +51,8 @@
   "change_control": {
     "automation_may_weaken_policy": false,
     "model_or_provider_output_may_weaken_policy": false,
-    "only_explicit_future_human_directive_may_modify_exclusions": true
+    "only_explicit_future_human_directive_may_modify_exclusions": true,
+    "latest_human_override": "2026-09-19: NVIDIA/Nemotron and Mistral re-authorized for future low-cost Garden review; Anthropic remains excluded."
   },
   "canonical_effect": "NONE",
   "architecture_effect": "No Garden semantic owner, authority source, truth source, or top-level engine is created. This is an operator/vendor routing constraint."
