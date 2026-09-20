@@ -1,0 +1,78 @@
+{
+  "schema": "GardenEvolutionAlgebraUsageReceipt/v1",
+  "action_id": "GARDEN-2026-09-19-PROVIDER-ROUTING-UPDATE-PROPOSE-001",
+  "design_epoch": "v15.5",
+  "canonical_source_root_sha256": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+  "source_obligation_refs": [
+    "governance/PROVIDER_EXCLUSION_POLICY_v1.json",
+    "governance/PROCESS_CURRENT.json",
+    "governance/GardenCanonicalUpdateProcess_v1.4.json",
+    "canonical/current/Garden_System_v15.5_FULL_2026-09-12.txt:REG-ALGEBRA-001"
+  ],
+  "entries": [
+    {
+      "algebra": "Process",
+      "status": "APPLIED",
+      "operators": [
+        "BRANCH",
+        "SEQUENCE"
+      ],
+      "law_claims": [],
+      "non_law_acknowledgements": [
+        "PARALLEL_EFFECT_COMMUTATIVITY_NOT_UNIVERSAL"
+      ],
+      "applicability_reason": "Review routing branches on current allowed/excluded provider/model identity before any provider call and sequences allowed work through existing gates. Re-authorization changes one branch condition only; it creates no authority."
+    },
+    {
+      "algebra": "Policy",
+      "status": "FRONTIER",
+      "operators": [],
+      "law_claims": [],
+      "non_law_acknowledgements": [],
+      "applicability_reason": "The operator routing update is not relabeled as a new executable canonical Policy Algebra operator.",
+      "frontier_reason": "No new Level-3 Policy Algebra operator is introduced."
+    },
+    {
+      "algebra": "Decision",
+      "status": "FRONTIER",
+      "operators": [],
+      "law_claims": [],
+      "non_law_acknowledgements": [],
+      "applicability_reason": "ALLOW/DENY provider eligibility is an implementation routing outcome; no new executable Decision Algebra signature is claimed.",
+      "frontier_reason": "No new Level-3 Decision Algebra operator is introduced."
+    },
+    {
+      "algebra": "Conformance",
+      "status": "APPLIED",
+      "operators": [
+        "BIND_EVIDENCE",
+        "COVERAGE",
+        "GAP"
+      ],
+      "law_claims": [],
+      "non_law_acknowledgements": [
+        "CONFORMANCE_IS_NOT_BINARY_ONLY",
+        "AUDIT_IS_NOT_A_SEPARATE_ALGEBRA"
+      ],
+      "applicability_reason": "The update binds the explicit human directive to one source policy, preserves superseded exclusions as lineage, and leaves cross-repository runtime enforcement separately testable."
+    },
+    {
+      "algebra": "Evidence",
+      "status": "FRONTIER",
+      "operators": [],
+      "law_claims": [],
+      "non_law_acknowledgements": [],
+      "applicability_reason": "Human directive and repository artifacts are evidence inputs; no new executable Evidence Algebra composition operator is claimed.",
+      "frontier_reason": "Evidence Algebra executable composition remains FRONTIER."
+    },
+    {
+      "algebra": "Bridge",
+      "status": "NOT_APPLICABLE",
+      "operators": [],
+      "law_claims": [],
+      "non_law_acknowledgements": [],
+      "applicability_reason": "The proposal updates an operating routing constraint and performs no semantic-to-representation Garden Bridge operation."
+    }
+  ],
+  "semantic_compliance_proved": false
+}
