@@ -1,0 +1,80 @@
+{
+  "schema": "GardenEvolutionAlgebraUsageReceipt/v1",
+  "action_id": "GARDEN-2026-09-18-GIT-PROCESS-V2-PROPOSE-001",
+  "design_epoch": "v15.5",
+  "canonical_source_root_sha256": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+  "source_obligation_refs": [
+    "GIT_OPERATING_CONTEXT_SOURCE.json",
+    "GIT_RECOVERY_POLICY.json",
+    "governance/PROCESS_CURRENT.json",
+    "canonical/current/Garden_System_v15.5_FULL_2026-09-12.txt:REG-ALGEBRA-001"
+  ],
+  "entries": [
+    {
+      "algebra": "Process",
+      "status": "APPLIED",
+      "operators": [
+        "SEQUENCE",
+        "COMPOSE",
+        "DO_NOTHING"
+      ],
+      "law_claims": [],
+      "non_law_acknowledgements": [
+        "PARALLEL_EFFECT_COMMUTATIVITY_NOT_UNIVERSAL"
+      ],
+      "applicability_reason": "Compare DO_NOTHING, compose source/generated/recovery/CI obligations, then sequence exact-head validation and merge."
+    },
+    {
+      "algebra": "Policy",
+      "status": "FRONTIER",
+      "operators": [],
+      "law_claims": [],
+      "non_law_acknowledgements": [],
+      "applicability_reason": "Operational policy is hardened but no new executable Policy Algebra operator is claimed.",
+      "frontier_reason": "ActionGate and admitted process remain policy-authority owners."
+    },
+    {
+      "algebra": "Decision",
+      "status": "FRONTIER",
+      "operators": [],
+      "law_claims": [],
+      "non_law_acknowledgements": [],
+      "applicability_reason": "CI emits typed outcomes but no Level-3 Decision Algebra operator is claimed.",
+      "frontier_reason": "Decision Algebra signatures remain outside this bounded change."
+    },
+    {
+      "algebra": "Conformance",
+      "status": "APPLIED",
+      "operators": [
+        "BIND_EVIDENCE",
+        "COVERAGE",
+        "GAP",
+        "DIFF"
+      ],
+      "law_claims": [],
+      "non_law_acknowledgements": [
+        "CONFORMANCE_IS_NOT_BINARY_ONLY",
+        "AUDIT_IS_NOT_A_SEPARATE_ALGEBRA"
+      ],
+      "applicability_reason": "Bind generated views and Git-process checks to exact source, measure changed-path coverage and preserve explicit gaps."
+    },
+    {
+      "algebra": "Evidence",
+      "status": "FRONTIER",
+      "operators": [],
+      "law_claims": [],
+      "non_law_acknowledgements": [],
+      "applicability_reason": "Receipts and CI are evidence but no Level-3 Evidence Algebra composition is claimed.",
+      "frontier_reason": "Evidence remains non-authorizing."
+    },
+    {
+      "algebra": "Bridge",
+      "status": "NOT_APPLICABLE",
+      "operators": [],
+      "law_claims": [],
+      "non_law_acknowledgements": [],
+      "applicability_reason": "No semantic-to-representation Bridge operation is introduced beyond deterministic generated views."
+    }
+  ],
+  "semantic_compliance_proved": false
+}
