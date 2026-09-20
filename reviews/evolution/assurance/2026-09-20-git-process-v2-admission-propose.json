@@ -1,0 +1,52 @@
+{
+  "schema": "GardenEvolutionAAPSelectionReceipt/v1",
+  "action_id": "GARDEN-2026-09-20-GIT-PROCESS-V2-ADMISSION-PROPOSE-001",
+  "design_epoch": "v15.5",
+  "canonical_source_root_sha256": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+  "source_obligation_refs": [
+    "governance/human_admissions/PR-98.json",
+    "governance/PROCESS_CURRENT.json",
+    "governance/GardenCanonicalUpdateProcess_v1.4.json"
+  ],
+  "impact": {
+    "consequence": "HIGH",
+    "irreversibility": "LOW",
+    "authority": "LOW",
+    "novelty": "MEDIUM",
+    "uncertainty": "MEDIUM",
+    "sensitivity": "MEDIUM",
+    "dependency_impact": "HIGH",
+    "disagreement": "LOW",
+    "hard_policy": false,
+    "constitutional": false,
+    "physical_safety": false
+  },
+  "selected": {
+    "reason_tier": "R3",
+    "verity_tier": "V3",
+    "safety_tier": "S2",
+    "modules": [
+      "SOURCE_IDENTITY",
+      "GSL_TYPING",
+      "DESIGN_EPOCH",
+      "SOURCE_OBLIGATION",
+      "COMPARE",
+      "REASON",
+      "PROOF",
+      "EVIDENCE",
+      "AAP",
+      "AUTHORITY",
+      "ACTION_GATE",
+      "PROCESS_ALGEBRA",
+      "CONFORMANCE_ALGEBRA",
+      "INDEPENDENT_REVIEW_REQUIREMENT"
+    ]
+  },
+  "resource_budget": {
+    "status": "SUFFICIENT",
+    "basis": "Exact PR/tree/action bindings and existing trusted-base verifier/adversarial tests are available. This record does not change canonical source or verifier code."
+  },
+  "degradation_disposition": "NONE",
+  "authorization_effect": "NONE",
+  "semantic_compliance_proved": false
+}
