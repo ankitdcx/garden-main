@@ -1,0 +1,67 @@
+{
+  "schema": "GardenChatGPTWorkstreamIntent/v1",
+  "workstream_id": "chatgpt:git-process-v2-refresh:20260920",
+  "work_package_id": "GARDEN-GIT-PROCESS-V2-REFRESH-20260920",
+  "branch": "chatgpt/git-process-v2-refresh-20260920",
+  "base_sha": "a4d6d7c8905c608d8b87bdf4963cf7e8b4ff9b0c",
+  "dependency_intent_ids": [
+    "supersedes:pr87"
+  ],
+  "integration_strategy": "DIRECT_IF_NO_COLLISION",
+  "draft_pr_created_before_substantial_edit": true,
+  "status": "ACTIVE",
+  "planned_intent": {
+    "schema": "AgentWorkIntent/v1",
+    "intent_id": "chatgpt:git-process-v2-refresh:20260920",
+    "agent_id": "ChatGPT-GPT-5.6-Sol",
+    "work_package_id": "GARDEN-GIT-PROCESS-V2-REFRESH-20260920",
+    "base_sha": "a4d6d7c8905c608d8b87bdf4963cf7e8b4ff9b0c",
+    "source_root_sha256": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+    "design_epoch_ref": "Garden-v15.5@63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+    "target_paths": [
+      ".github/PULL_REQUEST_TEMPLATE.md",
+      ".github/workflows/seed-ci.yml",
+      "AGENTS.md",
+      "GIT_OPERATING_CONTEXT.json",
+      "GIT_OPERATING_CONTEXT.md",
+      "GIT_OPERATING_CONTEXT_SOURCE.json",
+      "GIT_RECOVERY_POLICY.json",
+      "implementation/tests/test_git_process_v2.py",
+      "reviews/evolution/algebra/2026-09-18-git-process-v2-propose.json",
+      "reviews/evolution/assurance/2026-09-18-git-process-v2-propose.json",
+      "reviews/evolution/production/2026-09-18-git-process-v2-propose.json",
+      "reviews/evolution/reasoning/2026-09-18-git-process-v2-propose.json",
+      "scripts/check_git_preflight_event.py",
+      "scripts/render_git_operating_context.py",
+      "scripts/secret_scan.py",
+      "security/secret-scan-allowlist.json",
+      "workstreams/2026-09-20-git-process-v2-refresh.json"
+    ],
+    "target_symbols": [
+      "GardenGitOperatingContextSource/v2",
+      "GardenGitPreflightReceipt/v1",
+      "GardenGitRecoveryPolicy/v1"
+    ],
+    "semantic_domains": [
+      "GIT_REPOSITORY_OPERATIONS",
+      "AGENT_GIT_PREFLIGHT",
+      "MULTI_AGENT_INTEGRATION_PROCESS",
+      "SECRET_LEAK_PREVENTION",
+      "BAD_MERGE_RECOVERY"
+    ],
+    "affected_invariants": [
+      "ONE_AUTHORITATIVE_GIT_CONTEXT_SOURCE",
+      "PREFLIGHT_BEFORE_SUBSTANTIAL_EDIT",
+      "LOAD_CURRENT_PROCESS_BEFORE_ROUTE",
+      "NO_HISTORY_REWRITE_ROLLBACK",
+      "NO_SECRET_COMMIT"
+    ],
+    "affected_contracts": [
+      "AgentWorkIntent/v1",
+      "IntegrationReceipt/v1",
+      "GardenCanonicalUpdateProcess_v1.4"
+    ],
+    "intended_effect": "Refresh and admit the previously reviewed Git process v2 mechanics on current main after explicit human approval, without changing canonical Garden semantics.",
+    "parallel_mode": "COORDINATED"
+  }
+}
