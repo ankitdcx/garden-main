@@ -1,0 +1,128 @@
+{
+  "schema": "GardenEvolutionReasoningBundle/v1",
+  "bundle_id": "GARDEN-2026-09-20-CLAUDE-ROUTING-UPDATE-REASONING-001",
+  "action_id": "GARDEN-2026-09-20-CLAUDE-ROUTING-UPDATE-PROPOSE-001",
+  "design_epoch": "v15.5",
+  "canonical_source_root_sha256": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+  "source_obligation_refs": [
+    "governance/PROVIDER_EXCLUSION_POLICY_v1.json",
+    "governance/PROCESS_CURRENT.json",
+    "governance/GardenCanonicalUpdateProcess_v1.4.json"
+  ],
+  "compare": {
+    "schema": "GardenEvolutionCompareReceipt/v1",
+    "action_id": "GARDEN-2026-09-20-CLAUDE-ROUTING-UPDATE-PROPOSE-001",
+    "design_epoch": "v15.5",
+    "canonical_source_root_sha256": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+    "predecessor_ref": "governance/PROVIDER_EXCLUSION_POLICY_v1.json@2026-09-19",
+    "alternatives": [
+      {
+        "alternative_id": "DO_NOTHING",
+        "description": "Keep Anthropic/Claude excluded despite the explicit 2026-09-20 human routing directive.",
+        "projected_effect": "Garden routing would contradict the current human operator directive.",
+        "risk": "Authorized Claude review would remain blocked by stale policy."
+      },
+      {
+        "alternative_id": "APPLY_2026_09_20_CLAUDE_REAUTHORIZATION",
+        "description": "Remove Anthropic/Claude from active exclusions and preserve the former exclusion as superseded lineage.",
+        "projected_effect": "The noncanonical routing source matches the latest explicit human directive.",
+        "risk": "Claude becomes eligible for Garden review where other routing, privacy, budget and provider checks permit it."
+      }
+    ],
+    "bidirectional_gaps": [
+      {
+        "from": "DO_NOTHING",
+        "to": "APPLY_2026_09_20_CLAUDE_REAUTHORIZATION",
+        "gap": "The latest human routing directive is absent from the source policy."
+      },
+      {
+        "from": "APPLY_2026_09_20_CLAUDE_REAUTHORIZATION",
+        "to": "DO_NOTHING",
+        "gap": "Anthropic/Claude becomes eligible where the older policy blocked it."
+      }
+    ]
+  },
+  "reason": {
+    "schema": "GardenEvolutionReasonReceipt/v1",
+    "action_id": "GARDEN-2026-09-20-CLAUDE-ROUTING-UPDATE-PROPOSE-001",
+    "design_epoch": "v15.5",
+    "canonical_source_root_sha256": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+    "strategy": "LATEST_EXPLICIT_HUMAN_ROUTING_DIRECTIVE_WITH_HISTORICAL_LINEAGE",
+    "tier": "IMPLEMENTATION_CONFORMANCE",
+    "assumptions": [
+      "The user explicitly instructed Garden on 2026-09-20 to enable Claude and close the old routing work.",
+      "This update is an operator/vendor routing preference, not evidence that Anthropic/Claude is safe, correct, trusted, or authoritative.",
+      "NVIDIA/Nemotron and Mistral remain re-authorized from the 2026-09-19 directive.",
+      "Historical Anthropic exclusion remains provenance after being marked superseded.",
+      "The change is noncanonical and does not modify Garden constitutional semantics, HSA, rights, or canonical promotion rules."
+    ],
+    "uncertainty": "Provider/model catalogs and endpoint identities may change. Runtime adapters must still pin/verify identities and obey current budget, privacy and review-process gates.",
+    "counterexamples": [
+      "garden-swarm continues reading a stale Anthropic exclusion after garden-main is updated.",
+      "Claude eligibility is misrepresented as truth, authority, safety certification, or automatic paid-budget permission.",
+      "Automation widens the allowed-provider set again without a later explicit human directive."
+    ],
+    "dependency_refs": [
+      "governance/PROVIDER_EXCLUSION_POLICY_v1.json",
+      "governance/PROCESS_CURRENT.json",
+      "governance/GardenCanonicalUpdateProcess_v1.4.json"
+    ],
+    "conclusion": "Propose updating the noncanonical provider-routing source to the latest explicit human directive: re-authorize Anthropic/Claude for Garden review, preserve lineage, and mint no new semantic authority.",
+    "authorization_effect": "NONE"
+  },
+  "proof": {
+    "schema": "GardenEvolutionProofReceipt/v1",
+    "action_id": "GARDEN-2026-09-20-CLAUDE-ROUTING-UPDATE-PROPOSE-001",
+    "design_epoch": "v15.5",
+    "canonical_source_root_sha256": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+    "obligations": [
+      {
+        "obligation_id": "PO-CLAUDE-ROUTING-UPDATE-001",
+        "statement": "The routing update remains a noncanonical operating constraint and does not change canonical Garden semantics or create action authority.",
+        "verifier_class": "STRUCTURAL_REPOSITORY_CHECK",
+        "result": "PASS",
+        "evidence_refs": [
+          "governance/PROVIDER_EXCLUSION_POLICY_v1.json"
+        ]
+      },
+      {
+        "obligation_id": "PO-CLAUDE-ROUTING-UPDATE-002",
+        "statement": "The corresponding garden-swarm routing policy is aligned with the same human directive and passes repository gates.",
+        "verifier_class": "CROSS_REPOSITORY_IMPLEMENTATION_TEST",
+        "result": "UNKNOWN",
+        "evidence_refs": [
+          "repo:ankitdcx/garden-swarm#claude-routing-sync-20260920"
+        ]
+      }
+    ],
+    "overall_result": "UNKNOWN",
+    "authorization_effect": "NONE"
+  },
+  "evidence": {
+    "schema": "GardenEvolutionEvidenceReceipt/v1",
+    "action_id": "GARDEN-2026-09-20-CLAUDE-ROUTING-UPDATE-PROPOSE-001",
+    "design_epoch": "v15.5",
+    "canonical_source_root_sha256": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+    "items": [
+      {
+        "kind": "HUMAN_DIRECTIVE",
+        "ref": "human:provider-routing-claude-reauthorization:2026-09-20",
+        "claim_scope": "User explicitly instructed Garden to enable Claude and close the old Claude-routing work."
+      },
+      {
+        "kind": "OPERATING_POLICY",
+        "ref": "governance/PROVIDER_EXCLUSION_POLICY_v1.json",
+        "claim_scope": "Machine-readable noncanonical routing constraint reflecting the latest exclusion/re-authorization state."
+      }
+    ],
+    "proof_effect": "NONE",
+    "authorization_effect": "NONE"
+  },
+  "separation_assertions": {
+    "compare_is_not_decision": true,
+    "reason_is_not_authorization": true,
+    "evidence_is_not_proof": true,
+    "proof_is_not_authorization": true,
+    "actiongate_owns_authorization": true
+  }
+}
