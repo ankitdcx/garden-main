@@ -20,75 +20,39 @@ What reproducible evidence supports the change?
 
 ## ChatGPT workstream isolation
 
-For new ChatGPT work, open a unique `chatgpt/...` branch and draft PR before substantial editing. One chat thread + one bounded work package = one workstream. Declare dependencies here; semantic collisions are integrated on a fresh `integration/...` branch rather than by editing another chat's branch.
+For new ChatGPT work, create one bounded `chatgpt/...` branch, make only an intent-only bootstrap commit, then open this draft PR before substantial editing. Genuine semantic collisions use a fresh `integration/...` branch.
 
 <!-- GARDEN_CHATGPT_WORKSTREAM -->
 ```json
-{
-  "schema": "GardenChatGPTWorkstreamIntent/v1",
-  "workstream_id": "chatgpt:<bounded-workstream-id>",
-  "work_package_id": "<bounded-work-package-id>",
-  "branch": "chatgpt/<bounded-work-package>",
-  "base_sha": "<40-char PR base SHA>",
-  "dependency_intent_ids": [],
-  "integration_strategy": "INTEGRATION_BRANCH_IF_COLLISION",
-  "draft_pr_created_before_substantial_edit": true,
-  "status": "ACTIVE"
-}
+{"schema":"GardenChatGPTWorkstreamIntent/v1","workstream_id":"chatgpt:<bounded-workstream-id>","work_package_id":"<bounded-work-package-id>","branch":"chatgpt/<bounded-work-package>","base_sha":"<40-char PR base SHA>","dependency_intent_ids":[],"integration_strategy":"INTEGRATION_BRANCH_IF_COLLISION","draft_pr_created_before_substantial_edit":true,"draft_opened_at":"<ISO-8601 UTC>","last_activity_at":"<ISO-8601 UTC>","status":"ACTIVE"}
+```
+
+## Git preflight acknowledgement
+
+<!-- GARDEN_GIT_PREFLIGHT_RECEIPT -->
+```json
+{"schema":"GardenGitPreflightReceipt/v1","workstream_id":"chatgpt:<bounded-workstream-id>","repository":"ankitdcx/garden-main","base_sha":"<40-char PR base SHA>","git_context_revision":2,"git_context_source_sha256":"<sha256 of base GIT_OPERATING_CONTEXT_SOURCE.json>","process_pointer":"governance/PROCESS_CURRENT.json","process_version":"<current process version>","verified_merge_ruleset_id":23542743,"overlap_checked_open_prs":[],"overlap_result":"NO_MATERIAL_COLLISION_WITH_DECLARED_SCOPE","created_before_substantial_edit":true,"authority_effect":"NONE"}
 ```
 
 ## Multi-agent integration provenance
 
-Fill this with the actual PR base SHA and the source root/DesignEpoch from the **base branch** `canonical/current/SOURCE_MANIFEST.json`.
-
 <!-- GARDEN_AGENT_WORK_INTENT -->
 ```json
-{
-  "schema": "AgentWorkIntent/v1",
-  "intent_id": "<agent>:<work-package>:<unique-id>",
-  "agent_id": "<agent-id>",
-  "work_package_id": "<bounded-work-package-id>",
-  "base_sha": "<40-char PR base SHA>",
-  "source_root_sha256": "<64-char canonical source root>",
-  "design_epoch_ref": "Garden-v15.5@<source-root>",
-  "target_paths": ["<file-or-directory>"],
-  "target_symbols": [],
-  "semantic_domains": ["<semantic-responsibility>"],
-  "affected_invariants": [],
-  "affected_contracts": [],
-  "intended_effect": "<bounded semantic/implementation effect>",
-  "parallel_mode": "INDEPENDENT_COMPARISON"
-}
+{"schema":"AgentWorkIntent/v1","intent_id":"<agent>:<work-package>:<unique-id>","agent_id":"<agent-id>","work_package_id":"<bounded-work-package-id>","base_sha":"<40-char PR base SHA>","source_root_sha256":"<64-char canonical source root>","design_epoch_ref":"Garden-v15.5@<source-root>","target_paths":["<file-or-directory>"],"target_symbols":[],"semantic_domains":["<semantic-responsibility>"],"affected_invariants":[],"affected_contracts":[],"intended_effect":"<bounded semantic/implementation effect>","parallel_mode":"INDEPENDENT_COMPARISON"}
 ```
 
-If the integration-provenance check reports a declared collision, add a receipt after independently comparing the changes and testing the composed result:
+If a collision is declared, add `GARDEN_INTEGRATION_RECEIPT` only after semantic comparison and post-composition tests.
 
-<!-- GARDEN_INTEGRATION_RECEIPT -->
-```json
-{
-  "schema": "IntegrationReceipt/v1",
-  "current_intent_id": "<intent-id>",
-  "work_package_id": "<work-package-id>",
-  "base_sha": "<same base SHA>",
-  "source_root_sha256": "<same source root>",
-  "design_epoch_ref": "<same DesignEpoch>",
-  "concurrent_intent_ids": [],
-  "semantic_compare": "COMPATIBLE",
-  "composition_evidence": [],
-  "tests_after_integration": []
-}
-```
+## Recovery, if this PR repairs a bad merge
 
-## Uncertainty / limitations
-
-What remains unknown, FRONTIER, unproved, or not cross-referenced?
+Use `REVERT` or `FORWARD_FIX`, identify the bad merge SHA and downstream invalidations, and never reset/force-push `main`.
 
 ## Checklist
 
-- [ ] New ChatGPT work uses one unique branch/workstream per bounded package and an early draft PR.
-- [ ] Actual changed paths are covered by the declared work intent.
-- [ ] The intent is bound to the current PR base and base canonical source root/DesignEpoch.
-- [ ] Textual merge success is not treated as semantic compatibility.
-- [ ] Concurrent semantic collisions use a fresh integration branch with explicit comparison/receipt rather than cross-editing source branches.
-- [ ] Canonical v15.5 files are not silently modified in place.
-- [ ] Proposal/review/test evidence is not treated as authority or canonical promotion.
+- [ ] Loaded Git context source, current process pointer/process file, and applicable Garden policies.
+- [ ] Early draft PR + preflight receipt exist before substantial edits.
+- [ ] Actual diff is covered by AgentWorkIntent.
+- [ ] Semantic collisions use a fresh integration branch.
+- [ ] Structured files parse and generated Git-context views match source.
+- [ ] Changed content passed central secret scanning.
+- [ ] No evidence/receipt is treated as authority or canonical promotion.
