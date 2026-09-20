@@ -1,22 +1,10 @@
 {
   "schema": "GardenProviderExclusionPolicy/v1",
   "status": "HUMAN_OPERATOR_DIRECTIVE_ACTIVE_NONCANONICAL_OPERATING_POLICY",
-  "effective_date": "2026-09-19",
+  "effective_date": "2026-09-20",
   "scope": "ALL_GARDEN_MODEL_REVIEW_AND_CHALLENGE_ROUTING",
-  "authority_basis": "Explicit human operator routing preference. On 2026-09-19 the human explicitly re-authorized NVIDIA/Nemotron and Mistral/Mistral AI for future low-cost Garden review. This policy does not assert misconduct, poisoning, or wrongdoing as established fact.",
-  "excluded_organizations": [
-    {
-      "organization": "Anthropic",
-      "aliases": [
-        "anthropic",
-        "claude"
-      ],
-      "model_origin_markers": [
-        "anthropic/",
-        "claude"
-      ]
-    }
-  ],
+  "authority_basis": "Explicit human operator routing preference. On 2026-09-20 the human explicitly re-authorized Anthropic/Claude for Garden review; NVIDIA/Nemotron and Mistral/Mistral AI remain re-authorized from 2026-09-19. This policy does not assert misconduct, poisoning, or wrongdoing as established fact.",
+  "excluded_organizations": [],
   "superseded_exclusions": [
     {
       "organization": "NVIDIA",
@@ -27,6 +15,11 @@
       "organization": "Mistral AI",
       "effective_end": "2026-09-19",
       "basis": "Explicit human directive re-authorized Mistral for future low-cost Garden review."
+    },
+    {
+      "organization": "Anthropic",
+      "effective_end": "2026-09-20",
+      "basis": "Explicit human directive re-authorized Anthropic/Claude for future Garden review."
     }
   ],
   "prohibited_for_garden_work": [
@@ -52,7 +45,7 @@
     "automation_may_weaken_policy": false,
     "model_or_provider_output_may_weaken_policy": false,
     "only_explicit_future_human_directive_may_modify_exclusions": true,
-    "latest_human_override": "2026-09-19: NVIDIA/Nemotron and Mistral re-authorized for future low-cost Garden review; Anthropic remains excluded."
+    "latest_human_override": "2026-09-20: Anthropic/Claude re-authorized for Garden review; NVIDIA/Nemotron and Mistral remain re-authorized."
   },
   "canonical_effect": "NONE",
   "architecture_effect": "No Garden semantic owner, authority source, truth source, or top-level engine is created. This is an operator/vendor routing constraint."
