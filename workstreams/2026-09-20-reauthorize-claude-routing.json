@@ -18,7 +18,11 @@
     "design_epoch_ref": "Garden-v15.5@63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
     "target_paths": [
       "workstreams/2026-09-20-reauthorize-claude-routing.json",
-      "governance/PROVIDER_EXCLUSION_POLICY_v1.json"
+      "governance/PROVIDER_EXCLUSION_POLICY_v1.json",
+      "reviews/evolution/production/2026-09-20-claude-routing-update-propose.json",
+      "reviews/evolution/reasoning/2026-09-20-claude-routing-update-propose.json",
+      "reviews/evolution/algebra/2026-09-20-claude-routing-update-propose.json",
+      "reviews/evolution/assurance/2026-09-20-claude-routing-update-propose.json"
     ],
     "target_symbols": [
       "Anthropic/Claude provider exclusion"
