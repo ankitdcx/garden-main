@@ -1,0 +1,40 @@
+{
+  "schema": "GardenChatGPTWorkstreamIntent/v1",
+  "workstream_id": "chatgpt:retire-obsolete-main-branches:20260920",
+  "work_package_id": "RETIRE-OBSOLETE-MAIN-BRANCHES-20260920",
+  "branch": "chatgpt/retire-obsolete-main-branches-20260920",
+  "base_sha": "a4d6d7c8905c608d8b87bdf4963cf7e8b4ff9b0c",
+  "dependency_intent_ids": [],
+  "integration_strategy": "DIRECT_IF_NO_COLLISION",
+  "draft_pr_created_before_substantial_edit": true,
+  "status": "ACTIVE",
+  "planned_intent": {
+    "schema": "AgentWorkIntent/v1",
+    "intent_id": "chatgpt:retire-obsolete-main-branches:20260920",
+    "agent_id": "ChatGPT-GPT-5.6-Sol",
+    "work_package_id": "RETIRE-OBSOLETE-MAIN-BRANCHES-20260920",
+    "base_sha": "a4d6d7c8905c608d8b87bdf4963cf7e8b4ff9b0c",
+    "source_root_sha256": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+    "design_epoch_ref": "Garden-v15.5@63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+    "target_paths": [
+      "workstreams/2026-09-20-retire-obsolete-main-branches.json",
+      ".github/workflows/retire-obsolete-main-branches-20260920.yml"
+    ],
+    "target_symbols": [
+      "one-use obsolete branch retirement"
+    ],
+    "semantic_domains": [
+      "GIT_REPOSITORY_HYGIENE"
+    ],
+    "affected_invariants": [
+      "DELETE_ONLY_EXACT_REVIEWED_BRANCH_HEADS",
+      "PRESERVE_15_10_15_11_ACTIVE_WORK",
+      "NO_MAIN_MUTATION"
+    ],
+    "affected_contracts": [
+      "GardenChatGPTWorkstreamPolicy/v1"
+    ],
+    "intended_effect": "Delete only five exact obsolete garden-main work branches belonging to closed Git-process-v2/provider-routing work, after checking exact SHA and no open PR. Do not touch any v15.10/v15.11 active branch or main.",
+    "parallel_mode": "INDEPENDENT_COMPARISON"
+  }
+}
