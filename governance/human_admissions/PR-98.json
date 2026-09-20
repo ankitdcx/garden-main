@@ -1,0 +1,133 @@
+{
+  "schema": "GardenBasePinnedHumanAdmission/v1",
+  "receipt_id": "HUMAN-ADMISSION-PR98-2026-09-20",
+  "decision": "HUMAN_ADMITTED",
+  "kind": "HUMAN_SIGNOFF",
+  "repository": "ankitdcx/garden-main",
+  "pull_request": 98,
+  "design_epoch": "v15.5",
+  "canonical_source_root_sha256": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+  "expires_at": "2026-09-27T23:59:59Z",
+  "attestor_ref": "agent:codex:human-instruction-recorder",
+  "attestor_ref_semantics": "LEGACY_VERIFIER_ROLE_IDENTIFIER_NOT_MODEL_IDENTITY",
+  "actual_recorder": "ChatGPT GPT-5.6 Sol",
+  "observed_human_instruction": {
+    "channel": "Current authenticated user conversation",
+    "preceding_request": "Can we merge?",
+    "human_reply": "Close 1 and 3, after full check.",
+    "scope": "Refresh Git process v2 from current main, run the full current checks, merge it if the protected gates pass, and close the superseded old Git-process work.",
+    "recording_boundary": "Agent record of an observed user instruction; not a human digital signature, independent review, or cryptographic proof of identity."
+  },
+  "process_authority": "governance/GardenCanonicalUpdateProcess_v1.4.json#human_root_authority",
+  "canonical_promotion": false,
+  "independent_review": false,
+  "base_tree_without_admission": "f9e11f853f96e4c376856dd3a55703632261d534d1b4d81a7c8c6143af2ca1bb",
+  "change_path_encoding": "SHA256_UTF8",
+  "changes": {
+    "18813c86948efc57e661623d7ba48ff94325c9b5421ec9177f724922dd553a35": {
+      "before": "9bb83df4319ca1c10b5a27730b6e70ccd65099f7",
+      "after": "a5743f92745ead13ef91776459a518d51b6c8543",
+      "before_mode": "100644",
+      "after_mode": "100644"
+    },
+    "e1d7639577e518a8b0b9e00fa2918580a37596b29f6ad25fa4f1d03d83e1c1d2": {
+      "before": "d61de0b0e342182bc4a42d61b7b115f1881ee2cf",
+      "after": "91b979de44fda6f5e07bf3738acc10d35e17fece",
+      "before_mode": "100644",
+      "after_mode": "100644"
+    },
+    "a54ff182c7e8acf56acfd6e4b9c3ff41e2c41a31c9b211b2deb9df75d9a478f9": {
+      "before": "7e62dbef6bc14a301605f8af5c3bcc71073fab26",
+      "after": "98eeebab0eb478d7425cb4766101ee31aeba8170",
+      "before_mode": "100644",
+      "after_mode": "100644"
+    },
+    "d3a3745f165cf764f78ffaa0ee8ec1b412242b942dee9d97d3570ec5381b06e8": {
+      "before": "30daac487216be3ea09fb6109581b78a7a0cca11",
+      "after": "1a79c56b6d828e0c336479e202f01eb1f5d2253a",
+      "before_mode": "100644",
+      "after_mode": "100644"
+    },
+    "83ebde4a7ae3dd28aabcdefe621c36e4ad97e64549daf318d09d150acbb81144": {
+      "before": "274ffc9614a802bc9feb7786e183ebf92905eefb",
+      "after": "34897ce1204ff5b9156bee6ecc23f64a2cc7044a",
+      "before_mode": "100644",
+      "after_mode": "100644"
+    },
+    "8f6c91a040c10cc466fe3983be4fd7bbe42b5afaa340c797292d250a944b448d": {
+      "before": null,
+      "after": "2cd05c21601362efc073ed6973c7bd7a504233da",
+      "before_mode": "000000",
+      "after_mode": "100644"
+    },
+    "20569ae877e574d80ac4d1a8d1619d6fbdee8abafe354310085be83577fe5977": {
+      "before": null,
+      "after": "9b3e3224c20821cae5702a95f69a4a72bcf116c3",
+      "before_mode": "000000",
+      "after_mode": "100644"
+    },
+    "eb2dd1f7ceb32ae7de9c87c56ccd32f71ae62065435ce2c2d91accc632355890": {
+      "before": null,
+      "after": "d3b58a06acf5060e6342d183353619e2cc0308d6",
+      "before_mode": "000000",
+      "after_mode": "100644"
+    },
+    "179d2feb4554a6d895a99c741fc447f2ee62e6fef61fb4918f4a6dd8eacbce0e": {
+      "before": null,
+      "after": "ec08911137160697d39391a8fba5138c916aa445",
+      "before_mode": "000000",
+      "after_mode": "100644"
+    },
+    "e86a568787e8e3d3d64743550cd36f50ec011d752a754dff5871de86169db6d6": {
+      "before": null,
+      "after": "bae64686b415410b86a5c41dc98c756d2dadb5ba",
+      "before_mode": "000000",
+      "after_mode": "100644"
+    },
+    "609c72973eabc0030371a0732c3efddfdaca0c172bfc2da842461cc82abb7e59": {
+      "before": null,
+      "after": "c079a1e711e6ae2135f3873f56ba7405133ff9c2",
+      "before_mode": "000000",
+      "after_mode": "100644"
+    },
+    "a99e9c5c21a7913e55d5c4e74455e2d6ffb02b3f956851b28f65f35ba93b91ca": {
+      "before": null,
+      "after": "928a19bf826f6b8c05913ceeec7031acf5cb3900",
+      "before_mode": "000000",
+      "after_mode": "100644"
+    },
+    "210e0038873abe31f79b18cdd46ec86bed05bf703eaa2e360f423085f37fb749": {
+      "before": null,
+      "after": "824aed53c0a523ad87fffa55a340ddb31b75bf05",
+      "before_mode": "000000",
+      "after_mode": "100644"
+    },
+    "c13bb452c9cbb709ac0721c8213d2dfd80e0d979109efddfd948d2dbc79ebcf5": {
+      "before": null,
+      "after": "70eae703d4825e107c64590d4a2fe76d5e5d32d0",
+      "before_mode": "000000",
+      "after_mode": "100644"
+    },
+    "8da14fc12aa842e6a15c17734f0115230be7dc1d14ff4de51d040b078787e32d": {
+      "before": null,
+      "after": "1252d94a5068345b2b53612881c11d7627377059",
+      "before_mode": "000000",
+      "after_mode": "100644"
+    },
+    "5881a0a7c25f4505ca31570981d25adf3ceb11c4fa77c050792f020dfe308abc": {
+      "before": null,
+      "after": "89c7b408c62b2563441a0842e71a3ec62d3d0931",
+      "before_mode": "000000",
+      "after_mode": "100644"
+    },
+    "bcb6e2a4c0a9311995c26a204c3c1cea3fe972e2d8d4b4c4c49b765a108864dd": {
+      "before": null,
+      "after": "1d35bd08f3eee1ed47bfe7ae4603f4b896175c3f",
+      "before_mode": "000000",
+      "after_mode": "100644"
+    }
+  },
+  "action_request_sha256": {
+    "GARDEN-2026-09-18-GIT-PROCESS-V2-PROPOSE-001": "4a99093fff07dce7bc13121643a8561a096d2baef31a66d65d2384daa7a31456"
+  }
+}
