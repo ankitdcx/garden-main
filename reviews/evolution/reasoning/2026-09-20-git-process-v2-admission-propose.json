@@ -1,0 +1,119 @@
+{
+  "schema": "GardenEvolutionReasoningBundle/v1",
+  "bundle_id": "GARDEN-2026-09-20-GIT-PROCESS-V2-ADMISSION-REASONING-001",
+  "action_id": "GARDEN-2026-09-20-GIT-PROCESS-V2-ADMISSION-PROPOSE-001",
+  "design_epoch": "v15.5",
+  "canonical_source_root_sha256": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+  "source_obligation_refs": [
+    "governance/human_admissions/PR-98.json",
+    "governance/PROCESS_CURRENT.json",
+    "governance/GardenCanonicalUpdateProcess_v1.4.json"
+  ],
+  "compare": {
+    "schema": "GardenEvolutionCompareReceipt/v1",
+    "action_id": "GARDEN-2026-09-20-GIT-PROCESS-V2-ADMISSION-PROPOSE-001",
+    "design_epoch": "v15.5",
+    "canonical_source_root_sha256": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+    "predecessor_ref": "governance/human_admissions/PR-72.json",
+    "alternatives": [
+      {
+        "alternative_id": "DO_NOTHING",
+        "description": "Do not record the user's explicit approval for PR #98.",
+        "projected_effect": "The protected Git process v2 change remains correctly blocked by the trusted-base gate.",
+        "risk": "Approved operational hardening cannot be admitted."
+      },
+      {
+        "alternative_id": "RECORD_EXACT_SCOPED_ADMISSION",
+        "description": "Record the explicit user instruction as a base-pinned admission bound to PR #98 exact tree/action changes.",
+        "projected_effect": "The existing HUMAN_SIGNOFF path can evaluate only the admitted exact change set.",
+        "risk": "Trust depends on repository base integrity; no human digital signature is asserted."
+      }
+    ],
+    "bidirectional_gaps": [
+      {
+        "from": "DO_NOTHING",
+        "to": "RECORD_EXACT_SCOPED_ADMISSION",
+        "gap": "The observed human approval is absent from trusted base."
+      },
+      {
+        "from": "RECORD_EXACT_SCOPED_ADMISSION",
+        "to": "DO_NOTHING",
+        "gap": "Adds a narrowly scoped authority-evidence record that must remain exact-bound and expiring."
+      }
+    ]
+  },
+  "reason": {
+    "schema": "GardenEvolutionReasonReceipt/v1",
+    "action_id": "GARDEN-2026-09-20-GIT-PROCESS-V2-ADMISSION-PROPOSE-001",
+    "design_epoch": "v15.5",
+    "canonical_source_root_sha256": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+    "strategy": "HUMAN_AUTHORIZED_EXACT_BASE_ADMISSION",
+    "tier": "V1_4_EXECUTION_FIRST_HIGH_DEPENDENCY",
+    "assumptions": [
+      "The user explicitly instructed the system on 2026-09-20 to close Git process v2 after a full check.",
+      "Garden process v1.4 permits HUMAN root admission; the repository record is an agent record of observed instruction, not a digital human signature.",
+      "The admission record is bound to PR #98, exact change blobs/modes, exact action request, current canonical identity, expiry, and repository.",
+      "Candidate-controlled bytes cannot create or expand their own approval."
+    ],
+    "uncertainty": "Repository branch protection and the authenticated conversation are external trust boundaries; the record does not prove cryptographic human identity.",
+    "counterexamples": [
+      "A changed file/mode after admission must reject.",
+      "A different PR or action ID must reject.",
+      "An expired or altered admission must reject.",
+      "Candidate-only introduction of approval must not count."
+    ],
+    "dependency_refs": [
+      "governance/human_admissions/PR-98.json",
+      "governance/PROCESS_CURRENT.json",
+      "governance/GardenCanonicalUpdateProcess_v1.4.json"
+    ],
+    "conclusion": "Record the user's approval in trusted base with exact scope, then let existing base verifier and ActionGate evaluate PR #98; do not broaden the approval.",
+    "authorization_effect": "NONE"
+  },
+  "proof": {
+    "schema": "GardenEvolutionProofReceipt/v1",
+    "action_id": "GARDEN-2026-09-20-GIT-PROCESS-V2-ADMISSION-PROPOSE-001",
+    "design_epoch": "v15.5",
+    "canonical_source_root_sha256": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+    "obligations": [
+      {
+        "obligation_id": "PO-GIT-V2-ADMISSION-001",
+        "statement": "PR #98 admission is exact-bound and cannot be replayed for changed bytes, another PR, another action, stale source identity, or expired scope.",
+        "verifier_class": "REAL_GIT_ADVERSARIAL_TESTS",
+        "result": "UNKNOWN",
+        "evidence_refs": [
+          "implementation/tests/test_base_admission.py"
+        ]
+      }
+    ],
+    "overall_result": "UNKNOWN",
+    "authorization_effect": "NONE"
+  },
+  "evidence": {
+    "schema": "GardenEvolutionEvidenceReceipt/v1",
+    "action_id": "GARDEN-2026-09-20-GIT-PROCESS-V2-ADMISSION-PROPOSE-001",
+    "design_epoch": "v15.5",
+    "canonical_source_root_sha256": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+    "items": [
+      {
+        "kind": "SOURCE_RECORD",
+        "ref": "governance/human_admissions/PR-98.json",
+        "claim_scope": "Agent record of the observed user instruction, exact-bound to PR #98; not a digital signature or independent review."
+      },
+      {
+        "kind": "SOURCE_RECORD",
+        "ref": "governance/PROCESS_CURRENT.json",
+        "claim_scope": "Current process pointer governing protected admission."
+      }
+    ],
+    "proof_effect": "NONE",
+    "authorization_effect": "NONE"
+  },
+  "separation_assertions": {
+    "compare_is_not_decision": true,
+    "reason_is_not_authorization": true,
+    "evidence_is_not_proof": true,
+    "proof_is_not_authorization": true,
+    "actiongate_owns_authorization": true
+  }
+}
