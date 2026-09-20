@@ -1,0 +1,41 @@
+{
+  "schema": "GardenChatGPTWorkstreamIntent/v1",
+  "workstream_id": "chatgpt:git-process-v2-admission:20260920",
+  "work_package_id": "GIT-PROCESS-V2-HUMAN-ADMISSION-20260920",
+  "branch": "chatgpt/git-process-v2-admission-20260920",
+  "base_sha": "a4d6d7c8905c608d8b87bdf4963cf7e8b4ff9b0c",
+  "dependency_intent_ids": [
+    "github-pr:98"
+  ],
+  "integration_strategy": "DIRECT_IF_NO_COLLISION",
+  "draft_pr_created_before_substantial_edit": true,
+  "status": "ACTIVE",
+  "planned_intent": {
+    "schema": "AgentWorkIntent/v1",
+    "intent_id": "chatgpt:git-process-v2-admission:20260920",
+    "agent_id": "ChatGPT-GPT-5.6-Sol",
+    "work_package_id": "GIT-PROCESS-V2-HUMAN-ADMISSION-20260920",
+    "base_sha": "a4d6d7c8905c608d8b87bdf4963cf7e8b4ff9b0c",
+    "source_root_sha256": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+    "design_epoch_ref": "Garden-v15.5@63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+    "target_paths": [
+      "workstreams/2026-09-20-git-process-v2-admission.json",
+      "governance/human_admissions/PR-98.json"
+    ],
+    "target_symbols": [
+      "GardenBasePinnedHumanAdmission/v1 for PR-98"
+    ],
+    "semantic_domains": [
+      "HUMAN_ADMISSION_RECORDING"
+    ],
+    "affected_invariants": [
+      "HUMAN_APPROVAL_BOUND_TO_EXACT_PR_CHANGESET",
+      "CANDIDATE_CANNOT_SELF_AUTHORIZE"
+    ],
+    "affected_contracts": [
+      "GardenBasePinnedHumanAdmission/v1"
+    ],
+    "intended_effect": "Record the user's explicit 2026-09-20 approval of Git process v2 as trusted-base evidence for PR #98, without changing canonical Garden semantics or broadening the approved change set.",
+    "parallel_mode": "COORDINATED"
+  }
+}
