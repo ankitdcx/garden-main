@@ -1,0 +1,38 @@
+{
+  "schema": "GardenChatGPTWorkstreamIntent/v1",
+  "workstream_id": "chatgpt:reauthorize-claude-routing:20260920",
+  "work_package_id": "REAUTHORIZE-CLAUDE-ROUTING-20260920",
+  "branch": "chatgpt/reauthorize-claude-routing-20260920",
+  "base_sha": "4c34da0867df4531feb2931c1af5ec28369820b5",
+  "dependency_intent_ids": [],
+  "integration_strategy": "DIRECT_IF_NO_COLLISION",
+  "draft_pr_created_before_substantial_edit": true,
+  "status": "ACTIVE",
+  "planned_intent": {
+    "schema": "AgentWorkIntent/v1",
+    "intent_id": "chatgpt:reauthorize-claude-routing:20260920",
+    "agent_id": "ChatGPT-GPT-5.6-Sol",
+    "work_package_id": "REAUTHORIZE-CLAUDE-ROUTING-20260920",
+    "base_sha": "4c34da0867df4531feb2931c1af5ec28369820b5",
+    "source_root_sha256": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+    "design_epoch_ref": "Garden-v15.5@63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+    "target_paths": [
+      "workstreams/2026-09-20-reauthorize-claude-routing.json",
+      "governance/PROVIDER_EXCLUSION_POLICY_v1.json"
+    ],
+    "target_symbols": [
+      "Anthropic/Claude provider exclusion"
+    ],
+    "semantic_domains": [
+      "MODEL_PROVIDER_ROUTING_POLICY"
+    ],
+    "affected_invariants": [
+      "EXPLICIT_HUMAN_OVERRIDE_REQUIRED_FOR_PROVIDER_EXCLUSION_CHANGE"
+    ],
+    "affected_contracts": [
+      "GardenProviderExclusionPolicy/v1"
+    ],
+    "intended_effect": "Apply the explicit 2026-09-20 human directive to re-authorize Anthropic/Claude for Garden review. Operational routing only; no canonical Garden semantic or authority effect.",
+    "parallel_mode": "INDEPENDENT_COMPARISON"
+  }
+}
