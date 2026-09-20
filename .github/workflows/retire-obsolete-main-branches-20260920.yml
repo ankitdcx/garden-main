@@ -1,0 +1,139 @@
+name: One-use obsolete main branch retirement
+
+on:
+  push:
+    branches:
+      - chatgpt/retire-obsolete-main-branches-20260920
+
+permissions:
+  contents: write
+  pull-requests: read
+
+jobs:
+  cleanup:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Delete only exact reviewed obsolete branches
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+          GITHUB_REPOSITORY_OWNER: ${{ github.repository_owner }}
+          GITHUB_SHA: ${{ github.sha }}
+        shell: python
+        run: |
+          import json
+          import os
+          import urllib.error
+          import urllib.parse
+          import urllib.request
+
+          token = os.environ["GITHUB_TOKEN"]
+          repository = os.environ["GITHUB_REPOSITORY"]
+          owner = os.environ["GITHUB_REPOSITORY_OWNER"]
+          api = "https://api.github.com/repos/" + repository
+
+          candidates = {
+              "chatgpt/git-process-v2-20260916": {
+                  "sha": "f045b5199e3f19ce8c8b9cc985c750a24e38f4ab",
+                  "pr": 87,
+                  "merged": False,
+              },
+              "chatgpt/git-process-v2-refresh-20260920": {
+                  "sha": "268f3f8046796cec909d0adac026d61edd9c48eb",
+                  "pr": 98,
+                  "merged": False,
+              },
+              "chatgpt/git-process-v2-admission-20260920": {
+                  "sha": "04a3c76aee683496191ba9af6078add3ad0bfcbe",
+                  "pr": 99,
+                  "merged": False,
+              },
+              "chatgpt/provider-routing-update-20260919": {
+                  "sha": "7b0b1853d4edff6aeb6d6b706d60d2ff3478a4ff",
+                  "pr": 92,
+                  "merged": True,
+              },
+              "chatgpt/reauthorize-claude-routing-20260920": {
+                  "sha": "be3245a02dd170bac4b23d91d4bf4948f519586f",
+                  "pr": 97,
+                  "merged": True,
+              },
+          }
+
+          def request(url, *, method="GET"):
+              req = urllib.request.Request(
+                  url,
+                  method=method,
+                  headers={
+                      "Authorization": "Bearer " + token,
+                      "Accept": "application/vnd.github+json",
+                      "X-GitHub-Api-Version": "2022-11-28",
+                      "User-Agent": "garden-one-use-obsolete-branch-retirement",
+                  },
+              )
+              with urllib.request.urlopen(req, timeout=30) as response:
+                  raw = response.read()
+                  return json.loads(raw.decode("utf-8")) if raw else None
+
+          deleted = []
+          skipped = []
+
+          for branch, meta in candidates.items():
+              pr = request(api + "/pulls/" + str(meta["pr"]))
+              if pr.get("state") != "closed":
+                  skipped.append([branch, "pr_not_closed"])
+                  continue
+              if bool(pr.get("merged_at")) != bool(meta["merged"]):
+                  skipped.append([branch, "pr_merge_state_changed"])
+                  continue
+              head = pr.get("head") or {}
+              if head.get("ref") != branch or head.get("sha") != meta["sha"]:
+                  skipped.append([branch, "pr_head_binding_changed"])
+                  continue
+
+              q = urllib.parse.urlencode({
+                  "state": "open",
+                  "head": owner + ":" + branch,
+                  "per_page": 100,
+              })
+              if request(api + "/pulls?" + q):
+                  skipped.append([branch, "open_pr_now_exists"])
+                  continue
+
+              ref_path = "heads/" + urllib.parse.quote(branch, safe="/")
+              try:
+                  live = request(api + "/git/ref/" + ref_path)
+              except urllib.error.HTTPError as exc:
+                  if exc.code == 404:
+                      skipped.append([branch, "already_absent"])
+                      continue
+                  raise
+              if ((live or {}).get("object") or {}).get("sha") != meta["sha"]:
+                  skipped.append([branch, "sha_changed"])
+                  continue
+
+              request(api + "/git/refs/" + ref_path, method="DELETE")
+              deleted.append(branch)
+
+          # After PR #100 is intentionally closed, a second harmless push to
+          # this cleanup branch retires the cleanup branch itself.
+          cleanup_branch = "chatgpt/retire-obsolete-main-branches-20260920"
+          cleanup_pr = request(api + "/pulls/100")
+          if cleanup_pr.get("state") == "closed":
+              q = urllib.parse.urlencode({
+                  "state": "open",
+                  "head": owner + ":" + cleanup_branch,
+                  "per_page": 100,
+              })
+              if not request(api + "/pulls?" + q):
+                  ref_path = "heads/" + urllib.parse.quote(cleanup_branch, safe="/")
+                  live = request(api + "/git/ref/" + ref_path)
+                  if ((live or {}).get("object") or {}).get("sha") == os.environ["GITHUB_SHA"]:
+                      request(api + "/git/refs/" + ref_path, method="DELETE")
+                      deleted.append(cleanup_branch)
+                  else:
+                      skipped.append([cleanup_branch, "sha_changed"])
+
+          print("DELETED=" + json.dumps(deleted, sort_keys=True))
+          print("SKIPPED=" + json.dumps(skipped, sort_keys=True))
