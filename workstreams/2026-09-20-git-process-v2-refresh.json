@@ -82,5 +82,6 @@
     "overlap_result": "NO_MATERIAL_COLLISION_WITH_DECLARED_SCOPE",
     "created_before_substantial_edit": true,
     "authority_effect": "NONE"
-  }
+  },
+  "preflight_event_refresh": "2026-09-20"
 }
