@@ -63,5 +63,24 @@
     ],
     "intended_effect": "Refresh and admit the previously reviewed Git process v2 mechanics on current main after explicit human approval, without changing canonical Garden semantics.",
     "parallel_mode": "COORDINATED"
+  },
+  "git_preflight_receipt": {
+    "schema": "GardenGitPreflightReceipt/v1",
+    "workstream_id": "chatgpt:git-process-v2-refresh:20260920",
+    "repository": "ankitdcx/garden-main",
+    "base_sha": "a4d6d7c8905c608d8b87bdf4963cf7e8b4ff9b0c",
+    "git_context_revision": 2,
+    "git_context_source_sha256": "8c53b9268b39231ff7a8d36ca0b1cdacad049f343e9dd7fd0a7d3351843e24c2",
+    "process_pointer": "governance/PROCESS_CURRENT.json",
+    "process_version": "1.4",
+    "verified_merge_ruleset_id": 23542743,
+    "overlap_checked_open_prs": [
+      91,
+      93,
+      95
+    ],
+    "overlap_result": "NO_MATERIAL_COLLISION_WITH_DECLARED_SCOPE",
+    "created_before_substantial_edit": true,
+    "authority_effect": "NONE"
   }
 }
