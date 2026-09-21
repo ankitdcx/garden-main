@@ -1,0 +1,144 @@
+{
+  "schema": "GardenEvolutionReasoningBundle/v1",
+  "bundle_id": "GARDEN-2026-09-18-GIT-PROCESS-V2-REASONING-001",
+  "action_id": "GARDEN-2026-09-18-GIT-PROCESS-V2-PROPOSE-001",
+  "design_epoch": "v15.5",
+  "canonical_source_root_sha256": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+  "source_obligation_refs": [
+    "GIT_OPERATING_CONTEXT_SOURCE.json",
+    "GIT_RECOVERY_POLICY.json",
+    "governance/PROCESS_CURRENT.json",
+    "canonical/current/Garden_System_v15.5_FULL_2026-09-12.txt:REG-ALGEBRA-001"
+  ],
+  "compare": {
+    "schema": "GardenEvolutionCompareReceipt/v1",
+    "action_id": "GARDEN-2026-09-18-GIT-PROCESS-V2-PROPOSE-001",
+    "design_epoch": "v15.5",
+    "canonical_source_root_sha256": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+    "predecessor_ref": "git:ankitdcx/garden-main@801f04e9b55988495fc7d30f800bb285a473c057",
+    "alternatives": [
+      {
+        "alternative_id": "DO_NOTHING",
+        "description": "Keep the older manually maintained Git operating context and omit the reviewed v2 source/recovery/secret-scan hardening.",
+        "projected_effect": "Known Git-process drift and recovery ambiguity remain.",
+        "risk": "Repeated stale-context, unsafe cleanup, and recovery-process defects remain more likely."
+      },
+      {
+        "alternative_id": "ADMIT_GIT_PROCESS_V2",
+        "description": "Admit one structured Git-process source with generated views, typed recovery, preflight and central secret-scan enforcement.",
+        "projected_effect": "Repository mutation mechanics become source-bound, reproducible and safer without altering Garden canon.",
+        "risk": "Operational process coupling increases and protected workflow changes still require normal trusted-base admission."
+      }
+    ],
+    "bidirectional_gaps": [
+      {
+        "from": "DO_NOTHING",
+        "to": "ADMIT_GIT_PROCESS_V2",
+        "gap": "DO_NOTHING lacks one authoritative structured source, generated-view verification, typed bad-merge recovery and central secret scanning."
+      },
+      {
+        "from": "ADMIT_GIT_PROCESS_V2",
+        "to": "DO_NOTHING",
+        "gap": "Process v2 adds maintained source/generation and CI obligations absent from the older looser process."
+      }
+    ]
+  },
+  "reason": {
+    "schema": "GardenEvolutionReasonReceipt/v1",
+    "action_id": "GARDEN-2026-09-18-GIT-PROCESS-V2-PROPOSE-001",
+    "design_epoch": "v15.5",
+    "canonical_source_root_sha256": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+    "strategy": "SOURCE_BOUND_GIT_PROCESS_HARDENING",
+    "tier": "IMPLEMENTATION_CONFORMANCE",
+    "assumptions": [
+      "GardenCanonicalUpdateProcess@1.4 remains HUMAN-admitted current process.",
+      "Garden v15.5 canonical source remains unchanged.",
+      "Live GitHub rules remain authoritative over stale snapshots.",
+      "Operational Git receipts cannot mint Garden authority."
+    ],
+    "uncertainty": "Live GitHub rules and concurrent work can change after this receipt; exact-head verification remains required immediately before merge.",
+    "counterexamples": [
+      "A generated view drifting from the source invalidates the single-source claim.",
+      "A force-push rollback would violate the recovery policy.",
+      "Deleting garden-review-state as an ordinary stale branch would violate the branch-cleanup boundary.",
+      "A secret-scan allowlist that permits real credentials would invalidate the protection."
+    ],
+    "dependency_refs": [
+      "GIT_OPERATING_CONTEXT_SOURCE.json",
+      "GIT_RECOVERY_POLICY.json",
+      "scripts/check_git_preflight_event.py",
+      "scripts/secret_scan.py",
+      "governance/PROCESS_CURRENT.json"
+    ],
+    "conclusion": "Admit the bounded noncanonical Git-process-v2 implementation only through ordinary exact-head checks and trusted-base admission; preserve canonical Garden v15.5 unchanged.",
+    "authorization_effect": "NONE"
+  },
+  "proof": {
+    "schema": "GardenEvolutionProofReceipt/v1",
+    "action_id": "GARDEN-2026-09-18-GIT-PROCESS-V2-PROPOSE-001",
+    "design_epoch": "v15.5",
+    "canonical_source_root_sha256": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+    "obligations": [
+      {
+        "obligation_id": "PO-GIT-V2-001",
+        "statement": "Generated human and machine views exactly derive from one structured source.",
+        "verifier_class": "EXECUTABLE_CONTRACT_TEST",
+        "result": "UNKNOWN",
+        "evidence_refs": []
+      },
+      {
+        "obligation_id": "PO-GIT-V2-002",
+        "statement": "Bad-merge recovery forbids history rewrite and uses governed revert/forward-fix PRs.",
+        "verifier_class": "EXECUTABLE_CONTRACT_TEST",
+        "result": "UNKNOWN",
+        "evidence_refs": []
+      },
+      {
+        "obligation_id": "PO-GIT-V2-003",
+        "statement": "Branch cleanup preserves persistent review state and requires explicit eligibility evidence.",
+        "verifier_class": "CI_CONFORMANCE_AUDIT",
+        "result": "UNKNOWN",
+        "evidence_refs": []
+      }
+    ],
+    "overall_result": "UNKNOWN",
+    "authorization_effect": "NONE"
+  },
+  "evidence": {
+    "schema": "GardenEvolutionEvidenceReceipt/v1",
+    "action_id": "GARDEN-2026-09-18-GIT-PROCESS-V2-PROPOSE-001",
+    "design_epoch": "v15.5",
+    "canonical_source_root_sha256": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+    "items": [
+      {
+        "kind": "HUMAN_DIRECTIVE",
+        "ref": "human:complete-merge-cleanup-request:2026-09-18",
+        "claim_scope": "Instruction to finish the Garden merge/cleanup process; not blanket protected-change approval."
+      },
+      {
+        "kind": "SOURCE_RECORD",
+        "ref": "GIT_OPERATING_CONTEXT_SOURCE.json",
+        "claim_scope": "Structured noncanonical Git-process-v2 source."
+      },
+      {
+        "kind": "SOURCE_RECORD",
+        "ref": "GIT_RECOVERY_POLICY.json",
+        "claim_scope": "Typed bad-merge recovery policy."
+      },
+      {
+        "kind": "GOVERNING_PROCESS",
+        "ref": "governance/PROCESS_CURRENT.json",
+        "claim_scope": "HUMAN-admitted GardenCanonicalUpdateProcess@1.4 remains the governing process."
+      }
+    ],
+    "proof_effect": "NONE",
+    "authorization_effect": "NONE"
+  },
+  "separation_assertions": {
+    "compare_is_not_decision": true,
+    "reason_is_not_authorization": true,
+    "evidence_is_not_proof": true,
+    "proof_is_not_authorization": true,
+    "actiongate_owns_authorization": true
+  }
+}
