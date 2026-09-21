@@ -1,0 +1,223 @@
+{
+  "schema": "GardenRetiredWorkRecoveryBatch/v1",
+  "batch": "private-1",
+  "base_main_sha": "183822ce90f29565f7e9468b772539d0938539d8",
+  "sources": [
+    {
+      "branch": "chatgpt/git-process-v2-current-20260921",
+      "head_sha": "a499a4618ebc2e790877dbd2a665b0b9d1078a63",
+      "comparison_base_sha": "a4d6d7c8905c608d8b87bdf4963cf7e8b4ff9b0c",
+      "pr_number": 102,
+      "archived_files": [
+        {
+          "source_path": ".github/PULL_REQUEST_TEMPLATE.md",
+          "archive_path": "archive/retired-work/2026-09-21/chatgpt__git-process-v2-current-20260921/.github/PULL_REQUEST_TEMPLATE.md",
+          "blob_sha": "a5743f92745ead13ef91776459a518d51b6c8543",
+          "status": "modified",
+          "size": 3257
+        },
+        {
+          "source_path": ".github/workflows/seed-ci.yml",
+          "archive_path": "archive/retired-work/2026-09-21/chatgpt__git-process-v2-current-20260921/.github/workflows/seed-ci.yml",
+          "blob_sha": "91b979de44fda6f5e07bf3738acc10d35e17fece",
+          "status": "modified",
+          "size": 1334
+        },
+        {
+          "source_path": "AGENTS.md",
+          "archive_path": "archive/retired-work/2026-09-21/chatgpt__git-process-v2-current-20260921/AGENTS.md",
+          "blob_sha": "98eeebab0eb478d7425cb4766101ee31aeba8170",
+          "status": "modified",
+          "size": 1750
+        },
+        {
+          "source_path": "GIT_OPERATING_CONTEXT.json",
+          "archive_path": "archive/retired-work/2026-09-21/chatgpt__git-process-v2-current-20260921/GIT_OPERATING_CONTEXT.json",
+          "blob_sha": "1a79c56b6d828e0c336479e202f01eb1f5d2253a",
+          "status": "modified",
+          "size": 7929
+        },
+        {
+          "source_path": "GIT_OPERATING_CONTEXT.md",
+          "archive_path": "archive/retired-work/2026-09-21/chatgpt__git-process-v2-current-20260921/GIT_OPERATING_CONTEXT.md",
+          "blob_sha": "34897ce1204ff5b9156bee6ecc23f64a2cc7044a",
+          "status": "modified",
+          "size": 10190
+        },
+        {
+          "source_path": "GIT_OPERATING_CONTEXT_SOURCE.json",
+          "archive_path": "archive/retired-work/2026-09-21/chatgpt__git-process-v2-current-20260921/GIT_OPERATING_CONTEXT_SOURCE.json",
+          "blob_sha": "2cd05c21601362efc073ed6973c7bd7a504233da",
+          "status": "added",
+          "size": 10636
+        },
+        {
+          "source_path": "GIT_RECOVERY_POLICY.json",
+          "archive_path": "archive/retired-work/2026-09-21/chatgpt__git-process-v2-current-20260921/GIT_RECOVERY_POLICY.json",
+          "blob_sha": "9b3e3224c20821cae5702a95f69a4a72bcf116c3",
+          "status": "added",
+          "size": 1064
+        },
+        {
+          "source_path": "docs/GIT_PROCESS_V2_REFRESH_2026-09-21.md",
+          "archive_path": "archive/retired-work/2026-09-21/chatgpt__git-process-v2-current-20260921/docs/GIT_PROCESS_V2_REFRESH_2026-09-21.md",
+          "blob_sha": "4e6a163b41e5ee6a62cf66f17d4ee10df92d264a",
+          "status": "added",
+          "size": 291
+        },
+        {
+          "source_path": "implementation/tests/test_git_process_v2.py",
+          "archive_path": "archive/retired-work/2026-09-21/chatgpt__git-process-v2-current-20260921/implementation/tests/test_git_process_v2.py",
+          "blob_sha": "d3b58a06acf5060e6342d183353619e2cc0308d6",
+          "status": "added",
+          "size": 1792
+        },
+        {
+          "source_path": "reviews/evolution/algebra/2026-09-18-git-process-v2-propose.json",
+          "archive_path": "archive/retired-work/2026-09-21/chatgpt__git-process-v2-current-20260921/reviews/evolution/algebra/2026-09-18-git-process-v2-propose.json",
+          "blob_sha": "ec08911137160697d39391a8fba5138c916aa445",
+          "status": "added",
+          "size": 2790
+        },
+        {
+          "source_path": "reviews/evolution/assurance/2026-09-18-git-process-v2-propose.json",
+          "archive_path": "archive/retired-work/2026-09-21/chatgpt__git-process-v2-current-20260921/reviews/evolution/assurance/2026-09-18-git-process-v2-propose.json",
+          "blob_sha": "bae64686b415410b86a5c41dc98c756d2dadb5ba",
+          "status": "added",
+          "size": 1576
+        },
+        {
+          "source_path": "reviews/evolution/production/2026-09-18-git-process-v2-propose.json",
+          "archive_path": "archive/retired-work/2026-09-21/chatgpt__git-process-v2-current-20260921/reviews/evolution/production/2026-09-18-git-process-v2-propose.json",
+          "blob_sha": "c079a1e711e6ae2135f3873f56ba7405133ff9c2",
+          "status": "added",
+          "size": 1653
+        },
+        {
+          "source_path": "reviews/evolution/reasoning/2026-09-18-git-process-v2-propose.json",
+          "archive_path": "archive/retired-work/2026-09-21/chatgpt__git-process-v2-current-20260921/reviews/evolution/reasoning/2026-09-18-git-process-v2-propose.json",
+          "blob_sha": "928a19bf826f6b8c05913ceeec7031acf5cb3900",
+          "status": "added",
+          "size": 6496
+        },
+        {
+          "source_path": "scripts/check_git_preflight_event.py",
+          "archive_path": "archive/retired-work/2026-09-21/chatgpt__git-process-v2-current-20260921/scripts/check_git_preflight_event.py",
+          "blob_sha": "824aed53c0a523ad87fffa55a340ddb31b75bf05",
+          "status": "added",
+          "size": 5163
+        },
+        {
+          "source_path": "scripts/render_git_operating_context.py",
+          "archive_path": "archive/retired-work/2026-09-21/chatgpt__git-process-v2-current-20260921/scripts/render_git_operating_context.py",
+          "blob_sha": "70eae703d4825e107c64590d4a2fe76d5e5d32d0",
+          "status": "added",
+          "size": 10267
+        },
+        {
+          "source_path": "scripts/secret_scan.py",
+          "archive_path": "archive/retired-work/2026-09-21/chatgpt__git-process-v2-current-20260921/scripts/secret_scan.py",
+          "blob_sha": "1252d94a5068345b2b53612881c11d7627377059",
+          "status": "added",
+          "size": 3350
+        },
+        {
+          "source_path": "security/secret-scan-allowlist.json",
+          "archive_path": "archive/retired-work/2026-09-21/chatgpt__git-process-v2-current-20260921/security/secret-scan-allowlist.json",
+          "blob_sha": "89c7b408c62b2563441a0842e71a3ec62d3d0931",
+          "status": "added",
+          "size": 198
+        }
+      ],
+      "deleted_paths": []
+    },
+    {
+      "branch": "chatgpt/v1510-review-project-20260919",
+      "head_sha": "f989e2c38981d02e4cb62661d11cf099e508da20",
+      "comparison_base_sha": "4c34da0867df4531feb2931c1af5ec28369820b5",
+      "pr_number": 93,
+      "archived_files": [
+        {
+          "source_path": "reviews/v15.10-project/CONNECTIVITY_RULE.md",
+          "archive_path": "archive/retired-work/2026-09-21/chatgpt__v1510-review-project-20260919/reviews/v15.10-project/CONNECTIVITY_RULE.md",
+          "blob_sha": "55b73803a330003b99c765361453c4204de783c3",
+          "status": "added",
+          "size": 2943
+        },
+        {
+          "source_path": "reviews/v15.10-project/COVERAGE_LEDGER.tsv",
+          "archive_path": "archive/retired-work/2026-09-21/chatgpt__v1510-review-project-20260919/reviews/v15.10-project/COVERAGE_LEDGER.tsv",
+          "blob_sha": "a411a1e70c65a79766f0798c3e9531a8c8e980f2",
+          "status": "added",
+          "size": 517
+        },
+        {
+          "source_path": "reviews/v15.10-project/FINDINGS_LEDGER.md",
+          "archive_path": "archive/retired-work/2026-09-21/chatgpt__v1510-review-project-20260919/reviews/v15.10-project/FINDINGS_LEDGER.md",
+          "blob_sha": "3920a38eb0877c2b1b299b337c8e5ed912dd18b2",
+          "status": "added",
+          "size": 791
+        },
+        {
+          "source_path": "reviews/v15.10-project/PROJECT.md",
+          "archive_path": "archive/retired-work/2026-09-21/chatgpt__v1510-review-project-20260919/reviews/v15.10-project/PROJECT.md",
+          "blob_sha": "54e0a50a2648a1fa9aa1663962c73b72609691ec",
+          "status": "added",
+          "size": 6415
+        },
+        {
+          "source_path": "reviews/v15.10-project/RELEASE_GATES.md",
+          "archive_path": "archive/retired-work/2026-09-21/chatgpt__v1510-review-project-20260919/reviews/v15.10-project/RELEASE_GATES.md",
+          "blob_sha": "50ee37d88f54b75c6dcc49c6e9adfb2916f47670",
+          "status": "added",
+          "size": 3633
+        },
+        {
+          "source_path": "reviews/v15.10-project/ROUND1_ASSIGNMENTS.md",
+          "archive_path": "archive/retired-work/2026-09-21/chatgpt__v1510-review-project-20260919/reviews/v15.10-project/ROUND1_ASSIGNMENTS.md",
+          "blob_sha": "8416be3781c9b7d27a3784861f4f8629f3943a67",
+          "status": "added",
+          "size": 1684
+        },
+        {
+          "source_path": "reviews/v15.10-project/SOURCE_FREEZE_ROUND1.md",
+          "archive_path": "archive/retired-work/2026-09-21/chatgpt__v1510-review-project-20260919/reviews/v15.10-project/SOURCE_FREEZE_ROUND1.md",
+          "blob_sha": "c97bebe04f0e74589d46b74b79b0c020658c569f",
+          "status": "added",
+          "size": 1438
+        },
+        {
+          "source_path": "reviews/v15.10-project/WORKSTREAM_INTENT.md",
+          "archive_path": "archive/retired-work/2026-09-21/chatgpt__v1510-review-project-20260919/reviews/v15.10-project/WORKSTREAM_INTENT.md",
+          "blob_sha": "24d090fab8847dc2ab2aa8d42402eb3ba2f8aa54",
+          "status": "added",
+          "size": 890
+        }
+      ],
+      "deleted_paths": []
+    },
+    {
+      "branch": "chatgpt/v1510-v159-review-blockers-20260918",
+      "head_sha": "7edc9faf1d9608e2c7f4df55b152cbbdf9a35fdd",
+      "comparison_base_sha": "801f04e9b55988495fc7d30f800bb285a473c057",
+      "pr_number": 91,
+      "archived_files": [
+        {
+          "source_path": "design_deltas/v15.10/RELEASE_BLOCKERS_FROM_V15.9_REVIEW_2026-09-18.md",
+          "archive_path": "archive/retired-work/2026-09-21/chatgpt__v1510-v159-review-blockers-20260918/design_deltas/v15.10/RELEASE_BLOCKERS_FROM_V15.9_REVIEW_2026-09-18.md",
+          "blob_sha": "7e62f878950eec10bf0b1d875bc0ff5a4b5f90c2",
+          "status": "added",
+          "size": 8087
+        },
+        {
+          "source_path": "workstreams/2026-09-18-v1510-v159-review-blockers.json",
+          "archive_path": "archive/retired-work/2026-09-21/chatgpt__v1510-v159-review-blockers-20260918/workstreams/2026-09-18-v1510-v159-review-blockers.json",
+          "blob_sha": "c7dfee31a1cd587a5fbcb2e5c1ec153e1861cc5f",
+          "status": "added",
+          "size": 830
+        }
+      ],
+      "deleted_paths": []
+    }
+  ]
+}
