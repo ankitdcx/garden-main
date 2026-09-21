@@ -1,0 +1,17 @@
+{
+  "schema": "GardenChatGPTWorkstreamIntent/v1",
+  "workstream_id": "chatgpt:v1510-v159-review-blockers:20260918",
+  "work_package_id": "GARDEN-V1510-V159-REVIEW-BLOCKERS-20260918",
+  "branch": "chatgpt/v1510-v159-review-blockers-20260918",
+  "base_sha": "801f04e9b55988495fc7d30f800bb285a473c057",
+  "dependency_intent_ids": [],
+  "integration_strategy": "DIRECT_IF_NO_COLLISION",
+  "draft_pr_created_before_substantial_edit": true,
+  "status": "ACTIVE",
+  "purpose": "Publish noncanonical v15.10 release-blocker handoff from the independent review of the current v15.9 rewrite so parallel workstreams can incorporate the findings.",
+  "target_paths": [
+    "workstreams/2026-09-18-v1510-v159-review-blockers.json",
+    "design_deltas/v15.10/RELEASE_BLOCKERS_FROM_V15.9_REVIEW_2026-09-18.md"
+  ],
+  "canonical_effect": "NONE"
+}

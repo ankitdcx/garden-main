@@ -1,0 +1,35 @@
+name: Garden Seed CI
+on:
+  push:
+  pull_request:
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Verify generated Git operating context
+        run: python scripts/render_git_operating_context.py --check
+      - name: Validate ChatGPT Git preflight receipt
+        if: github.event_name == 'pull_request'
+        run: python scripts/check_git_preflight_event.py
+      - name: Scan changed files for high-confidence secrets
+        if: github.event_name == 'pull_request'
+        env:
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
+        run: python scripts/secret_scan.py --base "$BASE_SHA" --head HEAD --output /tmp/garden-secret-scan.json
+      - name: Run Git-process v2 regression tests
+        run: python -m unittest implementation.tests.test_git_process_v2 -v
+      - name: Validate work packages
+        run: python scripts/validate_work_packages.py
+      - name: Run SCEP reference tests
+        run: |
+          if [ -d bootstrap/scep_v1_1/tests ]; then
+            PYTHONPATH=bootstrap/scep_v1_1 python -m unittest discover -s bootstrap/scep_v1_1/tests -v
+          else
+            echo "SCEP tests not present"
+          fi
