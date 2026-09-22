@@ -1,0 +1,37 @@
+{
+  "workstream": {
+    "schema": "GardenChatGPTWorkstreamIntent/v1",
+    "workstream_id": "chatgpt:v1511-rep-candidate-20260922",
+    "work_package_id": "V1511-REP-001",
+    "branch": "chatgpt/v1511-rep-candidate-20260922",
+    "base_sha": "781e58de103e2f052c33f9be57cc5a21f089e8e0",
+    "dependency_intent_ids": [],
+    "integration_strategy": "DIRECT_IF_NO_COLLISION",
+    "draft_pr_created_before_substantial_edit": true,
+    "status": "ACTIVE"
+  },
+  "agent_work_intent": {
+    "schema": "AgentWorkIntent/v1",
+    "intent_id": "chatgpt:v1511-rep-candidate:20260922",
+    "agent_id": "chatgpt-lead-integrator",
+    "work_package_id": "V1511-REP-001",
+    "base_sha": "781e58de103e2f052c33f9be57cc5a21f089e8e0",
+    "source_root_sha256": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+    "design_epoch_ref": "Garden-v15.5@63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+    "target_paths": [
+      "design_deltas/v15.11/rep/README.md",
+      "design_deltas/v15.11/rep/GARDEN_v15.11_REP_CANDIDATE.md",
+      "design_deltas/v15.11/rep/CANDIDATE_MANIFEST.json",
+      "design_deltas/v15.11/rep/VALIDATION.md",
+      "workstreams/2026-09-22-v1511-rep-candidate.json"
+    ],
+    "target_symbols": ["V1511-REP-001","REP-001","REP-002","REP-003","REP-004","REP-005","REP-006","REP-007","REP-008"],
+    "semantic_domains": ["metacognitive representation escape","representation independence","verifier substantive independence"],
+    "affected_invariants": ["REP-001","REP-002","REP-003","REP-004","REP-005","REP-006","REP-007","REP-008"],
+    "affected_contracts": ["RepresentationPortfolio","RepresentationCoverageProfile","substantive verifier independence"],
+    "intended_effect": "Register an additive noncanonical v15.11 Representation Escape Principle candidate without changing canonical Garden semantics.",
+    "parallel_mode": "INDEPENDENT_COMPARISON"
+  },
+  "canonical_effect": "NONE",
+  "openrouter_calls": "NONE_USER_PAUSE_PRESERVED"
+}
