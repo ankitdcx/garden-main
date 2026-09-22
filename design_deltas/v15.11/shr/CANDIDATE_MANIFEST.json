@@ -1,0 +1,55 @@
+{
+  "schema": "GardenV1511CandidateManifest/v1",
+  "candidate_id": "V1511-SHR-001",
+  "title": "Search-History Resilience",
+  "status": "ADDITIVE_NONCANONICAL_CANDIDATE",
+  "canonical_effect": "NONE",
+  "base_sha": "daecae76e877daccf5bdf2a3ec64424afe7b0d0a",
+  "invariants": [
+    "SHR-001",
+    "SHR-002",
+    "SHR-003"
+  ],
+  "contracts": [
+    "RetainedSearchBase",
+    "RetainedFinding",
+    "SearchTrajectoryBinding",
+    "SearchRetentionReceipt"
+  ],
+  "search_modes": [
+    "CUMULATIVE",
+    "HISTORY_ISOLATED",
+    "SUBSTANTIVELY_INDEPENDENT"
+  ],
+  "dependencies": [
+    "existing Knowledge/Evidence/Proof admission",
+    "existing Compare/equivalence",
+    "existing EPI-DR/Research termination policy",
+    "existing CMUR/independence contracts",
+    "REP candidate",
+    "existing Dependency/requalification closure",
+    "existing resource/risk/search profiles"
+  ],
+  "nonclaims": [
+    "search completeness",
+    "universal novelty",
+    "history isolation implies independence",
+    "universal scalar discovery yield",
+    "new authority"
+  ],
+  "tests": [
+    "SHR-T001",
+    "SHR-T002",
+    "SHR-T003",
+    "SHR-T004",
+    "SHR-T005",
+    "SHR-T006",
+    "SHR-T007",
+    "SHR-T008",
+    "SHR-T009",
+    "SHR-T010",
+    "SHR-T011",
+    "SHR-T012"
+  ],
+  "openrouter_calls": "NONE_USER_PAUSE_PRESERVED"
+}
