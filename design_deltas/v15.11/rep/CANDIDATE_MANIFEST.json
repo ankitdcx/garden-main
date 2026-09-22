@@ -1,0 +1,45 @@
+{
+  "schema": "GardenV1511CandidateManifest/v1",
+  "candidate_id": "V1511-REP-001",
+  "title": "Representation Escape Principle",
+  "status": "ADDITIVE_NONCANONICAL_CANDIDATE",
+  "canonical_effect": "NONE",
+  "base_sha": "781e58de103e2f052c33f9be57cc5a21f089e8e0",
+  "invariants": [
+    "REP-001",
+    "REP-002",
+    "REP-003",
+    "REP-004",
+    "REP-005",
+    "REP-006",
+    "REP-007",
+    "REP-008"
+  ],
+  "contracts": [
+    "RepresentationPortfolio",
+    "RepresentationCoverageProfile"
+  ],
+  "tests": [
+    "REP-T001",
+    "REP-T002",
+    "REP-T003",
+    "REP-T004",
+    "REP-T005",
+    "REP-T006",
+    "REP-T007",
+    "REP-T008",
+    "REP-T009",
+    "REP-T010"
+  ],
+  "dependencies": [
+    "existing epistemic status semantics",
+    "existing hard constitutional gates"
+  ],
+  "nonclaims": [
+    "portfolio completeness",
+    "all meta-layers checked",
+    "unbounded representation discovery",
+    "automatic authority"
+  ],
+  "openrouter_calls": "NONE_USER_PAUSE_PRESERVED"
+}
