@@ -1,0 +1,90 @@
+{
+  "schema": "GardenCandidatePackageManifest/v1",
+  "candidate_id": "V1511-RCC-001",
+  "candidate_version": "v15.11",
+  "patch_id": "GARDEN-RCI-RCC-2026-09-22",
+  "revision": "1.4",
+  "date": "2026-09-22",
+  "status": "CANDIDATE_DESIGN_NOT_CANONICALLY_ADMITTED",
+  "package_kind": "ADDITIVE_PATCH_NOT_FULL_RELEASE",
+  "intended_predecessor": {
+    "version": "v15.10",
+    "exact_full_source_binding": "PENDING_TARGET_INTEGRATION"
+  },
+  "repository_base": {
+    "repository": "ankitdcx/garden-main",
+    "commit": "cf81a4dd2ab4770f6e6124e2ebd92a1563b97f24",
+    "canonical_release": "Garden v15.5",
+    "source_root_sha256": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+    "design_epoch_ref": "Garden-v15.5@63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598"
+  },
+  "source_patch": {
+    "name": "GARDEN-RCI-RCC-2026-09-22_FINAL_MERGED.md",
+    "revision": "1.3",
+    "sha256": "c37699a200e3bea85fedebf819d292c8668e748f73b5e1f4b23d8d5679c659e3"
+  },
+  "candidate_document": {
+    "path": "GARDEN_v15.11_RCC_CANDIDATE.md",
+    "bytes": 62481,
+    "sha256": "1d1cb7182668cacd1de23e34ecbfaad80a1bd7533367997cd91e1d5079899065"
+  },
+  "review_inputs": [
+    "Review 1",
+    "Review 2",
+    "Review 3 (six-finding operator review)",
+    "Review 4",
+    "Review 5 (additional evaluation)"
+  ],
+  "packaging_changes": [
+    "Assign v15.11 candidate identity",
+    "Correct Review 3 and Review 5 attribution",
+    "Add candidate lineage and validation links"
+  ],
+  "normative_sections_2_through_5": "UNCHANGED_FROM_MERGED_REVISION_1_3",
+  "coverage": {
+    "invariants": 10,
+    "operator_contracts": 3,
+    "specified_tests": 54,
+    "required_positive_cases": [
+      "009",
+      "014",
+      "019",
+      "024",
+      "027",
+      "029",
+      "032",
+      "040",
+      "044"
+    ]
+  },
+  "existing_candidate_ledger": {
+    "commit": "2d86894cbde364706463a3658f43dea41dcc0b6f",
+    "path": "design_deltas/v15.11/PENDING_CANDIDATES_2026-09-20.md",
+    "pr": 95,
+    "status_at_preflight": "CLOSED_UNMERGED_BRANCH_PRESERVED",
+    "superseded_by_this_patch": false
+  },
+  "validation": {
+    "document_structure": "PASS",
+    "normative_retention": "PASS",
+    "local_pr_intent_gate": "PASS",
+    "target_profile_binding": "PENDING",
+    "rcc_conformance_execution": "NOT_RUN",
+    "installed_gsl_module_suite": "NOT_RUN",
+    "independent_implementation_verification": "PENDING",
+    "canonical_admission": "NOT_GRANTED"
+  },
+  "canonical_effect": "NONE",
+  "runtime_effect": "NONE",
+  "new_top_level_engines": 0,
+  "new_authority_sources": 0,
+  "new_parallel_control_loops": 0,
+  "remaining_work": [
+    "Freeze current full v15.10 target and resolve owners, bootstrap and product-status references",
+    "Bind and admit domain-specific rule tables, thresholds, independence and enforcement profiles",
+    "Implement admission and continuing-authority enforcement",
+    "Execute the 54 RCC cases and affected existing regressions",
+    "Complete independent review and normal canonical admission"
+  ],
+  "openrouter_calls": 0
+}
