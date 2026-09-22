@@ -1,0 +1,34 @@
+{
+  "workstream": {
+    "schema": "GardenChatGPTWorkstreamIntent/v1",
+    "workstream_id": "chatgpt:v1511-shr-candidate-20260922",
+    "work_package_id": "V1511-SHR-001",
+    "branch": "chatgpt/v1511-shr-candidate-20260922",
+    "base_sha": "daecae76e877daccf5bdf2a3ec64424afe7b0d0a",
+    "dependency_intent_ids": ["chatgpt:v1511-rep-candidate:20260922"],
+    "integration_strategy": "DIRECT_IF_NO_COLLISION",
+    "status": "ACTIVE"
+  },
+  "agent_work_intent": {
+    "schema": "AgentWorkIntent/v1",
+    "intent_id": "chatgpt:v1511-shr-candidate:20260922",
+    "agent_id": "chatgpt-lead-integrator",
+    "work_package_id": "V1511-SHR-001",
+    "base_sha": "daecae76e877daccf5bdf2a3ec64424afe7b0d0a",
+    "target_paths": [
+      "design_deltas/v15.11/shr/README.md",
+      "design_deltas/v15.11/shr/GARDEN_v15.11_SHR_CANDIDATE.md",
+      "design_deltas/v15.11/shr/CANDIDATE_MANIFEST.json",
+      "design_deltas/v15.11/shr/VALIDATION.md",
+      "workstreams/2026-09-22-v1511-shr-candidate.json"
+    ],
+    "target_symbols": ["V1511-SHR-001","SHR-001","SHR-002","SHR-003"],
+    "semantic_domains": ["search-history resilience","cumulative reasoning","history-isolated search","retained search base"],
+    "affected_invariants": ["SHR-001","SHR-002","SHR-003"],
+    "affected_contracts": ["RetainedSearchBase","RetainedFinding","SearchTrajectoryBinding","SearchRetentionReceipt"],
+    "intended_effect": "Preserve the compact reviewed Search-History Resilience candidate as a noncanonical v15.11 delta without duplicating existing Knowledge, EPI-DR, CMUR, REP, Dependency or requalification machinery.",
+    "parallel_mode": "INDEPENDENT_COMPARISON"
+  },
+  "canonical_effect": "NONE",
+  "openrouter_calls": "NONE_USER_PAUSE_PRESERVED"
+}
