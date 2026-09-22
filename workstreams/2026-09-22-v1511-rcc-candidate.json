@@ -1,0 +1,65 @@
+{
+  "workstream": {
+    "schema": "GardenChatGPTWorkstreamIntent/v1",
+    "workstream_id": "chatgpt:v1511-rcc-candidate-20260922",
+    "work_package_id": "V1511-RCC-001",
+    "branch": "chatgpt/v1511-rcc-candidate-20260922",
+    "base_sha": "cf81a4dd2ab4770f6e6124e2ebd92a1563b97f24",
+    "dependency_intent_ids": [],
+    "integration_strategy": "DIRECT_IF_NO_COLLISION",
+    "draft_pr_created_before_substantial_edit": true,
+    "status": "ACTIVE"
+  },
+  "agent_work_intent": {
+    "schema": "AgentWorkIntent/v1",
+    "intent_id": "chatgpt:v1511-rcc-candidate:20260922",
+    "agent_id": "chatgpt-lead-integrator",
+    "work_package_id": "V1511-RCC-001",
+    "base_sha": "cf81a4dd2ab4770f6e6124e2ebd92a1563b97f24",
+    "source_root_sha256": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+    "design_epoch_ref": "Garden-v15.5@63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+    "target_paths": [
+      "design_deltas/v15.11/rcc/README.md",
+      "design_deltas/v15.11/rcc/GARDEN_v15.11_RCC_CANDIDATE.md",
+      "design_deltas/v15.11/rcc/CANDIDATE_MANIFEST.json",
+      "design_deltas/v15.11/rcc/VALIDATION.md",
+      "workstreams/2026-09-22-v1511-rcc-candidate.json"
+    ],
+    "target_symbols": [
+      "V1511-RCC-001",
+      "RCC-OP-A",
+      "RCC-OP-R",
+      "RCC-OP-I"
+    ],
+    "semantic_domains": [
+      "recursive control closure candidate preservation",
+      "v15.11 candidate documentation"
+    ],
+    "affected_invariants": [
+      "RCC-001",
+      "RCC-002",
+      "RCC-003",
+      "RCC-004",
+      "RCC-005",
+      "RCC-006",
+      "RCC-007",
+      "RCC-008",
+      "RCC-009",
+      "RCC-010"
+    ],
+    "affected_contracts": [
+      "RCI/CPI qualification candidate extensions"
+    ],
+    "intended_effect": "Register the supplied merged RCC specification as a noncanonical v15.11 additive candidate; preserve existing source and candidate ledgers; no runtime or canonical promotion.",
+    "parallel_mode": "INDEPENDENT_COMPARISON"
+  },
+  "prior_sweep": {
+    "pr": 95,
+    "state": "CLOSED_UNMERGED",
+    "head": "2d86894cbde364706463a3658f43dea41dcc0b6f",
+    "comparison": "Reviewed pending ledger and workstream: RCC specializes admission, assurance, authority and evolution themes; new subdirectory only. No candidate from that ledger is superseded, admitted or removed. Full semantic integration remains pending."
+  },
+  "canonical_effect": "NONE",
+  "openrouter_calls": "NONE_USER_PAUSE_PRESERVED"
+}
+
