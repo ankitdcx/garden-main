@@ -68,5 +68,31 @@
   },
   "review_status": "REVIEW_BLOCKED_PROVIDER_PIPELINE",
   "canonical_effect": "NONE",
-  "openrouter_calls": "NONE"
+  "openrouter_calls": "NONE",
+  "checkpoint": {
+    "observed_main_sha": "a9a1290e353a2c8c783edf5f5e8b4a121456a987",
+    "frozen_target_commit": "8ac4cee12e8a265bd41ce08679c1da72c3c625d1",
+    "review_packet_commit": "b8ce486ae9d0c4ce23c06ad100457d8db3b64ac9",
+    "review_packet_hash": "281d8aab03fa7f3ea16a2f0f1e2c795d40446050c06c1593b221093208a844a2",
+    "deterministic_tests": {
+      "targeted": "12_PASS",
+      "implementation_suite": "213_PASS_1_SKIPPED"
+    },
+    "manifest_check": "PASS_CANONICAL_SOURCE_ROOT_UNCHANGED",
+    "completed": [
+      "bounded candidate FunctionContract declaration",
+      "pure Decimal interval/reachability reference",
+      "distinct fail-closed result algebra",
+      "TEST-EH-18-001..007 direct reference tests",
+      "exact PUBLIC-only blind-review packet"
+    ],
+    "unresolved": [
+      "continuous-time and interval proof",
+      "measured real-time and solver-error evidence",
+      "fallback common-cause independence and protected resource floor",
+      "domain safety case and deployment qualification",
+      "authentic independent-family blind review, cross-examination and post-fix verification"
+    ],
+    "next_action": "Keep PR #108 draft and REVIEW_BLOCKED_PROVIDER_PIPELINE. When the existing qualified provider runner is available, dispatch the exact packet hash serially under shared accounting/privacy controls; consume authentic blind/cross-examination receipts, revise only supported findings, and rerun exact-head tests. Do not promote canon or merge before applicable gates."
+  }
 }
