@@ -1,0 +1,72 @@
+{
+  "workstream": {
+    "schema": "GardenChatGPTWorkstreamIntent/v1",
+    "workstream_id": "chatgpt:eh18-machine-qualification-20260923",
+    "work_package_id": "WP-DESIGN-CLOSURE-V15-7",
+    "branch": "chatgpt/eh18-machine-qualification-20260923",
+    "base_sha": "a9a1290e353a2c8c783edf5f5e8b4a121456a987",
+    "dependency_intent_ids": [],
+    "integration_strategy": "DIRECT_IF_NO_COLLISION",
+    "draft_pr_created_before_substantial_edit": true,
+    "status": "ACTIVE"
+  },
+  "agent_work_intent": {
+    "schema": "AgentWorkIntent/v1",
+    "intent_id": "chatgpt:eh18-machine-qualification:20260923",
+    "agent_id": "ChatGPT-Codex",
+    "work_package_id": "WP-DESIGN-CLOSURE-V15-7",
+    "base_sha": "a9a1290e353a2c8c783edf5f5e8b4a121456a987",
+    "source_root_sha256": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+    "design_epoch_ref": "Garden-v15.5@63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+    "target_paths": [
+      "design_deltas/v15.7/eh18/README.md",
+      "design_deltas/v15.7/eh18/FUNCTION_CONTRACT.json",
+      "implementation/garden_kernel/eh18_reference.py",
+      "implementation/tests/test_eh18_reference.py",
+      "reviews/v15.7/eh18/REVIEW_PACKET.json",
+      "workstreams/2026-09-23-eh18-machine-qualification.json"
+    ],
+    "target_symbols": [
+      "FC-EH18-REFERENCE-001",
+      "evaluate_handoff",
+      "takeover_recoverable_region",
+      "accept_actuator_command",
+      "EH18Disposition"
+    ],
+    "semantic_domains": [
+      "v15.7 EH-18 bounded tank reference qualification",
+      "interval reachability",
+      "handoff admission and stale-command fencing"
+    ],
+    "affected_invariants": [
+      "EH-18-001",
+      "EH-18-002",
+      "EH-18-003",
+      "EH-18-004",
+      "EH-18-005",
+      "EH-18-006",
+      "EH-18-007",
+      "EH-18-008",
+      "EH-18-009",
+      "EH-18-010",
+      "CCC-001..010"
+    ],
+    "affected_contracts": [
+      "CriticalContinuityContainmentContract SCHEMA-958DDFB791",
+      "SafeControlHandoffReceipt SCHEMA-8E127067C8",
+      "contain_critical_continuity"
+    ],
+    "intended_effect": "Add a non-activating executable reference and exact public review packet for the existing v15.7 EH-18 qualification obligation. Do not change canonical source, promote v15.7, or claim deployment safety.",
+    "parallel_mode": "INDEPENDENT_COMPARISON"
+  },
+  "candidate_binding": {
+    "release": "Garden v15.7",
+    "source_root_sha256": "eb4d5306a8f7dcca75f8cf7d60f6441bdf5b35bccb86ac2362b33f241af1591a",
+    "technical_sha256": "57535dc10839a6b278b0e05d257db5455e48cf376fdf1112f447e8b6257da68f",
+    "anchor": "[T-EH-18]",
+    "canonical": false
+  },
+  "review_status": "REVIEW_BLOCKED_PROVIDER_PIPELINE",
+  "canonical_effect": "NONE",
+  "openrouter_calls": "NONE"
+}
