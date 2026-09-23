@@ -1,0 +1,49 @@
+{
+  "candidate_id": "V1511-ERC-001",
+  "candidate_version": "v15.11",
+  "title": "Evaluation Reachability Closure",
+  "status": "EXPERIMENT_FIRST_ADDITIVE_NONCANONICAL_CANDIDATE",
+  "canonical_effect": "NONE",
+  "source_findings": [
+    "SCOUT-20260923-004",
+    "SCOUT-20260917-003"
+  ],
+  "observed_repository_base": "a9a1290e353a2c8c783edf5f5e8b4a121456a987",
+  "target": "v15.11 additive candidate set",
+  "owners_reused": [
+    "RCC",
+    "Security",
+    "Authority/HSA",
+    "Human-Effect Closure",
+    "Dependency",
+    "Revocation",
+    "Recovery",
+    "Evidence/Provenance",
+    "Audit",
+    "Resource/Budget"
+  ],
+  "new_top_level_architecture": false,
+  "new_theory": false,
+  "new_authority_source": false,
+  "added_semantics": [
+    "explicit transitive evaluation reachability qualification",
+    "persistent-state closure across worker restart",
+    "credential/identity minting as reachability expansion",
+    "cumulative action-budget reachability",
+    "detection-versus-prevention distinction in containment evidence"
+  ],
+  "admission_blockers": [
+    "exact authorized v15.10/v15.11 target-source semantic comparison",
+    "owner/duplicate reconciliation",
+    "bounded no-secrets staging experiment",
+    "affected regression/conformance execution",
+    "normal Garden review/admission"
+  ],
+  "source_evidence": [
+    {
+      "ref": "Garden_Scout_Process_and_Findings.md#SCOUT-20260923-004",
+      "class": "scout evidence record",
+      "note": "Operational incident lineage; generalization limited."
+    }
+  ]
+}
