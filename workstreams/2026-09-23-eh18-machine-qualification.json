@@ -71,17 +71,18 @@
   "openrouter_calls": "NONE",
   "checkpoint": {
     "observed_main_sha": "a9a1290e353a2c8c783edf5f5e8b4a121456a987",
-    "frozen_target_commit": "8ac4cee12e8a265bd41ce08679c1da72c3c625d1",
-    "review_packet_commit": "b8ce486ae9d0c4ce23c06ad100457d8db3b64ac9",
-    "review_packet_hash": "281d8aab03fa7f3ea16a2f0f1e2c795d40446050c06c1593b221093208a844a2",
+    "frozen_target_commit": "7d93849fed02a5c80014b19069d16fc87a15c524",
+    "review_packet_commit": "8465490001ec559854c419757fcf8d6402292120",
+    "review_packet_hash": "e1ecc6c6eb84bb7353f9d6883cb875e2c93418ab3e76e4baff7af7527fe01125",
     "deterministic_tests": {
-      "targeted": "12_PASS",
-      "implementation_suite": "213_PASS_1_SKIPPED"
+      "candidate_targeted": "12_PASS",
+      "baseline_implementation_suite": "201_PASS_1_SKIPPED"
     },
     "manifest_check": "PASS_CANONICAL_SOURCE_ROOT_UNCHANGED",
+    "ci_classification_repair": "Candidate executable was moved out of implementation/garden_kernel after CI correctly required production transport receipts. Net diff now keeps the reference inside design_deltas/v15.7/eh18/reference.",
     "completed": [
       "bounded candidate FunctionContract declaration",
-      "pure Decimal interval/reachability reference",
+      "candidate-contained pure Decimal interval/reachability reference",
       "distinct fail-closed result algebra",
       "TEST-EH-18-001..007 direct reference tests",
       "exact PUBLIC-only blind-review packet"
@@ -93,6 +94,6 @@
       "domain safety case and deployment qualification",
       "authentic independent-family blind review, cross-examination and post-fix verification"
     ],
-    "next_action": "Keep PR #108 draft and REVIEW_BLOCKED_PROVIDER_PIPELINE. When the existing qualified provider runner is available, dispatch the exact packet hash serially under shared accounting/privacy controls; consume authentic blind/cross-examination receipts, revise only supported findings, and rerun exact-head tests. Do not promote canon or merge before applicable gates."
+    "next_action": "Keep PR #108 draft and REVIEW_BLOCKED_PROVIDER_PIPELINE. When the existing qualified provider runner is available, dispatch exact packet e1ecc6c6eb84bb7353f9d6883cb875e2c93418ab3e76e4baff7af7527fe01125 serially under shared accounting/privacy controls; consume authentic blind/cross-examination receipts, revise only supported findings, and rerun exact-head tests. Do not promote canon or merge before applicable gates."
   }
 }
