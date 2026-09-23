@@ -6,7 +6,7 @@ import json
 from pathlib import Path
 import unittest
 
-from garden_kernel.eh18_reference import (
+from eh18_reference import (
     CommandDisposition,
     EH18Disposition,
     EH18HandoffRequest,
@@ -24,7 +24,7 @@ from garden_kernel.function_contracts import (
 
 
 D = Decimal
-ROOT = Path(__file__).resolve().parents[2]
+ROOT = Path(__file__).resolve().parents[4]
 
 
 def admitted_request(**changes: object) -> EH18HandoffRequest:
@@ -66,7 +66,7 @@ class EH18ReferenceTests(unittest.TestCase):
         report = audit_function_contract_coverage(ROOT, registry)
         records = {record.identity: record for record in report.functions}
         declared = (
-            "implementation/garden_kernel/eh18_reference.py::evaluate_handoff"
+            "design_deltas/v15.7/eh18/reference/eh18_reference.py::evaluate_handoff"
         )
         self.assertEqual(records[declared].contract_id, "FC-EH18-REFERENCE-001")
         self.assertGreater(report.frontier_function_count, 0)

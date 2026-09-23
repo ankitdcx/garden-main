@@ -4,13 +4,13 @@
   "design_epoch": "v15.7",
   "canonical_source_root_sha256": "eb4d5306a8f7dcca75f8cf7d60f6441bdf5b35bccb86ac2362b33f241af1591a",
   "scope_globs": [
-    "implementation/garden_kernel/eh18_reference.py"
+    "design_deltas/v15.7/eh18/reference/eh18_reference.py"
   ],
   "semantic_compliance_proved": false,
   "contracts": [
     {
       "contract_id": "FC-EH18-REFERENCE-001",
-      "path": "implementation/garden_kernel/eh18_reference.py",
+      "path": "design_deltas/v15.7/eh18/reference/eh18_reference.py",
       "function": "evaluate_handoff",
       "affects": [
         "CANDIDATE_QUALIFICATION",
@@ -32,7 +32,7 @@
         "positive reference result is never represented as deployment safety"
       ],
       "test_refs": [
-        "implementation/tests/test_eh18_reference.py"
+        "design_deltas/v15.7/eh18/reference/test_eh18_reference.py"
       ]
     }
   ],

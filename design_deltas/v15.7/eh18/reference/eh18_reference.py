@@ -1,4 +1,4 @@
-"""Candidate-only executable reference for Garden v15.7 EH-18.
+"""Candidate-contained executable reference for Garden v15.7 EH-18.
 
 This module checks the bounded single-tank handoff profile.  It is not an
 actuator driver, deployment controller, safety certificate, or authority

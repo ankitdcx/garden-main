@@ -14,7 +14,7 @@ This package continues existing work identity `WP-DESIGN-CLOSURE-V15-7`. It does
 
 ## Smallest implemented reference
 
-`implementation/garden_kernel/eh18_reference.py` provides a pure, candidate-only pre-admission calculation:
+`design_deltas/v15.7/eh18/reference/eh18_reference.py` provides a pure, candidate-contained pre-admission calculation:
 
 1. exact Decimal arithmetic for the proposed `0.49 m` switch margin;
 2. the delay/error-dependent recoverable center interval and closed-form reachable interval;
