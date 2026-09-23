@@ -1,0 +1,41 @@
+{
+  "schema": "GardenFunctionContractRegistry/v1",
+  "registry_id": "GARDEN-V15-7-EH18-REFERENCE-v1",
+  "design_epoch": "v15.7",
+  "canonical_source_root_sha256": "eb4d5306a8f7dcca75f8cf7d60f6441bdf5b35bccb86ac2362b33f241af1591a",
+  "scope_globs": [
+    "implementation/garden_kernel/eh18_reference.py"
+  ],
+  "semantic_compliance_proved": false,
+  "contracts": [
+    {
+      "contract_id": "FC-EH18-REFERENCE-001",
+      "path": "implementation/garden_kernel/eh18_reference.py",
+      "function": "evaluate_handoff",
+      "affects": [
+        "CANDIDATE_QUALIFICATION",
+        "PHYSICAL_SAFETY",
+        "AUTHORITY",
+        "RECOVERY"
+      ],
+      "input_semantics": "One typed EH18HandoffRequest bound to the single-tank profile in Garden v15.7 [T-EH-18], including estimated state/error, remaining uncontrolled delay, epoch, authority, fallback, transfer, actuator, dependency, timing and resource dispositions.",
+      "output_semantics": "Exactly one EH18HandoffReceipt with a closed candidate-only disposition. ELIGIBLE_FOR_BOUNDED_SIMULATION authorizes no effect and is not SAFE, PASS, proof, certification or deployment admission.",
+      "error_semantics": "Malformed numeric inputs return MALFORMED; stale epoch, missing authority, unqualified fallback, untrusted state/actuator, violated assumptions, assurance loss and outside-recoverable-region conditions remain distinct.",
+      "unknown_semantics": "Incomplete timing/dependency evidence returns OUTCOME_UNKNOWN; unresolved resource bounds return RESOURCE_UNKNOWN. Neither may become eligible by confidence, retry or wording.",
+      "effect_semantics": "Pure deterministic reference calculation. It performs no actuation, state mutation, authority change, canonical promotion, provider call or deployment action.",
+      "proof_obligations": [
+        "EH-18-001..010 remain controlling candidate requirements",
+        "CCC-001..010 and canonical containment/handoff rules remain unchanged",
+        "continuous-time and interval threshold proof remains independent work",
+        "real timing, actuator dynamics, common-cause independence and solver-error evidence remain independent work",
+        "fresh authorization is required before primary return",
+        "positive reference result is never represented as deployment safety"
+      ],
+      "test_refs": [
+        "implementation/tests/test_eh18_reference.py"
+      ]
+    }
+  ],
+  "candidate_status": "REVIEW_PENDING_NOT_ADMITTED_NOT_ACTIVATED",
+  "canonical_effect": "NONE"
+}
