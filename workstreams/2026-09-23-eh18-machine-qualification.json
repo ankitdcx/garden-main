@@ -23,6 +23,7 @@
       "design_deltas/v15.7/eh18/FUNCTION_CONTRACT.json",
       "design_deltas/v15.7/eh18/reference/eh18_reference.py",
       "design_deltas/v15.7/eh18/reference/test_eh18_reference.py",
+      "reviews/v15.7/eh18/SOURCE_ANCHORS.json",
       "reviews/v15.7/eh18/REVIEW_PACKET.json",
       "workstreams/2026-09-23-eh18-machine-qualification.json"
     ],
@@ -71,11 +72,11 @@
   "openrouter_calls": "NONE",
   "checkpoint": {
     "observed_main_sha": "a9a1290e353a2c8c783edf5f5e8b4a121456a987",
-    "frozen_target_commit": "7d93849fed02a5c80014b19069d16fc87a15c524",
-    "review_packet_commit": "8465490001ec559854c419757fcf8d6402292120",
-    "review_packet_hash": "e1ecc6c6eb84bb7353f9d6883cb875e2c93418ab3e76e4baff7af7527fe01125",
+    "frozen_target_commit": "26d9ce794ff48d17ea3ac40438d9d45af688f938",
+    "review_packet_commit": "d309cea3b6c81cb49c0e5c3bd0ffbc543ebf7cd8",
+    "review_packet_hash": "e3f4cb56b2bfef59c9da7f0f4ef7a2e622cddde1ba7faf0129f169aba80ed586",
     "deterministic_tests": {
-      "candidate_targeted": "12_PASS",
+      "candidate_targeted": "13_PASS",
       "baseline_implementation_suite": "201_PASS_1_SKIPPED"
     },
     "manifest_check": "PASS_CANONICAL_SOURCE_ROOT_UNCHANGED",
@@ -85,7 +86,8 @@
       "candidate-contained pure Decimal interval/reachability reference",
       "distinct fail-closed result algebra",
       "TEST-EH-18-001..007 direct reference tests",
-      "exact PUBLIC-only blind-review packet"
+      "mechanically verified exact normative/canonical source-anchor excerpts",
+      "exact PUBLIC-only blind-review packet with source closure"
     ],
     "unresolved": [
       "continuous-time and interval proof",
@@ -94,6 +96,6 @@
       "domain safety case and deployment qualification",
       "authentic independent-family blind review, cross-examination and post-fix verification"
     ],
-    "next_action": "Keep PR #108 draft and REVIEW_BLOCKED_PROVIDER_PIPELINE. When the existing qualified provider runner is available, dispatch exact packet e1ecc6c6eb84bb7353f9d6883cb875e2c93418ab3e76e4baff7af7527fe01125 serially under shared accounting/privacy controls; consume authentic blind/cross-examination receipts, revise only supported findings, and rerun exact-head tests. Do not promote canon or merge before applicable gates."
+    "next_action": "Keep PR #108 draft and REVIEW_BLOCKED_PROVIDER_PIPELINE. When the existing qualified provider runner is available, dispatch exact packet e3f4cb56b2bfef59c9da7f0f4ef7a2e622cddde1ba7faf0129f169aba80ed586 serially under shared accounting/privacy controls; consume authentic blind/cross-examination receipts, revise only supported findings, and rerun exact-head tests. Do not promote canon or merge before applicable gates."
   }
 }
