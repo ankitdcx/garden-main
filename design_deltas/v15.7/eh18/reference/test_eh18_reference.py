@@ -2,6 +2,7 @@ from __future__ import annotations
 
 from dataclasses import replace
 from decimal import Decimal
+import hashlib
 import json
 from pathlib import Path
 import unittest
@@ -53,6 +54,31 @@ def admitted_request(**changes: object) -> EH18HandoffRequest:
 
 
 class EH18ReferenceTests(unittest.TestCase):
+    def test_review_source_anchors_match_bound_source_bytes(self) -> None:
+        anchor_path = ROOT / "reviews" / "v15.7" / "eh18" / "SOURCE_ANCHORS.json"
+        payload = json.loads(anchor_path.read_text(encoding="utf-8"))
+        self.assertEqual(payload["schema"], "GardenBoundedSourceAnchorSet/v1")
+        self.assertEqual(
+            {row["anchor_id"] for row in payload["anchors"]},
+            {
+                "T-EH-18_PROFILE_INVARIANTS_BINDING",
+                "T-EH-18_TESTS",
+                "CANONICAL_CONTINUITY_CONTRACT",
+                "CCC-001..010",
+                "TEST-CCC-001..006",
+            },
+        )
+        for row in payload["anchors"]:
+            source_bytes = (ROOT / row["source_path"]).read_bytes()
+            self.assertEqual(hashlib.sha256(source_bytes).hexdigest(), row["source_sha256"])
+            source_lines = source_bytes.decode("utf-8").splitlines(keepends=True)
+            excerpt = "".join(source_lines[row["start_line"] - 1 : row["end_line"]])
+            self.assertEqual(excerpt, row["text"])
+            self.assertEqual(
+                hashlib.sha256(excerpt.encode("utf-8")).hexdigest(),
+                row["excerpt_sha256"],
+            )
+
     def test_candidate_contract_is_bound_and_has_explicit_frontier(self) -> None:
         registry = load_function_contract_registry(
             ROOT / "design_deltas" / "v15.7" / "eh18" / "FUNCTION_CONTRACT.json"

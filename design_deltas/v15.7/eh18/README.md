@@ -33,6 +33,7 @@ This package continues existing work identity `WP-DESIGN-CLOSURE-V15-7`. It does
 
 - `TEST-EH-18-001..007` have direct deterministic reference tests.
 - The candidate contract parses, binds to the exact v15.7 manifest and enumerates every public function in its one-file scope as either declared or explicit frontier.
+- The blind-review packet includes exact, mechanically rechecked excerpts for `[T-EH-18]`, its seven tests, the canonical handoff contracts, `CCC-001..010` and `TEST-CCC-001..006`; reviewers need not trust the patch's paraphrase of its source obligations.
 - Canonical v15.5 and all five v15.7 candidate source files/manifests remain byte-identical.
 - No result sets `safety_certified=true`; no function performs an external effect.
 - CCC-001..010, stale-epoch rejection and fresh-authorization recovery remain stronger controlling obligations.
