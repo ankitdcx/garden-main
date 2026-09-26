@@ -11,6 +11,7 @@ from eh18_reference import (
     CommandDisposition,
     EH18Disposition,
     EH18HandoffRequest,
+    MinimumRiskResponseStatus,
     accept_actuator_command,
     evaluate_handoff,
     primary_return_allowed,
@@ -114,6 +115,14 @@ class EH18ReferenceTests(unittest.TestCase):
             admitted_request(remaining_uncontrolled_delay=D("0.21"))
         )
         self.assertEqual(receipt.disposition, EH18Disposition.ASSUMPTION_INVALID)
+        self.assertEqual(
+            receipt.command_disposition,
+            CommandDisposition.BLOCKED_HANDOFF_PREREQUISITE,
+        )
+        self.assertEqual(
+            receipt.minimum_risk_response_status,
+            MinimumRiskResponseStatus.REQUIRED_UNRESOLVED_DOMAIN_SAFETY_CASE,
+        )
         self.assertFalse(receipt.safety_certified)
 
     def test_eh18_003_violated_disturbance_profile_invalidates_assumptions(self) -> None:
@@ -124,10 +133,30 @@ class EH18ReferenceTests(unittest.TestCase):
         receipt = evaluate_handoff(admitted_request(estimated_level=D("0.10")))
         self.assertEqual(receipt.disposition, EH18Disposition.OUTSIDE_RECOVERABLE_REGION)
         self.assertEqual(receipt.observed_state_interval.lower, D("0.05"))
+        self.assertEqual(
+            receipt.command_disposition,
+            CommandDisposition.BLOCKED_HANDOFF_PREREQUISITE,
+        )
+        self.assertEqual(
+            receipt.minimum_risk_response_status,
+            MinimumRiskResponseStatus.REQUIRED_UNRESOLVED_DOMAIN_SAFETY_CASE,
+        )
+        self.assertIsNone(receipt.selected_minimum_risk_action)
+        self.assertIsNone(receipt.domain_safety_case_ref)
 
     def test_eh18_005_outside_envelope_records_assurance_loss(self) -> None:
         receipt = evaluate_handoff(admitted_request(estimated_level=D("-0.01")))
         self.assertEqual(receipt.disposition, EH18Disposition.ASSURANCE_LOST)
+        self.assertEqual(
+            receipt.command_disposition,
+            CommandDisposition.BLOCKED_HANDOFF_PREREQUISITE,
+        )
+        self.assertEqual(
+            receipt.minimum_risk_response_status,
+            MinimumRiskResponseStatus.REQUIRED_UNRESOLVED_DOMAIN_SAFETY_CASE,
+        )
+        self.assertIsNone(receipt.selected_minimum_risk_action)
+        self.assertIsNone(receipt.domain_safety_case_ref)
         self.assertFalse(receipt.safety_certified)
 
     def test_eh18_006_stale_transfer_and_old_command_are_rejected(self) -> None:
@@ -178,11 +207,41 @@ class EH18ReferenceTests(unittest.TestCase):
         actuator = evaluate_handoff(admitted_request(actuator_trusted=False))
         self.assertEqual(fallback.disposition, EH18Disposition.BLOCKED_FALLBACK_UNQUALIFIED)
         self.assertEqual(actuator.disposition, EH18Disposition.ACTUATOR_UNTRUSTED)
+        self.assertEqual(
+            fallback.command_disposition,
+            CommandDisposition.BLOCKED_HANDOFF_PREREQUISITE,
+        )
+        self.assertEqual(
+            actuator.command_disposition,
+            CommandDisposition.BLOCKED_HANDOFF_PREREQUISITE,
+        )
 
     def test_untyped_authority_is_malformed_not_truthy_authority(self) -> None:
         request = admitted_request(fresh_authority="yes")
         receipt = evaluate_handoff(request)  # type: ignore[arg-type]
         self.assertEqual(receipt.disposition, EH18Disposition.MALFORMED)
+        self.assertEqual(
+            receipt.command_disposition,
+            CommandDisposition.NOT_EVALUATED_MALFORMED,
+        )
+
+    def test_unknown_prerequisites_never_compose_to_command_acceptance(self) -> None:
+        for changes in (
+            {"dependency_roots_current": False},
+            {"timing_evidence_complete": False},
+            {"resource_bounds_known": False},
+        ):
+            with self.subTest(changes=changes):
+                receipt = evaluate_handoff(admitted_request(**changes))
+                self.assertNotEqual(receipt.disposition, EH18Disposition.ELIGIBLE_FOR_BOUNDED_SIMULATION)
+                self.assertEqual(
+                    receipt.command_disposition,
+                    CommandDisposition.BLOCKED_HANDOFF_PREREQUISITE,
+                )
+                self.assertEqual(
+                    receipt.minimum_risk_response_status,
+                    MinimumRiskResponseStatus.REQUIRED_UNRESOLVED_DOMAIN_SAFETY_CASE,
+                )
 
 
 if __name__ == "__main__":

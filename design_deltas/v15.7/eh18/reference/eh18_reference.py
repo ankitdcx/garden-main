@@ -42,6 +42,15 @@ class CommandDisposition(str, Enum):
     ACCEPTED = "ACCEPTED"
     REJECTED_STALE_EPOCH = "REJECTED_STALE_EPOCH"
     REJECTED_AUTHORITY = "REJECTED_AUTHORITY"
+    BLOCKED_HANDOFF_PREREQUISITE = "BLOCKED_HANDOFF_PREREQUISITE"
+    NOT_EVALUATED_MALFORMED = "NOT_EVALUATED_MALFORMED"
+
+
+class MinimumRiskResponseStatus(str, Enum):
+    NOT_REQUIRED_FOR_ELIGIBILITY = "NOT_REQUIRED_FOR_ELIGIBILITY"
+    REQUIRED_UNRESOLVED_DOMAIN_SAFETY_CASE = (
+        "REQUIRED_UNRESOLVED_DOMAIN_SAFETY_CASE"
+    )
 
 
 @dataclass(frozen=True)
@@ -86,6 +95,9 @@ class EH18HandoffReceipt:
     recoverable_center_interval: Interval | None
     delayed_reachable_interval: Interval | None
     command_disposition: CommandDisposition
+    minimum_risk_response_status: MinimumRiskResponseStatus
+    selected_minimum_risk_action: str | None = None
+    domain_safety_case_ref: str | None = None
     safety_certified: bool = False
     canonical_effect: str = "NONE"
 
@@ -224,12 +236,20 @@ def _receipt(
     reachable: Interval | None,
     command: CommandDisposition,
 ) -> EH18HandoffReceipt:
+    eligible = disposition is EH18Disposition.ELIGIBLE_FOR_BOUNDED_SIMULATION
+    if not eligible and command is CommandDisposition.ACCEPTED:
+        command = CommandDisposition.BLOCKED_HANDOFF_PREREQUISITE
     return EH18HandoffReceipt(
         disposition=disposition,
         observed_state_interval=observed,
         recoverable_center_interval=recoverable,
         delayed_reachable_interval=reachable,
         command_disposition=command,
+        minimum_risk_response_status=(
+            MinimumRiskResponseStatus.NOT_REQUIRED_FOR_ELIGIBILITY
+            if eligible
+            else MinimumRiskResponseStatus.REQUIRED_UNRESOLVED_DOMAIN_SAFETY_CASE
+        ),
     )
 
 
@@ -246,7 +266,7 @@ def evaluate_handoff(request: EH18HandoffRequest) -> EH18HandoffReceipt:
             None,
             None,
             None,
-            CommandDisposition.REJECTED_AUTHORITY,
+            CommandDisposition.NOT_EVALUATED_MALFORMED,
         )
 
     command = accept_actuator_command(
