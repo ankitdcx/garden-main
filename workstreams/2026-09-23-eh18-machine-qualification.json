@@ -1,0 +1,107 @@
+{
+  "workstream": {
+    "schema": "GardenChatGPTWorkstreamIntent/v1",
+    "workstream_id": "chatgpt:eh18-machine-qualification-20260923",
+    "work_package_id": "WP-DESIGN-CLOSURE-V15-7",
+    "branch": "chatgpt/eh18-machine-qualification-20260923",
+    "base_sha": "a9a1290e353a2c8c783edf5f5e8b4a121456a987",
+    "dependency_intent_ids": [],
+    "integration_strategy": "DIRECT_IF_NO_COLLISION",
+    "draft_pr_created_before_substantial_edit": true,
+    "status": "ACTIVE"
+  },
+  "agent_work_intent": {
+    "schema": "AgentWorkIntent/v1",
+    "intent_id": "chatgpt:eh18-machine-qualification:20260923",
+    "agent_id": "ChatGPT-Codex",
+    "work_package_id": "WP-DESIGN-CLOSURE-V15-7",
+    "base_sha": "a9a1290e353a2c8c783edf5f5e8b4a121456a987",
+    "source_root_sha256": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+    "design_epoch_ref": "Garden-v15.5@63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+    "target_paths": [
+      "design_deltas/v15.7/eh18/README.md",
+      "design_deltas/v15.7/eh18/FUNCTION_CONTRACT.json",
+      "design_deltas/v15.7/eh18/reference/eh18_reference.py",
+      "design_deltas/v15.7/eh18/reference/test_eh18_reference.py",
+      "reviews/v15.7/eh18/SOURCE_ANCHORS.json",
+      "reviews/v15.7/eh18/REVIEW_PACKET.json",
+      "workstreams/2026-09-23-eh18-machine-qualification.json"
+    ],
+    "target_symbols": [
+      "FC-EH18-REFERENCE-001",
+      "evaluate_handoff",
+      "takeover_recoverable_region",
+      "accept_actuator_command",
+      "EH18Disposition",
+      "CommandDisposition",
+      "MinimumRiskResponseStatus"
+    ],
+    "semantic_domains": [
+      "v15.7 EH-18 bounded tank reference qualification",
+      "interval reachability",
+      "handoff admission and stale-command fencing",
+      "composed command admission and minimum-risk response frontier"
+    ],
+    "affected_invariants": [
+      "EH-18-001",
+      "EH-18-002",
+      "EH-18-003",
+      "EH-18-004",
+      "EH-18-005",
+      "EH-18-006",
+      "EH-18-007",
+      "EH-18-008",
+      "EH-18-009",
+      "EH-18-010",
+      "CCC-001..010"
+    ],
+    "affected_contracts": [
+      "CriticalContinuityContainmentContract SCHEMA-958DDFB791",
+      "SafeControlHandoffReceipt SCHEMA-8E127067C8",
+      "contain_critical_continuity"
+    ],
+    "intended_effect": "Add a non-activating executable reference and exact public review packet for the existing v15.7 EH-18 qualification obligation. Do not change canonical source, promote v15.7, or claim deployment safety.",
+    "parallel_mode": "INDEPENDENT_COMPARISON"
+  },
+  "candidate_binding": {
+    "release": "Garden v15.7",
+    "source_root_sha256": "eb4d5306a8f7dcca75f8cf7d60f6441bdf5b35bccb86ac2362b33f241af1591a",
+    "technical_sha256": "57535dc10839a6b278b0e05d257db5455e48cf376fdf1112f447e8b6257da68f",
+    "anchor": "[T-EH-18]",
+    "canonical": false
+  },
+  "review_status": "REVIEW_BLOCKED_PROVIDER_PIPELINE",
+  "canonical_effect": "NONE",
+  "openrouter_calls": "NONE",
+  "checkpoint": {
+    "observed_main_sha": "a9a1290e353a2c8c783edf5f5e8b4a121456a987",
+    "frozen_target_commit": "39ac62360dd44f490e0fdf6217cdd0b43ddaa75a",
+    "review_packet_commit": "4ad3e14a48518b77ffcab44e46a1d0cece802ff6",
+    "review_packet_hash": "139e0493cad35c6ca4a79fb41a830b19a69da2d0ba69ccdb23a797761e1a4f9f",
+    "deterministic_tests": {
+      "candidate_targeted": "14_PASS",
+      "baseline_implementation_suite": "201_PASS_1_SKIPPED"
+    },
+    "manifest_check": "PASS_CANONICAL_SOURCE_ROOT_UNCHANGED",
+    "ci_classification_repair": "Candidate executable was moved out of implementation/garden_kernel after CI correctly required production transport receipts. Net diff now keeps the reference inside design_deltas/v15.7/eh18/reference.",
+    "completed": [
+      "bounded candidate FunctionContract declaration",
+      "candidate-contained pure Decimal interval/reachability reference",
+      "distinct fail-closed result algebra",
+      "composed command admission blocks ACCEPTED whenever the overall handoff is noneligible",
+      "minimum-risk action need is machine-visible but remains unresolved without a qualified domain safety case",
+      "partial deterministic reference checks for the locally executable portions of TEST-EH-18-001..007",
+      "mechanically verified exact normative/canonical source-anchor excerpts",
+      "exact PUBLIC-only blind-review packet with source closure"
+    ],
+    "unresolved": [
+      "continuous-time and interval proof",
+      "measured real-time and solver-error evidence",
+      "fallback common-cause independence and protected resource floor",
+      "qualified minimum-risk action selection under a domain loss function and safety case",
+      "deployment qualification",
+      "authentic independent-family blind review, cross-examination and post-fix verification"
+    ],
+    "next_action": "Keep PR #108 draft and REVIEW_BLOCKED_PROVIDER_PIPELINE. When the existing qualified provider runner is available, dispatch exact packet 139e0493cad35c6ca4a79fb41a830b19a69da2d0ba69ccdb23a797761e1a4f9f serially under shared accounting/privacy controls; consume authentic blind/cross-examination receipts, revise only supported findings, and rerun exact-head tests. Do not promote canon or merge before applicable gates."
+  }
+}
