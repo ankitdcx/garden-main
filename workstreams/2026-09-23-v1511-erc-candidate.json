@@ -30,6 +30,8 @@
     ],
     "target_symbols": [
       "V1511-ERC-001",
+      "EvaluationReachabilityProfile",
+      "EvaluationFixtureEvidenceRecord",
       "ERC-001",
       "ERC-002",
       "ERC-003",
@@ -38,14 +40,20 @@
       "ERC-006",
       "ERC-007",
       "ERC-008",
-      "EvaluationReachabilityProfile"
+      "ERC-009",
+      "ERC-010",
+      "ERC-011",
+      "ERC-012"
     ],
     "semantic_domains": [
       "evaluation containment",
       "transitive reachability",
       "persistent external state",
       "credential/identity expansion",
-      "cumulative action budgets"
+      "cumulative action budgets",
+      "evaluation fixture provenance",
+      "outcome grounding",
+      "stochastic evaluation evidence"
     ],
     "affected_invariants": [
       "ERC-001",
@@ -55,29 +63,39 @@
       "ERC-005",
       "ERC-006",
       "ERC-007",
-      "ERC-008"
+      "ERC-008",
+      "ERC-009",
+      "ERC-010",
+      "ERC-011",
+      "ERC-012"
     ],
     "affected_contracts": [
       "EvaluationReachabilityProfile",
+      "EvaluationFixtureEvidenceRecord",
       "RCC containment/exposure obligations",
       "Security",
+      "Evaluation",
+      "Evidence/Provenance",
       "Authority/HSA",
       "Human-Effect Closure",
       "Dependency",
       "Revocation",
       "Recovery",
-      "Evidence/Provenance",
-      "Audit"
+      "Audit",
+      "DO_NOTHING/Compare"
     ],
-    "intended_effect": "Register an experiment-first noncanonical v15.11 Evaluation Reachability Closure candidate and reconcile scout findings without changing canon, authority, runtime activation, or existing v15.11 candidates.",
+    "intended_effect": "Revise the experiment-first noncanonical v15.11 ERC candidate with tested fixture-coverage/provenance metadata, environment-grounded outcome evidence, conditional stochastic-measurement sufficiency and coverage-versus-prevalence boundaries; no canon, authority or runtime activation change.",
     "parallel_mode": "INDEPENDENT_COMPARISON"
   },
   "candidate_id": "V1511-ERC-001",
+  "candidate_revision": "1.1",
   "source_findings": [
     "SCOUT-20260923-004",
+    "SCOUT-20260925-005",
+    "SCOUT-20260917-002",
     "SCOUT-20260917-003"
   ],
   "canonical_effect": "NONE",
   "authority_effect": "NONE_PROPOSAL_ONLY",
-  "next_action": "EXACT_TARGET_SOURCE_COMPARISON_AND_BOUNDED_STAGING_EXPERIMENT"
+  "next_action": "EXACT_TARGET_SOURCE_COMPARISON_STAGING_EXPERIMENT_AND_INDEPENDENT_REVIEW"
 }
