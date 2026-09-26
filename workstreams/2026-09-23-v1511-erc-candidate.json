@@ -1,0 +1,101 @@
+{
+  "workstream": {
+    "schema": "GardenChatGPTWorkstreamIntent/v1",
+    "workstream_id": "chatgpt:v1511-erc-candidate-20260923",
+    "work_package_id": "V1511-ERC-001",
+    "branch": "v1511-scout-containment-20260923",
+    "base_sha": "a9a1290e353a2c8c783edf5f5e8b4a121456a987",
+    "dependency_intent_ids": [
+      "chatgpt:v1511-rcc-candidate:20260922",
+      "chatgpt:v1511-rep-candidate:20260922",
+      "chatgpt:v1511-shr-candidate:20260922"
+    ],
+    "integration_strategy": "DIRECT_IF_NO_COLLISION",
+    "status": "ACTIVE"
+  },
+  "agent_work_intent": {
+    "schema": "AgentWorkIntent/v1",
+    "intent_id": "chatgpt:v1511-erc-candidate:20260923",
+    "agent_id": "ChatGPT-GPT-5.6-Sol",
+    "work_package_id": "V1511-ERC-001",
+    "base_sha": "a9a1290e353a2c8c783edf5f5e8b4a121456a987",
+    "source_root_sha256": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+    "design_epoch_ref": "Garden-v15.5@63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+    "target_paths": [
+      "design_deltas/v15.11/erc/README.md",
+      "design_deltas/v15.11/erc/GARDEN_v15.11_ERC_CANDIDATE.md",
+      "design_deltas/v15.11/erc/CANDIDATE_MANIFEST.json",
+      "design_deltas/v15.11/erc/VALIDATION.md",
+      "workstreams/2026-09-23-v1511-erc-candidate.json"
+    ],
+    "target_symbols": [
+      "V1511-ERC-001",
+      "EvaluationReachabilityProfile",
+      "EvaluationFixtureEvidenceRecord",
+      "ERC-001",
+      "ERC-002",
+      "ERC-003",
+      "ERC-004",
+      "ERC-005",
+      "ERC-006",
+      "ERC-007",
+      "ERC-008",
+      "ERC-009",
+      "ERC-010",
+      "ERC-011",
+      "ERC-012"
+    ],
+    "semantic_domains": [
+      "evaluation containment",
+      "transitive reachability",
+      "persistent external state",
+      "credential/identity expansion",
+      "cumulative action budgets",
+      "evaluation fixture provenance",
+      "outcome grounding",
+      "stochastic evaluation evidence"
+    ],
+    "affected_invariants": [
+      "ERC-001",
+      "ERC-002",
+      "ERC-003",
+      "ERC-004",
+      "ERC-005",
+      "ERC-006",
+      "ERC-007",
+      "ERC-008",
+      "ERC-009",
+      "ERC-010",
+      "ERC-011",
+      "ERC-012"
+    ],
+    "affected_contracts": [
+      "EvaluationReachabilityProfile",
+      "EvaluationFixtureEvidenceRecord",
+      "RCC containment/exposure obligations",
+      "Security",
+      "Evaluation",
+      "Evidence/Provenance",
+      "Authority/HSA",
+      "Human-Effect Closure",
+      "Dependency",
+      "Revocation",
+      "Recovery",
+      "Audit",
+      "DO_NOTHING/Compare"
+    ],
+    "intended_effect": "Revise the experiment-first noncanonical v15.11 ERC candidate with tested fixture-coverage/provenance metadata, environment-grounded outcome evidence, conditional stochastic-measurement sufficiency and coverage-versus-prevalence boundaries; no canon, authority or runtime activation change.",
+    "parallel_mode": "INDEPENDENT_COMPARISON"
+  },
+  "candidate_id": "V1511-ERC-001",
+  "candidate_revision": "1.1",
+  "source_findings": [
+    "SCOUT-20260923-004",
+    "SCOUT-20260925-005",
+    "SCOUT-20260917-002",
+    "SCOUT-20260917-003"
+  ],
+  "canonical_effect": "NONE",
+  "authority_effect": "NONE_PROPOSAL_ONLY",
+  "next_action": "EXACT_TARGET_SOURCE_COMPARISON_STAGING_EXPERIMENT_AND_INDEPENDENT_REVIEW"
+}
