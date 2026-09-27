@@ -27,6 +27,9 @@ class EH18Disposition(str, Enum):
     ELIGIBLE_FOR_BOUNDED_SIMULATION = "ELIGIBLE_FOR_BOUNDED_SIMULATION"
     BLOCKED_AUTHORITY = "BLOCKED_AUTHORITY"
     BLOCKED_FALLBACK_UNQUALIFIED = "BLOCKED_FALLBACK_UNQUALIFIED"
+    BLOCKED_DEPENDENCY_INVALID = "BLOCKED_DEPENDENCY_INVALID"
+    BLOCKED_TIMING_EVIDENCE_INVALID = "BLOCKED_TIMING_EVIDENCE_INVALID"
+    BLOCKED_RESOURCE_INSUFFICIENT = "BLOCKED_RESOURCE_INSUFFICIENT"
     STATE_UNTRUSTED = "STATE_UNTRUSTED"
     OUTSIDE_RECOVERABLE_REGION = "OUTSIDE_RECOVERABLE_REGION"
     ACTUATOR_UNTRUSTED = "ACTUATOR_UNTRUSTED"
@@ -42,6 +45,9 @@ class CommandDisposition(str, Enum):
     ACCEPTED = "ACCEPTED"
     REJECTED_STALE_EPOCH = "REJECTED_STALE_EPOCH"
     REJECTED_AUTHORITY = "REJECTED_AUTHORITY"
+    REJECTED_AUTHORITY_STALE = "REJECTED_AUTHORITY_STALE"
+    BLOCKED_AUTHORITY_UNKNOWN = "BLOCKED_AUTHORITY_UNKNOWN"
+    BLOCKED_AUTHORITY_RESOURCE_UNKNOWN = "BLOCKED_AUTHORITY_RESOURCE_UNKNOWN"
     BLOCKED_HANDOFF_PREREQUISITE = "BLOCKED_HANDOFF_PREREQUISITE"
     NOT_EVALUATED_MALFORMED = "NOT_EVALUATED_MALFORMED"
 
@@ -51,6 +57,25 @@ class MinimumRiskResponseStatus(str, Enum):
     REQUIRED_UNRESOLVED_DOMAIN_SAFETY_CASE = (
         "REQUIRED_UNRESOLVED_DOMAIN_SAFETY_CASE"
     )
+
+
+class PrerequisiteStatus(str, Enum):
+    """Non-binary status retained for each handoff prerequisite."""
+
+    PASS = "PASS"
+    FAIL = "FAIL"
+    UNKNOWN = "UNKNOWN"
+    STALE = "STALE"
+    RESOURCE_UNKNOWN = "RESOURCE_UNKNOWN"
+
+
+class PrimaryReturnDisposition(str, Enum):
+    ALLOWED = "ALLOWED"
+    BLOCKED_SAFETY_OVERRIDE = "BLOCKED_SAFETY_OVERRIDE"
+    BLOCKED_FAILED_PREREQUISITE = "BLOCKED_FAILED_PREREQUISITE"
+    BLOCKED_UNKNOWN = "BLOCKED_UNKNOWN"
+    BLOCKED_STALE = "BLOCKED_STALE"
+    BLOCKED_RESOURCE_UNKNOWN = "BLOCKED_RESOURCE_UNKNOWN"
 
 
 @dataclass(frozen=True)
@@ -79,13 +104,13 @@ class EH18HandoffRequest:
     remaining_uncontrolled_delay: Decimal
     transfer_epoch: int
     current_actuation_epoch: int
-    fresh_authority: bool
-    fallback_qualified: bool
-    transfer_authenticated: bool
-    actuator_trusted: bool
-    dependency_roots_current: bool
-    timing_evidence_complete: bool
-    resource_bounds_known: bool
+    authority_status: PrerequisiteStatus
+    fallback_qualification_status: PrerequisiteStatus
+    transfer_authentication_status: PrerequisiteStatus
+    actuator_trust_status: PrerequisiteStatus
+    dependency_status: PrerequisiteStatus
+    timing_evidence_status: PrerequisiteStatus
+    resource_status: PrerequisiteStatus
 
 
 @dataclass(frozen=True)
@@ -96,6 +121,7 @@ class EH18HandoffReceipt:
     delayed_reachable_interval: Interval | None
     command_disposition: CommandDisposition
     minimum_risk_response_status: MinimumRiskResponseStatus
+    prerequisite_statuses: tuple[tuple[str, PrerequisiteStatus], ...]
     selected_minimum_risk_action: str | None = None
     domain_safety_case_ref: str | None = None
     safety_certified: bool = False
@@ -126,14 +152,14 @@ def _request_types_valid(request: EH18HandoffRequest) -> bool:
         request.monitor_phase,
         request.remaining_uncontrolled_delay,
     )
-    boolean_fields = (
-        request.fresh_authority,
-        request.fallback_qualified,
-        request.transfer_authenticated,
-        request.actuator_trusted,
-        request.dependency_roots_current,
-        request.timing_evidence_complete,
-        request.resource_bounds_known,
+    prerequisite_fields = (
+        request.authority_status,
+        request.fallback_qualification_status,
+        request.transfer_authentication_status,
+        request.actuator_trust_status,
+        request.dependency_status,
+        request.timing_evidence_status,
+        request.resource_status,
     )
     epochs_are_ints = all(
         isinstance(value, int) and not isinstance(value, bool) and value >= 0
@@ -141,8 +167,22 @@ def _request_types_valid(request: EH18HandoffRequest) -> bool:
     )
     return (
         all(_valid_finite(value) for value in decimal_fields)
-        and all(isinstance(value, bool) for value in boolean_fields)
+        and all(isinstance(value, PrerequisiteStatus) for value in prerequisite_fields)
         and epochs_are_ints
+    )
+
+
+def _prerequisite_statuses(
+    request: EH18HandoffRequest,
+) -> tuple[tuple[str, PrerequisiteStatus], ...]:
+    return (
+        ("authority", request.authority_status),
+        ("fallback_qualification", request.fallback_qualification_status),
+        ("transfer_authentication", request.transfer_authentication_status),
+        ("actuator_trust", request.actuator_trust_status),
+        ("dependency", request.dependency_status),
+        ("timing_evidence", request.timing_evidence_status),
+        ("resource", request.resource_status),
     )
 
 
@@ -203,30 +243,62 @@ def reachable_interval_during_delay(
 def accept_actuator_command(
     command_epoch: int,
     current_actuation_epoch: int,
-    authority_current: bool,
+    authority_status: PrerequisiteStatus,
 ) -> CommandDisposition:
-    """Fence old/future epochs and commands lacking current authority."""
+    """Fence old/future epochs and preserve non-binary authority status."""
 
+    if (
+        not isinstance(command_epoch, int)
+        or isinstance(command_epoch, bool)
+        or command_epoch < 0
+        or not isinstance(current_actuation_epoch, int)
+        or isinstance(current_actuation_epoch, bool)
+        or current_actuation_epoch < 0
+        or not isinstance(authority_status, PrerequisiteStatus)
+    ):
+        return CommandDisposition.NOT_EVALUATED_MALFORMED
     if command_epoch != current_actuation_epoch:
         return CommandDisposition.REJECTED_STALE_EPOCH
-    if not authority_current:
+    if authority_status is PrerequisiteStatus.FAIL:
         return CommandDisposition.REJECTED_AUTHORITY
+    if authority_status is PrerequisiteStatus.STALE:
+        return CommandDisposition.REJECTED_AUTHORITY_STALE
+    if authority_status is PrerequisiteStatus.UNKNOWN:
+        return CommandDisposition.BLOCKED_AUTHORITY_UNKNOWN
+    if authority_status is PrerequisiteStatus.RESOURCE_UNKNOWN:
+        return CommandDisposition.BLOCKED_AUTHORITY_RESOURCE_UNKNOWN
     return CommandDisposition.ACCEPTED
 
 
 def primary_return_allowed(
     *,
-    root_cause_closed: bool,
-    revalidated: bool,
-    fresh_authority: bool,
-    inside_valid_envelope: bool,
+    root_cause_status: PrerequisiteStatus,
+    revalidation_status: PrerequisiteStatus,
+    authority_status: PrerequisiteStatus,
+    envelope_status: PrerequisiteStatus,
     safety_override_requested: bool = False,
-) -> bool:
-    """Require all EH-18 return conditions; an override never restores primary."""
+) -> PrimaryReturnDisposition:
+    """Preserve non-binary return conditions; an override never restores primary."""
 
     if safety_override_requested:
-        return False
-    return root_cause_closed and revalidated and fresh_authority and inside_valid_envelope
+        return PrimaryReturnDisposition.BLOCKED_SAFETY_OVERRIDE
+    statuses = (
+        root_cause_status,
+        revalidation_status,
+        authority_status,
+        envelope_status,
+    )
+    if not all(isinstance(status, PrerequisiteStatus) for status in statuses):
+        return PrimaryReturnDisposition.BLOCKED_UNKNOWN
+    if PrerequisiteStatus.STALE in statuses:
+        return PrimaryReturnDisposition.BLOCKED_STALE
+    if PrerequisiteStatus.RESOURCE_UNKNOWN in statuses:
+        return PrimaryReturnDisposition.BLOCKED_RESOURCE_UNKNOWN
+    if PrerequisiteStatus.UNKNOWN in statuses:
+        return PrimaryReturnDisposition.BLOCKED_UNKNOWN
+    if PrerequisiteStatus.FAIL in statuses:
+        return PrimaryReturnDisposition.BLOCKED_FAILED_PREREQUISITE
+    return PrimaryReturnDisposition.ALLOWED
 
 
 def _receipt(
@@ -235,6 +307,7 @@ def _receipt(
     recoverable: Interval | None,
     reachable: Interval | None,
     command: CommandDisposition,
+    prerequisite_statuses: tuple[tuple[str, PrerequisiteStatus], ...] = (),
 ) -> EH18HandoffReceipt:
     eligible = disposition is EH18Disposition.ELIGIBLE_FOR_BOUNDED_SIMULATION
     if not eligible and command is CommandDisposition.ACCEPTED:
@@ -250,6 +323,7 @@ def _receipt(
             if eligible
             else MinimumRiskResponseStatus.REQUIRED_UNRESOLVED_DOMAIN_SAFETY_CASE
         ),
+        prerequisite_statuses=prerequisite_statuses,
     )
 
 
@@ -272,8 +346,9 @@ def evaluate_handoff(request: EH18HandoffRequest) -> EH18HandoffReceipt:
     command = accept_actuator_command(
         request.transfer_epoch,
         request.current_actuation_epoch,
-        request.fresh_authority,
+        request.authority_status,
     )
+    prerequisite_statuses = _prerequisite_statuses(request)
     nonnegative_profile_fields = (
         request.estimation_error,
         request.disturbance_abs_bound,
@@ -284,7 +359,14 @@ def evaluate_handoff(request: EH18HandoffRequest) -> EH18HandoffReceipt:
         request.remaining_uncontrolled_delay,
     )
     if not all(_valid_nonnegative(value) for value in nonnegative_profile_fields):
-        return _receipt(EH18Disposition.MALFORMED, None, None, None, command)
+        return _receipt(
+            EH18Disposition.MALFORMED,
+            None,
+            None,
+            None,
+            command,
+            prerequisite_statuses,
+        )
 
     observed = Interval(
         request.estimated_level - request.estimation_error,
@@ -301,25 +383,107 @@ def evaluate_handoff(request: EH18HandoffRequest) -> EH18HandoffReceipt:
     )
 
     if request.transfer_epoch != request.current_actuation_epoch:
-        return _receipt(EH18Disposition.STALE, observed, recoverable, reachable, command)
-    if not request.fresh_authority:
-        return _receipt(EH18Disposition.BLOCKED_AUTHORITY, observed, recoverable, reachable, command)
-    if not request.dependency_roots_current or not request.timing_evidence_complete:
-        return _receipt(EH18Disposition.OUTCOME_UNKNOWN, observed, recoverable, reachable, command)
-    if not request.resource_bounds_known:
-        return _receipt(EH18Disposition.RESOURCE_UNKNOWN, observed, recoverable, reachable, command)
-    if not request.fallback_qualified:
+        return _receipt(
+            EH18Disposition.STALE,
+            observed,
+            recoverable,
+            reachable,
+            command,
+            prerequisite_statuses,
+        )
+    if any(status is PrerequisiteStatus.STALE for _, status in prerequisite_statuses):
+        return _receipt(
+            EH18Disposition.STALE,
+            observed,
+            recoverable,
+            reachable,
+            command,
+            prerequisite_statuses,
+        )
+    if any(
+        status is PrerequisiteStatus.RESOURCE_UNKNOWN
+        for _, status in prerequisite_statuses
+    ):
+        return _receipt(
+            EH18Disposition.RESOURCE_UNKNOWN,
+            observed,
+            recoverable,
+            reachable,
+            command,
+            prerequisite_statuses,
+        )
+    if any(status is PrerequisiteStatus.UNKNOWN for _, status in prerequisite_statuses):
+        return _receipt(
+            EH18Disposition.OUTCOME_UNKNOWN,
+            observed,
+            recoverable,
+            reachable,
+            command,
+            prerequisite_statuses,
+        )
+    if request.authority_status is PrerequisiteStatus.FAIL:
+        return _receipt(
+            EH18Disposition.BLOCKED_AUTHORITY,
+            observed,
+            recoverable,
+            reachable,
+            command,
+            prerequisite_statuses,
+        )
+    if request.fallback_qualification_status is PrerequisiteStatus.FAIL:
         return _receipt(
             EH18Disposition.BLOCKED_FALLBACK_UNQUALIFIED,
             observed,
             recoverable,
             reachable,
             command,
+            prerequisite_statuses,
         )
-    if not request.transfer_authenticated:
-        return _receipt(EH18Disposition.STATE_UNTRUSTED, observed, recoverable, reachable, command)
-    if not request.actuator_trusted:
-        return _receipt(EH18Disposition.ACTUATOR_UNTRUSTED, observed, recoverable, reachable, command)
+    if request.transfer_authentication_status is PrerequisiteStatus.FAIL:
+        return _receipt(
+            EH18Disposition.STATE_UNTRUSTED,
+            observed,
+            recoverable,
+            reachable,
+            command,
+            prerequisite_statuses,
+        )
+    if request.actuator_trust_status is PrerequisiteStatus.FAIL:
+        return _receipt(
+            EH18Disposition.ACTUATOR_UNTRUSTED,
+            observed,
+            recoverable,
+            reachable,
+            command,
+            prerequisite_statuses,
+        )
+    if request.dependency_status is PrerequisiteStatus.FAIL:
+        return _receipt(
+            EH18Disposition.BLOCKED_DEPENDENCY_INVALID,
+            observed,
+            recoverable,
+            reachable,
+            command,
+            prerequisite_statuses,
+        )
+    if request.timing_evidence_status is PrerequisiteStatus.FAIL:
+        return _receipt(
+            EH18Disposition.BLOCKED_TIMING_EVIDENCE_INVALID,
+            observed,
+            recoverable,
+            reachable,
+            command,
+            prerequisite_statuses,
+        )
+    if request.resource_status is PrerequisiteStatus.FAIL:
+        return _receipt(
+            EH18Disposition.BLOCKED_RESOURCE_INSUFFICIENT,
+            observed,
+            recoverable,
+            reachable,
+            command,
+            prerequisite_statuses,
+        )
     if (
         request.estimation_error > MAX_ESTIMATION_ERROR
         or request.disturbance_abs_bound > MAX_DISTURBANCE
@@ -331,9 +495,23 @@ def evaluate_handoff(request: EH18HandoffRequest) -> EH18HandoffReceipt:
         or request.monitor_phase > MAX_MONITOR_PHASE
         or request.remaining_uncontrolled_delay > MAX_REMAINING_HANDOFF_DELAY
     ):
-        return _receipt(EH18Disposition.ASSUMPTION_INVALID, observed, recoverable, reachable, command)
+        return _receipt(
+            EH18Disposition.ASSUMPTION_INVALID,
+            observed,
+            recoverable,
+            reachable,
+            command,
+            prerequisite_statuses,
+        )
     if not observed.contained_by(Interval(ZERO, TEN)):
-        return _receipt(EH18Disposition.ASSURANCE_LOST, observed, recoverable, reachable, command)
+        return _receipt(
+            EH18Disposition.ASSURANCE_LOST,
+            observed,
+            recoverable,
+            reachable,
+            command,
+            prerequisite_statuses,
+        )
     if recoverable is None or not recoverable.contains(request.estimated_level):
         return _receipt(
             EH18Disposition.OUTSIDE_RECOVERABLE_REGION,
@@ -341,6 +519,7 @@ def evaluate_handoff(request: EH18HandoffRequest) -> EH18HandoffReceipt:
             recoverable,
             reachable,
             command,
+            prerequisite_statuses,
         )
     if not reachable.contained_by(Interval(ZERO, TEN)):
         return _receipt(
@@ -349,6 +528,7 @@ def evaluate_handoff(request: EH18HandoffRequest) -> EH18HandoffReceipt:
             recoverable,
             reachable,
             command,
+            prerequisite_statuses,
         )
     return _receipt(
         EH18Disposition.ELIGIBLE_FOR_BOUNDED_SIMULATION,
@@ -356,4 +536,5 @@ def evaluate_handoff(request: EH18HandoffRequest) -> EH18HandoffReceipt:
         recoverable,
         reachable,
         command,
+        prerequisite_statuses,
     )

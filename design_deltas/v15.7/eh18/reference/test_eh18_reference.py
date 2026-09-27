@@ -12,6 +12,8 @@ from eh18_reference import (
     EH18Disposition,
     EH18HandoffRequest,
     MinimumRiskResponseStatus,
+    PrerequisiteStatus,
+    PrimaryReturnDisposition,
     accept_actuator_command,
     evaluate_handoff,
     primary_return_allowed,
@@ -43,13 +45,13 @@ def admitted_request(**changes: object) -> EH18HandoffRequest:
         remaining_uncontrolled_delay=D("0.20"),
         transfer_epoch=4,
         current_actuation_epoch=4,
-        fresh_authority=True,
-        fallback_qualified=True,
-        transfer_authenticated=True,
-        actuator_trusted=True,
-        dependency_roots_current=True,
-        timing_evidence_complete=True,
-        resource_bounds_known=True,
+        authority_status=PrerequisiteStatus.PASS,
+        fallback_qualification_status=PrerequisiteStatus.PASS,
+        transfer_authentication_status=PrerequisiteStatus.PASS,
+        actuator_trust_status=PrerequisiteStatus.PASS,
+        dependency_status=PrerequisiteStatus.PASS,
+        timing_evidence_status=PrerequisiteStatus.PASS,
+        resource_status=PrerequisiteStatus.PASS,
     )
     return replace(request, **changes)
 
@@ -65,6 +67,7 @@ class EH18ReferenceTests(unittest.TestCase):
                 "T-EH-18_PROFILE_INVARIANTS_BINDING",
                 "T-EH-18_TESTS",
                 "CANONICAL_CONTINUITY_CONTRACT",
+                "CANONICAL_FUNCTION_RESULT_ALGEBRA",
                 "CCC-001..010",
                 "TEST-CCC-001..006",
             },
@@ -164,47 +167,58 @@ class EH18ReferenceTests(unittest.TestCase):
         self.assertEqual(receipt.disposition, EH18Disposition.STALE)
         self.assertEqual(receipt.command_disposition, CommandDisposition.REJECTED_STALE_EPOCH)
         self.assertEqual(
-            accept_actuator_command(3, 4, True),
+            accept_actuator_command(3, 4, PrerequisiteStatus.PASS),
             CommandDisposition.REJECTED_STALE_EPOCH,
         )
 
     def test_eh18_007_primary_return_requires_revalidation_and_fresh_authority(self) -> None:
-        self.assertFalse(
+        self.assertEqual(
             primary_return_allowed(
-                root_cause_closed=True,
-                revalidated=True,
-                fresh_authority=False,
-                inside_valid_envelope=True,
-            )
+                root_cause_status=PrerequisiteStatus.PASS,
+                revalidation_status=PrerequisiteStatus.PASS,
+                authority_status=PrerequisiteStatus.FAIL,
+                envelope_status=PrerequisiteStatus.PASS,
+            ),
+            PrimaryReturnDisposition.BLOCKED_FAILED_PREREQUISITE,
         )
-        self.assertTrue(
+        self.assertEqual(
             primary_return_allowed(
-                root_cause_closed=True,
-                revalidated=True,
-                fresh_authority=True,
-                inside_valid_envelope=True,
-            )
+                root_cause_status=PrerequisiteStatus.PASS,
+                revalidation_status=PrerequisiteStatus.PASS,
+                authority_status=PrerequisiteStatus.PASS,
+                envelope_status=PrerequisiteStatus.PASS,
+            ),
+            PrimaryReturnDisposition.ALLOWED,
         )
-        self.assertFalse(
+        self.assertEqual(
             primary_return_allowed(
-                root_cause_closed=True,
-                revalidated=True,
-                fresh_authority=True,
-                inside_valid_envelope=True,
+                root_cause_status=PrerequisiteStatus.PASS,
+                revalidation_status=PrerequisiteStatus.PASS,
+                authority_status=PrerequisiteStatus.PASS,
+                envelope_status=PrerequisiteStatus.PASS,
                 safety_override_requested=True,
-            )
+            ),
+            PrimaryReturnDisposition.BLOCKED_SAFETY_OVERRIDE,
         )
 
     def test_empty_recoverable_region_is_explicit(self) -> None:
         self.assertIsNone(takeover_recoverable_region(D("5"), D("0.05")))
 
     def test_incomplete_resource_binding_fails_closed(self) -> None:
-        receipt = evaluate_handoff(admitted_request(resource_bounds_known=False))
+        receipt = evaluate_handoff(
+            admitted_request(resource_status=PrerequisiteStatus.RESOURCE_UNKNOWN)
+        )
         self.assertEqual(receipt.disposition, EH18Disposition.RESOURCE_UNKNOWN)
 
     def test_unqualified_fallback_and_untrusted_actuator_are_distinct(self) -> None:
-        fallback = evaluate_handoff(admitted_request(fallback_qualified=False))
-        actuator = evaluate_handoff(admitted_request(actuator_trusted=False))
+        fallback = evaluate_handoff(
+            admitted_request(
+                fallback_qualification_status=PrerequisiteStatus.FAIL
+            )
+        )
+        actuator = evaluate_handoff(
+            admitted_request(actuator_trust_status=PrerequisiteStatus.FAIL)
+        )
         self.assertEqual(fallback.disposition, EH18Disposition.BLOCKED_FALLBACK_UNQUALIFIED)
         self.assertEqual(actuator.disposition, EH18Disposition.ACTUATOR_UNTRUSTED)
         self.assertEqual(
@@ -217,7 +231,7 @@ class EH18ReferenceTests(unittest.TestCase):
         )
 
     def test_untyped_authority_is_malformed_not_truthy_authority(self) -> None:
-        request = admitted_request(fresh_authority="yes")
+        request = admitted_request(authority_status="yes")
         receipt = evaluate_handoff(request)  # type: ignore[arg-type]
         self.assertEqual(receipt.disposition, EH18Disposition.MALFORMED)
         self.assertEqual(
@@ -227,13 +241,16 @@ class EH18ReferenceTests(unittest.TestCase):
 
     def test_unknown_prerequisites_never_compose_to_command_acceptance(self) -> None:
         for changes in (
-            {"dependency_roots_current": False},
-            {"timing_evidence_complete": False},
-            {"resource_bounds_known": False},
+            {"dependency_status": PrerequisiteStatus.UNKNOWN},
+            {"timing_evidence_status": PrerequisiteStatus.UNKNOWN},
+            {"resource_status": PrerequisiteStatus.RESOURCE_UNKNOWN},
         ):
             with self.subTest(changes=changes):
                 receipt = evaluate_handoff(admitted_request(**changes))
-                self.assertNotEqual(receipt.disposition, EH18Disposition.ELIGIBLE_FOR_BOUNDED_SIMULATION)
+                self.assertNotEqual(
+                    receipt.disposition,
+                    EH18Disposition.ELIGIBLE_FOR_BOUNDED_SIMULATION,
+                )
                 self.assertEqual(
                     receipt.command_disposition,
                     CommandDisposition.BLOCKED_HANDOFF_PREREQUISITE,
@@ -241,6 +258,143 @@ class EH18ReferenceTests(unittest.TestCase):
                 self.assertEqual(
                     receipt.minimum_risk_response_status,
                     MinimumRiskResponseStatus.REQUIRED_UNRESOLVED_DOMAIN_SAFETY_CASE,
+                )
+
+    def test_failed_unknown_stale_and_resource_unknown_remain_distinct(self) -> None:
+        cases = (
+            (
+                {"dependency_status": PrerequisiteStatus.FAIL},
+                EH18Disposition.BLOCKED_DEPENDENCY_INVALID,
+            ),
+            (
+                {"dependency_status": PrerequisiteStatus.UNKNOWN},
+                EH18Disposition.OUTCOME_UNKNOWN,
+            ),
+            (
+                {"dependency_status": PrerequisiteStatus.STALE},
+                EH18Disposition.STALE,
+            ),
+            (
+                {"dependency_status": PrerequisiteStatus.RESOURCE_UNKNOWN},
+                EH18Disposition.RESOURCE_UNKNOWN,
+            ),
+        )
+        for changes, expected in cases:
+            with self.subTest(changes=changes):
+                receipt = evaluate_handoff(admitted_request(**changes))
+                self.assertEqual(receipt.disposition, expected)
+                self.assertEqual(
+                    dict(receipt.prerequisite_statuses)["dependency"],
+                    changes["dependency_status"],
+                )
+                self.assertNotEqual(
+                    receipt.command_disposition,
+                    CommandDisposition.ACCEPTED,
+                )
+
+    def test_each_prerequisite_preserves_nonbinary_status(self) -> None:
+        fields = (
+            "authority_status",
+            "fallback_qualification_status",
+            "transfer_authentication_status",
+            "actuator_trust_status",
+            "dependency_status",
+            "timing_evidence_status",
+            "resource_status",
+        )
+        for field in fields:
+            for status, expected in (
+                (PrerequisiteStatus.UNKNOWN, EH18Disposition.OUTCOME_UNKNOWN),
+                (PrerequisiteStatus.STALE, EH18Disposition.STALE),
+                (
+                    PrerequisiteStatus.RESOURCE_UNKNOWN,
+                    EH18Disposition.RESOURCE_UNKNOWN,
+                ),
+            ):
+                with self.subTest(field=field, status=status):
+                    receipt = evaluate_handoff(admitted_request(**{field: status}))
+                    self.assertEqual(receipt.disposition, expected)
+                    self.assertEqual(
+                        dict(receipt.prerequisite_statuses)[
+                            field.removesuffix("_status")
+                        ],
+                        status,
+                    )
+
+    def test_explicit_prerequisite_failures_remain_owner_specific(self) -> None:
+        cases = (
+            ("authority_status", EH18Disposition.BLOCKED_AUTHORITY),
+            (
+                "fallback_qualification_status",
+                EH18Disposition.BLOCKED_FALLBACK_UNQUALIFIED,
+            ),
+            (
+                "transfer_authentication_status",
+                EH18Disposition.STATE_UNTRUSTED,
+            ),
+            ("actuator_trust_status", EH18Disposition.ACTUATOR_UNTRUSTED),
+            (
+                "dependency_status",
+                EH18Disposition.BLOCKED_DEPENDENCY_INVALID,
+            ),
+            (
+                "timing_evidence_status",
+                EH18Disposition.BLOCKED_TIMING_EVIDENCE_INVALID,
+            ),
+            (
+                "resource_status",
+                EH18Disposition.BLOCKED_RESOURCE_INSUFFICIENT,
+            ),
+        )
+        for field, expected in cases:
+            with self.subTest(field=field):
+                receipt = evaluate_handoff(
+                    admitted_request(**{field: PrerequisiteStatus.FAIL})
+                )
+                self.assertEqual(receipt.disposition, expected)
+                self.assertNotEqual(
+                    receipt.command_disposition,
+                    CommandDisposition.ACCEPTED,
+                )
+
+    def test_authority_status_is_preserved_through_command_fencing(self) -> None:
+        cases = (
+            (PrerequisiteStatus.FAIL, CommandDisposition.REJECTED_AUTHORITY),
+            (
+                PrerequisiteStatus.UNKNOWN,
+                CommandDisposition.BLOCKED_AUTHORITY_UNKNOWN,
+            ),
+            (
+                PrerequisiteStatus.STALE,
+                CommandDisposition.REJECTED_AUTHORITY_STALE,
+            ),
+            (
+                PrerequisiteStatus.RESOURCE_UNKNOWN,
+                CommandDisposition.BLOCKED_AUTHORITY_RESOURCE_UNKNOWN,
+            ),
+        )
+        for status, expected in cases:
+            with self.subTest(status=status):
+                self.assertEqual(accept_actuator_command(4, 4, status), expected)
+
+    def test_primary_return_preserves_nonbinary_prerequisite_states(self) -> None:
+        for status, expected in (
+            (PrerequisiteStatus.UNKNOWN, PrimaryReturnDisposition.BLOCKED_UNKNOWN),
+            (PrerequisiteStatus.STALE, PrimaryReturnDisposition.BLOCKED_STALE),
+            (
+                PrerequisiteStatus.RESOURCE_UNKNOWN,
+                PrimaryReturnDisposition.BLOCKED_RESOURCE_UNKNOWN,
+            ),
+        ):
+            with self.subTest(status=status):
+                self.assertEqual(
+                    primary_return_allowed(
+                        root_cause_status=PrerequisiteStatus.PASS,
+                        revalidation_status=status,
+                        authority_status=PrerequisiteStatus.PASS,
+                        envelope_status=PrerequisiteStatus.PASS,
+                    ),
+                    expected,
                 )
 
 
