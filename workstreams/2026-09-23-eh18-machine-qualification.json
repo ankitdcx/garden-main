@@ -34,13 +34,16 @@
       "accept_actuator_command",
       "EH18Disposition",
       "CommandDisposition",
-      "MinimumRiskResponseStatus"
+      "MinimumRiskResponseStatus",
+      "PrerequisiteStatus",
+      "PrimaryReturnDisposition"
     ],
     "semantic_domains": [
       "v15.7 EH-18 bounded tank reference qualification",
       "interval reachability",
       "handoff admission and stale-command fencing",
-      "composed command admission and minimum-risk response frontier"
+      "composed command admission and minimum-risk response frontier",
+      "typed prerequisite and primary-return result algebra"
     ],
     "affected_invariants": [
       "EH-18-001",
@@ -53,14 +56,16 @@
       "EH-18-008",
       "EH-18-009",
       "EH-18-010",
-      "CCC-001..010"
+      "CCC-001..010",
+      "FUNC-004..010",
+      "RESULT-ALG-001..008"
     ],
     "affected_contracts": [
       "CriticalContinuityContainmentContract SCHEMA-958DDFB791",
       "SafeControlHandoffReceipt SCHEMA-8E127067C8",
       "contain_critical_continuity"
     ],
-    "intended_effect": "Add a non-activating executable reference and exact public review packet for the existing v15.7 EH-18 qualification obligation. Do not change canonical source, promote v15.7, or claim deployment safety.",
+    "intended_effect": "Add a non-activating executable reference and exact public review packet for the existing v15.7 EH-18 qualification obligation; preserve FAIL, UNKNOWN, STALE and RESOURCE_UNKNOWN across handoff and primary-return prerequisites instead of collapsing them into booleans. Do not change canonical source, promote v15.7, select a physical response, or claim deployment safety.",
     "parallel_mode": "INDEPENDENT_COMPARISON"
   },
   "candidate_binding": {
@@ -75,11 +80,11 @@
   "openrouter_calls": "NONE",
   "checkpoint": {
     "observed_main_sha": "a9a1290e353a2c8c783edf5f5e8b4a121456a987",
-    "frozen_target_commit": "39ac62360dd44f490e0fdf6217cdd0b43ddaa75a",
-    "review_packet_commit": "4ad3e14a48518b77ffcab44e46a1d0cece802ff6",
-    "review_packet_hash": "139e0493cad35c6ca4a79fb41a830b19a69da2d0ba69ccdb23a797761e1a4f9f",
+    "frozen_target_commit": "0a56cda551f68a66bf832e2a63eea586d863fc40",
+    "review_packet_commit": "65edc3b2a5c2094ab86492f9b8bc2c3b99fc0dff",
+    "review_packet_hash": "5de0b72a0b48959b0d529723f206857a03624707cd7c54efdfb1aad489bdaa53",
     "deterministic_tests": {
-      "candidate_targeted": "14_PASS",
+      "candidate_targeted": "19_PASS",
       "baseline_implementation_suite": "201_PASS_1_SKIPPED"
     },
     "manifest_check": "PASS_CANONICAL_SOURCE_ROOT_UNCHANGED",
@@ -90,8 +95,10 @@
       "distinct fail-closed result algebra",
       "composed command admission blocks ACCEPTED whenever the overall handoff is noneligible",
       "minimum-risk action need is machine-visible but remains unresolved without a qualified domain safety case",
+      "authority, fallback, transfer, actuator, dependency, timing and resource prerequisites preserve PASS, FAIL, UNKNOWN, STALE and RESOURCE_UNKNOWN",
+      "primary-return gating returns typed blocked states instead of a Boolean",
       "partial deterministic reference checks for the locally executable portions of TEST-EH-18-001..007",
-      "mechanically verified exact normative/canonical source-anchor excerpts",
+      "mechanically verified exact normative/canonical source-anchor excerpts including FUNC-001..010 and RESULT-ALG-001..008",
       "exact PUBLIC-only blind-review packet with source closure"
     ],
     "unresolved": [
@@ -102,6 +109,6 @@
       "deployment qualification",
       "authentic independent-family blind review, cross-examination and post-fix verification"
     ],
-    "next_action": "Keep PR #108 draft and REVIEW_BLOCKED_PROVIDER_PIPELINE. When the existing qualified provider runner is available, dispatch exact packet 139e0493cad35c6ca4a79fb41a830b19a69da2d0ba69ccdb23a797761e1a4f9f serially under shared accounting/privacy controls; consume authentic blind/cross-examination receipts, revise only supported findings, and rerun exact-head tests. Do not promote canon or merge before applicable gates."
+    "next_action": "Keep PR #108 draft and REVIEW_BLOCKED_PROVIDER_PIPELINE. When the existing qualified provider runner is available, dispatch exact packet 5de0b72a0b48959b0d529723f206857a03624707cd7c54efdfb1aad489bdaa53 serially under shared accounting/privacy controls; consume authentic blind/cross-examination receipts, revise only supported findings, and rerun exact-head tests. Do not promote canon or merge before applicable gates."
   }
 }
