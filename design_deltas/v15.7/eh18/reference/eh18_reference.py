@@ -76,6 +76,7 @@ class PrimaryReturnDisposition(str, Enum):
     BLOCKED_UNKNOWN = "BLOCKED_UNKNOWN"
     BLOCKED_STALE = "BLOCKED_STALE"
     BLOCKED_RESOURCE_UNKNOWN = "BLOCKED_RESOURCE_UNKNOWN"
+    MALFORMED = "MALFORMED"
 
 
 @dataclass(frozen=True)
@@ -139,7 +140,9 @@ def _valid_finite(value: Decimal) -> bool:
     return isinstance(value, Decimal) and value.is_finite()
 
 
-def _request_types_valid(request: EH18HandoffRequest) -> bool:
+def _request_types_valid(request: object) -> bool:
+    if not isinstance(request, EH18HandoffRequest):
+        return False
     decimal_fields = (
         request.estimated_level,
         request.estimation_error,
@@ -280,6 +283,8 @@ def primary_return_allowed(
 ) -> PrimaryReturnDisposition:
     """Preserve non-binary return conditions; an override never restores primary."""
 
+    if not isinstance(safety_override_requested, bool):
+        return PrimaryReturnDisposition.MALFORMED
     if safety_override_requested:
         return PrimaryReturnDisposition.BLOCKED_SAFETY_OVERRIDE
     statuses = (
@@ -289,7 +294,7 @@ def primary_return_allowed(
         envelope_status,
     )
     if not all(isinstance(status, PrerequisiteStatus) for status in statuses):
-        return PrimaryReturnDisposition.BLOCKED_UNKNOWN
+        return PrimaryReturnDisposition.MALFORMED
     if PrerequisiteStatus.STALE in statuses:
         return PrimaryReturnDisposition.BLOCKED_STALE
     if PrerequisiteStatus.RESOURCE_UNKNOWN in statuses:

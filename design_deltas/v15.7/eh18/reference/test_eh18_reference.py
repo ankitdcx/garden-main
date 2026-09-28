@@ -239,6 +239,17 @@ class EH18ReferenceTests(unittest.TestCase):
             CommandDisposition.NOT_EVALUATED_MALFORMED,
         )
 
+    def test_wrong_request_object_returns_malformed_receipt(self) -> None:
+        for request in (None, {}, object()):
+            with self.subTest(request=request):
+                receipt = evaluate_handoff(request)  # type: ignore[arg-type]
+                self.assertEqual(receipt.disposition, EH18Disposition.MALFORMED)
+                self.assertEqual(
+                    receipt.command_disposition,
+                    CommandDisposition.NOT_EVALUATED_MALFORMED,
+                )
+                self.assertFalse(receipt.safety_certified)
+
     def test_unknown_prerequisites_never_compose_to_command_acceptance(self) -> None:
         for changes in (
             {"dependency_status": PrerequisiteStatus.UNKNOWN},
@@ -396,6 +407,32 @@ class EH18ReferenceTests(unittest.TestCase):
                     ),
                     expected,
                 )
+
+    def test_primary_return_rejects_malformed_runtime_values(self) -> None:
+        valid = {
+            "root_cause_status": PrerequisiteStatus.PASS,
+            "revalidation_status": PrerequisiteStatus.PASS,
+            "authority_status": PrerequisiteStatus.PASS,
+            "envelope_status": PrerequisiteStatus.PASS,
+        }
+        for malformed_override in (None, 0, "", D("0")):
+            with self.subTest(malformed_override=malformed_override):
+                self.assertEqual(
+                    primary_return_allowed(
+                        **valid,
+                        safety_override_requested=malformed_override,  # type: ignore[arg-type]
+                    ),
+                    PrimaryReturnDisposition.MALFORMED,
+                )
+        self.assertEqual(
+            primary_return_allowed(
+                **{
+                    **valid,
+                    "root_cause_status": "PASS",  # type: ignore[dict-item]
+                }
+            ),
+            PrimaryReturnDisposition.MALFORMED,
+        )
 
 
 if __name__ == "__main__":

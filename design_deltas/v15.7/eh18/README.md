@@ -23,7 +23,8 @@ This package continues existing work identity `WP-DESIGN-CLOSURE-V15-7`. It does
 5. composed command admission that cannot remain `ACCEPTED` when any handoff prerequisite fails or is unknown;
 6. an explicit minimum-risk-response frontier: failed handoffs require a qualified domain safety case, while this non-activating reference selects no action;
 7. typed `PASS | FAIL | UNKNOWN | STALE | RESOURCE_UNKNOWN` prerequisite states, retained by owner-named field in the receipt rather than collapsed into booleans;
-8. a typed primary-return disposition that preserves failed, unknown, stale, resource-unknown and safety-override blocks.
+8. a typed primary-return disposition that preserves failed, unknown, stale, resource-unknown, malformed and safety-override blocks;
+9. total fail-closed handling for wrong request object types and falsey non-Boolean safety-override values, which cannot escape as exceptions or compose to `ALLOWED`.
 
 `ELIGIBLE_FOR_BOUNDED_SIMULATION` means only that the supplied case may proceed to the remaining trajectory, timing, proof and independent-review work. It is not `SAFE`, `PASS`, certification, authority or deployment permission.
 
@@ -36,7 +37,8 @@ This package continues existing work identity `WP-DESIGN-CLOSURE-V15-7`. It does
 
 - The locally executable arithmetic, admission and fencing portions of `TEST-EH-18-001..007` have direct deterministic reference checks. These checks do not complete bounded dynamics analysis, measured trajectories/timing, numerical-error accounting, minimum-risk action selection or deployment qualification.
 - `TEST-EH-18-004/005` failures cannot compose to command acceptance and explicitly return `REQUIRED_UNRESOLVED_DOMAIN_SAFETY_CASE` with no selected action or safety-case reference.
-- `FAIL`, `UNKNOWN`, `STALE` and `RESOURCE_UNKNOWN` remain distinct for every handoff prerequisite and in primary-return gating; the complete named status snapshot remains visible in the receipt.
+- `FAIL`, `UNKNOWN`, `STALE` and `RESOURCE_UNKNOWN` remain distinct for every handoff prerequisite and in primary-return gating; malformed runtime values remain `MALFORMED`; the complete named status snapshot remains visible in the receipt.
+- Wrong request object types return a non-authorizing `MALFORMED` receipt instead of raising before a receipt exists. Primary-return gating accepts only an actual Boolean override flag; `None`, `0`, empty strings and other falsey substitutes cannot compose to `ALLOWED`.
 - The candidate contract parses, binds to the exact v15.7 manifest and enumerates every public function in its one-file scope as either declared or explicit frontier.
 - The blind-review packet includes exact, mechanically rechecked excerpts for `[T-EH-18]`, its seven tests, the canonical handoff contracts, `FUNC-001..010`, `RESULT-ALG-001..008`, `CCC-001..010` and `TEST-CCC-001..006`; reviewers need not trust the patch's paraphrase of its source obligations.
 - Canonical v15.5 and all five v15.7 candidate source files/manifests remain byte-identical.
