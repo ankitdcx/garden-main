@@ -1,0 +1,23 @@
+{
+  "work_package_id": "V1511-REV2-001",
+  "date": "2026-09-30",
+  "title": "v15.11 Rev 2 meta-epistemic and authority hardening",
+  "status": "CANDIDATE_PRESERVED_PENDING_SOURCE_BINDING_TESTS_AND_ADMISSION",
+  "topology_change": false,
+  "change_class": "MAJOR_HARDENING_TOPOLOGY_PRESERVING",
+  "target_paths": [
+    "design_deltas/v15.11/rev2/README.md",
+    "design_deltas/v15.11/rev2/GARDEN_v15.11_REV2_HARDENING_CANDIDATE.md"
+  ],
+  "included": [
+    "SCD",
+    "COC",
+    "AOS",
+    "QSE",
+    "NO_EGO_FUNCTIONAL_AUTHORITY_LEAKAGE",
+    "HUMAN_SELF_GOVERNANCE_MINIMUM_NECESSARY_GOVERNANCE",
+    "EEI_STRATEGIC_TRUTHFULNESS"
+  ],
+  "automatic_admission": false,
+  "residual_unknown_question_risk": "PRESENT"
+}
