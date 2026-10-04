@@ -9,7 +9,7 @@
       "chatgpt:v1511-rcc-candidate:20260922"
     ],
     "integration_strategy": "INTEGRATION_BRANCH_IF_COLLISION",
-    "draft_pr_created_before_substantial_edit": false,
+    "draft_pr_created_before_substantial_edit": true,
     "status": "ACTIVE"
   },
   "agent_work_intent": {
