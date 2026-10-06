@@ -1,0 +1,80 @@
+GARDEN FREE USE / PUBLIC RELEASE NOTICE
+
+Effective date: 2026-10-06
+
+Garden is released for unrestricted public use.
+
+Anyone may copy, fork, merge, modify, adapt, implement, publish, redistribute,
+sublicense, commercialize, combine with other systems, rename, or use Garden
+material inside or outside Garden, for any purpose, without asking permission
+and without paying a fee.
+
+No approval by the original author, maintainer, Garden process, community,
+organization, or governance mechanism is required for use of the material.
+
+1. Software — BSD Zero Clause (0BSD)
+
+For software and source code authored by the Garden project owner:
+
+Permission to use, copy, modify, and/or distribute this software for any purpose
+with or without fee is hereby granted.
+
+THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH
+REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY AND
+FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT,
+INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS
+OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER
+TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF
+THIS SOFTWARE.
+
+2. Documentation, designs, specifications, and related material — CC0 1.0
+
+To the extent legally possible, Garden documentation, design text, specifications,
+schemas, diagrams, theories, descriptions, terminology, and other eligible material
+authored by the Garden project owner are dedicated to the public domain under
+Creative Commons CC0 1.0 Universal:
+https://creativecommons.org/publicdomain/zero/1.0/
+
+Where an idea, fact, concept, method, system, or principle is not subject to
+exclusive copyright in the first place, no separate Garden permission is required
+to use it.
+
+3. Patent permission
+
+To the extent the Garden project owner controls patent claims that would
+necessarily be infringed solely by making, using, selling, offering for sale,
+importing, implementing, modifying, combining, or distributing Garden material
+as disclosed in these repositories, the owner grants every person and entity a
+perpetual, worldwide, royalty-free, irrevocable, non-exclusive license under
+those claims for those activities.
+
+No fee, Garden membership, Garden compliance, economic contribution, tax,
+governance participation, attribution, or approval is required for this grant.
+
+4. Forks, merges, and incompatible versions
+
+Anyone may fork Garden, merge it into another project, change its rules, remove
+parts, rename it, create incompatible versions, or build something entirely
+different from it. There is no requirement to preserve a canonical Garden form.
+
+5. No maintenance, certification, or endorsement obligation
+
+Use of Garden does not make an implementation official, certified, safe, correct,
+or endorsed. The original author has no obligation to maintain, review, approve,
+support, govern, or update downstream uses.
+
+6. Third-party material
+
+This notice grants only rights controlled by the Garden project owner. Third-party
+software, libraries, model weights, datasets, trademarks, patents, or other
+materials remain subject to their own applicable licenses and rights notices.
+
+7. Earlier Garden restrictions
+
+Older repository files, snapshots, branches, commits, or documents may contain
+earlier restrictive or conditional Garden licensing language. For rights
+controlled by the Garden project owner, this root LICENSE supersedes those
+earlier project-imposed restrictions from 2026-10-06 forward.
+
+Garden is free to use. Take what is useful, change it, merge it, fork it, or
+ignore it.

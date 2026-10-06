@@ -1,6 +1,8 @@
-# Garden Main — Private Build Repository
+# Garden Main — Public Archive / Free Use
 
-Status: private implementation workspace.
+**Status: no longer an actively maintained personal project. Garden is released for unrestricted public use.**
+
+Anyone may copy, fork, merge, modify, implement, redistribute, commercialize, combine, rename, or use Garden material anywhere, inside or outside Garden, without permission or fee. See [LICENSE](LICENSE). No approval from the original author is required, and there is no maintainer or governance obligation.
 
 ## Latest working candidate: v15.7
 
@@ -17,8 +19,8 @@ An exact [v15.5 archival copy](canonical/archive/v15.5/SOURCE_MANIFEST.json) pre
 - Garden v15.5 / GSL v45.1 five-file canonical source is pinned under `canonical/current/`.
 - SCEP v1.1 remains the recursive construction/bootstrap seed where applicable; it is not the current Garden release identifier.
 - OCF + CPI + TML + CMUR + SCEP remain construction/review machinery around the canonical source.
-- User remains Garden Human-in-the-Loop for major Garden-level design decisions.
-- No repository content grants an external licence or transfers Garden ownership/IP.
+- Historical Garden governance/design roles remain part of the archived design record only; they are not conditions on reuse.
+- Repository material controlled by the project owner is freely released under the root [LICENSE](LICENSE), including outside-Garden and commercial use.
 - `described != proved != implemented != empirically validated != certified`
 
 ## How this repository works
@@ -57,4 +59,4 @@ Public `garden-swarm` findings enter only through the WP-005 candidate-intake/cr
 Do not treat chatbot consensus as proof.
 Do not let generated code modify its own protected verifier.
 Do not turn technical reputation into governance authority.
-Do not make the repository public without an intentional IP/disclosure decision.
+The repository is intentionally public and released for unrestricted reuse under [LICENSE](LICENSE).
