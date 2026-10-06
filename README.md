@@ -2,6 +2,12 @@
 
 Status: private implementation workspace.
 
+## Universal free use — proposed policy
+
+**Garden ideas are intended to be free for everyone, everywhere, for every purpose, forever, inside or outside Garden, at each user's own responsibility. No permission fee, royalty, or compulsory design fee would be required. Any voluntary payment would be optional.**
+
+Status: inactive draft proposal. This notice records the originator's requested foundational change; it does not activate a licence or waive rights. See [the proposed free-use policy](LICENSE.PROPOSED.md) and [the owner's instruction](OWNER_INSTRUCTION_2026-10-06.md).
+
 ## Latest working candidate: v15.7
 
 [Garden v15.7](canonical/candidates/v15.7/README.md) carries the complete prepared v15.6 draft forward and adds five registered programs: TRACE, focused cognitive increment, cognitive qualification, comparative coverage and design closure. The user authorized a direct version jump. Its canonical predecessor remains v15.5; no intermediate v15.6 promotion is claimed. See [integration evidence](reviews/v15.7/SOURCE-INTEGRATION-RECEIPT.json) and [release status](reviews/v15.7/RELEASE-STATUS.md).
