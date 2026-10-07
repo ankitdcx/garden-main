@@ -1,0 +1,501 @@
+GARDEN 15.x — CORE TREE
+Structural integration candidate v0.8.1 | 23 September 2026
+
+PURPOSE AND STATUS
+
+This is the working structure for rebuilding Garden as one coherent design.
+It gives existing rules and proposed upgrades a place to attach; it does not
+rewrite their full content. The old five-file and proposed three-source
+packages are inputs to the rebuild, not a required file layout for the result.
+The target input set includes the exact v15.9.1 suite, separately identified
+v15.10 candidates, and other additions. Preserve each item's original
+current/candidate/research and qualification status. A tree heading never
+admits a candidate or changes a rule.
+The attached GARDEN_TECHNICAL_proposed_v15.10.txt is an additional source
+candidate, explicitly WORKING CANDIDATE_NOT_CANONICALLY_ADMITTED.
+Five newly attached v15.9.1 text files are an EARLIER BYTE-PREFIX EDITION
+of the manifest-verified v15.9.1 COMPLETE archive; see source binding below.
+
+This is a structural candidate, not a new canonical Garden release, a
+completed atomic register, or a GROUP_REVIEW PASS. The tree is ready to guide
+the coherent rewrite now. Unit-by-unit retention checks come before a claim
+that the rewrite includes everything.
+
+REBUILD RULE
+
+Keep the meaning and history of every material old part; do not require every
+old part to remain a separate active part. Duplicates may merge, rules may be
+superseded by a governed decision, and real conflicts remain visible. Every
+outcome is recorded. The new design must eventually stand on its own without
+asking readers to piece together the old files.
+
+THE TREE AND ITS CROSS-CUTTING VIEWS
+
+  0 ROOT          Purpose; binding rights, authority and other hard limits
+    |
+  1 SUBSTRATE     Typed meaning, qualified identity and source projections
+    |
+  2 TRUNK         Common control, knowledge, checks and change mechanisms
+    |
+  3 BOUNDARY      Contracts for theories, profiles, institutions, tools and
+                  implementations that grow outward
+
+  R REGISTER      Exact source-to-owner records and historic dispositions;
+                  supports every level, not a new source of authority
+  G RELEASE GATE  Two-way retention and independent review before any claim
+                  that the new design preserves its declared predecessors
+
+One semantic assertion has one versioned, scoped controlling owner in the
+resulting design. Record its former owner as history; assigning a new owner
+requires a qualified migration outcome. The tree is a readable home, not the
+whole architecture. The same qualified contracts also yield:
+  - an effect/control view: applicable gates, times, order and fallback;
+  - a P0–P11 lifecycle view: governed transitions and their owners;
+  - a capability/dependency view: what supplies what and when it activates;
+  - a historical view: old source -> disposition -> new contract.
+Cross-branch links describe dependencies without adding Core Relations,
+extra parents or permission. A generated view is not controlling by itself.
+
+0. ROOT — THE THIN CONSTITUTIONAL BOUNDARY
+
+  0.1 Purpose, beneficiaries, scope and applicable nonhuman considerations.
+  0.2 Constitutional precedence and the rights registry, with exact status.
+  0.3 Human sovereignty, consent, relational influence and Human-Effect Closure.
+  0.4 Legitimate authority, delegation, revocation and non-self-authorization.
+  0.5 Safety, K0P, grounded emergency admission, privacy and applicable law.
+  0.6 Treatment of unknown, conflicting, incomplete and stale claims.
+  0.7 Constitutional and major-architecture change governance.
+
+These are routing slots for existing controlling obligations, not abbreviated
+replacements for them. The inspected v15.10 text Catalogue marks RIGHT-001
+through RIGHT-025 active, RIGHT-026 reserved and RIGHT-027 on hold. Preserve
+the actual source wording, applicability, exceptions and status. No schema,
+model, credential, consensus, generated receipt or effective action gives
+itself authority. Constitution > Law > Policy > Decision/Optimization in the
+inspected text edition, with jurisdiction and equal-rank conflict handled by
+their controlling contracts. Consent, safety, privacy, rights and proof gates
+can remain independently applicable. A high-level root heading cannot
+silently make a domain rule universal or promote a candidate to current.
+
+1. SUBSTRATE — SOURCE AND SEMANTIC FOUNDATION
+
+  1.1 Source-package rules and historical document ownership.
+      Within the proposed v15.10 packages: Book explains; Technical defines
+      generic mechanics; Catalogue holds Garden-specific meaning. For the
+      executable proposal, Technical + Catalogue are build inputs; Book
+      cannot override them. This is a rule of that source package, not a
+      requirement that the rebuilt Garden use three files. The exact
+      v15.9.1 User/Human, System, Technical, Theories and Annexure owners and
+      DOC-OWN rules stay in the historical crosswalk. They guide migration
+      but do not fix the new document count or module layout. The proposed
+      executable Catalogue holds predecessor SOURCE_BLOB records; the
+      separate text edition packages current sources differently. Their
+      equivalence and successor source set remain OPEN. Cite the edition.
+
+  1.2 Ten Core Objects.
+      TIME, SPACE, THING, EVENT, ACTION, AGENCY, RULE, VALUE, CONTEXT, CLAIM.
+
+  1.3 Twenty-four Core Relations.
+      identifies, causes, governs, values, frames, acts, obeys, assesses,
+      contextualizes, controls, partOf, dependsOn, owns, delegates,
+      references, derivedFrom, equivalentTo, contradicts, supports, blocks,
+      hasHypothesis, supersedes, conflictsWith, originatesFrom.
+      An edge's typed contract and owner determine its effect; the verb
+      alone grants no fact status, proof, causality or authority. Effect-time,
+      test, implementation and invalidation links are fields or derived
+      queries until separately sourced as qualified extension relations.
+
+  1.4 GSL typing and seven Design Forms.
+      The inspected sources retain GSL v45.1 subject to governed change.
+      CONSTRUCT, CONTRACT, STATE, RELATION, PROCESS, RULE and PROJECTION
+      describe overlapping design forms. A theory, algebra, receipt, schema
+      or profile does not erase its own specialist contract or status.
+      Preserve multi-status outcomes; do not coerce UNKNOWN into PASS.
+
+  1.5 Ten Cross-Cutting Facets (v15.10 executable package).
+      IdentityLifecycle, ScopeContext, EpistemicsProvenance,
+      AuthorityHumanBoundary, EffectsSafety, DependencyValidity,
+      ResourceTermination, PrivacyRetention, AuditExplanation,
+      RecoveryEvolution. These are applicability/check surfaces over the
+      typed graph, not extra Core Objects, Engines or independent rule owners.
+      Each record needs declared applicable facets and source-bound effects.
+
+  1.6 Qualified identity and owner graph.
+      One current semantic assertion per version/scope has one controlling
+      contract. Aliases, views and historic names resolve through it.
+      Different versions, jurisdictions, exceptions and pending conflicts
+      need explicit applicability and precedence. Preserve the old five-file
+      DOC-OWN ownership as source history. The rebuilt design may give a
+      contract a different home only with an explicit migration outcome.
+      A heading alone is a slot, not evidence of retention.
+
+  1.7 Source build and deterministic expansion — EXACT VARIANT BINDING.
+      The attached proposed v15.10 Technical expressly declares
+      GardenTechnicalCore/v15.10-r6 and says canonical expansion is finite
+      S0/S1/S2, not an open-ended fixed point: S0 validates/materializes
+      Catalogue records; S1 emits bounded, pure, seed-local non-authoritative
+      projections/checks; S2 orders, hashes and seals. Derived nodes do not
+      feed S1 again. Its embedded 47,914-byte Python Core matches the stated
+      SHA-256 fe20d8f1b4cd18778002c6162de749b5250c760f8ad636d055682efe1172ebe4.
+      GardenCanonicalEncoding/v3 defines deterministic encoding. The later
+      plain-text v15.10 Technical §7 states a conceptual G0 -> F(G0) -> ...
+      -> G* construction. That statement cannot replace S0/S1/S2 for this
+      proposed package. Its status as a harmless summary or semantic
+      difference needs an edition-specific ruling. The embedded r6 Core
+      nevertheless contains stale r5 strings in error text and emits schema
+      GardenCanonicalSemanticGraph/v15.10-r5. Reconcile those identifiers
+      against the r6 Catalogue/checker. Do not edit code as a tree rewrite.
+
+  1.8 Interpretation and no-self-admission boundary.
+      Every generated projection and Boundary attachment must resolve to
+      its controlling source span before normative use. In the attached
+      executable package, ACCEPTED_STRUCTURED is not admitted and an
+      incomplete interpretation yields SOURCE_FALLBACK_REQUIRED. A hash,
+      successful compilation, model agreement, coverage result or receipt
+      cannot admit its own meaning, authority or predecessor supersession.
+      Its may_elide_predecessor() returns FALSE. A future change to that
+      rule needs a separately governed supersession contract; different
+      predecessor/current mechanics stay marked MIGRATION_CONFLICT until
+      resolved. No derivative view may hide a unique source equation,
+      exception, limit, fallback, negative case or unknown case.
+
+  1.9 v15.10 executable Core binding (index, not a copied replacement).
+      The proposed Technical's executable block is the controlling location
+      for its own generic mechanics, subject to package selection/admission:
+        GSL_FORM_BINDINGS and MACROS (form patterns and typed discriminators);
+        KNOWN_RECORD_TYPES, MIN_CATALOGUE_SCHEMA and REFERENCE_POSITIONS;
+        pinned BUILD_CONTEXT and GardenBuildIdentity/v2 fields/hashes;
+        one closed ADMISSION_BOUNDARY with both admission and predecessor
+        elision FALSE; may_elide_predecessor() returns FALSE;
+        canonical_json()/GardenCanonicalEncoding/v3: Unicode-scalar UTF-8,
+        no floats/NaN/Infinity, no duplicate object keys, reserved $set
+        semantics with duplicate rejection, 4,096 integer digits maximum,
+        depth 64 maximum and declared byte/resource limits;
+        seed-local expansion, semantic collision preflight, source fallback,
+        applicability product, live authorization and reproducible graph
+        identity. None of these structural checks prove substantive law.
+      Source locator: proposed Technical, embedded Python definitions
+      GSL_FORM_BINDINGS, MACROS, canonical_json, MIN_CATALOGUE_SCHEMA,
+      KNOWN_RECORD_TYPES, REFERENCE_POSITIONS, build_identity, expand.
+
+      The 21 MACROS and their exact Design Form tuples (the tuple order is
+      retained in the source; these lines are a non-controlling index):
+        ArchitectureObject : CONSTRUCT CONTRACT STATE RELATION PROCESS RULE PROJECTION
+        Function           : CONTRACT PROCESS
+        Lifecycle          : STATE PROCESS RULE
+        Schema             : RULE PROJECTION
+        Receipt            : CONSTRUCT STATE RELATION PROJECTION
+        Registry           : CONSTRUCT STATE RELATION RULE PROJECTION
+        Test               : PROCESS RULE PROJECTION
+        ProofObligation    : CONTRACT PROCESS RULE
+        Theory             : CONSTRUCT CONTRACT STATE RELATION PROCESS RULE PROJECTION
+        Algebra            : CONSTRUCT CONTRACT RELATION PROCESS RULE PROJECTION
+        Profile            : CONSTRUCT CONTRACT STATE RELATION PROCESS RULE PROJECTION
+        EventRecord        : CONSTRUCT STATE RELATION PROJECTION
+        Binding            : RELATION RULE
+        Plan               : CONTRACT PROCESS
+        FailureMode        : STATE PROCESS RULE
+        Query              : CONTRACT PROCESS PROJECTION
+        EventSubscription  : CONTRACT STATE RELATION PROCESS
+        ContinuousWorker   : CONTRACT STATE PROCESS RULE
+        DynamicalSystemProfile : CONSTRUCT CONTRACT STATE RELATION RULE PROJECTION
+        AuthorityGatedContract : CONTRACT RULE
+        RecoveryEnvelope   : CONTRACT STATE PROCESS RULE
+      Similar Form tuples do not make two Macros interchangeable. The exact
+      executable MACROS definition resolves spelling, order and behavior.
+
+  1.10 v15.9.1 closure and document ownership binding.
+      The exact five-file package has a CURRENT-READING PRECEDENCE block in
+      each source: reviewed closure controls conflicting inherited wording
+      for the same scope, and P037 final corrective semantics controls
+      cross-wave conflicts. Preserve the exact accepted P001–P037 clauses,
+      including [V159-USER-P037-HARD-GATE-PRECEDENCE] and
+      [V159-TECH-P037-HARD-GATE-TESTS], with their original source owners.
+      Source locators include User lines 17–20 and 1953 onward; System's
+      reviewed-closure block at line 5132; Technical's at line 15675;
+      GCSC anchors [H-GCSC-1591], [S-GCSC-1591], [T-GCSC-1591],
+      [A-GCSC-1591]; Annexure's GCCR-1 and DOC-OWN-001..012.
+      Also route the original status legend, Annexure A-REG, A-CATALOG,
+      A-PROOF, A-INVARIANTS, A-BRIDGE, A-AI-DEV, A-STD, A-ENG-DES,
+      A-ASSURANCE-HARDENING, A-RRCTX, A-AGI-HARDENING,
+      A-REGULATION-1483, A-REFERENCE-CLOSURE, A-AUDIT and A-HISTORY
+      families through the register with exact scopes/statuses. This is a
+      binding checklist; it is not an item-by-item retention result.
+      The five earlier text attachments end before the final GCSC source-
+      closure readings appended in the COMPLETE archive. In particular,
+      its final Technical [T-GCSC-ALGORITHM-1591], generated schema/validity
+      contracts and Annexure [A-GCSC-SIGNATURE-1591], JOIN, CONSTRAINT,
+      INTERPRETATION, MATERIALITY, PRIMITIVE-DISPOSITION, GENERATED-ASSURANCE,
+      COVERAGE-METRICS, RETENTION and RELEASE-GATE must be registered.
+      A manual family-name list can help discovery but cannot close Annexure
+      coverage. Enumerate actual qualified anchors, SchemaIDs, REG-*,
+      invariants and TEST-* from the frozen source; account for every item.
+
+2. TRUNK — COMMON CONTROL AND ASSURANCE
+
+Put a contract in Trunk when different kinds of modules can call the same
+shared behavior without importing a particular domain's law or theory. Give
+that shared behavior typed inputs, outputs, owner, scope, failure and stopping
+rules. Keep a theory's equations or a domain's implementation with its own
+module even when it offers a Trunk interface. Trunk placement does not make
+that function always active or grant it independent authority. The source's
+activation classes still decide when it runs.
+
+  2.1 Observe/Type/Compare/Reason/Candidates/Select/Guard/Act/Observe/Correct-or-stop.
+      This is a control-level pattern, not a requirement that every task run
+      one serial procedure. COMPARE and REASON are Garden control operations;
+      R0 SanityGate terminates without recursive Reason. Keep resource and
+      stopping contracts, typed outcomes, AAP and FunctionContracts sourced.
+      The exact v15.9.1 User "UNIVERSAL MEANINGFUL STEP" and System
+      "Universal TransitionStep loop" put the final Guard AFTER selecting
+      a candidate and BEFORE any effect. A cheap filter can discard bad
+      candidates before selection; it is not the final effect guard.
+      The separate v15.10 text Technical §9 says Guard -> Select. Preserve
+      that as a source-qualified ordering discrepancy, not an override of
+      the predecessor's corrected selected-candidate guard.
+      v15.9.1 also keeps Verity/Proof V0–V4 and Safety S0–S4 tiers and three
+      activation classes (universal kernel, context-triggered cross-cutting,
+      domain/execution) with their actual owner contracts; this heading
+      does not collapse them into one gate or one always-on runtime cost.
+
+  2.2 Actual-effect gate product.
+      At selection, dispatch, and every continuing-effect boundary, determine
+      which sourced gates apply and re-evaluate those that can change. Each
+      gate record identifies: controlling owner; scope; validity/freshness;
+      check time; result type; ordering/dependencies; source-specific
+      fallback. Candidate gate families include action authority and its
+      revocation witness, consent, human effects, purpose/privacy, rights,
+      K0P, independently grounded FET hazard, applicable law, proof and
+      domain safety. This list is a discovery checklist, not an invented
+      universal hard-gate order. The attached Technical defines a six-axis
+      GardenApplicabilityAssessment and LiveAuthorizationWitness bound to a
+      decision nonce, effect commitment, authority/revocation/time snapshots
+      and an owner-qualified atomic linearization or bounded lease. Its
+      structural result still requires owner authority evaluation; a digest
+      cannot authenticate the witness or create authority. Bind actual
+      fallbacks and refresh rules from each applicable owner. Late consent
+      revocation must invalidate the act even if another gate remains valid.
+
+  2.3 Knowledge, evidence, comparison, reasoning and proof.
+      KR, belief timelines and epistemic transitions, historical belief
+      reconstruction, representation coverage, causal claims and independent
+      verification keep separate owners/status. No agreement from shared
+      representation alone counts as independent confirmation. Learning,
+      DesignMirror, OntologicalDebtView, adversarial future stress and
+      GlobalInvariantConsistencyReceipt attach to their existing owners.
+
+  2.4 Process, policy, decision, conformance and evidence algebras.
+      Preserve each operator's operands, laws, NON-LAWS, effect ordering,
+      conflict behavior and composition bridge. The per-step loop is one
+      application of Process Algebra. CLIC's five operations and GCL's typed
+      counterfactual arithmetic attach here with their actual v15.9.1 owner
+      spans; neither creates authority or a new fundamental force.
+
+  2.5 Generative closure and change qualification.
+      Route v15.9.1 [H/S/T/A-GCSC-1591] and the v15.10 GCSC patch to their
+      original owners: GCSC bounded L0-L5 search, SAL's distinct structural,
+      completeness, join, coherence and interpretation statuses, materiality
+      oracles/RAW denominator, and SAC candidate artifacts/tests/receipts.
+      Preserve generated-candidate status and resource-bound INCOMPLETE.
+      CMUR, CPI, RCI/RCC, CDDT, OCF, MSC, TML and recursive/epoch change
+      have separate source-qualified owners and admission gates. RCI is a
+      reading of control, never a new engine or grant of authority.
+
+  2.6 Shared theory interface and composition checks.
+      SRT, VSM, RPM, PPM, TFT, FET and SCT can expose common
+      TheoryEquationContract interfaces: types, units, domains, assumptions,
+      bounds, validity, falsifiers, adapters and qualification. Their actual
+      equations and specialist rules belong to their separately qualified
+      Boundary modules. Composition depends on those contracts and domain
+      science. UPS and other speculative theories keep RESEARCH status.
+      This index does not replace the full Theories source.
+
+  2.7 Lifecycle, distributed coordination and recovery.
+      P0–P11 are governed lifecycle views, not compulsory serial functions.
+      Multi-agent independence, institutional incentives and protected
+      reporting, physical action, monitoring, correction, stopping, resource
+      bounds and transition continuity attach under their true owners.
+
+3. BOUNDARY — HOW THE REST OF THE DESIGN GROWS
+
+A Boundary module is a real part of the design, not a heading or storage bin.
+Its contract states: purpose; qualified owner, version and status; conditions
+for activation; typed inputs and outputs; dependencies and versions; applicable
+Root limits, facets and live gates; failures, freshness, invalidators and
+fallback; equations, assumptions and non-laws where relevant; tests and
+qualification. A field that does not apply is explained, not silently dropped.
+If structured interpretation is not admitted, keep SOURCE_FALLBACK_REQUIRED.
+Current meaning must be stated in the resulting controlling design; an old
+archive locator alone cannot supply a missing current chapter.
+
+An item can have one home and several typed links: requires a shared interface,
+provides that interface, is constrained by a rule, is invalidated by an event,
+or is historically derived from a predecessor. These are architecture links,
+NOT new members of the 24 Garden Core Relations. A link cannot confer
+permission, proof or authority.
+
+Place the following as explicitly named OUTWARD INTAKE QUEUES, never as a
+claim that their atomic content has been migrated:
+
+  - seven theory bodies; scoped theories, adapters and qualified profiles;
+    TED/SEA/MAC/NRS/VIP/SHE/EC/CSR/AR/MI specializations;
+  - reference architecture presets TRAIN, GAIA Titanium/Diamond, GSL-KR,
+    GSL-AR, GSL-R, GESTALT/APAO and Reliability OS;
+  - governance and institutional UBC/TSI/TIA/ART/IIC/PIR/CSI/SMCD/CAD/OAC/
+    CTSN/PAI, HSA, HRAP and relational influence;
+  - v15.1–v15.9.1 additions including CLIC, GCL, TRACE, EDCR, engineering
+    hardening, physical/cognitive closure and P001–P037;
+  - law, security, privacy, standards, medicine, finance, research,
+    deployment and other specialized application families;
+  - Annexure's exact SchemaIDs, REG-*, invariant, TEST-* and artifact
+    definitions, including aliases, reserved IDs and machine bindings;
+  - v15.10 GCSC patch and v15.11 REP, RCC and other later proposals with
+    statuses kept separate from predecessor current meaning. Exact local
+    REP and RCC file hashes are known; atomic owner/effect bindings remain
+    UNMAPPED. Other later candidates require source enumeration.
+
+An item may touch several queues but has one qualified controlling owner.
+The queues are a search checklist. Every actual item, including exceptions,
+equations and tests, requires a real record before it can count as retained.
+
+R. ATOMIC REGISTER AND CROSSWALK — REQUIRED SUPPORT STRUCTURE
+
+Required per-record fields:
+  stable qualified ID; exact source edition and SHA-256; exact anchor/span
+  and span hash; old owner where applicable and new controlling owner;
+  content type; current meaning or exact controlling text; scope and
+  effective period;
+  design/theory/proof/empirical/application/freshness status axes; applicable
+  facets; prerequisites and typed inbound/outbound edges; formulas, laws and
+  non-laws; exceptions and invalidators; effect-time gates; tests/receipts;
+  predecessor and successor identity; and disposition with reason.
+
+Hash rule: source_sha256 is SHA-256 of the exact supplied file bytes (or
+the named ZIP member bytes), with no newline, Unicode, BOM or whitespace
+normalization. A source_span_sha256 hashes the exact byte slice in that
+identified file using a declared half-open [start_byte,end_byte) range.
+Human line/anchor locators are supplementary; when selecting by line,
+derive byte offsets in that exact file and record them. Normalized-text
+comparison may aid review but must not silently merge two source editions.
+
+Disposition values: PRESERVED, GENERALIZED_WITH_PROOF, MERGED_WITH_EXACT
+REMAINDER, SUPERSEDED_WITH_GOVERNED_PROOF, REJECTED, DEFERRED, RESEARCH,
+CONFLICT, UNMAPPED. A duplicate may merge only with its exact unique
+remainder preserved. A superseded rule remains visible as history; a rejected
+candidate is not erased. UNMAPPED or CONFLICT blocks a lossless release claim
+but does not block work on the architecture. Maintain both directions:
+  exact old anchor -> qualified current owner -> generated tree/view;
+  every new controlling claim -> exact source or explicitly admitted change.
+Do not use a bare "Technical §17" without an edition-qualified filename and
+hash: §17 is real in the inspected v15.10 text Technical, but that citation
+does not locate the differently numbered v15.9.1 Technical source.
+
+G. NO-LOSS AND ADMISSION GATE — NOT A TREE BRANCH
+
+The architecture and representative modules can be drafted while the register
+is incomplete. Before claiming a completed, lossless integrated release,
+freeze the exact v15.9.1 source suite and its GCSC closure records, the
+selected v15.10 source package(s), GCSC patch, and all proposed additions
+actually in scope, together with their
+hashes/statuses. Compare every material unit in both directions. Check IDs,
+source spans, equations, operator order, non-laws, applicable gates and
+effect timing, negative/UNKNOWN cases, historical aliases, supersession and
+document ownership. Set predecessor sources aside and test whether the
+resulting current sources alone define all current meaning. Run owner-sized
+blind critique, reconcile minority counterexamples, re-review material
+changes, and verify independently. External reviewer quorum and semantic
+admission remain separately recorded. A build PASS does not imply those
+later states.
+
+REVIEW HISTORY
+
+v0.8 records the detailed disposition of the four v0.4, v0.6 and v0.7
+review sets. This version retains their source-qualified corrections and
+adds rebuild placement and module contracts. No reviewer result is treated
+as a corpus-wide no-loss finding or GROUP_REVIEW PASS.
+
+EXACT SOURCE BINDING (THIS TREE'S INSPECTED BASIS)
+
+The Garden_v15.9.1_COMPLETE.zip archive was read locally (SHA-256
+53898a8d1832cfcba932cb83e81b8212c38b0954b68db8bfd29ad40f01946f50).
+All 14 archive members match manifest byte counts and SHA-256. The five
+design-source SHA-256 values are:
+  User: ee78433d9848a5ecd089565fb4207e4f2ec84b1162c588f84733bb6426d92561
+  System: 11410ae21092490b7ecfa7836c13335f26c0562f55f99856cf1d75e85aa84412
+  Technical: 43b4b020c32224245e70f130f01efbf88c92ee28036ccf88f2d08ee4843eccde
+  Theories: b241ba30e92b8c65d98b0ccd403018a39273e5ace0eecf4dedd9e2333a53d241
+  Annexure: 82f18b96958a84967322ad017ea4d7ff250f59c419e8bb39c5822f962bb12d7b
+The archive also contains the GCSC/coverage/test/audit records listed in
+Garden_v15.9.1_manifest.json (SHA-256
+3dec60031003dbd89e49cefe20a75388ce82499e14e2f813f346524ba63505d9).
+Hash closure of an archive does not prove semantic retention in the tree.
+
+Five earlier v15.9.1 attachments are exact byte prefixes of their five
+COMPLETE archive members. Each earlier SHA-256 and the added COMPLETE suffix:
+  User: eab6e3bd2dd83cb38e4542dcbca843300d89a9f73f149b2e2939a5b1ac81ebe6
+        +1,348 bytes, 16 lines.
+  System: 11e0dd2165713f41df2e152891a2a9128c186f575cf1767872ef83e9efbe66d5
+          +1,571 bytes, 25 lines.
+  Technical: 11a6b5fe453723d36c0b7d5290a70507f11e954249c38478140bc5d552a1842a
+             +5,954 bytes, 75 lines.
+  Theories: 106e32ae264b30be451ac066a87afa569597549def5b8c3ab315268771a52468
+            +758 bytes, 9 lines.
+  Annexure: 8d5b71b2340575594a2de67b850ee3687f5c780b94684247645296629f64b29b
+            +7,401 bytes, 98 lines.
+
+These suffixes contain final GCSC source-closure readings: Human boundary,
+System flow, Technical machine algorithm/schema/validity contracts,
+Theories boundary, and Annexure registry/coverage/retention/release gate.
+Every earlier attached byte survives unchanged as a prefix. All shared
+earlier line citations still resolve, yet each whole-file hash differs.
+Preserve the earlier attachments under their own identities; use the more
+inclusive, manifest-verified COMPLETE members as the working predecessor
+for registration. This lineage finding does not canonically admit either.
+
+Attached proposed v15.10 Technical: whole file SHA-256
+5cecfcb9892d201108dcb46e52ffebe9e29bec153184ecf1ed239873adde41bd;
+embedded executable Core SHA-256
+fe20d8f1b4cd18778002c6162de749b5250c760f8ad636d055682efe1172ebe4.
+That proposal reports Catalogue root
+d41c44fc28e5c43c5532846174ef46abca0f9b85c70f64813c481fb4f0856c9a,
+graph root 932866da9e11f23a38d2ae62d4370b0e502b8f039d2ec7176e80a742c2926136,
+19,921 Catalogue records and 41,053 graph nodes. A local run of the original
+r6 Core with the matching Catalogue reproduced the reported graph root and
+41,053 nodes on one valid output, and reconstructed the Catalogue's exact
+v15.9 predecessor bytes. Another run reported success with a truncated gzip
+output. This is a build integrity defect, not an independent checker PASS.
+The distinct v15.10 plain-text Technical has SHA-256
+8f8424f6442ae2cbc538a2a67eabee77e17fca4a2cb4bfb64a3cba5841a6aa61.
+Edition equivalence remains OPEN.
+
+The local v15.10 GCSC patch hash is
+8a4f1f1479f76f4ce9f57a541d7f5c25c8227eff1cab55cdd5bfe703f7598811.
+Available v15.11 candidate-file hashes: REP
+c6ade304a17ae30ca8e03fd7a5765113b678e9e75afc7814123acfa1599d2881;
+RCC c37699a200e3bea85fedebf819d292c8668e748f73b5e1f4b23d8d5679c659e3.
+Those files are source-identified, not admitted or fully owner-mapped.
+
+SOURCE BASIS AND BLOCKERS
+
+The exact v15.9.1 archive checks, but its full atomic crosswalk and the
+source-independent coherent rewrite are not finished. The first 148 source-
+located Root/Substrate records form a pilot, not complete ownership or a
+no-loss PASS. A valid run reproduced the proposed r6 graph root and node
+count; another successful exit left a truncated gzip. The r6 Core also
+emits an r5 graph schema identifier. An independent checker PASS and
+v15.9.1 semantic equivalence have not been established. Resolve the r6/r5
+identifiers and compare both v15.10 editions before treating either as the
+single controlling successor. These are package and release issues, not
+reasons to force the rebuild back into five or three files.
+
+NEXT CONSTRUCTION STEP
+
+Keep this tree as the simple reading structure. Write the shared Trunk
+interfaces and a few complete Boundary module contracts first, including
+Knowledge, one theory, an effectful action and a domain implementation.
+Check that each module has a clear home, links and applicable Root gates.
+Build the atomic register and settle source conflicts alongside drafting;
+continue outward with old material and separately qualified candidates.
+Generate the navigation, effect, lifecycle, capability and history views
+from qualified contracts. Only claim that the rewrite includes everything
+after the two-way source checks and independent admission gates pass.
