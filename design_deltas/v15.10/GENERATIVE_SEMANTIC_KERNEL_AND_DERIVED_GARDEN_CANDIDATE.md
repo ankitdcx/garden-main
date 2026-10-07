@@ -322,7 +322,20 @@ The strongest test is reconstruction:
 
 Only repeated successful reconstruction and adversarial testing would justify moving explicit rules from controlling source to generated/compiled status.
 
-## 14. Conclusion
+## 14. Semantic-compression hypothesis
+
+The actual reducible fraction is unknown. Current exploratory reasoning supports only a research hypothesis that perhaps **70–90% of detailed technical Garden material** could eventually become reproducibly derived/compiled rather than independently hand-maintained. This is not a measured result and must not be used as a deletion criterion.
+
+Illustrative example only:
+
+    original Garden:       15,000 semantic items
+    irreducible kernel:     1,500
+    reproducibly derived:  13,500
+    semantic compression:      90%
+
+The important possibility is not merely a smaller source. If the compact kernel reconstructs the retained Garden and GCSC then finds valid obligations for situations humans never considered, the derived Garden can be simultaneously **smaller at the fundamental-source layer and larger/more complete at the derived layer**. Abstraction therefore serves both compression and design-space exploration.
+
+## 15. Conclusion
 
 The v15.10 abstraction may be more than a way to reorganize Garden.
 
