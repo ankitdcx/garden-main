@@ -1,7 +1,9 @@
 # Current Garden source identity
 
-Current source: **Garden v15.2 + SCEP v1.1 merged candidate, 2026-09-12**.
+Current canonical source: **Garden v15.5 / GSL v45.1, 2026-09-12**.
 
-`SOURCE_MANIFEST.json` pins the exact names, sizes and SHA-256 hashes of the five full text sources. The five large source texts are the controlling design artifacts and must match this manifest before source-driven extraction or canonical admission.
+`SOURCE_MANIFEST.json` pins the exact names, sizes and SHA-256 hashes of the five full source texts. Those five files are the controlling canonical design artifacts for this repository and must match the manifest before any source-driven successor work or admission claim.
 
-Static merge audit: PASS. This does not imply compiler/proof/empirical/certification/deployment status.
+Later material under `canonical/candidates/` and `design_deltas/` is noncanonical unless separately admitted.
+
+Source-identity verification does not by itself imply proof, implementation, empirical validation, certification or deployment status.
