@@ -1,0 +1,102 @@
+{
+  "schema": "GardenCorpusIndex/v1",
+  "updated": "2026-10-07",
+  "canonical": {
+    "id": "Garden-v15.5",
+    "gsl": "v45.1",
+    "status": "CANONICAL",
+    "path": "canonical/current/",
+    "description": "Controlling five-file Garden source."
+  },
+  "whole_release_candidates": [
+    {
+      "id": "Garden-v15.6",
+      "status": "RETAINED_NONCANONICAL_CANDIDATE",
+      "path": "canonical/candidates/v15.6/",
+      "supporting_delta_path": "design_deltas/v15.6/"
+    },
+    {
+      "id": "Garden-v15.7",
+      "status": "RETAINED_NONCANONICAL_CANDIDATE",
+      "path": "canonical/candidates/v15.7/",
+      "supporting_delta_path": "design_deltas/v15.7/"
+    }
+  ],
+  "working_designs": [
+    {
+      "id": "Garden-v15.10",
+      "status": "NONCANONICAL_WORKING_DESIGN",
+      "path": "design_deltas/v15.10/",
+      "description": "Abstraction/GCSC/SAL/SAC, semantic retention and Tree Core lineage."
+    }
+  ],
+  "additive_candidates": [
+    {
+      "id": "V1511-RCC-001",
+      "status": "NONCANONICAL_CANDIDATE",
+      "path": "design_deltas/v15.11/rcc/",
+      "description": "Recursive Control Closure"
+    },
+    {
+      "id": "V1511-REP-001",
+      "status": "NONCANONICAL_CANDIDATE",
+      "path": "design_deltas/v15.11/rep/GARDEN_v15.11_REP_RECONCILED_CANDIDATE.md",
+      "description": "Representation Escape and Independence Hardening"
+    },
+    {
+      "id": "V1511-SHR-001",
+      "status": "NONCANONICAL_CANDIDATE",
+      "path": "design_deltas/v15.11/shr/",
+      "description": "Search-History Resilience"
+    },
+    {
+      "id": "V1511-ERC-001",
+      "status": "NONCANONICAL_CANDIDATE",
+      "path": "design_deltas/v15.11/erc/",
+      "description": "Evaluation Reachability Closure"
+    },
+    {
+      "id": "V1511-REV2",
+      "status": "NONCANONICAL_CANDIDATE",
+      "path": "design_deltas/v15.11/rev2/",
+      "description": "Meta-epistemic and Question-Space Exploration hardening"
+    },
+    {
+      "id": "V1511-VEI-001",
+      "status": "NONCANONICAL_CANDIDATE",
+      "path": "design_deltas/v15.11/vei/",
+      "description": "Verified Execution Integrity"
+    },
+    {
+      "id": "V1511-TRANSITION-RESPONSIBILITY",
+      "status": "NONCANONICAL_CANDIDATE",
+      "path": "design_deltas/v15.11/transition-responsibility/GARDEN_v15.11_TRANSITION_AND_RESPONSIBILITY_CANDIDATE.md",
+      "description": "Coupled transitions and responsibility preservation"
+    },
+    {
+      "id": "V1511-CAPABILITY-COMPARISON",
+      "status": "NONCANONICAL_CANDIDATE",
+      "path": "design_deltas/v15.11/capability-comparison/MODEL_CAPABILITY_COMPARISON_CANDIDATE_2026-10-05.md",
+      "description": "Cross-model capability measurement"
+    }
+  ],
+  "recovered_candidate_material": [
+    {
+      "status": "NONCANONICAL_REVIEW_PROJECTION",
+      "path": "design_deltas/v15.11/GARDEN_TECHNICAL_v15.11_REVIEW_PROJECTION_2026-09-20.txt"
+    },
+    {
+      "status": "NONCANONICAL_RECOVERED_DIRECTIONS",
+      "path": "design_deltas/v15.11/RECOVERED_TECHNICAL_CANDIDATE_DIRECTIONS.md"
+    },
+    {
+      "status": "INDEX_STATUS_MAP",
+      "path": "design_deltas/v15.11/CANDIDATE_RETENTION_LEDGER.md"
+    },
+    {
+      "status": "PENDING_CANDIDATES",
+      "path": "design_deltas/PENDING_PROJECT_WIDE_CANDIDATES_2026-09-14.md"
+    }
+  ],
+  "status_rule": "Presence in this index does not admit, prove, implement, validate or certify a candidate."
+}
