@@ -1,0 +1,73 @@
+{
+  "workstream": {
+    "schema": "GardenChatGPTWorkstreamIntent/v1",
+    "workstream_id": "chatgpt:v1511-vei-candidate-20261004",
+    "work_package_id": "V1511-VEI-001",
+    "branch": "chatgpt/v1511-vei-candidate-20261004",
+    "base_sha": "a9a1290e353a2c8c783edf5f5e8b4a121456a987",
+    "dependency_intent_ids": [
+      "chatgpt:v1511-rcc-candidate:20260922"
+    ],
+    "integration_strategy": "INTEGRATION_BRANCH_IF_COLLISION",
+    "draft_pr_created_before_substantial_edit": true,
+    "status": "ACTIVE"
+  },
+  "agent_work_intent": {
+    "schema": "AgentWorkIntent/v1",
+    "intent_id": "chatgpt:v1511-vei-candidate:20261004",
+    "agent_id": "chatgpt-v1511-vei-integrator",
+    "work_package_id": "V1511-VEI-001",
+    "base_sha": "a9a1290e353a2c8c783edf5f5e8b4a121456a987",
+    "source_root_sha256": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+    "design_epoch_ref": "Garden-v15.5@63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+    "target_paths": [
+      "design_deltas/v15.11/vei/README.md",
+      "design_deltas/v15.11/vei/GARDEN_v15.11_VEI_CANDIDATE.md",
+      "design_deltas/v15.11/vei/CANDIDATE_MANIFEST.json",
+      "design_deltas/v15.11/vei/VALIDATION.md",
+      "workstreams/2026-10-04-v1511-vei-candidate.json"
+    ],
+    "target_symbols": [
+      "V1511-VEI-001",
+      "VEI-F1",
+      "VEI-F2",
+      "VEI-F3",
+      "VEI-F4",
+      "VEI-F5",
+      "VEI-F6",
+      "VEI-F7",
+      "VEI-F8",
+      "VEI-F9"
+    ],
+    "semantic_domains": [
+      "verified execution integrity",
+      "runtime freshness and antirollback",
+      "effect authorization and exact binding",
+      "ambiguous effect recovery",
+      "verifier-isolated completion",
+      "runtime trust and provenance"
+    ],
+    "affected_invariants": [
+      "VEI-F1",
+      "VEI-F2",
+      "VEI-F3",
+      "VEI-F4",
+      "VEI-F5",
+      "VEI-F6",
+      "VEI-F7",
+      "VEI-F8",
+      "VEI-F9"
+    ],
+    "affected_contracts": [
+      "Authority/Revocation runtime specialization",
+      "Security/Containment runtime specialization",
+      "Evidence/Provenance completion specialization",
+      "Recovery/Incident runtime specialization",
+      "RCC freshness compatibility",
+      "ERC evidence compatibility"
+    ],
+    "intended_effect": "Register a bounded noncanonical v15.11 Verified Execution Integrity candidate that specializes existing owners with runtime freshness, target-class fencing, exact effect binding, reconciliation and verifier-isolated completion contracts; no new authority source, top-level engine, canonical admission or runtime activation.",
+    "parallel_mode": "INDEPENDENT_COMPARISON"
+  },
+  "canonical_effect": "NONE"
+}

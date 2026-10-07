@@ -1,0 +1,93 @@
+{
+  "schema": "GardenV1511CandidateManifest/v1",
+  "candidate_id": "V1511-VEI-001",
+  "candidate_version": "v15.11",
+  "patch_id": "GARDEN-VEI-2026-10-04",
+  "revision": "1.0",
+  "revision_date": "2026-10-04",
+  "title": "Verified Execution Integrity",
+  "status": "ADDITIVE_NONCANONICAL_CANDIDATE",
+  "canonical_effect": "NONE",
+  "observed_repository_base": "a9a1290e353a2c8c783edf5f5e8b4a121456a987",
+  "source_binding": {
+    "canonical_release": "Garden v15.5",
+    "gsl": "v45.1",
+    "source_root_sha256": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
+    "design_epoch_ref": "Garden-v15.5@63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598"
+  },
+  "owners_reused": [
+    "Authority/HSA",
+    "Revocation",
+    "Security/Containment",
+    "Evidence/Provenance",
+    "Recovery/Incident",
+    "Dependency/Requalification",
+    "Privacy/Human-Effect",
+    "Resource/Budget",
+    "RCC",
+    "ERC"
+  ],
+  "candidate_dependencies": [
+    "V1511-RCC-001 compatibility",
+    "V1511-ERC-001 compatibility if ERC is retained"
+  ],
+  "new_top_level_architecture": false,
+  "new_theory": false,
+  "new_authority_source": false,
+  "new_scheduler": false,
+  "added_semantics": [
+    "scoped runtime writer-fence/revocation/policy freshness profile",
+    "lineage-bound runtime authorization and recovery",
+    "multi-scope authorization snapshot",
+    "Class A/B/C effect-target guarantee qualification",
+    "exact final-parameter authorization binding",
+    "canonicalizer/TCB provenance binding",
+    "durable Intent/AuthorizationToken/EffectReceipt trace",
+    "single-use/replay/idempotency semantics",
+    "explicit OUTCOME_UNKNOWN reconciliation and bounded compensation",
+    "verifier-isolated DONE_WITH_EVIDENCE / REVERIFY_REQUIRED completion",
+    "formal invariant and chaos-fixture obligations",
+    "conditional guarantee claims tied to target enforcement"
+  ],
+  "explicit_non_goals": [
+    "general epistemic search",
+    "recursive self-improvement architecture",
+    "generalized information-flow/taint system",
+    "covert-channel control",
+    "IP/SEP automation",
+    "proof-of-utility gating",
+    "mandatory trusted hardware",
+    "universal BFT architecture",
+    "universal antirollback guarantee for opaque targets"
+  ],
+  "related_candidate_evidence": [
+    {
+      "ref": "V1511-RCC-001",
+      "disposition": "REUSE_OWNER",
+      "note": "RCC already owns recursive change/control closure, fresh qualification and continuing revocation obligations."
+    },
+    {
+      "ref": "v1511-rcc-antirollback-regression-20261003/TEST-RCC-055",
+      "disposition": "SUPPORTING_REGRESSION",
+      "note": "Authentic stale restart must not revive revoked authority; VEI generalizes the runtime enforcement profile without replacing RCC ownership."
+    },
+    {
+      "ref": "V1511-ERC-001",
+      "disposition": "COMPATIBILITY_ONLY",
+      "note": "ERC evaluation reachability/evidence semantics remain separate."
+    }
+  ],
+  "admission_blockers": [
+    "full authorized-source and existing-owner semantic reconciliation",
+    "RCC/Authority/Revocation/Security/Evidence/Recovery collision review",
+    "machine-executable schema/profile implementation",
+    "formal invariant traceability and bounded model checking",
+    "positive/negative/chaos conformance execution",
+    "target-class runtime staging",
+    "verifier-isolation evidence",
+    "operational availability/false-denial/recovery-cost evidence",
+    "independent review appropriate to risk",
+    "normal Garden comparison/admission"
+  ],
+  "source_review_note": "Revision 1.0 distills the user-supplied v1-v4 patch plus five rounds of external-model critique/reconciliation. Those critiques are review inputs, not independent empirical verification."
+}
