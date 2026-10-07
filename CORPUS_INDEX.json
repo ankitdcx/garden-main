@@ -101,14 +101,16 @@
   ],
   "status_rule": "Presence in this index does not admit, prove, implement, validate or certify a candidate.",
   "economic_governance": {
-    "status": "FREE_PENDING_100000_PERSON_REVIEW",
+    "status": "FREE_USE_WITHOUT_ATTRIBUTION_PENDING_100000_PERSON_REVIEW",
     "review_population": 100000,
     "selection": "genuinely random ordinary people from countries voluntarily joining the AI Accord",
-    "decision_scope": "100% of Garden ideas and their economic value",
+    "decision_scope": "100% of individual ideas and their economic value",
     "outcomes": [
-      "KEEP_FREE",
-      "GARDEN_COMMON_FUND"
+      "KEEP_IDEAS_FREE",
+      "COMMON_FUND"
     ],
+    "attribution_required": false,
+    "name_garden_required": false,
     "git_owner_personal_share": "NONE"
   }
 }
