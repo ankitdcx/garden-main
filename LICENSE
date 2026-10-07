@@ -83,9 +83,7 @@ Where an idea, fact, concept, method, system, or principle is not subject to
 exclusive copyright in the first place, no separate Garden permission is required
 to use it.
 
-3. Patent permission
 
-To the extent the Garden project owner controls patent claims that would
 necessarily be infringed solely by making, using, selling, offering for sale,
 importing, implementing, modifying, combining, or distributing Garden material
 as disclosed in these repositories, the owner grants every person and entity a
@@ -101,19 +99,18 @@ Anyone may fork Garden, merge it into another project, change its rules, remove
 parts, rename it, create incompatible versions, or build something entirely
 different from it under rights validly granted by this license.
 
-5. No maintenance, certification, or endorsement obligation
+4. No maintenance, certification, or endorsement obligation
 
 Use of Garden does not make an implementation official, certified, safe, correct,
 or endorsed. The original author has no obligation to maintain, review, approve,
 support, govern, or update downstream uses.
 
-6. Third-party material
+5. Third-party material
 
 This notice grants only rights controlled by the Garden project owner. Third-party
-software, libraries, model weights, datasets, trademarks, patents, or other
 materials remain subject to their own applicable licenses and rights notices.
 
-7. Earlier Garden restrictions
+6. Earlier Garden restrictions
 
 Older repository files, snapshots, branches, commits, or documents may contain
 earlier restrictive or conditional Garden licensing language. For rights
