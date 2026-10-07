@@ -2,9 +2,45 @@
 
 Status: private implementation workspace.
 
-## Latest working candidate: v15.7
+## Version status at a glance
 
-[Garden v15.7](canonical/candidates/v15.7/README.md) carries the complete prepared v15.6 draft forward and adds five registered programs: TRACE, focused cognitive increment, cognitive qualification, comparative coverage and design closure. The user authorized a direct version jump. Its canonical predecessor remains v15.5; no intermediate v15.6 promotion is claimed. See [integration evidence](reviews/v15.7/SOURCE-INTEGRATION-RECEIPT.json) and [release status](reviews/v15.7/RELEASE-STATUS.md).
+| Line | Status | Meaning |
+| --- | --- | --- |
+| **v15.5 / GSL v45.1** | **CANONICAL** | Current pinned five-file source under `canonical/current/`. |
+| **v15.6** | retained draft | Prepared successor lineage; not canonical. |
+| **v15.7** | materialized whole-release candidate | Last whole-release candidate currently materialized in `canonical/candidates/`; not canonical. |
+| **v15.10** | later working-design / review lineage | Substantial successor redesign/review work exists, but it is not the current canonical source and is not materialized here as the current whole-release pointer. |
+| **v15.11** | **active additive candidate set** | Multiple noncanonical hardening/cognition/runtime candidates are registered or under active PR review. |
+
+The repository landing page previously made v15.7 look like the newest design work. That is no longer a complete picture: later v15.10/v15.11 work is retained as **pending successor work**, while **v15.5 remains the canonical baseline until separately admitted**.
+
+## Pending v15.10 / v15.11 successor work
+
+### v15.10 working-design lineage
+
+v15.10 introduced a later redesign/review lineage beyond the v15.7 whole-release candidate. Its review artifacts are retained in repository history, including the archived [v15.10 review project](archive/retired-work/2026-09-21/chatgpt__v1510-review-project-20260919/reviews/v15.10-project/PROJECT.md). Later v15.11 candidates explicitly target or build on the v15.10 working design where applicable.
+
+**Status:** pending/noncanonical lineage; not a replacement for `canonical/current/`.
+
+### v15.11 additive candidates already registered on main
+
+- [V1511-RCC-001 — Recursive Control Closure](design_deltas/v15.11/rcc/README.md): recursive-change/control qualification hardening, including cumulative control, independence, revocation/recovery and typed obligation closure.
+- [V1511-REP-001 — Representation Escape Principle](design_deltas/v15.11/rep/README.md): reduces shared blind spots caused by multiple reviewers inheriting the same problem representation.
+- [V1511-SHR-001 — Search-History Resilience](design_deltas/v15.11/shr/README.md): hardens retained search/history reuse, rebasing and dependency-aware invalidation.
+
+These are **additive noncanonical candidates**, not a complete v15.11 release and not canonical admission.
+
+### v15.11 candidate work currently under PR/review
+
+- [PR #107 — Evaluation Reachability Closure](https://github.com/ankitdcx/garden-main/pull/107): transitive evaluation/containment reachability, persistent paths, credential/identity expansion and evidence-grounded evaluation fixtures.
+- [PR #109 — Rev 2 meta-epistemic / QSE hardening](https://github.com/ankitdcx/garden-main/pull/109): preserves the later question-space / meta-epistemic hardening candidate work.
+- [PR #110 — Verified Execution Integrity](https://github.com/ankitdcx/garden-main/pull/110): runtime freshness/antirollback, exact final-effect binding, target-class fencing, intent→authorization→receipt traceability, ambiguous-effect reconciliation and verifier-isolated completion.
+
+Additional bounded regression/candidate branches may exist without being admitted to main. Open PR, branch or CI status is **evidence of pending work only**, not canonical promotion.
+
+## v15.7 whole-release candidate
+
+[Garden v15.7](canonical/candidates/v15.7/README.md) carries the prepared v15.6 draft forward and adds five registered programs: TRACE, focused cognitive increment, cognitive qualification, comparative coverage and design closure. Its canonical predecessor remains v15.5; no intermediate v15.6 promotion is claimed. See [integration evidence](reviews/v15.7/SOURCE-INTEGRATION-RECEIPT.json) and [release status](reviews/v15.7/RELEASE-STATUS.md).
 
 ## Retained v15.6 draft lineage
 
