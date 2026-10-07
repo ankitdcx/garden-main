@@ -15,7 +15,7 @@ The voters would be temporary governors, not shareholders. They would not receiv
 
 The exact selection, voting, audit, rotation and anti-capture mechanism can be designed and tested if Option 2 ever needs to be activated.
 
-**No third option is intended.** In particular, changing the free status must not turn Garden into permanent founder, government, political-party, corporate, billionaire, administrator or other privileged private control.
+**No third option is intended.** In particular, changing the free status must not turn Garden into permanent government, political-party, corporate, billionaire, administrator or other privileged private control.
 
 The 2026-10-06 public release included permissions expressly described as perpetual or irrevocable. Nothing here claims to retroactively cancel rights already validly granted under that release.
 
