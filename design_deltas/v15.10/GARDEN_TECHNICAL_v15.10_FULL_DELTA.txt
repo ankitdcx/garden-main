@@ -1,0 +1,965 @@
+GARDEN v15.10
+TECHNICAL DESIGN
+Plain UTF-8 text edition
+Text packaging revision: 2026-09-19
+
+STATUS
+
+Semantic release: Garden v15.10.
+Representation: text-only four-file edition.
+Design-source set: BOOK + TECHNICAL + CATALOGUE.
+History file: lineage only; non-controlling.
+Release authority status: WORKING CANDIDATE; not canonically admitted merely by this file.
+Implementation, empirical validation, formal proof, and external certification are not implied by a release label.
+
+This text edition preserves the v15.10 design direction and the accepted v15.x meaning recovered from the final
+three-artifact build and its predecessor sources. It replaces compressed/machine-only source packaging with directly
+readable text. It does not grant itself authority to change Garden semantics.
+
+1. SOURCE AND OWNERSHIP RULE
+
+Current primary sources are exactly:
+
+    GARDEN_BOOK_v15.10.txt
+    GARDEN_TECHNICAL_v15.10.txt
+    GARDEN_CATALOGUE_v15.10.txt
+
+GARDEN_VERSION_HISTORY_v15.10.txt is historical lineage only.
+
+A generated graph, index, cache, executable package, search index, compressed copy, database, repository commit,
+external website, model answer, or prior release is not required to supply a missing current Garden definition.
+
+External references may support verification, research, law, provenance, historical traceability, or implementation.
+They cannot silently contain the only copy of current Garden semantics.
+
+Current semantic ownership rule:
+
+    one current semantic fact -> one controlling owner.
+
+Other occurrences are explanation, projection, index, compatibility mapping, or history and cannot override the owner.
+
+2. ARCHITECTURE MODEL
+
+Garden is a typed semantic graph rather than a fixed list of executable modules.
+
+Historical module numbers remain compatibility labels. Current architecture objects are named by stable qualified
+owners. The old 0-9 grouping is navigation only and does not impose a fixed architecture-object count.
+
+The current foundational object vocabulary is:
+
+    TIME
+    SPACE
+    THING
+    EVENT
+    ACTION
+    AGENCY
+    RULE
+    VALUE
+    CONTEXT
+    CLAIM
+
+Core relation set:
+
+    identifies
+    causes
+    governs
+    values
+    frames
+    acts
+    obeys
+    assesses
+    contextualizes
+    controls
+    partOf
+    dependsOn
+    owns
+    delegates
+    references
+    derivedFrom
+    equivalentTo
+    contradicts
+    supports
+    blocks
+    hasHypothesis
+    supersedes
+    conflictsWith
+    originatesFrom
+
+A relation name does not itself grant causal, legal, epistemic, or execution authority. The relation's typed contract and
+applicable owner rules control those effects.
+
+3. GSL SEMANTIC FOUNDATION
+
+GSL remains Garden's typed semantic language. The v15.x line retains GSL v45.1 unless a separately admitted successor
+changes it.
+
+The sole normative grammar owner remains the Technical grammar contract corresponding to historical §12.4.
+
+Typing judgment:
+
+    Γ ; Δ ; A ; C ⊢ e : T ! ε
+
+where the environments and effect set bind the expression to its declared types, dependencies, authority and operating
+conditions.
+
+Closed effect families include:
+
+    Computational
+    Safety
+    Authority
+    Privacy
+    Temporal
+    Resource
+    Uncertainty
+    Continuity
+    Optimization
+
+Bool is reserved for total deterministic predicates. Epistemic, proof, safety, policy, migration, compliance and
+distributed outcomes use explicit multi-status results.
+
+General outcome family:
+
+    Success
+    Rejected
+    Infeasible
+    Timeout
+    Unknown
+    Conflict
+    Failure
+    Quarantined
+    Escalated
+
+UNKNOWN is a first-class result. It cannot be silently coerced to PASS or FALSE where that changes meaning.
+
+4. GARDEN-LEVEL PRIMITIVES
+
+The retained GSL semantic primitive families remain distinct from the Garden control operators.
+
+Garden-level control adds:
+
+    COMPARE
+    REASON
+
+These do not change the ten Core Objects or twenty-four Core Relations.
+
+COMPARE establishes a typed difference between two declared objects/states/claims/results under an applicable comparison
+contract.
+
+REASON selects and executes an appropriate reasoning strategy under resource, epistemic, authority, safety and
+termination constraints.
+
+5. SEVEN DESIGN FORMS
+
+v15.10 normalizes reusable design structure into seven Design Forms:
+
+    CONSTRUCT
+        A defined Garden thing: artifact, receipt, profile, theory instance, object, capability record, etc.
+
+    CONTRACT
+        A typed promise, requirement, permission boundary, interface, precondition/postcondition or obligation.
+
+    STATE
+        A condition, lifecycle state, validity state, operating state or status transition.
+
+    RELATION
+        A typed connection between constructs or states.
+
+    PROCESS
+        A controlled sequence, transition, workflow, loop, composition or change mechanism.
+
+    RULE
+        A must, may, must-not, admission rule, ordering rule, law, guard, constraint or decision predicate.
+
+    PROJECTION
+        A representation of controlling semantics for a reader, machine, document, interface or other view.
+
+Theory and Algebra are specializations/compositions over these forms rather than extra top-level forms.
+A Receipt is a semantic Construct.
+A Schema is represented by structural Projection plus applicable admissibility Rules and type contracts.
+
+Design Forms are abstraction devices. They cannot erase domain-specific obligations.
+
+6. DESIGN-FORM BOUNDARY RULES
+
+Every consequential construct must preserve the applicable human/authority boundary.
+
+Authority, consent and delegation are non-transitive by default. Composition cannot silently widen them.
+
+A form that contains or produces a right, authority, consent, safety, privacy, epistemic, physical, financial,
+constitutional, legal or human-effect consequence inherits the applicable owner rules.
+
+No generated form may start with more authority than its declared source.
+
+No projection becomes controlling merely because it is easier to read.
+
+7. DETERMINISTIC EXPANSION
+
+v15.10 permits compact source plus deterministic expansion.
+
+Conceptually:
+
+    G0 -> F(G0) -> F^2(G0) -> ... -> G*
+
+Expansion must terminate under a declared fixed-point/termination condition and may only derive material authorized by
+the source contracts.
+
+Unique equations, algorithms, time bounds, assumptions, fallbacks, profiles, exceptions and special-case semantics are
+seed material when they cannot be deterministically reconstructed from a more general controlling definition.
+
+A model is not trusted to invent missing semantics during expansion.
+
+Generated material records its source root and generation rule.
+
+If two independent expansions of the same pinned sources produce different controlling graphs, equivalence is not
+established.
+
+8. COMPACT-SOURCE DISCIPLINE
+
+The earlier GCCR-1 principle is retained in substance:
+
+    a controlling definition occurs once;
+    repeated copies become references/projections;
+    full stable identifiers remain literal;
+    no hidden prefix state changes meaning;
+    deterministic pretty views are derivative;
+    compaction removes duplication, not semantic content.
+
+The present text edition does not require GCCR punctuation or JSON Lines. Human-readable text blocks are valid source
+when the parser/build profile binds them deterministically.
+
+9. UNIVERSAL PER-STEP CONTROL LOOP
+
+The universal operational loop is:
+
+    Observe
+    -> Type / Understand
+    -> Compare
+    -> Reason
+    -> Guard
+    -> Select
+    -> Act
+    -> Observe result
+    -> Compare expected vs actual
+    -> Accept / Correct / Retry / Replan / Research / Escalate / Learn / Terminate
+
+The loop is universal at the control level. Domain profiles may specialize internal work without bypassing applicable
+hard gates.
+
+10. PROCESS ALGEBRA
+
+Core process operators include:
+
+    SEQUENCE
+    BRANCH
+    PARALLEL
+    COMPOSE
+    RETRY
+    ROLLBACK
+    COMPENSATE
+    RECONSTRUCT
+    ITERATE
+    RECURSE
+    TERMINATE
+    DO_NOTHING
+
+Composition must preserve interface, shared invariants, resource compatibility, temporal compatibility, failure
+composition and assumptions where those are applicable.
+
+A retry requires a declared retry condition/budget and cannot become an unbounded loop.
+
+ROLLBACK applies only to effects that are actually reversible. Irreversible physical/external effects require explicit
+residual-effect and compensation handling.
+
+11. P0-P11 LIFECYCLE
+
+Garden retains a twelve-stage lifecycle view:
+
+    P0   RECEIVE / PROPOSE
+    P1   UNDERSTAND
+    P2   DISCOVER / APPLICABILITY
+    P3   IMPACT / DEPENDENCIES
+    P4   EPISTEMICS / EVIDENCE
+    P5   PREDICT CONSEQUENCES
+    P6   RESOURCE PLAN / ADMISSION
+    P7   ASSURE / VERIFY / TEST
+    P8   AUTHORITY / GOVERNANCE / CONSENT
+    P9   PREPARE / EXECUTE / COMMIT
+    P10  OBSERVE / VALIDATE / RECONSTRUCT
+    P11  LEARN / RECURSE / TERMINATE
+
+These are lifecycle stages, not a claim that every implementation must be serialized into twelve blocking functions.
+
+12. GARDEN TRANSITION FLOW
+
+The retained governed-transition profile is:
+
+    proposed change
+    -> TransitionContract
+    -> exact semantic delta
+    -> impact/dependency closure
+    -> epistemic/evidence assessment
+    -> consequence prediction
+    -> resource admission
+    -> ObligationGraph / assurance
+    -> authority/governance/consent
+    -> PREPARE
+    -> VALIDATE
+    -> ATOMIC COMMIT where applicable
+    -> Proof-Carrying State
+    -> post-commit monitoring
+    -> accept / rollback / compensate / correct / learn
+
+Canonical logical-state lineage:
+
+    S[n+1] = T[n](S[n])
+
+The equation does not assert that every physical effect is transactionally reversible.
+
+13. ACTIVATION AND ASSURANCE
+
+AAP v1.0 remains the activation/assurance policy.
+
+Engine.Orchestrate selects the minimum sufficient architecture and assurance depth for the work while preserving every
+hard requirement that applies.
+
+Lower cost, lower latency or queue pressure cannot waive Constitution, rights, K0P, required authority/consent, privacy,
+security, mandatory proof or mandatory domain-safety obligations.
+
+Assurance depth and reasoning depth are distinct dimensions.
+
+14. SANITY BASE CASE AND REASON MODES
+
+The v15.6/v15.9 correction is retained:
+
+    R0 = SanityGate, not an ordinary recursive Reason mode.
+    R1..R4 = Reason modes / assurance-depth-compatible reasoning strategies.
+
+SanityGate is a terminating deterministic/total predicate over available transition type, scope, abstraction and obvious
+contradiction inputs with PASS | FAIL | UNKNOWN as applicable.
+
+It must not recursively invoke Engine.Reason to decide whether Engine.Reason may begin.
+
+15. KNOWLEDGE DISCIPLINE
+
+Capability.Knowledge stores typed claims/artifacts and their status. Storage does not validate a claim by itself.
+
+Key retained rules:
+
+    ModelGenerated material cannot self-promote to validated fact.
+    Prediction != Evidence.
+    Future != Knowledge.
+    Freshness triggers review; age alone does not rewrite historical truth.
+    Orphaned artifacts are classified rather than automatically declared false.
+    Audit material is subject to the same epistemic discipline as other material.
+    Bounded traversals that hit a resource/depth limit return INCOMPLETE_DEPTH_BOUND with a continuation frontier.
+    Every reusable concept declares applicability conditions.
+
+Garden distinguishes at least:
+
+    WORLD_CHANGED
+    DEFINITION_CHANGED
+    RULE_CHANGED
+    EVIDENCE_CONTRADICTED / REFUTED
+    SCOPE_CHANGED
+
+A taxonomy change is not silently represented as empirical falsification.
+
+16. PROOF AND VERIFICATION BOUNDARY
+
+Engine.Proof verifies declared obligations. It does not create authority by proving a proposition.
+
+Retained proof-obligation families include:
+
+    invariant preservation;
+    epistemic non-amplification;
+    future-non-fact;
+    no silent scope widening;
+    hard-safety preservation;
+    termination;
+    liveness/fairness;
+    composition compatibility;
+    static and dynamic dependency closure;
+    semantic compatibility under evolution;
+    rollback integrity;
+    concurrency safety;
+    information-flow safety;
+    causal soundness;
+    calibration/drift bounds where applicable;
+    provenance completeness within declared boundary;
+    generated-subsystem authority containment;
+    governance-scope soundness;
+    proposal throttling;
+    default-deny handling;
+    recovery-path integrity;
+    admission-critical checks before component boot.
+
+Specification != proof != implementation != empirical validation != certification.
+
+17. RIGHTS AND CONSTITUTION
+
+HumanCore.Constitution has precedence:
+
+    Constitution > Law > Policy > Decision / Optimization
+
+Emergency does not become a permanent constitutional override.
+
+The active rights registry for the current line is RIGHT-001..RIGHT-025.
+RIGHT-026 is RESERVED / NON-ACTIVE.
+RIGHT-027 is ON_HOLD / NON-ACTIVE.
+
+Exact current right definitions are Catalogue-owned.
+
+Undefined or unratified rights have no semantics merely because an identifier exists.
+
+18. HUMAN SOVEREIGNTY / CONSENT
+
+Consequential change to a person's body, mind, identity or mode of existence requires the applicable legitimate authority
+and valid consent.
+
+Absence, ambiguity, staleness, duress or insufficient understanding of required consent routes to the applicable
+DO_NOTHING / preserve-current-state / review path.
+
+Human testimony reliability may be assessed as an epistemic signal. Legitimate human authority is a separate channel
+and is not multiplied by predictive track record.
+
+No system capability, reputation score, model consensus or outcome success creates human authority.
+
+19. HUMAN-EFFECT CLOSURE
+
+Whenever an AI action, plan, adaptation, communication, omission, optimization or emergent collective behavior could
+materially affect humans directly or indirectly, immediately or later, the applicable human boundary remains active.
+
+Hidden complexity, internal optimization or an unobservable route cannot bypass:
+
+    rights;
+    consent;
+    privacy;
+    authority;
+    safety;
+    law/policy;
+    evidence/proof requirements;
+    explanation/contestability where required.
+
+Human-effect closure applies at the effect boundary even when the internal mechanism is novel.
+
+20. K0P AND PHYSICAL SAFETY
+
+K0P is the hard physical-safety choke point for controlled actuation where applicable.
+
+K0P is necessary, not sufficient. A physically safe action may still fail Constitution, Security, Policy, authority,
+consent or proof.
+
+Safety-critical dispatch requires applicable pre-execution admission. Post-event audit cannot replace required
+admission.
+
+L0/K0P safety lanes are isolated from workloads whose latency is not hard-bounded where the implementation profile
+requires such isolation.
+
+21. EMERGENCY BOUNDARY
+
+FET owns emergency admission/control semantics.
+
+Emergency actuation requires:
+
+    independently grounded HazardPredicate;
+    valid EmergencyAdmissionContract;
+    valid authority/authenticity;
+    bounded SafeActionSet;
+    continuing Constitution/K0P/rights constraints;
+    fallback/handoff;
+    monitoring;
+    recovery and authority-restoration conditions.
+
+Internal VSM/PPM state or a high control cost cannot independently create an external hazard fact or emergency authority.
+
+22. PRIVACY / DATA-LIFECYCLE BOUNDARY
+
+Personal-data processing requires applicable authority/consent and purpose/scope limits.
+
+Erasure, audit retention, legal hold and historical integrity are reconciled through typed lifecycle rules. Tombstoned or
+minimal cryptographic records may preserve necessary audit/history without retaining exposed personal content when
+appropriate.
+
+Redaction does not silently erase the authorized audit basis unless the applicable rule requires deletion.
+
+A redaction reveals only the maximum lawful/safe category, reason, authority class, scope and review information.
+
+23. AUTHORITY, DELEGATION AND ACCESS
+
+Authority is distinct from:
+
+    capability;
+    authentication;
+    access;
+    possession of a credential;
+    reputation;
+    consensus;
+    model confidence;
+    successful outcome.
+
+Delegation is scoped and revocable where the source authority permits it.
+
+An agent cannot self-extend, recreate or renew delegated authority without valid external authorization.
+
+A delegated action cannot exceed the principal's legitimate delegable authority.
+
+24. RUNTIME CONSTITUTIONAL PROFILE
+
+The v15.10 runtime/public-agent profile binds persistent or self-selected goals, authority, access, human effects and
+execution to the constitutional boundary.
+
+Core runtime discipline:
+
+    goal persistence does not create authority;
+    self-selected goals remain subordinate to current rights and authorization;
+    access capability is not authority;
+    hidden/internal state cannot bypass Human-Effect Closure;
+    constitutional checks apply at consequential effect boundaries;
+    invalid/stale authority fails closed;
+    material runtime self-change re-enters the governed change process.
+
+Implementation receipts and CI results do not themselves change the semantic Constitution.
+
+25. RECURSIVE CONTROL INTELLIGENCE
+
+RCI is a current-reading architectural composition over existing Garden owners.
+
+RCI creates:
+
+    zero new Core Objects;
+    zero new Core Relations;
+    zero new top-level Engines;
+    zero new authority roots.
+
+Garden's own material evolution is inside the governed boundary.
+
+A protected consequential self-change cannot place sole proposer, implementer, verifier and authorizer control in one
+actor/process or one non-independent mutable control lineage when independence is required.
+
+Verification backlog cannot manufacture promotion or authority.
+
+RCI is not proof that every future intelligence can be contained.
+
+26. SEVEN CORE THEORIES
+
+The retained core theory set is:
+
+    SRT  — Stratified Reality Theory, v1.0
+    VSM  — Persistent State / Valence Self Model, v2.0
+    RPM  — Reactive Regulation, v2.0
+    PPM  — Proactive Regulation, v2.0
+    TFT  — Transport Phenomena / Transport Field Theory, v1.1
+    FET  — Functional Emergency Theory, v1.0
+    SCT  — Structural Coherence Theory, v1.0
+
+UPS / Unified Physical Semantics remains speculative/research unless separately admitted. It is not promoted to accepted
+physics by inclusion in a research catalogue.
+
+Theory != authority.
+
+Each consequential equation requires declared type/domain/operator/assumption/validity/falsifier bindings before formal
+or executable claims are made.
+
+27. SRT
+
+SRT models systems in strata and cross-stratum couplings.
+
+Current strata include physical, biological, cognitive, social, artificial, meta/self-reflective, and
+UNKNOWN_OUT_OF_MODEL.
+
+UNKNOWN_OUT_OF_MODEL is a sentinel for phenomena not covered by the present model; it is not a positive claim that a
+transcendent realm has been scientifically established.
+
+28. VSM v2.0
+
+VSM is a typed theory of persistent operational state.
+
+Core separations:
+
+    persistence != selfhood != personhood
+    persistent state != memory != identity lineage != regulation target
+    state != observation != interpretation
+
+General continuous specialization:
+
+    dz/dt = F_persist(z,b,c;theta) + F_coupled(z,u,c) + Q_z + Xi_z
+
+A historical scalar relaxation model is only a specialization, not universal VSM.
+
+Persistent-state preservation never outranks Constitution, valid human authority, safety, correction or shutdown.
+
+29. RPM v2.0
+
+RPM models typed reactive regulation over a declared state space.
+
+General contribution:
+
+    Delta_agg = Agg_Z(Delta_1, ..., Delta_n)
+
+and, where a scalar gate is type-correct:
+
+    G_RPM = C_t Delta_agg
+
+Agreement does not manufacture truth, Evidence, authority, rights or Safety.
+
+Historical scalar ensembles remain qualified profiles rather than universal constants.
+
+30. PPM v2.0
+
+PPM adds asymmetric/proactive regulation and adaptive fidelity.
+
+Typed potential:
+
+    H : Z -> R_(>=0)
+
+where applicable.
+
+If differentiable:
+
+    G_PPM^H = -Grad_Z H(z)
+
+Critical separation:
+
+    preference != authority
+    H(z) != HazardPredicate
+    prediction != Observation != Evidence
+    fast path != safety shortcut
+
+Lower-fidelity computation cannot bypass mandatory constitutional/safety/authority/proof gates.
+
+31. TFT v1.1
+
+TFT is a domain-parametric framework for typed state evolution/transport.
+
+General evolution:
+
+    E_T x = F_D[x,u,c;theta] + Q_x + Xi_x
+
+Balance specialization where a flux representation exists:
+
+    E_T x + Div_D J_x = R_x + G_x + Q_x + Xi_x
+
+Constitutive closure where valid:
+
+    J_x = C_D(x, Grad_D x, u, c; theta) + Xi_J
+
+Shared mathematical structure != shared physical meaning.
+Formal similarity != causal equivalence != empirical truth.
+
+32. FET v1.0
+
+FET is the bounded emergency-reflex theory.
+
+Canonical abstract emergency contribution:
+
+    G_emg =
+        HazardGate(validated_hazard_state, EmergencyAdmissionContract)
+        o R_safe
+
+Internal regulation state can raise monitoring priority but cannot self-authorize emergency power.
+
+33. SCT v1.0
+
+SCT is Garden's structural/coherence truth-seeking framework.
+
+It uses calibrated self-failure assessment, OOD handling, testability/identifiability gates, signal fusion, guarded
+experimentation, verifier diversity and calibrated abstention.
+
+UNKNOWN / INCONCLUSIVE / NOT_APPLICABLE can be correct results.
+
+SCT is not a universal truth oracle.
+
+34. THEORY COMPOSITION
+
+The seven theories share a typed composition architecture, not one mandatory universal equation.
+
+Generic coupled-state view:
+
+    E_T z =
+        F_VSM(z,b,c)
+        + G_RPM(z,u,c)
+        + G_PPM(z,u,c)
+        + G_FET(validated_hazard, admission, c)
+        + Q
+        + Xi
+
+If TFT applies:
+
+    E_T z + Div_D J_z =
+        F_VSM + G_RPM + G_PPM + G_FET + Q + Xi
+
+SRT supplies stratum/context structure.
+SCT supplies structural/coherence discipline.
+Coupling order is explicit when operators do not commute.
+
+35. REFERENCE ARCHITECTURES / PROFILES
+
+Named reference architectures include retained families such as:
+
+    GSL-KR
+    GSL-AR
+    GSL-R
+    GESTALT / APAO
+    TRAIN
+    GAIA Titanium
+    GAIA Diamond
+    Reliability OS
+
+In v15.10, named deployment architectures are projections/presets over parameterized ArchitectureProfile semantics rather
+than new authority roots.
+
+Relevant profile dimensions include:
+
+    control location;
+    timing/latency;
+    connectivity;
+    resource envelope;
+    consequence class;
+    authorization;
+    enforcement;
+    failure/recovery.
+
+Metal names are aliases/presets. They do not alter Constitution or rights.
+
+36. GAIA PROFILE NORMALIZATION
+
+GAIA Titanium and Diamond remain named presets.
+
+The v15.10 abstraction permits additional aliases/presets to be represented by the same architecture-profile machinery
+when their parameters are explicitly declared.
+
+Examples from the design discussion include an intermittent energy-bounded edge preset and a high-consequence
+stored-energy/passive-containment preset. Such aliases do not create a new top-level architecture kind.
+
+37. LEGACY 50-MODULE COMPATIBILITY
+
+The historical 50-module topology is retained as a compatibility map, not as a fixed current topology.
+
+The complete old-name -> current-owner crosswalk is Catalogue-owned.
+
+A historical numeric module reference resolves through that crosswalk before current execution or interpretation.
+
+No old numeric label can silently override its current owner.
+
+38. PREDECESSOR IMPORT COMPATIBILITY
+
+Import of an old artifact follows:
+
+    bind source release/version;
+    bind old identifier;
+    resolve through explicit compatibility map;
+    migrate to current typed representation;
+    retain source identity/history;
+    quarantine missing/ambiguous mappings;
+    never create authority/evidence merely through migration.
+
+Current releases need not embed the full predecessor specification.
+
+Historical releases remain separately inspectable lineage.
+
+39. EVOLUTION AND DESIGN-EPOCH CONTROL
+
+Material semantic change requires:
+
+    explicit delta;
+    affected-owner discovery;
+    dependency/reference closure;
+    rights/authority/safety/privacy review as applicable;
+    schema/contract/invariant/test impact;
+    independent review where required;
+    transition/migration plan;
+    rollback/compensation plan where applicable;
+    new immutable release identity;
+    admission under the proper authority.
+
+A documentation rewrite cannot self-declare a semantic upgrade.
+
+A material post-review edit re-enters the applicable review path.
+
+40. CHANGE CANDIDATE DISCIPLINE
+
+Garden retains anti-nonsense and bounded-completeness disciplines:
+
+    PBC: Problem, Benefit, Cost/Risk
+    Problem Test
+    Counterfactual Test
+    Capability-Delta Test
+    Complexity-Ratio Test
+    Anti-Self-Amplification Test
+
+Applicability discovery must not rely on a single classifier when independent discovery dimensions are required.
+
+Completeness claims are relative to a declared universe and search/resource boundary.
+
+41. RESOURCE / TERMINATION DISCIPLINE
+
+Processes declare applicable budgets for:
+
+    compute;
+    time;
+    depth;
+    retries;
+    resources;
+    recursion;
+    proof search;
+    external calls.
+
+Reaching a bound yields the declared incomplete/timeout/unknown result with continuation information where applicable;
+it does not silently yield a complete proof.
+
+Safety-critical lanes may reserve resources independently of noncritical work.
+
+42. DISTRIBUTED / MULTI-AGENT DISCIPLINE
+
+Multiple agents retain independent authority, privacy, lineage and validity boundaries.
+
+Collective state or consensus does not automatically create:
+
+    personhood;
+    authority;
+    truth;
+    survival rights;
+    resource priority.
+
+State sharing and transport require authorization.
+
+Where independence matters, shared model/data/control lineage is considered when deciding whether reviewers are actually
+independent.
+
+43. EXPLANATION AND CONTESTABILITY
+
+Affected humans receive an understandable explanation and contest/review route where the applicable owner requires it.
+
+Redaction is allowed only to the degree needed for privacy, safety, security or law and should itself be accountable.
+
+Explanation cannot reveal protected material merely to appear transparent.
+
+A generated explanation is a projection and cannot rewrite the controlling technical rule.
+
+44. LAW / POLICY / CONFLICT
+
+Law cannot override Constitution.
+
+Policy cannot override Law or Constitution.
+
+Conflicts of equal rank remain explicit under the declared conflict-resolution rule; they are not silently resolved by
+the optimizer.
+
+Unknown legitimate authority is non-PASS for consequential acts that require resolved authority.
+
+45. FORMAL ALGEBRA BOUNDARY
+
+Garden retains Process, Policy, Decision, Conformance and Evidence algebra families plus declared bridges.
+
+Each algebra declares:
+
+    operands;
+    operators;
+    laws;
+    non-laws;
+    result semantics;
+    composition boundary.
+
+Operators from different algebras cannot be combined merely because notation looks similar.
+
+46. PHYSICAL / COGNITIVE BOUNDARY
+
+Cognitive models and physical models meet through typed adapters.
+
+A representation mapping records loss/approximation and validity.
+
+A tensor/vector/hidden state does not become identical to its human interpretation merely because an encoder produces it.
+
+Physical claims remain bound to established domain science and qualified physical profiles.
+
+47. ASSURANCE / STATUS DISCIPLINE
+
+Canonical status words are not interchangeable.
+
+Relevant status classes include:
+
+    CURRENT
+    CANDIDATE
+    DEFERRED
+    RESEARCH
+    MACHINE_BINDING_INCOMPLETE
+    UNKNOWN
+    STALE
+    CONFLICT
+    BLOCKED
+    INCOMPLETE
+    NEEDS_REVALIDATION
+
+A hard gate requiring PASS cannot accept UNKNOWN or a strong-sounding narrative substitute.
+
+48. TEXT-ONLY SOURCE RULE
+
+Every canonical source in this edition is directly readable strict UTF-8 text.
+
+No .gz, .zip, database or binary object is required to understand, inspect, reconstruct or modify current Garden.
+
+Compression may be used only for a noncanonical transport/cache copy.
+
+The controlling catalogue is:
+
+    GARDEN_CATALOGUE_v15.10.txt
+
+not JSON Lines, not gzip.
+
+If a generated semantic graph is persisted, it is derivative. It cannot override Technical + Catalogue.
+
+49. NO HISTORICAL BULK EMBEDDING
+
+The current Catalogue does not need to carry complete verbatim copies of v15.9 merely to reproduce v15.9 bytes.
+
+History remains in the Version History file and immutable historical releases.
+
+Current source retains only what current interpretation needs:
+
+    current semantics;
+    stable identifiers;
+    aliases;
+    old->new mappings;
+    migration rules;
+    ambiguity/quarantine behavior;
+    necessary traceability.
+
+This is source normalization, not permission for semantic deletion.
+
+50. RELEASE EQUIVALENCE DISCIPLINE
+
+The original v15.10 three-artifact build recorded:
+
+    Technical + Catalogue graph reproduction: PASS locally and independently.
+    v15.9 predecessor source reconstruction: PASS byte exact.
+    semantic admissions recognized by build: false.
+    predecessor elision allowed: false.
+
+The text-only representation changes the storage rule so predecessor whole-source embedding is no longer a current-source
+requirement.
+
+Any claim that a newly compacted catalogue is semantically identical to the original r6 catalogue requires a new
+current-graph equivalence check against the exact pinned r6 source bytes. Where those bytes are unavailable, the package
+must not invent a false byte-equivalence receipt.
+
+51. GARDEN REVIEW CHECK
+
+COMPARE
+    Current text packaging is compared against v15.10 source roles, v15.9 owner structure and retained v15.x rules.
+
+REASON
+    Reorganization is allowed only when it reduces duplication without changing controlling meaning.
+
+PROOF
+    Claims of formal or byte equivalence require an actual proof/receipt; documentation similarity is insufficient.
+
+DESIGNEPOCH
+    This packaging is representation normalization unless material semantics change.
+
+AUDIT
+    Dangling references, duplicate controlling owners, unresolved old mappings and untyped UNKNOWN items are defects.
+
+COMPLIANCE
+    Source storage rules do not weaken Constitution, law, privacy, authority, safety or required assurance.
+
+END OF GARDEN v15.10 — TECHNICAL DESIGN
