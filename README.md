@@ -10,7 +10,7 @@ This repository is now a **design corpus**, not the old runtime/review-automatio
 
 - **Canonical baseline:** Garden v15.5 / GSL v45.1 under [canonical/current](canonical/current/).
 - **Retained whole-release candidates:** [v15.6](canonical/candidates/v15.6/) and [v15.7](canonical/candidates/v15.7/).
-- **v15.10 working-design delta:** compact abstraction/GCSC material under [design_deltas/v15.10](design_deltas/v15.10/), especially [V15_10_ABSTRACTION_GCSC_DELTA.md](design_deltas/v15.10/V15_10_ABSTRACTION_GCSC_DELTA.md) and [Tree Core v0.8.1](design_deltas/v15.10/TREE_CORE_v0.8.1_2026-09-23.txt).
+- **v15.10 working-design delta:** compact abstraction/GCSC material under [design_deltas/v15.10](design_deltas/v15.10/), especially the [full compact v15.10 Technical delta](design_deltas/v15.10/GARDEN_TECHNICAL_v15.10_FULL_DELTA.txt), [V15_10_ABSTRACTION_GCSC_DELTA.md](design_deltas/v15.10/V15_10_ABSTRACTION_GCSC_DELTA.md), GCSC source material and [Tree Core v0.8.1](design_deltas/v15.10/TREE_CORE_v0.8.1_2026-09-23.txt).
 - **v15.11 noncanonical candidates:** retained source candidates plus the recovered [candidate retention ledger](design_deltas/v15.11/CANDIDATE_RETENTION_LEDGER.md).
 
 ## v15.10 — major design change
@@ -25,14 +25,19 @@ The repository intentionally does **not** retain the multi-megabyte generated v1
 
 v15.11 is not one admitted release. It is a noncanonical candidate set.
 
-Full retained source candidates include:
+Full retained technical candidates include:
 
 - [Recursive Control Closure — V1511-RCC-001](design_deltas/v15.11/rcc/)
-- [Representation Escape & Independence Hardening — V1511-REP-001](design_deltas/v15.11/rep/)
+- [Representation Escape & Independence Hardening — V1511-REP-001](design_deltas/v15.11/rep/GARDEN_v15.11_REP_RECONCILED_CANDIDATE.md)
 - [Search-History Resilience — V1511-SHR-001](design_deltas/v15.11/shr/)
+- [Evaluation Reachability Closure — V1511-ERC-001](design_deltas/v15.11/erc/)
+- [Rev-2 meta-epistemic / QSE hardening](design_deltas/v15.11/rev2/)
+- [Verified Execution Integrity — V1511-VEI-001](design_deltas/v15.11/vei/)
 - [Coupled Transitions and Responsibility Preservation](design_deltas/v15.11/transition-responsibility/GARDEN_v15.11_TRANSITION_AND_RESPONSIBILITY_CANDIDATE.md)
 
-The [v15.11 retention ledger](design_deltas/v15.11/CANDIDATE_RETENTION_LEDGER.md) also preserves later/recovered candidate directions including ERC, Rev-2/QSE hardening, VEI, capability comparison, RCC antirollback maintenance, Transition Fabric, authority provenance, proactive upgrade closure, UAAC, semantic meta-kernel, epistemic/collective/adaptive evolution, privacy/justice, KR/CEA, runtime/compiler/admission/assurance and other explicitly recovered candidate streams.
+Candidate directions that never had a separately recoverable full source are retained with all recoverable technical requirements in [RECOVERED_TECHNICAL_CANDIDATE_DIRECTIONS.md](design_deltas/v15.11/RECOVERED_TECHNICAL_CANDIDATE_DIRECTIONS.md).
+
+The [v15.11 retention ledger](design_deltas/v15.11/CANDIDATE_RETENTION_LEDGER.md) is an index/status map; technical requirements live in the full candidate files or the recovered technical-directions file.
 
 A ledger entry preserves work; it does not admit it.
 
