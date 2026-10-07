@@ -99,5 +99,16 @@
       "path": "design_deltas/PENDING_PROJECT_WIDE_CANDIDATES_2026-09-14.md"
     }
   ],
-  "status_rule": "Presence in this index does not admit, prove, implement, validate or certify a candidate."
+  "status_rule": "Presence in this index does not admit, prove, implement, validate or certify a candidate.",
+  "economic_governance": {
+    "status": "FREE_PENDING_100000_PERSON_REVIEW",
+    "review_population": 100000,
+    "selection": "genuinely random ordinary people from countries voluntarily joining the AI Accord",
+    "decision_scope": "100% of Garden ideas and their economic value",
+    "outcomes": [
+      "KEEP_FREE",
+      "GARDEN_COMMON_FUND"
+    ],
+    "git_owner_personal_share": "NONE"
+  }
 }

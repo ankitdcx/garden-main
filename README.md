@@ -1,8 +1,8 @@
 # Garden Main — Design Archive and Candidate Corpus
 
-**Current economic status: the owner has made Garden free for everyone.** See [LICENSE](LICENSE).
+**Current economic status: Garden was discarded as an active personal project on 6 October 2026 and its ideas are free pending a 100,000-person review.** See [LICENSE](LICENSE).
 
-The owner believes Garden ideas may have very large economic value—potentially billions or trillions if their claimed usefulness proves out. The present state remains fully free. If that free status is ever changed for rights/value that remain controllable, the intended alternative is a Garden Common Fund governed by approximately 100,000 randomly selected, periodically rotating ordinary people through a politically independent and capture-resistant mechanism. No third concentrated-control option is intended.
+Because the project may have major economic value, 100,000 genuinely randomly selected ordinary people from countries that voluntarily join the AI Accord will review that decision. Until the review happens, Garden ideas are free. When it happens, those people decide what happens afterward to 100% of the Garden ideas and their economic value: keep Garden free, or place its economic value in the Garden Common Fund. The Git owner keeps no personal economic share under this rule.
 
 ## Repository purpose
 
@@ -90,4 +90,4 @@ Git history remains available for historical recovery; the current tree is inten
 
 ## License / economic governance
 
-See [LICENSE](LICENSE). Garden is currently free for everyone. The Common Fund arrangement is the stated alternative only if the free status is ever changed for rights/value that remain controllable.
+See [LICENSE](LICENSE). Garden ideas are free pending the 100,000-person review described there. When that review happens, the randomly selected community decides what happens afterward to 100% of the Garden ideas and their economic value.
