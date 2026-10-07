@@ -1,8 +1,8 @@
 # Garden Main — Design Archive and Candidate Corpus
 
-**Current economic status: Garden was discarded as an active personal project on 6 October 2026 and its ideas are free pending a 100,000-person review.** See [LICENSE](LICENSE).
+**Current economic status: individual ideas in this repository are free to use without attribution while the 100,000-person review is pending.** See [LICENSE](LICENSE).
 
-Because the project may have major economic value, 100,000 genuinely randomly selected ordinary people from countries that voluntarily join the AI Accord will review that decision. Until the review happens, Garden ideas are free. When it happens, those people decide what happens afterward to 100% of the Garden ideas and their economic value: keep Garden free, or place its economic value in the Garden Common Fund. The Git owner keeps no personal economic share under this rule.
+The review will use 100,000 genuinely randomly selected ordinary people from countries that voluntarily join the AI Accord. When the review happens, they decide what happens afterward to 100% of the individual ideas and their economic value: keep them free, or place their economic value in a common fund governed by the randomly selected community. Neither the ideas, the fund nor downstream systems need to use the name "Garden" or mention the project or owner. The Git owner keeps no personal economic share under this rule.
 
 ## Repository purpose
 
@@ -90,4 +90,4 @@ Git history remains available for historical recovery; the current tree is inten
 
 ## License / economic governance
 
-See [LICENSE](LICENSE). Garden ideas are free pending the 100,000-person review described there. When that review happens, the randomly selected community decides what happens afterward to 100% of the Garden ideas and their economic value.
+See [LICENSE](LICENSE). Individual ideas are free to use without attribution while the 100,000-person review is pending. When that review happens, the randomly selected community decides what happens afterward to 100% of the ideas and their economic value. No Garden branding or personal attribution is required.
