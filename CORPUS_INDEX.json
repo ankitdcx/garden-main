@@ -28,7 +28,8 @@
       "status": "NONCANONICAL_WORKING_DESIGN",
       "path": "design_deltas/v15.10/",
       "description": "Abstraction/GCSC/SAL/SAC, semantic retention and Tree Core lineage.",
-      "companion_candidate_note": "design_deltas/v15.10/GENERATIVE_SEMANTIC_KERNEL_AND_DERIVED_GARDEN_CANDIDATE.md"
+      "companion_candidate_note": "design_deltas/v15.10/GENERATIVE_SEMANTIC_KERNEL_AND_DERIVED_GARDEN_CANDIDATE.md",
+      "future_abstraction_summary": "design_deltas/v15.10/FUTURE_ABSTRACTION_COMPACT_GENERATIVE_GARDEN.md"
     }
   ],
   "additive_candidates": [
