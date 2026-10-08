@@ -87,8 +87,6 @@ At minimum, consequential promotion claims should preserve the existing Garden d
 
 The current tree intentionally excludes obsolete runtime implementations, deployment experiments, browser/mobile council code, old work packages, review automation, retired archives, stale receipts/workstreams and derived GSL implementation profiles.
 
-Patent-specific notices/registers and `IP_BOUNDARY.md` are not part of the current repository surface.
-
 Git history remains available for historical recovery; the current tree is intended to be the compact design/candidate corpus.
 
 ## License / economic governance
