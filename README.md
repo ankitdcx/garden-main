@@ -16,6 +16,8 @@ Current structure:
 - [design_deltas/v15.6](design_deltas/v15.6/) and [design_deltas/v15.7](design_deltas/v15.7/) — supporting candidate/delta material.
 - [design_deltas/v15.10](design_deltas/v15.10/) — later abstraction/GCSC/Tree-Core working design.
 - [design_deltas/v15.11](design_deltas/v15.11/) — focused noncanonical successor candidates and recovered technical directions.
+- [USM-001 — Universal Situation Mapping](design_deltas/v15.11/usm/GARDEN_USM_001_CANDIDATE.md) — source-bound fact ledger and deterministic GSL compiler; noncanonical.
+- [MCC-001 — Material Context Closure](design_deltas/v15.11/mcc/GARDEN_MCC_001_CANDIDATE.md) — bounded nested-context closure and anti-obstruction; noncanonical.
 - [CONTRIBUTING.md](CONTRIBUTING.md) — contribution guidance.
 - [LICENSE](LICENSE) — current use terms.
 
