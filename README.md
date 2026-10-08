@@ -1,6 +1,6 @@
 # Garden Main — Design Archive and Candidate Corpus
 
-**Current economic status: individual ideas in this repository are free to use without attribution while the minimum-100,000-person review is pending.** See [LICENSE](LICENSE).
+**Current economic status: individual ideas in this repository are offered for free use without attribution while the minimum-100,000-person review is pending, conditional on respect for the repository owner's personal rights, including privacy, dignity, consent and security.** See [LICENSE](LICENSE).
 
 Voting membership is open to every resident of every AI-Accord member country. Anyone passing objective general-reasoning and basic AI-knowledge tests may join and vote, with no political appointments, random-selection gate, ideological screening, discretionary filtering or mandatory coaching. At least 100,000 qualified members are required for the first decision, with no upper limit and one equal vote per member. Membership remains open as people and countries join. The community decides what happens afterward to 100% of the ideas and worldwide revenue earned from their use: keep them free or direct economic value to a common fund. No Garden branding or personal attribution is required. See [LICENSE](LICENSE).
 
@@ -93,4 +93,4 @@ Git history remains available for historical recovery; the current tree is inten
 
 ## License / economic governance
 
-See [LICENSE](LICENSE). Individual ideas are free to use without attribution while the minimum-100,000-person review is pending. When that review happens, the qualified voting community decides what happens afterward to 100% of the ideas and their economic value. No Garden branding or personal attribution is required.
+See [LICENSE](LICENSE). Free use pending the minimum-100,000-person review is expressly conditional on respecting the owner's personal rights, including privacy, dignity, consent and security. Unauthorized surveillance or intrusion does not satisfy this condition. The LICENSE records the owner's proposed consequences for independently established violations, including loss of conditional free-use permission, a 1,000% compensation proposal, knowing unauthorized use, and country-level governmental assurance. No personal attribution is required. When that review happens, the qualified voting community decides what happens afterward to 100% of the ideas and their economic value. No Garden branding or personal attribution is required.
