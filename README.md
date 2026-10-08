@@ -2,7 +2,7 @@
 
 **Current economic status: individual ideas in this repository are free to use without attribution while the minimum-100,000-person review is pending.** See [LICENSE](LICENSE).
 
-The review will use at least 100,000 genuinely randomly selected ordinary people from countries that voluntarily join the AI Accord. There is no upper limit. Random selection occurs first; selected reviewers vote only after passing a neutral comprehension check confirming that they understand the decision, the available outcomes, and the material consequences presented to them. The check tests understanding, not ideology or preferred outcome. When the review happens, they decide what happens afterward to 100% of the individual ideas and their economic value: keep them free, or place their economic value in a common fund governed by the randomly selected community. Neither the ideas, the fund nor downstream systems need to use the name "Garden" or mention the project or owner. The Git owner keeps no personal economic share under this rule.
+Voting membership is open to every resident of every AI-Accord member country. Anyone passing objective general-reasoning and basic AI-knowledge tests may join and vote, with no political appointments, random-selection gate, ideological screening, discretionary filtering or mandatory coaching. At least 100,000 qualified members are required for the first decision, with no upper limit and one equal vote per member. Membership remains open as people and countries join. The community decides what happens afterward to 100% of the ideas and worldwide revenue earned from their use: keep them free or direct economic value to a common fund. No Garden branding or personal attribution is required. See [LICENSE](LICENSE).
 
 ## Repository purpose
 
@@ -91,4 +91,4 @@ Git history remains available for historical recovery; the current tree is inten
 
 ## License / economic governance
 
-See [LICENSE](LICENSE). Individual ideas are free to use without attribution while the minimum-100,000-person review is pending. When that review happens, the randomly selected community decides what happens afterward to 100% of the ideas and their economic value. No Garden branding or personal attribution is required.
+See [LICENSE](LICENSE). Individual ideas are free to use without attribution while the minimum-100,000-person review is pending. When that review happens, the qualified voting community decides what happens afterward to 100% of the ideas and their economic value. No Garden branding or personal attribution is required.
