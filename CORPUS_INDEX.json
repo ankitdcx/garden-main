@@ -29,7 +29,8 @@
       "path": "design_deltas/v15.10/",
       "description": "Abstraction/GCSC/SAL/SAC, semantic retention and Tree Core lineage.",
       "companion_candidate_note": "design_deltas/v15.10/GENERATIVE_SEMANTIC_KERNEL_AND_DERIVED_GARDEN_CANDIDATE.md",
-      "invariant_driven_theory_discovery": "design_deltas/v15.10/INVARIANT_DRIVEN_THEORY_DISCOVERY_IDTD_001.md"
+      "invariant_driven_theory_discovery": "design_deltas/v15.10/INVARIANT_DRIVEN_THEORY_DISCOVERY_IDTD_001.md",
+      "recursive_discovery_compression": "design_deltas/v15.10/RECURSIVE_SEMANTIC_DISCOVERY_COMPRESSION_RSDC_001.md"
     }
   ],
   "additive_candidates": [
