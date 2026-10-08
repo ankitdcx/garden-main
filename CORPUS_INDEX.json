@@ -81,6 +81,18 @@
       "status": "NONCANONICAL_CANDIDATE",
       "path": "design_deltas/v15.11/capability-comparison/MODEL_CAPABILITY_COMPARISON_CANDIDATE_2026-10-05.md",
       "description": "Cross-model capability measurement"
+    },
+    {
+      "id": "GARDEN-USM-001",
+      "status": "NONCANONICAL_CANDIDATE",
+      "path": "design_deltas/v15.11/usm/GARDEN_USM_001_CANDIDATE.md",
+      "description": "Universal Situation Mapping — evidence-bound deterministic GSL front-end"
+    },
+    {
+      "id": "GARDEN-MCC-001",
+      "status": "NONCANONICAL_CANDIDATE",
+      "path": "design_deltas/v15.11/mcc/GARDEN_MCC_001_CANDIDATE.md",
+      "description": "Material Context Closure — bounded recursive GSL context expansion"
     }
   ],
   "recovered_candidate_material": [

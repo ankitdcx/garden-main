@@ -2,6 +2,11 @@
 
 **Purpose:** preserve candidate ideas recovered from September–October 2026 project chats and retained source material without falsely admitting them. A ledger entry is not canonical status, proof, implementation or certification.
 
+## New v15.11 additive candidates (2026-10-08)
+
+- **GARDEN-USM-001 — Universal Situation Mapping** — full noncanonical candidate in `usm/GARDEN_USM_001_CANDIDATE.md`; evidence-bound Situation Fact Ledger, frozen deterministic GSL compiler, source/epoch invalidation, adversarial ambiguity and Human-Effect preservation.
+- **GARDEN-MCC-001 — Material Context Closure** — full noncanonical candidate in `mcc/GARDEN_MCC_001_CANDIDATE.md`; bounded recursive/shared/cyclic context expansion, qualified materiality, RSDC obligation-closure reopening, anti-obstruction and receipts.
+
 ## Full candidate sources retained in this repository
 
 - **V1511-RCC-001 — Recursive Control Closure (RCC)** — additive RCI/CPI hardening; current retained source under `rcc/`.
