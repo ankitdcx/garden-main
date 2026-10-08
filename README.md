@@ -45,6 +45,7 @@ The retained technical material includes:
 - [15.x retention-recovery addendum](design_deltas/v15.10/V15X_RETENTION_RECOVERY_ADDENDUM_2026-09-20.md)
 - [generative semantic kernel / future abstraction candidate](design_deltas/v15.10/GENERATIVE_SEMANTIC_KERNEL_AND_DERIVED_GARDEN_CANDIDATE.md) — tests whether a frozen explicit kernel can reconstruct held-out Garden semantics; no explicit item is retired without passing the candidate's reconstruction/compression checklist.
 - [Invariant-Driven Theory Discovery (IDTD-001)](design_deltas/v15.10/INVARIANT_DRIVEN_THEORY_DISCOVERY_IDTD_001.md) — noncanonical candidate for deriving and independently testing explanatory theories from seed-justified invariants and SAC artifacts.
+- [Recursive Semantic Discovery & Compression (RSDC-001)](design_deltas/v15.10/RECURSIVE_SEMANTIC_DISCOVERY_COMPRESSION_RSDC_001.md) — noncanonical coordinated extension for obligation fixed points, adversarial motifs, theory/invariant feedback, independent reconstruction and semantic change receipts.
 
 The core abstraction uses six GSL Pillars, ten Core Objects, twenty-four Core Relations, seven Design Forms and cross-cutting inspection facets. GCSC/SAL/SAC explore bounded semantic combinations, test admissibility and produce candidate artifacts. Generated material cannot self-admit, create authority or erase specialist predecessor meaning.
 
