@@ -104,7 +104,7 @@
   "status_rule": "Presence in this index does not admit, prove, implement, validate or certify a candidate.",
   "economic_governance": {
     "status": "FREE_USE_WITHOUT_ATTRIBUTION_PENDING_100000_PERSON_REVIEW",
-    "selection": "genuinely random ordinary people from countries voluntarily joining the AI Accord; random selection precedes qualification",
+    "selection": "OPEN_VOLUNTARY_MEMBERSHIP_FOR_ALL_RESIDENTS_OF_AI_ACCORD_MEMBER_COUNTRIES",
     "decision_scope": "100% of individual ideas and their economic value",
     "outcomes": [
       "KEEP_IDEAS_FREE",
@@ -115,6 +115,9 @@
     "git_owner_personal_share": "NONE",
     "review_population_minimum": 100000,
     "review_population_maximum": null,
-    "voter_qualification": "neutral comprehension check of the decision, available outcomes, and presented material consequences; no ideology, preferred-outcome, political-belief, wealth, status, or agreement test"
+    "voter_qualification": "general reasoning and basic AI knowledge only; no decision-specific test or coaching; no political appointment, ideology screening or discretionary filtering",
+    "membership": "any eligible resident passing two objective tests may join and vote; open continuously",
+    "votes_per_member": 1,
+    "worldwide_revenue_scope": "100% of revenue from ideas worldwide including nonmember countries"
   }
 }
