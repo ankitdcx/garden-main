@@ -14,6 +14,6 @@ Read in order:
 
 All 15 corrected engineering patterns and all 38 additional work items are covered by 20 profiles. Prior pending work has 174 disposition records. Deferred definitions and product choices are explicit; specified tests are not executed tests.
 
-See [release gates](../../../reviews/v15.6/RELEASE-STATUS.md), [byte retention](../../../reviews/v15.6/RETENTION-RECEIPT.json), [bounded reference scan](../../../reviews/v15.6/REFERENCE-CLOSURE-RECEIPT.json), and the model reviews under [reviews/v15.6](../../../reviews/v15.6).
+See `release gates` (historical review artifact; removed from current tree, recoverable from Git history), `byte retention` (historical review artifact; removed from current tree, recoverable from Git history), `bounded reference scan` (historical review artifact; removed from current tree, recoverable from Git history), and the model reviews under `reviews/v15.6` (historical review artifact; removed from current tree, recoverable from Git history).
 
 The current canonical source remains [v15.5](../../current/README.md). This candidate does not weaken the required independent-family, semantic closure, enforcement or promotion gates.

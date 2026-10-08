@@ -21,8 +21,8 @@ The following non-canonical amendments are now part of the active v15.7 candidat
 - [World Evidence Graph / Planetary Knowledge Substrate](../../../design_deltas/v15.7/WORLD-EVIDENCE-GRAPH-CANDIDATE-2026-09-16.md)
 - [Lethal-Force Non-Autonomy & Verified Strategic Disarmament](../../../design_deltas/v15.7/LETHAL-FORCE-DISARMAMENT-CANDIDATE-2026-09-16.md)
 - [Privacy-First Peaceful Migration](../../../design_deltas/v15.7/PRIVACY-FIRST-PEACEFUL-MIGRATION-CANDIDATE-2026-09-16.md)
-- [Integration/retention record](../../../reviews/v15.7/CHAT-PATCH-INTEGRATION-2026-09-16.md)
+- `Integration/retention record` (historical review artifact; removed from current tree, recoverable from Git history)
 
 These amendments preserve existing topology and authority boundaries. They explicitly do not authorize universal surveillance, collective guilt, forced Garden adoption, AI political sovereignty, operational weapon disablement, or publication of private complaints. Exact five-file materialization, registry allocation, semantic closure, independent-family review and protected admission remain required before any promotion claim.
 
-See [release status](../../../reviews/v15.7/RELEASE-STATUS.md) and [retention](../../../reviews/v15.7/RETENTION-RECEIPT.json). The bounded anchor scan introduces no new unresolved anchors but is not full GSL semantic closure. Historical v15.6 model reviews remain bound to their own inputs.
+See `release status` (historical review artifact; removed from current tree, recoverable from Git history) and `retention` (historical review artifact; removed from current tree, recoverable from Git history). The bounded anchor scan introduces no new unresolved anchors but is not full GSL semantic closure. Historical v15.6 model reviews remain bound to their own inputs.
