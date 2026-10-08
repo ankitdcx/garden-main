@@ -16,8 +16,8 @@ Current structure:
 - [design_deltas/v15.6](design_deltas/v15.6/) and [design_deltas/v15.7](design_deltas/v15.7/) — supporting candidate/delta material.
 - [design_deltas/v15.10](design_deltas/v15.10/) — later abstraction/GCSC/Tree-Core working design.
 - [design_deltas/v15.11](design_deltas/v15.11/) — focused noncanonical successor candidates and recovered technical directions.
-- [USM-001 — Universal Situation Mapping](design_deltas/v15.11/usm/GARDEN_USM_001_CANDIDATE.md) — source-bound fact ledger and deterministic GSL compiler; noncanonical.
-- [MCC-001 — Material Context Closure](design_deltas/v15.11/mcc/GARDEN_MCC_001_CANDIDATE.md) — bounded nested-context closure and anti-obstruction; noncanonical.
+- [USM-001 — Universal Situation Mapping](design_deltas/v15.11/GARDEN_USM_001_CANDIDATE.md) — source-bound fact ledger and deterministic GSL compiler; noncanonical.
+- [MCC-001 — Material Context Closure](design_deltas/v15.11/GARDEN_MCC_001_CANDIDATE.md) — bounded nested-context closure and anti-obstruction; noncanonical.
 - [CONTRIBUTING.md](CONTRIBUTING.md) — contribution guidance.
 - [LICENSE](LICENSE) — current use terms.
 
@@ -65,8 +65,8 @@ Full retained technical candidates include:
 - [Evaluation Reachability Closure (ERC)](design_deltas/v15.11/erc/)
 - [Rev-2 meta-epistemic / QSE hardening](design_deltas/v15.11/rev2/)
 - [Verified Execution Integrity (VEI)](design_deltas/v15.11/vei/)
-- [Coupled Transitions and Responsibility Preservation](design_deltas/v15.11/transition-responsibility/GARDEN_v15.11_TRANSITION_AND_RESPONSIBILITY_CANDIDATE.md)
-- [Cross-Model Capability Measurement](design_deltas/v15.11/capability-comparison/MODEL_CAPABILITY_COMPARISON_CANDIDATE_2026-10-05.md)
+- [Coupled Transitions and Responsibility Preservation](design_deltas/v15.11/GARDEN_v15.11_TRANSITION_AND_RESPONSIBILITY_CANDIDATE.md)
+- [Cross-Model Capability Measurement](design_deltas/v15.11/MODEL_CAPABILITY_COMPARISON_CANDIDATE_2026-10-05.md)
 
 The [technical review projection](design_deltas/v15.11/GARDEN_TECHNICAL_v15.11_REVIEW_PROJECTION_2026-09-20.txt) retains additional exact technical rules from the v15.11 integration lineage. Candidate directions for which no separate full source was recoverable are retained with their recoverable technical requirements in [RECOVERED_TECHNICAL_CANDIDATE_DIRECTIONS.md](design_deltas/v15.11/RECOVERED_TECHNICAL_CANDIDATE_DIRECTIONS.md). The [candidate retention ledger](design_deltas/v15.11/CANDIDATE_RETENTION_LEDGER.md) is an index/status map, not an admission mechanism.
 

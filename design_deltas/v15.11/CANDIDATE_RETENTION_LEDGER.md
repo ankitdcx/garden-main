@@ -4,15 +4,15 @@
 
 ## New v15.11 additive candidates (2026-10-08)
 
-- **GARDEN-USM-001 — Universal Situation Mapping** — full noncanonical candidate in `usm/GARDEN_USM_001_CANDIDATE.md`; evidence-bound Situation Fact Ledger, frozen deterministic GSL compiler, source/epoch invalidation, adversarial ambiguity and Human-Effect preservation.
-- **GARDEN-MCC-001 — Material Context Closure** — full noncanonical candidate in `mcc/GARDEN_MCC_001_CANDIDATE.md`; bounded recursive/shared/cyclic context expansion, qualified materiality, RSDC obligation-closure reopening, anti-obstruction and receipts.
+- **GARDEN-USM-001 — Universal Situation Mapping** — full noncanonical candidate in `GARDEN_USM_001_CANDIDATE.md`; evidence-bound Situation Fact Ledger, frozen deterministic GSL compiler, source/epoch invalidation, adversarial ambiguity and Human-Effect preservation.
+- **GARDEN-MCC-001 — Material Context Closure** — full noncanonical candidate in `GARDEN_MCC_001_CANDIDATE.md`; bounded recursive/shared/cyclic context expansion, qualified materiality, RSDC obligation-closure reopening, anti-obstruction and receipts.
 
 ## Full candidate sources retained in this repository
 
 - **V1511-RCC-001 — Recursive Control Closure (RCC)** — additive RCI/CPI hardening; current retained source under `rcc/`.
 - **V1511-REP-001 — Representation Escape & Independence Hardening** — reconciled revision 1.1 retained under `rep/`.
 - **V1511-SHR-001 — Search-History Resilience** — retained under `shr/`.
-- **Coupled Transitions and Responsibility Preservation** — revision 1.0, 2026-09-22; retained under `transition-responsibility/`.
+- **Coupled Transitions and Responsibility Preservation** — revision 1.0, 2026-09-22; retained under `GARDEN_v15.11_TRANSITION_AND_RESPONSIBILITY_CANDIDATE.md`.
 
 ## Later candidates / revisions recovered from chats
 
