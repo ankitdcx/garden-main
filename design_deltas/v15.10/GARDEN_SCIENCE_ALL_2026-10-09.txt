@@ -3164,3 +3164,737 @@ awhc_simple_payback_months=17.1 [exact 171/10]
 Garden source V15_10_ABSTRACTION_GCSC_DELTA.md SHA256 90a58c337bc87c2e445eb56d6197cddea845f74485339e074b0818d70dae8479
 Garden source TREE_CORE_v0.8.1_2026-09-23.txt SHA256 4af3a2c4c8d8577909735fb61c42e0f43324dc0147d8b24146b4561ee56511fa
 Research seed digest (not canonical Garden encoding): 70d4e2057c45d7b372644caace7b74128b93a50d54116de1d1fb999100a46fdd
+
+
+4.11 INDUSTRIAL SITUATION-TO-INVARIANT INVESTIGATION — 9 OCTOBER 2026
+Status: NONCANONICAL RESEARCH. No scientific admission or production control.
+
+RESULT FIRST
+This pass did not establish the requested novel industrial process with large-scale savings. Six physically motivated candidate cycles were mapped and attacked across rinsing, drying and membrane shutdown/cleaning. Broad mechanisms were already known; two narrow interventions remain unverified and economically ungrounded. These are local negative findings, not evidence of domain exhaustion.
+A separate, concrete result is a reproduced reference-state inconsistency in a current industrial energy calculator and a tested research correction. The calculation can predict a change in energy with no physical change. Later prior-report review found existing concerns about this calculator's measured/rated pressure logic, so this is a reproduced specific counterexample, NOT an established previously unknown defect. Fixing a displayed saving does not itself save electricity. Historical novelty, deployed incidence and incremental economic value remain UNKNOWN.
+
+4.11.1 SOURCE AND METHOD BOUNDARIES
+Garden repository base: 193f454ff96419c568845ecd90f59cdd4171a602.
+Read actual retained v15.10 abstraction delta, GCSC specification, TREE_CORE, IDTD-001, technical process/evidence sections, and existing science register. The existing bounded research adapter was reused; the complete finite SAL interpretation/join registries remain unavailable. No claim of full Garden compiler/TREE_CORE execution is made.
+Canonical Garden v15.5/GSL v45.1 source root remains 63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598. v15.10 remains retained candidate material. Scientific records cannot promote themselves. TREE_CORE integrity/source-retention/stale-schema issues were not repaired or silently passed.
+The process was physical situation selection -> chronological/dependency map -> typed balance and engineering obligations -> connected-motif audit -> candidate freeze -> mathematical/counterexample attack -> targeted prior art -> conditional value assessment. Materiality, not a target record count, justified expansion. Recursion is a fresh bounded source-seeded research cycle; S1 outputs were not automatically self-fed or self-admitted.
+Three mapping roles and a separate adversarial reviewer were used. They are same-system assistant roles, not external independent laboratories or a blinded matched-budget trial. Process-fact searches and model training can expose prior art before targeted searches. No comparative discovery-performance claim follows from these runs.
+A new engineering configuration can use known physics; a conventional model reproducing it after being given the configuration does not by itself defeat design novelty. Here, broad novelty rejections depend on actual earlier mechanisms/configurations; unresolved narrow designs are not rejected merely because their equations are old.
+
+4.11.2 COMPRESSOR REFERENCE-STATE CLOSURE: ACTUAL GAP AND REPAIR
+Physical observation: a measured compressor power belongs to a particular operating pressure, atmosphere, useful flow, temperature, control state and efficiency. Transporting only a kW number through an intervention calculator can detach it from those conditions.
+Generated comparison obligation: an unchanged physical operating state, hours and tariff must yield zero intervention saving. This is an identity invariant of comparison, not a new conservation law. It holds even if the detailed power model is inaccurate, provided both sides describe the same state.
+The finite graph below refines the observation -> representation -> intervention -> value interfaces in the previously mapped compressed-air process. The physical boundary is compressor operation and useful air delivery; subsequent nodes are observation, computation or human decision situations, not additional physical processing stages.
+
+P01 Intake and compress air; mass and energy ports.
+P02 Deliver required air through network; duty identity, operating pressure, local atmosphere.
+P03 Measure baseline power and its operating context.
+P04 Select measured or nameplate reference and preserve its origin.
+P05 Serialize that reference across UI/library boundary.
+P06 Select a feasible proposed pressure at unchanged useful duty.
+P07 Evaluate both physical states from the same reference.
+P08 Annualize both states with matched hours and tariff.
+P09 Compare avoided bill with all added annual costs.
+P10 Authorized intervention and independent matched metering (NOT PERFORMED).
+P11 Compare prediction with evidence before admitting any benefit (field evidence UNKNOWN).
+Directed dependencies: P01->P02, P01->P03, P02->P03, P03->P04, P04->P05,
+P02->P06, P05->P07, P06->P07, P07->P08, P08->P09, P09->P10,
+P02->P10, P10->P11, P08->P11.
+Chronological edges and contextual dependencies are explicitly distinguished from claims of experimental execution.
+
+Garden bindings: THING compressor/network/meter; SPACE control volume and meter location; TIME operating and sampling intervals; EVENT compression/measurement/intervention; ACTION authorized selection/intervention; AGENCY operator only; RULE balance/reference/service obligations; VALUE net cost; CONTEXT physical duty and atmosphere; CLAIM prediction/evidence. Meaningful typed relations in the executable graph include CONTEXT frames EVENT, AGENCY acts ACTION and CLAIM references VALUE. Other physical/dependency relations are explicit graph edges. Not all24relations are assigned to every node. No agency, ownership or delegation is assigned to gas.
+Forms: CONSTRUCT for physical equipment; STATE for operating quantities; PROCESS for chronology; RELATION for dependencies; RULE for obligations; CONTRACT for equation scope; PROJECTION for measured/serialized/annualized states. Ten cross-cutting facets are bound in code: identity/lifecycle, scope/context, epistemics/provenance, authority/human boundary, effects/safety, dependency/validity, resource/termination, privacy/retention, audit/explanation, recovery/evolution. A binding is not proof that missing site evidence has been supplied.
+
+Invariant/constraint register (families, not new physical laws):
+MASS: exact classical control-volume balance dm/dt=sum(mdot_in)-sum(mdot_out); kg/s; include leaks, purge and storage. Counterexample is an independently closed balance beyond uncertainty.
+ENERGY: exact classical control-volume balance dU/dt=Qdot+Wdot+enthalpy_in-enthalpy_out; W; kinetic/potential terms if material. Missing ports invalidate application.
+SERVICE: engineering requirement for identical useful flow, minimum terminal pressure, quality and availability; site limits UNKNOWN. Reduced service falsifies a comparable-saving claim.
+ANCHOR: representation requirement that power retains basis, reference pressure, atmosphere and duty identity. A scalar kW value alone cannot select the correct physical state.
+WORK: scoped constitutive approximation P=Pf+(Pref-Pf)F(p,a)/F(pref,aref), under unchanged flow, temperature, efficiency and mode. Mismatched field curves invalidate quantitative saving, not identity.
+IDENTITY: derived comparison invariant, identical states/hours/tariff imply zero delta cost. Explicit no-change test is the oracle.
+COMPOSITION: derived model invariant F(c)/F(a)=[F(b)/F(a)]*[F(c)/F(b)] for one unchanged model/duty; no repeated or mixed-reference correction.
+VALUE: economic condition net=verified avoided bill-all added annual costs; currency/year; prediction errors are not electricity saved.
+EVIDENCE: claims retain independent status axes; hashes establish source identity, not truth.
+
+Executable coverage: 11 curated situations;14 explicit transitions;9 constraint families;24 applicability bindings;4 incoming-edge pairs enumerated. One selected representation handoff has three missing semantic requirements (reference atmosphere, power basis, duty identity). All14transitions receive structural port checks; four enumerated combinations are not four validated scientific mechanisms. The repaired research graph has0missing declared transfers/0unbound declared inputs. Its physical completeness, fullSAL coherence and real-data sufficiency remain UNKNOWN. External-required placeholders bind the obligation to obtain data, not actual data.
+Human-authored ports and laws drive these diagnostics. This is not blind automated extraction of all defects from arbitrary source code. The invariant was generated from a mapped comparison and then tested against actual implementation; it was not assigned from a candidate number/title.
+
+4.11.3 PINNED IMPLEMENTATION AND COUNTEREXAMPLES
+Read-only upstream Suite commit: 0669b456c67bd8b9c1656a83cd7d35d68a2701d5 (7October2026).
+https://github.com/ORNL-AMO/MEASUR-Tools-Suite/tree/0669b456c67bd8b9c1656a83cd7d35d68a2701d5
+Source module: src/treasureHunt/compressed_air_pressure_reduction.cpp.
+The public API/documents permit measured and rated power. Current baseline arithmetic uses entered power directly; modification applies a pressure-work ratio using local atmosphere in one state and standard14.7psia in the reference. Baseline pressure is unused. Power basis is not represented in the library input.
+Official documentation: https://industrialresources.ornl.gov/measur/suite/docs/group__compressed__air__pressure__reduction__calculator
+
+Desktop source trace commit: 562402815720434463c5bca62747bc4e0a10d0ed (8October2026).
+https://github.com/ORNL-AMO/AMO-Tools-Desktop/tree/562402815720434463c5bca62747bc4e0a10d0ed
+Dependency pin: measur-tools-suite@1.2.6-rc.350.1. The installed WASM/browser was NOT executed. Findings apply to inspected source and compiled current Suite module; a released-binary incidence claim needs separate reproduction.
+The normal measured-mode form sets rated-pressure field equal to operating pressure; it forwards raw measured kW. Therefore an arbitrary125psig-rated/100psig-operating witness is valid at the public API but is NOT a faithful normal interactive measured-mode case. This distinction was caught by independent caller inspection and corrected before reporting.
+The local-atmosphere counterexample survives that form transformation: measured100kW, operating100psig, proposed100psig, local atmosphere12psia. The copied rated-pressure field is100. Existing source predicts111.7955418159kW for the unchanged state. At8000h/y and an ASSUMED$0.10/kWh this is a fictitious$9436.43345/y cost increase. The correct identity result is exactly zero saving.
+At the same local conditions but proposed90psig, source predicts105.5619816225kW and therefore$4449.58530/y extra cost. A consistently normalized, fully pressure-scalable model predicts94.4241424191kW and$4460.68606/y gross saving. These are synthetic model predictions, not a measured installation result.
+Unaffected null: local atmosphere14.7psia, operating=proposed=rated100psig gives0saving in both implementations. The upstream fixture uses standard atmosphere and coincident pressure anchors, so that fixture alone cannot expose the mismatch.
+API-only witness: at14.7psia, measured100kW at100psig but suppliedrated125psig, unchanged100psig yields$9214.95109/y fictitious saving. Lowering to90psig yields$13307.12241/y claimed saving versus$4624.89906/y in the normalized model. Do not generalize this nameplate mismatch to the normal measured-mode UI.
+
+4.11.4 EQUATION CONTRACT AND REPAIR
+Let p denote gauge discharge pressure, a absolute inlet atmospheric pressure, b=(k-1)/k with k=1.395, and F(p,a)=(1+p/a)^b-1.
+At fixed mass flow, inlet temperature and efficiency, ideal compression work is proportional to F. Anchor power must bind Pref[kW], pref[psig], aref[psia], basis, physical duty identity and optionally pressure-independent Pf[kW]. Both pressures in p/a use the same pressure unit; adding p+a converts gauge to absolute in the same state.
+For a common anchor:
+  Pj = Pf + (Pref-Pf)*F(pj,aj)/F(pref,aref), j=0,1.
+  annual_gross = h*(P0-P1)*tariff.
+For measured baseline power at the local state, pref=p0 and aref=a0. Thus at unchanged state P1=P0=Pref, regardless of local atmosphere. For rated reference, compute BOTH baseline and proposed powers from the same rated anchor; never compare raw rated power with an adjusted operating power.
+Derivation of identity: equal states give equal work factors. Derivation of composition: intermediate factor cancels. Derivation of anchor re-expression invariance: converting Pref to an equivalent second reference and using it for both states cancels the second reference factor. These are established algebra/thermodynamics, not newly discovered theorems.
+Dimensions: F and its ratio dimensionless; P kW; h h/year; energy kWh/year; tariffUSD/kWh; resultUSD/year. p>=0, a>0, referencep>0, 0<=Pf<=Pref, finite values. The zero-compression reference is excluded because its work factor cannot normalize measured power. The p->0 endpoint is a formal model limit, not qualified compressor operation.
+Applicability: noncentrifugal pressure-only screening model; same useful mass flow, inlet temperature, efficiency, load/control mode and fixed auxiliary term. Flow-dependent leaks, artificial demand, cycling, off-load power, dryer demand and receiver transients need separate preserved relationships. Unknown scalable fraction cannot be silently set to1 in a field claim. A duty-ID string is an explicit caller obligation, not proof the duty is equal.
+Repair implemented in industrial_transition_audit.py: immutable PowerAnchor with explicit reference/basis/context, shared evaluation of both states, invalid/ambiguous inputs rejected, and a fixed-power term. This is a working research comparator, NOT a production patch to MEASUR. It does not modify third-party software or operate machinery.
+Integration requirement: current Desktop modification callers overwrite the pressure field with proposed pressure; simply changing the library denominator to that field would break the caller contract. A production correction must preserve explicit immutable reference fields across both adapters and library, migrate stored cases, retain measured/rated intent, and verify the actual WASM build.
+Strong comparator: ordinary consistently referenced thermodynamic compressor-work evaluation gives exactly the same corrected numbers. Garden has no numerical advantage once both receive the correct model. The contribution in this pass is the structured identification/test of a violated interface obligation.
+
+4.11.5 THREE DISCOVERY OPERATORS APPLIED
+Projection-Loss: dropping power basis/reference context maps physically different100kW measurements to the same scalar. Predicted response to a pressure intervention differs with their actual reference conditions. The missing information is reference ownership, not a proposed exotic hidden state. A complete anchor restores the distinction.
+Necessity-Challenge: ask whether a measured local power must first be interpreted at standard atmosphere/nameplate pressure. The same-state counterexample disproves that as a necessary comparison step; retain the actual measured reference. This does not challenge minimum process pressure or any safety requirement.
+Decision-Sufficiency: preserve reference context only insofar as it changes a feasible decision with positive incremental value after correction/qualification costs. The synthetic12psia/90psig example reverses the sign of estimated benefit, so it can change the investment choice. No new measurement is necessarily needed: the UI already collects local atmosphere. This is preservation of available information, not a claim that additional sensors always pay.
+
+4.11.6 ECONOMIC ASSESSMENT: CONDITIONAL, NOT REALIZED
+Assume a feasible90psig intervention,100kW measured baseline at100psig/12psia,8000hours, tariff$0.10/kWh and$2000/y all-in annualized intervention cost. These numbers define a test scenario, not a site forecast.
+Original formula: estimatedgross=-$4449.59/y -> reject.
+Corrected fully-scalable model: estimatedgross=$4460.69/y -> conditionalnet=$2460.69/y -> accept.
+If only fraction f of baseline power is pressure-scalable, correctedgross=$4460.68606*f/y and conditionalnet=$4460.68606*f-$2000/y. Break-even requires f>0.4483615; at f=.70 net=$1122.48/y. Pressure feasibility, actual efficiency, leakage/control interactions and real project cost could reverse the result.
+The displayed-error magnitude is not recoverable energy. Incremental repair value requires real decisions that differ, qualified net outcomes and adoption, less software verification/deployment costs. A suitable population estimand is N*eligible_fraction*adoption*E[net_outcome(repaired_choice)-net_outcome(existing_choice)|eligible]-annual_repair_cost. All population, incidence, adoption and measured-outcome inputs are UNKNOWN. Multiplying an assumed single-machine figure by an invented industrial fleet would not establish large-scale savings. No such total is claimed.
+
+4.11.7 PRIOR-REPORT AND NOVELTY GATES
+Searches covered public issues/PRs in both Suite and Desktop, plus technical documentation, using pressure reduction, atmospheric pressure, baseline/rated and altitude queries. Suite134/371 and PR323/328 were read including available comments. Desktop8548,4523,4527,4096 comments were read. This is bounded retrieval, not exhaustive historical proof.
+Material adverse evidence:
+https://github.com/ORNL-AMO/AMO-Tools-Desktop/issues/8548 already identifies odd pressure logic and the need to move measured/rated handling into Suite; a comment states remaining logic needed engineering feedback.
+https://github.com/ORNL-AMO/AMO-Tools-Desktop/issues/4523 already distinguishes field-measured power/current operating pressure from nameplate input and discusses correcting the baseline.
+https://github.com/ORNL-AMO/AMO-Tools-Desktop/issues/4527 specifies copying baseline operating pressure into the rated-pressure field for measured mode.
+https://github.com/ORNL-AMO/AMO-Tools-Desktop/issues/7876 describes a different no-change/performance-point problem in the full assessment. It is not evidence that all no-op violations are this defect.
+No exact12psia counterexample was found in the reviewed records, but the broader defect family was already acknowledged. Final status is REPRODUCED_SPECIFIC_COUNTEREXAMPLE; historical novelty UNRESOLVED, broad conceptual novelty NOT CLAIMED. The pressure-work repair is established mathematics. Do not market this as Garden-originated new thermodynamics or a previously unrecognized industry-wide opportunity.
+
+4.11.8 REPRODUCIBILITY AND REVIEW
+Run from design_deltas/v15.10:
+  python industrial_transition_audit.py --details
+For direct original-source reproduction, clone the official Suite repository separately, checkout0669b456c67bd8b9c1656a83cd7d35d68a2701d5, then:
+  python industrial_transition_audit.py --upstream /absolute/path/to/MEASUR-Tools-Suite
+The harness checks commit identity and three exact source SHA256 values, compiles the ORIGINAL source module withg++ in a temporary directory and compares8testcases. It performs342 deterministic metamorphic/domain checks covering no-change identity, anchor re-expression, pressure monotonicity, path composition, fixed power, invalid references and changed-duty rejection. All342checks and8original-native comparisons passed. Same-system adversarial reviewer independently ran them and found no blocking mathematical defect in the declared scope.
+These are software/model tests, not342independent experiments, blind discovery wins or field observations. The original pressure-only equation's physical accuracy was not experimentally validated. Native source reproduction does not certify the packaged WASM or whole desktop product. Upstream issue/contact/PR was not sent; this research update is confined to the user's Garden repository.
+
+4.11.9 NEXT DECISIVE WORK AND STATUS
+For the calculator: reproduce the pinned packaged UI/WASM, qualify the explicit reference migration, check real assessment prevalence, then compare actual investment decisions and measured outcomes. No upstream deployment is authorized or performed here.
+For the remaining physical candidates: use the branch-specific bench protocols below. The rinse thermal-window idea needs density, geometry, mouth solute-export and throughput/drag-out measurements against optimized rotation/targeted rinsing. The drying reserve idea needs material retained energy and scheduling demand that overcome its current small energy bound. Neither warrants invented large-scale savings.
+Status axes: hypothesis formulatedYES; reference-identity derivationVALID_WITHIN_CONTRACT; original-code counterexampleREPRODUCED; research correctionTESTED; scopedpriorartCHECKED_WITH_ADVERSE_RESULTS; historicalnoveltyUNRESOLVED; novelphysicalprocessNOT_ESTABLISHED; fieldvalidationNOT_PERFORMED; economicsCONDITIONAL_ONLY; measuredGardenincrementUNKNOWN; matched-budgetmethodsuperiorityNOT_TESTED.
+No branch is declared scientifically exhausted. Known mechanisms are retained as negative controls and low-value expansions are stopped pending new physical evidence.
+
+
+4.11.10 RANKED GAP REGISTER — RESEARCH PRIORITY, NOT PROVEN VALUE
+1. C-PRESSURE: reference atmosphere/basis lost across measured-state -> calculator transition. Concrete original-code counterexample and research correction reproduced. Best verified output of this pass; related issue family already known. Exact manifestation noveltyUNKNOWN; physical noveltyNOT_CLAIMED; financial benefitconditional and unmeasured. Next gate: packaged-app reproduction and real affected decisions. No fleet saving estimate.
+2. R-C2: residual part heat/solutal density/cavity geometry/drain-delay coupling. Narrow scheduling identity not matched in bounded search; transport effect not established. Existing rotation/targeted rinse is a strong comparator. Economic rank speculativeLOW until actual exchange and complete chemical/throughput costs are measured.
+3. C-D2: allocate otherwise-wasted compressor-off coil cooling to a wetter batch, protect finishing product. Narrow allocation identityUNRESOLVED; rewet-control familyKNOWN; current ideal bound only0.235kWh/transition before costs and restoration. Low materiality without substantially different real hardware/duty.
+PARKED AFTER ADVERSE PRIOR ART: C-D1 separate return treatment; R-C1 phase-compatible rinse/off-part recovery; M-01 carbonate-aware shutdown guard; M-02 gas-scour/CO2 chemistry separation. No positive incremental value over strongest available practice was demonstrated.
+Ranking is by evidence/actionability and remaining material uncertainty. It is not a calibrated probability of discovery, expected commercial value or guarantee of large-scale savings.
+
+4.11.11 COMPLETE BRANCH MAPS, INVARIANT REGISTERS AND CLOSURE AUDITS
+The following is an integrated branch record; local IDs are namespaced by branch. Historical scratch filenames identify research provenance, not promised additional report artifacts. Numerical physical screens are retained in industrial_physical_screens.py; primary pressure comparison is industrial_transition_audit.py. All narrative stays in this consolidated scientific document.
+INDUSTRIAL SITUATION-TO-INVARIANT CLOSURE: THREE BRANCHES, TWO CYCLES EACH
+9 October 2026. NONCANONICAL RESEARCH. No deployment or measured saving.
+Consolidator: drying_mapper role; source authors: drying_mapper, rinse_mapper,
+membrane_mapper, with separate membrane_02_adversarial review. These are roles
+within the available agent system, not certification by independent laboratories
+or independent model families. This text consolidates their actual local files.
+
+A. SOURCE OWNERSHIP, SEARCH ORDER AND SCOPE
+Garden design owners remain the exact retained source files in
+ garden-savings/design_deltas/v15.10/:
+V15_10_ABSTRACTION_GCSC_DELTA.md
+ SHA25690a58c337bc87c2e445eb56d6197cddea845f74485339e074b0818d70dae8479
+GSL_COMBINATORIAL_SEMANTIC_COVERAGE_v0.1.md
+ SHA25627428feebc2fe8f2a4a9a5dd8fc5d680d36fb18623575ef19235427f9021e3b1
+TREE_CORE_v0.8.1_2026-09-23.txt
+ SHA2564af3a2c4c8d8577909735fb61c42e0f43324dc0147d8b24146b4561ee56511fa
+INVARIANT_DRIVEN_THEORY_DISCOVERY_IDTD_001.md (membrane branch additionally read)
+ SHA25614bf4fdced0cccebeb5cb22a0cec3b7aff765e57efa25230626ddcf3b24bfdf4
+All three roles read the first two sources and relevant TREE_CORE source,
+substrate and status sections. The design is an analysis instrument; neither
+it nor generated equations grant scientific admission. Actual r6 S0/S1/S2 is
+bounded source expansion. Recursion here means explicit researcher-authored
+refinement of physical seed situations after an earlier audit, not invented
+recursive S1 compiler execution. Full GSL/SAL registry conformance is UNKNOWN.
+
+Physical evidence remains owned by the cited process publications/patents.
+Research equations and synthetic assumptions are owned by the named branch
+records below. Standard balances are applied within their declared boundaries;
+new scheduling/routing suggestions are hypotheses. A new engineering design
+can use entirely established physics. Agreement with an established physical
+simulator alone does NOT disprove design novelty; the relevant comparison is
+with published or implemented designs, controls and their actual performance.
+Conversely, known physics plus a newly worded condition does not establish a
+new design or useful incremental performance.
+
+Frozen local source records (pre-targeted-search where explicitly recorded):
+D1 drying_candidate.txt, whole-file SHA256
+ a8d7d4b0d228a775002e7bd5ed60b97f40303c625202148de13fa6f389504a45
+D2 drying_second_cycle.txt, whole-file SHA256
+ e4306491aa11749d5f28e11051e84511c6224ec44f66d794af84f13e3ba28890
+M1 membrane_candidate.txt, whole-file SHA256
+ 1ce9b6e754f98e7eb4299e0ece2dd99501ec4fb3286de65b1d5265faf978c5ab
+M2 membrane_candidate_02.txt, whole-file SHA256
+ 01df65707d145539400fbaa70fd19a7543063be0beb7eb7a06c312738c140db3
+R2 rinse_geometry_candidate.txt, original first9438bytes SHA256
+ 591bd87526072e0cc5888fe69411683488c804dc206a2bfe38aca806c36c2a8f
+R1 rinse_candidate.txt current source receipt SHA256
+ 194787a575f8363daa12540dd7d0ff9f681d66db366eafe66f7c0d0ae2d7b3f2
+R1's factual searches had already exposed solution prior art. Its current
+receipt is NOT proof of a pre-literature candidate freeze. R2 full file now
+contains an appended attack; its original prefix hash was independently
+checked. Hashes prove byte identity only, not scientific truth or admission.
+Training-derived knowledge and earlier searches prevent calling these blind
+methodological discovery benchmarks.
+
+B. SHARED GARDEN MAPPING CONTRACT
+Each graph has physical THING/control-volume SPACE, timed STATE, EVENT and
+PROCESS records; operator/controller ACTION and AGENCY are separate from
+physical changes. Molecules, films, membranes and water have no agency,
+ownership or delegation. RULE records bind conservation, constitutive models
+or imposed constraints; CONTEXT binds operating scope; VALUE binds matched-
+service economics; CLAIM records retain separate proof/experiment/novelty/
+economic axes. CONSTRUCT, CONTRACT, STATE, RELATION, PROCESS, RULE and
+PROJECTION are used as overlapping forms, not invented extra core objects.
+Meaningful research relations include partOf, dependsOn, contextualizes,
+derivedFrom, references, supports, contradicts, governs and qualified causes;
+controls concerns authorized actuators. Unused relations are not multiplied
+to inflate coverage. The edge lists below are physical/dependency projections,
+not claims that every arrow is an admitted GSL cause relation.
+All ten facets remain inspection obligations: batch/equipment identity;
+physical scope; source/evidence status; operator authority; material effects
+and safety; dependency invalidation; water/energy/time and solve termination;
+industrial-data retention; audit explanation; fallback/recovery. Numeric
+quality, pressure, sanitation and release limits remain UNKNOWN where no real
+plant specification exists. Unknowns cannot be turned into release permissions.
+
+C. DRYING BRANCH: RETURN MIXING, THEN COMPRESSOR-OFF TRANSITIONS
+Physical scope: compatible products in multiple chambers share heat-pump air
+conditioning. Batch moisture release varies; identical required supply air,
+product output/quality and whole-cycle inventory are comparison constraints.
+Expansion is justified by distinct water, sensible/latent heat and actuation
+paths, then by compressor-off energy/film storage. No plant was actuated.
+
+C1 graph: row IDs are local D01–D18. Law bindings refer to D-I below.
+D01 load wet product; product water/energy inventory [I1,I3,I8]
+D02 warm product; wall/product temperature [I3,I7,I8]
+D03 high-rate moisture release; vapor generation [I2,I3,I8]
+D04 falling-rate release; changing return humidity [I2,I3,I8]
+D05 finish product; moisture/quality endpoint [I7,I8]
+D06 unload; outgoing product/water/energy [I1,I2,I3,I8]
+D07 wet branch return; air mass, humidity, enthalpy [I1,I2,I3,I4]
+D08 drier branch return; separate addressability [I1,I2,I3,I4]
+D09 common return mixing; water/enthalpy conserved [I1,I2,I3]
+D10 evaporator sensible cooling; coil and refrigerant [I3,I5,I6,I10]
+D11 vapor condensation; saturation and phase inventory [I2,I3,I5]
+D12 liquid drainage; collected versus retained water [I2,I9]
+D13 compressor work; refrigeration energy [I3,I6,I10]
+D14 condenser reheat; required supply condition [I3,I6,I7]
+D15 external heat rejection; complete energy boundary [I3,I6]
+D16 supply distribution; per-chamber flow and condition [I1,I7,I11]
+D17 quality release; measured endpoint [I8,I11,I12]
+D18 next load; repeat initial/final state [I1,I2,I3,I12]
+Listed edges, expanded and deduplicated: D01>D02,D02>D03,D03>D04,D04>D05,
+D05>D17,D17>D06,D06>D18,D18>D01,D03>D07,D04>D08,D07>D09,D08>D09,
+D09>D10,D10>D11,D11>D12,D10>D13,D13>D14,D13>D15,D14>D16,
+D16>D02,D16>D03,D16>D04,D16>D05. Count18rows,23edges.
+Arrows include physical dependencies, not merely material flow; e.g. the
+compressor/coil link requires a refrigerant port model for full verification.
+
+D-I register: all are existing laws/requirements, not new fundamental laws.
+I1 dry-air continuity; exact within leak-accounted control volume.
+I2 water conservation; inventories/ports include vapor, product and liquid film.
+I3 first law; account for product, air, refrigerant, fan work and condensate.
+I4 moist-air h=1.006T+w(2501+1.86T), kJ/kg dry air; approximate ideal mixture.
+I5 saturation/contact relation; equilibrium bound with actual coil contact.
+I6 Qcond=Qevap+Wcomp; actual compressor map required for performance.
+I7 equal supply air service; imposed engineering comparison constraint.
+I8 equal product endpoint/quality/throughput; imposed, plant values unknown.
+I9 drain accounting; drain flow is not automatically instantaneous product loss.
+I10 equipment pressure/temperature/cycling/liquid-return limits; vendor scoped.
+I11 material/sanitary compatibility; cross-contamination constraints.
+I12 complete incremental costs and cycle-state accounting; economic condition.
+Conservation falsifiers are independently closed residuals beyond measurement
+uncertainty; constitutive falsifiers are repeatable out-of-envelope behavior.
+Missing measurement/plant limits remain UNKNOWN, not tested PASS.
+
+Audited motifs: (D07,D08)>D09>D10>D11 destroys separate treatment options at
+mixing; D10/D13>D14/D15 checks heat accounting; D11>D12>D17 checks whether
+condensate represents actual completed drying. Projection-Loss here concerns
+lost actuation addressability as well as a reduced observable. Necessity-
+Challenge asks whether all return air must be mixed before dehumidification.
+Decision-Sufficiency compares additional branch measurements/routing cost with
+changed admissible actions and actual whole-site value.
+C-D1 solution candidate: maintain separate returns through evaporator allocation,
+bypass the already-dry branch, then mix/reheat. Strong comparison includes an
+optimized mixed-return bypass/coil-temperature arrangement AND already available
+independent-return treatment designs. The latter are essential for novelty.
+
+Equation contract: h(T,w) above, T Celsius; w kgwater/kgdryair; atmospheric
+pressure101.325kPa. w_sat(T)=.62198 p_sat(T)/(101.325-p_sat(T)). Baseline mixed
+return has w_m and h_m; targetw_s. With coilw_c=w_sat(T_c), processed fraction
+alpha=(w_m-w_s)/(w_m-w_c). For totaldryairflowm:
+ Qe=m alpha[h_m-h(T_c,w_c)-(w_m-w_c)*4.186T_c].
+Candidate wet-only coil Qe=m_A[h_A-h(T_d,w_s)-(w_A-w_s)*4.186T_d].
+Screening COPe=.45(T_c+273.15)/(65-T_c), not a measured machine map.
+Wcomp=Qe/COPe; Qreject=Qe+Wcomp-Qreheat must be nonnegative, or explicit
+auxiliary heat/work must be added. Units: Q in kW for massflowkg/s.
+
+The first frozen synthetic state (wetreturn40C,w.025;supply60C,w.008) needed
+unidentified extra product/heater heat; it was NOT silently accepted as an
+adiabatic process. Post-freeze repair uses wetreturn40C,w.016 and drierreturn
+55C,w.008; supply60C,w.008; each1kgdryair/s. Script industrial_physical_screens.py (drying replay) solves the
+mixed-return coil/bypass optimum including endpoints. Conditional result:
+34.843427kW baseline versus21.321233kW selective; both remove28.8kgwater/hour;
+external heat rejection29.791034versus16.044085kW; product-boundary remaining
+heat1.15392kW wetbranch and5.1044kW drierbranch. These are idealized calculations,
+not verified hardware, measured savings or whole-cycle forecasts. Complete
+product dynamics, coil contact, refrigerant map, fans and actual annual duty
+are unresolved. An existing selective topology may achieve the same result.
+
+C2 refinement: D10–D12/D13 transition expands to nine local T rows:
+T01 running compressor, cold coil and liquid film;
+T02 selected batch reaches endpoint;
+T03 compressor stops, refrigerant relaxes;
+T04 cooling reserve and retained liquid persist;
+T05 return routing changes;
+T06 coil continues condensation below exposed-stream dewpoint;
+T07 dewpoint crossing permits film re-evaporation;
+T08 drainage/isolation/next-batch decision;
+T09 restart with matched energy/water boundary accounting.
+For an explicit graph, this consolidation projects the source's conditional
+prose into T01>T02,T02>T03,T03>T04,T04>T05,T05>T06,T06>T07,T06>T08,
+T07>T08,T08>T09,T09>T01. These10edges are an integration-authored projection,
+NOT a separately frozen or SAL-verified source edge list. Early isolation
+T06>T08 avoids the optional re-evaporation branch.
+
+Five added obligations: film-water balance; coil/refrigerant energy with all
+ports; preserve finishing-batch humidity/quality; debit recreated cooling
+reserve on restart; include ordinary isolation/drain-wait as an action.
+Audited motif T04>T05>T06/T07>T08 concerns energy reserve versus watercarryback;
+T08>T09>T01 prevents counting the same stored cooling twice.
+C-D2 proposes diverting unavoidable compressor-off cold-coil reserve to another
+wetter batch while protecting finishing product. For lumpedcoil Cc[kJ/K],
+perfectcontact and NO residual refrigerant/ambient heat/fan work:
+ Cc dT/dt=m_da[h(T_r,w_r)-h(T,w_sat(T))-(w_r-w_sat(T))*c_l T].
+Integrate only to dewpoint; subtract film-inventory increase from collection.
+Cc100kJ/K,T0=8C,wetreturn40C,w.020 givesidealcondensation.276847kg and totalcold
+.470471kWh. If COP>=2 and reserve would otherwise be wasted, displaced electricity
+is at most.235235kWh/transition before fan/valve/measurement costs. Equal-final-
+state restoration can cancel it. This small conditional bound does not support
+large economic benefit. No confirmed new design advantage survived.
+
+Drying falsifiers/limits: existing topology already performs the same routing;
+actual maps/fans eliminate gain; product quality/time changes; no compatible
+wetbatch at transition; isolation preserves reserve better; residual refrigerant
+heat invalidates bound; film carryover rewets product; restart cost cancels gain.
+
+D. RINSE BRANCH: PHASE CHANGE, THEN HOT-PART/BLIND-CAVITY TRANSPORT
+Scope: aluminum surface treatment and qualified rinsing; second cycle narrows
+to dilute retained liquid only where residual heat can compensate its density.
+No proposed chemistry change or shortened process is an operational instruction.
+
+D1 graph, local R01–R17 (namespaced here to avoid membrane-ID collision):
+R01 incoming alloy/geometry [I1,I9,I10]
+R02 etch bath chemistry/temperature [I1,I3,I7,I11]
+R03 part etched; substrate and residues [I1,I3,I7,I10]
+R04 withdrawal; film/pocket entrainment [I1,I2,I3,I6]
+R05 drain over bath; evaporation/cooling [I1,I2,I3,I6]
+R06 first rinse contact; film/bulk exchange [I1,I2,I6]
+R07 dilution/pH change; possible precipitation [I1,I4,I7,I8]
+R08 agitation/rack motion; detachment [I6,I8,I10]
+R09 first-rinse withdrawal; dissolved/solid carryover [I1,I2,I8]
+R10 further rinse; altered chemistry/temperature [I1,I3,I6,I7]
+R11 desmut/pickle; etch/alloy residue removal [I1,I7,I9,I10]
+R12 post-desmut rinse [I1,I2,I6,I11]
+R13 quality release; total residue/finish [I8,I9,I10]
+R14 next treatment; adhesion/contamination [I9,I10,I11]
+R15 countercurrent reuse [I1,I2,I7,I11]
+R16 off-part recovery/solid separation [I1,I7,I8,I11]
+R17 makeup/discharge/waste accounting [I1,I2,I3,I12]
+Edges: R01>R03,R02>R03,R03>R04,R04>R05,R05>R06,R06>R07,R07>R08,
+R08>R09,R09>R10,R10>R11,R11>R12,R12>R13,R13>R14,R05>R02,R10>R15,
+R12>R15,R15>R06,R06>R16,R16>R02,R16>R17,R17>R02,R17>R10,R07>R09,
+R07>R11,R01>R11,R02>R07,R08>R13,R15>R07. Count17rows,28edges.
+A bypass of desmutting is NOT an admitted graph edge or authorized recipe.
+
+R-I register: I1 elemental conservation across liquid/solid/substrate;
+I2 liquid-volume inventory including drag-in/out/evaporation; I3 energy with
+reaction/evaporation/enthalpy ports; I4 bulk electroneutrality, excluding double
+layers; I5 nonnegative inventories; I6 calibrated film exchange dc_f/dt=-k(c_f-c_b);
+I7 activity-based solubility/speciation plus separate kinetics; I8 total element
+partition=dissolved+suspended+attached; I9 product-specific residue limits;
+I10 alloy/roughness/tolerance/adhesion; I11 recovered-feed compatibility and actual
+makeup capacity; I12 complete water/chemical/time/cost budget. I1–I5 conservation/
+admissibility, I6–I7 constitutive, I8 derived accounting, I9–I12 imposed constraints.
+Numeric product limits, kinetics, geometry and actual cost remain UNKNOWN.
+
+Five explicit audited motifs: R06>R07>R09 dissolved-to-solid handoff;
+R07>R11<R01 independent precipitation/alloy sources of desmut demand;
+R10>R15>R06>R07 recycle chemistry loop; R05>R06>R07 drain/cooling versus
+contamination; R06>R16>R02 recovery compatibility versus merely recovered mass.
+R-C1 solution candidate: chemistry-compatible displacement rinse reduces
+retained dissolved aluminum before a pH-changing rinse; precipitation/recovery
+moves off-part. Contract for fixed mixedbulk and calibrated k[s^-1]:
+ c_f(t)=c_b+(c_0-c_b)exp(-kt),
+ t>=ln[(c_0-c_b)/(c_star-c_b)]/k if c_0>c_star>c_b.
+If c_b>=c_star, finite time does not establish release. c_star must be qualified
+for actual subsequent pH/temperature/attachment, not equated with a handbook
+solubility. Synthetic c0=100,cb=1,cstar=5mol/m3,k=.5/s gives6.41765s, only
+arithmetic. No calibrated performance or saving. Precipitation regeneration,
+phase-aware cleanup and countercurrent rinsing already have prior art.
+
+Operators: dissolved/conductivity projection can omit attachedsolid; challenge
+whether desmutting is unnecessary fails generally because alloy residues can
+remain; measurements are useful only if they change a qualified decision at
+positive net value. Falsifiers: unchanged residue across predicted timing;
+strong existing recipe already performs condition; other alloy residues remain;
+quality loss or extra bathload outweighs reduced water. Narrow recipe novelty
+unresolved; broad novelty rejected, monetary benefit UNKNOWN.
+
+D2 geometry refinement of R04–R10:
+G01 hot part exit; wall temperature/composition;
+G02 external films drain back to treatment;
+G03 blind cavity retains liquid;
+G04 air dwell/queue cools wall/liquid, possibly evaporates;
+G05 rinse immersion creates contact interface;
+G06 thermal buoyancy competes with solutal density;
+G07 internal circulation versus actual exchange;
+G08 residues leave or remain;
+G09 total residue/quality release;
+G10 earlier immersion with relocated drain time, if permissible.
+Edges: G01>G02,G01>G03,G02>G04,G03>G04,G04>G05,G05>G06,G03>G06,
+G06>G07,G07>G08,G08>G09,G10>G02,G10>G05,G08>G10. Count10rows,13edges.
+Six added obligations: conserve all element phases; preserve wall energy across
+queue; use composition AND temperature for density; preserve gravity/geometry
+through poses; compare full resources instead of drag-out alone; retain thermal-
+shock/corrosion/precipitation/quality/cycle constraints. Audited composition is
+G02/G03>G04>G05>G06>G07: drain time reduces external film but may remove heat
+needed for cavity exchange. Internal motion alone is not solute export.
+
+R-C2 proposed geometry-qualified upper bound on hot-part pre-rinse dwell,
+relocating remaining drain time after initial exchange. Screening contract:
+ rho(c,T)=rho_ref[1-beta_T(T-Tref)]+Delta_rho_s(c).
+Possible density inversion requires T_liquid-Tr>Delta_rho_s/(rho_ref beta_T).
+If Tw(td)=Ta+(T0-Ta)exp(-td/tau_air) and liquid tracks wall, a screening limit is
+ td<tau_air ln[(T0-Ta)/(Tr-Ta+Delta_rho_s/(rho_ref beta_T)+margin)].
+This is NOT sufficient for blind-cavity renewal, nor a validated operating rule.
+All temperature differences consistent; log dimensionless; tau andtd seconds.
+Synthetic rho1000kg/m3,beta2.1e-4/K,densityexcess5kg/m3,T0=70C,Ta=Tr=20C,
+tau120s gives~89s. Available50K offsets only10.5kg/m3 in that linear model;
+original concentrated etching liquor may exceed this. Actual properties are
+composition/temperature dependent. Positive local buoyancy can create closed
+eddies with no meaningful cavity-mouth exchange. No transport simulation or
+calibrated rinse-performance prediction was completed.
+Comparators include existing rotation/air-assisted cavity cleaning, best drain/
+rinse scheduling and a full heat/species/flow model. Known physics does not
+alone negate the narrow scheduling idea; no exact disclosure found in bounded
+search is also NOT novelty proof. Falsify if actual fluid has no applicable
+thermal/density window, cavity exchange does not improve, chemical recovery
+loss dominates, or an established practical method is superior at matched cost.
+R-C2 status: narrow novelty UNKNOWN; broad convection physics known; screening
+math only; economics UNKNOWN; low priority without actual parts/property data.
+
+E. MEMBRANE BRANCH: SHUTDOWN GAS CONTACT, THEN GAS-SCOUR COMPOSITION
+Scope: RO systems with material carbonate chemistry and an applicable gas-
+contact boundary during shutdown/cleaning. Liquid-full systems without such
+contact are nonapplicable. Vendor pressure, wet-storage and startup rules remain.
+
+E1 graph, membrane-local M01–M13 (renamed from sourceR01–R13 for clarity):
+M01 feed composition/dissolved gas [I2,I3,I5,I6]
+M02 pretreatment/chemical dosing [I2,I8]
+M03 pressurization/crossflow [I1,I9,I10]
+M04 permeation/rejected-ion concentration [I1,I2,I7]
+M05 shutdown/inventory freeze [I1,I2,I9,I10]
+M06 stop chemical addition [I2,I8]
+M07 low-pressure chemical-free flush front [I1,I2,I9,I10]
+M08 vessel dilution [I1,I2,I5,I7]
+M09 falling pressure/valve/drain transition [I6,I9,I10]
+M10 applicable gas contact/CO2 transfer [I2,I5,I6]
+M11 carbonate redistribution/possible precipitation [I2,I3,I4,I5,I7]
+M12 rinse termination/wet standby [I7,I9,I10]
+M13 restart/quality/energy/membrane inspection [I9,I10,I11,I12]
+Edges: M01>M02,M02>M03,M03>M04,M04>M05,M05>M06,M06>M07,M07>M08,
+M05>M09,M08>M09,M09>M10,M10>M11,M08>M11,M08>M12,M11>M12,M12>M13.
+Count13rows,15explicitedges. Original freeze said16; its own list contains15.
+Membrane author confirmed this post-freeze counting correction; no edge invented.
+
+M-I register: I1 water inventory; I2 species/element inventory including gascarbon;
+I3 bulk electroneutrality; I4 CaCO3 precipitation/dissolution stoichiometry;
+I5 diluteideal carbonate equilibria with activity correction needed inrealwater;
+I6 Henry equilibrium with dissolved-gas-equivalent partialpressure, not hydraulic
+pressure; I7 saturationOmega=aCa*aCO3/Ksp distinct from nucleation/deposition;
+I8 antiscalant alters kinetics, not conservation; I9 vendor permeate/backpressure
+limit; I10 differentialpressure/nodryout/startupshock limits; I11 equal useful
+wateroutput/quality; I12 full sensor/water/energy/downtime/asset economics.
+Audited joins: (M08,M10)>M11 and (M08,M11)>M12; dilution and changed gasboundary
+jointly determine chemistry. Pressurefall alone does not prove CO2 removal.
+M-01 candidate: qualify flush/vent sequence against carbonate saturation across
+future gas exchange rather than a conductivity-only endpoint.
+Contract, bicarbonatedominant dilute model: Omega~C*Ca*Alk^2/pCO2; common
+calcium/alkalinity dilutionfactorf gives Omega1/Omega0~f^3*p0/p1.
+Synthetic Omega0=.8,f=.5,p0=.02atm,p1=.0004atm yields approximateOmega1=5;
+a fuller ideal charge-balance calculation gives4.840887. This predicts
+supersaturation, NOT depositmass or membrane loss. ApproxOmega<=1 requires
+f<=.29240177; CSTRwashQ*t/V>=1.229626485. Plugflow and real serialelements differ.
+Conductivity equal-projection witness was NOT exactly constructed; changed
+speciation can change conductivity. It remains an explicit unresolved test.
+Falsifiers: absent/slow gascontact; activity corrections overturn prediction;
+kinetics prevent material deposition; delaying gas removes helpful cleaning;
+existing transition/pH controls already provide same benefit. Modern2026CCRO
+research directly overlaps transient conductivity/pH/CO2 issues and a stronger
+mitigation comparison. Broad novelty overlap; no incremental economic result.
+
+E2 expands M10/M11 into nine nodes; use original suffixes for traceability:
+A=M10a gas-source pressure/composition;
+B=M10b bubble formation/injection;
+C=M10c bubble contact/transport at foulant;
+D=M10d gas-liquid CO2 transfer;
+E=M10e gas discharge/recycle;
+F=M11a carbonate acid/base equilibration;
+G=M11b mineral dissolution/precipitation;
+H=M11c foulant detachment;
+I=M11d detached-solid removal/redeposition.
+Edges: A>B,B>C,C>E,C>D,D>F,F>G,C>H,H>I,G>H,I>M13.
+Count9refinementnodes,10edges including one toexistingrestartqualityM13.
+Seven obligations: carbon inventory; charge/acidbase; gas-supplied momentum/
+energy; gascomposition inventory; hydraulic/membrane limits; removal versus
+redeposition; usefuloutput/cost. Audit C>(D>F>G,H>I) distinguishes mechanical
+scour from chemistry, while G>H preserves dissolution/detachment coupling.
+Independent spatial audit: aggregate zero gascarbon transfer need not mean
+local zero transfer; different patches can strip and absorb simultaneously.
+
+M-02 candidate: control gasflow for removal and gasCO2fraction to match local
+liquid CO2 chemical potential. Localcontract N=kLa*V*(Cco2-KH*y*P), mol/s for
+kLa/s,V m3,Cmol/m3,KHmol/(m3Pa),P Pa. y*=Cco2/(KH P),0<=y<=1. Frozen
+Cco2=.00068mol/L,KH=.034mol/(L atm),P1atm gives2%CO2. This is a known
+Henry-law setpoint, not itself a new cleaning-performance result. Equal gasflow
+does not establish equal bubbleshear or10% cleaningnoninferiority.
+Post-freeze attack: at fixedalkalinity,pH andequilibrium, freeCO2 and totalcarbon
+are fixed. ExistingCO2/pH control can implement the same chemical objective.
+With reactions/alkalinity changes, neither simple matching nor that equivalence
+alone controls localscale. Aggregate matching ybar=sum(kVC)/sum(kVKH*P) can
+hide local stripping andprecipitation; preserving an alreadybad state is notsafe.
+Prior art has membrane gasscour plus separateCO2/pH control and RO studies
+separating chemical versus bubblecleaning. Exact zero-fluxROimplementation
+unresolved; broad dual-control relationship known. No money-saving survivor.
+Falsifiers: equal/better optimized pH-scour control; chemistry/shear gradients
+violate model; membrane gasuse disallowed; cost of gas/blending/sensors exceeds
+benefit; zero-fluxstate preserves scale or impairs dissolution. Realwater,
+membrane compatibility, dutycycle, removal metrics and all cost terms unknown.
+
+F. PRIOR-ART EVIDENCE REGISTER (SCOPE AND ACCESS LIMITS)
+D-P1 CN112857018A,TongjiUniversity,2021-05-28:
+ https://patents.google.com/patent/CN112857018A/en
+Primary patent text read: parallel treatment/bypass returns, splitroom option,
+phase-matched humidity/temperature andvariableairproportions. Closely overlaps
+C-D1 hardware/control family; not asserted to prove every exact detail identical.
+D-P2 Trane EngineersNewsletter29-4,2000:
+ https://www.trane.com/content/dam/Trane/Commercial/global/products-systems/education-training/engineers-newsletters/airside-design/enews_29_04_082800.pdf
+Primary manufacturer technical source: separate treatment of return/outdoorair
+before mixing; adjacent-domain prior art for addressability-before-mixing.
+D-P3 WO2000036344A1,2000:
+ https://patents.google.com/patent/WO2000036344A1/en
+Primarypatent; evaporator face/bypass dampers controlled for humidity.
+D-P4 US12729479,2026-09-08grant,2023-09-22filing:
+ https://patents.justia.com/patent/12729479
+Publishedpatenttext read: cooldown moisture reabsorption and fan/gate mitigation.
+Does not alone establish the exact wetter-secondbatch reserveallocation.
+D-P5 2025whole-drying-process optimization:
+ https://www.mdpi.com/2227-9717/13/12/3883
+Search-extracted equations/discussion only; full article notvalidated inbranch.
+
+R-P1 EPA surface-treatment process source:
+ https://nepis.epa.gov/Exe/ZyPURL.cgi?Dockey=30003V6W.TXT
+Alkalineetch/desmut/anodizing sequence. R-P2 WO1992012276A1:
+ https://patents.google.com/patent/WO1992012276A1/en
+Off-part aluminum precipitation/regeneration already described. R-P3 US7384901B2:
+ https://patents.google.com/patent/US7384901B2/en
+Alloy-related smut and removal; dissolvedrinse chemistry alone insufficient.
+R-P4 EPA1979 electroplating development document:
+ https://www.epa.gov/sites/default/files/2015-10/documents/electroplating_dd_1979.pdf
+Countercurrent/closed-loop reuse prior art. R-P5 Tallmadge/Barbolini1966,
+RinsingEffectiveness—CubeandOtherShapes:
+ https://www.jstor.org/stable/25035633
+Only indexed excerpts/contents accessed; shape/naturalconvection evidence is
+limited, not fullarticleinspection. R-P6 Driesen1999Twentethesis:
+ https://ris.utwente.nl/ws/files/6075725/t0000009.pdf
+Inspected introduction discusses density-related cavitycleaning anddiffusion-
+limited closededdies; notexactthermal-queue rule. R-P7 EP0289875B1:
+ https://patents.google.com/patent/EP0289875B1/en
+Rotation/air-assisted cavitycleaning, strongpracticalcomparator.
+R-P8 WO1998048954A1:
+ https://patents.google.com/patent/WO1998048954A1/en
+Heatedpart immersion aboveboiling uses partheat; differentphasechange mechanism.
+R-P9 OxyChem caustichandbook:
+ https://www.oxy.com/siteassets/documents/chemicals/products/chlor-alkali/caustic.pdf
+Indexed densitydata flags applicability issue; no actualretainedliquor property
+measurement supplied. Broad claims of new convection/heatuse rejected; exact
+narrow schedulingpriorart notfound inboundedsearch remainsUNKNOWN.
+
+M-P1 DuPont FilmTec shutdownexcerpt45-D01613Rev10March2022:
+ https://www.dupont.com/content/dam/water/amer/us/en/water/public/documents/en/RO-NF-FilmTec-RO-NF-Systems-Shutdown-Manual-Exc-45-D01613-en.pdf
+Manufacturer source for lowpressureflush, chemicalstop, endpoint/wetstandby
+andpressureconstraints; current fullmanualRev18September2025 also located.
+M-P2 Futterlieb/Panglisch,Desalination622(2026)119622,
+ DOI10.1016/j.desal.2025.119622,online2025-11-17:
+ https://www.uni-due.de/imperia/md/images/wassertechnik/1-s2.0-s0011916425010999-main.pdf
+Fulltextrelevantpages read: transition conductivity/pH/CO2effects, compositional
+controls and54-daymitigation; gasrelease mayhelp cleaning. Strongdirectoverlap.
+M-P3 Joy/Boussemaere2025,DOI10.1016/j.jenvman.2024.123837:
+ https://pubmed.ncbi.nlm.nih.gov/39742755/
+Primarypublicationrecord/abstract; CO2scalecontrol, chemistrylimits,pilot.
+M-P4 WO2010014605A1,2010:
+ https://patents.google.com/patent/WO2010014605A1/en
+Membrane biofilmreactor with scouringgas plusseparateCO2/pHcontrol; application
+isnotRO andnotexactzerofluxfeedforward. M-P5 US20060243661A1,2006:
+ https://patents.google.com/patent/US20060243661A1/en
+Airstripping/pH/carbonatecrystallization versusbiogasscour oracidifiedair;
+strongcross-effectpriorart. M-P6 Guerrero,ClemsonMSc2017:
+ https://open.clemson.edu/all_theses/2940/
+M-P7 Partlan,ClemsonMSc2013:
+ https://open.clemson.edu/all_theses/1788/
+ROCO2/bubblecleaning andcontrols separatingchemical/scoureffects.
+M-P8 2017ROtwo-phasecomparisonpublicationrecord:
+ https://pubmed.ncbi.nlm.nih.gov/28834766/
+Located butabstractnotfullyevaluated; noproductionperformanceinferred.
+
+G. COVERAGE AND STATUS REPORT
+Count the explicit graph representations, not nonexistent exhaustive coverage:
+Branchcycle | situation rows | listed/projected edges | constraint grouping
+D1 |18|23listed|12families; three described auditmotifs
+D2 |9refinement|10integration-projected|5additional obligations; twoauditmotifs
+R1 |17|28listed|12families; five explicitauditmotifs
+R2 |10refinement|13listed|6additional obligations; onecompositeauditpath
+M1 |13|15listed|12families; twoexplicitjoins; original16edgeclaimcorrected
+M2 |9refinement|10listed|7obligations; coupledpaths plusindependentspatialattack
+These cannot be summed into a count of unique real situations, validated rules
+or GCSC semanticclasses. Refinements overlaptheirparents; cross-domain laws
+repeat; edge/motif denominators are notcomplete. No Wilson/bootstrappercentage
+is warranted because this is purposivescoping, notrepresentativesampling.
+FullSALcoverageUNKNOWN. Typedsemanticadmission, propertytestcoverage for all
+hardconstraints, realparametercoverage and frontiernovelty coverage UNKNOWN.
+
+Status ledger:
+D1: hypothesisformulated; correctedidealcalculationrun; broadpriorartoverlap;
+    exactnewdesignadvantageUNPROVEN; physical/economicvalidationNONE.
+D2: formulated; idealcapacitybound/integrationonly; cooldowncontrolsknown;
+    narrowallocationnoveltyUNKNOWN; materialnetvalueUNSUPPORTED.
+R1: formulated; scopedtiminginequality; broadpriorartoverlap;
+    narrowrecipeUNKNOWN; calibratedperformance/economicvalidationNONE.
+R2: formulated; dimensionallyconsistentscreeningonly; applicabilitynarrowed;
+    exactnarrowpriorartidentityNOTFOUNDINBOUNDEDSEARCH,stillUNKNOWN;
+    transportperformanceprediction/calibrationNONE; economicsUNKNOWN.
+M1: formulated; simpleandfulleridealequilibriumchecked; directmodernpriorart;
+    noexactconductivityprojectionwitness; scalingmass/economicsUNKNOWN.
+M2: formulated; localthermodynamicmatchingknown; strongdualcontrolpriorart;
+    spatialcounterexampleandequivalenceattack; operationaladvantageUNKNOWN.
+No candidate here is established as novel, empiricallyvalidated or economically
+measured. No actual monetarysaving is claimed. A simulation advantage against
+one restrictedlayout is not an incrementaladvantageagainstthebestexistingdesign.
+
+Common economiccontract: compare matching usefuloutput/quality/reliability and
+same initial/finalstoredenergy/material. Count water,chemicals,energy,gas,
+maintenance,instrumentation,annualizedcapital and actual marginaldowntime.
+Capacityvalue requires demandandbottleneck evidence. Do not multiply synthetic
+percase gains by an unverified fleet, or count avoidedrejects twice. Noveltyand
+positivevalue are separate gates. Atpresentall actual benefitinputs areUNKNOWN.
+
+Branch stopping is justified by directpriorart, unsupportedphysicalwindows or
+small/uncertain incrementalvalue. It is not a conclusion that these industries,
+other operating regimes or the overall scientific search are exhausted.
+
+
+4.11.12 PRESSURE FREEZE, CALLER PROVENANCE AND ADVERSARIAL RECEIPT
+Freeze bytes below preceded targeted prior-report searches. Later caller and issue findings explicitly narrow its initial hypothesis as explained above; the freeze is not the final conclusion.
+Freeze SHA256 714e9da68bb9715fd96be439c2f4e5634fb8ad30bae195e739dea5abd28f6d64
+PRESSURE REFERENCE CLOSURE — candidate freeze
+Status: HYPOTHESIS / implementation contract defect, not new physics.
+Origin: compressor state -> measured/reference power -> proposed pressure -> annual bill.
+Generated invariant: same physical state, duration, flow, environment and tariff implies zero intervention saving.
+Observed upstream: pressure baseline field unused; baseline takes raw power while modification rescales against nameplate pressure and standard atmospheric pressure.
+Prediction under documented measured-power interpretation: P0=100 kW at p0=100 psig, rated=125 psig, atmosphere=14.7 psi, h=8000 h/y, c=.10 USD/kWh. At unchanged p1=100, existing code predicts $9214.95/y savings instead of zero. At p1=90, existing predicts $13307.12/y; normalized measured-baseline model predicts $4624.90/y.
+Equation repair: F(p,a)=((p+a)/a)^(.395/1.395)-1; P1=P0*F(p1,a)/F(p0,a). Preserve explicit power basis and reference state.
+Scope: fixed flow, efficiency, inlet conditions, same empirical pressure-law approximation. No prediction for unloading, leak-flow change, control switching, demand, transients.
+Falsifier: documented caller converts baseline to rated power separately; this can invalidate deployed UI impact, but must be traced. Alternate rated-power mode requires both baseline and proposed states be derived from the same typed reference.
+Not yet checked: previous reports, production incidence, real physical accuracy, economic realized value.
+Upstream commit: 0669b456c67bd8b9c1656a83cd7d35d68a2701d5
+Freeze UTC: 2026-10-09T12:35:39.411455+00:00
+include/treasureHunt/compressed_air_pressure_reduction.h SHA256 9eb5875f3561b481380e65ef952ab1a97627242773f86f7c777099ca7ad0c0fb
+src/treasureHunt/compressed_air_pressure_reduction.cpp SHA256 65ebe5cfae4c1548cb54564b2224ad220811e125612a6a567bb431f1b68dabc4
+include/physics/constants.h SHA256 f215f700a87fc776154984d8d5c83ebee5b6cfa344d6a369ff34292ac24a5844
+
+Read-only caller trace receipt SHA256 a02a5dee77ea60f2a6cbb067440909b1f8f84b305518b7ceefed326024fad0d0
+AMO DESKTOP CALLER TRACE — READ ONLY — 2026-10-09
+Repository https://github.com/ORNL-AMO/AMO-Tools-Desktop
+Checkout /workspace/scratch/5e8f47cbc766/amo-desktop-trace
+Commit562402815720434463c5bca62747bc4e0a10d0ed, commitdate2026-10-08T10:45:15-05:00; defaultbranchdevelop.
+package.json suite dependency1.2.6-rc.350.1. This audit did not install/run thatWASM or browser. Static application trace plus numerical evaluation of root-inspected currentC++ formula. Do not automatically equate sourcepin with released deployedbinary.
+RootAGENTS.md and src/app/tools-suite-api/AGENTS.md read. No upstream or checkout modifications. No UIbuild/npmtest needed for read-onlytrace; no claimfullGUIvalidation.
+
+KEY CORRECTION TO BROAD DEFECT CLAIM
+Normal interactive MEASURED mode DOES set pressureRated=pressure before calculation. File compressed-air-pressure-reduction-form.component.ts lines125–127 and138–140 explicitlydo this. Therefore arbitrary rated!=baseline input is not a faithful normal measured-modeUIreproduction. Do NOT claim every measuredUIcase hasreference-pressuremismatch.
+There is NO power preconversion: formreturnsraw compressorPower, wrapperforwardsit unchanged. Only pressureunitconversions happen.
+
+NARROW CONFIRMED SOURCEPATH
+1 UI chooses Measured (defaultpowerType) orRated. Formtemplate lines65–66.
+2 Measuredinput label is MeasuredCompressorPower [kW]; operatingpressure [psig/barg]; atmosphere [psia/bara]. Atmosphere is usereditable inbaseline, readonlymodification. Formtemplate lines70–78,128–150.
+3 Measuredcontract help lines55–58 explicitly identifies power/currentoperatingpressure collectedinfield, separatelydistinguishing nameplateratedinputs.
+4 Formcomponent maps measured pressureRated=baselinepressure, but noatmospheric-normalizationofpower. calculateIndividualResult then overwrites pressure=proposedPressure inmodification AFTERcopyingoriginalpressuretorated (lines138–143).
+5 Parentcomponent createModification clonesbaselineandsetsisBaselinefalse (lines152–156); baselineeditspropagate rawpower,pressure,rated,atmosphere (lines183–188).
+6 FeaturegetResults clonesarrays andoverwrites onlyfirstmodification.pressure=proposedPressure(lines99–103). calculateIndividualEquipment separatelygoesdirecttocall.
+7 convertInputs convertspressurefieldsfrombarunits only (lines140–149); rawkWunchanged.
+8 CompressedAirSuiteApiService wrapperlines49–80 normalizesnulls, forwardsisBaseline,hours,electricityCost,compressorPower,pressure,proposedPressure,atmosphericPressure,pressureRatedintoWASM. powerType isNOTpassed.
+9 Results subtractmodificationenergy/costfrombaseline (featuregetResults lines114–116).
+
+AFFECTED NO-OP MODE
+Measured power100kW atlocalatmosphericpressure12psia, operatingpressure100psig, proposedpressure100psig, sameannualhours/cost. UIfaithfullymapsrated=100. CurrentlibraryC++denominatoruses(100+14.7)/14.7 butnumeratoruses(100+12)/12. c=.395/1.395.
+ratio=[((112/12)^c)-1]/[((114.7/14.7)^c)-1]=1.1179554181589368.
+Predictedmodifiedpower111.79554181589369kW despite no physicalchange; baseline100kW.
+At8000h: baseline800000kWh, modification894364.3345271494kWh; falsesavings=-94364.3345271494kWh.
+Atassumed0.10currency/kWh: falsesavings=-9436.433452714948currency/year.
+This shows source-levelidentityinvariantviolation, NOTactualelectricitysavingfromthefix. Anycapitaldecisionbenefitrequiresactualcases.
+Atlocalatm14.7,rated=operating,the measuredno-opratiois1, so thatsubsetdoesnotshowthisdefect. Nearstandardatmospheresmayhave smallererror. UIexampleuses14.7,maskingaltitudeeffect. initObject actuallystartsallpressurefieldsat0 pendinguserentry, notafield-calibrateddefault.
+
+OTHER SCOPE / REPAIR CONSIDERATIONS
+Ratedmodepassesrawnameplatepower withseparatelyentered ratedpressureandoperatingpressure; the currentlibrarybaseline is rawP*h regardlessofoperatingpressure. UIhelp promisespressureadjustedconsumedpower, butthereisno suchpreconversion. Exactnameplateatmosphericreference needsmaintainercontractclarification ratherthan guessing it islocal.
+A librarypatch blindlyusinginput.pressure asbaselineanchor willbreakcurrentUI becausemodificationcallers overwriteitwithproposedpressure. Coordinatedadapter+librarycontractrepairor explicitreferencefield isneeded.
+powerType isdroppedatWASMboundary; librarycannotunambiguouslydistinguishmeasuredlocal fromnameplatestandard P. Goodrepairpreservesbasisandreference ratherthan reliesonnamealone.
+TreasurehuntservicegetTreasureHuntOpportunityResults calls featuregetResults directlyonstoreddata, bypassingtheform's measurednormalization. LegacyimportdefaultsabsentpressureRatedandatmosphericPressureto0 andpowerTypetoMeasured; these deserve separatevalidation,not mixedintoidentityclaim.
+
+SOURCE HASHES (full-fileSHA256)
+2bc1b3fe1e54966a7ae44755002eb5af4cf21611631d98d948435e53d4a98d03  AGENTS.md
+d11953d134ed8779543775a29f331c87cc13efe23a3688b5fd896f98f04980f1  src/app/tools-suite-api/AGENTS.md
+5143f15a56df0a703de2cd8c074855d39e59756c1fb3be72b0822efe15c836ef  package.json
+f81be821976d0a28348e26eba53011caae24591cd8226989def0ea35b9cf6702  src/app/tools-suite-api/compressed-air-suite-api.service.ts
+2754a27f474a8018e9ab6cf7b0fc13308a9ea03b0d9a55ef7fcc73f6e89a84be  src/app/calculator/compressed-air/compressed-air-pressure-reduction/compressed-air-pressure-reduction.service.ts
+f980ffa21b84b76fd44aec5049088fc54a2755cce2d470995f037693f9dba1bf  src/app/calculator/compressed-air/compressed-air-pressure-reduction/compressed-air-pressure-reduction.component.ts
+36b4d899311e86fba21b8aaa5df82014ced8959c20ec7abdd3ace21d2700fc9d  src/app/calculator/compressed-air/compressed-air-pressure-reduction/compressed-air-pressure-reduction-form/compressed-air-pressure-reduction-form.component.ts
+3493c6470b0bc374f13cb11362c9d448ccbbdcb41f5ebaea88cc45146320ebff  src/app/calculator/compressed-air/compressed-air-pressure-reduction/compressed-air-pressure-reduction-form/compressed-air-pressure-reduction-form.component.html
+1377a35a83cb2f3f8abdedbcb7bb90fc3eea0512e2e59e60d189e2be1584798e  src/app/calculator/compressed-air/compressed-air-pressure-reduction/compressed-air-pressure-reduction-help/compressed-air-pressure-reduction-help.component.html
+79d34a038f72b2bdc3de75a00427f7557934fa1e0940a10256534bc14dc314f4  src/app/treasure-hunt/treasure-hunt-calculator-services/ca-pressure-reduction-treasure-hunt.service.ts
+08c0e54032ed1ebf4c1d952803123872c880e2cf1ec5550ec7b0f884dd9f795c  src/app/treasure-hunt/treasure-chest/import-opportunities.service.ts
+
+PINNED LINK PREFIX
+https://github.com/ORNL-AMO/AMO-Tools-Desktop/blob/562402815720434463c5bca62747bc4e0a10d0ed/
+
+Independent same-system code/model review (not scientific admission):
+INDEPENDENT FINAL REVIEW — 9 October 2026
+Read industrial_transition_audit.py completely and reran it against the pinned original MEASUR-Tools-Suite checkout. No implementation/upstream edits by reviewer.
+
+RESULT: 342 metamorphic/domain checks and 8 compiled original-C++ comparisons passed independently. Both the no-change contradiction and altitude pressure-reduction sign reversal reproduce. Common-anchor normalization and fixed/non-scaling power accounting are mathematically coherent within the declared fixed-duty ideal model. No blocking mathematical flaw found.
+
+Conditional economics independently match: at100kW,100->90psig,12psia,8000hours/year and$0.10/kWh, legacy predicts$4,449.59/year additional cost while corrected ideal model predicts$4,460.69/year gross saving. With hypothetical$2,000/year all-in added cost, net is$2,460.69 if all power scales or$1,122.48 at70% scalable power. Actual duty feasibility, scalable fraction, implementation cost and field savings remain UNKNOWN.
+
+Graph0 repaired gaps means only closure of the declared structural reference obligations. A duty identity label is not physical validation. Full SAL/GSL conformance, deployment qualification and independent field evidence are not established. Same-family adversarial review is not external certification. Extreme finite pressure ratios need an overflow/domain guard before production use; realistic experiment witnesses are unaffected.
+
+NOVELTY DOWNGRADE: Parent's further prior-art review found Desktop issue8548 acknowledges odd pressure logic and proposes measured/rated reference handling, with related issues4523/4527. Broad missing-reference novelty is therefore unsupported. Exact local-atmosphere no-op/sign reversal is a reproduced specific counterexample; whether it was previously unreported remains UNRESOLVED. Do not call it an established novel industrial discovery or treat the corrected energy estimate itself as energy saved.
+
+
+4.11.13 FINAL REPLAY RECEIPT
+industrial_physical_screens.py replays the two known/overlapping physical leads with Python standard-library bounded solvers. Ten regression/balance/null assertions passed: drying34.843427160 versus21.321233330kW at equal0.008kg/s water removal; carbonateOmega4.840887281 versus approximate5; fixed-pH/alkalinity equivalence null. This is post-freeze arithmetic/model verification, not new experimental evidence.
+industrial_transition_audit.py SHA256 043b59a55b249cc55f41e43db52f71096bcd766664d888c6472cbfad2f682d54
+industrial_physical_screens.py SHA256 468f49091be1953db61e5373fdc0b9eb6ecf0bc8c9df4036b2f9ac7335689ea4
+Existing bounded-adapter regression suite:18tests passed. Whitespace/diff check passed. Same-system independent reviewer read the full appended claims and found no blocking scope/novelty/economic overclaim. No external scientific approval or paid review was obtained.
