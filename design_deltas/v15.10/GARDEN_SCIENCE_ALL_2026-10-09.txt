@@ -7,7 +7,7 @@ READ THIS FIRST
 10 worked mathematical examples are conditional results, predominantly established mathematics.
 Candidate 026 is a synthetic test of model selection, not new physics.
 33 industry opportunities overlap the 100 and each other. Do not add benefits.
-No global novelty certification, real-world empirical validation or proven Garden-specific economic savings.
+No global novelty certification, real-world empirical validation or proven Garden-specific economic savings. A scoped prior-art review of Candidate 006 now establishes that its basic mechanism is already published.
 This file replaces the earlier assembled research report and contains all scientific research in one file, including complete executable code and full JSON results.
 
 1. MECHANISM — GARDEN SCIENTIFIC ABSTRACTION AND DISCOVERY
@@ -63,208 +63,208 @@ TREE_CORE gzip/CRC/schema/determinism/retention defects remain separately OPEN.
 2. SUMMARY OF THEORIES AND OPPORTUNITIES
 
 2.1 One hundred scientific research stubs
-ID | Family | Research question | Unverified mechanism hint | Conditional benefit
+ID | Family | Research question | Diagnostic status | Conditional benefit
 
 
-001 | Battery electrochemistry | interfacial stress memory | dynamic hidden state / delay | safer fast charging
+001 | Battery electrochemistry | interfacial stress memory | DIAGNOSTIC REQUIRED | safer fast charging
 
-002 | Battery electrochemistry | electrolyte concentration variance | heterogeneity / joint distribution | safer fast charging
+002 | Battery electrochemistry | electrolyte concentration variance | DIAGNOSTIC REQUIRED | safer fast charging
 
-003 | Battery electrochemistry | particle-size/contact covariance | heterogeneity / joint distribution | safer fast charging
+003 | Battery electrochemistry | particle-size/contact covariance | DIAGNOSTIC REQUIRED | safer fast charging
 
-004 | Battery electrochemistry | thermal-gradient persistence | heterogeneity / joint distribution | safer fast charging
+004 | Battery electrochemistry | thermal-gradient persistence | DIAGNOSTIC REQUIRED | safer fast charging
 
-005 | Battery electrochemistry | SEI connectivity hysteresis | network / geometry | safer fast charging
+005 | Battery electrochemistry | SEI connectivity hysteresis | DIAGNOSTIC REQUIRED | safer fast charging
 
-006 | Battery degradation | local heat-current covariance | heterogeneity / joint distribution | longer battery lifetime
+006 | Battery degradation | local heat-current covariance | DIAGNOSTIC REQUIRED | longer battery lifetime
 
-007 | Battery degradation | charge-rest sequencing | dynamic hidden state / delay | longer battery lifetime
+007 | Battery degradation | charge-rest sequencing | DIAGNOSTIC REQUIRED | longer battery lifetime
 
-008 | Battery degradation | fracture-assisted reaction area | network / geometry | longer battery lifetime
+008 | Battery degradation | fracture-assisted reaction area | DIAGNOSTIC REQUIRED | longer battery lifetime
 
-009 | Battery degradation | lithium inventory redistribution | dynamic hidden state / delay | longer battery lifetime
+009 | Battery degradation | lithium inventory redistribution | DIAGNOSTIC REQUIRED | longer battery lifetime
 
-010 | Battery degradation | electrode pore-network fragmentation | network / geometry | longer battery lifetime
+010 | Battery degradation | electrode pore-network fragmentation | DIAGNOSTIC REQUIRED | longer battery lifetime
 
-011 | Heterogeneous catalysis | surface reconstruction memory | dynamic hidden state / delay | lower-energy chemical manufacture
+011 | Heterogeneous catalysis | surface reconstruction memory | DIAGNOSTIC REQUIRED | lower-energy chemical manufacture
 
-012 | Heterogeneous catalysis | adsorbate-neighbor correlations | heterogeneity / joint distribution | lower-energy chemical manufacture
+012 | Heterogeneous catalysis | adsorbate-neighbor correlations | DIAGNOSTIC REQUIRED | lower-energy chemical manufacture
 
-013 | Heterogeneous catalysis | pulsed feed phase | state switching / hysteresis | lower-energy chemical manufacture
+013 | Heterogeneous catalysis | pulsed feed phase | DIAGNOSTIC REQUIRED | lower-energy chemical manufacture
 
-014 | Heterogeneous catalysis | active-site network percolation | network / geometry | lower-energy chemical manufacture
+014 | Heterogeneous catalysis | active-site network percolation | DIAGNOSTIC REQUIRED | lower-energy chemical manufacture
 
-015 | Heterogeneous catalysis | poison desorption history | dynamic hidden state / delay | lower-energy chemical manufacture
+015 | Heterogeneous catalysis | poison desorption history | DIAGNOSTIC REQUIRED | lower-energy chemical manufacture
 
-016 | Chemical kinetics | competing-pathway occupancy | coupled latent kinetics | better reactor efficiency
+016 | Chemical kinetics | competing-pathway occupancy | DIAGNOSTIC REQUIRED | better reactor efficiency
 
-017 | Chemical kinetics | barrier-distribution curvature | established parallel-pathway mixture; worked derivation | better reactor efficiency
+017 | Chemical kinetics | barrier-distribution curvature | DIAGNOSTIC REQUIRED | better reactor efficiency
 
-018 | Chemical kinetics | solvent reorganization lag | dynamic hidden state / delay | better reactor efficiency
+018 | Chemical kinetics | solvent reorganization lag | DIAGNOSTIC REQUIRED | better reactor efficiency
 
-019 | Chemical kinetics | reactant clustering | network / geometry | better reactor efficiency
+019 | Chemical kinetics | reactant clustering | DIAGNOSTIC REQUIRED | better reactor efficiency
 
-020 | Chemical kinetics | intermediate trapping memory | dynamic hidden state / delay | better reactor efficiency
+020 | Chemical kinetics | intermediate trapping memory | DIAGNOSTIC REQUIRED | better reactor efficiency
 
-021 | Nucleation | subcritical-cluster history | dynamic hidden state / delay | crystal and drug formulation
+021 | Nucleation | subcritical-cluster history | DIAGNOSTIC REQUIRED | crystal and drug formulation
 
-022 | Nucleation | surface-defect localization | mechanism unresolved — requires domain diagnostics | crystal and drug formulation
+022 | Nucleation | surface-defect localization | DIAGNOSTIC REQUIRED | crystal and drug formulation
 
-023 | Nucleation | solvent pulse memory | dynamic hidden state / delay | crystal and drug formulation
+023 | Nucleation | solvent pulse memory | DIAGNOSTIC REQUIRED | crystal and drug formulation
 
-024 | Nucleation | impurity-cluster correlations | heterogeneity / joint distribution | crystal and drug formulation
+024 | Nucleation | impurity-cluster correlations | DIAGNOSTIC REQUIRED | crystal and drug formulation
 
-025 | Nucleation | spatial supersaturation intermittency | heterogeneity / joint distribution | crystal and drug formulation
+025 | Nucleation | spatial supersaturation intermittency | DIAGNOSTIC REQUIRED | crystal and drug formulation
 
-026 | Heat transfer | interface thermal memory | dynamic hidden state / delay | chip and battery cooling
+026 | Heat transfer | interface thermal memory | DIAGNOSTIC REQUIRED | chip and battery cooling
 
-027 | Heat transfer | anisotropic domain connectivity | network / geometry | chip and battery cooling
+027 | Heat transfer | anisotropic domain connectivity | DIAGNOSTIC REQUIRED | chip and battery cooling
 
-028 | Heat transfer | nonlocal hotspot coupling | coupled latent kinetics | chip and battery cooling
+028 | Heat transfer | nonlocal hotspot coupling | DIAGNOSTIC REQUIRED | chip and battery cooling
 
-029 | Heat transfer | phase-transition latent-heat lag | state switching / hysteresis | chip and battery cooling
+029 | Heat transfer | phase-transition latent-heat lag | DIAGNOSTIC REQUIRED | chip and battery cooling
 
-030 | Heat transfer | thermal-contact ageing | network / geometry | chip and battery cooling
+030 | Heat transfer | thermal-contact ageing | DIAGNOSTIC REQUIRED | chip and battery cooling
 
-031 | Fluid transport | pore-throat network damage | network / geometry | filtration and groundwater
+031 | Fluid transport | pore-throat network damage | DIAGNOSTIC REQUIRED | filtration and groundwater
 
-032 | Fluid transport | wetting-front hysteresis | state switching / hysteresis | filtration and groundwater
+032 | Fluid transport | wetting-front hysteresis | DIAGNOSTIC REQUIRED | filtration and groundwater
 
-033 | Fluid transport | particle clogging topology | network / geometry | filtration and groundwater
+033 | Fluid transport | particle clogging topology | DIAGNOSTIC REQUIRED | filtration and groundwater
 
-034 | Fluid transport | pressure-cycling memory | dynamic hidden state / delay | filtration and groundwater
+034 | Fluid transport | pressure-cycling memory | DIAGNOSTIC REQUIRED | filtration and groundwater
 
-035 | Fluid transport | multi-scale channel connectivity | network / geometry | filtration and groundwater
+035 | Fluid transport | multi-scale channel connectivity | DIAGNOSTIC REQUIRED | filtration and groundwater
 
-036 | Fracture mechanics | overload sequence memory | dynamic hidden state / delay | safer infrastructure
+036 | Fracture mechanics | overload sequence memory | DIAGNOSTIC REQUIRED | safer infrastructure
 
-037 | Fracture mechanics | microcrack orientation correlations | heterogeneity / joint distribution | safer infrastructure
+037 | Fracture mechanics | microcrack orientation correlations | DIAGNOSTIC REQUIRED | safer infrastructure
 
-038 | Fracture mechanics | corrosion-fatigue coupling | coupled latent kinetics | safer infrastructure
+038 | Fracture mechanics | corrosion-fatigue coupling | DIAGNOSTIC REQUIRED | safer infrastructure
 
-039 | Fracture mechanics | grain-boundary connectivity | network / geometry | safer infrastructure
+039 | Fracture mechanics | grain-boundary connectivity | DIAGNOSTIC REQUIRED | safer infrastructure
 
-040 | Fracture mechanics | residual-stress redistribution | dynamic hidden state / delay | safer infrastructure
+040 | Fracture mechanics | residual-stress redistribution | DIAGNOSTIC REQUIRED | safer infrastructure
 
-041 | Turbulence | intermittency-conditioned closure | heterogeneity / joint distribution | efficient transport and turbines
+041 | Turbulence | intermittency-conditioned closure | DIAGNOSTIC REQUIRED | efficient transport and turbines
 
-042 | Turbulence | wall-history dependence | dynamic hidden state / delay | efficient transport and turbines
+042 | Turbulence | wall-history dependence | DIAGNOSTIC REQUIRED | efficient transport and turbines
 
-043 | Turbulence | coherent-structure topology | network / geometry | efficient transport and turbines
+043 | Turbulence | coherent-structure topology | DIAGNOSTIC REQUIRED | efficient transport and turbines
 
-044 | Turbulence | pressure-strain lag | dynamic hidden state / delay | efficient transport and turbines
+044 | Turbulence | pressure-strain lag | DIAGNOSTIC REQUIRED | efficient transport and turbines
 
-045 | Turbulence | cross-scale transfer memory | dynamic hidden state / delay | efficient transport and turbines
+045 | Turbulence | cross-scale transfer memory | DIAGNOSTIC REQUIRED | efficient transport and turbines
 
-046 | Solar cells | mobile-ion interface memory | dynamic hidden state / delay | longer-lasting solar modules
+046 | Solar cells | mobile-ion interface memory | DIAGNOSTIC REQUIRED | longer-lasting solar modules
 
-047 | Solar cells | trap-occupancy hysteresis | state switching / hysteresis | longer-lasting solar modules
+047 | Solar cells | trap-occupancy hysteresis | DIAGNOSTIC REQUIRED | longer-lasting solar modules
 
-048 | Solar cells | grain-boundary topology | network / geometry | longer-lasting solar modules
+048 | Solar cells | grain-boundary topology | DIAGNOSTIC REQUIRED | longer-lasting solar modules
 
-049 | Solar cells | humidity-illumination covariance | heterogeneity / joint distribution | longer-lasting solar modules
+049 | Solar cells | humidity-illumination covariance | DIAGNOSTIC REQUIRED | longer-lasting solar modules
 
-050 | Solar cells | contact ageing kinetics | network / geometry | longer-lasting solar modules
+050 | Solar cells | contact ageing kinetics | DIAGNOSTIC REQUIRED | longer-lasting solar modules
 
-051 | Photosynthesis | dynamic disorder correlation | heterogeneity / joint distribution | artificial photosynthesis
+051 | Photosynthesis | dynamic disorder correlation | DIAGNOSTIC REQUIRED | artificial photosynthesis
 
-052 | Photosynthesis | reaction-center occupancy feedback | coupled latent kinetics | artificial photosynthesis
+052 | Photosynthesis | reaction-center occupancy feedback | DIAGNOSTIC REQUIRED | artificial photosynthesis
 
-053 | Photosynthesis | vibrational mode intermittency | heterogeneity / joint distribution | artificial photosynthesis
+053 | Photosynthesis | vibrational mode intermittency | DIAGNOSTIC REQUIRED | artificial photosynthesis
 
-054 | Photosynthesis | antenna topology adaptation | network / geometry | artificial photosynthesis
+054 | Photosynthesis | antenna topology adaptation | DIAGNOSTIC REQUIRED | artificial photosynthesis
 
-055 | Photosynthesis | nonphotochemical quenching memory | dynamic hidden state / delay | artificial photosynthesis
+055 | Photosynthesis | nonphotochemical quenching memory | DIAGNOSTIC REQUIRED | artificial photosynthesis
 
-056 | Neuroscience | phase-lag memory | state switching / hysteresis | better neural diagnostics
+056 | Neuroscience | phase-lag memory | DIAGNOSTIC REQUIRED | better neural diagnostics
 
-057 | Neuroscience | cell-type interaction topology | network / geometry | better neural diagnostics
+057 | Neuroscience | cell-type interaction topology | DIAGNOSTIC REQUIRED | better neural diagnostics
 
-058 | Neuroscience | adaptation-state retention | dynamic hidden state / delay | better neural diagnostics
+058 | Neuroscience | adaptation-state retention | DIAGNOSTIC REQUIRED | better neural diagnostics
 
-059 | Neuroscience | dendritic compartment coupling | coupled latent kinetics | better neural diagnostics
+059 | Neuroscience | dendritic compartment coupling | DIAGNOSTIC REQUIRED | better neural diagnostics
 
-060 | Neuroscience | glial metabolic feedback | coupled latent kinetics | better neural diagnostics
+060 | Neuroscience | glial metabolic feedback | DIAGNOSTIC REQUIRED | better neural diagnostics
 
-061 | Pharmacokinetics | transporter saturation history | dynamic hidden state / delay | precision dosing
+061 | Pharmacokinetics | transporter saturation history | DIAGNOSTIC REQUIRED | precision dosing
 
-062 | Pharmacokinetics | protein-binding displacement lag | dynamic hidden state / delay | precision dosing
+062 | Pharmacokinetics | protein-binding displacement lag | DIAGNOSTIC REQUIRED | precision dosing
 
-063 | Pharmacokinetics | organ perfusion covariance | heterogeneity / joint distribution | precision dosing
+063 | Pharmacokinetics | organ perfusion covariance | DIAGNOSTIC REQUIRED | precision dosing
 
-064 | Pharmacokinetics | intracellular sequestration memory | dynamic hidden state / delay | precision dosing
+064 | Pharmacokinetics | intracellular sequestration memory | DIAGNOSTIC REQUIRED | precision dosing
 
-065 | Pharmacokinetics | circadian clearance state | coupled latent kinetics | precision dosing
+065 | Pharmacokinetics | circadian clearance state | DIAGNOSTIC REQUIRED | precision dosing
 
-066 | Ecology | interaction-network rewiring | network / geometry | ecosystem resilience
+066 | Ecology | interaction-network rewiring | DIAGNOSTIC REQUIRED | ecosystem resilience
 
-067 | Ecology | seed-bank recovery memory | dynamic hidden state / delay | ecosystem resilience
+067 | Ecology | seed-bank recovery memory | DIAGNOSTIC REQUIRED | ecosystem resilience
 
-068 | Ecology | spatial refuge connectivity | network / geometry | ecosystem resilience
+068 | Ecology | spatial refuge connectivity | DIAGNOSTIC REQUIRED | ecosystem resilience
 
-069 | Ecology | predator-switching lag | state switching / hysteresis | ecosystem resilience
+069 | Ecology | predator-switching lag | DIAGNOSTIC REQUIRED | ecosystem resilience
 
-070 | Ecology | nutrient feedback delay | dynamic hidden state / delay | ecosystem resilience
+070 | Ecology | nutrient feedback delay | DIAGNOSTIC REQUIRED | ecosystem resilience
 
-071 | Epidemiology | contact-network memory | network / geometry | more accurate outbreak forecasts
+071 | Epidemiology | contact-network memory | DIAGNOSTIC REQUIRED | more accurate outbreak forecasts
 
-072 | Epidemiology | infection-age infectiousness | mechanism unresolved — requires domain diagnostics | more accurate outbreak forecasts
+072 | Epidemiology | infection-age infectiousness | DIAGNOSTIC REQUIRED | more accurate outbreak forecasts
 
-073 | Epidemiology | regional mixing covariance | heterogeneity / joint distribution | more accurate outbreak forecasts
+073 | Epidemiology | regional mixing covariance | DIAGNOSTIC REQUIRED | more accurate outbreak forecasts
 
-074 | Epidemiology | behavioral response lag | dynamic hidden state / delay | more accurate outbreak forecasts
+074 | Epidemiology | behavioral response lag | DIAGNOSTIC REQUIRED | more accurate outbreak forecasts
 
-075 | Epidemiology | immunity heterogeneity topology | heterogeneity / joint distribution | more accurate outbreak forecasts
+075 | Epidemiology | immunity heterogeneity topology | DIAGNOSTIC REQUIRED | more accurate outbreak forecasts
 
-076 | Soil biogeochemistry | mineral-accessibility topology | network / geometry | soil management and climate
+076 | Soil biogeochemistry | mineral-accessibility topology | DIAGNOSTIC REQUIRED | soil management and climate
 
-077 | Soil biogeochemistry | wet-dry pulse memory | dynamic hidden state / delay | soil management and climate
+077 | Soil biogeochemistry | wet-dry pulse memory | DIAGNOSTIC REQUIRED | soil management and climate
 
-078 | Soil biogeochemistry | microbial enzyme allocation | coupled latent kinetics | soil management and climate
+078 | Soil biogeochemistry | microbial enzyme allocation | DIAGNOSTIC REQUIRED | soil management and climate
 
-079 | Soil biogeochemistry | aggregate fragmentation | network / geometry | soil management and climate
+079 | Soil biogeochemistry | aggregate fragmentation | DIAGNOSTIC REQUIRED | soil management and climate
 
-080 | Soil biogeochemistry | root-exudate spatial coupling | coupled latent kinetics | soil management and climate
+080 | Soil biogeochemistry | root-exudate spatial coupling | DIAGNOSTIC REQUIRED | soil management and climate
 
-081 | Climate dynamics | ocean vertical heat memory | dynamic hidden state / delay | better adaptation planning
+081 | Climate dynamics | ocean vertical heat memory | DIAGNOSTIC REQUIRED | better adaptation planning
 
-082 | Climate dynamics | cloud-regime transition persistence | state switching / hysteresis | better adaptation planning
+082 | Climate dynamics | cloud-regime transition persistence | DIAGNOSTIC REQUIRED | better adaptation planning
 
-083 | Climate dynamics | land-moisture feedback | coupled latent kinetics | better adaptation planning
+083 | Climate dynamics | land-moisture feedback | DIAGNOSTIC REQUIRED | better adaptation planning
 
-084 | Climate dynamics | aerosol-pattern covariance | heterogeneity / joint distribution | better adaptation planning
+084 | Climate dynamics | aerosol-pattern covariance | DIAGNOSTIC REQUIRED | better adaptation planning
 
-085 | Climate dynamics | ice-albedo spatial connectivity | network / geometry | better adaptation planning
+085 | Climate dynamics | ice-albedo spatial connectivity | DIAGNOSTIC REQUIRED | better adaptation planning
 
-086 | Materials mechanics | dislocation network topology | network / geometry | stronger lightweight materials
+086 | Materials mechanics | dislocation network topology | DIAGNOSTIC REQUIRED | stronger lightweight materials
 
-087 | Materials mechanics | grain-boundary slip memory | dynamic hidden state / delay | stronger lightweight materials
+087 | Materials mechanics | grain-boundary slip memory | DIAGNOSTIC REQUIRED | stronger lightweight materials
 
-088 | Materials mechanics | strain-rate history | dynamic hidden state / delay | stronger lightweight materials
+088 | Materials mechanics | strain-rate history | DIAGNOSTIC REQUIRED | stronger lightweight materials
 
-089 | Materials mechanics | phase-boundary stress covariance | heterogeneity / joint distribution | stronger lightweight materials
+089 | Materials mechanics | phase-boundary stress covariance | DIAGNOSTIC REQUIRED | stronger lightweight materials
 
-090 | Materials mechanics | defect-cluster intermittency | heterogeneity / joint distribution | stronger lightweight materials
+090 | Materials mechanics | defect-cluster intermittency | DIAGNOSTIC REQUIRED | stronger lightweight materials
 
-091 | Protein kinetics | conformational-state memory | dynamic hidden state / delay | biomanufacturing
+091 | Protein kinetics | conformational-state memory | DIAGNOSTIC REQUIRED | biomanufacturing
 
-092 | Protein kinetics | substrate microdomain gradients | heterogeneity / joint distribution | biomanufacturing
+092 | Protein kinetics | substrate microdomain gradients | DIAGNOSTIC REQUIRED | biomanufacturing
 
-093 | Protein kinetics | crowding-induced correlation | heterogeneity / joint distribution | biomanufacturing
+093 | Protein kinetics | crowding-induced correlation | DIAGNOSTIC REQUIRED | biomanufacturing
 
-094 | Protein kinetics | allosteric network topology | network / geometry | biomanufacturing
+094 | Protein kinetics | allosteric network topology | DIAGNOSTIC REQUIRED | biomanufacturing
 
-095 | Protein kinetics | product inhibition lag | dynamic hidden state / delay | biomanufacturing
+095 | Protein kinetics | product inhibition lag | DIAGNOSTIC REQUIRED | biomanufacturing
 
-096 | Optical materials | nano-inclusion spatial correlation | heterogeneity / joint distribution | sensors and photonics
+096 | Optical materials | nano-inclusion spatial correlation | DIAGNOSTIC REQUIRED | sensors and photonics
 
-097 | Optical materials | interface exciton coupling | coupled latent kinetics | sensors and photonics
+097 | Optical materials | interface exciton coupling | DIAGNOSTIC REQUIRED | sensors and photonics
 
-098 | Optical materials | temperature-dependent disorder | heterogeneity / joint distribution | sensors and photonics
+098 | Optical materials | temperature-dependent disorder | DIAGNOSTIC REQUIRED | sensors and photonics
 
-099 | Optical materials | nonlocal scattering memory | dynamic hidden state / delay | sensors and photonics
+099 | Optical materials | nonlocal scattering memory | DIAGNOSTIC REQUIRED | sensors and photonics
 
-100 | Optical materials | defect-network percolation | network / geometry | sensors and photonics
+100 | Optical materials | defect-network percolation | DIAGNOSTIC REQUIRED | sensors and photonics
 
 
 2.2 Thirty-three economic opportunity investigations
@@ -420,7 +420,7 @@ The 'mechanism hint' below comes from a candidate title, NOT a measured residual
 
 001. Battery electrochemistry — interfacial stress memory
   Question: Does retaining interfacial stress memory improve prediction over the strongest modern Battery electrochemistry model?
-  Provisional hint: dynamic hidden state / delay; not verified by residual analysis.
+  Historical unverified title hint (NOT DIAGNOSED): dynamic hidden state / delay; not verified by residual analysis.
   Test gate: measure the proposed state; construct matched coarse states; preregister one signed quantitative contrast and blind holdout against a modern baseline.
   Conditional benefit: safer fast charging.
   Status: STUB; equation contract INCOMPLETE; novelty UNKNOWN; empirical result NONE.
@@ -1162,240 +1162,126 @@ covariance, with independently calibrated hazard law and held-out lots.
 Strong baseline: TCAD, modern defect statistics and process-control models.
 No guaranteed 2nm-node yield gain.
 
-3.4 THIRTY-THREE INDUSTRY APPLICATION DETAILS
-Each is a testable opportunity, not a confirmed Garden upgrade.
+3.4 THIRTY-THREE INDUSTRY RESEARCH STUBS (NOT INDIVIDUAL CONTRACTS)
+All 33 remain unverified research prompts. Their shared test template is specified once:
+measure the proposed missing state; create matched baseline-observable states with
+different detailed conditions; preregister a signed effect, uncertainty, endpoint and
+sample-size calculation; compare blinded holdouts to the named contemporary comparator.
+The specific experiment and equation contract are NOT YET WRITTEN for these 33.
+The table gives distinct targets, not 33 independently diagnosed mechanisms.
+ID | Field | Missing variable/question | Strong comparison model | Conditional value
+01 | Industrial motors | motor-load/pressure/vibration joint state | motor-system digital twins | energy and maintenance
+02 | Food preservation | microbial and time-temperature history | predictive microbiology | reduced spoilage
+03 | Industrial heat | heat grade, location and timing | pinch/exergy integration | less purchased fuel
+04 | Water networks | pressure transient and pipe condition | hydraulic digital twins | reduced water loss
+05 | Membrane separation | fouling and polarization state.
+  Comparator: membrane multiphysics | UNRESOLVED | lower process energy
+06 | Refrigeration | compressor cycling, humidity, thermal mass | refrigeration MPC | energy and food quality
+07 | Methane detection | intermittent plumes and sensor uncertainty | atmospheric inversion | captured methane
+08 | Cement kilns | particle and calcination temperature histories | kiln CFD | fuel and yield
+09 | Fertilizer | soil N transport and microbial memory | reactive transport | yield and less runoff
+10 | Grid congestion | topology, correlated flows, storage | stochastic AC optimal power flow | less curtailment
+11 | Mining processing | ore texture and liberation | comminution digital twins | energy and recovery
+12 | Building cooling | occupancy, humidity, thermal mass | building MPC | cooling efficiency
+13 | Dynamic line rating | span wind and conductor thermal memory | modern dynamic line rating | deferred capacity costs
+14 | Bioreactor yield | oxygen/shear microdomains, metabolism | bioreactor CFD and process analytical tech | fewer batch failures
+15 | Metal additive manufacturing | melt pool and microstructure history | LPBF thermo-mechanical models | fewer rejected parts
+16 | Direct air capture | water/CO2 sorption hysteresis | competitive adsorption kinetics | lower regeneration energy
+17 | Corrosion | coating defects and electrochemical history | corrosion risk modelling | avoided failures
+18 | Diagnostic errors | longitudinal clinical evidence and workflow | validated diagnostic decision support | avoided harm
+19 | Drug discovery | assay uncertainty and synthesis constraints | modern active learning | R&D productivity
+20 | Grid losses | reactive flow and topology | AC flow/HVDC optimization | less electrical loss
+21 | Mining haulage | haul-cycle load and terrain | fleet dispatch optimization | fuel reduction
+22 | Water treatment | salinity, membrane and recovery state | RO process MPC | energy reduction
+23 | Semiconductor fab energy | tool heat and utility timing | fab digital twins | operating cost
+24 | Climate-resilient agriculture | heat stress timing and crop state | crop process models | avoided yield losses
+25 | Aviation | weather, routing and aircraft state | modern flight planning | fuel reduction
+26 | Shipping | hull fouling, weather and wind assist | voyage optimization | fuel reduction
+27 | Steel | furnace temperature and reduction chemistry | DRI and plant integration | energy and carbon
+28 | Cement capture | solvent state and heat integration | capture process models | emissions cost
+29 | Construction reuse | structural grade and logistics | life-cycle and certification | material cost
+30 | Textile recycling | fiber mixture and sorting quality | NIR sorting/recycling | material recovery
+31 | Data-center cooling | chip heat flux and coolant dynamics | facility CFD/MPC | energy and uptime
+32 | Soil carbon | mineral accessibility and wet/dry memory | soil carbon MRV | verification cost
+33 | Chemical reactors | intermediate species and feed pulses | kinetics with spectroscopy | selectivity/yield
 
+3.6 COMPLETED SCOPED LITERATURE SCREEN + THEORY EQUATION CONTRACT — CANDIDATE 006
+Date: 2026-10-09. Scope: targeted published literature review, NOT exhaustive global novelty certification.
 
-01. Industrial motors
-  Proposed missing information: motor-load/pressure/vibration joint state.
-  Comparator: motor-system digital twins.
-  Distinguishing test: measure motor-load/pressure/vibration joint state independently; match baseline observables and compare held-out outcomes under controlled perturbations.
-  Conditional value: energy and maintenance; economic savings not quantified without an affected cost base and measured incremental effect.
-  Status: UNVERIFIED hypothesis; domain-specific equation and test preregistration pending.
+RESEARCH QUESTION: Can the joint spatial temperature-current distribution be compressed
+into a low-cost observable that improves battery ageing prediction relative to modern
+distributed electrothermal-degradation models, rather than relative to a lumped model?
 
-02. Food preservation
-  Proposed missing information: microbial and time-temperature history.
-  Comparator: predictive microbiology.
-  Distinguishing test: measure microbial and time-temperature history independently; match baseline observables and compare held-out outcomes under controlled perturbations.
-  Conditional value: reduced spoilage; economic savings not quantified without an affected cost base and measured incremental effect.
-  Status: UNVERIFIED hypothesis; domain-specific equation and test preregistration pending.
+PRIOR ART FOUND (mechanism already established):
+[1] Effect of thermal gradients on inhomogeneous degradation in lithium-ion batteries,
+Communications Engineering (2024). https://www.nature.com/articles/s44172-023-00124-w
+Distributed electrothermal-degradation model incorporates spatial T, current, resistance
+and degradation; reports strong degradation acceleration from modest thermal gradients.
+[2] Understanding calendar aging degradation in cylindrical lithium-ion cell: A novel
+pseudo-4-dimensional electrochemical-thermal model, Applied Energy 377 (2025), 124640.
+https://doi.org/10.1016/j.apenergy.2024.124640
+Models local current distributions, lithium heterogeneity and interacting ageing pathways.
+[3] Modeling the internal inhomogeneous aging behavior within individual Li-ion cells
+— During cycle aging, Journal of Energy Storage 86 (2024), 111186.
+https://doi.org/10.1016/j.est.2024.111186
+Models and experiments on temperature/potential gradients and spatially heterogeneous ageing.
+[4] Degradation mechanism of lithium-ion battery under appropriate in-plane temperature
+gradient (2025). https://doi.org/10.1016/j.geits.2025.100352
+Examines alignment of temperature and current-density gradients and charging degradation.
 
-03. Industrial heat
-  Proposed missing information: heat grade, location and timing.
-  Comparator: pinch/exergy integration.
-  Distinguishing test: measure heat grade, location and timing independently; match baseline observables and compare held-out outcomes under controlled perturbations.
-  Conditional value: less purchased fuel; economic savings not quantified without an affected cost base and measured incremental effect.
-  Status: UNVERIFIED hypothesis; domain-specific equation and test preregistration pending.
+NOVELTY DISPOSITION: Coupled local T/current ageing and spatial matching are NOT NOVEL.
+A compact covariance-based reduced-order surrogate might still be useful, but its
+novelty and predictive advantage remain UNKNOWN. No claim of priority or patentability.
 
-04. Water networks
-  Proposed missing information: pressure transient and pipe condition.
-  Comparator: hydraulic digital twins.
-  Distinguishing test: measure pressure transient and pipe condition independently; match baseline observables and compare held-out outcomes under controlled perturbations.
-  Conditional value: reduced water loss; economic savings not quantified without an affected cost base and measured incremental effect.
-  Status: UNVERIFIED hypothesis; domain-specific equation and test preregistration pending.
+THEORY EQUATION CONTRACT (illustrative constitutive law, NOT universal SEI physics):
+Let r(x,t)=k exp[-E/(R T(x,t))] (j(x,t)/j_ref)^p.
+T [K]>0; j and j_ref [A/m^2]>0; E [J/mol]; R [J/(mol K)];
+p dimensionless; k [damage-unit/time]. Thus r [damage-unit/time].
+Spatial average D(t)=<r(x,t)>; lumped D0=r(Tbar,jbar).
+Let a=E/R [K]. At small bounded fluctuations about Tbar,jbar:
+D-D0 = 0.5*r_TT Var(T) + r_Tj Cov(T,j)
+      + 0.5*r_jj Var(j) + third-order remainder.
+r_TT=r*(a^2/T^4-2a/T^3) [damage/(time K^2)].
+r_Tj=r*a*p/(T^2*j) [damage/(time K (A/m^2))].
+r_jj=r*p*(p-1)/j^2 [damage/(time (A/m^2)^2)].
+Each product with its variance/covariance has units [damage-unit/time].
+For p>0, a>0, positive Cov(T,j) contributes positively to the SECOND-ORDER
+correction, but the TOTAL correction can have either sign depending on
+Var(T), Var(j), p, the domain and higher-order terms.
+The constant-temperature/current limit recovers the lumped baseline exactly.
+The approximation is not reliable for large gradients or near j=0.
 
-05. Membrane separation
-  Proposed missing information: fouling and polarization state.  Comparator: membrane multiphysics.
-  Distinguishing test: measure fouling and polarization state independently; match baseline observables and compare held-out outcomes under controlled perturbations.
-  Conditional value: lower process energy; economic savings not quantified without an affected cost base and measured incremental effect.
-  Status: UNVERIFIED hypothesis; domain-specific equation and test preregistration pending.
+IDENTIFIABILITY AND FALSIFIERS:
+Measure local T(x,t) and j(x,t) independently; fit k,E,p on training cells.
+Use physically consistent field measurement, positive j, fixed geometry and chemistry.
+Pre-register primary endpoint: held-out capacity-loss prediction error over cycles,
+not simply statistical significance of a fitted covariance coefficient.
+Test whether the low-order covariance surrogate meets a specified accuracy budget
+versus modern distributed models [1]-[4], and a reduced-order model with the same
+parameter count and sensor budget. Include spatially shuffled counterfactuals,
+matched means, distinct covariance, time extrapolation, confidence intervals,
+sensor noise, current reversals and cross-cell replication.
+Reject the reduced model if it fails the held-out accuracy/cost trade-off.
+For scientific novelty, identify an improvement not already taught in [1]-[4]
+or later literature; this has NOT been done.
 
-06. Refrigeration
-  Proposed missing information: compressor cycling, humidity, thermal mass.
-  Comparator: refrigeration MPC.
-  Distinguishing test: measure compressor cycling, humidity, thermal mass independently; match baseline observables and compare held-out outcomes under controlled perturbations.
-  Conditional value: energy and food quality; economic savings not quantified without an affected cost base and measured incremental effect.
-  Status: UNVERIFIED hypothesis; domain-specific equation and test preregistration pending.
+GARDEN GRAPH INSTANCE:
+THING=cell/electrode region; TIME=cycle history; SPACE=electrode coordinates;
+EVENT=damage increments; ACTION=controlled charge waveform;
+AGENCY=experimenter/controller only; RULE=conservation and kinetic contract;
+VALUE=forecast error and cost; CONTEXT=chemistry/geometry/cooling;
+CLAIM=covariance surrogate improves efficiency at fixed accuracy.
+partOf(cell region, cell), dependsOn(local ageing, T and j),
+derivedFrom(correction, Taylor expansion), contextualizes(chemistry, claim),
+supports/contradicts(measurements, claim). Causal attribution requires experiments.
+Seven forms: CONSTRUCT=cell model; CONTRACT=equation above; STATE=T,j,damage;
+RELATION=typed physical dependencies; PROCESS=cycling and degradation;
+RULE=dimensional and limiting constraints; PROJECTION=spatial field to D(t).
 
-07. Methane detection
-  Proposed missing information: intermittent plumes and sensor uncertainty.
-  Comparator: atmospheric inversion.
-  Distinguishing test: measure intermittent plumes and sensor uncertainty independently; match baseline observables and compare held-out outcomes under controlled perturbations.
-  Conditional value: captured methane; economic savings not quantified without an affected cost base and measured incremental effect.
-  Status: UNVERIFIED hypothesis; domain-specific equation and test preregistration pending.
-
-08. Cement kilns
-  Proposed missing information: particle and calcination temperature histories.
-  Comparator: kiln CFD.
-  Distinguishing test: measure particle and calcination temperature histories independently; match baseline observables and compare held-out outcomes under controlled perturbations.
-  Conditional value: fuel and yield; economic savings not quantified without an affected cost base and measured incremental effect.
-  Status: UNVERIFIED hypothesis; domain-specific equation and test preregistration pending.
-
-09. Fertilizer
-  Proposed missing information: soil N transport and microbial memory.
-  Comparator: reactive transport.
-  Distinguishing test: measure soil N transport and microbial memory independently; match baseline observables and compare held-out outcomes under controlled perturbations.
-  Conditional value: yield and less runoff; economic savings not quantified without an affected cost base and measured incremental effect.
-  Status: UNVERIFIED hypothesis; domain-specific equation and test preregistration pending.
-
-10. Grid congestion
-  Proposed missing information: topology, correlated flows, storage.
-  Comparator: stochastic AC optimal power flow.
-  Distinguishing test: measure topology, correlated flows, storage independently; match baseline observables and compare held-out outcomes under controlled perturbations.
-  Conditional value: less curtailment; economic savings not quantified without an affected cost base and measured incremental effect.
-  Status: UNVERIFIED hypothesis; domain-specific equation and test preregistration pending.
-
-11. Mining processing
-  Proposed missing information: ore texture and liberation.
-  Comparator: comminution digital twins.
-  Distinguishing test: measure ore texture and liberation independently; match baseline observables and compare held-out outcomes under controlled perturbations.
-  Conditional value: energy and recovery; economic savings not quantified without an affected cost base and measured incremental effect.
-  Status: UNVERIFIED hypothesis; domain-specific equation and test preregistration pending.
-
-12. Building cooling
-  Proposed missing information: occupancy, humidity, thermal mass.
-  Comparator: building MPC.
-  Distinguishing test: measure occupancy, humidity, thermal mass independently; match baseline observables and compare held-out outcomes under controlled perturbations.
-  Conditional value: cooling efficiency; economic savings not quantified without an affected cost base and measured incremental effect.
-  Status: UNVERIFIED hypothesis; domain-specific equation and test preregistration pending.
-
-13. Dynamic line rating
-  Proposed missing information: span wind and conductor thermal memory.
-  Comparator: modern dynamic line rating.
-  Distinguishing test: measure span wind and conductor thermal memory independently; match baseline observables and compare held-out outcomes under controlled perturbations.
-  Conditional value: deferred capacity costs; economic savings not quantified without an affected cost base and measured incremental effect.
-  Status: UNVERIFIED hypothesis; domain-specific equation and test preregistration pending.
-
-14. Bioreactor yield
-  Proposed missing information: oxygen/shear microdomains, metabolism.
-  Comparator: bioreactor CFD and process analytical tech.
-  Distinguishing test: measure oxygen/shear microdomains, metabolism independently; match baseline observables and compare held-out outcomes under controlled perturbations.
-  Conditional value: fewer batch failures; economic savings not quantified without an affected cost base and measured incremental effect.
-  Status: UNVERIFIED hypothesis; domain-specific equation and test preregistration pending.
-
-15. Metal additive manufacturing
-  Proposed missing information: melt pool and microstructure history.
-  Comparator: LPBF thermo-mechanical models.
-  Distinguishing test: measure melt pool and microstructure history independently; match baseline observables and compare held-out outcomes under controlled perturbations.
-  Conditional value: fewer rejected parts; economic savings not quantified without an affected cost base and measured incremental effect.
-  Status: UNVERIFIED hypothesis; domain-specific equation and test preregistration pending.
-
-16. Direct air capture
-  Proposed missing information: water/CO2 sorption hysteresis.
-  Comparator: competitive adsorption kinetics.
-  Distinguishing test: measure water/CO2 sorption hysteresis independently; match baseline observables and compare held-out outcomes under controlled perturbations.
-  Conditional value: lower regeneration energy; economic savings not quantified without an affected cost base and measured incremental effect.
-  Status: UNVERIFIED hypothesis; domain-specific equation and test preregistration pending.
-
-17. Corrosion
-  Proposed missing information: coating defects and electrochemical history.
-  Comparator: corrosion risk modelling.
-  Distinguishing test: measure coating defects and electrochemical history independently; match baseline observables and compare held-out outcomes under controlled perturbations.
-  Conditional value: avoided failures; economic savings not quantified without an affected cost base and measured incremental effect.
-  Status: UNVERIFIED hypothesis; domain-specific equation and test preregistration pending.
-
-18. Diagnostic errors
-  Proposed missing information: longitudinal clinical evidence and workflow.
-  Comparator: validated diagnostic decision support.
-  Distinguishing test: measure longitudinal clinical evidence and workflow independently; match baseline observables and compare held-out outcomes under controlled perturbations.
-  Conditional value: avoided harm; economic savings not quantified without an affected cost base and measured incremental effect.
-  Status: UNVERIFIED hypothesis; domain-specific equation and test preregistration pending.
-
-19. Drug discovery
-  Proposed missing information: assay uncertainty and synthesis constraints.
-  Comparator: modern active learning.
-  Distinguishing test: measure assay uncertainty and synthesis constraints independently; match baseline observables and compare held-out outcomes under controlled perturbations.
-  Conditional value: R&D productivity; economic savings not quantified without an affected cost base and measured incremental effect.
-  Status: UNVERIFIED hypothesis; domain-specific equation and test preregistration pending.
-
-20. Grid losses
-  Proposed missing information: reactive flow and topology.
-  Comparator: AC flow/HVDC optimization.
-  Distinguishing test: measure reactive flow and topology independently; match baseline observables and compare held-out outcomes under controlled perturbations.
-  Conditional value: less electrical loss; economic savings not quantified without an affected cost base and measured incremental effect.
-  Status: UNVERIFIED hypothesis; domain-specific equation and test preregistration pending.
-
-21. Mining haulage
-  Proposed missing information: haul-cycle load and terrain.
-  Comparator: fleet dispatch optimization.
-  Distinguishing test: measure haul-cycle load and terrain independently; match baseline observables and compare held-out outcomes under controlled perturbations.
-  Conditional value: fuel reduction; economic savings not quantified without an affected cost base and measured incremental effect.
-  Status: UNVERIFIED hypothesis; domain-specific equation and test preregistration pending.
-
-22. Water treatment
-  Proposed missing information: salinity, membrane and recovery state.
-  Comparator: RO process MPC.
-  Distinguishing test: measure salinity, membrane and recovery state independently; match baseline observables and compare held-out outcomes under controlled perturbations.
-  Conditional value: energy reduction; economic savings not quantified without an affected cost base and measured incremental effect.
-  Status: UNVERIFIED hypothesis; domain-specific equation and test preregistration pending.
-
-23. Semiconductor fab energy
-  Proposed missing information: tool heat and utility timing.
-  Comparator: fab digital twins.
-  Distinguishing test: measure tool heat and utility timing independently; match baseline observables and compare held-out outcomes under controlled perturbations.
-  Conditional value: operating cost; economic savings not quantified without an affected cost base and measured incremental effect.
-  Status: UNVERIFIED hypothesis; domain-specific equation and test preregistration pending.
-
-24. Climate-resilient agriculture
-  Proposed missing information: heat stress timing and crop state.
-  Comparator: crop process models.
-  Distinguishing test: measure heat stress timing and crop state independently; match baseline observables and compare held-out outcomes under controlled perturbations.
-  Conditional value: avoided yield losses; economic savings not quantified without an affected cost base and measured incremental effect.
-  Status: UNVERIFIED hypothesis; domain-specific equation and test preregistration pending.
-
-25. Aviation
-  Proposed missing information: weather, routing and aircraft state.
-  Comparator: modern flight planning.
-  Distinguishing test: measure weather, routing and aircraft state independently; match baseline observables and compare held-out outcomes under controlled perturbations.
-  Conditional value: fuel reduction; economic savings not quantified without an affected cost base and measured incremental effect.
-  Status: UNVERIFIED hypothesis; domain-specific equation and test preregistration pending.
-
-26. Shipping
-  Proposed missing information: hull fouling, weather and wind assist.
-  Comparator: voyage optimization.
-  Distinguishing test: measure hull fouling, weather and wind assist independently; match baseline observables and compare held-out outcomes under controlled perturbations.
-  Conditional value: fuel reduction; economic savings not quantified without an affected cost base and measured incremental effect.
-  Status: UNVERIFIED hypothesis; domain-specific equation and test preregistration pending.
-
-27. Steel
-  Proposed missing information: furnace temperature and reduction chemistry.
-  Comparator: DRI and plant integration.
-  Distinguishing test: measure furnace temperature and reduction chemistry independently; match baseline observables and compare held-out outcomes under controlled perturbations.
-  Conditional value: energy and carbon; economic savings not quantified without an affected cost base and measured incremental effect.
-  Status: UNVERIFIED hypothesis; domain-specific equation and test preregistration pending.
-
-28. Cement capture
-  Proposed missing information: solvent state and heat integration.
-  Comparator: capture process models.
-  Distinguishing test: measure solvent state and heat integration independently; match baseline observables and compare held-out outcomes under controlled perturbations.
-  Conditional value: emissions cost; economic savings not quantified without an affected cost base and measured incremental effect.
-  Status: UNVERIFIED hypothesis; domain-specific equation and test preregistration pending.
-
-29. Construction reuse
-  Proposed missing information: structural grade and logistics.
-  Comparator: life-cycle and certification.
-  Distinguishing test: measure structural grade and logistics independently; match baseline observables and compare held-out outcomes under controlled perturbations.
-  Conditional value: material cost; economic savings not quantified without an affected cost base and measured incremental effect.
-  Status: UNVERIFIED hypothesis; domain-specific equation and test preregistration pending.
-
-30. Textile recycling
-  Proposed missing information: fiber mixture and sorting quality.
-  Comparator: NIR sorting/recycling.
-  Distinguishing test: measure fiber mixture and sorting quality independently; match baseline observables and compare held-out outcomes under controlled perturbations.
-  Conditional value: material recovery; economic savings not quantified without an affected cost base and measured incremental effect.
-  Status: UNVERIFIED hypothesis; domain-specific equation and test preregistration pending.
-
-31. Data-center cooling
-  Proposed missing information: chip heat flux and coolant dynamics.
-  Comparator: facility CFD/MPC.
-  Distinguishing test: measure chip heat flux and coolant dynamics independently; match baseline observables and compare held-out outcomes under controlled perturbations.
-  Conditional value: energy and uptime; economic savings not quantified without an affected cost base and measured incremental effect.
-  Status: UNVERIFIED hypothesis; domain-specific equation and test preregistration pending.
-
-32. Soil carbon
-  Proposed missing information: mineral accessibility and wet/dry memory.
-  Comparator: soil carbon MRV.
-  Distinguishing test: measure mineral accessibility and wet/dry memory independently; match baseline observables and compare held-out outcomes under controlled perturbations.
-  Conditional value: verification cost; economic savings not quantified without an affected cost base and measured incremental effect.
-  Status: UNVERIFIED hypothesis; domain-specific equation and test preregistration pending.
-
-33. Chemical reactors
-  Proposed missing information: intermediate species and feed pulses.
-  Comparator: kinetics with spectroscopy.
-  Distinguishing test: measure intermediate species and feed pulses independently; match baseline observables and compare held-out outcomes under controlled perturbations.
-  Conditional value: selectivity/yield; economic savings not quantified without an affected cost base and measured incremental effect.
-  Status: UNVERIFIED hypothesis; domain-specific equation and test preregistration pending.
-
+STATUS: DIMENSIONAL ANALYSIS PASS for illustrative law; ANALYTICAL TAYLOR RESULT
+PASS under smoothness/small-fluctuation assumptions; REAL BATTERY EQUATION
+IDENTIFICATION UNKNOWN; FULL LITERATURE NOVELTY UNKNOWN; EMPIRICAL TEST NOT RUN;
+BENEFIT NOT QUANTIFIED; SCIENTIFIC DISCOVERY NOT ESTABLISHED.
 
 4. CANDIDATE 026 — SYNTHETIC EVIDENCE AND LIMITATIONS
 
@@ -1410,8 +1296,8 @@ they do not demonstrate blind Garden discovery or real-world benefit.
 
 5. PENDING DEFECTS
 - 90 research stubs lack worked derivations; most of the 10 worked examples are known.
-- Novelty reviews 0/100; empirical validations 0/100; independent discoveries 0.
-- No complete dimensional contracts or strong-domain benchmark for the 100.
+- Scoped prior-art reviews 1/100 (Candidate 006, basic mechanism already published); exhaustive novelty certifications 0/100; empirical validations 0/100; independent discoveries 0.
+- One illustrative dimensional contract (Candidate 006) and Candidate 026 thermal contract; remaining domain contracts and strong-domain benchmarks incomplete.
 - Shared economic opportunities overlap and are not additive.
 - TREE_CORE deterministic build integrity, schema consistency and retention are OPEN.
 - A genuinely blind mechanism-discovery benchmark remains unexecuted.
@@ -3776,3 +3662,13 @@ if __name__=='__main__':
   }
 }
 --- END EMBEDDED garden_candidate026_strong_results_high_noise.json ---
+7. INTEGRITY AND DOCUMENT VALIDATION
+- This document is a single UTF-8 text file. Historical filenames in Section 6
+  label embedded source and data, not separate repository dependencies.
+- The 33 industry entries are explicitly STUBS; one shared testing method appears
+  above the table, not repeated 33 times.
+- Candidate 006 has a scoped prior-art review and illustrative dimensional contract.
+- JSON result blocks remain embedded verbatim; validate them by extracting between
+  BEGIN EMBEDDED / END EMBEDDED markers and running a JSON parser.
+- Embedded code/results are preserved as historical experimental evidence; no new
+  physical simulation was executed for Candidate 006.
