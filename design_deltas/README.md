@@ -14,6 +14,8 @@ These are **versioned, noncanonical candidate and recovery materials**, not full
 | [v15.10](v15.10/) | Generative design, tree architecture, retention and technical candidates | [Guide](v15.10/README.md) |
 | [v15.11](v15.11/) | Independently qualified candidate directions and source packages | [Retention ledger](v15.11/CANDIDATE_RETENTION_LEDGER.md) |
 
+**New v15.11 candidate:** [DSC-001 Rev 2 — deterministic semantic compilation and auditable coverage](v15.11/dsc/README.md). No runtime or admission claim.
+
 **Reading order:** predecessor release → version delta → source-defined contracts → cross-version [ownership map](CROSS_VERSION_OWNERSHIP_MAP.md) → [recovery ledger](V15_8_TO_15_9_1_RECOVERY_LEDGER.md) → tests/admission receipts. A later folder does not imply supersession or promotion.
 
 **Status discipline:** CURRENT applies only within the source's own qualified scope; CANDIDATE/DEFERRED/RESEARCH/UNKNOWN remain distinct. Specification ≠ proof ≠ implementation ≠ empirical validation ≠ certification. Do not infer full semantic preservation from navigation files or generated source extracts. Historical [September 14 pending snapshot](PENDING_PROJECT_WIDE_CANDIDATES_2026-09-14.md) is not the active ledger.
