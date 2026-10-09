@@ -3898,3 +3898,8 @@ industrial_physical_screens.py replays the two known/overlapping physical leads 
 industrial_transition_audit.py SHA256 043b59a55b249cc55f41e43db52f71096bcd766664d888c6472cbfad2f682d54
 industrial_physical_screens.py SHA256 468f49091be1953db61e5373fdc0b9eb6ecf0bc8c9df4036b2f9ac7335689ea4
 Existing bounded-adapter regression suite:18tests passed. Whitespace/diff check passed. Same-system independent reviewer read the full appended claims and found no blocking scope/novelty/economic overclaim. No external scientific approval or paid review was obtained.
+
+
+4.12 TEN FURTHER INDUSTRIAL INVESTIGATIONS — WORKSTREAM INTENT
+NONCANONICAL RESEARCH; IN_PROGRESS, 9 October 2026.
+Bounded package: ten distinct physically mapped candidates, primary-paper/patent checks, scoped quantitative predictions and conditional per-facility economics. Expected paths: this consolidated report and industrial_ten_cases.py. Canonical sources and external plants/software unchanged. Hypothesis, mathematical/model support, prior art, novelty and measured savings remain separate; no ten-discovery promise. Four mapping roles, adversarial novelty review and economic review are in progress. Base b9da78346f0ee38de5cdc154e522469066522e07; branch chatgpt/ten-industrial-gaps-20261009. This intent-only bootstrap precedes substantial repository edits; it will be replaced by the complete evidence record within this section.
