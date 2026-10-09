@@ -1959,3 +1959,1029 @@ if __name__=='__main__':
 - Economic scenario values are conditional and overlap; never sum gross losses.
 - Before future scientific promotion, execute an independently blinded test
   with prior-art screening and measured Delta_net.
+
+Electricity continuation executed: see section 4.9 for the situation graph, invariants, transition audit, ranked gaps, quantitative tests and limits. No novel science or measured incremental Garden economic value is established.
+
+4.9 ELECTRICITY LIFECYCLE — EXECUTED SITUATION-TO-INVARIANT INVESTIGATION
+9 October 2026 | Research implementation SIC-0.1 | NONCANONICAL
+
+RESULT AND SCIENTIFIC STATUS
+A working bounded research harness now maps the electricity lifecycle, binds applicable sourced rules, audits interfaces and connected pairs, generates exact projection-loss witnesses, challenges a claimed full-data prerequisite, repairs finite linear interfaces and tests decision sufficiency. It is an implementation of a declared research subset of the actual Garden source mechanics, not the full GSL/SAL compiler or an independently admitted TREE_CORE implementation.
+The curated map contains 77 leaf situations under 14 lifecycle stages and 20 justified physical process groups. There are 123 typed transitions, 31 scoped law/constraint families, 195 local law bindings, 141 explicitly directional state ports and 90 connected incoming-edge pairs. All 123 declared transfers bind by name/direction/unit after repair. Quantitative physical closure is not thereby established. Consumer-wide inspection still exposes 90 unbound input slots across 57 situations. They may be exogenous boundary inputs, local state, or genuinely unspecified interfaces; they are not 90 new scientific discoveries.
+Two numerical experiment families were executed, with a further constitutive-law falsification cycle and source-aggregation counterexample. The known harmonic-loss repair exactly matches established full-spectrum calculation. The interval revalidation candidate also ties conventional kernel-aware linear programming. New physical discoveries established: 0. Empirical experiments: 0. Measured Garden-specific economic gain: UNKNOWN. Blinded Garden-versus-TRIZ/scientific-modelling advantage: NOT TESTED. Electricity is not declared exhausted or saturated.
+
+4.9.1 SOURCE-GROUNDED MECHANICS AND IMPLEMENTATION BOUNDARY
+Repository source base: 45d9093f45b968a05a38a5fc0d68ba14b90f6d0c. Original research-register SHA256 before this appended cycle: 6f38e666c35e322aff3fdf3229a0e36479475eba24f7a382a5cd735637919863. Existing sections, all 100 PARKED candidates, A1-A5 and negative findings are retained.
+Authoritative status: canonical/current remains Garden v15.5 / GSL v45.1; v15.10 and its GCSC/TREE_CORE documents are working candidates. Actual sources were read: abstraction delta, technical full delta, GCSC, TREE_CORE, GSK, IDTD, RSDC, v15.9.1 GCSC contracts and the scientific register. Source identities below bind exact file bytes and half-open byte ranges.
+Pipeline: reality-first curated situations -> typed object/relation/profile checks -> source-law obligation instantiation -> consumer/transition and multi-input audit -> bounded provenance/dependency closure -> quantitative projection witness -> prior-art comparison -> falsification -> model-scoped decision and cost evaluation. Retain UNKNOWNs and unresolved frontiers at each stage. Leaf expansion is justified by different physical interactions, dynamic states, safety limits or economic consequences; no target node count defines success.
+GSL vocabulary remains ten Objects, 24 Relations, seven Forms and ten facets. Physics nodes use THING/EVENT/TIME/SPACE/CONTEXT/RULE; nothing assigns agency or ownership to matter. Candidate statements and economic objectives are outputs. This harness does not implement the full dependent-type judgement, canonical grammar, complete effect families, finite SAL registries, all algebras, live authorization or source-retention proof. A successful Python run cannot claim those missing mechanisms.
+SAL-style results preserve structural, completeness, join, coherence and interpretation axes. Missing bindings remain UNRESOLVED/CONTEXT_REQUIRED. Facet UNKNOWN is retained. Signature matching never establishes truth. Candidate laws do not self-promote to empirical facts. Finite recursion unions origin-qualified dependency obligations without asserting every upstream law directly governs every downstream object.
+Observed source discrepancies remain visible: v15.9.1 retains RAW L0 denominators while GCSC v0.1 also defines a valid-class denominator; TREE_CORE distinguishes finite r6 S0/S1/S2 from conceptual fixed-point prose; technical Guard->Select wording differs from selected-action final Guard in TREE_CORE. The research profile reports raw and plausible counts separately and performs no physical actuation. It neither resolves those source conflicts nor silently substitutes an approximate claim of full compliance.
+
+4.9.2 COVERAGE REPORT AND ACTUAL SITUATION GRAPH
+Counts are enumerated within the declared seed, not percentages of reality. A situation is not COVERED scientifically just because it has labels, laws, facets or an edge. Source accessibility, parameter identification, joint-domain qualification, external observations and physical tests remain separate.
+stages: 14
+situations: 77
+transitions: 123
+laws: 31
+instantiated_obligations: 195
+process_groups: 20; explicit_state_ports: 141
+structurally_bound_declared_transitions: 123
+consumer_unbound_input_slots: 90
+consumers_with_unbound_inputs: 57
+multi_input_nodes: 27
+connected_incoming_pair_motifs: 90; joint physical verification: UNKNOWN
+scoped_literature_screened_gap_families: 6; broad_known_physical_families: 5; remaining narrow engineering novelty: UNKNOWN
+L0 raw signature skeletons: 2400; SIGNATURE_PLAUSIBLE: 659; INVALID_TYPE: 1741. Full semantic SAL qualification: UNKNOWN. These are not the historic 346 admitted signatures or 12,249 motifs, and no equivalence to that historical run is claimed.
+Dependency closure fixed point: 23 rounds for the supplied graph. The resulting transitive provenance memberships are NOT additional distinct physical invariants. Full physical fixed point/completeness: UNKNOWN.
+Seed digest: 56b1ca3ad489b6894f065e918109135f86e37dc6ae190cc4b5fb6d550a6415b9
+Unexpanded frontier: nuclear criticality, fuel preparation and radioactive waste; HVDC converters/cables and grid-forming control; marine/tidal generation and hydrogen storage; multi-species chemistry and pollutant dispersion; asset-specific geometry, protection and operating standards; uncertainty-calibrated economic dispatch and field measurements
+
+DECOMPOSITION (root -> stage -> process group -> physical leaf)
+P-FUEL | parent S01 | Fuel acquisition boundary | reason: Separate material quality and metered chemical energy; moisture changes conversion decisions.
+P-NATURAL | parent S01 | Renewable and geothermal resource boundaries | reason: Distinct resource fluxes, time scales and extraction consequences require separate ports.
+P-THERMAL-CYCLE | parent S02 | Thermal working-fluid cycle | reason: Heat transfer, expansion and condensation carry different thermodynamic state.
+P-FLUID-ROTOR | parent S02 | Natural-flow mechanical conversion | reason: Hydraulic and aerodynamic conversion have distinct validity and uncertainty.
+P-GENERATOR | parent S03 | Rotating generator conversion | reason: Mechanical state, magnetic field and winding heat evolve on different time scales.
+P-PV | parent S03 | Coupled photovoltaic and thermal response | reason: Bidirectional electrical/temperature dependency changes power prediction.
+P-CONDITIONING | parent S04 | Power conversion and interconnection | reason: Switching, filtering, voltage ratio and grid connection preserve different constraints.
+P-TX-THERMOMECHANICAL | parent S05 | Transmission electrothermal and clearance chain | reason: Local heating, weather, installed mechanics and connector conditions can each constrain useful current.
+P-TX-NETWORK | parent S05 | Transmission electrical and operating-envelope chain | reason: Network redistribution, insulation faults and dispatch horizons couple fast and slow state.
+P-SUB-PROTECTION | parent S06 | Measurement through fault interruption | reason: Latency and fault energy cross measurement, decision and physical interruption boundaries.
+P-SUB-TRANSFER | parent S06 | Substation transfer and restoration | reason: Component temperatures and damage survive topology restoration.
+P-DIST | parent S07 | Distribution delivery and reverse flow | reason: Phase imbalance, soil heat, discrete taps and local generation need distinct context.
+P-BATTERY | parent S08 | Battery energy and temperature cycling | reason: Charge, discharge, cooling and allocation share condition-dependent limits.
+P-NONBATTERY-STORAGE | parent S08 | Hydraulic and thermal storage | reason: Stored energy retains head or temperature quality, not only quantity.
+P-ENDUSE | parent S09 | Electrical conversion at final devices | reason: Different service mechanisms and heat ports require distinct science.
+P-SERVICE | parent S10 | Accepted useful service | reason: Service equivalence depends on pressure, temperature, optical or mechanical acceptance conditions.
+P-HEAT-DESTINATION | parent S11 | Residual heat and recovery | reason: Source-sink temperature and temporal coincidence determine recoverability.
+P-AGEING | parent S12 | Condition histories across operation | reason: Different degradation mechanisms have different state, falsifiers and recovery behavior.
+P-MAINTENANCE | parent S13 | Observation through return to service | reason: Diagnosis, isolation, physical repair and requalification have separate evidence obligations.
+P-RECYCLE | parent S14 | End-of-life material recovery | reason: Isolation, composition, recovery yield and functional acceptance preserve different constraints.
+
+LEAF REGISTER: ID | parent | physical situation | scoped law owners
+E01 | P-FUEL | Extract and transport combustible feedstock | MASS,ENERGY
+  Persistent state: fuel_energy_density,fuel_moisture; unresolved: Feedstock moisture and grade variability
+E02 | P-FUEL | Prepare and meter fuel at conversion boundary | MASS,ENERGY
+  Persistent state: fuel_energy_density,fuel_moisture; unresolved: Fuel composition and moisture not interchangeable with mass
+E03 | P-NATURAL | Reservoir inflow and water release | MASS,ENERGY,HYDRO
+  Persistent state: stored_energy,head; unresolved: Reservoir geometry and competing flow requirements
+E04 | P-NATURAL | Atmospheric wind reaches turbine rotor | ENERGY
+  Persistent state: weather_history,wind_direction; unresolved: Wake distribution and turbulence spectrum
+E05 | P-NATURAL | Solar radiation reaches array plane | ENERGY,RAD
+  Persistent state: solar_absorptivity,material_quality; unresolved: Spectral mismatch, soiling and shading pattern
+E06 | P-NATURAL | Withdraw and return geothermal fluid | MASS,ENERGY
+  Persistent state: pressure,temperature; unresolved: Reservoir drawdown and scaling composition
+E07 | P-THERMAL-CYCLE | Convert chemical energy into hot fluid | MASS,ENERGY,ENTROPY
+  Persistent state: temperature,material_composition; unresolved: Reaction completion, excess air and spatial temperature
+E08 | P-THERMAL-CYCLE | Transfer heat to working fluid | ENERGY,HEAT,ENTROPY
+  Persistent state: thermal_conductance,pressure_drop; unresolved: Fouling and cross-stream temperature profiles
+E09 | P-THERMAL-CYCLE | Expand pressurized fluid through turbine | ENERGY,SHAFT,ENTROPY
+  Persistent state: speed,mechanical_stress; unresolved: Moisture erosion and part-load efficiency
+E10 | P-FLUID-ROTOR | Convert hydraulic head into shaft power | HYDRO,ENERGY
+  Persistent state: speed,pressure; unresolved: Cavitation margin and hydraulic transients
+E11 | P-FLUID-ROTOR | Aerodynamic rotor converts wind flux to torque | ENERGY,SHAFT
+  Persistent state: speed,wind_direction,mechanical_stress; unresolved: Wake steering, gust loads and pitch response
+E12 | P-THERMAL-CYCLE | Condense exhaust and recirculate working fluid | MASS,ENERGY,HEAT
+  Persistent state: pressure,temperature; unresolved: Ambient-limited back pressure
+E13 | P-GENERATOR | Generator shaft accelerates under torque mismatch | TORQUE,SHAFT
+  Persistent state: inertia,speed,rotor_angle; unresolved: Multi-mass shaft and converter-coupled inertia
+E14 | P-GENERATOR | Generator magnetic field induces terminal voltage | FARADAY,ENERGY
+  Persistent state: flux,temperature; unresolved: Rotor/stator spatial flux distribution
+E15 | P-GENERATOR | Generator supplies load while winding losses heat insulation | ACPOWER,JOULE,THERMAL
+  Persistent state: temperature,insulation_state; unresolved: Harmonic losses and end-winding hotspots
+E16 | P-PV | PV cell converts photons at electrical operating point | PV,ENERGY
+  Persistent state: cell_temperature,material_quality; unresolved: Partial-shading mismatch and bypass-diode states
+E17 | P-PV | PV laminate heats and cools during irradiance change | THERMAL,RAD,HEAT
+  Persistent state: thermal_capacity,emissivity; unresolved: Backsheet/cell gradients and mounting convection
+E18 | P-CONDITIONING | Inverter switches DC into grid-compatible AC | ENERGY,SWITCH_ENERGY,EFFICIENCY
+  Persistent state: switch_state,temperature; unresolved: Device junction temperature and harmonic spectrum
+E19 | P-CONDITIONING | Filter attenuates inverter switching harmonics | CHARGE,SWITCH_ENERGY,JOULE
+  Persistent state: inductance,capacitance,temperature; unresolved: Damping and grid-impedance variation
+E20 | P-CONDITIONING | Step-up transformer transfers voltage and current | TRANSFORMER,JOULE,ENERGY
+  Persistent state: flux,temperature,insulation_state; unresolved: Core saturation and winding hotspots
+E21 | P-CONDITIONING | Synchronize generating source before interconnection | ENERGY,SWITCH_ENERGY
+  Persistent state: phase,frequency,rotor_angle; unresolved: Measurement latency and angle uncertainty
+E22 | P-CONDITIONING | Maintain reactive support under voltage constraint | ACPOWER,THERMAL_LIMIT
+  Persistent state: power_limit,temperature; unresolved: Converter current allocation during disturbances
+E23 | P-TX-NETWORK | AC branch redistributes current after topology change | KCL,ACPOWER,ENERGY
+  Persistent state: topology,phase; unresolved: Unbalanced/harmonic/transient modes outside AC load-flow
+E24 | P-TX-THERMOMECHANICAL | Distributed conductor resistance produces heat | JOULE,OHM
+  Persistent state: line_temperature,current_history; unresolved: Segment temperatures and joints versus average resistance
+E25 | P-TX-THERMOMECHANICAL | Conductor exchanges heat with weather | THERMAL,HEAT,RAD,THERMAL_LIMIT
+  Persistent state: core_temperature,surface_temperature,thermal_capacity; unresolved: Spatial weather coherence and time-varying boundary conditions
+E26 | P-TX-THERMOMECHANICAL | Thermal expansion and creep alter tension | ENERGY,DEGRADATION
+  Persistent state: temperature_history,creep_strain; unresolved: Installed length, stress history and annealing
+E27 | P-TX-THERMOMECHANICAL | Tension and terrain determine sag clearance | SAG,CLEARANCE
+  Persistent state: creep_strain,topology; unresolved: Terrain survey, ice/wind load and crossing requirement
+E28 | P-TX-THERMOMECHANICAL | Connector contact resistance creates local hotspot | JOULE,THERMAL,THERMAL_LIMIT
+  Persistent state: contact_resistance,damage_state; unresolved: Contact pressure, corrosion and local thermal conductance
+E29 | P-TX-NETWORK | Insulation withstands electric field and pollution | CHARGE,ENERGY,THERMAL_LIMIT
+  Persistent state: insulation_state,temperature; unresolved: Surface wetting, contamination and field enhancement
+E30 | P-TX-NETWORK | Line fault drives electromagnetic transient | CHARGE,SWITCH_ENERGY,ENERGY
+  Persistent state: inductance,capacitance,topology; unresolved: Arc impedance and frequency-dependent network response
+E31 | P-TX-NETWORK | Dispatch evaluates transient thermal headroom | THERMAL,THERMAL_LIMIT,CLEARANCE
+  Persistent state: dispatch_horizon,core_temperature,damage_state; unresolved: Component-specific weakest constraint and cumulative effects
+E32 | P-SUB-PROTECTION | Instrument transformers sense electrical state | TRANSFORMER,ENERGY
+  Persistent state: temperature,phase; unresolved: Fault-time sensor saturation and timing skew
+E33 | P-SUB-PROTECTION | Protection classifies fault and times interruption | THERMAL_LIMIT,SWITCH_ENERGY
+  Persistent state: topology,insulation_state; unresolved: Coordination margins and inverter-limited fault current
+E34 | P-SUB-PROTECTION | Breaker interrupts fault and dissipates arc energy | ENERGY,SWITCH_ENERGY
+  Persistent state: damage_state,temperature; unresolved: Arc duration, contact wear and restrike
+E35 | P-SUB-TRANSFER | Busbar and disconnectors carry redistributed current | KCL,JOULE,THERMAL_LIMIT
+  Persistent state: contact_resistance,temperature; unresolved: Joint hotspots and nonuniform bus cooling
+E36 | P-SUB-TRANSFER | Power transformer heats oil and winding hotspots | TRANSFORMER,JOULE,THERMAL,THERMAL_LIMIT
+  Persistent state: temperature_history,insulation_state; unresolved: Moisture-dependent dielectric/ageing effects
+E37 | P-SUB-TRANSFER | Restore network after fault isolation | KCL,ENERGY,THERMAL_LIMIT
+  Persistent state: temperature_history,damage_state; unresolved: Pre-fault heat and post-fault cumulative stress
+E38 | P-DIST | Feeder supplies unbalanced distributed loads | KCL,JOULE,ENERGY
+  Persistent state: topology,impedance; unresolved: Phase assignment and neutral current
+E39 | P-DIST | Tap changer regulates feeder voltage | TRANSFORMER,SWITCH_ENERGY
+  Persistent state: damage_state,temperature; unresolved: Mechanical wear and controller interactions
+E40 | P-DIST | Underground cable stores heat in soil | JOULE,HEAT,THERMAL_LIMIT
+  Persistent state: soil_thermal_resistivity,thermal_state; unresolved: Moisture migration and neighboring-circuit heat
+E41 | P-DIST | Distributed solar reverses feeder power flow | KCL,ENERGY
+  Persistent state: topology,power_limit; unresolved: Protection directionality and voltage rise
+E42 | P-DIST | Service transformer converts to utilization voltage | TRANSFORMER,JOULE,THERMAL_LIMIT
+  Persistent state: transformer_hotspot,insulation_state; unresolved: Coincident EV/heat-pump loading
+E43 | P-DIST | Meter records delivered electrical energy | ENERGY,CHARGE
+  Persistent state: harmonic_current,phase; unresolved: Missing intervals and non-sinusoidal measurement error
+E44 | P-BATTERY | Battery accepts charge into chemical state | BATTERY_CHARGE,STORAGE,THERMAL
+  Persistent state: charge_capacity,cell_temperature,internal_resistance; unresolved: Cell imbalance and lithium plating boundary
+E45 | P-BATTERY | Battery discharges into converter demand | BATTERY_CHARGE,STORAGE,CAPACITY
+  Persistent state: usable_capacity,internal_resistance,cell_temperature; unresolved: State/temperature-dependent voltage and power limits
+E46 | P-BATTERY | Cooling loop equalizes storage cell temperatures | ENERGY,HEAT,THERMAL_LIMIT
+  Persistent state: thermal_state,thermal_conductance; unresolved: Sensor placement and weakest-cell temperature
+E47 | P-NONBATTERY-STORAGE | Pump water to upper storage reservoir | HYDRO,STORAGE,ENERGY
+  Persistent state: head,efficiency; unresolved: Evaporation, water leakage and hydraulic transients
+E48 | P-NONBATTERY-STORAGE | Charge and discharge thermal store | ENERGY,STORAGE,ENTROPY
+  Persistent state: thermal_state,material_quality; unresolved: Mixing destroys recoverable heat quality
+E49 | P-BATTERY | Allocate storage duty within condition-dependent limits | STORAGE,CAPACITY,THERMAL_LIMIT
+  Persistent state: usable_capacity,damage_state; unresolved: Forecast demand, degradation cost and capacity uncertainty
+E50 | P-ENDUSE | Electric motor produces torque at variable speed | ACPOWER,TORQUE,SHAFT,JOULE
+  Persistent state: speed,temperature,insulation_state; unresolved: Bearing loss and part-load efficiency
+E51 | P-ENDUSE | Pump transfers shaft work into fluid head | HYDRO,PUMP_SYSTEM,ENERGY
+  Persistent state: speed,pressure; unresolved: Cavitation, valve throttling and minimum flow
+E52 | P-ENDUSE | Refrigeration cycle lifts heat to higher temperature | ENERGY,ENTROPY
+  Persistent state: pressure,thermal_state; unresolved: Refrigerant charge, frosting and cycling loss
+E53 | P-ENDUSE | LED driver and emitter deliver optical flux | ENERGY,JOULE,THERMAL
+  Persistent state: temperature,material_quality; unresolved: Junction temperature and spectral ageing
+E54 | P-ENDUSE | Power supply and electronic workload deliver computing service | ENERGY,SWITCH_ENERGY,THERMAL_LIMIT
+  Persistent state: temperature,capacitance; unresolved: Timing errors, utilization and cooling overhead
+E55 | P-ENDUSE | Resistance heater transfers electricity to process heat | JOULE,ENERGY
+  Persistent state: temperature,resistance; unresolved: Surface/process temperature gradient
+E56 | P-SERVICE | Machine applies shaft work to useful task | SHAFT,ENERGY
+  Persistent state: load_demand,mechanical_stress; unresolved: Idle work versus accepted output
+E57 | P-SERVICE | Hydraulic network delivers required flow and pressure | HYDRO,PUMP_SYSTEM,ENERGY
+  Persistent state: flow_demand,pressure; unresolved: Unequal branches and unnecessary throttling
+E58 | P-SERVICE | Building or process maintains temperature service | ENERGY,HEAT
+  Persistent state: thermal_state,temperature; unresolved: Thermal mass and time-of-use constraints
+E59 | P-SERVICE | Optical system illuminates work plane | ENERGY
+  Persistent state: material_quality; unresolved: Optical losses and functional lighting requirement
+E60 | P-HEAT-DESTINATION | Condenser releases low-grade heat to ambient | ENERGY,HEAT,ENTROPY
+  Persistent state: thermal_conductance,coolant_flow; unresolved: Seasonal sink temperature and fouling
+E61 | P-HEAT-DESTINATION | Recover exhaust heat into matched demand stream | ENERGY,HEAT_RECOVERY,ENTROPY
+  Persistent state: thermal_conductance,service_temperature; unresolved: Variable demand, corrosion and heat quality
+E62 | P-HEAT-DESTINATION | Upgrade waste heat with heat-pump work | ENERGY,ENTROPY
+  Persistent state: pressure,temperature; unresolved: COP across temperature lift and part-load
+E63 | P-HEAT-DESTINATION | Disperse residual heat in receiving medium | ENERGY,HEAT
+  Persistent state: ambient_temperature,thermal_state; unresolved: Environmental temperature constraints require local source
+E64 | P-AGEING | Accumulate conductor creep and strength loss | DEGRADATION,SAG
+  Persistent state: temperature_history,damage_state; unresolved: Interaction of prior annealing and future emergency ratings
+E65 | P-AGEING | Age transformer insulation under thermal and moisture exposure | DEGRADATION,THERMAL_LIMIT
+  Persistent state: temperature_history,material_quality; unresolved: Oxygen, moisture transport and hotspot history
+E66 | P-AGEING | Battery cycling changes capacity and resistance | DEGRADATION,STORAGE
+  Persistent state: temperature_history,current_history; unresolved: Spatial nonuniformity and chemistry-dependent mechanisms
+E67 | P-AGEING | Vibration and stress consume rotating-equipment margin | DEGRADATION
+  Persistent state: temperature,inspection_signal; unresolved: Lubrication, corrosion and interacting fatigue modes
+E68 | P-AGEING | Deposits alter heat exchange and electrical leakage | MASS,HEAT,DEGRADATION
+  Persistent state: moisture,material_quality; unresolved: Nonuniform deposits and flow-regime dependence
+E69 | P-MAINTENANCE | Measure equipment health before intervention | THERMAL_LIMIT,DEGRADATION
+  Persistent state: damage_state,material_quality; unresolved: Identifiability: distinct damage states can share signal
+E70 | P-MAINTENANCE | Isolate electrical and stored-energy sources for maintenance | ISOLATION,ENERGY,SWITCH_ENERGY
+  Persistent state: topology,voltage; unresolved: Backfeed, capacitive energy and undocumented topology
+E71 | P-MAINTENANCE | Clean, repair or replace degraded component | MASS,ENERGY,ISOLATION
+  Persistent state: material_quality,damage_state; unresolved: Contact resistance after repair and altered geometry
+E72 | P-MAINTENANCE | Verify condition and re-energize repaired asset | THERMAL_LIMIT,ENERGY
+  Persistent state: insulation_state,topology; unresolved: Commissioning test coverage and residual failure modes
+E73 | P-RECYCLE | Disconnect asset and remove hazardous stored energy | ISOLATION,ENERGY,MASS
+  Persistent state: material_composition,isolation_state; unresolved: Battery residual charge and oil contamination
+E74 | P-RECYCLE | Separate components by composition and condition | MASS,MATERIAL_QUALITY
+  Persistent state: contaminant_fraction,material_quality; unresolved: Misclassification and spatial contamination
+E75 | P-RECYCLE | Recover metals or active material by physical/chemical processing | RECOVERY_MASS,ENERGY,ENTROPY
+  Persistent state: material_composition,contaminant_fraction; unresolved: Recovery quality, energy demand and co-product allocation
+E76 | P-RECYCLE | Qualify recovered material for new equipment | MATERIAL_QUALITY,MASS
+  Persistent state: damage_state,contaminant_fraction; unresolved: Functional lifetime and impurity tolerance need experiments
+E77 | P-CONDITIONING | Battery charger rectifies grid power into controlled DC current | ENERGY,EFFICIENCY,THERMAL_LIMIT
+  Persistent state: temperature,power_limit; unresolved: Charge-voltage control, conversion losses and ripple
+
+4.9.3 INVARIANT / CONSTRAINT REGISTER
+These equations are imported established science or scoped author-formulated models. Laws, reductions, constitutive relationships, empirical models, safety obligations and economic conditions are distinct. The complete input/parameter dimensions are retained in code; the following entries expose equations, domains, assumptions and falsifiers. General equations received scoped manual review; there is no claim that every law has an executable physical oracle or automatic symbolic units proof.
+MASS | EXACT_BALANCE | dm_cv/dt = sum(mdot_in)-sum(mdot_out)
+  Domain: nonrelativistic control volume with reaction species tracked; assumptions: No unmodelled mass ports; chemical changes preserve total mass to engineering precision
+  Dimensions: m:kg;mdot:kg/s;t:s; required variables: mass_flow,material_mass,time
+  Falsifier: Residual exceeds combined measurement/model tolerance after all ports included; sources: PHY-THERMO
+ENERGY | EXACT_BALANCE | dE_cv/dt = Qdot-Wdot+sum(mdot*(h+v^2/2+g*z))_in-out
+  Domain: classical control volume, consistent enthalpy convention; assumptions: All material, electrical, radiative and mechanical ports counted; signed terms
+  Dimensions: E:J;Qdot:W;Wdot:W;h:J/kg;v:m/s;g:m/s^2;z:m; required variables: energy,time
+  Falsifier: Energy residual cannot be explained by uncertainty or omitted storage/ports; sources: PHY-THERMO
+CHARGE | EXACT_BALANCE | dQ_cv/dt = - integral_surface(J dot n dA)
+  Domain: electrical control volume; assumptions: Conduction and charge accumulation distinguished
+  Dimensions: Q:C;J:A/m^2;A:m^2;t:s; required variables: current,time
+  Falsifier: Nonzero continuity residual with sufficient spatial/time resolution; sources: PHY-ELECTRIC
+KCL | CONDITIONAL_REDUCTION | sum(I_branch)=0
+  Domain: lumped electrical node; assumptions: Charge storage at node negligible on selected time scale
+  Dimensions: I:A; required variables: current,topology
+  Falsifier: Unmodelled capacitance makes branch-current sum measurably nonzero; sources: PHY-ELECTRIC
+OHM | CONSTITUTIVE | V=I*R(T); R=R0*(1+alpha*(T-T0))
+  Domain: ohmic conductor in calibrated temperature band; assumptions: Geometry fixed; linear temperature coefficient valid locally; skin effects included in effective R if relevant
+  Dimensions: V:V;I:A;R:ohm;alpha:1/K;T:K; required variables: voltage,current,resistance,temperature
+  Falsifier: Measured V/I or temperature coefficient outside contract tolerance; sources: PHY-ELECTRIC
+JOULE | CONSTITUTIVE | P_loss=I_rms^2*R_ac
+  Domain: passive resistive element; assumptions: R_ac includes waveform/frequency effects; constant R during averaging window
+  Dimensions: P_loss:W;I_rms:A;R_ac:ohm; required variables: current,resistance
+  Falsifier: Energy measurement inconsistent with frequency-aware resistance model; sources: PHY-ELECTRIC
+ACPOWER | CONDITIONAL_REDUCTION | P=3*V_phase_rms*I_phase_rms*cos(phi)
+  Domain: balanced sinusoidal three-phase system; assumptions: No significant harmonics or phase imbalance; phase voltage convention
+  Dimensions: P:W;V_phase_rms:V;I_phase_rms:A;phi:rad; required variables: voltage,current,phase
+  Falsifier: Harmonic or imbalance contributions change real power materially; sources: PHY-ELECTRIC
+FARADAY | EXACT_FIELD_LAW | emf=-d(lambda_B)/dt
+  Domain: stationary circuit path; moving-path emf needs motional term; assumptions: lambda_B is total oriented flux linkage, equal to N*Phi_B for N identical turns
+  Dimensions: emf:V;lambda_B:Wb;t:s; required variables: flux,time
+  Falsifier: Flux/emf mismatch after motional and parasitic terms resolved; sources: PHY-ELECTRIC
+TORQUE | CONDITIONAL_BALANCE | J_rot*domega/dt=tau_drive-tau_load-tau_loss
+  Domain: rigid rotating shaft equivalent; assumptions: Equivalent inertia and shaft coupling applicable; torsional modes omitted
+  Dimensions: J_rot:kg*m^2;omega:1/s;tau:N*m;t:s; required variables: inertia,speed,torque,time
+  Falsifier: Torsional or variable-inertia effects exceed error budget; sources: PHY-ELECTRIC
+SHAFT | KINEMATIC_POWER | P_shaft=tau*omega
+  Domain: rotational power port; assumptions: Consistent signed torque and angular velocity
+  Dimensions: P_shaft:W;tau:N*m;omega:1/s; required variables: torque,speed
+  Falsifier: Input/output mechanical energy fails balanced accounting; sources: PHY-ELECTRIC
+HEAT | CONSTITUTIVE | Qdot_cond=-k*A*dT/dx; Qdot_conv=h*A*(T-Ta)
+  Domain: Fourier conduction and boundary convective closure; assumptions: Local material/flow coefficients calibrated; continuum; no universal h
+  Dimensions: Qdot:W;k:W/(m*K);A:m^2;h:W/(m^2*K);T:K;x:m; required variables: temperature,ambient_temperature,thermal_conductance
+  Falsifier: Independent temperature/flux profile disagrees outside tolerance; sources: PHY-HEAT
+RAD | CONSTITUTIVE | Qdot_rad=epsilon*sigma*A*(T^4-Tsur^4)
+  Domain: gray diffuse exchange with large isothermal surroundings; assumptions: View factor one or explicitly absorbed into model; Kelvin temperatures
+  Dimensions: Qdot:W;epsilon:1;sigma:W/(m^2*K^4);A:m^2;T:K; required variables: temperature,ambient_temperature,emissivity
+  Falsifier: Geometry/spectral effects create material systematic residual; sources: PHY-HEAT
+THERMAL | CONDITIONAL_BALANCE | C*dT/dt=P_in+Q_abs-Q_loss
+  Domain: lumped thermal state; assumptions: Biot/time-scale validity tested; positive C; all sources/sinks counted
+  Dimensions: C:J/K;T:K;t:s;P_in:W;Q_abs:W;Q_loss:W; required variables: temperature,thermal_capacity,heat_power,cooling_power,time
+  Falsifier: Persistent internal gradients defeat single-temperature closure; sources: PHY-HEAT,PHY-LINE
+ENTROPY | SECOND_LAW_CONSTRAINT | dS_cv/dt=sum(Qdot_j/T_j)+Sdot_mass+Sdot_gen; Sdot_gen>=0
+  Domain: thermodynamic control volume; assumptions: Reservoir temperatures positive; entropy ports and composition known
+  Dimensions: S:J/K;Qdot:W;T:K;Sdot:W/K; required variables: temperature,heat_power
+  Falsifier: Inferred negative production beyond uncertainty indicates model/data error; sources: PHY-THERMO
+HYDRO | CONDITIONAL_POWER | P_hydraulic=rho*g*Qvol*H
+  Domain: incompressible pump/turbine useful hydraulic head; assumptions: Head definition includes consistent boundary velocities and pressures
+  Dimensions: rho:kg/m^3;g:m/s^2;Qvol:m^3/s;H:m;P:W; required variables: water_flow,head
+  Falsifier: Measured energy balance exceeds applicable efficiency/loss model; sources: PHY-PUMP,PHY-THERMO
+PV | EMPIRICAL_MODEL | P_dc approx P_ref*(G/G_ref)*(1+gamma*(Tcell-Tref))
+  Domain: PV array near calibrated irradiance and temperature envelope; assumptions: No clipping, mismatch or low-light extrapolation; DC operating point near MPP
+  Dimensions: P:W;G:W/m^2;gamma:1/K;T:K; required variables: irradiance,cell_temperature
+  Falsifier: Independent irradiance/temperature/IV data exceeds prediction interval; sources: PHY-PV
+EFFICIENCY | ENGINEERING_ACCOUNTING | P_out=eta*P_in; 0<=eta<=1
+  Domain: single useful-energy output passive converter; assumptions: Steady or storage-corrected averaging interval; other energy inputs excluded only when demonstrably absent; heat-pump COP distinct
+  Dimensions: P:W;eta:1; required variables: efficiency
+  Falsifier: Measured greater-than-one eta signals additional input or boundary error; sources: PHY-THERMO
+TRANSFORMER | CONDITIONAL_REDUCTION | V2/V1=N2/N1; P1=P2+P_copper+P_core+dE_field/dt
+  Domain: transformer in calibrated operating envelope; assumptions: Ideal ratio is approximation; flux saturation and leakage qualified separately
+  Dimensions: V:V;N:1;P:W;E_field:J;t:s; required variables: voltage,current,flux
+  Falsifier: Harmonics/saturation/leakage materially violate ideal relation; sources: PHY-ELECTRIC
+SAG | CONDITIONAL_MECHANICS | sag approx w*L_span^2/(8*H_tension)
+  Domain: level-span parabolic conductor approximation; assumptions: Uniform load; small sag/span; tension depends on temperature, creep and installed length
+  Dimensions: sag:m;w:N/m;L_span:m;H_tension:N; required variables: span_length,tension
+  Falsifier: Catenary or unequal supports materially change clearance result; sources: PHY-LINE-SAG
+CLEARANCE | ENGINEERING_CONSTRAINT | min_x(clearance(x,t))>=clearance_required
+  Domain: overhead line profile with terrain and crossing context; assumptions: Required value from applicable asset/jurisdiction owner; value UNKNOWN here
+  Dimensions: clearance:m;t:s; required variables: clearance
+  Falsifier: Survey/model predicts or measures clearance below sourced requirement; sources: PHY-LINE-SAG
+THERMAL_LIMIT | ENGINEERING_CONSTRAINT | max_x(T(x,t))<=T_limit(component,condition,duration)
+  Domain: asset operating envelope; assumptions: Limit requires manufacturer/material/inspection basis; not inferred from average T
+  Dimensions: T:K;t:s; required variables: temperature,time
+  Falsifier: Hotspot exceeds limit or limit lacks applicable support; sources: PHY-LINE
+SWITCH_ENERGY | CONDITIONAL_BALANCE | E_L=0.5*L*I^2; E_C=0.5*C_e*V^2
+  Domain: linear inductance/capacitance during switching; assumptions: Magnetic saturation and nonlinear capacitance absent or represented
+  Dimensions: E:J;L:H;I:A;C_e:F;V:V; required variables: inductance,current,capacitance,voltage
+  Falsifier: Transient energy/voltage cannot be accounted for within model; sources: PHY-ELECTRIC
+STORAGE | ENGINEERING_ACCOUNTING | dE_store/dt=eta_c*P_charge-P_discharge/eta_d-P_self
+  Domain: bounded storage system; assumptions: Efficiencies and self-discharge calibrated; energy definition fixed
+  Dimensions: E_store:J;P:W;eta:1;t:s; required variables: stored_energy,efficiency,time
+  Falsifier: Metered energy closure error beyond measurement tolerance; sources: PHY-ELECTRIC,PHY-THERMO
+BATTERY_CHARGE | CONDITIONAL_BALANCE | dSOC/dt=eta_coul*I/Q_cap
+  Domain: coulomb-counting battery state estimator; assumptions: Current sign defined charging positive; usable capacity age/temperature dependent
+  Dimensions: SOC:1;I:A;Q_cap:C;t:s; required variables: state_of_charge,charge_capacity,current,time
+  Falsifier: Reference capacity measurement or side reactions invalidate estimator; sources: PHY-ELECTRIC
+CAPACITY | ENGINEERING_CONSTRAINT | 0<=E_store<=E_usable(condition); abs(P)<=P_limit(condition)
+  Domain: qualified storage operating domain; assumptions: Age, temperature and SOC bounds from applicable data; no universal numeric limits
+  Dimensions: E_store:J;P:W; required variables: stored_energy,usable_capacity,power_limit
+  Falsifier: Observed/predicted state violates asset-qualified bound; sources: PHY-ELECTRIC
+PUMP_SYSTEM | CONSTITUTIVE_SYSTEM_MODEL | H_pump(Qvol,N)=H_static+K*Qvol^2
+  Domain: steady pump and piping intersection; assumptions: Single-phase; calibrated resistance; static head retained; NPSH checked separately
+  Dimensions: H:m;Qvol:m^3/s;N:1/s;K:s^2/m^5; required variables: water_flow,head,speed
+  Falsifier: Measured operating point not explained by curves or cavitation occurs; sources: PHY-PUMP
+HEAT_RECOVERY | ENGINEERING_ACCOUNTING | Qdot_recovered<=Qdot_available; DeltaT_approach>0
+  Domain: passive heat exchanger without heat-pump work; assumptions: Source/sink time, temperature, flow and fouling qualified
+  Dimensions: Qdot:W;DeltaT:K; required variables: heat_power,temperature,service_temperature
+  Falsifier: Claimed duty exceeds energy balance or violates temperature pinch; sources: PHY-HEAT,PHY-THERMO
+DEGRADATION | EMPIRICAL_MODEL | D(t)=integral(rate(T,stress,chemistry,history),dt)
+  Domain: damage state only within calibrated mechanism; assumptions: Rate and accumulation rule must be externally identified; no universal Miner/Arrhenius validity
+  Dimensions: D:1;rate:1/s;t:s; required variables: damage_state,time,temperature_history
+  Falsifier: Held-out degradation or recovery invalidates rate/accumulation model; sources: PHY-LINE-AGE
+ISOLATION | SAFETY_REQUIREMENT | E_residual<=E_safe(context) and isolation_verified
+  Domain: maintenance/decommissioning effect boundary; assumptions: Actual switching authority and lockout procedure outside research simulator; threshold UNKNOWN
+  Dimensions: E_residual:J;E_safe:J; required variables: residual_energy,isolation_state
+  Falsifier: Residual live source or stored energy defeats safe-state claim; sources: PHY-ELECTRIC
+RECOVERY_MASS | ENGINEERING_ACCOUNTING | m_feed=m_products+m_rejects+m_emissions+Delta_m_process
+  Domain: recycling batch with moisture and reagents tracked; assumptions: All material additions counted; composition balance separately required
+  Dimensions: m:kg; required variables: material_mass,recovered_mass,reject_mass
+  Falsifier: Weighed/assayed mass balance fails beyond uncertainty; sources: PHY-THERMO
+MATERIAL_QUALITY | ENGINEERING_CONSTRAINT | composition_product in customer_spec and measured_properties in acceptance_set
+  Domain: recycled material reuse; assumptions: No universal purity requirement assumed; specification and test values UNKNOWN
+  Dimensions: composition:1;property:typed_per_property; required variables: material_composition,material_quality
+  Falsifier: Product fails declared functional acceptance tests; sources: PHY-THERMO
+All numeric manufacturer limits, measurement uncertainties, protection settings, degradation parameters and applicability to a particular asset remain UNKNOWN unless supplied separately. In an open control volume, conservation requires flux and storage accounting; subsystem energy is not assumed constant.
+
+4.9.4 TRANSITION AND COMPOSITION AUDIT
+Initial interface validation exposed 170 unbound-name diagnostics, largely from conflating state observations with physical flow ports. Physical review introduced explicit state-port ownership and corrected actual routing mistakes: added AC/DC charging conversion; separated metering information from charge power; removed fictitious inverter DC-output supply; separated breaker state from ordinary bus current; routed recovered materials to repair/manufacturing. This is a repaired modelling audit, not blind scientific discovery. No deliberately missing transfer was planted in the primary graph.
+Each listed transition now has a declared matching type/direction/unit. Numeric equalities, identity of physical assets, common timestamps, transformation ratios and conservation remain obligations. Feedback and lifecycle edges do not imply instantaneous chronology.
+T001 | E01 -> E02 | physical_flow | mass_flow,fuel_moisture | STRUCTURALLY_BOUND; physical UNKNOWN
+T002 | E02 -> E07 | physical_flow | chemical_power,mass_flow | STRUCTURALLY_BOUND; physical UNKNOWN
+T003 | E03 -> E10 | physical_flow | water_flow,head | STRUCTURALLY_BOUND; physical UNKNOWN
+T004 | E04 -> E11 | physical_flow | wind_speed,air_density,weather_history | STRUCTURALLY_BOUND; physical UNKNOWN
+T005 | E05 -> E16 | physical_flow | irradiance | STRUCTURALLY_BOUND; physical UNKNOWN
+T006 | E05 -> E17 | physical_flow | irradiance | STRUCTURALLY_BOUND; physical UNKNOWN
+T007 | E06 -> E08 | physical_flow | mass_flow,enthalpy,temperature | STRUCTURALLY_BOUND; physical UNKNOWN
+T008 | E07 -> E08 | physical_flow | heat_power,mass_flow | STRUCTURALLY_BOUND; physical UNKNOWN
+T009 | E08 -> E09 | physical_flow | enthalpy,pressure,mass_flow | STRUCTURALLY_BOUND; physical UNKNOWN
+T010 | E09 -> E12 | physical_flow | enthalpy,mass_flow | STRUCTURALLY_BOUND; physical UNKNOWN
+T011 | E12 -> E08 | feedback | mass_flow,temperature,pressure | STRUCTURALLY_BOUND; physical UNKNOWN
+T012 | E09 -> E13 | physical_flow | shaft_power,speed | STRUCTURALLY_BOUND; physical UNKNOWN
+T013 | E10 -> E13 | physical_flow | shaft_power,speed | STRUCTURALLY_BOUND; physical UNKNOWN
+T014 | E11 -> E13 | physical_flow | shaft_power,torque,speed | STRUCTURALLY_BOUND; physical UNKNOWN
+T015 | E13 -> E14 | physical_flow | speed,rotor_angle | STRUCTURALLY_BOUND; physical UNKNOWN
+T016 | E14 -> E15 | physical_flow | voltage,frequency,flux | STRUCTURALLY_BOUND; physical UNKNOWN
+T017 | E15 -> E20 | physical_flow | ac_power,current,voltage | STRUCTURALLY_BOUND; physical UNKNOWN
+T018 | E16 -> E17 | physical_flow | dc_power | STRUCTURALLY_BOUND; physical UNKNOWN
+T019 | E17 -> E16 | feedback | cell_temperature | STRUCTURALLY_BOUND; physical UNKNOWN
+T020 | E16 -> E18 | physical_flow | dc_power,voltage,current | STRUCTURALLY_BOUND; physical UNKNOWN
+T021 | E18 -> E19 | physical_flow | harmonic_current,voltage | STRUCTURALLY_BOUND; physical UNKNOWN
+T022 | E19 -> E20 | physical_flow | current,voltage | STRUCTURALLY_BOUND; physical UNKNOWN
+T023 | E18 -> E22 | information | temperature,power_limit | STRUCTURALLY_BOUND; physical UNKNOWN
+T024 | E20 -> E21 | physical_flow | voltage | STRUCTURALLY_BOUND; physical UNKNOWN
+T025 | E21 -> E23 | physical_flow | synchronism,switch_state,phase,frequency | STRUCTURALLY_BOUND; physical UNKNOWN
+T026 | E22 -> E23 | feedback | voltage,reactive_power,power_limit | STRUCTURALLY_BOUND; physical UNKNOWN
+T027 | E23 -> E24 | physical_flow | current | STRUCTURALLY_BOUND; physical UNKNOWN
+T028 | E24 -> E25 | physical_flow | heat_power | STRUCTURALLY_BOUND; physical UNKNOWN
+T029 | E25 -> E24 | feedback | line_temperature | STRUCTURALLY_BOUND; physical UNKNOWN
+T030 | E25 -> E26 | physical_flow | line_temperature,temperature_history | STRUCTURALLY_BOUND; physical UNKNOWN
+T031 | E26 -> E27 | physical_flow | tension,creep_strain | STRUCTURALLY_BOUND; physical UNKNOWN
+T032 | E23 -> E28 | physical_flow | current | STRUCTURALLY_BOUND; physical UNKNOWN
+T033 | E23 -> E29 | physical_flow | voltage | STRUCTURALLY_BOUND; physical UNKNOWN
+T034 | E29 -> E30 | physical_flow | insulation_state,leakage_current | STRUCTURALLY_BOUND; physical UNKNOWN
+T035 | E30 -> E33 | physical_flow | fault_current | STRUCTURALLY_BOUND; physical UNKNOWN
+T036 | E25 -> E31 | information | line_temperature,core_temperature,weather_history | STRUCTURALLY_BOUND; physical UNKNOWN
+T037 | E27 -> E31 | information | clearance,sag,creep_strain | STRUCTURALLY_BOUND; physical UNKNOWN
+T038 | E28 -> E31 | information | hotspot_temperature,contact_resistance | STRUCTURALLY_BOUND; physical UNKNOWN
+T039 | E31 -> E23 | feedback | power_limit,dispatch_horizon | STRUCTURALLY_BOUND; physical UNKNOWN
+T040 | E23 -> E32 | physical_flow | current,voltage | STRUCTURALLY_BOUND; physical UNKNOWN
+T041 | E32 -> E33 | information | voltage,current,phase | STRUCTURALLY_BOUND; physical UNKNOWN
+T042 | E33 -> E34 | physical_flow | protection_delay,fault_current | STRUCTURALLY_BOUND; physical UNKNOWN
+T043 | E34 -> E35 | physical_flow | switch_state,damage_state | STRUCTURALLY_BOUND; physical UNKNOWN
+T044 | E35 -> E36 | physical_flow | current,voltage | STRUCTURALLY_BOUND; physical UNKNOWN
+T045 | E34 -> E37 | lifecycle | switch_state,damage_state,temperature | STRUCTURALLY_BOUND; physical UNKNOWN
+T046 | E37 -> E23 | feedback | topology | STRUCTURALLY_BOUND; physical UNKNOWN
+T047 | E36 -> E38 | physical_flow | voltage,current | STRUCTURALLY_BOUND; physical UNKNOWN
+T048 | E38 -> E39 | information | voltage,load_demand | STRUCTURALLY_BOUND; physical UNKNOWN
+T049 | E39 -> E38 | feedback | voltage,switch_state | STRUCTURALLY_BOUND; physical UNKNOWN
+T050 | E38 -> E40 | physical_flow | current | STRUCTURALLY_BOUND; physical UNKNOWN
+T051 | E40 -> E38 | information | line_temperature,soil_thermal_resistivity | STRUCTURALLY_BOUND; physical UNKNOWN
+T052 | E16 -> E41 | physical_flow | dc_power | STRUCTURALLY_BOUND; physical UNKNOWN
+T053 | E41 -> E38 | physical_flow | active_power,current,voltage | STRUCTURALLY_BOUND; physical UNKNOWN
+T054 | E38 -> E42 | physical_flow | voltage,current | STRUCTURALLY_BOUND; physical UNKNOWN
+T055 | E42 -> E43 | physical_flow | voltage,current | STRUCTURALLY_BOUND; physical UNKNOWN
+T056 | E42 -> E77 | physical_flow | ac_power,voltage,current | STRUCTURALLY_BOUND; physical UNKNOWN
+T057 | E77 -> E44 | physical_flow | voltage,charge_current | STRUCTURALLY_BOUND; physical UNKNOWN
+T058 | E43 -> E49 | information | energy | STRUCTURALLY_BOUND; physical UNKNOWN
+T059 | E44 -> E45 | lifecycle | state_of_charge,cell_temperature,usable_capacity | STRUCTURALLY_BOUND; physical UNKNOWN
+T060 | E45 -> E18 | physical_flow | dc_power,voltage | STRUCTURALLY_BOUND; physical UNKNOWN
+T061 | E44 -> E46 | physical_flow | cell_temperature,heat_loss | STRUCTURALLY_BOUND; physical UNKNOWN
+T062 | E45 -> E46 | physical_flow | cell_temperature,heat_loss | STRUCTURALLY_BOUND; physical UNKNOWN
+T063 | E46 -> E44 | feedback | cell_temperature | STRUCTURALLY_BOUND; physical UNKNOWN
+T064 | E46 -> E45 | feedback | cell_temperature | STRUCTURALLY_BOUND; physical UNKNOWN
+T065 | E38 -> E47 | physical_flow | ac_power | STRUCTURALLY_BOUND; physical UNKNOWN
+T066 | E47 -> E10 | lifecycle | stored_energy,head,water_flow | STRUCTURALLY_BOUND; physical UNKNOWN
+T067 | E61 -> E48 | physical_flow | heat_power | STRUCTURALLY_BOUND; physical UNKNOWN
+T068 | E48 -> E58 | physical_flow | stored_energy,temperature,heat_power | STRUCTURALLY_BOUND; physical UNKNOWN
+T069 | E44 -> E49 | information | state_of_charge,cell_temperature | STRUCTURALLY_BOUND; physical UNKNOWN
+T070 | E45 -> E49 | information | state_of_charge,usable_capacity | STRUCTURALLY_BOUND; physical UNKNOWN
+T071 | E49 -> E44 | feedback | charge_current,power_limit | STRUCTURALLY_BOUND; physical UNKNOWN
+T072 | E49 -> E45 | feedback | discharge_current,power_limit | STRUCTURALLY_BOUND; physical UNKNOWN
+T073 | E42 -> E50 | physical_flow | voltage,current | STRUCTURALLY_BOUND; physical UNKNOWN
+T074 | E50 -> E51 | physical_flow | shaft_power,speed | STRUCTURALLY_BOUND; physical UNKNOWN
+T075 | E42 -> E52 | physical_flow | ac_power | STRUCTURALLY_BOUND; physical UNKNOWN
+T076 | E42 -> E53 | physical_flow | ac_power,current | STRUCTURALLY_BOUND; physical UNKNOWN
+T077 | E42 -> E54 | physical_flow | ac_power | STRUCTURALLY_BOUND; physical UNKNOWN
+T078 | E42 -> E55 | physical_flow | ac_power,current | STRUCTURALLY_BOUND; physical UNKNOWN
+T079 | E50 -> E56 | physical_flow | shaft_power,torque,speed | STRUCTURALLY_BOUND; physical UNKNOWN
+T080 | E51 -> E57 | physical_flow | water_flow,head | STRUCTURALLY_BOUND; physical UNKNOWN
+T081 | E52 -> E58 | physical_flow | heat_power,refrigeration_power | STRUCTURALLY_BOUND; physical UNKNOWN
+T082 | E55 -> E58 | physical_flow | heat_power | STRUCTURALLY_BOUND; physical UNKNOWN
+T083 | E53 -> E59 | physical_flow | light_power | STRUCTURALLY_BOUND; physical UNKNOWN
+T084 | E12 -> E60 | physical_flow | heat_power,mass_flow | STRUCTURALLY_BOUND; physical UNKNOWN
+T085 | E54 -> E61 | physical_flow | heat_power,temperature | STRUCTURALLY_BOUND; physical UNKNOWN
+T086 | E55 -> E61 | physical_flow | heat_power,temperature | STRUCTURALLY_BOUND; physical UNKNOWN
+T087 | E60 -> E61 | physical_flow | heat_power,temperature | STRUCTURALLY_BOUND; physical UNKNOWN
+T088 | E61 -> E58 | physical_flow | heat_power,temperature | STRUCTURALLY_BOUND; physical UNKNOWN
+T089 | E61 -> E62 | physical_flow | heat_power,temperature | STRUCTURALLY_BOUND; physical UNKNOWN
+T090 | E62 -> E58 | physical_flow | heat_power | STRUCTURALLY_BOUND; physical UNKNOWN
+T091 | E60 -> E63 | physical_flow | heat_loss,mass_flow | STRUCTURALLY_BOUND; physical UNKNOWN
+T092 | E61 -> E63 | physical_flow | heat_loss,mass_flow | STRUCTURALLY_BOUND; physical UNKNOWN
+T093 | E25 -> E64 | lifecycle | line_temperature,temperature_history | STRUCTURALLY_BOUND; physical UNKNOWN
+T094 | E26 -> E64 | lifecycle | creep_strain,mechanical_stress | STRUCTURALLY_BOUND; physical UNKNOWN
+T095 | E64 -> E26 | feedback | damage_state,creep_strain | STRUCTURALLY_BOUND; physical UNKNOWN
+T096 | E64 -> E31 | information | damage_state,creep_strain | STRUCTURALLY_BOUND; physical UNKNOWN
+T097 | E36 -> E65 | lifecycle | transformer_hotspot,temperature_history | STRUCTURALLY_BOUND; physical UNKNOWN
+T098 | E65 -> E36 | feedback | insulation_state,damage_state | STRUCTURALLY_BOUND; physical UNKNOWN
+T099 | E44 -> E66 | lifecycle | state_of_charge,cell_temperature,current_history | STRUCTURALLY_BOUND; physical UNKNOWN
+T100 | E45 -> E66 | lifecycle | state_of_charge,cell_temperature,current_history | STRUCTURALLY_BOUND; physical UNKNOWN
+T101 | E66 -> E44 | feedback | usable_capacity,internal_resistance,damage_state | STRUCTURALLY_BOUND; physical UNKNOWN
+T102 | E66 -> E45 | feedback | usable_capacity,internal_resistance,damage_state | STRUCTURALLY_BOUND; physical UNKNOWN
+T103 | E66 -> E49 | information | usable_capacity,internal_resistance,damage_state | STRUCTURALLY_BOUND; physical UNKNOWN
+T104 | E50 -> E67 | lifecycle | speed,mechanical_stress,temperature | STRUCTURALLY_BOUND; physical UNKNOWN
+T105 | E67 -> E50 | feedback | damage_state,remaining_life | STRUCTURALLY_BOUND; physical UNKNOWN
+T106 | E08 -> E68 | lifecycle | mass_flow,temperature | STRUCTURALLY_BOUND; physical UNKNOWN
+T107 | E68 -> E08 | feedback | thermal_conductance,pressure_drop | STRUCTURALLY_BOUND; physical UNKNOWN
+T108 | E28 -> E69 | information | hotspot_temperature,contact_resistance,damage_state | STRUCTURALLY_BOUND; physical UNKNOWN
+T109 | E64 -> E69 | information | damage_state,creep_strain | STRUCTURALLY_BOUND; physical UNKNOWN
+T110 | E65 -> E69 | information | insulation_state,damage_state | STRUCTURALLY_BOUND; physical UNKNOWN
+T111 | E66 -> E69 | information | usable_capacity,internal_resistance,damage_state | STRUCTURALLY_BOUND; physical UNKNOWN
+T112 | E67 -> E69 | information | damage_state,remaining_life | STRUCTURALLY_BOUND; physical UNKNOWN
+T113 | E69 -> E70 | information | health_estimate,failure_probability | STRUCTURALLY_BOUND; physical UNKNOWN
+T114 | E70 -> E71 | lifecycle | isolation_state,residual_energy | STRUCTURALLY_BOUND; physical UNKNOWN
+T115 | E71 -> E72 | lifecycle | repair_state,material_quality,damage_state | STRUCTURALLY_BOUND; physical UNKNOWN
+T116 | E72 -> E23 | lifecycle | topology,switch_state,health_estimate | STRUCTURALLY_BOUND; physical UNKNOWN
+T117 | E72 -> E36 | lifecycle | repair_state,insulation_state,health_estimate | STRUCTURALLY_BOUND; physical UNKNOWN
+T118 | E69 -> E73 | lifecycle | health_estimate,damage_state | STRUCTURALLY_BOUND; physical UNKNOWN
+T119 | E70 -> E73 | lifecycle | isolation_state,residual_energy | STRUCTURALLY_BOUND; physical UNKNOWN
+T120 | E73 -> E74 | physical_flow | material_mass,material_composition | STRUCTURALLY_BOUND; physical UNKNOWN
+T121 | E74 -> E75 | physical_flow | material_mass,material_composition,contaminant_fraction | STRUCTURALLY_BOUND; physical UNKNOWN
+T122 | E75 -> E76 | physical_flow | recovered_mass,material_composition | STRUCTURALLY_BOUND; physical UNKNOWN
+T123 | E76 -> E71 | physical_flow | material_mass,material_quality | STRUCTURALLY_BOUND; physical UNKNOWN
+
+CONSUMER FRONTIER (unassigned input slots; no assumed external source)
+E01 | material_mass,process_power
+E02 | process_power
+E03 | head,water_flow
+E04 | air_density,wind_speed
+E05 | ambient_temperature,irradiance
+E06 | mass_flow,pressure,temperature
+E09 | speed
+E10 | speed
+E11 | speed
+E12 | cooling_power
+E14 | flux
+E15 | current
+E16 | voltage
+E17 | ambient_temperature,wind_speed
+E21 | frequency,phase
+E22 | load_demand,reactive_power,voltage
+E23 | impedance
+E24 | resistance
+E25 | ambient_temperature,irradiance,wind_direction,wind_speed
+E26 | mechanical_stress,span_length
+E27 | span_length
+E28 | ambient_temperature,contact_resistance
+E29 | contaminant_fraction,moisture
+E30 | impedance,switch_state,voltage
+E31 | current
+E35 | current
+E36 | ambient_temperature
+E37 | load_demand,topology
+E38 | load_demand,topology
+E40 | soil_moisture,soil_temperature
+E41 | load_demand,voltage
+E43 | time
+E45 | voltage
+E46 | coolant_flow
+E47 | water_flow
+E48 | mass_flow
+E49 | load_demand
+E50 | frequency
+E51 | water_flow
+E52 | temperature
+E54 | load_demand
+E60 | ambient_temperature
+E61 | mass_flow
+E62 | ac_power
+E64 | time
+E65 | moisture,time
+E66 | current,time
+E67 | time
+E68 | contaminant_fraction,time
+E69 | inspection_signal,temperature,voltage
+E70 | stored_energy,switch_state,topology
+E71 | process_power
+E72 | current,voltage
+E73 | material_mass,stored_energy,switch_state
+E74 | quality_signal
+E75 | process_power,processing_temperature
+E76 | quality_signal
+
+CONNECTED-PAIR AUDIT
+All 90 incoming-edge pairs are enumerated with an explicit same-consumer structural witness. Shared binding names are flagged rather than added blindly. This does not evaluate all 90 joint physical models. The primary executed compositional witness is harmonic-source aggregation: two separate 100 A h5 sources can cancel to 0 A or reinforce to 200 A depending on relative phase. Phase-free source summaries match, while calculated harmonic loss differs by 441.74338991 W. Therefore harmonic phasors must be aggregated at the relevant terminal before the scalar spectral moments are formed. This is established circuit physics, retained as a negative case against over-generalizing the repair.
+E08 | T007+T008 | AMBIGUOUS_SHARED_BINDING | shared: mass_flow
+E08 | T007+T011 | AMBIGUOUS_SHARED_BINDING | shared: mass_flow,temperature
+E08 | T007+T107 | JOINT_PHYSICS_UNKNOWN
+E08 | T008+T011 | AMBIGUOUS_SHARED_BINDING | shared: mass_flow
+E08 | T008+T107 | JOINT_PHYSICS_UNKNOWN
+E08 | T011+T107 | JOINT_PHYSICS_UNKNOWN
+E10 | T003+T066 | AMBIGUOUS_SHARED_BINDING | shared: head,water_flow
+E13 | T012+T013 | AMBIGUOUS_SHARED_BINDING | shared: shaft_power,speed
+E13 | T012+T014 | AMBIGUOUS_SHARED_BINDING | shared: shaft_power,speed
+E13 | T013+T014 | AMBIGUOUS_SHARED_BINDING | shared: shaft_power,speed
+E16 | T005+T019 | JOINT_PHYSICS_UNKNOWN
+E17 | T006+T018 | JOINT_PHYSICS_UNKNOWN
+E18 | T020+T060 | AMBIGUOUS_SHARED_BINDING | shared: dc_power,voltage
+E20 | T017+T022 | AMBIGUOUS_SHARED_BINDING | shared: current,voltage
+E23 | T025+T026 | JOINT_PHYSICS_UNKNOWN
+E23 | T025+T039 | JOINT_PHYSICS_UNKNOWN
+E23 | T025+T046 | JOINT_PHYSICS_UNKNOWN
+E23 | T025+T116 | AMBIGUOUS_SHARED_BINDING | shared: switch_state
+E23 | T026+T039 | AMBIGUOUS_SHARED_BINDING | shared: power_limit
+E23 | T026+T046 | JOINT_PHYSICS_UNKNOWN
+E23 | T026+T116 | JOINT_PHYSICS_UNKNOWN
+E23 | T039+T046 | JOINT_PHYSICS_UNKNOWN
+E23 | T039+T116 | JOINT_PHYSICS_UNKNOWN
+E23 | T046+T116 | AMBIGUOUS_SHARED_BINDING | shared: topology
+E24 | T027+T029 | JOINT_PHYSICS_UNKNOWN
+E26 | T030+T095 | JOINT_PHYSICS_UNKNOWN
+E31 | T036+T037 | JOINT_PHYSICS_UNKNOWN
+E31 | T036+T038 | JOINT_PHYSICS_UNKNOWN
+E31 | T036+T096 | JOINT_PHYSICS_UNKNOWN
+E31 | T037+T038 | JOINT_PHYSICS_UNKNOWN
+E31 | T037+T096 | AMBIGUOUS_SHARED_BINDING | shared: creep_strain
+E31 | T038+T096 | JOINT_PHYSICS_UNKNOWN
+E33 | T035+T041 | JOINT_PHYSICS_UNKNOWN
+E36 | T044+T098 | JOINT_PHYSICS_UNKNOWN
+E36 | T044+T117 | JOINT_PHYSICS_UNKNOWN
+E36 | T098+T117 | AMBIGUOUS_SHARED_BINDING | shared: insulation_state
+E38 | T047+T049 | AMBIGUOUS_SHARED_BINDING | shared: voltage
+E38 | T047+T051 | JOINT_PHYSICS_UNKNOWN
+E38 | T047+T053 | AMBIGUOUS_SHARED_BINDING | shared: current,voltage
+E38 | T049+T051 | JOINT_PHYSICS_UNKNOWN
+E38 | T049+T053 | AMBIGUOUS_SHARED_BINDING | shared: voltage
+E38 | T051+T053 | JOINT_PHYSICS_UNKNOWN
+E44 | T057+T063 | JOINT_PHYSICS_UNKNOWN
+E44 | T057+T071 | AMBIGUOUS_SHARED_BINDING | shared: charge_current
+E44 | T057+T101 | JOINT_PHYSICS_UNKNOWN
+E44 | T063+T071 | JOINT_PHYSICS_UNKNOWN
+E44 | T063+T101 | JOINT_PHYSICS_UNKNOWN
+E44 | T071+T101 | JOINT_PHYSICS_UNKNOWN
+E45 | T059+T064 | AMBIGUOUS_SHARED_BINDING | shared: cell_temperature
+E45 | T059+T072 | JOINT_PHYSICS_UNKNOWN
+E45 | T059+T102 | AMBIGUOUS_SHARED_BINDING | shared: usable_capacity
+E45 | T064+T072 | JOINT_PHYSICS_UNKNOWN
+E45 | T064+T102 | JOINT_PHYSICS_UNKNOWN
+E45 | T072+T102 | JOINT_PHYSICS_UNKNOWN
+E46 | T061+T062 | AMBIGUOUS_SHARED_BINDING | shared: cell_temperature,heat_loss
+E49 | T058+T069 | JOINT_PHYSICS_UNKNOWN
+E49 | T058+T070 | JOINT_PHYSICS_UNKNOWN
+E49 | T058+T103 | JOINT_PHYSICS_UNKNOWN
+E49 | T069+T070 | AMBIGUOUS_SHARED_BINDING | shared: state_of_charge
+E49 | T069+T103 | JOINT_PHYSICS_UNKNOWN
+E49 | T070+T103 | AMBIGUOUS_SHARED_BINDING | shared: usable_capacity
+E50 | T073+T105 | JOINT_PHYSICS_UNKNOWN
+E58 | T068+T081 | AMBIGUOUS_SHARED_BINDING | shared: heat_power
+E58 | T068+T082 | AMBIGUOUS_SHARED_BINDING | shared: heat_power
+E58 | T068+T088 | AMBIGUOUS_SHARED_BINDING | shared: heat_power,temperature
+E58 | T068+T090 | AMBIGUOUS_SHARED_BINDING | shared: heat_power
+E58 | T081+T082 | AMBIGUOUS_SHARED_BINDING | shared: heat_power
+E58 | T081+T088 | AMBIGUOUS_SHARED_BINDING | shared: heat_power
+E58 | T081+T090 | AMBIGUOUS_SHARED_BINDING | shared: heat_power
+E58 | T082+T088 | AMBIGUOUS_SHARED_BINDING | shared: heat_power
+E58 | T082+T090 | AMBIGUOUS_SHARED_BINDING | shared: heat_power
+E58 | T088+T090 | AMBIGUOUS_SHARED_BINDING | shared: heat_power
+E61 | T085+T086 | AMBIGUOUS_SHARED_BINDING | shared: heat_power,temperature
+E61 | T085+T087 | AMBIGUOUS_SHARED_BINDING | shared: heat_power,temperature
+E61 | T086+T087 | AMBIGUOUS_SHARED_BINDING | shared: heat_power,temperature
+E63 | T091+T092 | AMBIGUOUS_SHARED_BINDING | shared: heat_loss,mass_flow
+E64 | T093+T094 | JOINT_PHYSICS_UNKNOWN
+E66 | T099+T100 | AMBIGUOUS_SHARED_BINDING | shared: cell_temperature,current_history,state_of_charge
+E69 | T108+T109 | AMBIGUOUS_SHARED_BINDING | shared: damage_state
+E69 | T108+T110 | AMBIGUOUS_SHARED_BINDING | shared: damage_state
+E69 | T108+T111 | AMBIGUOUS_SHARED_BINDING | shared: damage_state
+E69 | T108+T112 | AMBIGUOUS_SHARED_BINDING | shared: damage_state
+E69 | T109+T110 | AMBIGUOUS_SHARED_BINDING | shared: damage_state
+E69 | T109+T111 | AMBIGUOUS_SHARED_BINDING | shared: damage_state
+E69 | T109+T112 | AMBIGUOUS_SHARED_BINDING | shared: damage_state
+E69 | T110+T111 | AMBIGUOUS_SHARED_BINDING | shared: damage_state
+E69 | T110+T112 | AMBIGUOUS_SHARED_BINDING | shared: damage_state
+E69 | T111+T112 | AMBIGUOUS_SHARED_BINDING | shared: damage_state
+E71 | T114+T123 | JOINT_PHYSICS_UNKNOWN
+E73 | T118+T119 | JOINT_PHYSICS_UNKNOWN
+
+4.9.5 RANKED SCIENTIFIC GAPS AND PRIOR ART
+Ranking is research priority by identifiable incremental cost/value and testability, not a fabricated forecast of positive return. Every economic claim must use equal delivered service, risk, information access, interventions and resource budgets. E0=no economic measurement; E1=synthetic scenario; E2=independent physical measurements; E3=controlled deployment economics. No E2/E3 evidence exists here.
+1 / C6 | Consumer-model update -> retained harmonic summary -> downstream decision
+  Gap: New model may require information erased by old summary. Revalidate with model-qualified loss bounds and request additional data only for ambiguous decisions.
+  Strong comparator: Conventional kernel-aware moment LP; edge scalar loss query; task-aware/event-triggered compression.
+  Economic status: Net marginal communication, compute, storage, delay and deferment cost per update. Synthetic LP E1; measured money E0. Novelty of narrow integration UNKNOWN; matched conventional LP ties.
+2 / C1 | Converter/charger waveform -> transformer heat -> dispatch
+  Gap: RMS+THD can omit frequency-weighted heat; preserve relevant moments and aggregate phasors before summarizing.
+  Strong comparator: Full-spectrum harmonic transformer-loss model, modern ageing/Volt-VAr models.
+  Economic status: Loss energy at identical useful service plus actual implementation costs. E1 known-mechanism simulation; incremental Garden operating value versus matched full-spectrum model exactly 0.
+3 / C2 | Conductor cooling -> connector heating -> allowable loading
+  Gap: Local connector resistance and heat transfer can bind despite cool spans; narrow low-cost calibration question remains open.
+  Strong comparator: 2025 coupled conductor-clamp thermal model with laboratory calibration.
+  Economic status: Congestion/curtailment avoided minus sensors, maintenance and unchanged reliability cost. E0; broad physics known.
+4 / C3 | Cable heat -> soil water migration -> later cable rating
+  Gap: Thermal/hydraulic state and wetting/drying history may be lost at the dispatch interface.
+  Strong comparator: 2018 cycling cable/soil model; 2026 coupled thermal soil/ampacity model.
+  Economic status: Safe scheduled-energy gains net of sensing, model upkeep and failure cost. E0; broad coupling known; no simplified model superiority claim.
+5 / C4 | Thermal rating -> protection/mechanical constraints -> redispatch
+  Gap: A thermal-safe action need not satisfy joint relay, clearance, stability and contingency requirements.
+  Strong comparator: DOE DLR guidance; modern transient-temperature AC optimal power flow plus explicit protection/clearance contracts.
+  Economic status: Earlier/cheaper detection of omitted operating constraints, with equal dispatch feasibility. E0; intersection of constraints known.
+6 / C5 | Weak thermal excitation -> parameter estimate -> claimed capacity
+  Gap: Inverse estimation becomes poorly conditioned near weak temperature/current contrast; point estimates may hide uncertainty.
+  Strong comparator: Uncertainty-aware conductor-temperature/parameter estimation.
+  Economic status: Avoided unnecessary derating minus sensing/identification expense at fixed reliability. E0; broad ill-conditioning known.
+
+PRIMARY LITERATURE AND PATENT EVIDENCE (scoped search, not global novelty certification)
+P1 | Senol, Bayram, Shi (2025), Transformer Aging Under Harmonic Emissions from Electric Vehicle Smart Charging; known frequency-weighted loss factors and charging-ageing connection. Primary manuscript read; the paper’s full ageing model is not implemented.
+  https://strathprints.strath.ac.uk/92564/1/Senol-etal-IEEE-TECE-2025-Transformer-aging-under-harmonic-emissions-from-electric-vehicle.pdf
+P2 | Kumar et al. (2019), transformer lifetime/Volt-VAr optimisation; abstract-level evidence of harmonic/lifetime coupling, DOI 10.1049/iet-gtd.2018.5746.
+  https://ietresearch.onlinelibrary.wiley.com/doi/10.1049/iet-gtd.2018.5746
+P3 | Liu et al. (2016), winding eddy-current loss calculation, DOI 10.1049/iet-epa.2015.0559; primary full text addresses frequency corrections and penetration effects.
+  https://ietresearch.onlinelibrary.wiley.com/doi/10.1049/iet-epa.2015.0559
+P4 | CN102411101A/B, published 2012/2013; frequency-dependent transformer harmonic-loss correction already disclosed. Technical prior art, not a validation or legal conclusion.
+  https://patents.google.com/patent/CN102411101B/en
+P5 | US8849587B1 (2014); harmonic/K-factor transformer condition monitoring.
+  https://patents.google.com/patent/US8849587B1/en
+P6 | Temperature Prediction of the Clamp-Conductor Coupling Zone in Transmission Lines (2025), DOI 10.32604/fhmt.2025.069512; coupled model/calibration comparator.
+  https://www.sciopen.com/article/10.32604/fhmt.2025.069512
+P7 | Gouda et al. (2018), underground distribution cable cycling including soil temperature/moisture variation, DOI 10.1049/iet-gtd.2018.5589.
+  https://ietresearch.onlinelibrary.wiley.com/doi/10.1049/iet-gtd.2018.5589
+P8 | Scientific Reports, 16 June 2026, DOI 10.1038/s41598-026-57509-y; soil thermal-property/ampacity comparator. Claims require independent calibration.
+  https://www.nature.com/articles/s41598-026-57509-y
+P9 | WO2015134142A1; dynamic earth thermal properties/cable-rating disclosure.
+  https://patents.google.com/patent/WO2015134142A1/en
+P10 | DOE Dynamic Line Rating Report to Congress (2019); includes other component and protection-setting limits.
+  https://www.energy.gov/oe/articles/dynamic-line-rating-report-congress-june-2019
+P11 | Rabecq, Lee, Sun (2025), transient dynamic line rating in AC optimal power flow, arXiv:2510.10832; research comparator.
+  https://arxiv.org/abs/2510.10832
+P12 | Sun et al. (2024), Goal-oriented compression for Lp-norm-type goal functions: application to power consumption scheduling; direct prior art against broad task-aware compression novelty.
+  https://arxiv.org/abs/2405.07808
+P13 | Durak and Alves (2026), event-based sampling for goal-oriented semantic communication; primary manuscript applies task-relevant features to harmonic-rich monitoring.
+  https://oulurepo.oulu.fi/handle/10024/63877
+P14 | Boyd and Vandenberghe, Convex Optimization; standard LP duality/bound certificates, chapter 5. The interval mathematics is not claimed original.
+  https://stanford.edu/~boyd/cvxbook/
+P15 | Compressive Sensing-Based Harmonic Sources Identification in Smart Grids, IEEE (2020), document 9252160; indexed primary abstract includes sparse reconstruction and measurement uncertainty. Further comparator, not reproduced.
+  https://ieeexplore.ieee.org/document/9252160/
+P17 | US11835570B2; thermal-rating inversion limitations near small conductor-to-ambient temperature differences. Technical prior-art evidence for C5.
+  https://patents.google.com/patent/US11835570B2/en
+P18 | Stroot et al. (2024), error-bounded compression for high-frequency power-quality data; indexed author/institution evidence, not a reproduced comparator.
+  https://arxiv.org/abs/2407.01112
+P19 | US7415370B2 (2008); power-signal/harmonic component compression with selected retained parameters. Broad compression/summary architecture is established.
+  https://patents.google.com/patent/US7415370B2/en
+P16 | NIST (2018), A Fast Recursive Algorithm For Spectrum Tracking in Power Grid Systems; low-complexity harmonic/frequency tracking is prior art.
+  https://www.nist.gov/publications/fast-recursive-algorithm-spectrum-tracking-power-grid-systems
+Official IEEE C57.110-2018 source was located; full standard was not retrieved. No IEEE operational compliance claimed. Finding adjacent papers/patents refutes broad novelty, but does not settle the novelty of every narrow implementation. Search non-findings remain UNKNOWN.
+
+4.9.6 EQUATION CONTRACTS, DERIVATIONS AND QUANTITATIVE TESTS
+E1 COMPLETED SIMULATION AND MATHEMATICAL NOTES — 2026-10-09
+NONCANONICAL. Known physical model; synthetic parameters; no real-data validation.
+
+Protocol: experiment_memo.txt SHA-256
+19984e724c2453b83f78694c0c65333e629c2da0cfd976fee2bde84122a1fa71
+This was written before implementing and running the experiment, but is a LOCAL
+freeze and not independent preregistration. Later adversarial API validation fixes
+did not change the parameters or frozen physical predictions.
+Reproduce: python electricity_experiment.py (Python standard library only).
+
+RESULTS
+At fundamental current 950 A, the h5 and h13 cases both have RMS 968.813707583 A
+and THD 20%. Whole-transformer losses are 4512.29840939 W and 6094.34068752 W.
+Difference 1582.04227812 W agrees with the separate analytic expression to
+6.83e-13 W. Synthetic steady temperature proxies are 96.4037301174 C and
+116.179258594 C. The proxy threshold is 105 C. Maximum fundamental currents
+under the same thermal/current limits are 1038.84928923 A and 862.589679732 A.
+These are model outputs, NOT permissible real-transformer operating ratings.
+
+The RMS-only and assumed-h5 interfaces select the zero-auxiliary h13 mode and
+violate the actual declared proxy constraint. The conservative h13 interface
+returns no admissible mode at 950 A. The repaired moment interface and existing
+full-spectrum model choose exactly the same admissible h5 action.
+
+For 200 fixed-seed randomized spectra, maximum full-spectrum/moment loss
+difference is 1.82e-12 W. On 200 randomized fundamental current levels, decisions
+between the SAME FIXED TWO spectral modes match 200/200. These are two different
+checks; do not describe them as 200 new optimization problems with randomized
+mode spectra. Zero-harmonic, zero-frequency-dependent-loss, zero-current,
+out-of-domain, negative-loss, zero-load-coefficient and infeasible-core tests pass.
+Period quadrature and Parseval RMS agree to relative error 2.49e-16.
+Electrical/thermal balance checks are constructed bookkeeping identities; they
+do not independently validate the physical equations or conservation in hardware.
+
+MATHEMATICAL CLOSURE CRITERION (ESTABLISHED LINEAR ALGEBRA)
+Let x_h=(I_h/I_ref)^2 >=0, and y=A x be retained linear spectral moments. A required
+linear output q=k^T x can be reconstructed for every nonnegative x if and only if
+k belongs to row(A), assuming the full nonnegative cone is the declared domain.
+Sufficiency: if k=A^T beta then q=beta^T y.
+Necessity: if k is outside row(A), there exists z in ker(A) with k^T z !=0.
+Write z=z_plus-z_minus with both parts nonnegative. Then A z_plus=A z_minus
+but k^T z_plus != k^T z_minus. This is an exact closure-failure witness.
+On a more restricted physically attainable set, row membership is sufficient
+but need not be necessary; admissibility of the pair must be checked separately.
+
+For the declared transformer loss law, rows [1,h^2,h^.8] make total heat loss
+recoverable for every coefficient triple (D,E,S), not just the chosen constants.
+For a downstream quantity with a different harmonic coefficient vector, the
+same moments may be insufficient. Do not infer safety, voltage, ageing or
+dynamic closure from this single heat-loss output closure.
+
+If a candidate reconstruction has residual r=k-A^T beta, then
+ |q-beta^T y|=|r^T x| <= ||r||_infinity * ||x||_1.
+All x entries are dimensionless, k and r have watts, so the result has watts.
+Applying the bound to harmonic entries only uses M_harm=sum_(h>1)x_h.
+Under the steady thermal proxy, absolute temperature error is at most
+ ||r||_infinity*M_harm/G [K]. A common feasible action set must first be made
+robust to the bound before the familiar two-times-cost-error regret bound
+can be used. This experiment derives the bound; it does NOT implement or test
+a robust controller, and does not independently establish a real residual bound.
+
+SECOND-CYCLE FALSIFIER
+Two terminal spectra with fundamental 1000 A and h=5,7,11,13 harmonics were
+constructed from an exact matrix-nullspace cofactor formula. Their M0,M2,M.8
+agree within 2.67e-15. Declared-model losses differ by <9.10e-13 W.
+Under the deliberately artificial added coefficient 5000*(h/13)^1.5 W for
+h>1, the omitted losses are 120.497892273 W and 120.962541091 W. Thus the same
+retained moments now correspond to output losses differing by 0.464648818 W.
+Each omission lies below the derived bound 200 W; thermal error bound 2.5 K.
+Response: invalidate exact sufficiency for the changed constitutive law. A new
+independently justified coefficient-error bound or revised full model is needed.
+The artificial residual law is NOT a discovered physical correction.
+
+Aggregation counterexample: two separate 100 A h5 sources have identical
+per-source phase-free summaries. Their aggregate h5 current is 0 A when phases
+oppose and 200 A when aligned. This changes model harmonic loss by 441.74338991 W.
+Therefore phasors must be aggregated BEFORE computing terminal moments. An
+interface carrying moments of separate devices without phase cannot generally
+close transformer losses. This limitation is established power-quality physics.
+
+DIMENSIONS AND TYPE SEPARATION
+Current I [A]; voltage V [V]; h and M_p [1]; P0,D,E,S,L [W]; G [W/K]; temperature
+differences [K]; hours [h]; prices [currency/kWh]; annual value [currency/year].
+Psource=Puse+L+Paux is a conservation bookkeeping equation.
+L=P0+D*M0+E*M2+S*M.8 is an approximate constitutive relationship.
+G*(theta-Ta)=L is a synthetic steady thermal approximation.
+theta<=105 C and Irms<=1200 A are assumed engineering operating constraints.
+Positive net scenario value is an economic decision condition.
+None of these distinctions grants fundamental-invariant status to all equations.
+
+ECONOMICS
+At fundamental current 800 A both modes satisfy the same proxy constraints and
+deliver 554256.258422 W useful service. High-/low-order transformer losses are
+4612.60724655/3490.71576954 W. Low-order mode assumes 200 W extra auxiliary loss.
+Net energy saving is 921.891477006 W. At assumed 8000 h/year and price 0.10/kWh,
+saved energy is 7375.13181605 kWh/year and gross value 737.513181605/year.
+After assumed 1200 capital cost over five years at zero discount and 50/year
+maintenance, conditional annual net value is 447.513181605. An actual converter
+capable of these two modes and these costs has NOT been identified or tested.
+Do not combine this scenario with lifespan, safety, capacity or industry savings.
+The existing full-spectrum model achieves the IDENTICAL outcome. Incremental
+Garden operating value relative to that strong model is zero; any extra Garden
+deployment cost makes the incremental net negative absent some separate benefit.
+
+PRIOR ART AND GATES
+Senol, Bayram, Shi 2025 accepted manuscript (equations 5,7,8) gives the harmonic
+loss weighting; its more complete transformer ageing model is NOT implemented
+here. The synthetic linear steady thermal proxy is deliberately scoped.
+https://strathprints.strath.ac.uk/92564/1/Senol-etal-IEEE-TECE-2025-Transformer-aging-under-harmonic-emissions-from-electric-vehicle.pdf
+Liu et al. 2016 documents limits of the h^2 eddy approximation and corrected
+frequency behavior, so noticing that approximation limits compression is known.
+https://ietresearch.onlinelibrary.wiley.com/doi/10.1049/iet-epa.2015.0559
+Physical/artifact control feasibility: UNKNOWN.
+Full contemporary transformer safety/ageing comparison: NOT_RUN.
+Independent empirical test: NOT_RUN.
+Frontier novelty: NOT_ESTABLISHED.
+Measured incremental economic benefit: UNKNOWN.
+Blinded matched-budget Garden discovery advantage: NOT_TESTED.
+Result retained as a useful known-physics closure and falsification benchmark.
+
+E2 — MODEL-QUALIFIED INTERVAL REVALIDATION
+Physical link: terminal current waveform -> retained spectral features -> changed transformer-loss kernel -> thermal proxy decision. State x_h=(I_h/I_ref)^2 >=0 is dimensionless; h is integer harmonic order in a finite declared band. Observations y=A*x have row-declared dimensions. Response q=k^T*x is W when k is W. P0 is a separately qualified fixed W offset; changing voltage/core physics reopens that assumption. For fixed exact y and supplied kernel k, calculate L=min(k^T*x), U=max(k^T*x), subject to A*x=y,x>=0. An all-one row fixes total spectral energy and makes the feasible set bounded. Dependent-row profiles return UNKNOWN in this v1; budget exhaustion returns INCOMPLETE. Empty feasible set returns INFEASIBLE, never a vacuous safety pass.
+Upper certificate: A^T*lambda>=k gives k^T*x<=lambda^T*y. A feasible x attaining that value and the dual inequality certify the exact rational optimum. Lower certificate reverses the inequality. Both certificates are checked against caller-supplied trusted A,y,k; matching model names or a digest alone cannot qualify them. A certificate proves a bound for supplied inputs, not their authenticity, empirical applicability or safe actuation.
+Decision: U<=B -> MODEL_FEASIBLE; L>B -> MODEL_INFEASIBLE; otherwise NEED_ADDITIONAL_MEASUREMENT. B is the remaining qualified heat budget [W]. Uncertainty extension: for measured intervals l<=A*x<=u and fixed upper dual lambda, U_outer=sum(lambda_i*u_i if lambda_i>=0 else lambda_i*l_i). A separately justified coefficient error ||delta k||inf<=epsilon adds epsilon*M0_max [W]. Lower bound uses the opposite interval endpoint and subtracts epsilon*M0_max. This uses known LP/dual-norm mathematics. The interval helper handles trusted internal certificates; the public qualification path does not claim robust external packet deployment. Quantization, sensor calibration, time alignment, support escape and proof of kernel-error limits remain open.
+Implemented solver: exact Fraction arithmetic with finite basis enumeration, not a scalable general-purpose optimiser. Maximum default 10,000 bases. Necessity challenge: a specific full-waveform-retrieval prerequisite is unnecessary when retained features exactly reconstruct the needed quantity or bound it on one side of the decision. It remains necessary to obtain more information for ambiguous decisions. This is a counterexample within a declared finite profile, not a claim that waveform recording is generally unnecessary.
+Frozen E2 workload: 100 seeded synthetic spectra, 8 harmonic bins, old three retained features and a small model-kernel change. Result: 86 MODEL_FEASIBLE, 14 MODEL_INFEASIBLE; 0 incorrect certified decisions against full spectrum; 0 ambiguous cases. This workload lay away from the decision boundary. An additional explicitly post-freeze adversarial witness has interval [39440,40160] W and threshold 39560 W; it correctly returns NEED_ADDITIONAL_MEASUREMENT. The boundary witness is not blended into the frozen sample score.
+E2 deterministic result-row SHA256: f43ba113b67aea4620ae7ba65e7a13c1157b9afff1b2c06a1f963a28a2b208ad. Local runtime approximately 0.592 seconds for this run; runtime is not a stable reproducibility fingerprint.
+Illustrative marginal payload after old features were already stored: interval reuse 0 new bytes across this far-boundary workload; always-scalar-query baseline 3,200 bytes; always-full-spectrum baseline 8,800 bytes (8-byte values plus assumed 24-byte response header). Conventional kernel-aware LP also uses 0 new bytes. These are packet-accounting assumptions, not a measured network saving, and exact-rational proofs have not been qualified for binary64 wire encoding. Offline LP compute, old-summary acquisition/storage, coefficients, update metadata, availability of historical raw data, latency and ambiguity costs can reverse the cost comparison. Single-consumer edge scalar query is the relevant cheap baseline, not only full-spectrum transmission.
+
+4.9.7 ECONOMIC ASSESSMENT AND FALSIFIERS
+Use Incremental annual net = affected annual baseline cost * eligible fraction * independently measured improvement * adoption - annual operating costs - annualized implementation costs, only when those factors refer to disjoint, consistently scoped quantities. The relevant baseline is a strong existing method. Do not count energy saving twice as both avoided losses and purchased-energy reduction. No industry total is estimated here.
+E1 conditional energy scenario: 7,375.131816 kWh/year saved under hypothetical waveform-control modes; at 0.10 currency/kWh, 737.513182 gross/year less 290 annualized costs = 447.513182 net/year. The strongest full-spectrum model selects the same action and earns exactly the same amount. Therefore Garden-specific incremental operating value is 0; additional Garden costs would make it negative unless a separate benefit is measured. Waveform controllability and costs remain unverified.
+E2 measurable target: total cost per model update = communication + compute + retained-state storage + delayed/declined service + integration/maintenance. Candidate Delta_net = C_strong_baseline - C_candidate at identical decision reliability and service. Break-even requires avoided-query/retention/revalidation cost to exceed exact/approximate solver, proof, telemetry and integration cost. No positive net estimate is currently grounded. A predeclared >20% marginal-byte target is met only in the constructed far-boundary workload; this is not a net-cost or field result.
+Next falsifiable narrow hypothesis: on previously unseen real transformer model-update logs, a model-qualified revalidation layer reduces total per-update cost versus scalar-query, conventional kernel-aware LP and established task-aware compression while preserving decision outcomes under independently calibrated uncertainty. Reject the superiority claim if net benefit is nonpositive, field bounds are violated, ambiguous-case rate offsets savings, or a comparator achieves equal/better performance. Freeze hardware, tariff/latency, model-update distribution, sensor errors, support and action constraints before evaluation. All novelty, field value and methodological superiority gates remain UNKNOWN.
+
+4.9.8 EXECUTED VALIDATION, NEGATIVE FINDINGS AND NEXT FRONTIER
+Integrated suite: 18 tests passed, including an optional SciPy HiGHS independent-algorithm test. The harness itself uses Python standard library only. Persisted tests check graph/source bindings, malformed/UNKNOWN preservation, missing consumer inputs, units/source resolution, fixed-point bounds, exact algebra, LP primal/dual certificates, uncertainty corners, forged/stale model receipts and physical nulls. The optional 200-profile LP comparison has 195 supported exact cases agreeing with HiGHS (maximum reviewer-observed error 1.60e-14), with five dependent-row profiles explicitly UNKNOWN.
+Separate adversarial role additionally checked 500 algebra matrices using determinant minors (189 closed, 311 nonclosed, all agreed); 96 supported interval-error profiles against independent robust LP bounds, with four dependent profiles excluded as UNKNOWN; and physical/API counterexamples. Its review found and prompted repairs rather than simply approving the proposer. Role separation shares model family and pretraining: it is not independent scientific certification. A retrospective or seeded test does not establish blind discovery advantage.
+Retained negative findings: broad harmonic loss, conductor-clamp coupling, moisture/ampacity feedback, joint dispatch constraints and inverse-identification conditioning are known; three-moment sufficiency fails after out-of-span kernel changes; individual-device moments fail under unknown phasor aggregation; weak models can profit by violating omitted limits; exact certificates fail when detached from actual inputs; more named situations do not establish completeness; packet reduction alone does not establish money saved.
+Next useful electricity expansions are bounded by material interface questions: validate C6 on actual historical model changes and measurement errors; expand converter harmonic aggregation into network impedance/resonance and phase-aware consumer kernels; qualify connector/cable interfaces against the cited coupled models; resolve externally sourced inputs in E20/E28/E33/E38/E44/E77 before promising device-level predictions. The unexpanded branches listed above remain open. We have not tested or ruled out all potential electricity innovations.
+No recurring or unattended background process was started. Reproducible active-session cycles are implemented; continued work needs an active execution session or a separately configured workflow. No paid provider calls, grid commands, purchases, or canonical edits were made.
+
+4.9.9 REPRODUCTION AND EXACT SOURCE REGISTER
+Files are together under design_deltas/v15.10/: electricity_seed.py (curated physical graph and source laws); electricity_closure.py (bounded operators and audits); electricity_experiment.py (known-physics falsification); test_electricity_closure.py (meaningful validation). This consolidated text remains the single scientific report. No standalone JSON report or raw data dump is added to the repository.
+Commands from repository root:
+  python3 design_deltas/v15.10/electricity_closure.py --experiments
+  python3 design_deltas/v15.10/electricity_closure.py --details
+  python3 -m unittest discover -s design_deltas/v15.10 -p 'test_electricity*.py'
+  python3 scripts/check_corpus.py
+Local source-status/seed SHA changes invalidate a prior result identity; hashes detect changes but do not establish scientific truth. Main numerical rows and seed are deterministic; elapsed runtime varies. No gzip output or binary source build is involved.
+G-ABSTRACTION | design_deltas/v15.10/V15_10_ABSTRACTION_GCSC_DELTA.md | lines 7-49 | bytes [326,3310)
+  file SHA256 90a58c337bc87c2e445eb56d6197cddea845f74485339e074b0818d70dae8479; span SHA256 7785cedf2294e25b0eba354f49335e9b2b16ed0021c743cc0eb63911d0acca1c
+G-GCSC | design_deltas/v15.10/GSL_COMBINATORIAL_SEMANTIC_COVERAGE_v0.1.md | lines 25-142 | bytes [641,6958)
+  file SHA256 27428feebc2fe8f2a4a9a5dd8fc5d680d36fb18623575ef19235427f9021e3b1; span SHA256 5e6109f6c462bef4bb9298fcc67f74a6d9ae3ee2622ab75db9d0c2b12b190d57
+G-TREE-SUBSTRATE | design_deltas/v15.10/TREE_CORE_v0.8.1_2026-09-23.txt | lines 85-215 | bytes [4610,12965)
+  file SHA256 4af3a2c4c8d8577909735fb61c42e0f43324dc0147d8b24146b4561ee56511fa; span SHA256 1b5bd68007d447e03f2aba5a647deae06575722c3c294ed5a8f7899df8d232f1
+G-TREE-TRUNK | design_deltas/v15.10/TREE_CORE_v0.8.1_2026-09-23.txt | lines 236-335 | bytes [14207,20678)
+  file SHA256 4af3a2c4c8d8577909735fb61c42e0f43324dc0147d8b24146b4561ee56511fa; span SHA256 28d286ec841f6777b6e60ec078a25a4c9fde36df0c5d2aa5a30853ad4db33491
+G-TREE-OWNER | design_deltas/v15.10/TREE_CORE_v0.8.1_2026-09-23.txt | lines 357-413 | bytes [21878,25202)
+  file SHA256 4af3a2c4c8d8577909735fb61c42e0f43324dc0147d8b24146b4561ee56511fa; span SHA256 7ca7aefa78637bf2d5ef48b3688f14e57712afdc3ae83c924e7f5221280fb5c8
+G-TECH-TYPES | design_deltas/v15.10/GARDEN_TECHNICAL_v15.10_FULL_DELTA.txt | lines 90-274 | bytes [2631,8389)
+  file SHA256 f61bc8e4f12418498f114f586c2d4e58b1ca575a788e0e5194430088a0f8f18f; span SHA256 cabccf0598f5794aac4bf138d9c4e9f2ba5d14c99475df8e8ea138e58800147d
+G-TECH-EVIDENCE | design_deltas/v15.10/GARDEN_TECHNICAL_v15.10_FULL_DELTA.txt | lines 353-409 | bytes [11040,12837)
+  file SHA256 f61bc8e4f12418498f114f586c2d4e58b1ca575a788e0e5194430088a0f8f18f; span SHA256 1fc9428d2346a6dce9ced933b724d921bbf9e176ece8c08986bbfc5a5b45a4b3
+G-TECH-THEORIES | design_deltas/v15.10/GARDEN_TECHNICAL_v15.10_FULL_DELTA.txt | lines 534-707 | bytes [17286,22061)
+  file SHA256 f61bc8e4f12418498f114f586c2d4e58b1ca575a788e0e5194430088a0f8f18f; span SHA256 6fe0d87d6959c7e68077f5265f2f95785646d60041d959cdddf4f209eb20d94a
+G-SAL | design_deltas/v15.9.1/GCSC_SAL_SAC_DETAILED_SEMANTIC_PATCH.md | lines 7-55 | bytes [829,7295)
+  file SHA256 37668b17f843428ece0466b92484fb656d8c5d1faa049a6be88db506437ac564; span SHA256 64d3728de752716ae982535f7ea34909131e4113e13e997d63dae9e3d8f75a67
+G-FUNCTIONS | design_deltas/v15.9.1/GCSC_FUNCTIONAL_CONTRACTS.md | lines 1-29 | bytes [0,3450)
+  file SHA256 05cc4ed3c1d310ffa7efcce571946d9d9d3fdb94a8470496f80febe77c84c08a; span SHA256 0801c1e9814e5dabb616fed3029ca50a29e6cd712f865c0d1909548cb0c18830
+G-GSK | design_deltas/v15.10/GENERATIVE_SEMANTIC_KERNEL_AND_DERIVED_GARDEN_CANDIDATE.md | lines 42-132 | bytes [1742,7104)
+  file SHA256 587271b0cbee369f6c49b5035065004b4db27f870031db62da8b591aabb96370; span SHA256 2cc95e0b3a863c7e307a64efedf8861259974fcf6a178568ff4b41607e75ee1d
+G-RSDC | design_deltas/v15.10/RECURSIVE_SEMANTIC_DISCOVERY_COMPRESSION_RSDC_001.md | lines 9-135 | bytes [410,10405)
+  file SHA256 4feeb061748033c5e2bf3d83c25041093c5b06b0add7841fad6e33af690f86d4; span SHA256 7ae3d4be2ac668065b5afdb454d5b00d8941000be7f5e32920c0cc135914366c
+G-IDTD | design_deltas/v15.10/INVARIANT_DRIVEN_THEORY_DISCOVERY_IDTD_001.md | lines 9-80 | bytes [415,7529)
+  file SHA256 14bf4fdced0cccebeb5cb22a0cec3b7aff765e57efa25230626ddcf3b24bfdf4; span SHA256 6f2a9fdc6cbfb989d3a80d9978aad6f9e70496fe1cc1ecf3bb6dac8ddc9444d3
+PHYSICAL SOURCE LOCATORS / ACCESS LIMITS
+PHY-THERMO | DOE-HDBK-1012/1-92: Thermodynamics, Heat Transfer, and Fluid Flow, volume 1 | OFFICIAL_SCOPE_PAGE_READ; established physical balance formulations; numeric design limits not imported
+  https://www.energy.gov/ehss/articles/doe-hdbk-10121-92
+PHY-HEAT | DOE Fundamentals Handbook: Thermodynamics, Heat Transfer, and Fluid Flow, volume 2 | OFFICIAL_SEARCH_ABSTRACT; full text retrieval failed
+  https://www.osti.gov/biblio/10170081
+PHY-ELECTRIC | DOE-HDBK-1011/2-92: Electrical Science | OFFICIAL_SCOPE_PAGE_READ; foundational textbook relations; not an installation standard
+  https://www.energy.gov/ehss/articles/doe-hdbk-10112-92
+PHY-PUMP | DOE: Pump Systems and Improving Pumping System Performance sourcebook | OFFICIAL_PAGE_READ; system-level comparator and publication locator
+  https://www.energy.gov/cmei/ito/pump-systems
+PHY-PV | PVWatts Version 1 Technical Reference, NREL/TP-6A20-60272 | OFFICIAL_SEARCH_ABSTRACT; full text retrieval failed; scoped approximation only
+  https://www.nrel.gov/docs/fy14osti/60272.pdf
+PHY-LINE | IEEE 738-2023: Current-Temperature Relationship of Bare Overhead Conductors | OFFICIAL_ABSTRACT_READ; full standard not accessed; no conformance claim
+  https://standards.ieee.org/ieee/738/10207/
+PHY-LINE-AGE | Extension of dynamic line rating models with the effect of conductor aging (2022) | PRIMARY_PUBLICATION_SEARCH_ABSTRACT; established candidate-comparator prior art
+  https://ieeexplore.ieee.org/document/9857524/
+PHY-LINE-SAG | Conductor Temperature Estimation and Prediction at Thermal Transient State in Dynamic Line Rating Application (2018) | PRIMARY_PUBLICATION_SEARCH_ABSTRACT; sag and tension measurement context
+  https://ieeexplore.ieee.org/document/8352008/
+PHY-DLR | Hourly Dynamic Line Ratings for Existing Transmission Across the Contiguous United States (Preliminary Results) | NATIONAL_LAB_SEARCH_ABSTRACT; weather and thermal state coupling
+  https://research-hub.nlr.gov/en/publications/hourly-dynamic-line-ratings-for-existing-transmission-across-the-/
+LOCAL PROTOCOL FREEZES (preserved exactly, not independent preregistration)
+BEGIN experiment_memo.txt SHA256 19984e724c2453b83f78694c0c65333e629c2da0cfd976fee2bde84122a1fa71
+GARDEN ELECTRICITY INTERFACE EXPERIMENT E1 — LOCAL PREDICTION FREEZE
+Date: 2026-10-09. NONCANONICAL RESEARCH. Frozen before implementing/running E1.
+This is a timestamp-free local protocol freeze, not independent preregistration.
+
+Source read: GARDEN_SCIENCE_ALL_2026-10-09.txt (including 100 parked entries,
+33 opportunities and 026 scripts); v15.10 abstraction delta; Tree Core v0.8.1;
+v15.9.1 GCSC functional contracts and detailed semantic patch.
+Scope: one electricity lifecycle interface, not a full Garden implementation.
+It differs from 026: no hidden thermal compartment or structure selection.
+
+PHYSICAL SITUATIONS
+Converter current at transformer terminals -> period-averaged winding/stray
+heat -> steady thermal balance -> permitted current -> equal-service choice.
+AGENCY is the external experiment/controller only, never the transformer.
+
+LAW AND DOMAIN
+Let q_h=I_h/I_ref (dimensionless), M_p=sum_h q_h^2 h^p.
+Loss L=P0 + D M0 + E M2 + S M0.8 [W]. This is the known harmonic transformer
+loss approximation, not a fundamental invariant. Source: Senol, Bayram, Shi,
+2025 accepted manuscript, equations 5, 7, 8; IEEE C57.110 source family.
+https://strathprints.strath.ac.uk/92564/1/Senol-etal-IEEE-TECE-2025-Transformer-aging-under-harmonic-emissions-from-electric-vehicle.pdf
+Constant coefficients, periodic currents, prescribed near-sinusoidal terminal
+voltage, no DC, calibrated finite frequency band, linear magnetic operation,
+balanced phases. Harmonic amplitudes refer to AGGREGATED terminal currents;
+moments of separate sources must not simply be added before phasor summation.
+No claim to represent saturation, protection, resonance, full hotspot fields,
+ageing, voltage limits, or a complete transformer certification standard.
+Thermal proxy: G(theta-Ta)=L [W], steady state only. It is not a certified
+hotspot model. Useful power Puse=sqrt(3)*V_LL*I1 at unity displacement factor.
+Electrical balance Psource=Puse+L+Paux. Paux is dissipated outside transformer.
+
+FIXED SYNTHETIC PARAMETERS (not fitted, measured or manufacturer specifications)
+I_ref=1000 A; V_LL=400 V; P0=1000 W; D=3000 W; E=300 W; S=150 W;
+G=80 W/K; Ta=40 degC; theta_limit=105 degC; I_rms_limit=1200 A.
+Spectra: fundamental I1 plus exactly 0.20 I1 at harmonic 5 or harmonic 13.
+Both have THD=0.20 and I_rms=I1*sqrt(1.04).
+At I1=950 A: predict low-harmonic thermal proxy <105 degC and high >105 degC.
+Prediction: high-minus-low loss = (I1/Iref)^2 * .04 *
+  [E*(13^2-5^2)+S*(13^.8-5^.8)] >1500 W at I1=950 A.
+Maximum I1 is min(Irms_limit/sqrt(1.04),
+ Iref*sqrt([G*(theta_limit-Ta)-P0]/K)),
+where K=D*1.04+E*(1+.04*h^2)+S*(1+.04*h^.8).
+Predict low-harmonic permissible I1 > high by >150 A.
+
+COMPARATORS AND MAIN NULL
+RMS-only assumes all spectrum has fundamental loss coefficient.
+RMS+THD comparator assumes all nonfundamental power at h=5 (explicitly weak).
+Conservative RMS+THD comparator assumes all harmonic power at h=13 (declared
+finite band 5..13 only). Repaired interface sends M0,M2,M0.8 and coefficients.
+Full-spectrum baseline sums each harmonic's loss term without moments.
+Prediction: repaired interface equals full-spectrum baseline loss within
+1e-9 W and every discrete equal-service decision on fixed synthetic cases.
+This is a negative test of Garden-specific incremental physical/economic value.
+No superiority versus modern full-state physical modelling is predicted.
+For randomized verification: 200 spectra, fixed seed 20261009, orders
+1,5,7,11,13; fundamental 500..1100 A and harmonic squared ratios total 0..0.09.
+No learning, fitting, held-out mechanism, or blind-discovery claim.
+
+ECONOMIC SCENARIO (conditional, not measured)
+At I1=800 A both modes satisfy the SAME proxy thermal and current limits and
+deliver identical useful power. Low-harmonic mode has assumed auxiliary loss
+200 W, high-harmonic mode 0 W; assumed implementation cost 1200 currency units,
+5-year straight-line annualization, zero discount, 50/year maintenance,
+8000 operating hours/year and energy price 0.10 currency units/kWh.
+Predict net energy saving >900 W after auxiliary loss; conditional annual net
+benefit >400 currency units after annualized implementation and maintenance.
+Full-spectrum baseline selects identical mode and achieves identical benefit;
+incremental Garden gain versus that baseline is exactly zero before any extra
+Garden implementation cost. These are hypothetical modes, not demonstrated
+controllable waveforms or market cost quotes. No industry extrapolation.
+
+FAILURE AND DOMAIN TESTS
+At zero harmonic amplitude all comparators coincide. At E=S=0 RMS suffices.
+At zero load loss is P0. Nonnegative coefficients imply nonnegative loss.
+Numerical period integration of squared reconstructed current must agree with
+Parseval RMS (orthogonal integer harmonics). Thermal/electrical balance residuals
+must be <=1e-8 W. Optimizing a missing-spectrum model at 950 A should choose
+zero-auxiliary high-harmonic mode and be flagged infeasible by full evaluation.
+
+SECOND CYCLE — TEST REPRESENTATION VALIDITY
+Construct two nonnegative harmonic energy distributions on 5,7,11,13 from the
+null vector of rows [1,h^2,h^.8], with equal total harmonic energy .04 and same
+fundamental. They share all retained moments. Add an explicitly ARTIFICIAL
+residual coefficient r_h=epsilon*(h/13)^1.5 for h>1, epsilon=5000 W.
+Predict moments still equal within 1e-10, but exact perturbed loss differs.
+For any spectrum, |L_true-L_model|<=epsilon*M_harm. Hence absolute temperature
+error <=epsilon*M_harm/G. A robust thermal gate must include that loss margin;
+without a coefficient-error bound the compressed interface is UNKNOWN.
+For a common action set made feasible by this robust margin, cost-only regret
+is <=2*epsilon*max_a(M_harm(a))*hours*price/1000, excluding investment costs
+already included equally. This is the standard bounded-model-error argument.
+Deviation from h^2 is already studied, e.g. Liu et al. 2016:
+https://ietresearch.onlinelibrary.wiley.com/doi/10.1049/iet-epa.2015.0559
+The artificial h^1.5 term is a falsification instrument, not a physical claim.
+
+PROMOTION BOUNDARIES
+Any predicted numerical mismatch beyond tolerance falsifies implementation or
+declared model contract. Real-transformer deployment needs independently measured
+spectrum, coefficients, thermal fields and admissible controls with full safety
+constraints. EMPIRICAL_VALIDATION=NOT_RUN; FRONTIER_NOVELTY=NOT_ESTABLISHED;
+REAL_ECONOMIC_VALUE=UNKNOWN; BLIND_METHOD_ADVANTAGE=NOT_TESTED.
+
+END experiment_memo.txt
+BEGIN c6_protocol.txt SHA256 b7ec5e6fb420830078a9577c1417d6a60776b5f4ee5029bb6c14706ab30fc43d
+C6 bounded interval revalidation protocol freeze, before implementation/run.
+Date 2026-10-09. Local protocol only, not independent preregistration.
+Domain: finite nonnegative spectral energies x [per-unit current squared],
+8 harmonic bins [1,5,7,11,13,17,19,23], exact rational numerical inputs.
+Old retained features: total energy, fundamental energy, old kernel loss.
+Old kernel k_h=3000+10*h^2 [W], synthetic and NOT fitted transformer law.
+New kernel: k_h plus 120 W at h=13. Fixed offset P0=1000 W.
+Thermal proxy limit G*(Tlimit-Ta)=5200 W total, so variable loss limit=4200 W.
+100 seeded scenarios (20261009) with fundamental energy 0.30..1.50 in .01
+steps and each remaining harmonic energy 0..0.015 in .001 steps.
+Predictions: old summaries do not close the new kernel. Exact LP bounds
+contain full-spectrum new loss in every case. Any upper-bound accepted case
+must satisfy the full-spectrum proxy limit. A lower-bound rejection must be
+truly infeasible. Ambiguous cases must not silently pass; require new input.
+For closed old kernel the interval width is zero. Explicitly infeasible
+measurements must yield INFEASIBLE; unsupported unbounded profiles UNKNOWN;
+budget exhaustion INCOMPLETE. Checked primal and dual certificates required.
+These are known linear-programming facts, not new physics/discovery.
+Comparators: always full-spectrum recovery; edge scalar loss query (one value)
+when historic waveform/state remains available; conventional kernel-aware LP
+(exactly the same algorithm, hence guaranteed tie); worst-case support bound.
+Communication is marginal revalidation payload with old summaries already
+stored, same trigger/update, float64 (8 bytes/value), 24-byte synthetic header
+per newly requested response, one scalar query for ambiguous cases. All local
+LP computation cost is charged separately and measured only as local runtime.
+Full spectrum response is 8*8+24=88 bytes. Scalar response=8+24=32 bytes.
+No latency/energy/money savings inferred from bytes; local exact rational LP
+may be slower/costlier than requesting one scalar. No economic superiority
+claimed without total-system deployment comparison. Target >20% marginal
+byte reduction vs scalar-query baseline is only this constructed workload.
+
+END c6_protocol.txt
+END ELECTRICITY RESEARCH CYCLE. All unsettled scientific/status boundaries remain explicit.
