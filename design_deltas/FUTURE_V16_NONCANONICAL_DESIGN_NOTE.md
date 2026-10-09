@@ -16,10 +16,11 @@ Run GSK reconstruction on held-out predecessor obligations and exceptions. Requi
 ## Stage 3 — bounded evaluation priorities
 1. RCC + VEI: control and actual-effect integrity.
 2. USM + MCC: situation typing and material context closure.
-3. REP + SHR: representation independence and historical search reuse.
-4. IDTD + RSDC: theory discovery and recursive compression.
-5. CEA / V1511-KR-001: **already a full specified candidate**, but still requires implementation, tests, adversarial review and admission qualification.
-6. Other recovered directions only after owner collision/equivalence checks.
+3. DSC-001 Rev 2: evaluate reproducible frozen-snapshot compilation and bounded obligation audit before any completeness claim; unimplemented candidate.
+4. REP + SHR: representation independence and historical search reuse.
+5. IDTD + RSDC: theory discovery and recursive compression.
+6. CEA / V1511-KR-001: **already a full specified candidate**, but still requires implementation, tests, adversarial review and admission qualification.
+7. Other recovered directions only after owner collision/equivalence checks.
 
 This order is an evaluation preference, not a schedule or permission to skip prerequisite controls.
 
