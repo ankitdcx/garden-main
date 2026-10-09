@@ -2985,3 +2985,182 @@ byte reduction vs scalar-query baseline is only this constructed workload.
 
 END c6_protocol.txt
 END ELECTRICITY RESEARCH CYCLE. All unsettled scientific/status boundaries remain explicit.
+
+
+4.10 ELECTRICITY END-USE: COMPRESSED AIR, A DOCUMENTED LARGE SAVING
+Executed 2026-10-09. NONCANONICAL RESEARCH. Source base ce2b1eaf6f37c31b845202655b09b8694791dd81.
+
+Question: find one physical situation, apply the v15.10/TREE mapping and identify substantial cost savings. Selected boundary: electricity -> industrial compressed air -> useful production, parasitic discharge and recurrent maintenance. This is a retrospective worked example of known engineering, not a blind discovery. The historical intervention was performed by the plant team, not Garden. This bounded branch does not replace the electricity lifecycle map or declare it complete.
+
+4.10.1 Historical economic anchor and limits
+DOE's January 2001 Visteon Monroe case reports over $560,000/year in savings, an 11.5% electricity-cost reduction and more than 50% lower compressed-air consumption per production unit. Reduced demand enabled three reciprocating compressors to be taken offline. The reported improvement occurred during the earlier plant program; these are historical dollars, not a 2026 quote. Project capital cost and raw interval readings are unavailable in the inspected case. Thus full net present value cannot be reconstructed. Do not attribute the outcome to Garden or to a single isolated repair.
+
+Source owner: U.S. DOE, DOE/ORNL-019, January 2001, hosted by Compressed Air Challenge; pages 1-3, Summary and Results.
+https://www.compressedairchallenge.org/data/sites/1/media/library/casestudies/Visteon-CompAir-Steel.pdf
+Exact PDF bytes: 322561; SHA256 77b7809a6ad8f8220017535cb549005c1b200a9e7fd9a9b7018e67abb7ece2e6.
+Source inventory caveat: the initial stated total horsepower and later reported base/peak/offline horsepower do not reconcile by simple addition. Equipment/time scope needs clarification; no energy result here is derived from those horsepower totals.
+
+Separate cost/payback cross-check within the same technology: DOE's November 2003 American Water Heater case reports 2,345,000 kWh/year and $129,000/year energy savings, plus $31,000/year maintenance/cooling savings; $228,000 investment gives 17.1-month simple payback. This was a combined retrofit, including differentiated treatment, pressure, storage, controls, leaks and cooling. Its site-specific benefits cannot be assigned to an arbitrary factory.
+Source owner: U.S. DOE, DOE/GO-102003-1716, pages 1-4.
+https://www1.eere.energy.gov/manufacturing/tech_assistance/pdfs/bp_cs_americanwaterheater.pdf
+Exact PDF bytes: 834841; SHA256 b4e6067e923828bb75095ed997d0fadbe0f13b81b49ffc3f67d78b8083468bb4.
+
+4.10.2 How the actual Garden design is used
+Read V15_10_ABSTRACTION_GCSC_DELTA.md in full and TREE_CORE_v0.8.1_2026-09-23.txt sections 1.2-1.8, 2.4-2.6 and required per-record fields. Their exact hashes appear in the executable view below; source boundaries from section 4.9 remain in force.
+ROOT: identities, source ownership, scope, status axes, ten facets and no-self-admission.
+TRUNK: observations -> typed situations -> constrained candidates -> comparison -> operator authorization -> measurement and correction. No physical action is performed here.
+BOUNDARY: compressor performance, pneumatic balances, terminal service and cost contracts remain specialist equations, not universal Garden laws.
+Objects: TIME is cycle/shift; SPACE is plant/branch; THING is compressor, air, receiver or pipe; EVENT is pressure change, production stop or new leak; ACTION is repair or mode selection; AGENCY is the authorized human operator; RULE is the scoped physical/engineering obligation; VALUE is net avoided cost; CONTEXT is production/ambient/asset condition; CLAIM is a source-reported or calculated saving. No air molecule is assigned authority, ownership or agency.
+Relations used in the bounded semantic records include frames, dependsOn, acts and references. Additional explicit process dependencies carry typed state/flow ports. The 24-relation vocabulary is not forced into every situation. Semantic plausibility is not physical causation or normative authority.
+Seven Forms: CONSTRUCT equipment/network; CONTRACT service and typed interface; STATE pressure/temperature/inventory/mode; RELATION dependencies; PROCESS production/repair/control sequence; RULE balances and limits; PROJECTION summaries such as total airflow or aggregate bill.
+All ten facet bindings are retained in compressed_air_case.py, including source/evidence, effect safety, resource termination, recovery and human authorization. Unknown real-plant inputs remain unresolved. Record-valued ports are intentionally opaque and need field/time/calibration qualification before operational use.
+This reuses SIC-0.1's finite research audits; it does NOT claim to execute full GSL, SAL interpretation registries, TREE_CORE-r6 canonical S0/S1/S2, admission, or a source-retention gate. It does not repair earlier TREE_CORE integrity debt. A structural graph check cannot self-admit a financial or physical claim.
+
+4.10.3 Cross-situation audit and three search operators
+The economically material chain is: useful demand and terminal quality -> leakage/idle demand -> receiver inventory -> compressor operating mode -> metered electricity -> net cost. The key engineering risk is assuming that less wasted air automatically means proportionally less electrical consumption.
+
+GAP-CA1 | Demand reduction -> compressor modes -> electrical power.
+Projection-Loss: Y=(delivered flow, header pressure) omits running/unloaded/stopped modes. In the explicit toy model below, q=1 kg/s and the same service pressure are compatible with 200 or 260 kW depending on whether a second unit remains unloaded. Thus Y is not sufficient to predict power. Adding modes and valid compressor maps repairs this particular projection. KNOWN engineering, not a new invariant.
+
+GAP-CA2 | Repair -> smaller supply requirement -> unit shutdown.
+Necessity-Challenge: challenge 'both units must remain on'. With the synthetic useful demand 1 kg/s and leakage 0.2 kg/s, one 1 kg/s unit is initially insufficient. After the leak is eliminated, one meets the specified steady demand. This is admissible only when transient demand, response time, pressure/quality and reserve obligations also allow it. A 5% sustained excess demand defeats the one-unit policy; a small receiver cannot rescue it indefinitely.
+
+GAP-CA3 | Feasible actions -> real money.
+Decision-Sufficiency: retaining power/mode data changes the cost comparison. Under the fixed toy contract, stopping the redundant unloaded unit after repair saves an additional 60 kW, or $48,000/year gross at the assumed hours/tariff. It is preferred only if its extra annualized implementation, maintenance, interruption and reliability costs total less than that amount. Against a conventional optimizer with the same information and constraints, Garden's incremental operating benefit is zero in this test. Audit-labor or faster-deployment benefits remain unmeasured.
+
+GAP-CA4 | Stored air -> short measurement window.
+Equal production and equal endpoint pressure alone do not prove equal energy service. Track receiver mass and thermal state: m=P_abs*V/(R*T). Compare equal initial/final stored mass and energy, or include a separately justified storage correction. Otherwise draining the receiver counterfeits savings.
+
+GAP-CA5 | Compressor-room readings -> production endpoint quality.
+The output contract includes pressure, moisture/contamination and accepted product output. The first local review found that dew-point observation was absent from the sensor join; it was added, together with a product-quality record. Binding a port does not supply a missing sensor or verify quality.
+
+GAP-CA6 | Repair -> recurrence and baseline drift.
+Leaks can recur; production mix, operating hours, ambient conditions, compressor maps and tariffs can change. Validate persistence and compare matched production service. Off-shift airflow includes legitimate uses until inspection establishes otherwise.
+
+Ranked action within this example: first verify idle/leak demand and supply-mode response; second coordinate repairs with a qualified dispatch policy; third retain monitoring against recurrence. All six interface checks concern established mechanisms or missing site evidence. No frontier-novel claim survives because none is made. Physical joint satisfaction of all connected dependencies remains UNKNOWN without plant data.
+
+4.10.4 Quantitative equation contract and executed counterfactual
+Author model CA-POWER-001 (synthetic; not fitted to either historical plant):
+P(q,n)=n*P_u+(P_l-P_u)*q/q_max.
+q is total delivered mass flow [kg/s]; q_max is each identical unit's capacity [kg/s]; n is an integer number running; P_l and P_u are loaded and unloaded electrical powers [kW]. Both terms have kW dimensions. Domain: 0<=q<=n*q_max; 0<=P_u<=P_l. This is a cycle-averaged load/unload model, with negligible transition losses, constant pressure, unchanged auxiliaries and equivalent terminal service. It is not a thermodynamic law or an instantaneous safe-dispatch model.
+Inputs: q_max=1 kg/s, P_l=200 kW, P_u=60 kW; useful demand=1 kg/s; leak flow changes 0.2->0 kg/s. Hours=8000/year; tariff=$0.10/kWh. These are illustrative parameters, not extracted plant observations.
+Baseline: q=1.2,n=2 ->288 kW.
+Repair only, both units remain running: q=1,n=2 ->260 kW.
+Repair plus feasible shutdown: q=1,n=1 ->200 kW.
+Consequently repair alone saves28 kW; coordinated operation saves88 kW total. Additional dispatch benefit conditional on repair is60 kW. Do not add the28 kW again to the88 kW.
+Gross annual saving=88 kW*8000 h/year*$0.10/kWh=$70,400/year. Net is this amount minus actual added annual expenses and annualized investment. One hundred hypothetical installations satisfying the same model would give $7.04 million/year gross before those costs. This arithmetic is NOT an identified fleet, an adoption forecast or evidence of 100 eligible plants.
+
+Falsifiable prediction: for equipment independently shown to satisfy this fixed contract, matched operation should reduce average package power from288 to200 kW while preserving endpoint service and storage. A held-out power difference inconsistent with88 kW after measurement uncertainty rejects the model's applicability. Obtain uncertainty from meters/calibration and fitted-map residuals before freezing a field acceptance interval; none is invented here.
+Nulls: if removed leakage is replaced by equal blow-off, power saving is0 in the model. If a second running unit is required for the operating envelope, its shutdown benefit is unavailable. If remaining demand is1.05 kg/s, one1 kg/s unit is infeasible. A1 m3 ideal-gas receiver at300 K with20 kPa usable pressure band contains only0.232288 kg usable mass and covers a0.05 kg/s shortfall for4.645761 seconds, assuming isothermal behavior. Finite storage cannot cover a permanent deficit.
+The constraint-derived minimum-unit rule and conventional exhaustive feasible-action optimization agree at all40 tested nonzero demand values from0.05 to2 kg/s. This is a known-model equivalence check, not a blinded Garden method benchmark. No real hardware or MEASUR executable was run.
+
+4.10.5 Prior art, independent attack and remaining qualification
+DOE's compressed-air sourcebook explains that partial-load controls and unloaded consumption materially affect power, and that storage and compressor controls must be considered together. AIRMaster+ already accounts for interactions between efficiency measures. Their existence rejects novelty for the basic leak-repair/dispatch combination.
+https://www1.eere.energy.gov/manufacturing/tech_assistance/pdfs/compressed_air_sourcebook.pdf
+https://www.energy.gov/sites/prod/files/2014/04/f15/airmaster_user_manual.pdf (scenario and measure interactions, printed pp141-147)
+Modern comparator: ORNL MEASUR documentation inspected on2026-10-09, displayed v1.2.5, describes cycle-average compressor power with blowdown, off-load, reload, pump-up, modulation and storage timing. This is more detailed than CA-POWER-001 and is an appropriate baseline for actual site work. No superiority over that model is claimed.
+https://industrialresources.ornl.gov/measur/suite/docs/group__load__unload__compressor__assessment
+https://industrialresources.ornl.gov/measur/suite/docs/group__compressed__air__assessments
+
+A separate adversarial agent inspected the sources, ran the script and independently checked arithmetic. It identified four corrections: retain kinetic/potential terms in the exact energy balance; bind terminal moisture/product quality into measurement; call60 kW the conditional dispatch benefit rather than an identified factorial interaction; restrict missing project-cost status to Visteon. Corrections were applied. Same-family agent review is not independent external certification.
+Executable checks also inject an incompatible mass-flow unit and remove the sequencer's mode-command edge; both become unresolved. All plant states still require domain/evidence qualification. Eight consumer inputs have no bound external site source, and twelve situation-specific unknowns remain. Coverage counts below are structural inventory counts, not a probability of savings or completeness of industrial science.
+
+Economic conclusion: a documented historical opportunity of over half a million dollars per year exists in this electricity end-use category. The mapping identifies why the repair, demand, storage, operating-mode and verification steps must be considered together. It cannot promise the same result at an unspecified site, quantify a net Visteon investment return from missing costs, or establish an additional Garden saving over expert practice.
+
+4.10.6 Reproducible graph, invariant bindings, transition audit and arithmetic
+Run from repository root:
+python3 design_deltas/v15.10/compressed_air_case.py
+The compact generated view follows; inputs/outputs, ten facets, unknowns and source refs are executable in the same file. Quantitative state never enters via fabricated external bindings.
+
+NONCANONICAL_RESEARCH; RETROSPECTIVE_KNOWN_ENGINEERING
+Coverage is of this declared audit model, never of all plant reality.
+situations=12; transitions=25; laws=11; bindings=31; connected_incoming_pairs=27
+unbound_external_inputs=8
+TREE routing: ROOT source/status/facets; TRUNK typed audit and comparison; BOUNDARY compressed-air equations and plant adapters.
+Not TREE_CORE-r6: no claim of canonical encoding, source retention or admission.
+Seven Forms interpreted as system components / interface contracts / persistent state / dependencies / event processes / scoped rules / coarse views.
+All ten facets bound per situation; quantitative site applicability remains UNKNOWN.
+CA01 | CA/supply | Motor and compressor convert electricity to compressed air | ENERGY,MASS,MODE_POWER
+  UNKNOWN: Compressor maps and restart constraints UNKNOWN
+CA02 | CA/supply | Condition air and remove heat and condensate | MASS,ENERGY,QUALITY
+  UNKNOWN: Actual dryer type, purge and drain flows UNKNOWN
+CA03 | CA/supply | Receiver stores mass and energy between demand events | MASS,ENERGY,INVENTORY
+  UNKNOWN: Receiver volume, heat exchange and initial state UNKNOWN
+CA04 | CA/delivery | Pipe network supplies useful and parasitic branches | MASS,PRESSURE,QUALITY
+  UNKNOWN: Spatial pressure losses and terminal requirements UNKNOWN
+CA05 | CA/delivery | End use performs production during an active cycle | PRESSURE,QUALITY,SERVICE
+  UNKNOWN: End-use flow/quality envelopes and product mix UNKNOWN
+CA06 | CA/delivery | Leaks and idle branches discharge air without useful output | MASS,LEAK
+  UNKNOWN: Remaining legitimate idle demand must be separated from leakage
+CA07 | CA/control | Sensors sample electrical and pneumatic state | MEASUREMENT
+  UNKNOWN: Meter calibration, time alignment and uncertainty UNKNOWN
+CA08 | CA/control | Sequencer selects supply modes for the next interval | MASS,PRESSURE,DISPATCH
+  UNKNOWN: Capacity reserve, starts/hour and response limits UNKNOWN
+CA09 | CA/control | Idle-production event changes branch isolation | SERVICE,DISPATCH
+  UNKNOWN: Stored-pressure and process interlocks require plant authorization
+CA10 | CA/recovery | Inspection distinguishes repairable leaks from required demand | MEASUREMENT,SERVICE
+  UNKNOWN: Off-shift flow alone does not identify each defect
+CA11 | CA/recovery | Authorized maintenance repairs a located defect | SERVICE,MEASUREMENT
+  UNKNOWN: Repair persistence and downtime costs UNKNOWN
+CA12 | CA/recovery | Compare matched service and storage before accepting savings | INVENTORY,SERVICE,VALUE,MEASUREMENT
+  UNKNOWN: Raw interval data unavailable; Visteon project cost UNKNOWN (AWHC reports cost)
+CAT01 CA01 -> CA02 : hot_air_kg_s
+CAT02 CA02 -> CA03 : clean_air_kg_s
+CAT03 CA02 -> CA04 : dewpoint_K
+CAT04 CA03 -> CA04 : header_Pa
+CAT05 CA04 -> CA03 : network_draw_kg_s
+CAT06 CA04 -> CA05 : terminal_Pa,terminal_dewpoint_K
+CAT07 CA05 -> CA04 : demand_kg_s
+CAT08 CA06 -> CA04 : leak_kg_s
+CAT09 CA03 -> CA06 : header_Pa
+CAT10 CA01 -> CA07 : compressor_kw,actual_mode
+CAT11 CA02 -> CA07 : treatment_kw
+CAT12 CA03 -> CA07 : header_Pa,receiver_K,stored_kg
+CAT13 CA04 -> CA07 : terminal_Pa,terminal_dewpoint_K
+CAT14 CA05 -> CA07 : good_units_s,quality_record
+CAT15 CA06 -> CA07 : leak_kg_s
+CAT16 CA07 -> CA08 : observed_state
+CAT17 CA08 -> CA01 : mode_command
+CAT18 CA05 -> CA09 : production_active
+CAT19 CA09 -> CA06 : isolation_command
+CAT20 CA07 -> CA10 : observed_state
+CAT21 CA10 -> CA11 : repair_targets
+CAT22 CA11 -> CA06 : leak_conductance
+CAT23 CA11 -> CA12 : repair_event
+CAT24 CA07 -> CA12 : observed_state
+CAT25 CA12 -> CA10 : recurrence_flag
+MASS [EXACT_CLASSICAL_BALANCE] dm/dt = sum(mdot_in)-sum(mdot_out) | kg/s on both sides; all leaks, drains, purge, blow-off and storage included
+ENERGY [EXACT_CLASSICAL_BALANCE] dE_cv/dt = Qdot + Wdot_in + sum(mdot*(h+v^2/2+g*z))_in-out | W on both sides; stored/internal, kinetic, potential and material-flow energy included
+INVENTORY [CONSTITUTIVE_AND_COMPARISON] m=P_abs*V/(R*T); matched tests require equal initial/final m,U | Ideal gas, uniform temperature; Pa*m^3/(J/(kg*K)*K)=kg; real-gas correction if material
+PRESSURE [ENGINEERING_CONSTRAINT] p_terminal(t) >= p_required(t), within upper rated limits | Pa; constraints at each consumer across transient events, not just mean header
+QUALITY [ENGINEERING_CONSTRAINT] dewpoint_terminal <= specified_limit; contamination within specification | K; pressure-dew-point definition, operating pressure and product requirements bound
+MODE_POWER [EMPIRICAL_MODEL] P=n*P_u+(P_l-P_u)*q/q_max; 0<=q<=n*q_max | kW; identical ideal load/unload units, cycling losses ignored; measured maps supersede
+LEAK [SCOPED_CONSTITUTIVE] mdot_leak=C(T,gas,orifice)*P_abs | kg/s; choked ideal-gas branch at fixed temperature only, not universal leak law
+DISPATCH [ENGINEERING_CONSTRAINT] available_supply+permitted_storage_draw >= demand+losses | kg/s; recovery, reserve, pressure, starts and failure response are separate limits
+SERVICE [ENGINEERING_CONSTRAINT] delivered output, quality and reliability must meet the same contract | No dollar saving from reducing required service or omitting repair/quality costs
+MEASUREMENT [EVIDENCE_CONSTRAINT] align clocks, calibrate meters, retain uncertainty and before/after context | UNKNOWN measurements cannot establish savings or cause physical actuation
+VALUE [ECONOMIC_CONDITION] net=avoided_total_bill+avoided_maintenance-added_cost-annualized_capital | USD/year; equal service and inventory; no double counting energy and bill savings
+CA01 REQUIRED_CONTEXT: grid_kw,inlet_kg_s
+CA05 REQUIRED_CONTEXT: production_schedule
+CA08 REQUIRED_CONTEXT: operating_envelope
+CA09 REQUIRED_CONTEXT: isolation_permit
+CA11 REQUIRED_CONTEXT: maintenance_permit
+CA12 REQUIRED_CONTEXT: capital_and_maintenance,tariff
+Port status: all declared transfers structurally bound; numerical physics NOT_VERIFIED.
+Synthetic model arithmetic and nulls (not historical plant measurements):
+baseline_kw=288 [exact 288]
+repair_only_kw=260 [exact 260]
+coordinated_kw=200 [exact 200]
+repair_only_saving_kw=28 [exact 28]
+combined_saving_kw=88 [exact 88]
+additional_dispatch_saving_after_repair_kw=60 [exact 60]
+repair_only_gross_usd_year=22400 [exact 22400]
+combined_gross_usd_year=70400 [exact 70400]
+allowed_extra_annual_cost_vs_repair_only=48000 [exact 48000]
+illustrative_100_site_gross_usd_year=7040000 [exact 7040000]
+tank_seconds_at_5pct_deficit=4.64576074 [exact 4000/861]
+garden_extra_vs_same_conventional_dispatch=0 [exact 0]
+awhc_simple_payback_months=17.1 [exact 171/10]
+Garden source V15_10_ABSTRACTION_GCSC_DELTA.md SHA256 90a58c337bc87c2e445eb56d6197cddea845f74485339e074b0818d70dae8479
+Garden source TREE_CORE_v0.8.1_2026-09-23.txt SHA256 4af3a2c4c8d8577909735fb61c42e0f43324dc0147d8b24146b4561ee56511fa
+Research seed digest (not canonical Garden encoding): 70d4e2057c45d7b372644caace7b74128b93a50d54116de1d1fb999100a46fdd
