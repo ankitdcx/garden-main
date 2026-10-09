@@ -1,39 +1,1467 @@
-# GARDEN v15.10 — COMPLETE SCIENTIFIC RESEARCH REGISTER — 2026-10-09
+# Garden v15.10 — Unified Scientific Research Register
+**Date:** 2026-10-09  
+**Status:** NONCANONICAL RESEARCH. Scientific novelty, empirical validation and economic savings remain unestablished.  
+**Scope:** 100 original theory candidates, five major domain investigations, 16 transfer investigations, 33 consolidated high-value opportunities (overlapping sets), mathematical examples and Candidate 026 synthetic evidence.
 
-Status: NONCANONICAL RESEARCH; NOT 100 verified discoveries. This consolidated file contains all scientific proposal registers and evidence summaries produced today. It preserves the source sections below as historical records, including older claims corrected by later addenda. **When statements conflict, the latest explicit correction and evidence boundary controls.** The source text is not itself an admitted Garden design update.
+## 1. Mechanism — Garden scientific theory upgrade engine
 
-## Contents
-1. 100 candidate scientific theory upgrades — REV3 and its corrections
-2. Candidate 026 synthetic benchmark gap closure
-3. Five domain investigations and sixteen transfers
-4. Consolidated 33 high-value opportunity investigations
+**1.1 Map:** Freeze the strongest published baseline, its domain, equations, units, experiments and competing explanations. Represent the situation using TIME, SPACE, THING, EVENT, ACTION, AGENCY (only if applicable), RULE, VALUE, CONTEXT and CLAIM. Type only meaningful edges among Garden's 24 core relations. Instantiate the seven forms CONSTRUCT, CONTRACT, STATE, RELATION, PROCESS, RULE and PROJECTION. Preserve evidence, identity, dependency, scope, uncertainty, effects, resources, audit and recovery facets.
 
-## Evidence and corrections
-- No novel scientific law has been independently established. Worldwide novelty screening, real-world validation and comprehensive 100-theory derivations remain pending.
-- REV3 states that the 100 mechanisms were keyword-derived hints, not actual residual-based diagnoses.
-- Candidate 026 thermal memory is established physics; benchmark evidence tests a modelling procedure, not discovery of new physics.
-- Dollar figures supplied as total industry losses or theoretical opportunity must not be counted as Garden-specific incremental savings.
-- The full scientific text is unified here. **Executable source code and machine-readable results remain separate supporting assets** because merging them as prose would make them less usable.
-- Garden's canonical Book, Technical Core and Catalogue remain unchanged.
+**1.2 Identify abstraction loss:** Let microscopic or detailed state be X, baseline observables Y=A(X), and evolution T. Search for admissible x1,x2 with A(x1)=A(x2) but A(Tx1) != A(Tx2). This demonstrates non-closure of that projection in the tested domain; it does not by itself establish a novel law.
 
-## Supporting reproducible assets
-- `garden_candidate026_harness.py`
-- `garden_candidate026_harness_results.json`
-- `garden_candidate026_strong_comparator.py`
-- `garden_candidate026_strong_results.json`
-- `garden_candidate026_strong_results_high_noise.json`
+**1.3 Diagnose rather than keyword-classify:** Use measured residual autocorrelation, joint field statistics, network changes, hysteresis tests and identifiable latent-state evidence. If the residual has not been measured, label the proposed mechanism a *title-derived hint* or UNKNOWN. Do not infer a mechanism from record index or its name.
 
-## Original source identities
-1. `Garden_v15_10_Scientific_Theory_Upgrades_100_REV3.txt` — Git blob 3caa7db98f118a22de20fb6749f2b79cefd8fea0
-2. `GARDEN_SCIENCE_REV3_GAP_CLOSURE_2026-10-09.md` — Git blob 088c1c767175d01cbc1ee34c000f9bfa8d0e68d6
-3. `GARDEN_SCIENCE_FIVE_DOMAINS_AND_16_TRANSFERS_2026-10-09.md` — Git blob 5710d99e091b7b80b421b3bad029a03197f7d8b6
-4. `GARDEN_SCIENCE_HIGH_VALUE_OPPORTUNITIES_FINAL_2026-10-09.md` — Git blob d0dc9ffb56a81c0a70b2f2cc61a9d9872edc22cc
+**1.4 Derive:** Introduce the smallest physically justified extra state or coupling. Attach TheoryEquationContract: variable dimensions, governing equations, domain, conservation, positivity, symmetry, boundary conditions, limiting baseline recovery, identifiability, uncertainty and falsifiers.
 
----
+**1.5 Compare and attack:** Compare against the strongest contemporary model, not just textbook approximations. Match data, compute and model complexity. Run synthetic recovery and null false-positive tests, noise-aware inference, blinded holdouts, preregistered primary endpoints, multiplicity correction and independent adversarial review.
+
+**1.6 Admission:** Track derivation, numerical verification, empirical evidence, worldwide novelty and real-world utility separately. UNKNOWN is never PASS. No generated scientific claim can self-admit into Garden. TREE_CORE build integrity and source retention remain separate unresolved gates.
+
+**1.7 Economics:** Incremental annual benefit = addressable annual cost × eligible share × independently measured incremental gain × adoption share − added costs. Do not confuse total industry loss with Garden-specific savings or sum overlapping opportunities.
+
+**1.8 Current evidence:** 100 candidate questions; ten illustrative mathematical examples; Candidate 026 synthetic comparator tests. Zero independently established new scientific laws, zero certified worldwide novelty findings, zero demonstrated real-world incremental savings.
+
+## 2. Summary of scientific theories and proposed upgrades
+
+### 2.1 Original 100 theory candidates
+| ID | Theory family | Proposed upgrade / research question | Mechanism hint (not verified) | Benefit if validated |
+|---|---|---|---|---|
+| 001 | Battery electrochemistry | interfacial stress memory | dynamic hidden state / delay | safer fast charging |
+| 002 | Battery electrochemistry | electrolyte concentration variance | heterogeneity / joint distribution | safer fast charging |
+| 003 | Battery electrochemistry | particle-size/contact covariance | heterogeneity / joint distribution | safer fast charging |
+| 004 | Battery electrochemistry | thermal-gradient persistence | heterogeneity / joint distribution | safer fast charging |
+| 005 | Battery electrochemistry | SEI connectivity hysteresis | network / geometry | safer fast charging |
+| 006 | Battery degradation | local heat-current covariance | heterogeneity / joint distribution | longer battery lifetime |
+| 007 | Battery degradation | charge-rest sequencing | dynamic hidden state / delay | longer battery lifetime |
+| 008 | Battery degradation | fracture-assisted reaction area | network / geometry | longer battery lifetime |
+| 009 | Battery degradation | lithium inventory redistribution | dynamic hidden state / delay | longer battery lifetime |
+| 010 | Battery degradation | electrode pore-network fragmentation | network / geometry | longer battery lifetime |
+| 011 | Heterogeneous catalysis | surface reconstruction memory | dynamic hidden state / delay | lower-energy chemical manufacture |
+| 012 | Heterogeneous catalysis | adsorbate-neighbor correlations | heterogeneity / joint distribution | lower-energy chemical manufacture |
+| 013 | Heterogeneous catalysis | pulsed feed phase | state switching / hysteresis | lower-energy chemical manufacture |
+| 014 | Heterogeneous catalysis | active-site network percolation | network / geometry | lower-energy chemical manufacture |
+| 015 | Heterogeneous catalysis | poison desorption history | dynamic hidden state / delay | lower-energy chemical manufacture |
+| 016 | Chemical kinetics | competing-pathway occupancy | coupled latent kinetics | better reactor efficiency |
+| 017 | Chemical kinetics | barrier-distribution curvature | established parallel-pathway mixture; worked derivation | better reactor efficiency |
+| 018 | Chemical kinetics | solvent reorganization lag | dynamic hidden state / delay | better reactor efficiency |
+| 019 | Chemical kinetics | reactant clustering | network / geometry | better reactor efficiency |
+| 020 | Chemical kinetics | intermediate trapping memory | dynamic hidden state / delay | better reactor efficiency |
+| 021 | Nucleation | subcritical-cluster history | dynamic hidden state / delay | crystal and drug formulation |
+| 022 | Nucleation | surface-defect localization | mechanism unresolved — requires domain diagnostics | crystal and drug formulation |
+| 023 | Nucleation | solvent pulse memory | dynamic hidden state / delay | crystal and drug formulation |
+| 024 | Nucleation | impurity-cluster correlations | heterogeneity / joint distribution | crystal and drug formulation |
+| 025 | Nucleation | spatial supersaturation intermittency | heterogeneity / joint distribution | crystal and drug formulation |
+| 026 | Heat transfer | interface thermal memory | dynamic hidden state / delay | chip and battery cooling |
+| 027 | Heat transfer | anisotropic domain connectivity | network / geometry | chip and battery cooling |
+| 028 | Heat transfer | nonlocal hotspot coupling | coupled latent kinetics | chip and battery cooling |
+| 029 | Heat transfer | phase-transition latent-heat lag | state switching / hysteresis | chip and battery cooling |
+| 030 | Heat transfer | thermal-contact ageing | network / geometry | chip and battery cooling |
+| 031 | Fluid transport | pore-throat network damage | network / geometry | filtration and groundwater |
+| 032 | Fluid transport | wetting-front hysteresis | state switching / hysteresis | filtration and groundwater |
+| 033 | Fluid transport | particle clogging topology | network / geometry | filtration and groundwater |
+| 034 | Fluid transport | pressure-cycling memory | dynamic hidden state / delay | filtration and groundwater |
+| 035 | Fluid transport | multi-scale channel connectivity | network / geometry | filtration and groundwater |
+| 036 | Fracture mechanics | overload sequence memory | dynamic hidden state / delay | safer infrastructure |
+| 037 | Fracture mechanics | microcrack orientation correlations | heterogeneity / joint distribution | safer infrastructure |
+| 038 | Fracture mechanics | corrosion-fatigue coupling | coupled latent kinetics | safer infrastructure |
+| 039 | Fracture mechanics | grain-boundary connectivity | network / geometry | safer infrastructure |
+| 040 | Fracture mechanics | residual-stress redistribution | dynamic hidden state / delay | safer infrastructure |
+| 041 | Turbulence | intermittency-conditioned closure | heterogeneity / joint distribution | efficient transport and turbines |
+| 042 | Turbulence | wall-history dependence | dynamic hidden state / delay | efficient transport and turbines |
+| 043 | Turbulence | coherent-structure topology | network / geometry | efficient transport and turbines |
+| 044 | Turbulence | pressure-strain lag | dynamic hidden state / delay | efficient transport and turbines |
+| 045 | Turbulence | cross-scale transfer memory | dynamic hidden state / delay | efficient transport and turbines |
+| 046 | Solar cells | mobile-ion interface memory | dynamic hidden state / delay | longer-lasting solar modules |
+| 047 | Solar cells | trap-occupancy hysteresis | state switching / hysteresis | longer-lasting solar modules |
+| 048 | Solar cells | grain-boundary topology | network / geometry | longer-lasting solar modules |
+| 049 | Solar cells | humidity-illumination covariance | heterogeneity / joint distribution | longer-lasting solar modules |
+| 050 | Solar cells | contact ageing kinetics | network / geometry | longer-lasting solar modules |
+| 051 | Photosynthesis | dynamic disorder correlation | heterogeneity / joint distribution | artificial photosynthesis |
+| 052 | Photosynthesis | reaction-center occupancy feedback | coupled latent kinetics | artificial photosynthesis |
+| 053 | Photosynthesis | vibrational mode intermittency | heterogeneity / joint distribution | artificial photosynthesis |
+| 054 | Photosynthesis | antenna topology adaptation | network / geometry | artificial photosynthesis |
+| 055 | Photosynthesis | nonphotochemical quenching memory | dynamic hidden state / delay | artificial photosynthesis |
+| 056 | Neuroscience | phase-lag memory | state switching / hysteresis | better neural diagnostics |
+| 057 | Neuroscience | cell-type interaction topology | network / geometry | better neural diagnostics |
+| 058 | Neuroscience | adaptation-state retention | dynamic hidden state / delay | better neural diagnostics |
+| 059 | Neuroscience | dendritic compartment coupling | coupled latent kinetics | better neural diagnostics |
+| 060 | Neuroscience | glial metabolic feedback | coupled latent kinetics | better neural diagnostics |
+| 061 | Pharmacokinetics | transporter saturation history | dynamic hidden state / delay | precision dosing |
+| 062 | Pharmacokinetics | protein-binding displacement lag | dynamic hidden state / delay | precision dosing |
+| 063 | Pharmacokinetics | organ perfusion covariance | heterogeneity / joint distribution | precision dosing |
+| 064 | Pharmacokinetics | intracellular sequestration memory | dynamic hidden state / delay | precision dosing |
+| 065 | Pharmacokinetics | circadian clearance state | coupled latent kinetics | precision dosing |
+| 066 | Ecology | interaction-network rewiring | network / geometry | ecosystem resilience |
+| 067 | Ecology | seed-bank recovery memory | dynamic hidden state / delay | ecosystem resilience |
+| 068 | Ecology | spatial refuge connectivity | network / geometry | ecosystem resilience |
+| 069 | Ecology | predator-switching lag | state switching / hysteresis | ecosystem resilience |
+| 070 | Ecology | nutrient feedback delay | dynamic hidden state / delay | ecosystem resilience |
+| 071 | Epidemiology | contact-network memory | network / geometry | more accurate outbreak forecasts |
+| 072 | Epidemiology | infection-age infectiousness | mechanism unresolved — requires domain diagnostics | more accurate outbreak forecasts |
+| 073 | Epidemiology | regional mixing covariance | heterogeneity / joint distribution | more accurate outbreak forecasts |
+| 074 | Epidemiology | behavioral response lag | dynamic hidden state / delay | more accurate outbreak forecasts |
+| 075 | Epidemiology | immunity heterogeneity topology | heterogeneity / joint distribution | more accurate outbreak forecasts |
+| 076 | Soil biogeochemistry | mineral-accessibility topology | network / geometry | soil management and climate |
+| 077 | Soil biogeochemistry | wet-dry pulse memory | dynamic hidden state / delay | soil management and climate |
+| 078 | Soil biogeochemistry | microbial enzyme allocation | coupled latent kinetics | soil management and climate |
+| 079 | Soil biogeochemistry | aggregate fragmentation | network / geometry | soil management and climate |
+| 080 | Soil biogeochemistry | root-exudate spatial coupling | coupled latent kinetics | soil management and climate |
+| 081 | Climate dynamics | ocean vertical heat memory | dynamic hidden state / delay | better adaptation planning |
+| 082 | Climate dynamics | cloud-regime transition persistence | state switching / hysteresis | better adaptation planning |
+| 083 | Climate dynamics | land-moisture feedback | coupled latent kinetics | better adaptation planning |
+| 084 | Climate dynamics | aerosol-pattern covariance | heterogeneity / joint distribution | better adaptation planning |
+| 085 | Climate dynamics | ice-albedo spatial connectivity | network / geometry | better adaptation planning |
+| 086 | Materials mechanics | dislocation network topology | network / geometry | stronger lightweight materials |
+| 087 | Materials mechanics | grain-boundary slip memory | dynamic hidden state / delay | stronger lightweight materials |
+| 088 | Materials mechanics | strain-rate history | dynamic hidden state / delay | stronger lightweight materials |
+| 089 | Materials mechanics | phase-boundary stress covariance | heterogeneity / joint distribution | stronger lightweight materials |
+| 090 | Materials mechanics | defect-cluster intermittency | heterogeneity / joint distribution | stronger lightweight materials |
+| 091 | Protein kinetics | conformational-state memory | dynamic hidden state / delay | biomanufacturing |
+| 092 | Protein kinetics | substrate microdomain gradients | heterogeneity / joint distribution | biomanufacturing |
+| 093 | Protein kinetics | crowding-induced correlation | heterogeneity / joint distribution | biomanufacturing |
+| 094 | Protein kinetics | allosteric network topology | network / geometry | biomanufacturing |
+| 095 | Protein kinetics | product inhibition lag | dynamic hidden state / delay | biomanufacturing |
+| 096 | Optical materials | nano-inclusion spatial correlation | heterogeneity / joint distribution | sensors and photonics |
+| 097 | Optical materials | interface exciton coupling | coupled latent kinetics | sensors and photonics |
+| 098 | Optical materials | temperature-dependent disorder | heterogeneity / joint distribution | sensors and photonics |
+| 099 | Optical materials | nonlocal scattering memory | dynamic hidden state / delay | sensors and photonics |
+| 100 | Optical materials | defect-network percolation | network / geometry | sensors and photonics |
+
+### 2.2 Consolidated high-value opportunities (33; overlapping with the 100)
+| ID | Field | Missing information to test | Potential benefit | Earliest controlled test | Tractability |
+|---|---|---|---|---|---|
+| 01 | Industrial motor systems | Joint load/pressure/vibration histories | Energy and maintenance cost | 3–12 mo | High |
+| 02 | Food preservation | Microbial growth integrated with time-temperature and package transport | Spoilage avoided | 3–12 mo | High |
+| 03 | Industrial waste heat | Time-temperature-grade and network matching | Fuel and heat costs | 6–24 mo | High |
+| 04 | Water distribution | Pressure transient and deterioration-network memory | Water and pumping losses | 6–18 mo | High |
+| 05 | Industrial membrane separation | Fouling state and local concentration polarization | Energy and membrane life | 6–18 mo | High |
+| 06 | Cold-chain refrigeration | Thermal inertia, humidity, compressor switching | Energy and food quality | 3–12 mo | High |
+| 07 | Methane leak detection | Intermittent emissions with plume and sensor uncertainty | Recovered gas and avoided emissions | 3–12 mo | High |
+| 08 | Cement kiln efficiency | Particle thermal histories and calcination reaction gradients | Fuel and reject reduction | 6–24 mo | Medium |
+| 09 | Fertilizer efficiency | Soil N transport, microbial state, rainfall history | Yield and fertilizer savings | 1–3 yr | Medium |
+| 10 | Grid congestion optimization | Correlated flows, topology, storage and constraints | Congestion and curtailment | 6–24 mo | High |
+| 11 | Mining processing | Ore texture/fracture and liberation distributions | Energy and recovery | 6–24 mo | Medium |
+| 12 | Building cooling | Thermal mass, humidity and occupancy lag | Electricity and comfort | 3–12 mo | High |
+| 13 | Dynamic transmission line rating | Conductor thermal memory and span-wise weather fields | Congestion, capacity and deferred construction | 6–24 mo | High |
+| 14 | Biopharma bioreactor yield | Local shear/oxygen distribution and metabolic lag | Batch yield and reduced failures | 1–5 yr | Medium |
+| 15 | Metal additive manufacturing | Melt-pool thermal cycles, grain topology and residual stress | Lower rejection and rework | 1–4 yr | Medium |
+| 16 | Direct air capture | Water/CO2 coadsorption hysteresis and pore-network aging | Lower regeneration energy and sorbent replacement | 1–5 yr | Medium |
+| 17 | Corrosion prevention | Coating defects, electrochemistry and stress/flow histories | Avoided maintenance and failures | 1–5 yr | High |
+| 18 | Healthcare diagnostic error | Longitudinal evidence, uncertainty, workflow and escalation | Avoidable patient harm and care costs | 2–7 yr | Medium |
+| 19 | Drug discovery | Assay uncertainty, synthesis feasibility and distribution shift | Lower R&D cost per successful therapy | 1–7 yr | Medium |
+| 20 | Grid transmission losses | Electrical topology, reactive flow, conductor state | Reduced electrical losses | 1–5 yr | Medium |
+| 21 | Mining haulage efficiency | Haul cycles, terrain, state-of-charge and dispatch | Fuel and maintenance | 1–4 yr | High |
+| 22 | Water treatment energy | Membrane state, feed salinity, pressure recovery | Electricity and water cost | 1–4 yr | High |
+| 23 | Semiconductor fab energy | Tool-level thermal states and facility utility timing | Electricity and throughput | 1–4 yr | High |
+| 24 | Agricultural climate yield loss | Heat stress timing, water/nutrient state and cultivar response | Avoided crop losses | 2–10 yr | Medium |
+| 25 | Aviation fuel efficiency | Weather, routing, wake, aircraft state and operations | Fuel burn | 1–6 yr | Medium |
+| 26 | Shipping fuel efficiency | Hull fouling, wind assistance, route/weather state | Fuel burn | 1–6 yr | High |
+| 27 | Steel energy and carbon | Ore quality, furnace thermal profile and reduction kinetics | Fuel and emissions | 2–10 yr | Medium |
+| 28 | Cement carbon capture | Flue composition, solvent state and heat integration | Avoided emissions and energy | 2–10 yr | Medium |
+| 29 | Construction material reuse | Quality uncertainty, structural grading and logistics topology | Material and disposal costs | 1–7 yr | Medium |
+| 30 | Textile recycling | Fiber blend identification, degradation and sorting dynamics | Recovered material and avoided disposal | 1–7 yr | Medium |
+| 31 | Data-center cooling | Chip heat flux, coolant dynamics and facility power state | Electricity and capital utilization | 6–36 mo | High |
+| 32 | Soil carbon verification | Mineral accessibility, wet/dry microbial memory | Cheaper credible carbon measurement | 1–5 yr | Medium |
+| 33 | Precision chemical reactors | Intermediate populations and feed pulse histories | Higher conversion/selectivity | 6–24 mo | High |
+
+### 2.3 Five major cross-domain investigations
+1. Macroeconomic liquidity: regional settlement queues, payment topology and capital-flow delay; conditional benefit is better allocation and lower settlement friction, not guaranteed inflation elimination.
+2. Quantum transport: non-Markovian coherence and bath correlations; conditional benefit is better transport modelling, not a demonstrated superconductivity theorem.
+3. Deterministic AI hardware safety: barrier-controlled physical execution and fault tolerance; no clock frequency guarantees zero hallucinations.
+4. Modular urban infrastructure: time-dependent electricity, water, transit and agricultural resource coupling; benefit must beat existing district digital twins.
+5. Semiconductor yield: spatial thermal–stress–defect joint distributions; must outperform modern TCAD and process-control models.
+
+## 3. Details of upgrades, theory by theory
+
+### 3.1 Mathematical worked examples
+D. TEN MATHEMATICAL WORKED EXAMPLES
+WORKED 002 — Battery electrochemistry: electrolyte concentration variance
+Model/assumptions: For local electrolyte concentration c(x), let i(x)=i0 exp(-a/c(x)) for c>0, a>0 (illustrative transport-limited constitutive law, not universal Butler–Volmer). Aggregate I=E[i(c)].
+Derived result: Taylor expansion gives I-i(E[c]) = (1/2)i''(cbar)Var(c)+O(E|c-cbar|^3), with i''(c)=i(c)*a*(a-2c)/c^4. Thus the leading correction is POSITIVE if cbar<a/2 and NEGATIVE if cbar>a/2, for sufficiently small variance.
+Discriminating experiment: Two otherwise matched cells with the same mean c but different measured concentration variance should show the predicted sign change when a/cbar crosses 2. Reject if sign fails after independent measurement of a and confound controls.
+Standing: derivation under stated illustrative assumptions; global novelty not established; no real-world test performed.
+
+WORKED 006 — Battery degradation: local heat-current covariance
+Model/assumptions: Assume local degradation r(x)=k exp[-E/(R T(x))] j(x)^p, T>0, j>0, k>0, E>0; compare E[r] with r(E[T],E[j]).
+Derived result: The second-order correction includes r_Tj Cov(T,j), where r_Tj=r*E*p/(R*T^2*j)>0 for p>0. Thus POSITIVE temperature-current covariance raises the leading-order degradation rate, all else equal; other variance terms can counteract it.
+Discriminating experiment: With independently measured T(x), j(x), compare matched-mean cells having different Cov(T,j); preregister a positive partial contribution, not an unconditional net effect.
+Standing: derivation under stated illustrative assumptions; global novelty not established; no real-world test performed.
+
+WORKED 017 — Chemical kinetics: barrier-distribution curvature
+Model/assumptions: For parallel pathways k(T)=sum_j A_j exp[-E_j/(R T)], A_j>0 and constant E_j, set u=1/T.
+Derived result: d² ln k / du² = Var_w(E)/R² >=0, with weights w_j=k_j/k. Strict curvature occurs if at least two contributing barriers differ.
+Discriminating experiment: A measured negative curvature of ln k versus 1/T beyond uncertainty falsifies this restricted parallel-Arrhenius class; compare against known variable-prefactor and changing-mechanism alternatives.
+Standing: derivation under stated illustrative assumptions; global novelty not established; no real-world test performed.
+
+WORKED 026 — Heat transfer: interface thermal memory
+Model/assumptions: Two lumped thermal bodies exchange heat with interfacial conductance h and temperatures T1,T2: C1*T1'=Q1-h(T1-T2); C2*T2'=Q2+h(T1-T2).
+Derived result: Eliminating T2 produces a convolution-memory contribution to T1 with characteristic timescale tau=C2/h (when Q2=0 and coefficients constant); an instantaneous single-temperature model cannot generally reproduce the same transient for different T2(0).
+Discriminating experiment: Prepare equal T1(0) but different T2(0); predict different initial slopes by -h*Delta(T1-T2)/C1. Known thermal RC mathematics; novelty requires better identification or new domain-specific limit.
+Standing: derivation under stated illustrative assumptions; global novelty not established; no real-world test performed.
+
+WORKED 036 — Fracture mechanics: overload sequence memory
+Model/assumptions: For a simple crack-length model da/dN=C[DeltaK(a)]^m g(z), add a measured closure state z with dz/dN=-(z-z_eq(DeltaK))/n0; C>0, n0>0.
+Derived result: At identical crack length and present DeltaK, histories with distinct z imply different da/dN. As n0->0, z tracks z_eq and the reduced baseline is recovered if g(z_eq)=1 under the chosen calibration.
+Discriminating experiment: Compare overload-first and no-overload histories at matched present DeltaK and crack length; preregister the direction only after calibrating the closure-state sign. Load-sequence effects are established; no global novelty claim.
+Standing: derivation under stated illustrative assumptions; global novelty not established; no real-world test performed.
+
+WORKED 041 — Turbulence: intermittency-conditioned closure
+Model/assumptions: Let q be local turbulent kinetic energy flux and y its coarse state. Introduce a measured intermittency indicator chi and model E[q|y,chi] rather than E[q|y].
+Derived result: By the law of total variance, Var(q|y)=E[Var(q|y,chi)|y]+Var(E[q|y,chi]|y); conditioning cannot increase the optimal squared-error Bayes prediction risk in expectation.
+Discriminating experiment: On held-out flow regimes, test whether measured chi yields nonzero conditional-mean variance and improves flux prediction at matched complexity; this is an information-theoretic guarantee, not a new turbulence law.
+Standing: derivation under stated illustrative assumptions; global novelty not established; no real-world test performed.
+
+WORKED 063 — Pharmacokinetics: organ perfusion covariance
+Model/assumptions: Let organ extraction flux be F(Q,C)=Q*C*E(Q) with variable perfusion Q and extraction E(Q), C fixed in a short window.
+Derived result: E[F(Q,C)]-F(E[Q],C) ~= (C/2) [2 E'(Qbar)+Qbar E''(Qbar)] Var(Q); the sign depends on the extraction law, not on 'heterogeneity' alone.
+Discriminating experiment: Measure Q distribution and extraction curve independently, then preregister the predicted signed correction; reject if matched-mean experiments disagree.
+Standing: derivation under stated illustrative assumptions; global novelty not established; no real-world test performed.
+
+WORKED 072 — Epidemiology: infection-age infectiousness
+Model/assumptions: Use infection-age density i(t,a) and infectivity beta(a). Incidence J(t)=S(t)/N * integral beta(a)i(t,a) da.
+Derived result: The aggregate SIR incidence beta_bar*S*I/N is exact at an instant only if beta_bar equals the current infection-age weighted mean. Equal I can imply different J for different age distributions.
+Discriminating experiment: Compare cohorts matched on S,I,N but different measured infection-age distributions; predict incidence from beta(a) fixed on training data. Age-structured models are established.
+Standing: derivation under stated illustrative assumptions; global novelty not established; no real-world test performed.
+
+WORKED 081 — Climate dynamics: ocean vertical heat memory
+Model/assumptions: Two-box ocean heat model: C_s*T_s'=F-lambda*T_s-k(T_s-T_d); C_d*T_d'=k(T_s-T_d).
+Derived result: At fixed T_s and forcing F, the surface warming rate differs by (k/C_s)*Delta T_d across histories. A one-box model based only on current T_s cannot be exact for both.
+Discriminating experiment: Compare historical forcings that produce matched surface temperature but different subsurface heat content; test out-of-sample surface response. Two-box climate models are established.
+Standing: derivation under stated illustrative assumptions; global novelty not established; no real-world test performed.
+
+WORKED 096 — Optical materials: nano-inclusion spatial correlation
+Model/assumptions: For dilute scatterers with positions r_i and single-scatterer amplitude f(q), total amplitude A(q)=f(q)*sum_i exp(i q.r_i).
+Derived result: E[|A(q)|²]=|f(q)|² [N + sum_(i!=j) E exp(i q.(r_i-r_j))]; identical number density but different pair correlations yield different intensity.
+Discriminating experiment: Fabricate matched-density samples with different pair correlations; preregister scattering contrast at chosen q. This is established structure-factor physics.
+Standing: derivation under stated illustrative assumptions; global novelty not established; no real-world test performed.
 
 
----
-# PART 1: Garden_v15_10_Scientific_Theory_Upgrades_100_REV3.txt
+
+### 3.2 One-by-one contracts for 100 theory candidates
+Each candidate below retains its original detailed contract and evidence boundary. These are proposed investigations; repeated protocol language is not evidence of independent mechanism discovery.
+
+#### 001 — Battery electrochemistry: interfacial stress memory
+
+Existing reference model: Butler–Volmer / porous-electrode; primary observable: charge-transfer rate.
+Observed/latent variable to examine: interfacial stress memory.
+Unverified title-derived mechanism hint: dynamic hidden state / delay. Use matched present-state trajectories with different prior forcing histories for interfacial stress memory; check whether their subsequent responses diverge.
+Candidate construction: Introduce a physically measured relaxing state or convolution kernel; estimate its timescale from perturbation data, not arbitrary fitting.
+Garden graph: THING=physical components; TIME=trajectory; SPACE=physical domain; EVENT=state transition; ACTION=controlled perturbation where applicable; AGENCY=experimenter/controller only; RULE=physical conservation; VALUE=declared performance measure; CONTEXT=experimental conditions; CLAIM=testable mechanism. Applicable edges: partOf, dependsOn, contextualizes, derivedFrom, supports/contradicts; use causes only after causal identification.
+Seven forms: CONSTRUCT=system; CONTRACT=units/domain; STATE=measured and hidden variables; RELATION=typed dependencies; PROCESS=state evolution; RULE=physical constraints; PROJECTION=baseline observable.
+Falsification protocol: Use matched present-state trajectories with different prior forcing histories for interfacial stress memory; check whether their subsequent responses diverge. Fit extension and strong modern reference model on training experiments; compare blinded held-out predictive likelihood/error under matched complexity and budget. If no robust improvement, reject the increment.
+Benefit if validated: safer fast charging.
+Evidence: CANDIDATE; domain-specific equation contract INCOMPLETE; numerical result NOT RUN; literature novelty UNKNOWN; empirical verification NOT DONE.
+
+#### 002 — Battery electrochemistry: electrolyte concentration variance
+
+Existing reference model: Butler–Volmer / porous-electrode; primary observable: charge-transfer rate.
+Observed/latent variable to examine: electrolyte concentration variance.
+Unverified title-derived mechanism hint: heterogeneity / joint distribution. Measure paired local fields or event-resolved distributions for electrolyte concentration variance; compare joint-data model with independently shuffled marginals.
+Candidate construction: Add a measured joint-distribution statistic, not a free coefficient; derive aggregate response by averaging the local law and quantify the residual.
+Garden graph: THING=physical components; TIME=trajectory; SPACE=physical domain; EVENT=state transition; ACTION=controlled perturbation where applicable; AGENCY=experimenter/controller only; RULE=physical conservation; VALUE=declared performance measure; CONTEXT=experimental conditions; CLAIM=testable mechanism. Applicable edges: partOf, dependsOn, contextualizes, derivedFrom, supports/contradicts; use causes only after causal identification.
+Seven forms: CONSTRUCT=system; CONTRACT=units/domain; STATE=measured and hidden variables; RELATION=typed dependencies; PROCESS=state evolution; RULE=physical constraints; PROJECTION=baseline observable.
+Falsification protocol: Measure paired local fields or event-resolved distributions for electrolyte concentration variance; compare joint-data model with independently shuffled marginals. Fit extension and strong modern reference model on training experiments; compare blinded held-out predictive likelihood/error under matched complexity and budget. If no robust improvement, reject the increment.
+Benefit if validated: safer fast charging.
+Evidence: CANDIDATE; domain-specific equation contract INCOMPLETE; numerical result NOT RUN; literature novelty UNKNOWN; empirical verification NOT DONE.
+
+#### 003 — Battery electrochemistry: particle-size/contact covariance
+
+Existing reference model: Butler–Volmer / porous-electrode; primary observable: charge-transfer rate.
+Observed/latent variable to examine: particle-size/contact covariance.
+Unverified title-derived mechanism hint: heterogeneity / joint distribution. Measure paired local fields or event-resolved distributions for particle-size/contact covariance; compare joint-data model with independently shuffled marginals.
+Candidate construction: Add a measured joint-distribution statistic, not a free coefficient; derive aggregate response by averaging the local law and quantify the residual.
+Garden graph: THING=physical components; TIME=trajectory; SPACE=physical domain; EVENT=state transition; ACTION=controlled perturbation where applicable; AGENCY=experimenter/controller only; RULE=physical conservation; VALUE=declared performance measure; CONTEXT=experimental conditions; CLAIM=testable mechanism. Applicable edges: partOf, dependsOn, contextualizes, derivedFrom, supports/contradicts; use causes only after causal identification.
+Seven forms: CONSTRUCT=system; CONTRACT=units/domain; STATE=measured and hidden variables; RELATION=typed dependencies; PROCESS=state evolution; RULE=physical constraints; PROJECTION=baseline observable.
+Falsification protocol: Measure paired local fields or event-resolved distributions for particle-size/contact covariance; compare joint-data model with independently shuffled marginals. Fit extension and strong modern reference model on training experiments; compare blinded held-out predictive likelihood/error under matched complexity and budget. If no robust improvement, reject the increment.
+Benefit if validated: safer fast charging.
+Evidence: CANDIDATE; domain-specific equation contract INCOMPLETE; numerical result NOT RUN; literature novelty UNKNOWN; empirical verification NOT DONE.
+
+#### 004 — Battery electrochemistry: thermal-gradient persistence
+
+Existing reference model: Butler–Volmer / porous-electrode; primary observable: charge-transfer rate.
+Observed/latent variable to examine: thermal-gradient persistence.
+Unverified title-derived mechanism hint: heterogeneity / joint distribution. Measure paired local fields or event-resolved distributions for thermal-gradient persistence; compare joint-data model with independently shuffled marginals.
+Candidate construction: Add a measured joint-distribution statistic, not a free coefficient; derive aggregate response by averaging the local law and quantify the residual.
+Garden graph: THING=physical components; TIME=trajectory; SPACE=physical domain; EVENT=state transition; ACTION=controlled perturbation where applicable; AGENCY=experimenter/controller only; RULE=physical conservation; VALUE=declared performance measure; CONTEXT=experimental conditions; CLAIM=testable mechanism. Applicable edges: partOf, dependsOn, contextualizes, derivedFrom, supports/contradicts; use causes only after causal identification.
+Seven forms: CONSTRUCT=system; CONTRACT=units/domain; STATE=measured and hidden variables; RELATION=typed dependencies; PROCESS=state evolution; RULE=physical constraints; PROJECTION=baseline observable.
+Falsification protocol: Measure paired local fields or event-resolved distributions for thermal-gradient persistence; compare joint-data model with independently shuffled marginals. Fit extension and strong modern reference model on training experiments; compare blinded held-out predictive likelihood/error under matched complexity and budget. If no robust improvement, reject the increment.
+Benefit if validated: safer fast charging.
+Evidence: CANDIDATE; domain-specific equation contract INCOMPLETE; numerical result NOT RUN; literature novelty UNKNOWN; empirical verification NOT DONE.
+
+#### 005 — Battery electrochemistry: SEI connectivity hysteresis
+
+Existing reference model: Butler–Volmer / porous-electrode; primary observable: charge-transfer rate.
+Observed/latent variable to examine: SEI connectivity hysteresis.
+Unverified title-derived mechanism hint: network / geometry. Image or reconstruct the evolving contact/connection graph underlying SEI connectivity hysteresis; hold aggregate counts fixed while varying graph statistics.
+Candidate construction: Represent adjacency/connectivity explicitly; project to a minimal measurable graph statistic and check whether equal aggregate states have different futures.
+Garden graph: THING=physical components; TIME=trajectory; SPACE=physical domain; EVENT=state transition; ACTION=controlled perturbation where applicable; AGENCY=experimenter/controller only; RULE=physical conservation; VALUE=declared performance measure; CONTEXT=experimental conditions; CLAIM=testable mechanism. Applicable edges: partOf, dependsOn, contextualizes, derivedFrom, supports/contradicts; use causes only after causal identification.
+Seven forms: CONSTRUCT=system; CONTRACT=units/domain; STATE=measured and hidden variables; RELATION=typed dependencies; PROCESS=state evolution; RULE=physical constraints; PROJECTION=baseline observable.
+Falsification protocol: Image or reconstruct the evolving contact/connection graph underlying SEI connectivity hysteresis; hold aggregate counts fixed while varying graph statistics. Fit extension and strong modern reference model on training experiments; compare blinded held-out predictive likelihood/error under matched complexity and budget. If no robust improvement, reject the increment.
+Benefit if validated: safer fast charging.
+Evidence: CANDIDATE; domain-specific equation contract INCOMPLETE; numerical result NOT RUN; literature novelty UNKNOWN; empirical verification NOT DONE.
+
+#### 006 — Battery degradation: local heat-current covariance
+
+Existing reference model: SEI growth / cycle-life models; primary observable: capacity-fade rate.
+Observed/latent variable to examine: local heat-current covariance.
+Unverified title-derived mechanism hint: heterogeneity / joint distribution. Measure paired local fields or event-resolved distributions for local heat-current covariance; compare joint-data model with independently shuffled marginals.
+Candidate construction: Add a measured joint-distribution statistic, not a free coefficient; derive aggregate response by averaging the local law and quantify the residual.
+Garden graph: THING=physical components; TIME=trajectory; SPACE=physical domain; EVENT=state transition; ACTION=controlled perturbation where applicable; AGENCY=experimenter/controller only; RULE=physical conservation; VALUE=declared performance measure; CONTEXT=experimental conditions; CLAIM=testable mechanism. Applicable edges: partOf, dependsOn, contextualizes, derivedFrom, supports/contradicts; use causes only after causal identification.
+Seven forms: CONSTRUCT=system; CONTRACT=units/domain; STATE=measured and hidden variables; RELATION=typed dependencies; PROCESS=state evolution; RULE=physical constraints; PROJECTION=baseline observable.
+Falsification protocol: Measure paired local fields or event-resolved distributions for local heat-current covariance; compare joint-data model with independently shuffled marginals. Fit extension and strong modern reference model on training experiments; compare blinded held-out predictive likelihood/error under matched complexity and budget. If no robust improvement, reject the increment.
+Benefit if validated: longer battery lifetime.
+Evidence: CANDIDATE; domain-specific equation contract INCOMPLETE; numerical result NOT RUN; literature novelty UNKNOWN; empirical verification NOT DONE.
+
+#### 007 — Battery degradation: charge-rest sequencing
+
+Existing reference model: SEI growth / cycle-life models; primary observable: capacity-fade rate.
+Observed/latent variable to examine: charge-rest sequencing.
+Unverified title-derived mechanism hint: dynamic hidden state / delay. Use matched present-state trajectories with different prior forcing histories for charge-rest sequencing; check whether their subsequent responses diverge.
+Candidate construction: Introduce a physically measured relaxing state or convolution kernel; estimate its timescale from perturbation data, not arbitrary fitting.
+Garden graph: THING=physical components; TIME=trajectory; SPACE=physical domain; EVENT=state transition; ACTION=controlled perturbation where applicable; AGENCY=experimenter/controller only; RULE=physical conservation; VALUE=declared performance measure; CONTEXT=experimental conditions; CLAIM=testable mechanism. Applicable edges: partOf, dependsOn, contextualizes, derivedFrom, supports/contradicts; use causes only after causal identification.
+Seven forms: CONSTRUCT=system; CONTRACT=units/domain; STATE=measured and hidden variables; RELATION=typed dependencies; PROCESS=state evolution; RULE=physical constraints; PROJECTION=baseline observable.
+Falsification protocol: Use matched present-state trajectories with different prior forcing histories for charge-rest sequencing; check whether their subsequent responses diverge. Fit extension and strong modern reference model on training experiments; compare blinded held-out predictive likelihood/error under matched complexity and budget. If no robust improvement, reject the increment.
+Benefit if validated: longer battery lifetime.
+Evidence: CANDIDATE; domain-specific equation contract INCOMPLETE; numerical result NOT RUN; literature novelty UNKNOWN; empirical verification NOT DONE.
+
+#### 008 — Battery degradation: fracture-assisted reaction area
+
+Existing reference model: SEI growth / cycle-life models; primary observable: capacity-fade rate.
+Observed/latent variable to examine: fracture-assisted reaction area.
+Unverified title-derived mechanism hint: network / geometry. Image or reconstruct the evolving contact/connection graph underlying fracture-assisted reaction area; hold aggregate counts fixed while varying graph statistics.
+Candidate construction: Represent adjacency/connectivity explicitly; project to a minimal measurable graph statistic and check whether equal aggregate states have different futures.
+Garden graph: THING=physical components; TIME=trajectory; SPACE=physical domain; EVENT=state transition; ACTION=controlled perturbation where applicable; AGENCY=experimenter/controller only; RULE=physical conservation; VALUE=declared performance measure; CONTEXT=experimental conditions; CLAIM=testable mechanism. Applicable edges: partOf, dependsOn, contextualizes, derivedFrom, supports/contradicts; use causes only after causal identification.
+Seven forms: CONSTRUCT=system; CONTRACT=units/domain; STATE=measured and hidden variables; RELATION=typed dependencies; PROCESS=state evolution; RULE=physical constraints; PROJECTION=baseline observable.
+Falsification protocol: Image or reconstruct the evolving contact/connection graph underlying fracture-assisted reaction area; hold aggregate counts fixed while varying graph statistics. Fit extension and strong modern reference model on training experiments; compare blinded held-out predictive likelihood/error under matched complexity and budget. If no robust improvement, reject the increment.
+Benefit if validated: longer battery lifetime.
+Evidence: CANDIDATE; domain-specific equation contract INCOMPLETE; numerical result NOT RUN; literature novelty UNKNOWN; empirical verification NOT DONE.
+
+#### 009 — Battery degradation: lithium inventory redistribution
+
+Existing reference model: SEI growth / cycle-life models; primary observable: capacity-fade rate.
+Observed/latent variable to examine: lithium inventory redistribution.
+Unverified title-derived mechanism hint: dynamic hidden state / delay. Use matched present-state trajectories with different prior forcing histories for lithium inventory redistribution; check whether their subsequent responses diverge.
+Candidate construction: Introduce a physically measured relaxing state or convolution kernel; estimate its timescale from perturbation data, not arbitrary fitting.
+Garden graph: THING=physical components; TIME=trajectory; SPACE=physical domain; EVENT=state transition; ACTION=controlled perturbation where applicable; AGENCY=experimenter/controller only; RULE=physical conservation; VALUE=declared performance measure; CONTEXT=experimental conditions; CLAIM=testable mechanism. Applicable edges: partOf, dependsOn, contextualizes, derivedFrom, supports/contradicts; use causes only after causal identification.
+Seven forms: CONSTRUCT=system; CONTRACT=units/domain; STATE=measured and hidden variables; RELATION=typed dependencies; PROCESS=state evolution; RULE=physical constraints; PROJECTION=baseline observable.
+Falsification protocol: Use matched present-state trajectories with different prior forcing histories for lithium inventory redistribution; check whether their subsequent responses diverge. Fit extension and strong modern reference model on training experiments; compare blinded held-out predictive likelihood/error under matched complexity and budget. If no robust improvement, reject the increment.
+Benefit if validated: longer battery lifetime.
+Evidence: CANDIDATE; domain-specific equation contract INCOMPLETE; numerical result NOT RUN; literature novelty UNKNOWN; empirical verification NOT DONE.
+
+#### 010 — Battery degradation: electrode pore-network fragmentation
+
+Existing reference model: SEI growth / cycle-life models; primary observable: capacity-fade rate.
+Observed/latent variable to examine: electrode pore-network fragmentation.
+Unverified title-derived mechanism hint: network / geometry. Image or reconstruct the evolving contact/connection graph underlying electrode pore-network fragmentation; hold aggregate counts fixed while varying graph statistics.
+Candidate construction: Represent adjacency/connectivity explicitly; project to a minimal measurable graph statistic and check whether equal aggregate states have different futures.
+Garden graph: THING=physical components; TIME=trajectory; SPACE=physical domain; EVENT=state transition; ACTION=controlled perturbation where applicable; AGENCY=experimenter/controller only; RULE=physical conservation; VALUE=declared performance measure; CONTEXT=experimental conditions; CLAIM=testable mechanism. Applicable edges: partOf, dependsOn, contextualizes, derivedFrom, supports/contradicts; use causes only after causal identification.
+Seven forms: CONSTRUCT=system; CONTRACT=units/domain; STATE=measured and hidden variables; RELATION=typed dependencies; PROCESS=state evolution; RULE=physical constraints; PROJECTION=baseline observable.
+Falsification protocol: Image or reconstruct the evolving contact/connection graph underlying electrode pore-network fragmentation; hold aggregate counts fixed while varying graph statistics. Fit extension and strong modern reference model on training experiments; compare blinded held-out predictive likelihood/error under matched complexity and budget. If no robust improvement, reject the increment.
+Benefit if validated: longer battery lifetime.
+Evidence: CANDIDATE; domain-specific equation contract INCOMPLETE; numerical result NOT RUN; literature novelty UNKNOWN; empirical verification NOT DONE.
+
+#### 011 — Heterogeneous catalysis: surface reconstruction memory
+
+Existing reference model: Sabatier / Langmuir–Hinshelwood; primary observable: turnover frequency.
+Observed/latent variable to examine: surface reconstruction memory.
+Unverified title-derived mechanism hint: dynamic hidden state / delay. Use matched present-state trajectories with different prior forcing histories for surface reconstruction memory; check whether their subsequent responses diverge.
+Candidate construction: Introduce a physically measured relaxing state or convolution kernel; estimate its timescale from perturbation data, not arbitrary fitting.
+Garden graph: THING=physical components; TIME=trajectory; SPACE=physical domain; EVENT=state transition; ACTION=controlled perturbation where applicable; AGENCY=experimenter/controller only; RULE=physical conservation; VALUE=declared performance measure; CONTEXT=experimental conditions; CLAIM=testable mechanism. Applicable edges: partOf, dependsOn, contextualizes, derivedFrom, supports/contradicts; use causes only after causal identification.
+Seven forms: CONSTRUCT=system; CONTRACT=units/domain; STATE=measured and hidden variables; RELATION=typed dependencies; PROCESS=state evolution; RULE=physical constraints; PROJECTION=baseline observable.
+Falsification protocol: Use matched present-state trajectories with different prior forcing histories for surface reconstruction memory; check whether their subsequent responses diverge. Fit extension and strong modern reference model on training experiments; compare blinded held-out predictive likelihood/error under matched complexity and budget. If no robust improvement, reject the increment.
+Benefit if validated: lower-energy chemical manufacture.
+Evidence: CANDIDATE; domain-specific equation contract INCOMPLETE; numerical result NOT RUN; literature novelty UNKNOWN; empirical verification NOT DONE.
+
+#### 012 — Heterogeneous catalysis: adsorbate-neighbor correlations
+
+Existing reference model: Sabatier / Langmuir–Hinshelwood; primary observable: turnover frequency.
+Observed/latent variable to examine: adsorbate-neighbor correlations.
+Unverified title-derived mechanism hint: heterogeneity / joint distribution. Measure paired local fields or event-resolved distributions for adsorbate-neighbor correlations; compare joint-data model with independently shuffled marginals.
+Candidate construction: Add a measured joint-distribution statistic, not a free coefficient; derive aggregate response by averaging the local law and quantify the residual.
+Garden graph: THING=physical components; TIME=trajectory; SPACE=physical domain; EVENT=state transition; ACTION=controlled perturbation where applicable; AGENCY=experimenter/controller only; RULE=physical conservation; VALUE=declared performance measure; CONTEXT=experimental conditions; CLAIM=testable mechanism. Applicable edges: partOf, dependsOn, contextualizes, derivedFrom, supports/contradicts; use causes only after causal identification.
+Seven forms: CONSTRUCT=system; CONTRACT=units/domain; STATE=measured and hidden variables; RELATION=typed dependencies; PROCESS=state evolution; RULE=physical constraints; PROJECTION=baseline observable.
+Falsification protocol: Measure paired local fields or event-resolved distributions for adsorbate-neighbor correlations; compare joint-data model with independently shuffled marginals. Fit extension and strong modern reference model on training experiments; compare blinded held-out predictive likelihood/error under matched complexity and budget. If no robust improvement, reject the increment.
+Benefit if validated: lower-energy chemical manufacture.
+Evidence: CANDIDATE; domain-specific equation contract INCOMPLETE; numerical result NOT RUN; literature novelty UNKNOWN; empirical verification NOT DONE.
+
+#### 013 — Heterogeneous catalysis: pulsed feed phase
+
+Existing reference model: Sabatier / Langmuir–Hinshelwood; primary observable: turnover frequency.
+Observed/latent variable to examine: pulsed feed phase.
+Unverified title-derived mechanism hint: state switching / hysteresis. Cycle the driving variable in both directions and record branch-dependent response for pulsed feed phase; test whether a single-valued constitutive law fails.
+Candidate construction: Introduce a branch/state variable with experimentally constrained transition rules; verify return-point and cycling behavior only if observed.
+Garden graph: THING=physical components; TIME=trajectory; SPACE=physical domain; EVENT=state transition; ACTION=controlled perturbation where applicable; AGENCY=experimenter/controller only; RULE=physical conservation; VALUE=declared performance measure; CONTEXT=experimental conditions; CLAIM=testable mechanism. Applicable edges: partOf, dependsOn, contextualizes, derivedFrom, supports/contradicts; use causes only after causal identification.
+Seven forms: CONSTRUCT=system; CONTRACT=units/domain; STATE=measured and hidden variables; RELATION=typed dependencies; PROCESS=state evolution; RULE=physical constraints; PROJECTION=baseline observable.
+Falsification protocol: Cycle the driving variable in both directions and record branch-dependent response for pulsed feed phase; test whether a single-valued constitutive law fails. Fit extension and strong modern reference model on training experiments; compare blinded held-out predictive likelihood/error under matched complexity and budget. If no robust improvement, reject the increment.
+Benefit if validated: lower-energy chemical manufacture.
+Evidence: CANDIDATE; domain-specific equation contract INCOMPLETE; numerical result NOT RUN; literature novelty UNKNOWN; empirical verification NOT DONE.
+
+#### 014 — Heterogeneous catalysis: active-site network percolation
+
+Existing reference model: Sabatier / Langmuir–Hinshelwood; primary observable: turnover frequency.
+Observed/latent variable to examine: active-site network percolation.
+Unverified title-derived mechanism hint: network / geometry. Image or reconstruct the evolving contact/connection graph underlying active-site network percolation; hold aggregate counts fixed while varying graph statistics.
+Candidate construction: Represent adjacency/connectivity explicitly; project to a minimal measurable graph statistic and check whether equal aggregate states have different futures.
+Garden graph: THING=physical components; TIME=trajectory; SPACE=physical domain; EVENT=state transition; ACTION=controlled perturbation where applicable; AGENCY=experimenter/controller only; RULE=physical conservation; VALUE=declared performance measure; CONTEXT=experimental conditions; CLAIM=testable mechanism. Applicable edges: partOf, dependsOn, contextualizes, derivedFrom, supports/contradicts; use causes only after causal identification.
+Seven forms: CONSTRUCT=system; CONTRACT=units/domain; STATE=measured and hidden variables; RELATION=typed dependencies; PROCESS=state evolution; RULE=physical constraints; PROJECTION=baseline observable.
+Falsification protocol: Image or reconstruct the evolving contact/connection graph underlying active-site network percolation; hold aggregate counts fixed while varying graph statistics. Fit extension and strong modern reference model on training experiments; compare blinded held-out predictive likelihood/error under matched complexity and budget. If no robust improvement, reject the increment.
+Benefit if validated: lower-energy chemical manufacture.
+Evidence: CANDIDATE; domain-specific equation contract INCOMPLETE; numerical result NOT RUN; literature novelty UNKNOWN; empirical verification NOT DONE.
+
+#### 015 — Heterogeneous catalysis: poison desorption history
+
+Existing reference model: Sabatier / Langmuir–Hinshelwood; primary observable: turnover frequency.
+Observed/latent variable to examine: poison desorption history.
+Unverified title-derived mechanism hint: dynamic hidden state / delay. Use matched present-state trajectories with different prior forcing histories for poison desorption history; check whether their subsequent responses diverge.
+Candidate construction: Introduce a physically measured relaxing state or convolution kernel; estimate its timescale from perturbation data, not arbitrary fitting.
+Garden graph: THING=physical components; TIME=trajectory; SPACE=physical domain; EVENT=state transition; ACTION=controlled perturbation where applicable; AGENCY=experimenter/controller only; RULE=physical conservation; VALUE=declared performance measure; CONTEXT=experimental conditions; CLAIM=testable mechanism. Applicable edges: partOf, dependsOn, contextualizes, derivedFrom, supports/contradicts; use causes only after causal identification.
+Seven forms: CONSTRUCT=system; CONTRACT=units/domain; STATE=measured and hidden variables; RELATION=typed dependencies; PROCESS=state evolution; RULE=physical constraints; PROJECTION=baseline observable.
+Falsification protocol: Use matched present-state trajectories with different prior forcing histories for poison desorption history; check whether their subsequent responses diverge. Fit extension and strong modern reference model on training experiments; compare blinded held-out predictive likelihood/error under matched complexity and budget. If no robust improvement, reject the increment.
+Benefit if validated: lower-energy chemical manufacture.
+Evidence: CANDIDATE; domain-specific equation contract INCOMPLETE; numerical result NOT RUN; literature novelty UNKNOWN; empirical verification NOT DONE.
+
+#### 016 — Chemical kinetics: competing-pathway occupancy
+
+Observed/latent variable to examine: competing-pathway occupancy.
+Unverified title-derived mechanism hint: coupled latent kinetics. Measure the candidate intermediate state for competing-pathway occupancy during perturbation/recovery; test whether it predicts held-out transients beyond baseline variables.
+Candidate construction: Introduce a measurable intermediate and couple it by mass/energy-balanced rate equations; test observability and parameter identifiability.
+Garden graph: THING=physical components; TIME=trajectory; SPACE=physical domain; EVENT=state transition; ACTION=controlled perturbation where applicable; AGENCY=experimenter/controller only; RULE=physical conservation; VALUE=declared performance measure; CONTEXT=experimental conditions; CLAIM=testable mechanism. Applicable edges: partOf, dependsOn, contextualizes, derivedFrom, supports/contradicts; use causes only after causal identification.
+Seven forms: CONSTRUCT=system; CONTRACT=units/domain; STATE=measured and hidden variables; RELATION=typed dependencies; PROCESS=state evolution; RULE=physical constraints; PROJECTION=baseline observable.
+Falsification protocol: Measure the candidate intermediate state for competing-pathway occupancy during perturbation/recovery; test whether it predicts held-out transients beyond baseline variables. Fit extension and strong modern reference model on training experiments; compare blinded held-out predictive likelihood/error under matched complexity and budget. If no robust improvement, reject the increment.
+Benefit if validated: better reactor efficiency.
+Evidence: CANDIDATE; domain-specific equation contract INCOMPLETE; numerical result NOT RUN; literature novelty UNKNOWN; empirical verification NOT DONE.
+
+#### 017 — Chemical kinetics: barrier-distribution curvature
+
+Existing reference model: Arrhenius / transition-state theory; primary observable: effective reaction rate.
+Observed/latent variable to examine: barrier-distribution curvature.
+Unverified title-derived mechanism hint: mechanism unresolved — requires domain diagnostics. Collect perturbation-response measurements for barrier-distribution curvature; identify residual structure before selecting an extension.
+Candidate construction: Do not choose a mechanism before observing structured residuals; record an unresolved research question.
+Garden graph: THING=physical components; TIME=trajectory; SPACE=physical domain; EVENT=state transition; ACTION=controlled perturbation where applicable; AGENCY=experimenter/controller only; RULE=physical conservation; VALUE=declared performance measure; CONTEXT=experimental conditions; CLAIM=testable mechanism. Applicable edges: partOf, dependsOn, contextualizes, derivedFrom, supports/contradicts; use causes only after causal identification.
+Seven forms: CONSTRUCT=system; CONTRACT=units/domain; STATE=measured and hidden variables; RELATION=typed dependencies; PROCESS=state evolution; RULE=physical constraints; PROJECTION=baseline observable.
+Falsification protocol: Collect perturbation-response measurements for barrier-distribution curvature; identify residual structure before selecting an extension. Fit extension and strong modern reference model on training experiments; compare blinded held-out predictive likelihood/error under matched complexity and budget. If no robust improvement, reject the increment.
+Benefit if validated: better reactor efficiency.
+Evidence: CANDIDATE; domain-specific equation contract INCOMPLETE; numerical result NOT RUN; literature novelty UNKNOWN; empirical verification NOT DONE.
+
+#### 018 — Chemical kinetics: solvent reorganization lag
+
+Existing reference model: Arrhenius / transition-state theory; primary observable: effective reaction rate.
+Observed/latent variable to examine: solvent reorganization lag.
+Unverified title-derived mechanism hint: dynamic hidden state / delay. Use matched present-state trajectories with different prior forcing histories for solvent reorganization lag; check whether their subsequent responses diverge.
+Candidate construction: Introduce a physically measured relaxing state or convolution kernel; estimate its timescale from perturbation data, not arbitrary fitting.
+Garden graph: THING=physical components; TIME=trajectory; SPACE=physical domain; EVENT=state transition; ACTION=controlled perturbation where applicable; AGENCY=experimenter/controller only; RULE=physical conservation; VALUE=declared performance measure; CONTEXT=experimental conditions; CLAIM=testable mechanism. Applicable edges: partOf, dependsOn, contextualizes, derivedFrom, supports/contradicts; use causes only after causal identification.
+Seven forms: CONSTRUCT=system; CONTRACT=units/domain; STATE=measured and hidden variables; RELATION=typed dependencies; PROCESS=state evolution; RULE=physical constraints; PROJECTION=baseline observable.
+Falsification protocol: Use matched present-state trajectories with different prior forcing histories for solvent reorganization lag; check whether their subsequent responses diverge. Fit extension and strong modern reference model on training experiments; compare blinded held-out predictive likelihood/error under matched complexity and budget. If no robust improvement, reject the increment.
+Benefit if validated: better reactor efficiency.
+Evidence: CANDIDATE; domain-specific equation contract INCOMPLETE; numerical result NOT RUN; literature novelty UNKNOWN; empirical verification NOT DONE.
+
+#### 019 — Chemical kinetics: reactant clustering
+
+Existing reference model: Arrhenius / transition-state theory; primary observable: effective reaction rate.
+Observed/latent variable to examine: reactant clustering.
+Unverified title-derived mechanism hint: network / geometry. Image or reconstruct the evolving contact/connection graph underlying reactant clustering; hold aggregate counts fixed while varying graph statistics.
+Candidate construction: Represent adjacency/connectivity explicitly; project to a minimal measurable graph statistic and check whether equal aggregate states have different futures.
+Garden graph: THING=physical components; TIME=trajectory; SPACE=physical domain; EVENT=state transition; ACTION=controlled perturbation where applicable; AGENCY=experimenter/controller only; RULE=physical conservation; VALUE=declared performance measure; CONTEXT=experimental conditions; CLAIM=testable mechanism. Applicable edges: partOf, dependsOn, contextualizes, derivedFrom, supports/contradicts; use causes only after causal identification.
+Seven forms: CONSTRUCT=system; CONTRACT=units/domain; STATE=measured and hidden variables; RELATION=typed dependencies; PROCESS=state evolution; RULE=physical constraints; PROJECTION=baseline observable.
+Falsification protocol: Image or reconstruct the evolving contact/connection graph underlying reactant clustering; hold aggregate counts fixed while varying graph statistics. Fit extension and strong modern reference model on training experiments; compare blinded held-out predictive likelihood/error under matched complexity and budget. If no robust improvement, reject the increment.
+Benefit if validated: better reactor efficiency.
+Evidence: CANDIDATE; domain-specific equation contract INCOMPLETE; numerical result NOT RUN; literature novelty UNKNOWN; empirical verification NOT DONE.
+
+#### 020 — Chemical kinetics: intermediate trapping memory
+
+Existing reference model: Arrhenius / transition-state theory; primary observable: effective reaction rate.
+Observed/latent variable to examine: intermediate trapping memory.
+Unverified title-derived mechanism hint: dynamic hidden state / delay. Use matched present-state trajectories with different prior forcing histories for intermediate trapping memory; check whether their subsequent responses diverge.
+Candidate construction: Introduce a physically measured relaxing state or convolution kernel; estimate its timescale from perturbation data, not arbitrary fitting.
+Garden graph: THING=physical components; TIME=trajectory; SPACE=physical domain; EVENT=state transition; ACTION=controlled perturbation where applicable; AGENCY=experimenter/controller only; RULE=physical conservation; VALUE=declared performance measure; CONTEXT=experimental conditions; CLAIM=testable mechanism. Applicable edges: partOf, dependsOn, contextualizes, derivedFrom, supports/contradicts; use causes only after causal identification.
+Seven forms: CONSTRUCT=system; CONTRACT=units/domain; STATE=measured and hidden variables; RELATION=typed dependencies; PROCESS=state evolution; RULE=physical constraints; PROJECTION=baseline observable.
+Falsification protocol: Use matched present-state trajectories with different prior forcing histories for intermediate trapping memory; check whether their subsequent responses diverge. Fit extension and strong modern reference model on training experiments; compare blinded held-out predictive likelihood/error under matched complexity and budget. If no robust improvement, reject the increment.
+Benefit if validated: better reactor efficiency.
+Evidence: CANDIDATE; domain-specific equation contract INCOMPLETE; numerical result NOT RUN; literature novelty UNKNOWN; empirical verification NOT DONE.
+
+#### 021 — Nucleation: subcritical-cluster history
+
+Existing reference model: classical nucleation theory; primary observable: nucleation hazard.
+Observed/latent variable to examine: subcritical-cluster history.
+Unverified title-derived mechanism hint: dynamic hidden state / delay. Use matched present-state trajectories with different prior forcing histories for subcritical-cluster history; check whether their subsequent responses diverge.
+Candidate construction: Introduce a physically measured relaxing state or convolution kernel; estimate its timescale from perturbation data, not arbitrary fitting.
+Garden graph: THING=physical components; TIME=trajectory; SPACE=physical domain; EVENT=state transition; ACTION=controlled perturbation where applicable; AGENCY=experimenter/controller only; RULE=physical conservation; VALUE=declared performance measure; CONTEXT=experimental conditions; CLAIM=testable mechanism. Applicable edges: partOf, dependsOn, contextualizes, derivedFrom, supports/contradicts; use causes only after causal identification.
+Seven forms: CONSTRUCT=system; CONTRACT=units/domain; STATE=measured and hidden variables; RELATION=typed dependencies; PROCESS=state evolution; RULE=physical constraints; PROJECTION=baseline observable.
+Falsification protocol: Use matched present-state trajectories with different prior forcing histories for subcritical-cluster history; check whether their subsequent responses diverge. Fit extension and strong modern reference model on training experiments; compare blinded held-out predictive likelihood/error under matched complexity and budget. If no robust improvement, reject the increment.
+Benefit if validated: crystal and drug formulation.
+Evidence: CANDIDATE; domain-specific equation contract INCOMPLETE; numerical result NOT RUN; literature novelty UNKNOWN; empirical verification NOT DONE.
+
+#### 022 — Nucleation: surface-defect localization
+
+Existing reference model: classical nucleation theory; primary observable: nucleation hazard.
+Observed/latent variable to examine: surface-defect localization.
+Unverified title-derived mechanism hint: mechanism unresolved — requires domain diagnostics. Collect perturbation-response measurements for surface-defect localization; identify residual structure before selecting an extension.
+Candidate construction: Do not choose a mechanism before observing structured residuals; record an unresolved research question.
+Garden graph: THING=physical components; TIME=trajectory; SPACE=physical domain; EVENT=state transition; ACTION=controlled perturbation where applicable; AGENCY=experimenter/controller only; RULE=physical conservation; VALUE=declared performance measure; CONTEXT=experimental conditions; CLAIM=testable mechanism. Applicable edges: partOf, dependsOn, contextualizes, derivedFrom, supports/contradicts; use causes only after causal identification.
+Seven forms: CONSTRUCT=system; CONTRACT=units/domain; STATE=measured and hidden variables; RELATION=typed dependencies; PROCESS=state evolution; RULE=physical constraints; PROJECTION=baseline observable.
+Falsification protocol: Collect perturbation-response measurements for surface-defect localization; identify residual structure before selecting an extension. Fit extension and strong modern reference model on training experiments; compare blinded held-out predictive likelihood/error under matched complexity and budget. If no robust improvement, reject the increment.
+Benefit if validated: crystal and drug formulation.
+Evidence: CANDIDATE; domain-specific equation contract INCOMPLETE; numerical result NOT RUN; literature novelty UNKNOWN; empirical verification NOT DONE.
+
+#### 023 — Nucleation: solvent pulse memory
+
+Existing reference model: classical nucleation theory; primary observable: nucleation hazard.
+Observed/latent variable to examine: solvent pulse memory.
+Unverified title-derived mechanism hint: dynamic hidden state / delay. Use matched present-state trajectories with different prior forcing histories for solvent pulse memory; check whether their subsequent responses diverge.
+Candidate construction: Introduce a physically measured relaxing state or convolution kernel; estimate its timescale from perturbation data, not arbitrary fitting.
+Garden graph: THING=physical components; TIME=trajectory; SPACE=physical domain; EVENT=state transition; ACTION=controlled perturbation where applicable; AGENCY=experimenter/controller only; RULE=physical conservation; VALUE=declared performance measure; CONTEXT=experimental conditions; CLAIM=testable mechanism. Applicable edges: partOf, dependsOn, contextualizes, derivedFrom, supports/contradicts; use causes only after causal identification.
+Seven forms: CONSTRUCT=system; CONTRACT=units/domain; STATE=measured and hidden variables; RELATION=typed dependencies; PROCESS=state evolution; RULE=physical constraints; PROJECTION=baseline observable.
+Falsification protocol: Use matched present-state trajectories with different prior forcing histories for solvent pulse memory; check whether their subsequent responses diverge. Fit extension and strong modern reference model on training experiments; compare blinded held-out predictive likelihood/error under matched complexity and budget. If no robust improvement, reject the increment.
+Benefit if validated: crystal and drug formulation.
+Evidence: CANDIDATE; domain-specific equation contract INCOMPLETE; numerical result NOT RUN; literature novelty UNKNOWN; empirical verification NOT DONE.
+
+#### 024 — Nucleation: impurity-cluster correlations
+
+Existing reference model: classical nucleation theory; primary observable: nucleation hazard.
+Observed/latent variable to examine: impurity-cluster correlations.
+Unverified title-derived mechanism hint: heterogeneity / joint distribution. Measure paired local fields or event-resolved distributions for impurity-cluster correlations; compare joint-data model with independently shuffled marginals.
+Candidate construction: Add a measured joint-distribution statistic, not a free coefficient; derive aggregate response by averaging the local law and quantify the residual.
+Garden graph: THING=physical components; TIME=trajectory; SPACE=physical domain; EVENT=state transition; ACTION=controlled perturbation where applicable; AGENCY=experimenter/controller only; RULE=physical conservation; VALUE=declared performance measure; CONTEXT=experimental conditions; CLAIM=testable mechanism. Applicable edges: partOf, dependsOn, contextualizes, derivedFrom, supports/contradicts; use causes only after causal identification.
+Seven forms: CONSTRUCT=system; CONTRACT=units/domain; STATE=measured and hidden variables; RELATION=typed dependencies; PROCESS=state evolution; RULE=physical constraints; PROJECTION=baseline observable.
+Falsification protocol: Measure paired local fields or event-resolved distributions for impurity-cluster correlations; compare joint-data model with independently shuffled marginals. Fit extension and strong modern reference model on training experiments; compare blinded held-out predictive likelihood/error under matched complexity and budget. If no robust improvement, reject the increment.
+Benefit if validated: crystal and drug formulation.
+Evidence: CANDIDATE; domain-specific equation contract INCOMPLETE; numerical result NOT RUN; literature novelty UNKNOWN; empirical verification NOT DONE.
+
+#### 025 — Nucleation: spatial supersaturation intermittency
+
+Existing reference model: classical nucleation theory; primary observable: nucleation hazard.
+Observed/latent variable to examine: spatial supersaturation intermittency.
+Unverified title-derived mechanism hint: heterogeneity / joint distribution. Measure paired local fields or event-resolved distributions for spatial supersaturation intermittency; compare joint-data model with independently shuffled marginals.
+Candidate construction: Add a measured joint-distribution statistic, not a free coefficient; derive aggregate response by averaging the local law and quantify the residual.
+Garden graph: THING=physical components; TIME=trajectory; SPACE=physical domain; EVENT=state transition; ACTION=controlled perturbation where applicable; AGENCY=experimenter/controller only; RULE=physical conservation; VALUE=declared performance measure; CONTEXT=experimental conditions; CLAIM=testable mechanism. Applicable edges: partOf, dependsOn, contextualizes, derivedFrom, supports/contradicts; use causes only after causal identification.
+Seven forms: CONSTRUCT=system; CONTRACT=units/domain; STATE=measured and hidden variables; RELATION=typed dependencies; PROCESS=state evolution; RULE=physical constraints; PROJECTION=baseline observable.
+Falsification protocol: Measure paired local fields or event-resolved distributions for spatial supersaturation intermittency; compare joint-data model with independently shuffled marginals. Fit extension and strong modern reference model on training experiments; compare blinded held-out predictive likelihood/error under matched complexity and budget. If no robust improvement, reject the increment.
+Benefit if validated: crystal and drug formulation.
+Evidence: CANDIDATE; domain-specific equation contract INCOMPLETE; numerical result NOT RUN; literature novelty UNKNOWN; empirical verification NOT DONE.
+
+#### 026 — Heat transfer: interface thermal memory
+
+Existing reference model: Fourier conduction; primary observable: heat flux.
+Observed/latent variable to examine: interface thermal memory.
+Unverified title-derived mechanism hint: dynamic hidden state / delay. Use matched present-state trajectories with different prior forcing histories for interface thermal memory; check whether their subsequent responses diverge.
+Candidate construction: Introduce a physically measured relaxing state or convolution kernel; estimate its timescale from perturbation data, not arbitrary fitting.
+Garden graph: THING=physical components; TIME=trajectory; SPACE=physical domain; EVENT=state transition; ACTION=controlled perturbation where applicable; AGENCY=experimenter/controller only; RULE=physical conservation; VALUE=declared performance measure; CONTEXT=experimental conditions; CLAIM=testable mechanism. Applicable edges: partOf, dependsOn, contextualizes, derivedFrom, supports/contradicts; use causes only after causal identification.
+Seven forms: CONSTRUCT=system; CONTRACT=units/domain; STATE=measured and hidden variables; RELATION=typed dependencies; PROCESS=state evolution; RULE=physical constraints; PROJECTION=baseline observable.
+Falsification protocol: Use matched present-state trajectories with different prior forcing histories for interface thermal memory; check whether their subsequent responses diverge. Fit extension and strong modern reference model on training experiments; compare blinded held-out predictive likelihood/error under matched complexity and budget. If no robust improvement, reject the increment.
+Benefit if validated: chip and battery cooling.
+Evidence: CANDIDATE; domain-specific equation contract INCOMPLETE; numerical result NOT RUN; literature novelty UNKNOWN; empirical verification NOT DONE.
+
+#### 027 — Heat transfer: anisotropic domain connectivity
+
+Existing reference model: Fourier conduction; primary observable: heat flux.
+Observed/latent variable to examine: anisotropic domain connectivity.
+Unverified title-derived mechanism hint: network / geometry. Image or reconstruct the evolving contact/connection graph underlying anisotropic domain connectivity; hold aggregate counts fixed while varying graph statistics.
+Candidate construction: Represent adjacency/connectivity explicitly; project to a minimal measurable graph statistic and check whether equal aggregate states have different futures.
+Garden graph: THING=physical components; TIME=trajectory; SPACE=physical domain; EVENT=state transition; ACTION=controlled perturbation where applicable; AGENCY=experimenter/controller only; RULE=physical conservation; VALUE=declared performance measure; CONTEXT=experimental conditions; CLAIM=testable mechanism. Applicable edges: partOf, dependsOn, contextualizes, derivedFrom, supports/contradicts; use causes only after causal identification.
+Seven forms: CONSTRUCT=system; CONTRACT=units/domain; STATE=measured and hidden variables; RELATION=typed dependencies; PROCESS=state evolution; RULE=physical constraints; PROJECTION=baseline observable.
+Falsification protocol: Image or reconstruct the evolving contact/connection graph underlying anisotropic domain connectivity; hold aggregate counts fixed while varying graph statistics. Fit extension and strong modern reference model on training experiments; compare blinded held-out predictive likelihood/error under matched complexity and budget. If no robust improvement, reject the increment.
+Benefit if validated: chip and battery cooling.
+Evidence: CANDIDATE; domain-specific equation contract INCOMPLETE; numerical result NOT RUN; literature novelty UNKNOWN; empirical verification NOT DONE.
+
+#### 028 — Heat transfer: nonlocal hotspot coupling
+
+Existing reference model: Fourier conduction; primary observable: heat flux.
+Observed/latent variable to examine: nonlocal hotspot coupling.
+Unverified title-derived mechanism hint: coupled latent kinetics. Measure the candidate intermediate state for nonlocal hotspot coupling during perturbation/recovery; test whether it predicts held-out transients beyond baseline variables.
+Candidate construction: Introduce a measurable intermediate and couple it by mass/energy-balanced rate equations; test observability and parameter identifiability.
+Garden graph: THING=physical components; TIME=trajectory; SPACE=physical domain; EVENT=state transition; ACTION=controlled perturbation where applicable; AGENCY=experimenter/controller only; RULE=physical conservation; VALUE=declared performance measure; CONTEXT=experimental conditions; CLAIM=testable mechanism. Applicable edges: partOf, dependsOn, contextualizes, derivedFrom, supports/contradicts; use causes only after causal identification.
+Seven forms: CONSTRUCT=system; CONTRACT=units/domain; STATE=measured and hidden variables; RELATION=typed dependencies; PROCESS=state evolution; RULE=physical constraints; PROJECTION=baseline observable.
+Falsification protocol: Measure the candidate intermediate state for nonlocal hotspot coupling during perturbation/recovery; test whether it predicts held-out transients beyond baseline variables. Fit extension and strong modern reference model on training experiments; compare blinded held-out predictive likelihood/error under matched complexity and budget. If no robust improvement, reject the increment.
+Benefit if validated: chip and battery cooling.
+Evidence: CANDIDATE; domain-specific equation contract INCOMPLETE; numerical result NOT RUN; literature novelty UNKNOWN; empirical verification NOT DONE.
+
+#### 029 — Heat transfer: phase-transition latent-heat lag
+
+Existing reference model: Fourier conduction; primary observable: heat flux.
+Observed/latent variable to examine: phase-transition latent-heat lag.
+Unverified title-derived mechanism hint: state switching / hysteresis. Cycle the driving variable in both directions and record branch-dependent response for phase-transition latent-heat lag; test whether a single-valued constitutive law fails.
+Candidate construction: Introduce a branch/state variable with experimentally constrained transition rules; verify return-point and cycling behavior only if observed.
+Garden graph: THING=physical components; TIME=trajectory; SPACE=physical domain; EVENT=state transition; ACTION=controlled perturbation where applicable; AGENCY=experimenter/controller only; RULE=physical conservation; VALUE=declared performance measure; CONTEXT=experimental conditions; CLAIM=testable mechanism. Applicable edges: partOf, dependsOn, contextualizes, derivedFrom, supports/contradicts; use causes only after causal identification.
+Seven forms: CONSTRUCT=system; CONTRACT=units/domain; STATE=measured and hidden variables; RELATION=typed dependencies; PROCESS=state evolution; RULE=physical constraints; PROJECTION=baseline observable.
+Falsification protocol: Cycle the driving variable in both directions and record branch-dependent response for phase-transition latent-heat lag; test whether a single-valued constitutive law fails. Fit extension and strong modern reference model on training experiments; compare blinded held-out predictive likelihood/error under matched complexity and budget. If no robust improvement, reject the increment.
+Benefit if validated: chip and battery cooling.
+Evidence: CANDIDATE; domain-specific equation contract INCOMPLETE; numerical result NOT RUN; literature novelty UNKNOWN; empirical verification NOT DONE.
+
+#### 030 — Heat transfer: thermal-contact ageing
+
+Existing reference model: Fourier conduction; primary observable: heat flux.
+Observed/latent variable to examine: thermal-contact ageing.
+Unverified title-derived mechanism hint: network / geometry. Image or reconstruct the evolving contact/connection graph underlying thermal-contact ageing; hold aggregate counts fixed while varying graph statistics.
+Candidate construction: Represent adjacency/connectivity explicitly; project to a minimal measurable graph statistic and check whether equal aggregate states have different futures.
+Garden graph: THING=physical components; TIME=trajectory; SPACE=physical domain; EVENT=state transition; ACTION=controlled perturbation where applicable; AGENCY=experimenter/controller only; RULE=physical conservation; VALUE=declared performance measure; CONTEXT=experimental conditions; CLAIM=testable mechanism. Applicable edges: partOf, dependsOn, contextualizes, derivedFrom, supports/contradicts; use causes only after causal identification.
+Seven forms: CONSTRUCT=system; CONTRACT=units/domain; STATE=measured and hidden variables; RELATION=typed dependencies; PROCESS=state evolution; RULE=physical constraints; PROJECTION=baseline observable.
+Falsification protocol: Image or reconstruct the evolving contact/connection graph underlying thermal-contact ageing; hold aggregate counts fixed while varying graph statistics. Fit extension and strong modern reference model on training experiments; compare blinded held-out predictive likelihood/error under matched complexity and budget. If no robust improvement, reject the increment.
+Benefit if validated: chip and battery cooling.
+Evidence: CANDIDATE; domain-specific equation contract INCOMPLETE; numerical result NOT RUN; literature novelty UNKNOWN; empirical verification NOT DONE.
+
+#### 031 — Fluid transport: pore-throat network damage
+
+Existing reference model: Darcy porous-flow law; primary observable: effective permeability.
+Observed/latent variable to examine: pore-throat network damage.
+Unverified title-derived mechanism hint: network / geometry. Image or reconstruct the evolving contact/connection graph underlying pore-throat network damage; hold aggregate counts fixed while varying graph statistics.
+Candidate construction: Represent adjacency/connectivity explicitly; project to a minimal measurable graph statistic and check whether equal aggregate states have different futures.
+Garden graph: THING=physical components; TIME=trajectory; SPACE=physical domain; EVENT=state transition; ACTION=controlled perturbation where applicable; AGENCY=experimenter/controller only; RULE=physical conservation; VALUE=declared performance measure; CONTEXT=experimental conditions; CLAIM=testable mechanism. Applicable edges: partOf, dependsOn, contextualizes, derivedFrom, supports/contradicts; use causes only after causal identification.
+Seven forms: CONSTRUCT=system; CONTRACT=units/domain; STATE=measured and hidden variables; RELATION=typed dependencies; PROCESS=state evolution; RULE=physical constraints; PROJECTION=baseline observable.
+Falsification protocol: Image or reconstruct the evolving contact/connection graph underlying pore-throat network damage; hold aggregate counts fixed while varying graph statistics. Fit extension and strong modern reference model on training experiments; compare blinded held-out predictive likelihood/error under matched complexity and budget. If no robust improvement, reject the increment.
+Benefit if validated: filtration and groundwater.
+Evidence: CANDIDATE; domain-specific equation contract INCOMPLETE; numerical result NOT RUN; literature novelty UNKNOWN; empirical verification NOT DONE.
+
+#### 032 — Fluid transport: wetting-front hysteresis
+
+Existing reference model: Darcy porous-flow law; primary observable: effective permeability.
+Observed/latent variable to examine: wetting-front hysteresis.
+Unverified title-derived mechanism hint: state switching / hysteresis. Cycle the driving variable in both directions and record branch-dependent response for wetting-front hysteresis; test whether a single-valued constitutive law fails.
+Candidate construction: Introduce a branch/state variable with experimentally constrained transition rules; verify return-point and cycling behavior only if observed.
+Garden graph: THING=physical components; TIME=trajectory; SPACE=physical domain; EVENT=state transition; ACTION=controlled perturbation where applicable; AGENCY=experimenter/controller only; RULE=physical conservation; VALUE=declared performance measure; CONTEXT=experimental conditions; CLAIM=testable mechanism. Applicable edges: partOf, dependsOn, contextualizes, derivedFrom, supports/contradicts; use causes only after causal identification.
+Seven forms: CONSTRUCT=system; CONTRACT=units/domain; STATE=measured and hidden variables; RELATION=typed dependencies; PROCESS=state evolution; RULE=physical constraints; PROJECTION=baseline observable.
+Falsification protocol: Cycle the driving variable in both directions and record branch-dependent response for wetting-front hysteresis; test whether a single-valued constitutive law fails. Fit extension and strong modern reference model on training experiments; compare blinded held-out predictive likelihood/error under matched complexity and budget. If no robust improvement, reject the increment.
+Benefit if validated: filtration and groundwater.
+Evidence: CANDIDATE; domain-specific equation contract INCOMPLETE; numerical result NOT RUN; literature novelty UNKNOWN; empirical verification NOT DONE.
+
+#### 033 — Fluid transport: particle clogging topology
+
+Existing reference model: Darcy porous-flow law; primary observable: effective permeability.
+Observed/latent variable to examine: particle clogging topology.
+Unverified title-derived mechanism hint: network / geometry. Image or reconstruct the evolving contact/connection graph underlying particle clogging topology; hold aggregate counts fixed while varying graph statistics.
+Candidate construction: Represent adjacency/connectivity explicitly; project to a minimal measurable graph statistic and check whether equal aggregate states have different futures.
+Garden graph: THING=physical components; TIME=trajectory; SPACE=physical domain; EVENT=state transition; ACTION=controlled perturbation where applicable; AGENCY=experimenter/controller only; RULE=physical conservation; VALUE=declared performance measure; CONTEXT=experimental conditions; CLAIM=testable mechanism. Applicable edges: partOf, dependsOn, contextualizes, derivedFrom, supports/contradicts; use causes only after causal identification.
+Seven forms: CONSTRUCT=system; CONTRACT=units/domain; STATE=measured and hidden variables; RELATION=typed dependencies; PROCESS=state evolution; RULE=physical constraints; PROJECTION=baseline observable.
+Falsification protocol: Image or reconstruct the evolving contact/connection graph underlying particle clogging topology; hold aggregate counts fixed while varying graph statistics. Fit extension and strong modern reference model on training experiments; compare blinded held-out predictive likelihood/error under matched complexity and budget. If no robust improvement, reject the increment.
+Benefit if validated: filtration and groundwater.
+Evidence: CANDIDATE; domain-specific equation contract INCOMPLETE; numerical result NOT RUN; literature novelty UNKNOWN; empirical verification NOT DONE.
+
+#### 034 — Fluid transport: pressure-cycling memory
+
+Existing reference model: Darcy porous-flow law; primary observable: effective permeability.
+Observed/latent variable to examine: pressure-cycling memory.
+Unverified title-derived mechanism hint: dynamic hidden state / delay. Use matched present-state trajectories with different prior forcing histories for pressure-cycling memory; check whether their subsequent responses diverge.
+Candidate construction: Introduce a physically measured relaxing state or convolution kernel; estimate its timescale from perturbation data, not arbitrary fitting.
+Garden graph: THING=physical components; TIME=trajectory; SPACE=physical domain; EVENT=state transition; ACTION=controlled perturbation where applicable; AGENCY=experimenter/controller only; RULE=physical conservation; VALUE=declared performance measure; CONTEXT=experimental conditions; CLAIM=testable mechanism. Applicable edges: partOf, dependsOn, contextualizes, derivedFrom, supports/contradicts; use causes only after causal identification.
+Seven forms: CONSTRUCT=system; CONTRACT=units/domain; STATE=measured and hidden variables; RELATION=typed dependencies; PROCESS=state evolution; RULE=physical constraints; PROJECTION=baseline observable.
+Falsification protocol: Use matched present-state trajectories with different prior forcing histories for pressure-cycling memory; check whether their subsequent responses diverge. Fit extension and strong modern reference model on training experiments; compare blinded held-out predictive likelihood/error under matched complexity and budget. If no robust improvement, reject the increment.
+Benefit if validated: filtration and groundwater.
+Evidence: CANDIDATE; domain-specific equation contract INCOMPLETE; numerical result NOT RUN; literature novelty UNKNOWN; empirical verification NOT DONE.
+
+#### 035 — Fluid transport: multi-scale channel connectivity
+
+Existing reference model: Darcy porous-flow law; primary observable: effective permeability.
+Observed/latent variable to examine: multi-scale channel connectivity.
+Unverified title-derived mechanism hint: network / geometry. Image or reconstruct the evolving contact/connection graph underlying multi-scale channel connectivity; hold aggregate counts fixed while varying graph statistics.
+Candidate construction: Represent adjacency/connectivity explicitly; project to a minimal measurable graph statistic and check whether equal aggregate states have different futures.
+Garden graph: THING=physical components; TIME=trajectory; SPACE=physical domain; EVENT=state transition; ACTION=controlled perturbation where applicable; AGENCY=experimenter/controller only; RULE=physical conservation; VALUE=declared performance measure; CONTEXT=experimental conditions; CLAIM=testable mechanism. Applicable edges: partOf, dependsOn, contextualizes, derivedFrom, supports/contradicts; use causes only after causal identification.
+Seven forms: CONSTRUCT=system; CONTRACT=units/domain; STATE=measured and hidden variables; RELATION=typed dependencies; PROCESS=state evolution; RULE=physical constraints; PROJECTION=baseline observable.
+Falsification protocol: Image or reconstruct the evolving contact/connection graph underlying multi-scale channel connectivity; hold aggregate counts fixed while varying graph statistics. Fit extension and strong modern reference model on training experiments; compare blinded held-out predictive likelihood/error under matched complexity and budget. If no robust improvement, reject the increment.
+Benefit if validated: filtration and groundwater.
+Evidence: CANDIDATE; domain-specific equation contract INCOMPLETE; numerical result NOT RUN; literature novelty UNKNOWN; empirical verification NOT DONE.
+
+#### 036 — Fracture mechanics: overload sequence memory
+
+Existing reference model: Paris crack-growth law; primary observable: crack advance per cycle.
+Observed/latent variable to examine: overload sequence memory.
+Unverified title-derived mechanism hint: dynamic hidden state / delay. Use matched present-state trajectories with different prior forcing histories for overload sequence memory; check whether their subsequent responses diverge.
+Candidate construction: Introduce a physically measured relaxing state or convolution kernel; estimate its timescale from perturbation data, not arbitrary fitting.
+Garden graph: THING=physical components; TIME=trajectory; SPACE=physical domain; EVENT=state transition; ACTION=controlled perturbation where applicable; AGENCY=experimenter/controller only; RULE=physical conservation; VALUE=declared performance measure; CONTEXT=experimental conditions; CLAIM=testable mechanism. Applicable edges: partOf, dependsOn, contextualizes, derivedFrom, supports/contradicts; use causes only after causal identification.
+Seven forms: CONSTRUCT=system; CONTRACT=units/domain; STATE=measured and hidden variables; RELATION=typed dependencies; PROCESS=state evolution; RULE=physical constraints; PROJECTION=baseline observable.
+Falsification protocol: Use matched present-state trajectories with different prior forcing histories for overload sequence memory; check whether their subsequent responses diverge. Fit extension and strong modern reference model on training experiments; compare blinded held-out predictive likelihood/error under matched complexity and budget. If no robust improvement, reject the increment.
+Benefit if validated: safer infrastructure.
+Evidence: CANDIDATE; domain-specific equation contract INCOMPLETE; numerical result NOT RUN; literature novelty UNKNOWN; empirical verification NOT DONE.
+
+#### 037 — Fracture mechanics: microcrack orientation correlations
+
+Existing reference model: Paris crack-growth law; primary observable: crack advance per cycle.
+Observed/latent variable to examine: microcrack orientation correlations.
+Unverified title-derived mechanism hint: heterogeneity / joint distribution. Measure paired local fields or event-resolved distributions for microcrack orientation correlations; compare joint-data model with independently shuffled marginals.
+Candidate construction: Add a measured joint-distribution statistic, not a free coefficient; derive aggregate response by averaging the local law and quantify the residual.
+Garden graph: THING=physical components; TIME=trajectory; SPACE=physical domain; EVENT=state transition; ACTION=controlled perturbation where applicable; AGENCY=experimenter/controller only; RULE=physical conservation; VALUE=declared performance measure; CONTEXT=experimental conditions; CLAIM=testable mechanism. Applicable edges: partOf, dependsOn, contextualizes, derivedFrom, supports/contradicts; use causes only after causal identification.
+Seven forms: CONSTRUCT=system; CONTRACT=units/domain; STATE=measured and hidden variables; RELATION=typed dependencies; PROCESS=state evolution; RULE=physical constraints; PROJECTION=baseline observable.
+Falsification protocol: Measure paired local fields or event-resolved distributions for microcrack orientation correlations; compare joint-data model with independently shuffled marginals. Fit extension and strong modern reference model on training experiments; compare blinded held-out predictive likelihood/error under matched complexity and budget. If no robust improvement, reject the increment.
+Benefit if validated: safer infrastructure.
+Evidence: CANDIDATE; domain-specific equation contract INCOMPLETE; numerical result NOT RUN; literature novelty UNKNOWN; empirical verification NOT DONE.
+
+#### 038 — Fracture mechanics: corrosion-fatigue coupling
+
+Existing reference model: Paris crack-growth law; primary observable: crack advance per cycle.
+Observed/latent variable to examine: corrosion-fatigue coupling.
+Unverified title-derived mechanism hint: coupled latent kinetics. Measure the candidate intermediate state for corrosion-fatigue coupling during perturbation/recovery; test whether it predicts held-out transients beyond baseline variables.
+Candidate construction: Introduce a measurable intermediate and couple it by mass/energy-balanced rate equations; test observability and parameter identifiability.
+Garden graph: THING=physical components; TIME=trajectory; SPACE=physical domain; EVENT=state transition; ACTION=controlled perturbation where applicable; AGENCY=experimenter/controller only; RULE=physical conservation; VALUE=declared performance measure; CONTEXT=experimental conditions; CLAIM=testable mechanism. Applicable edges: partOf, dependsOn, contextualizes, derivedFrom, supports/contradicts; use causes only after causal identification.
+Seven forms: CONSTRUCT=system; CONTRACT=units/domain; STATE=measured and hidden variables; RELATION=typed dependencies; PROCESS=state evolution; RULE=physical constraints; PROJECTION=baseline observable.
+Falsification protocol: Measure the candidate intermediate state for corrosion-fatigue coupling during perturbation/recovery; test whether it predicts held-out transients beyond baseline variables. Fit extension and strong modern reference model on training experiments; compare blinded held-out predictive likelihood/error under matched complexity and budget. If no robust improvement, reject the increment.
+Benefit if validated: safer infrastructure.
+Evidence: CANDIDATE; domain-specific equation contract INCOMPLETE; numerical result NOT RUN; literature novelty UNKNOWN; empirical verification NOT DONE.
+
+#### 039 — Fracture mechanics: grain-boundary connectivity
+
+Existing reference model: Paris crack-growth law; primary observable: crack advance per cycle.
+Observed/latent variable to examine: grain-boundary connectivity.
+Unverified title-derived mechanism hint: network / geometry. Image or reconstruct the evolving contact/connection graph underlying grain-boundary connectivity; hold aggregate counts fixed while varying graph statistics.
+Candidate construction: Represent adjacency/connectivity explicitly; project to a minimal measurable graph statistic and check whether equal aggregate states have different futures.
+Garden graph: THING=physical components; TIME=trajectory; SPACE=physical domain; EVENT=state transition; ACTION=controlled perturbation where applicable; AGENCY=experimenter/controller only; RULE=physical conservation; VALUE=declared performance measure; CONTEXT=experimental conditions; CLAIM=testable mechanism. Applicable edges: partOf, dependsOn, contextualizes, derivedFrom, supports/contradicts; use causes only after causal identification.
+Seven forms: CONSTRUCT=system; CONTRACT=units/domain; STATE=measured and hidden variables; RELATION=typed dependencies; PROCESS=state evolution; RULE=physical constraints; PROJECTION=baseline observable.
+Falsification protocol: Image or reconstruct the evolving contact/connection graph underlying grain-boundary connectivity; hold aggregate counts fixed while varying graph statistics. Fit extension and strong modern reference model on training experiments; compare blinded held-out predictive likelihood/error under matched complexity and budget. If no robust improvement, reject the increment.
+Benefit if validated: safer infrastructure.
+Evidence: CANDIDATE; domain-specific equation contract INCOMPLETE; numerical result NOT RUN; literature novelty UNKNOWN; empirical verification NOT DONE.
+
+#### 040 — Fracture mechanics: residual-stress redistribution
+
+Existing reference model: Paris crack-growth law; primary observable: crack advance per cycle.
+Observed/latent variable to examine: residual-stress redistribution.
+Unverified title-derived mechanism hint: dynamic hidden state / delay. Use matched present-state trajectories with different prior forcing histories for residual-stress redistribution; check whether their subsequent responses diverge.
+Candidate construction: Introduce a physically measured relaxing state or convolution kernel; estimate its timescale from perturbation data, not arbitrary fitting.
+Garden graph: THING=physical components; TIME=trajectory; SPACE=physical domain; EVENT=state transition; ACTION=controlled perturbation where applicable; AGENCY=experimenter/controller only; RULE=physical conservation; VALUE=declared performance measure; CONTEXT=experimental conditions; CLAIM=testable mechanism. Applicable edges: partOf, dependsOn, contextualizes, derivedFrom, supports/contradicts; use causes only after causal identification.
+Seven forms: CONSTRUCT=system; CONTRACT=units/domain; STATE=measured and hidden variables; RELATION=typed dependencies; PROCESS=state evolution; RULE=physical constraints; PROJECTION=baseline observable.
+Falsification protocol: Use matched present-state trajectories with different prior forcing histories for residual-stress redistribution; check whether their subsequent responses diverge. Fit extension and strong modern reference model on training experiments; compare blinded held-out predictive likelihood/error under matched complexity and budget. If no robust improvement, reject the increment.
+Benefit if validated: safer infrastructure.
+Evidence: CANDIDATE; domain-specific equation contract INCOMPLETE; numerical result NOT RUN; literature novelty UNKNOWN; empirical verification NOT DONE.
+
+#### 041 — Turbulence: intermittency-conditioned closure
+
+Existing reference model: Reynolds-averaged closure; primary observable: unresolved stress tensor.
+Observed/latent variable to examine: intermittency-conditioned closure.
+Unverified title-derived mechanism hint: heterogeneity / joint distribution. Measure paired local fields or event-resolved distributions for intermittency-conditioned closure; compare joint-data model with independently shuffled marginals.
+Candidate construction: Add a measured joint-distribution statistic, not a free coefficient; derive aggregate response by averaging the local law and quantify the residual.
+Garden graph: THING=physical components; TIME=trajectory; SPACE=physical domain; EVENT=state transition; ACTION=controlled perturbation where applicable; AGENCY=experimenter/controller only; RULE=physical conservation; VALUE=declared performance measure; CONTEXT=experimental conditions; CLAIM=testable mechanism. Applicable edges: partOf, dependsOn, contextualizes, derivedFrom, supports/contradicts; use causes only after causal identification.
+Seven forms: CONSTRUCT=system; CONTRACT=units/domain; STATE=measured and hidden variables; RELATION=typed dependencies; PROCESS=state evolution; RULE=physical constraints; PROJECTION=baseline observable.
+Falsification protocol: Measure paired local fields or event-resolved distributions for intermittency-conditioned closure; compare joint-data model with independently shuffled marginals. Fit extension and strong modern reference model on training experiments; compare blinded held-out predictive likelihood/error under matched complexity and budget. If no robust improvement, reject the increment.
+Benefit if validated: efficient transport and turbines.
+Evidence: CANDIDATE; domain-specific equation contract INCOMPLETE; numerical result NOT RUN; literature novelty UNKNOWN; empirical verification NOT DONE.
+
+#### 042 — Turbulence: wall-history dependence
+
+Existing reference model: Reynolds-averaged closure; primary observable: unresolved stress tensor.
+Observed/latent variable to examine: wall-history dependence.
+Unverified title-derived mechanism hint: dynamic hidden state / delay. Use matched present-state trajectories with different prior forcing histories for wall-history dependence; check whether their subsequent responses diverge.
+Candidate construction: Introduce a physically measured relaxing state or convolution kernel; estimate its timescale from perturbation data, not arbitrary fitting.
+Garden graph: THING=physical components; TIME=trajectory; SPACE=physical domain; EVENT=state transition; ACTION=controlled perturbation where applicable; AGENCY=experimenter/controller only; RULE=physical conservation; VALUE=declared performance measure; CONTEXT=experimental conditions; CLAIM=testable mechanism. Applicable edges: partOf, dependsOn, contextualizes, derivedFrom, supports/contradicts; use causes only after causal identification.
+Seven forms: CONSTRUCT=system; CONTRACT=units/domain; STATE=measured and hidden variables; RELATION=typed dependencies; PROCESS=state evolution; RULE=physical constraints; PROJECTION=baseline observable.
+Falsification protocol: Use matched present-state trajectories with different prior forcing histories for wall-history dependence; check whether their subsequent responses diverge. Fit extension and strong modern reference model on training experiments; compare blinded held-out predictive likelihood/error under matched complexity and budget. If no robust improvement, reject the increment.
+Benefit if validated: efficient transport and turbines.
+Evidence: CANDIDATE; domain-specific equation contract INCOMPLETE; numerical result NOT RUN; literature novelty UNKNOWN; empirical verification NOT DONE.
+
+#### 043 — Turbulence: coherent-structure topology
+
+Existing reference model: Reynolds-averaged closure; primary observable: unresolved stress tensor.
+Observed/latent variable to examine: coherent-structure topology.
+Unverified title-derived mechanism hint: network / geometry. Image or reconstruct the evolving contact/connection graph underlying coherent-structure topology; hold aggregate counts fixed while varying graph statistics.
+Candidate construction: Represent adjacency/connectivity explicitly; project to a minimal measurable graph statistic and check whether equal aggregate states have different futures.
+Garden graph: THING=physical components; TIME=trajectory; SPACE=physical domain; EVENT=state transition; ACTION=controlled perturbation where applicable; AGENCY=experimenter/controller only; RULE=physical conservation; VALUE=declared performance measure; CONTEXT=experimental conditions; CLAIM=testable mechanism. Applicable edges: partOf, dependsOn, contextualizes, derivedFrom, supports/contradicts; use causes only after causal identification.
+Seven forms: CONSTRUCT=system; CONTRACT=units/domain; STATE=measured and hidden variables; RELATION=typed dependencies; PROCESS=state evolution; RULE=physical constraints; PROJECTION=baseline observable.
+Falsification protocol: Image or reconstruct the evolving contact/connection graph underlying coherent-structure topology; hold aggregate counts fixed while varying graph statistics. Fit extension and strong modern reference model on training experiments; compare blinded held-out predictive likelihood/error under matched complexity and budget. If no robust improvement, reject the increment.
+Benefit if validated: efficient transport and turbines.
+Evidence: CANDIDATE; domain-specific equation contract INCOMPLETE; numerical result NOT RUN; literature novelty UNKNOWN; empirical verification NOT DONE.
+
+#### 044 — Turbulence: pressure-strain lag
+
+Existing reference model: Reynolds-averaged closure; primary observable: unresolved stress tensor.
+Observed/latent variable to examine: pressure-strain lag.
+Unverified title-derived mechanism hint: dynamic hidden state / delay. Use matched present-state trajectories with different prior forcing histories for pressure-strain lag; check whether their subsequent responses diverge.
+Candidate construction: Introduce a physically measured relaxing state or convolution kernel; estimate its timescale from perturbation data, not arbitrary fitting.
+Garden graph: THING=physical components; TIME=trajectory; SPACE=physical domain; EVENT=state transition; ACTION=controlled perturbation where applicable; AGENCY=experimenter/controller only; RULE=physical conservation; VALUE=declared performance measure; CONTEXT=experimental conditions; CLAIM=testable mechanism. Applicable edges: partOf, dependsOn, contextualizes, derivedFrom, supports/contradicts; use causes only after causal identification.
+Seven forms: CONSTRUCT=system; CONTRACT=units/domain; STATE=measured and hidden variables; RELATION=typed dependencies; PROCESS=state evolution; RULE=physical constraints; PROJECTION=baseline observable.
+Falsification protocol: Use matched present-state trajectories with different prior forcing histories for pressure-strain lag; check whether their subsequent responses diverge. Fit extension and strong modern reference model on training experiments; compare blinded held-out predictive likelihood/error under matched complexity and budget. If no robust improvement, reject the increment.
+Benefit if validated: efficient transport and turbines.
+Evidence: CANDIDATE; domain-specific equation contract INCOMPLETE; numerical result NOT RUN; literature novelty UNKNOWN; empirical verification NOT DONE.
+
+#### 045 — Turbulence: cross-scale transfer memory
+
+Existing reference model: Reynolds-averaged closure; primary observable: unresolved stress tensor.
+Observed/latent variable to examine: cross-scale transfer memory.
+Unverified title-derived mechanism hint: dynamic hidden state / delay. Use matched present-state trajectories with different prior forcing histories for cross-scale transfer memory; check whether their subsequent responses diverge.
+Candidate construction: Introduce a physically measured relaxing state or convolution kernel; estimate its timescale from perturbation data, not arbitrary fitting.
+Garden graph: THING=physical components; TIME=trajectory; SPACE=physical domain; EVENT=state transition; ACTION=controlled perturbation where applicable; AGENCY=experimenter/controller only; RULE=physical conservation; VALUE=declared performance measure; CONTEXT=experimental conditions; CLAIM=testable mechanism. Applicable edges: partOf, dependsOn, contextualizes, derivedFrom, supports/contradicts; use causes only after causal identification.
+Seven forms: CONSTRUCT=system; CONTRACT=units/domain; STATE=measured and hidden variables; RELATION=typed dependencies; PROCESS=state evolution; RULE=physical constraints; PROJECTION=baseline observable.
+Falsification protocol: Use matched present-state trajectories with different prior forcing histories for cross-scale transfer memory; check whether their subsequent responses diverge. Fit extension and strong modern reference model on training experiments; compare blinded held-out predictive likelihood/error under matched complexity and budget. If no robust improvement, reject the increment.
+Benefit if validated: efficient transport and turbines.
+Evidence: CANDIDATE; domain-specific equation contract INCOMPLETE; numerical result NOT RUN; literature novelty UNKNOWN; empirical verification NOT DONE.
+
+#### 046 — Solar cells: mobile-ion interface memory
+
+Existing reference model: drift–diffusion photovoltaic model; primary observable: carrier recombination rate.
+Observed/latent variable to examine: mobile-ion interface memory.
+Unverified title-derived mechanism hint: dynamic hidden state / delay. Use matched present-state trajectories with different prior forcing histories for mobile-ion interface memory; check whether their subsequent responses diverge.
+Candidate construction: Introduce a physically measured relaxing state or convolution kernel; estimate its timescale from perturbation data, not arbitrary fitting.
+Garden graph: THING=physical components; TIME=trajectory; SPACE=physical domain; EVENT=state transition; ACTION=controlled perturbation where applicable; AGENCY=experimenter/controller only; RULE=physical conservation; VALUE=declared performance measure; CONTEXT=experimental conditions; CLAIM=testable mechanism. Applicable edges: partOf, dependsOn, contextualizes, derivedFrom, supports/contradicts; use causes only after causal identification.
+Seven forms: CONSTRUCT=system; CONTRACT=units/domain; STATE=measured and hidden variables; RELATION=typed dependencies; PROCESS=state evolution; RULE=physical constraints; PROJECTION=baseline observable.
+Falsification protocol: Use matched present-state trajectories with different prior forcing histories for mobile-ion interface memory; check whether their subsequent responses diverge. Fit extension and strong modern reference model on training experiments; compare blinded held-out predictive likelihood/error under matched complexity and budget. If no robust improvement, reject the increment.
+Benefit if validated: longer-lasting solar modules.
+Evidence: CANDIDATE; domain-specific equation contract INCOMPLETE; numerical result NOT RUN; literature novelty UNKNOWN; empirical verification NOT DONE.
+
+#### 047 — Solar cells: trap-occupancy hysteresis
+
+Existing reference model: drift–diffusion photovoltaic model; primary observable: carrier recombination rate.
+Observed/latent variable to examine: trap-occupancy hysteresis.
+Unverified title-derived mechanism hint: state switching / hysteresis. Cycle the driving variable in both directions and record branch-dependent response for trap-occupancy hysteresis; test whether a single-valued constitutive law fails.
+Candidate construction: Introduce a branch/state variable with experimentally constrained transition rules; verify return-point and cycling behavior only if observed.
+Garden graph: THING=physical components; TIME=trajectory; SPACE=physical domain; EVENT=state transition; ACTION=controlled perturbation where applicable; AGENCY=experimenter/controller only; RULE=physical conservation; VALUE=declared performance measure; CONTEXT=experimental conditions; CLAIM=testable mechanism. Applicable edges: partOf, dependsOn, contextualizes, derivedFrom, supports/contradicts; use causes only after causal identification.
+Seven forms: CONSTRUCT=system; CONTRACT=units/domain; STATE=measured and hidden variables; RELATION=typed dependencies; PROCESS=state evolution; RULE=physical constraints; PROJECTION=baseline observable.
+Falsification protocol: Cycle the driving variable in both directions and record branch-dependent response for trap-occupancy hysteresis; test whether a single-valued constitutive law fails. Fit extension and strong modern reference model on training experiments; compare blinded held-out predictive likelihood/error under matched complexity and budget. If no robust improvement, reject the increment.
+Benefit if validated: longer-lasting solar modules.
+Evidence: CANDIDATE; domain-specific equation contract INCOMPLETE; numerical result NOT RUN; literature novelty UNKNOWN; empirical verification NOT DONE.
+
+#### 048 — Solar cells: grain-boundary topology
+
+Existing reference model: drift–diffusion photovoltaic model; primary observable: carrier recombination rate.
+Observed/latent variable to examine: grain-boundary topology.
+Unverified title-derived mechanism hint: network / geometry. Image or reconstruct the evolving contact/connection graph underlying grain-boundary topology; hold aggregate counts fixed while varying graph statistics.
+Candidate construction: Represent adjacency/connectivity explicitly; project to a minimal measurable graph statistic and check whether equal aggregate states have different futures.
+Garden graph: THING=physical components; TIME=trajectory; SPACE=physical domain; EVENT=state transition; ACTION=controlled perturbation where applicable; AGENCY=experimenter/controller only; RULE=physical conservation; VALUE=declared performance measure; CONTEXT=experimental conditions; CLAIM=testable mechanism. Applicable edges: partOf, dependsOn, contextualizes, derivedFrom, supports/contradicts; use causes only after causal identification.
+Seven forms: CONSTRUCT=system; CONTRACT=units/domain; STATE=measured and hidden variables; RELATION=typed dependencies; PROCESS=state evolution; RULE=physical constraints; PROJECTION=baseline observable.
+Falsification protocol: Image or reconstruct the evolving contact/connection graph underlying grain-boundary topology; hold aggregate counts fixed while varying graph statistics. Fit extension and strong modern reference model on training experiments; compare blinded held-out predictive likelihood/error under matched complexity and budget. If no robust improvement, reject the increment.
+Benefit if validated: longer-lasting solar modules.
+Evidence: CANDIDATE; domain-specific equation contract INCOMPLETE; numerical result NOT RUN; literature novelty UNKNOWN; empirical verification NOT DONE.
+
+#### 049 — Solar cells: humidity-illumination covariance
+
+Existing reference model: drift–diffusion photovoltaic model; primary observable: carrier recombination rate.
+Observed/latent variable to examine: humidity-illumination covariance.
+Unverified title-derived mechanism hint: heterogeneity / joint distribution. Measure paired local fields or event-resolved distributions for humidity-illumination covariance; compare joint-data model with independently shuffled marginals.
+Candidate construction: Add a measured joint-distribution statistic, not a free coefficient; derive aggregate response by averaging the local law and quantify the residual.
+Garden graph: THING=physical components; TIME=trajectory; SPACE=physical domain; EVENT=state transition; ACTION=controlled perturbation where applicable; AGENCY=experimenter/controller only; RULE=physical conservation; VALUE=declared performance measure; CONTEXT=experimental conditions; CLAIM=testable mechanism. Applicable edges: partOf, dependsOn, contextualizes, derivedFrom, supports/contradicts; use causes only after causal identification.
+Seven forms: CONSTRUCT=system; CONTRACT=units/domain; STATE=measured and hidden variables; RELATION=typed dependencies; PROCESS=state evolution; RULE=physical constraints; PROJECTION=baseline observable.
+Falsification protocol: Measure paired local fields or event-resolved distributions for humidity-illumination covariance; compare joint-data model with independently shuffled marginals. Fit extension and strong modern reference model on training experiments; compare blinded held-out predictive likelihood/error under matched complexity and budget. If no robust improvement, reject the increment.
+Benefit if validated: longer-lasting solar modules.
+Evidence: CANDIDATE; domain-specific equation contract INCOMPLETE; numerical result NOT RUN; literature novelty UNKNOWN; empirical verification NOT DONE.
+
+#### 050 — Solar cells: contact ageing kinetics
+
+Existing reference model: drift–diffusion photovoltaic model; primary observable: carrier recombination rate.
+Observed/latent variable to examine: contact ageing kinetics.
+Unverified title-derived mechanism hint: network / geometry. Image or reconstruct the evolving contact/connection graph underlying contact ageing kinetics; hold aggregate counts fixed while varying graph statistics.
+Candidate construction: Represent adjacency/connectivity explicitly; project to a minimal measurable graph statistic and check whether equal aggregate states have different futures.
+Garden graph: THING=physical components; TIME=trajectory; SPACE=physical domain; EVENT=state transition; ACTION=controlled perturbation where applicable; AGENCY=experimenter/controller only; RULE=physical conservation; VALUE=declared performance measure; CONTEXT=experimental conditions; CLAIM=testable mechanism. Applicable edges: partOf, dependsOn, contextualizes, derivedFrom, supports/contradicts; use causes only after causal identification.
+Seven forms: CONSTRUCT=system; CONTRACT=units/domain; STATE=measured and hidden variables; RELATION=typed dependencies; PROCESS=state evolution; RULE=physical constraints; PROJECTION=baseline observable.
+Falsification protocol: Image or reconstruct the evolving contact/connection graph underlying contact ageing kinetics; hold aggregate counts fixed while varying graph statistics. Fit extension and strong modern reference model on training experiments; compare blinded held-out predictive likelihood/error under matched complexity and budget. If no robust improvement, reject the increment.
+Benefit if validated: longer-lasting solar modules.
+Evidence: CANDIDATE; domain-specific equation contract INCOMPLETE; numerical result NOT RUN; literature novelty UNKNOWN; empirical verification NOT DONE.
+
+#### 051 — Photosynthesis: dynamic disorder correlation
+
+Existing reference model: exciton transport / trapping; primary observable: reaction-center capture yield.
+Observed/latent variable to examine: dynamic disorder correlation.
+Unverified title-derived mechanism hint: heterogeneity / joint distribution. Measure paired local fields or event-resolved distributions for dynamic disorder correlation; compare joint-data model with independently shuffled marginals.
+Candidate construction: Add a measured joint-distribution statistic, not a free coefficient; derive aggregate response by averaging the local law and quantify the residual.
+Garden graph: THING=physical components; TIME=trajectory; SPACE=physical domain; EVENT=state transition; ACTION=controlled perturbation where applicable; AGENCY=experimenter/controller only; RULE=physical conservation; VALUE=declared performance measure; CONTEXT=experimental conditions; CLAIM=testable mechanism. Applicable edges: partOf, dependsOn, contextualizes, derivedFrom, supports/contradicts; use causes only after causal identification.
+Seven forms: CONSTRUCT=system; CONTRACT=units/domain; STATE=measured and hidden variables; RELATION=typed dependencies; PROCESS=state evolution; RULE=physical constraints; PROJECTION=baseline observable.
+Falsification protocol: Measure paired local fields or event-resolved distributions for dynamic disorder correlation; compare joint-data model with independently shuffled marginals. Fit extension and strong modern reference model on training experiments; compare blinded held-out predictive likelihood/error under matched complexity and budget. If no robust improvement, reject the increment.
+Benefit if validated: artificial photosynthesis.
+Evidence: CANDIDATE; domain-specific equation contract INCOMPLETE; numerical result NOT RUN; literature novelty UNKNOWN; empirical verification NOT DONE.
+
+#### 052 — Photosynthesis: reaction-center occupancy feedback
+
+Existing reference model: exciton transport / trapping; primary observable: reaction-center capture yield.
+Observed/latent variable to examine: reaction-center occupancy feedback.
+Unverified title-derived mechanism hint: coupled latent kinetics. Measure the candidate intermediate state for reaction-center occupancy feedback during perturbation/recovery; test whether it predicts held-out transients beyond baseline variables.
+Candidate construction: Introduce a measurable intermediate and couple it by mass/energy-balanced rate equations; test observability and parameter identifiability.Garden graph: THING=physical components; TIME=trajectory; SPACE=physical domain; EVENT=state transition; ACTION=controlled perturbation where applicable; AGENCY=experimenter/controller only; RULE=physical conservation; VALUE=declared performance measure; CONTEXT=experimental conditions; CLAIM=testable mechanism. Applicable edges: partOf, dependsOn, contextualizes, derivedFrom, supports/contradicts; use causes only after causal identification.
+Seven forms: CONSTRUCT=system; CONTRACT=units/domain; STATE=measured and hidden variables; RELATION=typed dependencies; PROCESS=state evolution; RULE=physical constraints; PROJECTION=baseline observable.
+Falsification protocol: Measure the candidate intermediate state for reaction-center occupancy feedback during perturbation/recovery; test whether it predicts held-out transients beyond baseline variables. Fit extension and strong modern reference model on training experiments; compare blinded held-out predictive likelihood/error under matched complexity and budget. If no robust improvement, reject the increment.
+Benefit if validated: artificial photosynthesis.
+Evidence: CANDIDATE; domain-specific equation contract INCOMPLETE; numerical result NOT RUN; literature novelty UNKNOWN; empirical verification NOT DONE.
+
+#### 053 — Photosynthesis: vibrational mode intermittency
+
+Existing reference model: exciton transport / trapping; primary observable: reaction-center capture yield.
+Observed/latent variable to examine: vibrational mode intermittency.
+Unverified title-derived mechanism hint: heterogeneity / joint distribution. Measure paired local fields or event-resolved distributions for vibrational mode intermittency; compare joint-data model with independently shuffled marginals.
+Candidate construction: Add a measured joint-distribution statistic, not a free coefficient; derive aggregate response by averaging the local law and quantify the residual.
+Garden graph: THING=physical components; TIME=trajectory; SPACE=physical domain; EVENT=state transition; ACTION=controlled perturbation where applicable; AGENCY=experimenter/controller only; RULE=physical conservation; VALUE=declared performance measure; CONTEXT=experimental conditions; CLAIM=testable mechanism. Applicable edges: partOf, dependsOn, contextualizes, derivedFrom, supports/contradicts; use causes only after causal identification.
+Seven forms: CONSTRUCT=system; CONTRACT=units/domain; STATE=measured and hidden variables; RELATION=typed dependencies; PROCESS=state evolution; RULE=physical constraints; PROJECTION=baseline observable.
+Falsification protocol: Measure paired local fields or event-resolved distributions for vibrational mode intermittency; compare joint-data model with independently shuffled marginals. Fit extension and strong modern reference model on training experiments; compare blinded held-out predictive likelihood/error under matched complexity and budget. If no robust improvement, reject the increment.
+Benefit if validated: artificial photosynthesis.
+Evidence: CANDIDATE; domain-specific equation contract INCOMPLETE; numerical result NOT RUN; literature novelty UNKNOWN; empirical verification NOT DONE.
+
+#### 054 — Photosynthesis: antenna topology adaptation
+
+Existing reference model: exciton transport / trapping; primary observable: reaction-center capture yield.
+Observed/latent variable to examine: antenna topology adaptation.
+Unverified title-derived mechanism hint: network / geometry. Image or reconstruct the evolving contact/connection graph underlying antenna topology adaptation; hold aggregate counts fixed while varying graph statistics.
+Candidate construction: Represent adjacency/connectivity explicitly; project to a minimal measurable graph statistic and check whether equal aggregate states have different futures.
+Garden graph: THING=physical components; TIME=trajectory; SPACE=physical domain; EVENT=state transition; ACTION=controlled perturbation where applicable; AGENCY=experimenter/controller only; RULE=physical conservation; VALUE=declared performance measure; CONTEXT=experimental conditions; CLAIM=testable mechanism. Applicable edges: partOf, dependsOn, contextualizes, derivedFrom, supports/contradicts; use causes only after causal identification.
+Seven forms: CONSTRUCT=system; CONTRACT=units/domain; STATE=measured and hidden variables; RELATION=typed dependencies; PROCESS=state evolution; RULE=physical constraints; PROJECTION=baseline observable.
+Falsification protocol: Image or reconstruct the evolving contact/connection graph underlying antenna topology adaptation; hold aggregate counts fixed while varying graph statistics. Fit extension and strong modern reference model on training experiments; compare blinded held-out predictive likelihood/error under matched complexity and budget. If no robust improvement, reject the increment.
+Benefit if validated: artificial photosynthesis.
+Evidence: CANDIDATE; domain-specific equation contract INCOMPLETE; numerical result NOT RUN; literature novelty UNKNOWN; empirical verification NOT DONE.
+
+#### 055 — Photosynthesis: nonphotochemical quenching memory
+
+Existing reference model: exciton transport / trapping; primary observable: reaction-center capture yield.
+Observed/latent variable to examine: nonphotochemical quenching memory.
+Unverified title-derived mechanism hint: dynamic hidden state / delay. Use matched present-state trajectories with different prior forcing histories for nonphotochemical quenching memory; check whether their subsequent responses diverge.
+Candidate construction: Introduce a physically measured relaxing state or convolution kernel; estimate its timescale from perturbation data, not arbitrary fitting.
+Garden graph: THING=physical components; TIME=trajectory; SPACE=physical domain; EVENT=state transition; ACTION=controlled perturbation where applicable; AGENCY=experimenter/controller only; RULE=physical conservation; VALUE=declared performance measure; CONTEXT=experimental conditions; CLAIM=testable mechanism. Applicable edges: partOf, dependsOn, contextualizes, derivedFrom, supports/contradicts; use causes only after causal identification.
+Seven forms: CONSTRUCT=system; CONTRACT=units/domain; STATE=measured and hidden variables; RELATION=typed dependencies; PROCESS=state evolution; RULE=physical constraints; PROJECTION=baseline observable.
+Falsification protocol: Use matched present-state trajectories with different prior forcing histories for nonphotochemical quenching memory; check whether their subsequent responses diverge. Fit extension and strong modern reference model on training experiments; compare blinded held-out predictive likelihood/error under matched complexity and budget. If no robust improvement, reject the increment.
+Benefit if validated: artificial photosynthesis.
+Evidence: CANDIDATE; domain-specific equation contract INCOMPLETE; numerical result NOT RUN; literature novelty UNKNOWN; empirical verification NOT DONE.
+
+#### 056 — Neuroscience: phase-lag memory
+
+Existing reference model: neural mass / firing-rate model; primary observable: population response.
+Observed/latent variable to examine: phase-lag memory.
+Unverified title-derived mechanism hint: state switching / hysteresis. Cycle the driving variable in both directions and record branch-dependent response for phase-lag memory; test whether a single-valued constitutive law fails.
+Candidate construction: Introduce a branch/state variable with experimentally constrained transition rules; verify return-point and cycling behavior only if observed.
+Garden graph: THING=physical components; TIME=trajectory; SPACE=physical domain; EVENT=state transition; ACTION=controlled perturbation where applicable; AGENCY=experimenter/controller only; RULE=physical conservation; VALUE=declared performance measure; CONTEXT=experimental conditions; CLAIM=testable mechanism. Applicable edges: partOf, dependsOn, contextualizes, derivedFrom, supports/contradicts; use causes only after causal identification.
+Seven forms: CONSTRUCT=system; CONTRACT=units/domain; STATE=measured and hidden variables; RELATION=typed dependencies; PROCESS=state evolution; RULE=physical constraints; PROJECTION=baseline observable.
+Falsification protocol: Cycle the driving variable in both directions and record branch-dependent response for phase-lag memory; test whether a single-valued constitutive law fails. Fit extension and strong modern reference model on training experiments; compare blinded held-out predictive likelihood/error under matched complexity and budget. If no robust improvement, reject the increment.
+Benefit if validated: better neural diagnostics.
+Evidence: CANDIDATE; domain-specific equation contract INCOMPLETE; numerical result NOT RUN; literature novelty UNKNOWN; empirical verification NOT DONE.
+
+#### 057 — Neuroscience: cell-type interaction topology
+
+Existing reference model: neural mass / firing-rate model; primary observable: population response.
+Observed/latent variable to examine: cell-type interaction topology.
+Unverified title-derived mechanism hint: network / geometry. Image or reconstruct the evolving contact/connection graph underlying cell-type interaction topology; hold aggregate counts fixed while varying graph statistics.
+Candidate construction: Represent adjacency/connectivity explicitly; project to a minimal measurable graph statistic and check whether equal aggregate states have different futures.
+Garden graph: THING=physical components; TIME=trajectory; SPACE=physical domain; EVENT=state transition; ACTION=controlled perturbation where applicable; AGENCY=experimenter/controller only; RULE=physical conservation; VALUE=declared performance measure; CONTEXT=experimental conditions; CLAIM=testable mechanism. Applicable edges: partOf, dependsOn, contextualizes, derivedFrom, supports/contradicts; use causes only after causal identification.
+Seven forms: CONSTRUCT=system; CONTRACT=units/domain; STATE=measured and hidden variables; RELATION=typed dependencies; PROCESS=state evolution; RULE=physical constraints; PROJECTION=baseline observable.
+Falsification protocol: Image or reconstruct the evolving contact/connection graph underlying cell-type interaction topology; hold aggregate counts fixed while varying graph statistics. Fit extension and strong modern reference model on training experiments; compare blinded held-out predictive likelihood/error under matched complexity and budget. If no robust improvement, reject the increment.
+Benefit if validated: better neural diagnostics.
+Evidence: CANDIDATE; domain-specific equation contract INCOMPLETE; numerical result NOT RUN; literature novelty UNKNOWN; empirical verification NOT DONE.
+
+#### 058 — Neuroscience: adaptation-state retention
+
+Existing reference model: neural mass / firing-rate model; primary observable: population response.
+Observed/latent variable to examine: adaptation-state retention.
+Unverified title-derived mechanism hint: dynamic hidden state / delay. Use matched present-state trajectories with different prior forcing histories for adaptation-state retention; check whether their subsequent responses diverge.
+Candidate construction: Introduce a physically measured relaxing state or convolution kernel; estimate its timescale from perturbation data, not arbitrary fitting.
+Garden graph: THING=physical components; TIME=trajectory; SPACE=physical domain; EVENT=state transition; ACTION=controlled perturbation where applicable; AGENCY=experimenter/controller only; RULE=physical conservation; VALUE=declared performance measure; CONTEXT=experimental conditions; CLAIM=testable mechanism. Applicable edges: partOf, dependsOn, contextualizes, derivedFrom, supports/contradicts; use causes only after causal identification.
+Seven forms: CONSTRUCT=system; CONTRACT=units/domain; STATE=measured and hidden variables; RELATION=typed dependencies; PROCESS=state evolution; RULE=physical constraints; PROJECTION=baseline observable.
+Falsification protocol: Use matched present-state trajectories with different prior forcing histories for adaptation-state retention; check whether their subsequent responses diverge. Fit extension and strong modern reference model on training experiments; compare blinded held-out predictive likelihood/error under matched complexity and budget. If no robust improvement, reject the increment.
+Benefit if validated: better neural diagnostics.
+Evidence: CANDIDATE; domain-specific equation contract INCOMPLETE; numerical result NOT RUN; literature novelty UNKNOWN; empirical verification NOT DONE.
+
+#### 059 — Neuroscience: dendritic compartment coupling
+
+Existing reference model: neural mass / firing-rate model; primary observable: population response.
+Observed/latent variable to examine: dendritic compartment coupling.
+Unverified title-derived mechanism hint: coupled latent kinetics. Measure the candidate intermediate state for dendritic compartment coupling during perturbation/recovery; test whether it predicts held-out transients beyond baseline variables.
+Candidate construction: Introduce a measurable intermediate and couple it by mass/energy-balanced rate equations; test observability and parameter identifiability.
+Garden graph: THING=physical components; TIME=trajectory; SPACE=physical domain; EVENT=state transition; ACTION=controlled perturbation where applicable; AGENCY=experimenter/controller only; RULE=physical conservation; VALUE=declared performance measure; CONTEXT=experimental conditions; CLAIM=testable mechanism. Applicable edges: partOf, dependsOn, contextualizes, derivedFrom, supports/contradicts; use causes only after causal identification.
+Seven forms: CONSTRUCT=system; CONTRACT=units/domain; STATE=measured and hidden variables; RELATION=typed dependencies; PROCESS=state evolution; RULE=physical constraints; PROJECTION=baseline observable.
+Falsification protocol: Measure the candidate intermediate state for dendritic compartment coupling during perturbation/recovery; test whether it predicts held-out transients beyond baseline variables. Fit extension and strong modern reference model on training experiments; compare blinded held-out predictive likelihood/error under matched complexity and budget. If no robust improvement, reject the increment.
+Benefit if validated: better neural diagnostics.
+Evidence: CANDIDATE; domain-specific equation contract INCOMPLETE; numerical result NOT RUN; literature novelty UNKNOWN; empirical verification NOT DONE.
+
+#### 060 — Neuroscience: glial metabolic feedback
+
+Existing reference model: neural mass / firing-rate model; primary observable: population response.
+Observed/latent variable to examine: glial metabolic feedback.
+Unverified title-derived mechanism hint: coupled latent kinetics. Measure the candidate intermediate state for glial metabolic feedback during perturbation/recovery; test whether it predicts held-out transients beyond baseline variables.
+Candidate construction: Introduce a measurable intermediate and couple it by mass/energy-balanced rate equations; test observability and parameter identifiability.
+Garden graph: THING=physical components; TIME=trajectory; SPACE=physical domain; EVENT=state transition; ACTION=controlled perturbation where applicable; AGENCY=experimenter/controller only; RULE=physical conservation; VALUE=declared performance measure; CONTEXT=experimental conditions; CLAIM=testable mechanism. Applicable edges: partOf, dependsOn, contextualizes, derivedFrom, supports/contradicts; use causes only after causal identification.
+Seven forms: CONSTRUCT=system; CONTRACT=units/domain; STATE=measured and hidden variables; RELATION=typed dependencies; PROCESS=state evolution; RULE=physical constraints; PROJECTION=baseline observable.
+Falsification protocol: Measure the candidate intermediate state for glial metabolic feedback during perturbation/recovery; test whether it predicts held-out transients beyond baseline variables. Fit extension and strong modern reference model on training experiments; compare blinded held-out predictive likelihood/error under matched complexity and budget. If no robust improvement, reject the increment.
+Benefit if validated: better neural diagnostics.
+Evidence: CANDIDATE; domain-specific equation contract INCOMPLETE; numerical result NOT RUN; literature novelty UNKNOWN; empirical verification NOT DONE.
+
+#### 061 — Pharmacokinetics: transporter saturation history
+
+Existing reference model: compartment PK model; primary observable: tissue drug concentration.
+Observed/latent variable to examine: transporter saturation history.
+Unverified title-derived mechanism hint: dynamic hidden state / delay. Use matched present-state trajectories with different prior forcing histories for transporter saturation history; check whether their subsequent responses diverge.
+Candidate construction: Introduce a physically measured relaxing state or convolution kernel; estimate its timescale from perturbation data, not arbitrary fitting.
+Garden graph: THING=physical components; TIME=trajectory; SPACE=physical domain; EVENT=state transition; ACTION=controlled perturbation where applicable; AGENCY=experimenter/controller only; RULE=physical conservation; VALUE=declared performance measure; CONTEXT=experimental conditions; CLAIM=testable mechanism. Applicable edges: partOf, dependsOn, contextualizes, derivedFrom, supports/contradicts; use causes only after causal identification.
+Seven forms: CONSTRUCT=system; CONTRACT=units/domain; STATE=measured and hidden variables; RELATION=typed dependencies; PROCESS=state evolution; RULE=physical constraints; PROJECTION=baseline observable.
+Falsification protocol: Use matched present-state trajectories with different prior forcing histories for transporter saturation history; check whether their subsequent responses diverge. Fit extension and strong modern reference model on training experiments; compare blinded held-out predictive likelihood/error under matched complexity and budget. If no robust improvement, reject the increment.
+Benefit if validated: precision dosing.
+Evidence: CANDIDATE; domain-specific equation contract INCOMPLETE; numerical result NOT RUN; literature novelty UNKNOWN; empirical verification NOT DONE.
+
+#### 062 — Pharmacokinetics: protein-binding displacement lag
+
+Existing reference model: compartment PK model; primary observable: tissue drug concentration.
+Observed/latent variable to examine: protein-binding displacement lag.
+Unverified title-derived mechanism hint: dynamic hidden state / delay. Use matched present-state trajectories with different prior forcing histories for protein-binding displacement lag; check whether their subsequent responses diverge.
+Candidate construction: Introduce a physically measured relaxing state or convolution kernel; estimate its timescale from perturbation data, not arbitrary fitting.
+Garden graph: THING=physical components; TIME=trajectory; SPACE=physical domain; EVENT=state transition; ACTION=controlled perturbation where applicable; AGENCY=experimenter/controller only; RULE=physical conservation; VALUE=declared performance measure; CONTEXT=experimental conditions; CLAIM=testable mechanism. Applicable edges: partOf, dependsOn, contextualizes, derivedFrom, supports/contradicts; use causes only after causal identification.
+Seven forms: CONSTRUCT=system; CONTRACT=units/domain; STATE=measured and hidden variables; RELATION=typed dependencies; PROCESS=state evolution; RULE=physical constraints; PROJECTION=baseline observable.
+Falsification protocol: Use matched present-state trajectories with different prior forcing histories for protein-binding displacement lag; check whether their subsequent responses diverge. Fit extension and strong modern reference model on training experiments; compare blinded held-out predictive likelihood/error under matched complexity and budget. If no robust improvement, reject the increment.
+Benefit if validated: precision dosing.
+Evidence: CANDIDATE; domain-specific equation contract INCOMPLETE; numerical result NOT RUN; literature novelty UNKNOWN; empirical verification NOT DONE.
+
+#### 063 — Pharmacokinetics: organ perfusion covariance
+
+Existing reference model: compartment PK model; primary observable: tissue drug concentration.
+Observed/latent variable to examine: organ perfusion covariance.
+Unverified title-derived mechanism hint: heterogeneity / joint distribution. Measure paired local fields or event-resolved distributions for organ perfusion covariance; compare joint-data model with independently shuffled marginals.
+Candidate construction: Add a measured joint-distribution statistic, not a free coefficient; derive aggregate response by averaging the local law and quantify the residual.
+Garden graph: THING=physical components; TIME=trajectory; SPACE=physical domain; EVENT=state transition; ACTION=controlled perturbation where applicable; AGENCY=experimenter/controller only; RULE=physical conservation; VALUE=declared performance measure; CONTEXT=experimental conditions; CLAIM=testable mechanism. Applicable edges: partOf, dependsOn, contextualizes, derivedFrom, supports/contradicts; use causes only after causal identification.
+Seven forms: CONSTRUCT=system; CONTRACT=units/domain; STATE=measured and hidden variables; RELATION=typed dependencies; PROCESS=state evolution; RULE=physical constraints; PROJECTION=baseline observable.
+Falsification protocol: Measure paired local fields or event-resolved distributions for organ perfusion covariance; compare joint-data model with independently shuffled marginals. Fit extension and strong modern reference model on training experiments; compare blinded held-out predictive likelihood/error under matched complexity and budget. If no robust improvement, reject the increment.
+Benefit if validated: precision dosing.
+Evidence: CANDIDATE; domain-specific equation contract INCOMPLETE; numerical result NOT RUN; literature novelty UNKNOWN; empirical verification NOT DONE.
+
+#### 064 — Pharmacokinetics: intracellular sequestration memory
+
+Existing reference model: compartment PK model; primary observable: tissue drug concentration.
+Observed/latent variable to examine: intracellular sequestration memory.
+Unverified title-derived mechanism hint: dynamic hidden state / delay. Use matched present-state trajectories with different prior forcing histories for intracellular sequestration memory; check whether their subsequent responses diverge.
+Candidate construction: Introduce a physically measured relaxing state or convolution kernel; estimate its timescale from perturbation data, not arbitrary fitting.
+Garden graph: THING=physical components; TIME=trajectory; SPACE=physical domain; EVENT=state transition; ACTION=controlled perturbation where applicable; AGENCY=experimenter/controller only; RULE=physical conservation; VALUE=declared performance measure; CONTEXT=experimental conditions; CLAIM=testable mechanism. Applicable edges: partOf, dependsOn, contextualizes, derivedFrom, supports/contradicts; use causes only after causal identification.
+Seven forms: CONSTRUCT=system; CONTRACT=units/domain; STATE=measured and hidden variables; RELATION=typed dependencies; PROCESS=state evolution; RULE=physical constraints; PROJECTION=baseline observable.
+Falsification protocol: Use matched present-state trajectories with different prior forcing histories for intracellular sequestration memory; check whether their subsequent responses diverge. Fit extension and strong modern reference model on training experiments; compare blinded held-out predictive likelihood/error under matched complexity and budget. If no robust improvement, reject the increment.
+Benefit if validated: precision dosing.
+Evidence: CANDIDATE; domain-specific equation contract INCOMPLETE; numerical result NOT RUN; literature novelty UNKNOWN; empirical verification NOT DONE.
+
+#### 065 — Pharmacokinetics: circadian clearance state
+
+Existing reference model: compartment PK model; primary observable: tissue drug concentration.
+Observed/latent variable to examine: circadian clearance state.
+Unverified title-derived mechanism hint: coupled latent kinetics. Measure the candidate intermediate state for circadian clearance state during perturbation/recovery; test whether it predicts held-out transients beyond baseline variables.
+Candidate construction: Introduce a measurable intermediate and couple it by mass/energy-balanced rate equations; test observability and parameter identifiability.
+Garden graph: THING=physical components; TIME=trajectory; SPACE=physical domain; EVENT=state transition; ACTION=controlled perturbation where applicable; AGENCY=experimenter/controller only; RULE=physical conservation; VALUE=declared performance measure; CONTEXT=experimental conditions; CLAIM=testable mechanism. Applicable edges: partOf, dependsOn, contextualizes, derivedFrom, supports/contradicts; use causes only after causal identification.
+Seven forms: CONSTRUCT=system; CONTRACT=units/domain; STATE=measured and hidden variables; RELATION=typed dependencies; PROCESS=state evolution; RULE=physical constraints; PROJECTION=baseline observable.
+Falsification protocol: Measure the candidate intermediate state for circadian clearance state during perturbation/recovery; test whether it predicts held-out transients beyond baseline variables. Fit extension and strong modern reference model on training experiments; compare blinded held-out predictive likelihood/error under matched complexity and budget. If no robust improvement, reject the increment.
+Benefit if validated: precision dosing.
+Evidence: CANDIDATE; domain-specific equation contract INCOMPLETE; numerical result NOT RUN; literature novelty UNKNOWN; empirical verification NOT DONE.
+
+#### 066 — Ecology: interaction-network rewiring
+
+Existing reference model: Lotka–Volterra dynamics; primary observable: population growth rate.
+Observed/latent variable to examine: interaction-network rewiring.
+Unverified title-derived mechanism hint: network / geometry. Image or reconstruct the evolving contact/connection graph underlying interaction-network rewiring; hold aggregate counts fixed while varying graph statistics.
+Candidate construction: Represent adjacency/connectivity explicitly; project to a minimal measurable graph statistic and check whether equal aggregate states have different futures.
+Garden graph: THING=physical components; TIME=trajectory; SPACE=physical domain; EVENT=state transition; ACTION=controlled perturbation where applicable; AGENCY=experimenter/controller only; RULE=physical conservation; VALUE=declared performance measure; CONTEXT=experimental conditions; CLAIM=testable mechanism. Applicable edges: partOf, dependsOn, contextualizes, derivedFrom, supports/contradicts; use causes only after causal identification.
+Seven forms: CONSTRUCT=system; CONTRACT=units/domain; STATE=measured and hidden variables; RELATION=typed dependencies; PROCESS=state evolution; RULE=physical constraints; PROJECTION=baseline observable.
+Falsification protocol: Image or reconstruct the evolving contact/connection graph underlying interaction-network rewiring; hold aggregate counts fixed while varying graph statistics. Fit extension and strong modern reference model on training experiments; compare blinded held-out predictive likelihood/error under matched complexity and budget. If no robust improvement, reject the increment.
+Benefit if validated: ecosystem resilience.
+Evidence: CANDIDATE; domain-specific equation contract INCOMPLETE; numerical result NOT RUN; literature novelty UNKNOWN; empirical verification NOT DONE.
+
+#### 067 — Ecology: seed-bank recovery memory
+
+Existing reference model: Lotka–Volterra dynamics; primary observable: population growth rate.
+Observed/latent variable to examine: seed-bank recovery memory.
+Unverified title-derived mechanism hint: dynamic hidden state / delay. Use matched present-state trajectories with different prior forcing histories for seed-bank recovery memory; check whether their subsequent responses diverge.
+Candidate construction: Introduce a physically measured relaxing state or convolution kernel; estimate its timescale from perturbation data, not arbitrary fitting.
+Garden graph: THING=physical components; TIME=trajectory; SPACE=physical domain; EVENT=state transition; ACTION=controlled perturbation where applicable; AGENCY=experimenter/controller only; RULE=physical conservation; VALUE=declared performance measure; CONTEXT=experimental conditions; CLAIM=testable mechanism. Applicable edges: partOf, dependsOn, contextualizes, derivedFrom, supports/contradicts; use causes only after causal identification.
+Seven forms: CONSTRUCT=system; CONTRACT=units/domain; STATE=measured and hidden variables; RELATION=typed dependencies; PROCESS=state evolution; RULE=physical constraints; PROJECTION=baseline observable.
+Falsification protocol: Use matched present-state trajectories with different prior forcing histories for seed-bank recovery memory; check whether their subsequent responses diverge. Fit extension and strong modern reference model on training experiments; compare blinded held-out predictive likelihood/error under matched complexity and budget. If no robust improvement, reject the increment.
+Benefit if validated: ecosystem resilience.
+Evidence: CANDIDATE; domain-specific equation contract INCOMPLETE; numerical result NOT RUN; literature novelty UNKNOWN; empirical verification NOT DONE.
+
+#### 068 — Ecology: spatial refuge connectivity
+
+Existing reference model: Lotka–Volterra dynamics; primary observable: population growth rate.
+Observed/latent variable to examine: spatial refuge connectivity.
+Unverified title-derived mechanism hint: network / geometry. Image or reconstruct the evolving contact/connection graph underlying spatial refuge connectivity; hold aggregate counts fixed while varying graph statistics.
+Candidate construction: Represent adjacency/connectivity explicitly; project to a minimal measurable graph statistic and check whether equal aggregate states have different futures.
+Garden graph: THING=physical components; TIME=trajectory; SPACE=physical domain; EVENT=state transition; ACTION=controlled perturbation where applicable; AGENCY=experimenter/controller only; RULE=physical conservation; VALUE=declared performance measure; CONTEXT=experimental conditions; CLAIM=testable mechanism. Applicable edges: partOf, dependsOn, contextualizes, derivedFrom, supports/contradicts; use causes only after causal identification.
+Seven forms: CONSTRUCT=system; CONTRACT=units/domain; STATE=measured and hidden variables; RELATION=typed dependencies; PROCESS=state evolution; RULE=physical constraints; PROJECTION=baseline observable.
+Falsification protocol: Image or reconstruct the evolving contact/connection graph underlying spatial refuge connectivity; hold aggregate counts fixed while varying graph statistics. Fit extension and strong modern reference model on training experiments; compare blinded held-out predictive likelihood/error under matched complexity and budget. If no robust improvement, reject the increment.
+Benefit if validated: ecosystem resilience.
+Evidence: CANDIDATE; domain-specific equation contract INCOMPLETE; numerical result NOT RUN; literature novelty UNKNOWN; empirical verification NOT DONE.
+
+#### 069 — Ecology: predator-switching lag
+
+Existing reference model: Lotka–Volterra dynamics; primary observable: population growth rate.
+Observed/latent variable to examine: predator-switching lag.
+Unverified title-derived mechanism hint: state switching / hysteresis. Cycle the driving variable in both directions and record branch-dependent response for predator-switching lag; test whether a single-valued constitutive law fails.
+Candidate construction: Introduce a branch/state variable with experimentally constrained transition rules; verify return-point and cycling behavior only if observed.
+Garden graph: THING=physical components; TIME=trajectory; SPACE=physical domain; EVENT=state transition; ACTION=controlled perturbation where applicable; AGENCY=experimenter/controller only; RULE=physical conservation; VALUE=declared performance measure; CONTEXT=experimental conditions; CLAIM=testable mechanism. Applicable edges: partOf, dependsOn, contextualizes, derivedFrom, supports/contradicts; use causes only after causal identification.
+Seven forms: CONSTRUCT=system; CONTRACT=units/domain; STATE=measured and hidden variables; RELATION=typed dependencies; PROCESS=state evolution; RULE=physical constraints; PROJECTION=baseline observable.
+Falsification protocol: Cycle the driving variable in both directions and record branch-dependent response for predator-switching lag; test whether a single-valued constitutive law fails. Fit extension and strong modern reference model on training experiments; compare blinded held-out predictive likelihood/error under matched complexity and budget. If no robust improvement, reject the increment.
+Benefit if validated: ecosystem resilience.
+Evidence: CANDIDATE; domain-specific equation contract INCOMPLETE; numerical result NOT RUN; literature novelty UNKNOWN; empirical verification NOT DONE.
+
+#### 070 — Ecology: nutrient feedback delay
+
+Existing reference model: Lotka–Volterra dynamics; primary observable: population growth rate.
+Observed/latent variable to examine: nutrient feedback delay.
+Unverified title-derived mechanism hint: dynamic hidden state / delay. Use matched present-state trajectories with different prior forcing histories for nutrient feedback delay; check whether their subsequent responses diverge.
+Candidate construction: Introduce a physically measured relaxing state or convolution kernel; estimate its timescale from perturbation data, not arbitrary fitting.
+Garden graph: THING=physical components; TIME=trajectory; SPACE=physical domain; EVENT=state transition; ACTION=controlled perturbation where applicable; AGENCY=experimenter/controller only; RULE=physical conservation; VALUE=declared performance measure; CONTEXT=experimental conditions; CLAIM=testable mechanism. Applicable edges: partOf, dependsOn, contextualizes, derivedFrom, supports/contradicts; use causes only after causal identification.
+Seven forms: CONSTRUCT=system; CONTRACT=units/domain; STATE=measured and hidden variables; RELATION=typed dependencies; PROCESS=state evolution; RULE=physical constraints; PROJECTION=baseline observable.
+Falsification protocol: Use matched present-state trajectories with different prior forcing histories for nutrient feedback delay; check whether their subsequent responses diverge. Fit extension and strong modern reference model on training experiments; compare blinded held-out predictive likelihood/error under matched complexity and budget. If no robust improvement, reject the increment.
+Benefit if validated: ecosystem resilience.
+Evidence: CANDIDATE; domain-specific equation contract INCOMPLETE; numerical result NOT RUN; literature novelty UNKNOWN; empirical verification NOT DONE.
+
+#### 071 — Epidemiology: contact-network memory
+
+Existing reference model: SIR / SEIR compartments; primary observable: incidence rate.
+Observed/latent variable to examine: contact-network memory.
+Unverified title-derived mechanism hint: network / geometry. Image or reconstruct the evolving contact/connection graph underlying contact-network memory; hold aggregate counts fixed while varying graph statistics.
+Candidate construction: Represent adjacency/connectivity explicitly; project to a minimal measurable graph statistic and check whether equal aggregate states have different futures.
+Garden graph: THING=physical components; TIME=trajectory; SPACE=physical domain; EVENT=state transition; ACTION=controlled perturbation where applicable; AGENCY=experimenter/controller only; RULE=physical conservation; VALUE=declared performance measure; CONTEXT=experimental conditions; CLAIM=testable mechanism. Applicable edges: partOf, dependsOn, contextualizes, derivedFrom, supports/contradicts; use causes only after causal identification.
+Seven forms: CONSTRUCT=system; CONTRACT=units/domain; STATE=measured and hidden variables; RELATION=typed dependencies; PROCESS=state evolution; RULE=physical constraints; PROJECTION=baseline observable.
+Falsification protocol: Image or reconstruct the evolving contact/connection graph underlying contact-network memory; hold aggregate counts fixed while varying graph statistics. Fit extension and strong modern reference model on training experiments; compare blinded held-out predictive likelihood/error under matched complexity and budget. If no robust improvement, reject the increment.
+Benefit if validated: more accurate outbreak forecasts.
+Evidence: CANDIDATE; domain-specific equation contract INCOMPLETE; numerical result NOT RUN; literature novelty UNKNOWN; empirical verification NOT DONE.
+
+#### 072 — Epidemiology: infection-age infectiousness
+
+Existing reference model: SIR / SEIR compartments; primary observable: incidence rate.
+Observed/latent variable to examine: infection-age infectiousness.
+Unverified title-derived mechanism hint: mechanism unresolved — requires domain diagnostics. Collect perturbation-response measurements for infection-age infectiousness; identify residual structure before selecting an extension.
+Candidate construction: Do not choose a mechanism before observing structured residuals; record an unresolved research question.
+Garden graph: THING=physical components; TIME=trajectory; SPACE=physical domain; EVENT=state transition; ACTION=controlled perturbation where applicable; AGENCY=experimenter/controller only; RULE=physical conservation; VALUE=declared performance measure; CONTEXT=experimental conditions; CLAIM=testable mechanism. Applicable edges: partOf, dependsOn, contextualizes, derivedFrom, supports/contradicts; use causes only after causal identification.
+Seven forms: CONSTRUCT=system; CONTRACT=units/domain; STATE=measured and hidden variables; RELATION=typed dependencies; PROCESS=state evolution; RULE=physical constraints; PROJECTION=baseline observable.
+Falsification protocol: Collect perturbation-response measurements for infection-age infectiousness; identify residual structure before selecting an extension. Fit extension and strong modern reference model on training experiments; compare blinded held-out predictive likelihood/error under matched complexity and budget. If no robust improvement, reject the increment.
+Benefit if validated: more accurate outbreak forecasts.
+Evidence: CANDIDATE; domain-specific equation contract INCOMPLETE; numerical result NOT RUN; literature novelty UNKNOWN; empirical verification NOT DONE.
+
+#### 073 — Epidemiology: regional mixing covariance
+
+Existing reference model: SIR / SEIR compartments; primary observable: incidence rate.
+Observed/latent variable to examine: regional mixing covariance.
+Unverified title-derived mechanism hint: heterogeneity / joint distribution. Measure paired local fields or event-resolved distributions for regional mixing covariance; compare joint-data model with independently shuffled marginals.
+Candidate construction: Add a measured joint-distribution statistic, not a free coefficient; derive aggregate response by averaging the local law and quantify the residual.
+Garden graph: THING=physical components; TIME=trajectory; SPACE=physical domain; EVENT=state transition; ACTION=controlled perturbation where applicable; AGENCY=experimenter/controller only; RULE=physical conservation; VALUE=declared performance measure; CONTEXT=experimental conditions; CLAIM=testable mechanism. Applicable edges: partOf, dependsOn, contextualizes, derivedFrom, supports/contradicts; use causes only after causal identification.
+Seven forms: CONSTRUCT=system; CONTRACT=units/domain; STATE=measured and hidden variables; RELATION=typed dependencies; PROCESS=state evolution; RULE=physical constraints; PROJECTION=baseline observable.
+Falsification protocol: Measure paired local fields or event-resolved distributions for regional mixing covariance; compare joint-data model with independently shuffled marginals. Fit extension and strong modern reference model on training experiments; compare blinded held-out predictive likelihood/error under matched complexity and budget. If no robust improvement, reject the increment.
+Benefit if validated: more accurate outbreak forecasts.
+Evidence: CANDIDATE; domain-specific equation contract INCOMPLETE; numerical result NOT RUN; literature novelty UNKNOWN; empirical verification NOT DONE.
+
+#### 074 — Epidemiology: behavioral response lag
+
+Existing reference model: SIR / SEIR compartments; primary observable: incidence rate.
+Observed/latent variable to examine: behavioral response lag.
+Unverified title-derived mechanism hint: dynamic hidden state / delay. Use matched present-state trajectories with different prior forcing histories for behavioral response lag; check whether their subsequent responses diverge.
+Candidate construction: Introduce a physically measured relaxing state or convolution kernel; estimate its timescale from perturbation data, not arbitrary fitting.
+Garden graph: THING=physical components; TIME=trajectory; SPACE=physical domain; EVENT=state transition; ACTION=controlled perturbation where applicable; AGENCY=experimenter/controller only; RULE=physical conservation; VALUE=declared performance measure; CONTEXT=experimental conditions; CLAIM=testable mechanism. Applicable edges: partOf, dependsOn, contextualizes, derivedFrom, supports/contradicts; use causes only after causal identification.
+Seven forms: CONSTRUCT=system; CONTRACT=units/domain; STATE=measured and hidden variables; RELATION=typed dependencies; PROCESS=state evolution; RULE=physical constraints; PROJECTION=baseline observable.
+Falsification protocol: Use matched present-state trajectories with different prior forcing histories for behavioral response lag; check whether their subsequent responses diverge. Fit extension and strong modern reference model on training experiments; compare blinded held-out predictive likelihood/error under matched complexity and budget. If no robust improvement, reject the increment.
+Benefit if validated: more accurate outbreak forecasts.
+Evidence: CANDIDATE; domain-specific equation contract INCOMPLETE; numerical result NOT RUN; literature novelty UNKNOWN; empirical verification NOT DONE.
+
+#### 075 — Epidemiology: immunity heterogeneity topology
+
+Existing reference model: SIR / SEIR compartments; primary observable: incidence rate.
+Observed/latent variable to examine: immunity heterogeneity topology.
+Unverified title-derived mechanism hint: heterogeneity / joint distribution. Measure paired local fields or event-resolved distributions for immunity heterogeneity topology; compare joint-data model with independently shuffled marginals.
+Candidate construction: Add a measured joint-distribution statistic, not a free coefficient; derive aggregate response by averaging the local law and quantify the residual.
+Garden graph: THING=physical components; TIME=trajectory; SPACE=physical domain; EVENT=state transition; ACTION=controlled perturbation where applicable; AGENCY=experimenter/controller only; RULE=physical conservation; VALUE=declared performance measure; CONTEXT=experimental conditions; CLAIM=testable mechanism. Applicable edges: partOf, dependsOn, contextualizes, derivedFrom, supports/contradicts; use causes only after causal identification.
+Seven forms: CONSTRUCT=system; CONTRACT=units/domain; STATE=measured and hidden variables; RELATION=typed dependencies; PROCESS=state evolution; RULE=physical constraints; PROJECTION=baseline observable.
+Falsification protocol: Measure paired local fields or event-resolved distributions for immunity heterogeneity topology; compare joint-data model with independently shuffled marginals. Fit extension and strong modern reference model on training experiments; compare blinded held-out predictive likelihood/error under matched complexity and budget. If no robust improvement, reject the increment.
+Benefit if validated: more accurate outbreak forecasts.
+Evidence: CANDIDATE; domain-specific equation contract INCOMPLETE; numerical result NOT RUN; literature novelty UNKNOWN; empirical verification NOT DONE.
+
+#### 076 — Soil biogeochemistry: mineral-accessibility topology
+
+Existing reference model: soil carbon pool models; primary observable: carbon mineralization rate.
+Observed/latent variable to examine: mineral-accessibility topology.
+Unverified title-derived mechanism hint: network / geometry. Image or reconstruct the evolving contact/connection graph underlying mineral-accessibility topology; hold aggregate counts fixed while varying graph statistics.
+Candidate construction: Represent adjacency/connectivity explicitly; project to a minimal measurable graph statistic and check whether equal aggregate states have different futures.
+Garden graph: THING=physical components; TIME=trajectory; SPACE=physical domain; EVENT=state transition; ACTION=controlled perturbation where applicable; AGENCY=experimenter/controller only; RULE=physical conservation; VALUE=declared performance measure; CONTEXT=experimental conditions; CLAIM=testable mechanism. Applicable edges: partOf, dependsOn, contextualizes, derivedFrom, supports/contradicts; use causes only after causal identification.
+Seven forms: CONSTRUCT=system; CONTRACT=units/domain; STATE=measured and hidden variables; RELATION=typed dependencies; PROCESS=state evolution; RULE=physical constraints; PROJECTION=baseline observable.
+Falsification protocol: Image or reconstruct the evolving contact/connection graph underlying mineral-accessibility topology; hold aggregate counts fixed while varying graph statistics. Fit extension and strong modern reference model on training experiments; compare blinded held-out predictive likelihood/error under matched complexity and budget. If no robust improvement, reject the increment.
+Benefit if validated: soil management and climate.
+Evidence: CANDIDATE; domain-specific equation contract INCOMPLETE; numerical result NOT RUN; literature novelty UNKNOWN; empirical verification NOT DONE.
+
+#### 077 — Soil biogeochemistry: wet-dry pulse memory
+
+Existing reference model: soil carbon pool models; primary observable: carbon mineralization rate.
+Observed/latent variable to examine: wet-dry pulse memory.
+Unverified title-derived mechanism hint: dynamic hidden state / delay. Use matched present-state trajectories with different prior forcing histories for wet-dry pulse memory; check whether their subsequent responses diverge.
+Candidate construction: Introduce a physically measured relaxing state or convolution kernel; estimate its timescale from perturbation data, not arbitrary fitting.
+Garden graph: THING=physical components; TIME=trajectory; SPACE=physical domain; EVENT=state transition; ACTION=controlled perturbation where applicable; AGENCY=experimenter/controller only; RULE=physical conservation; VALUE=declared performance measure; CONTEXT=experimental conditions; CLAIM=testable mechanism. Applicable edges: partOf, dependsOn, contextualizes, derivedFrom, supports/contradicts; use causes only after causal identification.
+Seven forms: CONSTRUCT=system; CONTRACT=units/domain; STATE=measured and hidden variables; RELATION=typed dependencies; PROCESS=state evolution; RULE=physical constraints; PROJECTION=baseline observable.
+Falsification protocol: Use matched present-state trajectories with different prior forcing histories for wet-dry pulse memory; check whether their subsequent responses diverge. Fit extension and strong modern reference model on training experiments; compare blinded held-out predictive likelihood/error under matched complexity and budget. If no robust improvement, reject the increment.
+Benefit if validated: soil management and climate.
+Evidence: CANDIDATE; domain-specific equation contract INCOMPLETE; numerical result NOT RUN; literature novelty UNKNOWN; empirical verification NOT DONE.
+
+#### 078 — Soil biogeochemistry: microbial enzyme allocation
+
+Existing reference model: soil carbon pool models; primary observable: carbon mineralization rate.
+Observed/latent variable to examine: microbial enzyme allocation.
+Unverified title-derived mechanism hint: coupled latent kinetics. Measure the candidate intermediate state for microbial enzyme allocation during perturbation/recovery; test whether it predicts held-out transients beyond baseline variables.
+Candidate construction: Introduce a measurable intermediate and couple it by mass/energy-balanced rate equations; test observability and parameter identifiability.
+Garden graph: THING=physical components; TIME=trajectory; SPACE=physical domain; EVENT=state transition; ACTION=controlled perturbation where applicable; AGENCY=experimenter/controller only; RULE=physical conservation; VALUE=declared performance measure; CONTEXT=experimental conditions; CLAIM=testable mechanism. Applicable edges: partOf, dependsOn, contextualizes, derivedFrom, supports/contradicts; use causes only after causal identification.
+Seven forms: CONSTRUCT=system; CONTRACT=units/domain; STATE=measured and hidden variables; RELATION=typed dependencies; PROCESS=state evolution; RULE=physical constraints; PROJECTION=baseline observable.
+Falsification protocol: Measure the candidate intermediate state for microbial enzyme allocation during perturbation/recovery; test whether it predicts held-out transients beyond baseline variables. Fit extension and strong modern reference model on training experiments; compare blinded held-out predictive likelihood/error under matched complexity and budget. If no robust improvement, reject the increment.
+Benefit if validated: soil management and climate.
+Evidence: CANDIDATE; domain-specific equation contract INCOMPLETE; numerical result NOT RUN; literature novelty UNKNOWN; empirical verification NOT DONE.
+
+#### 079 — Soil biogeochemistry: aggregate fragmentation
+
+Existing reference model: soil carbon pool models; primary observable: carbon mineralization rate.
+Observed/latent variable to examine: aggregate fragmentation.
+Unverified title-derived mechanism hint: network / geometry. Image or reconstruct the evolving contact/connection graph underlying aggregate fragmentation; hold aggregate counts fixed while varying graph statistics.
+Candidate construction: Represent adjacency/connectivity explicitly; project to a minimal measurable graph statistic and check whether equal aggregate states have different futures.
+Garden graph: THING=physical components; TIME=trajectory; SPACE=physical domain; EVENT=state transition; ACTION=controlled perturbation where applicable; AGENCY=experimenter/controller only; RULE=physical conservation; VALUE=declared performance measure; CONTEXT=experimental conditions; CLAIM=testable mechanism. Applicable edges: partOf, dependsOn, contextualizes, derivedFrom, supports/contradicts; use causes only after causal identification.
+Seven forms: CONSTRUCT=system; CONTRACT=units/domain; STATE=measured and hidden variables; RELATION=typed dependencies; PROCESS=state evolution; RULE=physical constraints; PROJECTION=baseline observable.
+Falsification protocol: Image or reconstruct the evolving contact/connection graph underlying aggregate fragmentation; hold aggregate counts fixed while varying graph statistics. Fit extension and strong modern reference model on training experiments; compare blinded held-out predictive likelihood/error under matched complexity and budget. If no robust improvement, reject the increment.
+Benefit if validated: soil management and climate.
+Evidence: CANDIDATE; domain-specific equation contract INCOMPLETE; numerical result NOT RUN; literature novelty UNKNOWN; empirical verification NOT DONE.
+
+#### 080 — Soil biogeochemistry: root-exudate spatial coupling
+
+Existing reference model: soil carbon pool models; primary observable: carbon mineralization rate.
+Observed/latent variable to examine: root-exudate spatial coupling.
+Unverified title-derived mechanism hint: coupled latent kinetics. Measure the candidate intermediate state for root-exudate spatial coupling during perturbation/recovery; test whether it predicts held-out transients beyond baseline variables.
+Candidate construction: Introduce a measurable intermediate and couple it by mass/energy-balanced rate equations; test observability and parameter identifiability.
+Garden graph: THING=physical components; TIME=trajectory; SPACE=physical domain; EVENT=state transition; ACTION=controlled perturbation where applicable; AGENCY=experimenter/controller only; RULE=physical conservation; VALUE=declared performance measure; CONTEXT=experimental conditions; CLAIM=testable mechanism. Applicable edges: partOf, dependsOn, contextualizes, derivedFrom, supports/contradicts; use causes only after causal identification.
+Seven forms: CONSTRUCT=system; CONTRACT=units/domain; STATE=measured and hidden variables; RELATION=typed dependencies; PROCESS=state evolution; RULE=physical constraints; PROJECTION=baseline observable.
+Falsification protocol: Measure the candidate intermediate state for root-exudate spatial coupling during perturbation/recovery; test whether it predicts held-out transients beyond baseline variables. Fit extension and strong modern reference model on training experiments; compare blinded held-out predictive likelihood/error under matched complexity and budget. If no robust improvement, reject the increment.
+Benefit if validated: soil management and climate.
+Evidence: CANDIDATE; domain-specific equation contract INCOMPLETE; numerical result NOT RUN; literature novelty UNKNOWN; empirical verification NOT DONE.
+
+#### 081 — Climate dynamics: ocean vertical heat memory
+
+Existing reference model: energy-balance / ocean uptake; primary observable: heat uptake.
+Observed/latent variable to examine: ocean vertical heat memory.
+Unverified title-derived mechanism hint: dynamic hidden state / delay. Use matched present-state trajectories with different prior forcing histories for ocean vertical heat memory; check whether their subsequent responses diverge.
+Candidate construction: Introduce a physically measured relaxing state or convolution kernel; estimate its timescale from perturbation data, not arbitrary fitting.
+Garden graph: THING=physical components; TIME=trajectory; SPACE=physical domain; EVENT=state transition; ACTION=controlled perturbation where applicable; AGENCY=experimenter/controller only; RULE=physical conservation; VALUE=declared performance measure; CONTEXT=experimental conditions; CLAIM=testable mechanism. Applicable edges: partOf, dependsOn, contextualizes, derivedFrom, supports/contradicts; use causes only after causal identification.
+Seven forms: CONSTRUCT=system; CONTRACT=units/domain; STATE=measured and hidden variables; RELATION=typed dependencies; PROCESS=state evolution; RULE=physical constraints; PROJECTION=baseline observable.
+Falsification protocol: Use matched present-state trajectories with different prior forcing histories for ocean vertical heat memory; check whether their subsequent responses diverge. Fit extension and strong modern reference model on training experiments; compare blinded held-out predictive likelihood/error under matched complexity and budget. If no robust improvement, reject the increment.
+Benefit if validated: better adaptation planning.
+Evidence: CANDIDATE; domain-specific equation contract INCOMPLETE; numerical result NOT RUN; literature novelty UNKNOWN; empirical verification NOT DONE.
+
+#### 082 — Climate dynamics: cloud-regime transition persistence
+
+Existing reference model: energy-balance / ocean uptake; primary observable: heat uptake.
+Observed/latent variable to examine: cloud-regime transition persistence.
+Unverified title-derived mechanism hint: state switching / hysteresis. Cycle the driving variable in both directions and record branch-dependent response for cloud-regime transition persistence; test whether a single-valued constitutive law fails.
+Candidate construction: Introduce a branch/state variable with experimentally constrained transition rules; verify return-point and cycling behavior only if observed.
+Garden graph: THING=physical components; TIME=trajectory; SPACE=physical domain; EVENT=state transition; ACTION=controlled perturbation where applicable; AGENCY=experimenter/controller only; RULE=physical conservation; VALUE=declared performance measure; CONTEXT=experimental conditions; CLAIM=testable mechanism. Applicable edges: partOf, dependsOn, contextualizes, derivedFrom, supports/contradicts; use causes only after causal identification.
+Seven forms: CONSTRUCT=system; CONTRACT=units/domain; STATE=measured and hidden variables; RELATION=typed dependencies; PROCESS=state evolution; RULE=physical constraints; PROJECTION=baseline observable.
+Falsification protocol: Cycle the driving variable in both directions and record branch-dependent response for cloud-regime transition persistence; test whether a single-valued constitutive law fails. Fit extension and strong modern reference model on training experiments; compare blinded held-out predictive likelihood/error under matched complexity and budget. If no robust improvement, reject the increment.
+Benefit if validated: better adaptation planning.
+Evidence: CANDIDATE; domain-specific equation contract INCOMPLETE; numerical result NOT RUN; literature novelty UNKNOWN; empirical verification NOT DONE.
+
+#### 083 — Climate dynamics: land-moisture feedback
+
+Existing reference model: energy-balance / ocean uptake; primary observable: heat uptake.
+Observed/latent variable to examine: land-moisture feedback.
+Unverified title-derived mechanism hint: coupled latent kinetics. Measure the candidate intermediate state for land-moisture feedback during perturbation/recovery; test whether it predicts held-out transients beyond baseline variables.
+Candidate construction: Introduce a measurable intermediate and couple it by mass/energy-balanced rate equations; test observability and parameter identifiability.
+Garden graph: THING=physical components; TIME=trajectory; SPACE=physical domain; EVENT=state transition; ACTION=controlled perturbation where applicable; AGENCY=experimenter/controller only; RULE=physical conservation; VALUE=declared performance measure; CONTEXT=experimental conditions; CLAIM=testable mechanism. Applicable edges: partOf, dependsOn, contextualizes, derivedFrom, supports/contradicts; use causes only after causal identification.
+Seven forms: CONSTRUCT=system; CONTRACT=units/domain; STATE=measured and hidden variables; RELATION=typed dependencies; PROCESS=state evolution; RULE=physical constraints; PROJECTION=baseline observable.
+Falsification protocol: Measure the candidate intermediate state for land-moisture feedback during perturbation/recovery; test whether it predicts held-out transients beyond baseline variables. Fit extension and strong modern reference model on training experiments; compare blinded held-out predictive likelihood/error under matched complexity and budget. If no robust improvement, reject the increment.
+Benefit if validated: better adaptation planning.
+Evidence: CANDIDATE; domain-specific equation contract INCOMPLETE; numerical result NOT RUN; literature novelty UNKNOWN; empirical verification NOT DONE.
+
+#### 084 — Climate dynamics: aerosol-pattern covariance
+
+Existing reference model: energy-balance / ocean uptake; primary observable: heat uptake.
+Observed/latent variable to examine: aerosol-pattern covariance.
+Unverified title-derived mechanism hint: heterogeneity / joint distribution. Measure paired local fields or event-resolved distributions for aerosol-pattern covariance; compare joint-data model with independently shuffled marginals.
+Candidate construction: Add a measured joint-distribution statistic, not a free coefficient; derive aggregate response by averaging the local law and quantify the residual.
+Garden graph: THING=physical components; TIME=trajectory; SPACE=physical domain; EVENT=state transition; ACTION=controlled perturbation where applicable; AGENCY=experimenter/controller only; RULE=physical conservation; VALUE=declared performance measure; CONTEXT=experimental conditions; CLAIM=testable mechanism. Applicable edges: partOf, dependsOn, contextualizes, derivedFrom, supports/contradicts; use causes only after causal identification.
+Seven forms: CONSTRUCT=system; CONTRACT=units/domain; STATE=measured and hidden variables; RELATION=typed dependencies; PROCESS=state evolution; RULE=physical constraints; PROJECTION=baseline observable.
+Falsification protocol: Measure paired local fields or event-resolved distributions for aerosol-pattern covariance; compare joint-data model with independently shuffled marginals. Fit extension and strong modern reference model on training experiments; compare blinded held-out predictive likelihood/error under matched complexity and budget. If no robust improvement, reject the increment.
+Benefit if validated: better adaptation planning.
+Evidence: CANDIDATE; domain-specific equation contract INCOMPLETE; numerical result NOT RUN; literature novelty UNKNOWN; empirical verification NOT DONE.
+
+#### 085 — Climate dynamics: ice-albedo spatial connectivity
+
+Existing reference model: energy-balance / ocean uptake; primary observable: heat uptake.
+Observed/latent variable to examine: ice-albedo spatial connectivity.
+Unverified title-derived mechanism hint: network / geometry. Image or reconstruct the evolving contact/connection graph underlying ice-albedo spatial connectivity; hold aggregate counts fixed while varying graph statistics.
+Candidate construction: Represent adjacency/connectivity explicitly; project to a minimal measurable graph statistic and check whether equal aggregate states have different futures.
+Garden graph: THING=physical components; TIME=trajectory; SPACE=physical domain; EVENT=state transition; ACTION=controlled perturbation where applicable; AGENCY=experimenter/controller only; RULE=physical conservation; VALUE=declared performance measure; CONTEXT=experimental conditions; CLAIM=testable mechanism. Applicable edges: partOf, dependsOn, contextualizes, derivedFrom, supports/contradicts; use causes only after causal identification.
+Seven forms: CONSTRUCT=system; CONTRACT=units/domain; STATE=measured and hidden variables; RELATION=typed dependencies; PROCESS=state evolution; RULE=physical constraints; PROJECTION=baseline observable.
+Falsification protocol: Image or reconstruct the evolving contact/connection graph underlying ice-albedo spatial connectivity; hold aggregate counts fixed while varying graph statistics. Fit extension and strong modern reference model on training experiments; compare blinded held-out predictive likelihood/error under matched complexity and budget. If no robust improvement, reject the increment.
+Benefit if validated: better adaptation planning.
+Evidence: CANDIDATE; domain-specific equation contract INCOMPLETE; numerical result NOT RUN; literature novelty UNKNOWN; empirical verification NOT DONE.
+
+#### 086 — Materials mechanics: dislocation network topology
+
+Existing reference model: constitutive stress–strain laws; primary observable: plastic strain rate.
+Observed/latent variable to examine: dislocation network topology.
+Unverified title-derived mechanism hint: network / geometry. Image or reconstruct the evolving contact/connection graph underlying dislocation network topology; hold aggregate counts fixed while varying graph statistics.
+Candidate construction: Represent adjacency/connectivity explicitly; project to a minimal measurable graph statistic and check whether equal aggregate states have different futures.
+Garden graph: THING=physical components; TIME=trajectory; SPACE=physical domain; EVENT=state transition; ACTION=controlled perturbation where applicable; AGENCY=experimenter/controller only; RULE=physical conservation; VALUE=declared performance measure; CONTEXT=experimental conditions; CLAIM=testable mechanism. Applicable edges: partOf, dependsOn, contextualizes, derivedFrom, supports/contradicts; use causes only after causal identification.
+Seven forms: CONSTRUCT=system; CONTRACT=units/domain; STATE=measured and hidden variables; RELATION=typed dependencies; PROCESS=state evolution; RULE=physical constraints; PROJECTION=baseline observable.
+Falsification protocol: Image or reconstruct the evolving contact/connection graph underlying dislocation network topology; hold aggregate counts fixed while varying graph statistics. Fit extension and strong modern reference model on training experiments; compare blinded held-out predictive likelihood/error under matched complexity and budget. If no robust improvement, reject the increment.
+Benefit if validated: stronger lightweight materials.
+Evidence: CANDIDATE; domain-specific equation contract INCOMPLETE; numerical result NOT RUN; literature novelty UNKNOWN; empirical verification NOT DONE.
+
+#### 087 — Materials mechanics: grain-boundary slip memory
+
+Existing reference model: constitutive stress–strain laws; primary observable: plastic strain rate.
+Observed/latent variable to examine: grain-boundary slip memory.
+Unverified title-derived mechanism hint: dynamic hidden state / delay. Use matched present-state trajectories with different prior forcing histories for grain-boundary slip memory; check whether their subsequent responses diverge.
+Candidate construction: Introduce a physically measured relaxing state or convolution kernel; estimate its timescale from perturbation data, not arbitrary fitting.
+Garden graph: THING=physical components; TIME=trajectory; SPACE=physical domain; EVENT=state transition; ACTION=controlled perturbation where applicable; AGENCY=experimenter/controller only; RULE=physical conservation; VALUE=declared performance measure; CONTEXT=experimental conditions; CLAIM=testable mechanism. Applicable edges: partOf, dependsOn, contextualizes, derivedFrom, supports/contradicts; use causes only after causal identification.
+Seven forms: CONSTRUCT=system; CONTRACT=units/domain; STATE=measured and hidden variables; RELATION=typed dependencies; PROCESS=state evolution; RULE=physical constraints; PROJECTION=baseline observable.
+Falsification protocol: Use matched present-state trajectories with different prior forcing histories for grain-boundary slip memory; check whether their subsequent responses diverge. Fit extension and strong modern reference model on training experiments; compare blinded held-out predictive likelihood/error under matched complexity and budget. If no robust improvement, reject the increment.
+Benefit if validated: stronger lightweight materials.
+Evidence: CANDIDATE; domain-specific equation contract INCOMPLETE; numerical result NOT RUN; literature novelty UNKNOWN; empirical verification NOT DONE.
+
+#### 088 — Materials mechanics: strain-rate history
+
+Existing reference model: constitutive stress–strain laws; primary observable: plastic strain rate.
+Observed/latent variable to examine: strain-rate history.
+Unverified title-derived mechanism hint: dynamic hidden state / delay. Use matched present-state trajectories with different prior forcing histories for strain-rate history; check whether their subsequent responses diverge.
+Candidate construction: Introduce a physically measured relaxing state or convolution kernel; estimate its timescale from perturbation data, not arbitrary fitting.
+Garden graph: THING=physical components; TIME=trajectory; SPACE=physical domain; EVENT=state transition; ACTION=controlled perturbation where applicable; AGENCY=experimenter/controller only; RULE=physical conservation; VALUE=declared performance measure; CONTEXT=experimental conditions; CLAIM=testable mechanism. Applicable edges: partOf, dependsOn, contextualizes, derivedFrom, supports/contradicts; use causes only after causal identification.
+Seven forms: CONSTRUCT=system; CONTRACT=units/domain; STATE=measured and hidden variables; RELATION=typed dependencies; PROCESS=state evolution; RULE=physical constraints; PROJECTION=baseline observable.
+Falsification protocol: Use matched present-state trajectories with different prior forcing histories for strain-rate history; check whether their subsequent responses diverge. Fit extension and strong modern reference model on training experiments; compare blinded held-out predictive likelihood/error under matched complexity and budget. If no robust improvement, reject the increment.
+Benefit if validated: stronger lightweight materials.Evidence: CANDIDATE; domain-specific equation contract INCOMPLETE; numerical result NOT RUN; literature novelty UNKNOWN; empirical verification NOT DONE.
+
+#### 089 — Materials mechanics: phase-boundary stress covariance
+
+Existing reference model: constitutive stress–strain laws; primary observable: plastic strain rate.
+Observed/latent variable to examine: phase-boundary stress covariance.
+Unverified title-derived mechanism hint: heterogeneity / joint distribution. Measure paired local fields or event-resolved distributions for phase-boundary stress covariance; compare joint-data model with independently shuffled marginals.
+Candidate construction: Add a measured joint-distribution statistic, not a free coefficient; derive aggregate response by averaging the local law and quantify the residual.
+Garden graph: THING=physical components; TIME=trajectory; SPACE=physical domain; EVENT=state transition; ACTION=controlled perturbation where applicable; AGENCY=experimenter/controller only; RULE=physical conservation; VALUE=declared performance measure; CONTEXT=experimental conditions; CLAIM=testable mechanism. Applicable edges: partOf, dependsOn, contextualizes, derivedFrom, supports/contradicts; use causes only after causal identification.
+Seven forms: CONSTRUCT=system; CONTRACT=units/domain; STATE=measured and hidden variables; RELATION=typed dependencies; PROCESS=state evolution; RULE=physical constraints; PROJECTION=baseline observable.
+Falsification protocol: Measure paired local fields or event-resolved distributions for phase-boundary stress covariance; compare joint-data model with independently shuffled marginals. Fit extension and strong modern reference model on training experiments; compare blinded held-out predictive likelihood/error under matched complexity and budget. If no robust improvement, reject the increment.
+Benefit if validated: stronger lightweight materials.
+Evidence: CANDIDATE; domain-specific equation contract INCOMPLETE; numerical result NOT RUN; literature novelty UNKNOWN; empirical verification NOT DONE.
+
+#### 090 — Materials mechanics: defect-cluster intermittency
+
+Existing reference model: constitutive stress–strain laws; primary observable: plastic strain rate.
+Observed/latent variable to examine: defect-cluster intermittency.
+Unverified title-derived mechanism hint: heterogeneity / joint distribution. Measure paired local fields or event-resolved distributions for defect-cluster intermittency; compare joint-data model with independently shuffled marginals.
+Candidate construction: Add a measured joint-distribution statistic, not a free coefficient; derive aggregate response by averaging the local law and quantify the residual.
+Garden graph: THING=physical components; TIME=trajectory; SPACE=physical domain; EVENT=state transition; ACTION=controlled perturbation where applicable; AGENCY=experimenter/controller only; RULE=physical conservation; VALUE=declared performance measure; CONTEXT=experimental conditions; CLAIM=testable mechanism. Applicable edges: partOf, dependsOn, contextualizes, derivedFrom, supports/contradicts; use causes only after causal identification.
+Seven forms: CONSTRUCT=system; CONTRACT=units/domain; STATE=measured and hidden variables; RELATION=typed dependencies; PROCESS=state evolution; RULE=physical constraints; PROJECTION=baseline observable.
+Falsification protocol: Measure paired local fields or event-resolved distributions for defect-cluster intermittency; compare joint-data model with independently shuffled marginals. Fit extension and strong modern reference model on training experiments; compare blinded held-out predictive likelihood/error under matched complexity and budget. If no robust improvement, reject the increment.
+Benefit if validated: stronger lightweight materials.
+Evidence: CANDIDATE; domain-specific equation contract INCOMPLETE; numerical result NOT RUN; literature novelty UNKNOWN; empirical verification NOT DONE.
+
+#### 091 — Protein kinetics: conformational-state memory
+
+Existing reference model: Michaelis–Menten enzyme kinetics; primary observable: effective catalytic rate.
+Observed/latent variable to examine: conformational-state memory.
+Unverified title-derived mechanism hint: dynamic hidden state / delay. Use matched present-state trajectories with different prior forcing histories for conformational-state memory; check whether their subsequent responses diverge.
+Candidate construction: Introduce a physically measured relaxing state or convolution kernel; estimate its timescale from perturbation data, not arbitrary fitting.
+Garden graph: THING=physical components; TIME=trajectory; SPACE=physical domain; EVENT=state transition; ACTION=controlled perturbation where applicable; AGENCY=experimenter/controller only; RULE=physical conservation; VALUE=declared performance measure; CONTEXT=experimental conditions; CLAIM=testable mechanism. Applicable edges: partOf, dependsOn, contextualizes, derivedFrom, supports/contradicts; use causes only after causal identification.
+Seven forms: CONSTRUCT=system; CONTRACT=units/domain; STATE=measured and hidden variables; RELATION=typed dependencies; PROCESS=state evolution; RULE=physical constraints; PROJECTION=baseline observable.
+Falsification protocol: Use matched present-state trajectories with different prior forcing histories for conformational-state memory; check whether their subsequent responses diverge. Fit extension and strong modern reference model on training experiments; compare blinded held-out predictive likelihood/error under matched complexity and budget. If no robust improvement, reject the increment.
+Benefit if validated: biomanufacturing.
+Evidence: CANDIDATE; domain-specific equation contract INCOMPLETE; numerical result NOT RUN; literature novelty UNKNOWN; empirical verification NOT DONE.
+
+#### 092 — Protein kinetics: substrate microdomain gradients
+
+Existing reference model: Michaelis–Menten enzyme kinetics; primary observable: effective catalytic rate.
+Observed/latent variable to examine: substrate microdomain gradients.
+Unverified title-derived mechanism hint: heterogeneity / joint distribution. Measure paired local fields or event-resolved distributions for substrate microdomain gradients; compare joint-data model with independently shuffled marginals.
+Candidate construction: Add a measured joint-distribution statistic, not a free coefficient; derive aggregate response by averaging the local law and quantify the residual.
+Garden graph: THING=physical components; TIME=trajectory; SPACE=physical domain; EVENT=state transition; ACTION=controlled perturbation where applicable; AGENCY=experimenter/controller only; RULE=physical conservation; VALUE=declared performance measure; CONTEXT=experimental conditions; CLAIM=testable mechanism. Applicable edges: partOf, dependsOn, contextualizes, derivedFrom, supports/contradicts; use causes only after causal identification.
+Seven forms: CONSTRUCT=system; CONTRACT=units/domain; STATE=measured and hidden variables; RELATION=typed dependencies; PROCESS=state evolution; RULE=physical constraints; PROJECTION=baseline observable.
+Falsification protocol: Measure paired local fields or event-resolved distributions for substrate microdomain gradients; compare joint-data model with independently shuffled marginals. Fit extension and strong modern reference model on training experiments; compare blinded held-out predictive likelihood/error under matched complexity and budget. If no robust improvement, reject the increment.
+Benefit if validated: biomanufacturing.
+Evidence: CANDIDATE; domain-specific equation contract INCOMPLETE; numerical result NOT RUN; literature novelty UNKNOWN; empirical verification NOT DONE.
+
+#### 093 — Protein kinetics: crowding-induced correlation
+
+Existing reference model: Michaelis–Menten enzyme kinetics; primary observable: effective catalytic rate.
+Observed/latent variable to examine: crowding-induced correlation.
+Unverified title-derived mechanism hint: heterogeneity / joint distribution. Measure paired local fields or event-resolved distributions for crowding-induced correlation; compare joint-data model with independently shuffled marginals.
+Candidate construction: Add a measured joint-distribution statistic, not a free coefficient; derive aggregate response by averaging the local law and quantify the residual.
+Garden graph: THING=physical components; TIME=trajectory; SPACE=physical domain; EVENT=state transition; ACTION=controlled perturbation where applicable; AGENCY=experimenter/controller only; RULE=physical conservation; VALUE=declared performance measure; CONTEXT=experimental conditions; CLAIM=testable mechanism. Applicable edges: partOf, dependsOn, contextualizes, derivedFrom, supports/contradicts; use causes only after causal identification.
+Seven forms: CONSTRUCT=system; CONTRACT=units/domain; STATE=measured and hidden variables; RELATION=typed dependencies; PROCESS=state evolution; RULE=physical constraints; PROJECTION=baseline observable.
+Falsification protocol: Measure paired local fields or event-resolved distributions for crowding-induced correlation; compare joint-data model with independently shuffled marginals. Fit extension and strong modern reference model on training experiments; compare blinded held-out predictive likelihood/error under matched complexity and budget. If no robust improvement, reject the increment.
+Benefit if validated: biomanufacturing.
+Evidence: CANDIDATE; domain-specific equation contract INCOMPLETE; numerical result NOT RUN; literature novelty UNKNOWN; empirical verification NOT DONE.
+
+#### 094 — Protein kinetics: allosteric network topology
+
+Existing reference model: Michaelis–Menten enzyme kinetics; primary observable: effective catalytic rate.
+Observed/latent variable to examine: allosteric network topology.
+Unverified title-derived mechanism hint: network / geometry. Image or reconstruct the evolving contact/connection graph underlying allosteric network topology; hold aggregate counts fixed while varying graph statistics.
+Candidate construction: Represent adjacency/connectivity explicitly; project to a minimal measurable graph statistic and check whether equal aggregate states have different futures.
+Garden graph: THING=physical components; TIME=trajectory; SPACE=physical domain; EVENT=state transition; ACTION=controlled perturbation where applicable; AGENCY=experimenter/controller only; RULE=physical conservation; VALUE=declared performance measure; CONTEXT=experimental conditions; CLAIM=testable mechanism. Applicable edges: partOf, dependsOn, contextualizes, derivedFrom, supports/contradicts; use causes only after causal identification.
+Seven forms: CONSTRUCT=system; CONTRACT=units/domain; STATE=measured and hidden variables; RELATION=typed dependencies; PROCESS=state evolution; RULE=physical constraints; PROJECTION=baseline observable.
+Falsification protocol: Image or reconstruct the evolving contact/connection graph underlying allosteric network topology; hold aggregate counts fixed while varying graph statistics. Fit extension and strong modern reference model on training experiments; compare blinded held-out predictive likelihood/error under matched complexity and budget. If no robust improvement, reject the increment.
+Benefit if validated: biomanufacturing.
+Evidence: CANDIDATE; domain-specific equation contract INCOMPLETE; numerical result NOT RUN; literature novelty UNKNOWN; empirical verification NOT DONE.
+
+#### 095 — Protein kinetics: product inhibition lag
+
+Existing reference model: Michaelis–Menten enzyme kinetics; primary observable: effective catalytic rate.
+Observed/latent variable to examine: product inhibition lag.
+Unverified title-derived mechanism hint: dynamic hidden state / delay. Use matched present-state trajectories with different prior forcing histories for product inhibition lag; check whether their subsequent responses diverge.
+Candidate construction: Introduce a physically measured relaxing state or convolution kernel; estimate its timescale from perturbation data, not arbitrary fitting.
+Garden graph: THING=physical components; TIME=trajectory; SPACE=physical domain; EVENT=state transition; ACTION=controlled perturbation where applicable; AGENCY=experimenter/controller only; RULE=physical conservation; VALUE=declared performance measure; CONTEXT=experimental conditions; CLAIM=testable mechanism. Applicable edges: partOf, dependsOn, contextualizes, derivedFrom, supports/contradicts; use causes only after causal identification.
+Seven forms: CONSTRUCT=system; CONTRACT=units/domain; STATE=measured and hidden variables; RELATION=typed dependencies; PROCESS=state evolution; RULE=physical constraints; PROJECTION=baseline observable.
+Falsification protocol: Use matched present-state trajectories with different prior forcing histories for product inhibition lag; check whether their subsequent responses diverge. Fit extension and strong modern reference model on training experiments; compare blinded held-out predictive likelihood/error under matched complexity and budget. If no robust improvement, reject the increment.
+Benefit if validated: biomanufacturing.
+Evidence: CANDIDATE; domain-specific equation contract INCOMPLETE; numerical result NOT RUN; literature novelty UNKNOWN; empirical verification NOT DONE.
+
+#### 096 — Optical materials: nano-inclusion spatial correlation
+
+Existing reference model: effective-medium / radiative transfer; primary observable: effective optical response.
+Observed/latent variable to examine: nano-inclusion spatial correlation.
+Unverified title-derived mechanism hint: heterogeneity / joint distribution. Measure paired local fields or event-resolved distributions for nano-inclusion spatial correlation; compare joint-data model with independently shuffled marginals.
+Candidate construction: Add a measured joint-distribution statistic, not a free coefficient; derive aggregate response by averaging the local law and quantify the residual.
+Garden graph: THING=physical components; TIME=trajectory; SPACE=physical domain; EVENT=state transition; ACTION=controlled perturbation where applicable; AGENCY=experimenter/controller only; RULE=physical conservation; VALUE=declared performance measure; CONTEXT=experimental conditions; CLAIM=testable mechanism. Applicable edges: partOf, dependsOn, contextualizes, derivedFrom, supports/contradicts; use causes only after causal identification.
+Seven forms: CONSTRUCT=system; CONTRACT=units/domain; STATE=measured and hidden variables; RELATION=typed dependencies; PROCESS=state evolution; RULE=physical constraints; PROJECTION=baseline observable.
+Falsification protocol: Measure paired local fields or event-resolved distributions for nano-inclusion spatial correlation; compare joint-data model with independently shuffled marginals. Fit extension and strong modern reference model on training experiments; compare blinded held-out predictive likelihood/error under matched complexity and budget. If no robust improvement, reject the increment.
+Benefit if validated: sensors and photonics.
+Evidence: CANDIDATE; domain-specific equation contract INCOMPLETE; numerical result NOT RUN; literature novelty UNKNOWN; empirical verification NOT DONE.
+
+#### 097 — Optical materials: interface exciton coupling
+
+Existing reference model: effective-medium / radiative transfer; primary observable: effective optical response.
+Observed/latent variable to examine: interface exciton coupling.
+Unverified title-derived mechanism hint: coupled latent kinetics. Measure the candidate intermediate state for interface exciton coupling during perturbation/recovery; test whether it predicts held-out transients beyond baseline variables.
+Candidate construction: Introduce a measurable intermediate and couple it by mass/energy-balanced rate equations; test observability and parameter identifiability.
+Garden graph: THING=physical components; TIME=trajectory; SPACE=physical domain; EVENT=state transition; ACTION=controlled perturbation where applicable; AGENCY=experimenter/controller only; RULE=physical conservation; VALUE=declared performance measure; CONTEXT=experimental conditions; CLAIM=testable mechanism. Applicable edges: partOf, dependsOn, contextualizes, derivedFrom, supports/contradicts; use causes only after causal identification.
+Seven forms: CONSTRUCT=system; CONTRACT=units/domain; STATE=measured and hidden variables; RELATION=typed dependencies; PROCESS=state evolution; RULE=physical constraints; PROJECTION=baseline observable.
+Falsification protocol: Measure the candidate intermediate state for interface exciton coupling during perturbation/recovery; test whether it predicts held-out transients beyond baseline variables. Fit extension and strong modern reference model on training experiments; compare blinded held-out predictive likelihood/error under matched complexity and budget. If no robust improvement, reject the increment.
+Benefit if validated: sensors and photonics.
+Evidence: CANDIDATE; domain-specific equation contract INCOMPLETE; numerical result NOT RUN; literature novelty UNKNOWN; empirical verification NOT DONE.
+
+#### 098 — Optical materials: temperature-dependent disorder
+
+Existing reference model: effective-medium / radiative transfer; primary observable: effective optical response.
+Observed/latent variable to examine: temperature-dependent disorder.
+Unverified title-derived mechanism hint: heterogeneity / joint distribution. Measure paired local fields or event-resolved distributions for temperature-dependent disorder; compare joint-data model with independently shuffled marginals.
+Candidate construction: Add a measured joint-distribution statistic, not a free coefficient; derive aggregate response by averaging the local law and quantify the residual.
+Garden graph: THING=physical components; TIME=trajectory; SPACE=physical domain; EVENT=state transition; ACTION=controlled perturbation where applicable; AGENCY=experimenter/controller only; RULE=physical conservation; VALUE=declared performance measure; CONTEXT=experimental conditions; CLAIM=testable mechanism. Applicable edges: partOf, dependsOn, contextualizes, derivedFrom, supports/contradicts; use causes only after causal identification.
+Seven forms: CONSTRUCT=system; CONTRACT=units/domain; STATE=measured and hidden variables; RELATION=typed dependencies; PROCESS=state evolution; RULE=physical constraints; PROJECTION=baseline observable.
+Falsification protocol: Measure paired local fields or event-resolved distributions for temperature-dependent disorder; compare joint-data model with independently shuffled marginals. Fit extension and strong modern reference model on training experiments; compare blinded held-out predictive likelihood/error under matched complexity and budget. If no robust improvement, reject the increment.
+Benefit if validated: sensors and photonics.
+Evidence: CANDIDATE; domain-specific equation contract INCOMPLETE; numerical result NOT RUN; literature novelty UNKNOWN; empirical verification NOT DONE.
+
+#### 099 — Optical materials: nonlocal scattering memory
+
+Existing reference model: effective-medium / radiative transfer; primary observable: effective optical response.
+Observed/latent variable to examine: nonlocal scattering memory.
+Unverified title-derived mechanism hint: dynamic hidden state / delay. Use matched present-state trajectories with different prior forcing histories for nonlocal scattering memory; check whether their subsequent responses diverge.
+Candidate construction: Introduce a physically measured relaxing state or convolution kernel; estimate its timescale from perturbation data, not arbitrary fitting.
+Garden graph: THING=physical components; TIME=trajectory; SPACE=physical domain; EVENT=state transition; ACTION=controlled perturbation where applicable; AGENCY=experimenter/controller only; RULE=physical conservation; VALUE=declared performance measure; CONTEXT=experimental conditions; CLAIM=testable mechanism. Applicable edges: partOf, dependsOn, contextualizes, derivedFrom, supports/contradicts; use causes only after causal identification.
+Seven forms: CONSTRUCT=system; CONTRACT=units/domain; STATE=measured and hidden variables; RELATION=typed dependencies; PROCESS=state evolution; RULE=physical constraints; PROJECTION=baseline observable.
+Falsification protocol: Use matched present-state trajectories with different prior forcing histories for nonlocal scattering memory; check whether their subsequent responses diverge. Fit extension and strong modern reference model on training experiments; compare blinded held-out predictive likelihood/error under matched complexity and budget. If no robust improvement, reject the increment.
+Benefit if validated: sensors and photonics.
+Evidence: CANDIDATE; domain-specific equation contract INCOMPLETE; numerical result NOT RUN; literature novelty UNKNOWN; empirical verification NOT DONE.
+
+#### 100 — Optical materials: defect-network percolation
+
+Existing reference model: effective-medium / radiative transfer; primary observable: effective optical response.
+Observed/latent variable to examine: defect-network percolation.
+Unverified title-derived mechanism hint: network / geometry. Image or reconstruct the evolving contact/connection graph underlying defect-network percolation; hold aggregate counts fixed while varying graph statistics.
+Candidate construction: Represent adjacency/connectivity explicitly; project to a minimal measurable graph statistic and check whether equal aggregate states have different futures.
+Garden graph: THING=physical components; TIME=trajectory; SPACE=physical domain; EVENT=state transition; ACTION=controlled perturbation where applicable; AGENCY=experimenter/controller only; RULE=physical conservation; VALUE=declared performance measure; CONTEXT=experimental conditions; CLAIM=testable mechanism. Applicable edges: partOf, dependsOn, contextualizes, derivedFrom, supports/contradicts; use causes only after causal identification.
+Seven forms: CONSTRUCT=system; CONTRACT=units/domain; STATE=measured and hidden variables; RELATION=typed dependencies; PROCESS=state evolution; RULE=physical constraints; PROJECTION=baseline observable.
+Falsification protocol: Image or reconstruct the evolving contact/connection graph underlying defect-network percolation; hold aggregate counts fixed while varying graph statistics. Fit extension and strong modern reference model on training experiments; compare blinded held-out predictive likelihood/error under matched complexity and budget. If no robust improvement, reject the increment.
+Benefit if validated: sensors and photonics.
+Evidence: CANDIDATE; domain-specific equation contract INCOMPLETE; numerical result NOT RUN; literature novelty UNKNOWN; empirical verification NOT DONE.
+
+
+### 3.3 Five detailed major investigations and sixteen transfers
+The full mathematical assumptions, dimensional checks, tests and caveats are preserved in **Appendix C** below.
+
+### 3.4 Thirty-three detailed high-value investigations
+Each has a comparator, proposed falsification protocol, economic benefit condition, validation timeline and evidence status. See **Appendix D** below.
+
+### 3.5 Candidate 026 experimental record
+Synthetic one-body versus two-body thermal tests and the noise-aware comparator are preserved in **Appendix B**. The existing thermal model is established physics, not a Garden discovery. The original Python scripts and JSON outputs are embedded in **Appendix E**, not separate repository files.
+
+## 4. Evidence, novelty and remaining work
+- 100 candidates are not 100 derived upgrades; most lack complete TheoryEquationContracts.
+- Literature novelty screening, real-world validation and modern baseline comparisons are outstanding for the larger candidate register.
+- Numerical Candidate 026 tests are reproducibility demonstrations, not new physical discoveries.
+- Economic benefit numbers are conditional opportunities, not realized or verified Garden-specific savings.
+- TREE_CORE source/graph retention and deterministic build defects have not been repaired by this research register.
+- For future work, shortlist one genuinely unfamiliar problem and blind the candidate mechanism before running the Garden and non-Garden discovery systems.
+
+## Appendices — historical source and embedded executable evidence
+The material below preserves the full original scientific content produced today, including earlier formulations that later corrections supersede. It is archival context, not a second set of controlling instructions. Original standalone source filenames are **historical labels only**, not paths to files that still exist in the repository.
+
+## Internal reference correction
+All mentions of `.py`, `.json`, `.txt` or `.md` filenames within the archival source sections refer to embedded historical material in Appendices A–E, not separate files. To run code, extract the indicated fenced block and save it locally under its shown historical filename. There are no required external scientific-research companion files in this repository folder.
+
+# Appendix A — Garden_v15_10_Scientific_Theory_Upgrades_100_REV3.txt
 
 REV3 EVIDENCE / CORRECTION ADDENDUM — controlling over earlier REV2 assertions
 
@@ -1375,7 +2803,7 @@ Final: This revision fixes the index-driven form assignment and supplies ten mat
 
 
 ---
-# PART 2: GARDEN_SCIENCE_REV3_GAP_CLOSURE_2026-10-09.md
+# Appendix B — GARDEN_SCIENCE_REV3_GAP_CLOSURE_2026-10-09.md
 
 # Garden v15.10 scientific discovery — gap-closure evidence
 
@@ -1432,7 +2860,7 @@ The harness imports `garden_candidate026_harness.py` for synthetic trajectory ge
 
 
 ---
-# PART 3: GARDEN_SCIENCE_FIVE_DOMAINS_AND_16_TRANSFERS_2026-10-09.md
+# Appendix C — GARDEN_SCIENCE_FIVE_DOMAINS_AND_16_TRANSFERS_2026-10-09.md
 
 # Garden v15.10 — Five Domain Investigations and Sixteen Transfer Candidates
 Date: 2026-10-09
@@ -1528,7 +2956,7 @@ References for initial reconnaissance:
 
 
 ---
-# PART 4: GARDEN_SCIENCE_HIGH_VALUE_OPPORTUNITIES_FINAL_2026-10-09.md
+# Appendix D — GARDEN_SCIENCE_HIGH_VALUE_OPPORTUNITIES_FINAL_2026-10-09.md
 
 # Garden v15.10 — High-Value Scientific Opportunity Register (Consolidated)
 Date: 2026-10-09
@@ -1898,7 +3326,7 @@ New discovery proved: 0. Empirically validated incremental benefits: 0. Strong-b
 
 
 ---
-# APPENDIX — ORIGINAL EXECUTABLE SOURCE AND MACHINE RESULTS (ARCHIVED IN ONE FILE)
+# Appendix E — Embedded executable source and machine results (ARCHIVED IN ONE FILE)
 
 The following blocks preserve the original files exactly as GitHub text content. To rerun, copy a Python block into its stated filename; JSON blocks are archived run outputs, not new validations. The original scripts may contain absolute output paths and require NumPy/SciPy.
 
