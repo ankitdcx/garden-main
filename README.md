@@ -74,6 +74,7 @@ Full retained technical candidates include:
 - [Verified Execution Integrity (VEI)](design_deltas/v15.11/vei/)
 - [Coupled Transitions and Responsibility Preservation](design_deltas/v15.11/GARDEN_v15.11_TRANSITION_AND_RESPONSIBILITY_CANDIDATE.md)
 - [Cross-Model Capability Measurement](design_deltas/v15.11/MODEL_CAPABILITY_COMPARISON_CANDIDATE_2026-10-05.md)
+- [Deterministic Semantic Compilation & Auditable Coverage (DSC-001 Rev 2)](design_deltas/v15.11/dsc/README.md) — bounded reproducible compilation/obligation audit, 17 candidate invariants and 24 specified tests; noncanonical, not implemented.
 - [Continuous Epistemic Assimilation (CEA / V1511-KR-001)](design_deltas/v15.11/cea/README.md) — full candidate specification, 14 invariants and 12 proposed tests; no execution or certification.
 - [Universal Situation Mapping (USM-001)](design_deltas/v15.11/GARDEN_USM_001_CANDIDATE.md) and [Material Context Closure (MCC-001)](design_deltas/v15.11/GARDEN_MCC_001_CANDIDATE.md) — full noncanonical candidate sources.
 

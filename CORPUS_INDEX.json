@@ -90,6 +90,13 @@
   ],
   "additive_candidates": [
     {
+      "id": "GARDEN-DSC-001",
+      "revision": "2",
+      "status": "NONCANONICAL_CANDIDATE_NOT_IMPLEMENTED",
+      "path": "design_deltas/v15.11/dsc/GARDEN_DSC_001_REV2_CANDIDATE.md",
+      "description": "Deterministic semantic compilation and auditable coverage"
+    },
+    {
       "id": "V1511-RCC-001",
       "status": "NONCANONICAL_CANDIDATE",
       "path": "design_deltas/v15.11/rcc/",

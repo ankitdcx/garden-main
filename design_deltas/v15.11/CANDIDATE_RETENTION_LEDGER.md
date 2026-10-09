@@ -4,6 +4,8 @@
 
 ## New v15.11 additive candidates (2026-10-08)
 
+- **GARDEN-DSC-001 Rev 2 — Deterministic Semantic Compilation & Auditable Coverage** — [full noncanonical candidate](dsc/GARDEN_DSC_001_REV2_CANDIDATE.md), [qualification plan](dsc/VALIDATION.md). Source-bound interoperability over USM/GCSC/SAL/Materiality/SAC; no new engine, executable validation or admission.
+
 - **GARDEN-USM-001 — Universal Situation Mapping** — full noncanonical candidate in `GARDEN_USM_001_CANDIDATE.md`; evidence-bound Situation Fact Ledger, frozen deterministic GSL compiler, source/epoch invalidation, adversarial ambiguity and Human-Effect preservation.
 - **GARDEN-MCC-001 — Material Context Closure** — full noncanonical candidate in `GARDEN_MCC_001_CANDIDATE.md`; bounded recursive/shared/cyclic context expansion, qualified materiality, RSDC obligation-closure reopening, anti-obstruction and receipts.
 
@@ -62,6 +64,7 @@ For every candidate: recover exact source/problem/intent; compare with the curre
 
 | Candidate | Exact retained source | Status |
 |---|---|---|
+| GARDEN-DSC-001 Rev 2 — Deterministic Semantic Compilation | [dsc/GARDEN_DSC_001_REV2_CANDIDATE.md](dsc/GARDEN_DSC_001_REV2_CANDIDATE.md) | Noncanonical candidate; tests not executed |
 | MCC-001 — Material Context Closure | [GARDEN_MCC_001_CANDIDATE.md](GARDEN_MCC_001_CANDIDATE.md) | Noncanonical candidate; independently qualified admission pending |
 | USM-001 — Universal Situation Mapping | [GARDEN_USM_001_CANDIDATE.md](GARDEN_USM_001_CANDIDATE.md) | Noncanonical candidate; independently qualified admission pending |
 | Coupled Transitions and Responsibility Preservation | [GARDEN_v15.11_TRANSITION_AND_RESPONSIBILITY_CANDIDATE.md](GARDEN_v15.11_TRANSITION_AND_RESPONSIBILITY_CANDIDATE.md) | Noncanonical candidate; distinct from broader TRN-001 staged-migration direction |
