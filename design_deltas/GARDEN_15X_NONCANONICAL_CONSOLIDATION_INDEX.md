@@ -53,6 +53,7 @@ v15.8/v15.9/v15.9.1 have **historical complete sources** outside these repo fold
 | Transition & Responsibility | [flat candidate](v15.11/GARDEN_v15.11_TRANSITION_AND_RESPONSIBILITY_CANDIDATE.md) | Noncanonical transition candidate |
 | MCC-001 | [MCC](v15.11/GARDEN_MCC_001_CANDIDATE.md) | Noncanonical material-context candidate |
 | USM-001 | [USM](v15.11/GARDEN_USM_001_CANDIDATE.md) | Noncanonical situation-mapping candidate |
+| GARDEN-DSC-001 Rev 2 | [DSC candidate](v15.11/dsc/README.md) | Noncanonical reproducible semantic compilation/audit; unimplemented |
 | V1511-KR-001 / CEA | [CEA full candidate](v15.11/cea/README.md) | **Full candidate specified; implementation, tests and independent admission pending** |
 | Capability comparison | [protocol](v15.11/MODEL_CAPABILITY_COMPARISON_CANDIDATE_2026-10-05.md) | Measurement protocol; not certification |
 
