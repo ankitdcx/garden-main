@@ -1,3 +1,5 @@
+> **HISTORICAL SNAPSHOT — 2026-09-14.** This is not the current active candidate queue. Use [v15.11 retention ledger](v15.11/CANDIDATE_RETENTION_LEDGER.md) for later tracking. Preserve the original entries as dated history.
+
 # Garden Project-Wide Pending Design Candidate Ledger — 2026-09-14
 
 Status: **PENDING / NOT RATIFIED / NOT PART OF PUBLISHED v15.5**
