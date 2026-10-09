@@ -1,5 +1,7 @@
 # Garden design deltas — navigation
 
+**Repository navigation:** [Full candidate releases](../canonical/candidates/README.md) · [Version changelog](../CHANGELOG.md) · [Manual integrity checker](../scripts/README.md).
+
 **Noncanonical synthesis:** [15.x consolidation index](GARDEN_15X_NONCANONICAL_CONSOLIDATION_INDEX.md) · [future v16 evaluation note](FUTURE_V16_NONCANONICAL_DESIGN_NOTE.md). These are navigation/planning, not releases.
 
 These are **versioned, noncanonical candidate and recovery materials**, not full releases. Read [canonical candidates](../canonical/candidates/v15.7/README.md) for v15.7 five-file working source. No candidate, ledger, source extract or generated result is automatically admitted.
