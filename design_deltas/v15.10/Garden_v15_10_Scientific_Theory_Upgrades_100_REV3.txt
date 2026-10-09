@@ -1,7 +1,49 @@
-GARDEN v15.10 — SCIENTIFIC THEORY UPGRADE REGISTER — REVISION 2
+REV3 EVIDENCE / CORRECTION ADDENDUM — controlling over earlier REV2 assertions
+
+1. SOURCE AND EVIDENCE STATUS
+The 100 records are proposed research questions, not 100 residual-derived mechanisms. The label classifier used keyword matches in candidate titles. Only ten have mathematical worked examples; none has a documented worldwide novelty search or real-world test. Candidate 026 has one reproducible synthetic benchmark, not a strong-baseline comparison.
+
+2. CANDIDATE 026 SYNTHETIC EXECUTION
+Simulation: C1=2, C2=4, interface h=0.9, environmental g=0.24; dt=0.25, training steps=320, test steps=160, observation noise sigma=0.012; 100 independent seeds per condition. One-body null: C=2, g=0.35. Comparison: ARX(1,1) versus ARX(2,2), fixed regularization. The more complex model is NOT assumed to represent a real hidden thermal state merely because it predicts better.
+Uncalibrated 10% held-out improvement + training BIC gate: 99/100 false selections on null, 100/100 selections on hidden-state simulations. This exposed a serious errors-in-variables/model-selection failure.
+Calibration: 100 independent one-body null simulations define the 95th-percentile held-out gain threshold = 0.3350; require also BIC improvement >=10. On distinct evaluation seeds: null false selections = 3/100; two-body selections = 94/100. Median held-out gain: null 0.2343; two-body 0.4268. These outcomes depend on chosen parameters/noise/forcing and cannot be generalized without sensitivity and stronger baseline tests.
+Source: garden_candidate026_harness.py; output: garden_candidate026_harness_results.json. Exact script and results should be retained together.
+
+3. CANDIDATE 026 THEORY EQUATION CONTRACT (EXECUTED MODEL)
+Variables T1,T2 are temperature departures [K]; u is applied thermal power [W]; C1,C2 are heat capacities [J/K]; h,g are conductances [W/K]; t [s].
+C1*dT1/dt = u - g*T1 - h*(T1-T2)
+C2*dT2/dt = h*(T1-T2)
+Domain: C1,C2>0, h,g>=0, bounded forcing; zero initial absolute-temperature interpretation is not assumed. For h>0 and g>0, the linear system is asymptotically stable. Energy balance: d(C1*T1+C2*T2)/dt = u - g*T1. In the limit h=0, T1 obeys the one-body model C1*dT1/dt=u-g*T1; this is a precise decoupling limit, not a generic claim that all single-body models are equivalent.
+Identifiability: not proven for all observation schedules. Observation: noisy T1 only; u known. Derived hidden-state dynamics are established thermal RC mathematics. No new physical law is claimed.
+
+4. LIMITS / FALSIFIERS / NEXT GATES
+The current harness compares ARX1 and ARX2, NOT a noise-aware Kalman state-space baseline, nonlinear model, or modern system-identification package. A stronger comparison must control observation-noise bias and fit/compute budgets. Required: parameter sensitivity, multiple noise levels, calibrated null power, time-horizon holdouts, state-space comparator, code review, literature review, experimental preregistration. Synthetic selection is not physical discovery.
+For the 100 cases, equation contracts remain incomplete except for the explicit candidate-026 model and illustrative examples. The source catalogue and TREE_CORE integrity issues remain separately UNVERIFIED; do not treat this appendix as fixing truncated gzip, stale schema IDs or source-retention defects.
+
+5. TRIAGE / PRIORITY / INFRASTRUCTURE
+Scores are provisional planning judgments (1=low,5=high), not estimated success probabilities.
+Candidate 026 thermal memory: tractability 5, benefit 4, novelty likelihood 1 (established RC dynamics); infrastructure: heater, two thermometers, heat flux logger.
+Candidate 002 electrolyte concentration variance: tractability 3, benefit 4, novelty likelihood 2; infrastructure: electrochemical cell and spatial concentration diagnostics.
+Candidate 006 battery heat-current covariance: tractability 3, benefit 5, novelty likelihood 2; infrastructure: battery thermal imaging and local current diagnostics.
+Candidate 017 parallel Arrhenius barriers: tractability 4, benefit 3, novelty likelihood 1 (established mixture kinetics); infrastructure: controlled-temperature reaction measurement.
+Candidate 036 fatigue closure memory: tractability 3, benefit 5, novelty likelihood 1 (established load-sequence effects); infrastructure: cyclic load rig and crack monitoring.
+Group 001–010 battery; 011–020 catalysis/kinetics; 021–025 nucleation; 026–030 heat transfer; 031–040 transport/fracture; 041–050 turbulence/solar; 051–100 remaining domain-specific rigs. Shared hardware is a planning idea, not confirmed feasibility.
+
+6. CROSS-REFERENCE TO TREE_CORE
+Each eventual admission candidate needs an atomic owner record (source span/hash, version, status), two-way source/graph retention, an equation contract, an independently checked derivation, a proof/simulation/empirical/novelty status vector, and no-self-admission. These are REQUIRED gates, not passed tests.
+
+7. REVIEW ERRATA
+The REV2 worked 017 derivation gives POSITIVE curvature d^2 ln(k)/d(1/T)^2 = Var_w(E)/R^2 >= 0. Any review describing negative curvature is incorrect. REV2 worked 041 conditions on a variable not necessarily available at prediction time; its Bayes-risk inequality is not an implementable turbulence-closure gain without forecasting that variable. The REV2 summary table's 'mechanism unresolved' entry for 017 conflicts with its worked derivation; the worked model is a known parallel-pathway mechanism, not a novel discovery. Other title hints require actual residual-based reclassification.
+
+8. PENDING STATUS
+Global literature novelty checks 0/100 completed; full domain-specific equation contracts 1/100 candidate (026 illustrative); worked examples 10/100; empirical validations 0/100; state-of-the-art baseline comparisons 0/100; TREE_CORE integrity repair not performed. NO GLOBAL NOVELTY OR REAL-WORLD IMPROVEMENT CLAIM.
+
+--- ORIGINAL REGISTER WITH CORRECTED LABELS BELOW ---
+
+GARDEN v15.10 — SCIENTIFIC THEORY UPGRADE REGISTER — REVISION 3
 Date: 2026-10-09 | Status: RESEARCH CANDIDATE / NOT CANONICALLY ADMITTED
 Scope: 100 candidate investigations across 20 families. This is NOT 100 discoveries.
-Review response: replace index-modulo-5 assignments with semantics-driven mechanism triage; add 10 worked mathematical examples and 100 distinct candidate diagnostics.
+REV3 correction: REV2 mechanisms were keyword/title hints, NOT residual-based diagnoses; the 100 records use repeated diagnostic templates. Ten worked examples are not ten novel laws. Candidate 026 now has an executed, null-calibrated synthetic harness.
 
 A. PROJECTION-DRIVEN MECHANISM
 1. Freeze each baseline with source/version, equations, units, state variables, domain and strongest available extensions.
@@ -26,7 +68,7 @@ The 'approximation/limit' edge is a proposed typed scientific extension, NOT a 2
 TREE_CORE dependency: exact owner/source span and content hash; two-way retention; fail-closed deterministic build, schema consistency, CRC/integrity verification. These gates remain unverified here.
 
 C. SUMMARY TABLE
-ID | Family | Upgrade question | Diagnosed mechanism | Benefit if validated
+ID | Family | Upgrade question | Title-derived mechanism HINT (not verified) | Benefit if validated
 001 | Battery electrochemistry | interfacial stress memory | dynamic hidden state / delay | safer fast charging
 002 | Battery electrochemistry | electrolyte concentration variance | heterogeneity / joint distribution | safer fast charging
 003 | Battery electrochemistry | particle-size/contact covariance | heterogeneity / joint distribution | safer fast charging
@@ -43,7 +85,7 @@ ID | Family | Upgrade question | Diagnosed mechanism | Benefit if validated
 014 | Heterogeneous catalysis | active-site network percolation | network / geometry | lower-energy chemical manufacture
 015 | Heterogeneous catalysis | poison desorption history | dynamic hidden state / delay | lower-energy chemical manufacture
 016 | Chemical kinetics | competing-pathway occupancy | coupled latent kinetics | better reactor efficiency
-017 | Chemical kinetics | barrier-distribution curvature | mechanism unresolved — requires domain diagnostics | better reactor efficiency
+017 | Chemical kinetics | barrier-distribution curvature | established parallel-pathway mixture; worked derivation | better reactor efficiency
 018 | Chemical kinetics | solvent reorganization lag | dynamic hidden state / delay | better reactor efficiency
 019 | Chemical kinetics | reactant clustering | network / geometry | better reactor efficiency
 020 | Chemical kinetics | intermediate trapping memory | dynamic hidden state / delay | better reactor efficiency
@@ -189,11 +231,11 @@ Derived result: E[|A(q)|²]=|f(q)|² [N + sum_(i!=j) E exp(i q.(r_i-r_j))]; iden
 Discriminating experiment: Fabricate matched-density samples with different pair correlations; preregister scattering contrast at chosen q. This is established structure-factor physics.
 Standing: derivation under stated illustrative assumptions; global novelty not established; no real-world test performed.
 
-E. 100 INDIVIDUAL CANDIDATE CONTRACTS
+E. 100 INDIVIDUAL CANDIDATE CONTRACTS (PROVISIONAL; 90 WITHOUT WORKED DERIVATIONS)
 001. Battery electrochemistry — interfacial stress memory
 Existing reference model: Butler–Volmer / porous-electrode; primary observable: charge-transfer rate.
 Observed/latent variable to examine: interfacial stress memory.
-Mechanism diagnosis: dynamic hidden state / delay. Use matched present-state trajectories with different prior forcing histories for interfacial stress memory; check whether their subsequent responses diverge.
+Unverified title-derived mechanism hint: dynamic hidden state / delay. Use matched present-state trajectories with different prior forcing histories for interfacial stress memory; check whether their subsequent responses diverge.
 Candidate construction: Introduce a physically measured relaxing state or convolution kernel; estimate its timescale from perturbation data, not arbitrary fitting.
 Garden graph: THING=physical components; TIME=trajectory; SPACE=physical domain; EVENT=state transition; ACTION=controlled perturbation where applicable; AGENCY=experimenter/controller only; RULE=physical conservation; VALUE=declared performance measure; CONTEXT=experimental conditions; CLAIM=testable mechanism. Applicable edges: partOf, dependsOn, contextualizes, derivedFrom, supports/contradicts; use causes only after causal identification.
 Seven forms: CONSTRUCT=system; CONTRACT=units/domain; STATE=measured and hidden variables; RELATION=typed dependencies; PROCESS=state evolution; RULE=physical constraints; PROJECTION=baseline observable.
@@ -204,7 +246,7 @@ Evidence: CANDIDATE; domain-specific equation contract INCOMPLETE; numerical res
 002. Battery electrochemistry — electrolyte concentration variance
 Existing reference model: Butler–Volmer / porous-electrode; primary observable: charge-transfer rate.
 Observed/latent variable to examine: electrolyte concentration variance.
-Mechanism diagnosis: heterogeneity / joint distribution. Measure paired local fields or event-resolved distributions for electrolyte concentration variance; compare joint-data model with independently shuffled marginals.
+Unverified title-derived mechanism hint: heterogeneity / joint distribution. Measure paired local fields or event-resolved distributions for electrolyte concentration variance; compare joint-data model with independently shuffled marginals.
 Candidate construction: Add a measured joint-distribution statistic, not a free coefficient; derive aggregate response by averaging the local law and quantify the residual.
 Garden graph: THING=physical components; TIME=trajectory; SPACE=physical domain; EVENT=state transition; ACTION=controlled perturbation where applicable; AGENCY=experimenter/controller only; RULE=physical conservation; VALUE=declared performance measure; CONTEXT=experimental conditions; CLAIM=testable mechanism. Applicable edges: partOf, dependsOn, contextualizes, derivedFrom, supports/contradicts; use causes only after causal identification.
 Seven forms: CONSTRUCT=system; CONTRACT=units/domain; STATE=measured and hidden variables; RELATION=typed dependencies; PROCESS=state evolution; RULE=physical constraints; PROJECTION=baseline observable.
@@ -215,7 +257,7 @@ Evidence: CANDIDATE; domain-specific equation contract INCOMPLETE; numerical res
 003. Battery electrochemistry — particle-size/contact covariance
 Existing reference model: Butler–Volmer / porous-electrode; primary observable: charge-transfer rate.
 Observed/latent variable to examine: particle-size/contact covariance.
-Mechanism diagnosis: heterogeneity / joint distribution. Measure paired local fields or event-resolved distributions for particle-size/contact covariance; compare joint-data model with independently shuffled marginals.
+Unverified title-derived mechanism hint: heterogeneity / joint distribution. Measure paired local fields or event-resolved distributions for particle-size/contact covariance; compare joint-data model with independently shuffled marginals.
 Candidate construction: Add a measured joint-distribution statistic, not a free coefficient; derive aggregate response by averaging the local law and quantify the residual.
 Garden graph: THING=physical components; TIME=trajectory; SPACE=physical domain; EVENT=state transition; ACTION=controlled perturbation where applicable; AGENCY=experimenter/controller only; RULE=physical conservation; VALUE=declared performance measure; CONTEXT=experimental conditions; CLAIM=testable mechanism. Applicable edges: partOf, dependsOn, contextualizes, derivedFrom, supports/contradicts; use causes only after causal identification.
 Seven forms: CONSTRUCT=system; CONTRACT=units/domain; STATE=measured and hidden variables; RELATION=typed dependencies; PROCESS=state evolution; RULE=physical constraints; PROJECTION=baseline observable.
@@ -226,7 +268,7 @@ Evidence: CANDIDATE; domain-specific equation contract INCOMPLETE; numerical res
 004. Battery electrochemistry — thermal-gradient persistence
 Existing reference model: Butler–Volmer / porous-electrode; primary observable: charge-transfer rate.
 Observed/latent variable to examine: thermal-gradient persistence.
-Mechanism diagnosis: heterogeneity / joint distribution. Measure paired local fields or event-resolved distributions for thermal-gradient persistence; compare joint-data model with independently shuffled marginals.
+Unverified title-derived mechanism hint: heterogeneity / joint distribution. Measure paired local fields or event-resolved distributions for thermal-gradient persistence; compare joint-data model with independently shuffled marginals.
 Candidate construction: Add a measured joint-distribution statistic, not a free coefficient; derive aggregate response by averaging the local law and quantify the residual.
 Garden graph: THING=physical components; TIME=trajectory; SPACE=physical domain; EVENT=state transition; ACTION=controlled perturbation where applicable; AGENCY=experimenter/controller only; RULE=physical conservation; VALUE=declared performance measure; CONTEXT=experimental conditions; CLAIM=testable mechanism. Applicable edges: partOf, dependsOn, contextualizes, derivedFrom, supports/contradicts; use causes only after causal identification.
 Seven forms: CONSTRUCT=system; CONTRACT=units/domain; STATE=measured and hidden variables; RELATION=typed dependencies; PROCESS=state evolution; RULE=physical constraints; PROJECTION=baseline observable.
@@ -237,7 +279,7 @@ Evidence: CANDIDATE; domain-specific equation contract INCOMPLETE; numerical res
 005. Battery electrochemistry — SEI connectivity hysteresis
 Existing reference model: Butler–Volmer / porous-electrode; primary observable: charge-transfer rate.
 Observed/latent variable to examine: SEI connectivity hysteresis.
-Mechanism diagnosis: network / geometry. Image or reconstruct the evolving contact/connection graph underlying SEI connectivity hysteresis; hold aggregate counts fixed while varying graph statistics.
+Unverified title-derived mechanism hint: network / geometry. Image or reconstruct the evolving contact/connection graph underlying SEI connectivity hysteresis; hold aggregate counts fixed while varying graph statistics.
 Candidate construction: Represent adjacency/connectivity explicitly; project to a minimal measurable graph statistic and check whether equal aggregate states have different futures.
 Garden graph: THING=physical components; TIME=trajectory; SPACE=physical domain; EVENT=state transition; ACTION=controlled perturbation where applicable; AGENCY=experimenter/controller only; RULE=physical conservation; VALUE=declared performance measure; CONTEXT=experimental conditions; CLAIM=testable mechanism. Applicable edges: partOf, dependsOn, contextualizes, derivedFrom, supports/contradicts; use causes only after causal identification.
 Seven forms: CONSTRUCT=system; CONTRACT=units/domain; STATE=measured and hidden variables; RELATION=typed dependencies; PROCESS=state evolution; RULE=physical constraints; PROJECTION=baseline observable.
@@ -248,7 +290,7 @@ Evidence: CANDIDATE; domain-specific equation contract INCOMPLETE; numerical res
 006. Battery degradation — local heat-current covariance
 Existing reference model: SEI growth / cycle-life models; primary observable: capacity-fade rate.
 Observed/latent variable to examine: local heat-current covariance.
-Mechanism diagnosis: heterogeneity / joint distribution. Measure paired local fields or event-resolved distributions for local heat-current covariance; compare joint-data model with independently shuffled marginals.
+Unverified title-derived mechanism hint: heterogeneity / joint distribution. Measure paired local fields or event-resolved distributions for local heat-current covariance; compare joint-data model with independently shuffled marginals.
 Candidate construction: Add a measured joint-distribution statistic, not a free coefficient; derive aggregate response by averaging the local law and quantify the residual.
 Garden graph: THING=physical components; TIME=trajectory; SPACE=physical domain; EVENT=state transition; ACTION=controlled perturbation where applicable; AGENCY=experimenter/controller only; RULE=physical conservation; VALUE=declared performance measure; CONTEXT=experimental conditions; CLAIM=testable mechanism. Applicable edges: partOf, dependsOn, contextualizes, derivedFrom, supports/contradicts; use causes only after causal identification.
 Seven forms: CONSTRUCT=system; CONTRACT=units/domain; STATE=measured and hidden variables; RELATION=typed dependencies; PROCESS=state evolution; RULE=physical constraints; PROJECTION=baseline observable.
@@ -259,7 +301,7 @@ Evidence: CANDIDATE; domain-specific equation contract INCOMPLETE; numerical res
 007. Battery degradation — charge-rest sequencing
 Existing reference model: SEI growth / cycle-life models; primary observable: capacity-fade rate.
 Observed/latent variable to examine: charge-rest sequencing.
-Mechanism diagnosis: dynamic hidden state / delay. Use matched present-state trajectories with different prior forcing histories for charge-rest sequencing; check whether their subsequent responses diverge.
+Unverified title-derived mechanism hint: dynamic hidden state / delay. Use matched present-state trajectories with different prior forcing histories for charge-rest sequencing; check whether their subsequent responses diverge.
 Candidate construction: Introduce a physically measured relaxing state or convolution kernel; estimate its timescale from perturbation data, not arbitrary fitting.
 Garden graph: THING=physical components; TIME=trajectory; SPACE=physical domain; EVENT=state transition; ACTION=controlled perturbation where applicable; AGENCY=experimenter/controller only; RULE=physical conservation; VALUE=declared performance measure; CONTEXT=experimental conditions; CLAIM=testable mechanism. Applicable edges: partOf, dependsOn, contextualizes, derivedFrom, supports/contradicts; use causes only after causal identification.
 Seven forms: CONSTRUCT=system; CONTRACT=units/domain; STATE=measured and hidden variables; RELATION=typed dependencies; PROCESS=state evolution; RULE=physical constraints; PROJECTION=baseline observable.
@@ -270,7 +312,7 @@ Evidence: CANDIDATE; domain-specific equation contract INCOMPLETE; numerical res
 008. Battery degradation — fracture-assisted reaction area
 Existing reference model: SEI growth / cycle-life models; primary observable: capacity-fade rate.
 Observed/latent variable to examine: fracture-assisted reaction area.
-Mechanism diagnosis: network / geometry. Image or reconstruct the evolving contact/connection graph underlying fracture-assisted reaction area; hold aggregate counts fixed while varying graph statistics.
+Unverified title-derived mechanism hint: network / geometry. Image or reconstruct the evolving contact/connection graph underlying fracture-assisted reaction area; hold aggregate counts fixed while varying graph statistics.
 Candidate construction: Represent adjacency/connectivity explicitly; project to a minimal measurable graph statistic and check whether equal aggregate states have different futures.
 Garden graph: THING=physical components; TIME=trajectory; SPACE=physical domain; EVENT=state transition; ACTION=controlled perturbation where applicable; AGENCY=experimenter/controller only; RULE=physical conservation; VALUE=declared performance measure; CONTEXT=experimental conditions; CLAIM=testable mechanism. Applicable edges: partOf, dependsOn, contextualizes, derivedFrom, supports/contradicts; use causes only after causal identification.
 Seven forms: CONSTRUCT=system; CONTRACT=units/domain; STATE=measured and hidden variables; RELATION=typed dependencies; PROCESS=state evolution; RULE=physical constraints; PROJECTION=baseline observable.
@@ -281,7 +323,7 @@ Evidence: CANDIDATE; domain-specific equation contract INCOMPLETE; numerical res
 009. Battery degradation — lithium inventory redistribution
 Existing reference model: SEI growth / cycle-life models; primary observable: capacity-fade rate.
 Observed/latent variable to examine: lithium inventory redistribution.
-Mechanism diagnosis: dynamic hidden state / delay. Use matched present-state trajectories with different prior forcing histories for lithium inventory redistribution; check whether their subsequent responses diverge.
+Unverified title-derived mechanism hint: dynamic hidden state / delay. Use matched present-state trajectories with different prior forcing histories for lithium inventory redistribution; check whether their subsequent responses diverge.
 Candidate construction: Introduce a physically measured relaxing state or convolution kernel; estimate its timescale from perturbation data, not arbitrary fitting.
 Garden graph: THING=physical components; TIME=trajectory; SPACE=physical domain; EVENT=state transition; ACTION=controlled perturbation where applicable; AGENCY=experimenter/controller only; RULE=physical conservation; VALUE=declared performance measure; CONTEXT=experimental conditions; CLAIM=testable mechanism. Applicable edges: partOf, dependsOn, contextualizes, derivedFrom, supports/contradicts; use causes only after causal identification.
 Seven forms: CONSTRUCT=system; CONTRACT=units/domain; STATE=measured and hidden variables; RELATION=typed dependencies; PROCESS=state evolution; RULE=physical constraints; PROJECTION=baseline observable.
@@ -292,17 +334,18 @@ Evidence: CANDIDATE; domain-specific equation contract INCOMPLETE; numerical res
 010. Battery degradation — electrode pore-network fragmentation
 Existing reference model: SEI growth / cycle-life models; primary observable: capacity-fade rate.
 Observed/latent variable to examine: electrode pore-network fragmentation.
-Mechanism diagnosis: network / geometry. Image or reconstruct the evolving contact/connection graph underlying electrode pore-network fragmentation; hold aggregate counts fixed while varying graph statistics.
+Unverified title-derived mechanism hint: network / geometry. Image or reconstruct the evolving contact/connection graph underlying electrode pore-network fragmentation; hold aggregate counts fixed while varying graph statistics.
 Candidate construction: Represent adjacency/connectivity explicitly; project to a minimal measurable graph statistic and check whether equal aggregate states have different futures.
 Garden graph: THING=physical components; TIME=trajectory; SPACE=physical domain; EVENT=state transition; ACTION=controlled perturbation where applicable; AGENCY=experimenter/controller only; RULE=physical conservation; VALUE=declared performance measure; CONTEXT=experimental conditions; CLAIM=testable mechanism. Applicable edges: partOf, dependsOn, contextualizes, derivedFrom, supports/contradicts; use causes only after causal identification.
 Seven forms: CONSTRUCT=system; CONTRACT=units/domain; STATE=measured and hidden variables; RELATION=typed dependencies; PROCESS=state evolution; RULE=physical constraints; PROJECTION=baseline observable.
 Falsification protocol: Image or reconstruct the evolving contact/connection graph underlying electrode pore-network fragmentation; hold aggregate counts fixed while varying graph statistics. Fit extension and strong modern reference model on training experiments; compare blinded held-out predictive likelihood/error under matched complexity and budget. If no robust improvement, reject the increment.
-Benefit if validated: longer battery lifetime.Evidence: CANDIDATE; domain-specific equation contract INCOMPLETE; numerical result NOT RUN; literature novelty UNKNOWN; empirical verification NOT DONE.
+Benefit if validated: longer battery lifetime.
+Evidence: CANDIDATE; domain-specific equation contract INCOMPLETE; numerical result NOT RUN; literature novelty UNKNOWN; empirical verification NOT DONE.
 
 011. Heterogeneous catalysis — surface reconstruction memory
 Existing reference model: Sabatier / Langmuir–Hinshelwood; primary observable: turnover frequency.
 Observed/latent variable to examine: surface reconstruction memory.
-Mechanism diagnosis: dynamic hidden state / delay. Use matched present-state trajectories with different prior forcing histories for surface reconstruction memory; check whether their subsequent responses diverge.
+Unverified title-derived mechanism hint: dynamic hidden state / delay. Use matched present-state trajectories with different prior forcing histories for surface reconstruction memory; check whether their subsequent responses diverge.
 Candidate construction: Introduce a physically measured relaxing state or convolution kernel; estimate its timescale from perturbation data, not arbitrary fitting.
 Garden graph: THING=physical components; TIME=trajectory; SPACE=physical domain; EVENT=state transition; ACTION=controlled perturbation where applicable; AGENCY=experimenter/controller only; RULE=physical conservation; VALUE=declared performance measure; CONTEXT=experimental conditions; CLAIM=testable mechanism. Applicable edges: partOf, dependsOn, contextualizes, derivedFrom, supports/contradicts; use causes only after causal identification.
 Seven forms: CONSTRUCT=system; CONTRACT=units/domain; STATE=measured and hidden variables; RELATION=typed dependencies; PROCESS=state evolution; RULE=physical constraints; PROJECTION=baseline observable.
@@ -313,7 +356,7 @@ Evidence: CANDIDATE; domain-specific equation contract INCOMPLETE; numerical res
 012. Heterogeneous catalysis — adsorbate-neighbor correlations
 Existing reference model: Sabatier / Langmuir–Hinshelwood; primary observable: turnover frequency.
 Observed/latent variable to examine: adsorbate-neighbor correlations.
-Mechanism diagnosis: heterogeneity / joint distribution. Measure paired local fields or event-resolved distributions for adsorbate-neighbor correlations; compare joint-data model with independently shuffled marginals.
+Unverified title-derived mechanism hint: heterogeneity / joint distribution. Measure paired local fields or event-resolved distributions for adsorbate-neighbor correlations; compare joint-data model with independently shuffled marginals.
 Candidate construction: Add a measured joint-distribution statistic, not a free coefficient; derive aggregate response by averaging the local law and quantify the residual.
 Garden graph: THING=physical components; TIME=trajectory; SPACE=physical domain; EVENT=state transition; ACTION=controlled perturbation where applicable; AGENCY=experimenter/controller only; RULE=physical conservation; VALUE=declared performance measure; CONTEXT=experimental conditions; CLAIM=testable mechanism. Applicable edges: partOf, dependsOn, contextualizes, derivedFrom, supports/contradicts; use causes only after causal identification.
 Seven forms: CONSTRUCT=system; CONTRACT=units/domain; STATE=measured and hidden variables; RELATION=typed dependencies; PROCESS=state evolution; RULE=physical constraints; PROJECTION=baseline observable.
@@ -324,7 +367,7 @@ Evidence: CANDIDATE; domain-specific equation contract INCOMPLETE; numerical res
 013. Heterogeneous catalysis — pulsed feed phase
 Existing reference model: Sabatier / Langmuir–Hinshelwood; primary observable: turnover frequency.
 Observed/latent variable to examine: pulsed feed phase.
-Mechanism diagnosis: state switching / hysteresis. Cycle the driving variable in both directions and record branch-dependent response for pulsed feed phase; test whether a single-valued constitutive law fails.
+Unverified title-derived mechanism hint: state switching / hysteresis. Cycle the driving variable in both directions and record branch-dependent response for pulsed feed phase; test whether a single-valued constitutive law fails.
 Candidate construction: Introduce a branch/state variable with experimentally constrained transition rules; verify return-point and cycling behavior only if observed.
 Garden graph: THING=physical components; TIME=trajectory; SPACE=physical domain; EVENT=state transition; ACTION=controlled perturbation where applicable; AGENCY=experimenter/controller only; RULE=physical conservation; VALUE=declared performance measure; CONTEXT=experimental conditions; CLAIM=testable mechanism. Applicable edges: partOf, dependsOn, contextualizes, derivedFrom, supports/contradicts; use causes only after causal identification.
 Seven forms: CONSTRUCT=system; CONTRACT=units/domain; STATE=measured and hidden variables; RELATION=typed dependencies; PROCESS=state evolution; RULE=physical constraints; PROJECTION=baseline observable.
@@ -335,7 +378,7 @@ Evidence: CANDIDATE; domain-specific equation contract INCOMPLETE; numerical res
 014. Heterogeneous catalysis — active-site network percolation
 Existing reference model: Sabatier / Langmuir–Hinshelwood; primary observable: turnover frequency.
 Observed/latent variable to examine: active-site network percolation.
-Mechanism diagnosis: network / geometry. Image or reconstruct the evolving contact/connection graph underlying active-site network percolation; hold aggregate counts fixed while varying graph statistics.
+Unverified title-derived mechanism hint: network / geometry. Image or reconstruct the evolving contact/connection graph underlying active-site network percolation; hold aggregate counts fixed while varying graph statistics.
 Candidate construction: Represent adjacency/connectivity explicitly; project to a minimal measurable graph statistic and check whether equal aggregate states have different futures.
 Garden graph: THING=physical components; TIME=trajectory; SPACE=physical domain; EVENT=state transition; ACTION=controlled perturbation where applicable; AGENCY=experimenter/controller only; RULE=physical conservation; VALUE=declared performance measure; CONTEXT=experimental conditions; CLAIM=testable mechanism. Applicable edges: partOf, dependsOn, contextualizes, derivedFrom, supports/contradicts; use causes only after causal identification.
 Seven forms: CONSTRUCT=system; CONTRACT=units/domain; STATE=measured and hidden variables; RELATION=typed dependencies; PROCESS=state evolution; RULE=physical constraints; PROJECTION=baseline observable.
@@ -346,7 +389,7 @@ Evidence: CANDIDATE; domain-specific equation contract INCOMPLETE; numerical res
 015. Heterogeneous catalysis — poison desorption history
 Existing reference model: Sabatier / Langmuir–Hinshelwood; primary observable: turnover frequency.
 Observed/latent variable to examine: poison desorption history.
-Mechanism diagnosis: dynamic hidden state / delay. Use matched present-state trajectories with different prior forcing histories for poison desorption history; check whether their subsequent responses diverge.
+Unverified title-derived mechanism hint: dynamic hidden state / delay. Use matched present-state trajectories with different prior forcing histories for poison desorption history; check whether their subsequent responses diverge.
 Candidate construction: Introduce a physically measured relaxing state or convolution kernel; estimate its timescale from perturbation data, not arbitrary fitting.
 Garden graph: THING=physical components; TIME=trajectory; SPACE=physical domain; EVENT=state transition; ACTION=controlled perturbation where applicable; AGENCY=experimenter/controller only; RULE=physical conservation; VALUE=declared performance measure; CONTEXT=experimental conditions; CLAIM=testable mechanism. Applicable edges: partOf, dependsOn, contextualizes, derivedFrom, supports/contradicts; use causes only after causal identification.
 Seven forms: CONSTRUCT=system; CONTRACT=units/domain; STATE=measured and hidden variables; RELATION=typed dependencies; PROCESS=state evolution; RULE=physical constraints; PROJECTION=baseline observable.
@@ -354,10 +397,9 @@ Falsification protocol: Use matched present-state trajectories with different pr
 Benefit if validated: lower-energy chemical manufacture.
 Evidence: CANDIDATE; domain-specific equation contract INCOMPLETE; numerical result NOT RUN; literature novelty UNKNOWN; empirical verification NOT DONE.
 
-016. Chemical kinetics — competing-pathway occupancy
-Existing reference model: Arrhenius / transition-state theory; primary observable: effective reaction rate.
+016. Chemical kinetics — competing-pathway occupancyExisting reference model: Arrhenius / transition-state theory; primary observable: effective reaction rate.
 Observed/latent variable to examine: competing-pathway occupancy.
-Mechanism diagnosis: coupled latent kinetics. Measure the candidate intermediate state for competing-pathway occupancy during perturbation/recovery; test whether it predicts held-out transients beyond baseline variables.
+Unverified title-derived mechanism hint: coupled latent kinetics. Measure the candidate intermediate state for competing-pathway occupancy during perturbation/recovery; test whether it predicts held-out transients beyond baseline variables.
 Candidate construction: Introduce a measurable intermediate and couple it by mass/energy-balanced rate equations; test observability and parameter identifiability.
 Garden graph: THING=physical components; TIME=trajectory; SPACE=physical domain; EVENT=state transition; ACTION=controlled perturbation where applicable; AGENCY=experimenter/controller only; RULE=physical conservation; VALUE=declared performance measure; CONTEXT=experimental conditions; CLAIM=testable mechanism. Applicable edges: partOf, dependsOn, contextualizes, derivedFrom, supports/contradicts; use causes only after causal identification.
 Seven forms: CONSTRUCT=system; CONTRACT=units/domain; STATE=measured and hidden variables; RELATION=typed dependencies; PROCESS=state evolution; RULE=physical constraints; PROJECTION=baseline observable.
@@ -368,7 +410,7 @@ Evidence: CANDIDATE; domain-specific equation contract INCOMPLETE; numerical res
 017. Chemical kinetics — barrier-distribution curvature
 Existing reference model: Arrhenius / transition-state theory; primary observable: effective reaction rate.
 Observed/latent variable to examine: barrier-distribution curvature.
-Mechanism diagnosis: mechanism unresolved — requires domain diagnostics. Collect perturbation-response measurements for barrier-distribution curvature; identify residual structure before selecting an extension.
+Unverified title-derived mechanism hint: mechanism unresolved — requires domain diagnostics. Collect perturbation-response measurements for barrier-distribution curvature; identify residual structure before selecting an extension.
 Candidate construction: Do not choose a mechanism before observing structured residuals; record an unresolved research question.
 Garden graph: THING=physical components; TIME=trajectory; SPACE=physical domain; EVENT=state transition; ACTION=controlled perturbation where applicable; AGENCY=experimenter/controller only; RULE=physical conservation; VALUE=declared performance measure; CONTEXT=experimental conditions; CLAIM=testable mechanism. Applicable edges: partOf, dependsOn, contextualizes, derivedFrom, supports/contradicts; use causes only after causal identification.
 Seven forms: CONSTRUCT=system; CONTRACT=units/domain; STATE=measured and hidden variables; RELATION=typed dependencies; PROCESS=state evolution; RULE=physical constraints; PROJECTION=baseline observable.
@@ -379,7 +421,7 @@ Evidence: CANDIDATE; domain-specific equation contract INCOMPLETE; numerical res
 018. Chemical kinetics — solvent reorganization lag
 Existing reference model: Arrhenius / transition-state theory; primary observable: effective reaction rate.
 Observed/latent variable to examine: solvent reorganization lag.
-Mechanism diagnosis: dynamic hidden state / delay. Use matched present-state trajectories with different prior forcing histories for solvent reorganization lag; check whether their subsequent responses diverge.
+Unverified title-derived mechanism hint: dynamic hidden state / delay. Use matched present-state trajectories with different prior forcing histories for solvent reorganization lag; check whether their subsequent responses diverge.
 Candidate construction: Introduce a physically measured relaxing state or convolution kernel; estimate its timescale from perturbation data, not arbitrary fitting.
 Garden graph: THING=physical components; TIME=trajectory; SPACE=physical domain; EVENT=state transition; ACTION=controlled perturbation where applicable; AGENCY=experimenter/controller only; RULE=physical conservation; VALUE=declared performance measure; CONTEXT=experimental conditions; CLAIM=testable mechanism. Applicable edges: partOf, dependsOn, contextualizes, derivedFrom, supports/contradicts; use causes only after causal identification.
 Seven forms: CONSTRUCT=system; CONTRACT=units/domain; STATE=measured and hidden variables; RELATION=typed dependencies; PROCESS=state evolution; RULE=physical constraints; PROJECTION=baseline observable.
@@ -390,7 +432,7 @@ Evidence: CANDIDATE; domain-specific equation contract INCOMPLETE; numerical res
 019. Chemical kinetics — reactant clustering
 Existing reference model: Arrhenius / transition-state theory; primary observable: effective reaction rate.
 Observed/latent variable to examine: reactant clustering.
-Mechanism diagnosis: network / geometry. Image or reconstruct the evolving contact/connection graph underlying reactant clustering; hold aggregate counts fixed while varying graph statistics.
+Unverified title-derived mechanism hint: network / geometry. Image or reconstruct the evolving contact/connection graph underlying reactant clustering; hold aggregate counts fixed while varying graph statistics.
 Candidate construction: Represent adjacency/connectivity explicitly; project to a minimal measurable graph statistic and check whether equal aggregate states have different futures.
 Garden graph: THING=physical components; TIME=trajectory; SPACE=physical domain; EVENT=state transition; ACTION=controlled perturbation where applicable; AGENCY=experimenter/controller only; RULE=physical conservation; VALUE=declared performance measure; CONTEXT=experimental conditions; CLAIM=testable mechanism. Applicable edges: partOf, dependsOn, contextualizes, derivedFrom, supports/contradicts; use causes only after causal identification.
 Seven forms: CONSTRUCT=system; CONTRACT=units/domain; STATE=measured and hidden variables; RELATION=typed dependencies; PROCESS=state evolution; RULE=physical constraints; PROJECTION=baseline observable.
@@ -401,7 +443,7 @@ Evidence: CANDIDATE; domain-specific equation contract INCOMPLETE; numerical res
 020. Chemical kinetics — intermediate trapping memory
 Existing reference model: Arrhenius / transition-state theory; primary observable: effective reaction rate.
 Observed/latent variable to examine: intermediate trapping memory.
-Mechanism diagnosis: dynamic hidden state / delay. Use matched present-state trajectories with different prior forcing histories for intermediate trapping memory; check whether their subsequent responses diverge.
+Unverified title-derived mechanism hint: dynamic hidden state / delay. Use matched present-state trajectories with different prior forcing histories for intermediate trapping memory; check whether their subsequent responses diverge.
 Candidate construction: Introduce a physically measured relaxing state or convolution kernel; estimate its timescale from perturbation data, not arbitrary fitting.
 Garden graph: THING=physical components; TIME=trajectory; SPACE=physical domain; EVENT=state transition; ACTION=controlled perturbation where applicable; AGENCY=experimenter/controller only; RULE=physical conservation; VALUE=declared performance measure; CONTEXT=experimental conditions; CLAIM=testable mechanism. Applicable edges: partOf, dependsOn, contextualizes, derivedFrom, supports/contradicts; use causes only after causal identification.
 Seven forms: CONSTRUCT=system; CONTRACT=units/domain; STATE=measured and hidden variables; RELATION=typed dependencies; PROCESS=state evolution; RULE=physical constraints; PROJECTION=baseline observable.
@@ -412,7 +454,7 @@ Evidence: CANDIDATE; domain-specific equation contract INCOMPLETE; numerical res
 021. Nucleation — subcritical-cluster history
 Existing reference model: classical nucleation theory; primary observable: nucleation hazard.
 Observed/latent variable to examine: subcritical-cluster history.
-Mechanism diagnosis: dynamic hidden state / delay. Use matched present-state trajectories with different prior forcing histories for subcritical-cluster history; check whether their subsequent responses diverge.
+Unverified title-derived mechanism hint: dynamic hidden state / delay. Use matched present-state trajectories with different prior forcing histories for subcritical-cluster history; check whether their subsequent responses diverge.
 Candidate construction: Introduce a physically measured relaxing state or convolution kernel; estimate its timescale from perturbation data, not arbitrary fitting.
 Garden graph: THING=physical components; TIME=trajectory; SPACE=physical domain; EVENT=state transition; ACTION=controlled perturbation where applicable; AGENCY=experimenter/controller only; RULE=physical conservation; VALUE=declared performance measure; CONTEXT=experimental conditions; CLAIM=testable mechanism. Applicable edges: partOf, dependsOn, contextualizes, derivedFrom, supports/contradicts; use causes only after causal identification.
 Seven forms: CONSTRUCT=system; CONTRACT=units/domain; STATE=measured and hidden variables; RELATION=typed dependencies; PROCESS=state evolution; RULE=physical constraints; PROJECTION=baseline observable.
@@ -423,7 +465,7 @@ Evidence: CANDIDATE; domain-specific equation contract INCOMPLETE; numerical res
 022. Nucleation — surface-defect localization
 Existing reference model: classical nucleation theory; primary observable: nucleation hazard.
 Observed/latent variable to examine: surface-defect localization.
-Mechanism diagnosis: mechanism unresolved — requires domain diagnostics. Collect perturbation-response measurements for surface-defect localization; identify residual structure before selecting an extension.
+Unverified title-derived mechanism hint: mechanism unresolved — requires domain diagnostics. Collect perturbation-response measurements for surface-defect localization; identify residual structure before selecting an extension.
 Candidate construction: Do not choose a mechanism before observing structured residuals; record an unresolved research question.
 Garden graph: THING=physical components; TIME=trajectory; SPACE=physical domain; EVENT=state transition; ACTION=controlled perturbation where applicable; AGENCY=experimenter/controller only; RULE=physical conservation; VALUE=declared performance measure; CONTEXT=experimental conditions; CLAIM=testable mechanism. Applicable edges: partOf, dependsOn, contextualizes, derivedFrom, supports/contradicts; use causes only after causal identification.
 Seven forms: CONSTRUCT=system; CONTRACT=units/domain; STATE=measured and hidden variables; RELATION=typed dependencies; PROCESS=state evolution; RULE=physical constraints; PROJECTION=baseline observable.
@@ -434,7 +476,7 @@ Evidence: CANDIDATE; domain-specific equation contract INCOMPLETE; numerical res
 023. Nucleation — solvent pulse memory
 Existing reference model: classical nucleation theory; primary observable: nucleation hazard.
 Observed/latent variable to examine: solvent pulse memory.
-Mechanism diagnosis: dynamic hidden state / delay. Use matched present-state trajectories with different prior forcing histories for solvent pulse memory; check whether their subsequent responses diverge.
+Unverified title-derived mechanism hint: dynamic hidden state / delay. Use matched present-state trajectories with different prior forcing histories for solvent pulse memory; check whether their subsequent responses diverge.
 Candidate construction: Introduce a physically measured relaxing state or convolution kernel; estimate its timescale from perturbation data, not arbitrary fitting.
 Garden graph: THING=physical components; TIME=trajectory; SPACE=physical domain; EVENT=state transition; ACTION=controlled perturbation where applicable; AGENCY=experimenter/controller only; RULE=physical conservation; VALUE=declared performance measure; CONTEXT=experimental conditions; CLAIM=testable mechanism. Applicable edges: partOf, dependsOn, contextualizes, derivedFrom, supports/contradicts; use causes only after causal identification.
 Seven forms: CONSTRUCT=system; CONTRACT=units/domain; STATE=measured and hidden variables; RELATION=typed dependencies; PROCESS=state evolution; RULE=physical constraints; PROJECTION=baseline observable.
@@ -445,7 +487,7 @@ Evidence: CANDIDATE; domain-specific equation contract INCOMPLETE; numerical res
 024. Nucleation — impurity-cluster correlations
 Existing reference model: classical nucleation theory; primary observable: nucleation hazard.
 Observed/latent variable to examine: impurity-cluster correlations.
-Mechanism diagnosis: heterogeneity / joint distribution. Measure paired local fields or event-resolved distributions for impurity-cluster correlations; compare joint-data model with independently shuffled marginals.
+Unverified title-derived mechanism hint: heterogeneity / joint distribution. Measure paired local fields or event-resolved distributions for impurity-cluster correlations; compare joint-data model with independently shuffled marginals.
 Candidate construction: Add a measured joint-distribution statistic, not a free coefficient; derive aggregate response by averaging the local law and quantify the residual.
 Garden graph: THING=physical components; TIME=trajectory; SPACE=physical domain; EVENT=state transition; ACTION=controlled perturbation where applicable; AGENCY=experimenter/controller only; RULE=physical conservation; VALUE=declared performance measure; CONTEXT=experimental conditions; CLAIM=testable mechanism. Applicable edges: partOf, dependsOn, contextualizes, derivedFrom, supports/contradicts; use causes only after causal identification.
 Seven forms: CONSTRUCT=system; CONTRACT=units/domain; STATE=measured and hidden variables; RELATION=typed dependencies; PROCESS=state evolution; RULE=physical constraints; PROJECTION=baseline observable.
@@ -456,7 +498,7 @@ Evidence: CANDIDATE; domain-specific equation contract INCOMPLETE; numerical res
 025. Nucleation — spatial supersaturation intermittency
 Existing reference model: classical nucleation theory; primary observable: nucleation hazard.
 Observed/latent variable to examine: spatial supersaturation intermittency.
-Mechanism diagnosis: heterogeneity / joint distribution. Measure paired local fields or event-resolved distributions for spatial supersaturation intermittency; compare joint-data model with independently shuffled marginals.
+Unverified title-derived mechanism hint: heterogeneity / joint distribution. Measure paired local fields or event-resolved distributions for spatial supersaturation intermittency; compare joint-data model with independently shuffled marginals.
 Candidate construction: Add a measured joint-distribution statistic, not a free coefficient; derive aggregate response by averaging the local law and quantify the residual.
 Garden graph: THING=physical components; TIME=trajectory; SPACE=physical domain; EVENT=state transition; ACTION=controlled perturbation where applicable; AGENCY=experimenter/controller only; RULE=physical conservation; VALUE=declared performance measure; CONTEXT=experimental conditions; CLAIM=testable mechanism. Applicable edges: partOf, dependsOn, contextualizes, derivedFrom, supports/contradicts; use causes only after causal identification.
 Seven forms: CONSTRUCT=system; CONTRACT=units/domain; STATE=measured and hidden variables; RELATION=typed dependencies; PROCESS=state evolution; RULE=physical constraints; PROJECTION=baseline observable.
@@ -467,7 +509,7 @@ Evidence: CANDIDATE; domain-specific equation contract INCOMPLETE; numerical res
 026. Heat transfer — interface thermal memory
 Existing reference model: Fourier conduction; primary observable: heat flux.
 Observed/latent variable to examine: interface thermal memory.
-Mechanism diagnosis: dynamic hidden state / delay. Use matched present-state trajectories with different prior forcing histories for interface thermal memory; check whether their subsequent responses diverge.
+Unverified title-derived mechanism hint: dynamic hidden state / delay. Use matched present-state trajectories with different prior forcing histories for interface thermal memory; check whether their subsequent responses diverge.
 Candidate construction: Introduce a physically measured relaxing state or convolution kernel; estimate its timescale from perturbation data, not arbitrary fitting.
 Garden graph: THING=physical components; TIME=trajectory; SPACE=physical domain; EVENT=state transition; ACTION=controlled perturbation where applicable; AGENCY=experimenter/controller only; RULE=physical conservation; VALUE=declared performance measure; CONTEXT=experimental conditions; CLAIM=testable mechanism. Applicable edges: partOf, dependsOn, contextualizes, derivedFrom, supports/contradicts; use causes only after causal identification.
 Seven forms: CONSTRUCT=system; CONTRACT=units/domain; STATE=measured and hidden variables; RELATION=typed dependencies; PROCESS=state evolution; RULE=physical constraints; PROJECTION=baseline observable.
@@ -478,7 +520,7 @@ Evidence: CANDIDATE; domain-specific equation contract INCOMPLETE; numerical res
 027. Heat transfer — anisotropic domain connectivity
 Existing reference model: Fourier conduction; primary observable: heat flux.
 Observed/latent variable to examine: anisotropic domain connectivity.
-Mechanism diagnosis: network / geometry. Image or reconstruct the evolving contact/connection graph underlying anisotropic domain connectivity; hold aggregate counts fixed while varying graph statistics.
+Unverified title-derived mechanism hint: network / geometry. Image or reconstruct the evolving contact/connection graph underlying anisotropic domain connectivity; hold aggregate counts fixed while varying graph statistics.
 Candidate construction: Represent adjacency/connectivity explicitly; project to a minimal measurable graph statistic and check whether equal aggregate states have different futures.
 Garden graph: THING=physical components; TIME=trajectory; SPACE=physical domain; EVENT=state transition; ACTION=controlled perturbation where applicable; AGENCY=experimenter/controller only; RULE=physical conservation; VALUE=declared performance measure; CONTEXT=experimental conditions; CLAIM=testable mechanism. Applicable edges: partOf, dependsOn, contextualizes, derivedFrom, supports/contradicts; use causes only after causal identification.
 Seven forms: CONSTRUCT=system; CONTRACT=units/domain; STATE=measured and hidden variables; RELATION=typed dependencies; PROCESS=state evolution; RULE=physical constraints; PROJECTION=baseline observable.
@@ -489,7 +531,7 @@ Evidence: CANDIDATE; domain-specific equation contract INCOMPLETE; numerical res
 028. Heat transfer — nonlocal hotspot coupling
 Existing reference model: Fourier conduction; primary observable: heat flux.
 Observed/latent variable to examine: nonlocal hotspot coupling.
-Mechanism diagnosis: coupled latent kinetics. Measure the candidate intermediate state for nonlocal hotspot coupling during perturbation/recovery; test whether it predicts held-out transients beyond baseline variables.
+Unverified title-derived mechanism hint: coupled latent kinetics. Measure the candidate intermediate state for nonlocal hotspot coupling during perturbation/recovery; test whether it predicts held-out transients beyond baseline variables.
 Candidate construction: Introduce a measurable intermediate and couple it by mass/energy-balanced rate equations; test observability and parameter identifiability.
 Garden graph: THING=physical components; TIME=trajectory; SPACE=physical domain; EVENT=state transition; ACTION=controlled perturbation where applicable; AGENCY=experimenter/controller only; RULE=physical conservation; VALUE=declared performance measure; CONTEXT=experimental conditions; CLAIM=testable mechanism. Applicable edges: partOf, dependsOn, contextualizes, derivedFrom, supports/contradicts; use causes only after causal identification.
 Seven forms: CONSTRUCT=system; CONTRACT=units/domain; STATE=measured and hidden variables; RELATION=typed dependencies; PROCESS=state evolution; RULE=physical constraints; PROJECTION=baseline observable.
@@ -500,7 +542,7 @@ Evidence: CANDIDATE; domain-specific equation contract INCOMPLETE; numerical res
 029. Heat transfer — phase-transition latent-heat lag
 Existing reference model: Fourier conduction; primary observable: heat flux.
 Observed/latent variable to examine: phase-transition latent-heat lag.
-Mechanism diagnosis: state switching / hysteresis. Cycle the driving variable in both directions and record branch-dependent response for phase-transition latent-heat lag; test whether a single-valued constitutive law fails.
+Unverified title-derived mechanism hint: state switching / hysteresis. Cycle the driving variable in both directions and record branch-dependent response for phase-transition latent-heat lag; test whether a single-valued constitutive law fails.
 Candidate construction: Introduce a branch/state variable with experimentally constrained transition rules; verify return-point and cycling behavior only if observed.
 Garden graph: THING=physical components; TIME=trajectory; SPACE=physical domain; EVENT=state transition; ACTION=controlled perturbation where applicable; AGENCY=experimenter/controller only; RULE=physical conservation; VALUE=declared performance measure; CONTEXT=experimental conditions; CLAIM=testable mechanism. Applicable edges: partOf, dependsOn, contextualizes, derivedFrom, supports/contradicts; use causes only after causal identification.
 Seven forms: CONSTRUCT=system; CONTRACT=units/domain; STATE=measured and hidden variables; RELATION=typed dependencies; PROCESS=state evolution; RULE=physical constraints; PROJECTION=baseline observable.
@@ -511,7 +553,7 @@ Evidence: CANDIDATE; domain-specific equation contract INCOMPLETE; numerical res
 030. Heat transfer — thermal-contact ageing
 Existing reference model: Fourier conduction; primary observable: heat flux.
 Observed/latent variable to examine: thermal-contact ageing.
-Mechanism diagnosis: network / geometry. Image or reconstruct the evolving contact/connection graph underlying thermal-contact ageing; hold aggregate counts fixed while varying graph statistics.
+Unverified title-derived mechanism hint: network / geometry. Image or reconstruct the evolving contact/connection graph underlying thermal-contact ageing; hold aggregate counts fixed while varying graph statistics.
 Candidate construction: Represent adjacency/connectivity explicitly; project to a minimal measurable graph statistic and check whether equal aggregate states have different futures.
 Garden graph: THING=physical components; TIME=trajectory; SPACE=physical domain; EVENT=state transition; ACTION=controlled perturbation where applicable; AGENCY=experimenter/controller only; RULE=physical conservation; VALUE=declared performance measure; CONTEXT=experimental conditions; CLAIM=testable mechanism. Applicable edges: partOf, dependsOn, contextualizes, derivedFrom, supports/contradicts; use causes only after causal identification.
 Seven forms: CONSTRUCT=system; CONTRACT=units/domain; STATE=measured and hidden variables; RELATION=typed dependencies; PROCESS=state evolution; RULE=physical constraints; PROJECTION=baseline observable.
@@ -522,7 +564,7 @@ Evidence: CANDIDATE; domain-specific equation contract INCOMPLETE; numerical res
 031. Fluid transport — pore-throat network damage
 Existing reference model: Darcy porous-flow law; primary observable: effective permeability.
 Observed/latent variable to examine: pore-throat network damage.
-Mechanism diagnosis: network / geometry. Image or reconstruct the evolving contact/connection graph underlying pore-throat network damage; hold aggregate counts fixed while varying graph statistics.
+Unverified title-derived mechanism hint: network / geometry. Image or reconstruct the evolving contact/connection graph underlying pore-throat network damage; hold aggregate counts fixed while varying graph statistics.
 Candidate construction: Represent adjacency/connectivity explicitly; project to a minimal measurable graph statistic and check whether equal aggregate states have different futures.
 Garden graph: THING=physical components; TIME=trajectory; SPACE=physical domain; EVENT=state transition; ACTION=controlled perturbation where applicable; AGENCY=experimenter/controller only; RULE=physical conservation; VALUE=declared performance measure; CONTEXT=experimental conditions; CLAIM=testable mechanism. Applicable edges: partOf, dependsOn, contextualizes, derivedFrom, supports/contradicts; use causes only after causal identification.
 Seven forms: CONSTRUCT=system; CONTRACT=units/domain; STATE=measured and hidden variables; RELATION=typed dependencies; PROCESS=state evolution; RULE=physical constraints; PROJECTION=baseline observable.
@@ -533,7 +575,7 @@ Evidence: CANDIDATE; domain-specific equation contract INCOMPLETE; numerical res
 032. Fluid transport — wetting-front hysteresis
 Existing reference model: Darcy porous-flow law; primary observable: effective permeability.
 Observed/latent variable to examine: wetting-front hysteresis.
-Mechanism diagnosis: state switching / hysteresis. Cycle the driving variable in both directions and record branch-dependent response for wetting-front hysteresis; test whether a single-valued constitutive law fails.
+Unverified title-derived mechanism hint: state switching / hysteresis. Cycle the driving variable in both directions and record branch-dependent response for wetting-front hysteresis; test whether a single-valued constitutive law fails.
 Candidate construction: Introduce a branch/state variable with experimentally constrained transition rules; verify return-point and cycling behavior only if observed.
 Garden graph: THING=physical components; TIME=trajectory; SPACE=physical domain; EVENT=state transition; ACTION=controlled perturbation where applicable; AGENCY=experimenter/controller only; RULE=physical conservation; VALUE=declared performance measure; CONTEXT=experimental conditions; CLAIM=testable mechanism. Applicable edges: partOf, dependsOn, contextualizes, derivedFrom, supports/contradicts; use causes only after causal identification.
 Seven forms: CONSTRUCT=system; CONTRACT=units/domain; STATE=measured and hidden variables; RELATION=typed dependencies; PROCESS=state evolution; RULE=physical constraints; PROJECTION=baseline observable.
@@ -544,7 +586,7 @@ Evidence: CANDIDATE; domain-specific equation contract INCOMPLETE; numerical res
 033. Fluid transport — particle clogging topology
 Existing reference model: Darcy porous-flow law; primary observable: effective permeability.
 Observed/latent variable to examine: particle clogging topology.
-Mechanism diagnosis: network / geometry. Image or reconstruct the evolving contact/connection graph underlying particle clogging topology; hold aggregate counts fixed while varying graph statistics.
+Unverified title-derived mechanism hint: network / geometry. Image or reconstruct the evolving contact/connection graph underlying particle clogging topology; hold aggregate counts fixed while varying graph statistics.
 Candidate construction: Represent adjacency/connectivity explicitly; project to a minimal measurable graph statistic and check whether equal aggregate states have different futures.
 Garden graph: THING=physical components; TIME=trajectory; SPACE=physical domain; EVENT=state transition; ACTION=controlled perturbation where applicable; AGENCY=experimenter/controller only; RULE=physical conservation; VALUE=declared performance measure; CONTEXT=experimental conditions; CLAIM=testable mechanism. Applicable edges: partOf, dependsOn, contextualizes, derivedFrom, supports/contradicts; use causes only after causal identification.
 Seven forms: CONSTRUCT=system; CONTRACT=units/domain; STATE=measured and hidden variables; RELATION=typed dependencies; PROCESS=state evolution; RULE=physical constraints; PROJECTION=baseline observable.
@@ -555,7 +597,7 @@ Evidence: CANDIDATE; domain-specific equation contract INCOMPLETE; numerical res
 034. Fluid transport — pressure-cycling memory
 Existing reference model: Darcy porous-flow law; primary observable: effective permeability.
 Observed/latent variable to examine: pressure-cycling memory.
-Mechanism diagnosis: dynamic hidden state / delay. Use matched present-state trajectories with different prior forcing histories for pressure-cycling memory; check whether their subsequent responses diverge.
+Unverified title-derived mechanism hint: dynamic hidden state / delay. Use matched present-state trajectories with different prior forcing histories for pressure-cycling memory; check whether their subsequent responses diverge.
 Candidate construction: Introduce a physically measured relaxing state or convolution kernel; estimate its timescale from perturbation data, not arbitrary fitting.
 Garden graph: THING=physical components; TIME=trajectory; SPACE=physical domain; EVENT=state transition; ACTION=controlled perturbation where applicable; AGENCY=experimenter/controller only; RULE=physical conservation; VALUE=declared performance measure; CONTEXT=experimental conditions; CLAIM=testable mechanism. Applicable edges: partOf, dependsOn, contextualizes, derivedFrom, supports/contradicts; use causes only after causal identification.
 Seven forms: CONSTRUCT=system; CONTRACT=units/domain; STATE=measured and hidden variables; RELATION=typed dependencies; PROCESS=state evolution; RULE=physical constraints; PROJECTION=baseline observable.
@@ -566,7 +608,7 @@ Evidence: CANDIDATE; domain-specific equation contract INCOMPLETE; numerical res
 035. Fluid transport — multi-scale channel connectivity
 Existing reference model: Darcy porous-flow law; primary observable: effective permeability.
 Observed/latent variable to examine: multi-scale channel connectivity.
-Mechanism diagnosis: network / geometry. Image or reconstruct the evolving contact/connection graph underlying multi-scale channel connectivity; hold aggregate counts fixed while varying graph statistics.
+Unverified title-derived mechanism hint: network / geometry. Image or reconstruct the evolving contact/connection graph underlying multi-scale channel connectivity; hold aggregate counts fixed while varying graph statistics.
 Candidate construction: Represent adjacency/connectivity explicitly; project to a minimal measurable graph statistic and check whether equal aggregate states have different futures.
 Garden graph: THING=physical components; TIME=trajectory; SPACE=physical domain; EVENT=state transition; ACTION=controlled perturbation where applicable; AGENCY=experimenter/controller only; RULE=physical conservation; VALUE=declared performance measure; CONTEXT=experimental conditions; CLAIM=testable mechanism. Applicable edges: partOf, dependsOn, contextualizes, derivedFrom, supports/contradicts; use causes only after causal identification.
 Seven forms: CONSTRUCT=system; CONTRACT=units/domain; STATE=measured and hidden variables; RELATION=typed dependencies; PROCESS=state evolution; RULE=physical constraints; PROJECTION=baseline observable.
@@ -577,7 +619,7 @@ Evidence: CANDIDATE; domain-specific equation contract INCOMPLETE; numerical res
 036. Fracture mechanics — overload sequence memory
 Existing reference model: Paris crack-growth law; primary observable: crack advance per cycle.
 Observed/latent variable to examine: overload sequence memory.
-Mechanism diagnosis: dynamic hidden state / delay. Use matched present-state trajectories with different prior forcing histories for overload sequence memory; check whether their subsequent responses diverge.
+Unverified title-derived mechanism hint: dynamic hidden state / delay. Use matched present-state trajectories with different prior forcing histories for overload sequence memory; check whether their subsequent responses diverge.
 Candidate construction: Introduce a physically measured relaxing state or convolution kernel; estimate its timescale from perturbation data, not arbitrary fitting.
 Garden graph: THING=physical components; TIME=trajectory; SPACE=physical domain; EVENT=state transition; ACTION=controlled perturbation where applicable; AGENCY=experimenter/controller only; RULE=physical conservation; VALUE=declared performance measure; CONTEXT=experimental conditions; CLAIM=testable mechanism. Applicable edges: partOf, dependsOn, contextualizes, derivedFrom, supports/contradicts; use causes only after causal identification.
 Seven forms: CONSTRUCT=system; CONTRACT=units/domain; STATE=measured and hidden variables; RELATION=typed dependencies; PROCESS=state evolution; RULE=physical constraints; PROJECTION=baseline observable.
@@ -588,7 +630,7 @@ Evidence: CANDIDATE; domain-specific equation contract INCOMPLETE; numerical res
 037. Fracture mechanics — microcrack orientation correlations
 Existing reference model: Paris crack-growth law; primary observable: crack advance per cycle.
 Observed/latent variable to examine: microcrack orientation correlations.
-Mechanism diagnosis: heterogeneity / joint distribution. Measure paired local fields or event-resolved distributions for microcrack orientation correlations; compare joint-data model with independently shuffled marginals.
+Unverified title-derived mechanism hint: heterogeneity / joint distribution. Measure paired local fields or event-resolved distributions for microcrack orientation correlations; compare joint-data model with independently shuffled marginals.
 Candidate construction: Add a measured joint-distribution statistic, not a free coefficient; derive aggregate response by averaging the local law and quantify the residual.
 Garden graph: THING=physical components; TIME=trajectory; SPACE=physical domain; EVENT=state transition; ACTION=controlled perturbation where applicable; AGENCY=experimenter/controller only; RULE=physical conservation; VALUE=declared performance measure; CONTEXT=experimental conditions; CLAIM=testable mechanism. Applicable edges: partOf, dependsOn, contextualizes, derivedFrom, supports/contradicts; use causes only after causal identification.
 Seven forms: CONSTRUCT=system; CONTRACT=units/domain; STATE=measured and hidden variables; RELATION=typed dependencies; PROCESS=state evolution; RULE=physical constraints; PROJECTION=baseline observable.
@@ -596,9 +638,10 @@ Falsification protocol: Measure paired local fields or event-resolved distributi
 Benefit if validated: safer infrastructure.
 Evidence: CANDIDATE; domain-specific equation contract INCOMPLETE; numerical result NOT RUN; literature novelty UNKNOWN; empirical verification NOT DONE.
 
-038. Fracture mechanics — corrosion-fatigue couplingExisting reference model: Paris crack-growth law; primary observable: crack advance per cycle.
+038. Fracture mechanics — corrosion-fatigue coupling
+Existing reference model: Paris crack-growth law; primary observable: crack advance per cycle.
 Observed/latent variable to examine: corrosion-fatigue coupling.
-Mechanism diagnosis: coupled latent kinetics. Measure the candidate intermediate state for corrosion-fatigue coupling during perturbation/recovery; test whether it predicts held-out transients beyond baseline variables.
+Unverified title-derived mechanism hint: coupled latent kinetics. Measure the candidate intermediate state for corrosion-fatigue coupling during perturbation/recovery; test whether it predicts held-out transients beyond baseline variables.
 Candidate construction: Introduce a measurable intermediate and couple it by mass/energy-balanced rate equations; test observability and parameter identifiability.
 Garden graph: THING=physical components; TIME=trajectory; SPACE=physical domain; EVENT=state transition; ACTION=controlled perturbation where applicable; AGENCY=experimenter/controller only; RULE=physical conservation; VALUE=declared performance measure; CONTEXT=experimental conditions; CLAIM=testable mechanism. Applicable edges: partOf, dependsOn, contextualizes, derivedFrom, supports/contradicts; use causes only after causal identification.
 Seven forms: CONSTRUCT=system; CONTRACT=units/domain; STATE=measured and hidden variables; RELATION=typed dependencies; PROCESS=state evolution; RULE=physical constraints; PROJECTION=baseline observable.
@@ -609,7 +652,7 @@ Evidence: CANDIDATE; domain-specific equation contract INCOMPLETE; numerical res
 039. Fracture mechanics — grain-boundary connectivity
 Existing reference model: Paris crack-growth law; primary observable: crack advance per cycle.
 Observed/latent variable to examine: grain-boundary connectivity.
-Mechanism diagnosis: network / geometry. Image or reconstruct the evolving contact/connection graph underlying grain-boundary connectivity; hold aggregate counts fixed while varying graph statistics.
+Unverified title-derived mechanism hint: network / geometry. Image or reconstruct the evolving contact/connection graph underlying grain-boundary connectivity; hold aggregate counts fixed while varying graph statistics.
 Candidate construction: Represent adjacency/connectivity explicitly; project to a minimal measurable graph statistic and check whether equal aggregate states have different futures.
 Garden graph: THING=physical components; TIME=trajectory; SPACE=physical domain; EVENT=state transition; ACTION=controlled perturbation where applicable; AGENCY=experimenter/controller only; RULE=physical conservation; VALUE=declared performance measure; CONTEXT=experimental conditions; CLAIM=testable mechanism. Applicable edges: partOf, dependsOn, contextualizes, derivedFrom, supports/contradicts; use causes only after causal identification.
 Seven forms: CONSTRUCT=system; CONTRACT=units/domain; STATE=measured and hidden variables; RELATION=typed dependencies; PROCESS=state evolution; RULE=physical constraints; PROJECTION=baseline observable.
@@ -620,7 +663,7 @@ Evidence: CANDIDATE; domain-specific equation contract INCOMPLETE; numerical res
 040. Fracture mechanics — residual-stress redistribution
 Existing reference model: Paris crack-growth law; primary observable: crack advance per cycle.
 Observed/latent variable to examine: residual-stress redistribution.
-Mechanism diagnosis: dynamic hidden state / delay. Use matched present-state trajectories with different prior forcing histories for residual-stress redistribution; check whether their subsequent responses diverge.
+Unverified title-derived mechanism hint: dynamic hidden state / delay. Use matched present-state trajectories with different prior forcing histories for residual-stress redistribution; check whether their subsequent responses diverge.
 Candidate construction: Introduce a physically measured relaxing state or convolution kernel; estimate its timescale from perturbation data, not arbitrary fitting.
 Garden graph: THING=physical components; TIME=trajectory; SPACE=physical domain; EVENT=state transition; ACTION=controlled perturbation where applicable; AGENCY=experimenter/controller only; RULE=physical conservation; VALUE=declared performance measure; CONTEXT=experimental conditions; CLAIM=testable mechanism. Applicable edges: partOf, dependsOn, contextualizes, derivedFrom, supports/contradicts; use causes only after causal identification.
 Seven forms: CONSTRUCT=system; CONTRACT=units/domain; STATE=measured and hidden variables; RELATION=typed dependencies; PROCESS=state evolution; RULE=physical constraints; PROJECTION=baseline observable.
@@ -631,7 +674,7 @@ Evidence: CANDIDATE; domain-specific equation contract INCOMPLETE; numerical res
 041. Turbulence — intermittency-conditioned closure
 Existing reference model: Reynolds-averaged closure; primary observable: unresolved stress tensor.
 Observed/latent variable to examine: intermittency-conditioned closure.
-Mechanism diagnosis: heterogeneity / joint distribution. Measure paired local fields or event-resolved distributions for intermittency-conditioned closure; compare joint-data model with independently shuffled marginals.
+Unverified title-derived mechanism hint: heterogeneity / joint distribution. Measure paired local fields or event-resolved distributions for intermittency-conditioned closure; compare joint-data model with independently shuffled marginals.
 Candidate construction: Add a measured joint-distribution statistic, not a free coefficient; derive aggregate response by averaging the local law and quantify the residual.
 Garden graph: THING=physical components; TIME=trajectory; SPACE=physical domain; EVENT=state transition; ACTION=controlled perturbation where applicable; AGENCY=experimenter/controller only; RULE=physical conservation; VALUE=declared performance measure; CONTEXT=experimental conditions; CLAIM=testable mechanism. Applicable edges: partOf, dependsOn, contextualizes, derivedFrom, supports/contradicts; use causes only after causal identification.
 Seven forms: CONSTRUCT=system; CONTRACT=units/domain; STATE=measured and hidden variables; RELATION=typed dependencies; PROCESS=state evolution; RULE=physical constraints; PROJECTION=baseline observable.
@@ -642,7 +685,7 @@ Evidence: CANDIDATE; domain-specific equation contract INCOMPLETE; numerical res
 042. Turbulence — wall-history dependence
 Existing reference model: Reynolds-averaged closure; primary observable: unresolved stress tensor.
 Observed/latent variable to examine: wall-history dependence.
-Mechanism diagnosis: dynamic hidden state / delay. Use matched present-state trajectories with different prior forcing histories for wall-history dependence; check whether their subsequent responses diverge.
+Unverified title-derived mechanism hint: dynamic hidden state / delay. Use matched present-state trajectories with different prior forcing histories for wall-history dependence; check whether their subsequent responses diverge.
 Candidate construction: Introduce a physically measured relaxing state or convolution kernel; estimate its timescale from perturbation data, not arbitrary fitting.
 Garden graph: THING=physical components; TIME=trajectory; SPACE=physical domain; EVENT=state transition; ACTION=controlled perturbation where applicable; AGENCY=experimenter/controller only; RULE=physical conservation; VALUE=declared performance measure; CONTEXT=experimental conditions; CLAIM=testable mechanism. Applicable edges: partOf, dependsOn, contextualizes, derivedFrom, supports/contradicts; use causes only after causal identification.
 Seven forms: CONSTRUCT=system; CONTRACT=units/domain; STATE=measured and hidden variables; RELATION=typed dependencies; PROCESS=state evolution; RULE=physical constraints; PROJECTION=baseline observable.
@@ -653,7 +696,7 @@ Evidence: CANDIDATE; domain-specific equation contract INCOMPLETE; numerical res
 043. Turbulence — coherent-structure topology
 Existing reference model: Reynolds-averaged closure; primary observable: unresolved stress tensor.
 Observed/latent variable to examine: coherent-structure topology.
-Mechanism diagnosis: network / geometry. Image or reconstruct the evolving contact/connection graph underlying coherent-structure topology; hold aggregate counts fixed while varying graph statistics.
+Unverified title-derived mechanism hint: network / geometry. Image or reconstruct the evolving contact/connection graph underlying coherent-structure topology; hold aggregate counts fixed while varying graph statistics.
 Candidate construction: Represent adjacency/connectivity explicitly; project to a minimal measurable graph statistic and check whether equal aggregate states have different futures.
 Garden graph: THING=physical components; TIME=trajectory; SPACE=physical domain; EVENT=state transition; ACTION=controlled perturbation where applicable; AGENCY=experimenter/controller only; RULE=physical conservation; VALUE=declared performance measure; CONTEXT=experimental conditions; CLAIM=testable mechanism. Applicable edges: partOf, dependsOn, contextualizes, derivedFrom, supports/contradicts; use causes only after causal identification.
 Seven forms: CONSTRUCT=system; CONTRACT=units/domain; STATE=measured and hidden variables; RELATION=typed dependencies; PROCESS=state evolution; RULE=physical constraints; PROJECTION=baseline observable.
@@ -664,7 +707,7 @@ Evidence: CANDIDATE; domain-specific equation contract INCOMPLETE; numerical res
 044. Turbulence — pressure-strain lag
 Existing reference model: Reynolds-averaged closure; primary observable: unresolved stress tensor.
 Observed/latent variable to examine: pressure-strain lag.
-Mechanism diagnosis: dynamic hidden state / delay. Use matched present-state trajectories with different prior forcing histories for pressure-strain lag; check whether their subsequent responses diverge.
+Unverified title-derived mechanism hint: dynamic hidden state / delay. Use matched present-state trajectories with different prior forcing histories for pressure-strain lag; check whether their subsequent responses diverge.
 Candidate construction: Introduce a physically measured relaxing state or convolution kernel; estimate its timescale from perturbation data, not arbitrary fitting.
 Garden graph: THING=physical components; TIME=trajectory; SPACE=physical domain; EVENT=state transition; ACTION=controlled perturbation where applicable; AGENCY=experimenter/controller only; RULE=physical conservation; VALUE=declared performance measure; CONTEXT=experimental conditions; CLAIM=testable mechanism. Applicable edges: partOf, dependsOn, contextualizes, derivedFrom, supports/contradicts; use causes only after causal identification.
 Seven forms: CONSTRUCT=system; CONTRACT=units/domain; STATE=measured and hidden variables; RELATION=typed dependencies; PROCESS=state evolution; RULE=physical constraints; PROJECTION=baseline observable.
@@ -675,7 +718,7 @@ Evidence: CANDIDATE; domain-specific equation contract INCOMPLETE; numerical res
 045. Turbulence — cross-scale transfer memory
 Existing reference model: Reynolds-averaged closure; primary observable: unresolved stress tensor.
 Observed/latent variable to examine: cross-scale transfer memory.
-Mechanism diagnosis: dynamic hidden state / delay. Use matched present-state trajectories with different prior forcing histories for cross-scale transfer memory; check whether their subsequent responses diverge.
+Unverified title-derived mechanism hint: dynamic hidden state / delay. Use matched present-state trajectories with different prior forcing histories for cross-scale transfer memory; check whether their subsequent responses diverge.
 Candidate construction: Introduce a physically measured relaxing state or convolution kernel; estimate its timescale from perturbation data, not arbitrary fitting.
 Garden graph: THING=physical components; TIME=trajectory; SPACE=physical domain; EVENT=state transition; ACTION=controlled perturbation where applicable; AGENCY=experimenter/controller only; RULE=physical conservation; VALUE=declared performance measure; CONTEXT=experimental conditions; CLAIM=testable mechanism. Applicable edges: partOf, dependsOn, contextualizes, derivedFrom, supports/contradicts; use causes only after causal identification.
 Seven forms: CONSTRUCT=system; CONTRACT=units/domain; STATE=measured and hidden variables; RELATION=typed dependencies; PROCESS=state evolution; RULE=physical constraints; PROJECTION=baseline observable.
@@ -686,7 +729,7 @@ Evidence: CANDIDATE; domain-specific equation contract INCOMPLETE; numerical res
 046. Solar cells — mobile-ion interface memory
 Existing reference model: drift–diffusion photovoltaic model; primary observable: carrier recombination rate.
 Observed/latent variable to examine: mobile-ion interface memory.
-Mechanism diagnosis: dynamic hidden state / delay. Use matched present-state trajectories with different prior forcing histories for mobile-ion interface memory; check whether their subsequent responses diverge.
+Unverified title-derived mechanism hint: dynamic hidden state / delay. Use matched present-state trajectories with different prior forcing histories for mobile-ion interface memory; check whether their subsequent responses diverge.
 Candidate construction: Introduce a physically measured relaxing state or convolution kernel; estimate its timescale from perturbation data, not arbitrary fitting.
 Garden graph: THING=physical components; TIME=trajectory; SPACE=physical domain; EVENT=state transition; ACTION=controlled perturbation where applicable; AGENCY=experimenter/controller only; RULE=physical conservation; VALUE=declared performance measure; CONTEXT=experimental conditions; CLAIM=testable mechanism. Applicable edges: partOf, dependsOn, contextualizes, derivedFrom, supports/contradicts; use causes only after causal identification.
 Seven forms: CONSTRUCT=system; CONTRACT=units/domain; STATE=measured and hidden variables; RELATION=typed dependencies; PROCESS=state evolution; RULE=physical constraints; PROJECTION=baseline observable.
@@ -697,7 +740,7 @@ Evidence: CANDIDATE; domain-specific equation contract INCOMPLETE; numerical res
 047. Solar cells — trap-occupancy hysteresis
 Existing reference model: drift–diffusion photovoltaic model; primary observable: carrier recombination rate.
 Observed/latent variable to examine: trap-occupancy hysteresis.
-Mechanism diagnosis: state switching / hysteresis. Cycle the driving variable in both directions and record branch-dependent response for trap-occupancy hysteresis; test whether a single-valued constitutive law fails.
+Unverified title-derived mechanism hint: state switching / hysteresis. Cycle the driving variable in both directions and record branch-dependent response for trap-occupancy hysteresis; test whether a single-valued constitutive law fails.
 Candidate construction: Introduce a branch/state variable with experimentally constrained transition rules; verify return-point and cycling behavior only if observed.
 Garden graph: THING=physical components; TIME=trajectory; SPACE=physical domain; EVENT=state transition; ACTION=controlled perturbation where applicable; AGENCY=experimenter/controller only; RULE=physical conservation; VALUE=declared performance measure; CONTEXT=experimental conditions; CLAIM=testable mechanism. Applicable edges: partOf, dependsOn, contextualizes, derivedFrom, supports/contradicts; use causes only after causal identification.
 Seven forms: CONSTRUCT=system; CONTRACT=units/domain; STATE=measured and hidden variables; RELATION=typed dependencies; PROCESS=state evolution; RULE=physical constraints; PROJECTION=baseline observable.
@@ -708,7 +751,7 @@ Evidence: CANDIDATE; domain-specific equation contract INCOMPLETE; numerical res
 048. Solar cells — grain-boundary topology
 Existing reference model: drift–diffusion photovoltaic model; primary observable: carrier recombination rate.
 Observed/latent variable to examine: grain-boundary topology.
-Mechanism diagnosis: network / geometry. Image or reconstruct the evolving contact/connection graph underlying grain-boundary topology; hold aggregate counts fixed while varying graph statistics.
+Unverified title-derived mechanism hint: network / geometry. Image or reconstruct the evolving contact/connection graph underlying grain-boundary topology; hold aggregate counts fixed while varying graph statistics.
 Candidate construction: Represent adjacency/connectivity explicitly; project to a minimal measurable graph statistic and check whether equal aggregate states have different futures.
 Garden graph: THING=physical components; TIME=trajectory; SPACE=physical domain; EVENT=state transition; ACTION=controlled perturbation where applicable; AGENCY=experimenter/controller only; RULE=physical conservation; VALUE=declared performance measure; CONTEXT=experimental conditions; CLAIM=testable mechanism. Applicable edges: partOf, dependsOn, contextualizes, derivedFrom, supports/contradicts; use causes only after causal identification.
 Seven forms: CONSTRUCT=system; CONTRACT=units/domain; STATE=measured and hidden variables; RELATION=typed dependencies; PROCESS=state evolution; RULE=physical constraints; PROJECTION=baseline observable.
@@ -719,7 +762,7 @@ Evidence: CANDIDATE; domain-specific equation contract INCOMPLETE; numerical res
 049. Solar cells — humidity-illumination covariance
 Existing reference model: drift–diffusion photovoltaic model; primary observable: carrier recombination rate.
 Observed/latent variable to examine: humidity-illumination covariance.
-Mechanism diagnosis: heterogeneity / joint distribution. Measure paired local fields or event-resolved distributions for humidity-illumination covariance; compare joint-data model with independently shuffled marginals.
+Unverified title-derived mechanism hint: heterogeneity / joint distribution. Measure paired local fields or event-resolved distributions for humidity-illumination covariance; compare joint-data model with independently shuffled marginals.
 Candidate construction: Add a measured joint-distribution statistic, not a free coefficient; derive aggregate response by averaging the local law and quantify the residual.
 Garden graph: THING=physical components; TIME=trajectory; SPACE=physical domain; EVENT=state transition; ACTION=controlled perturbation where applicable; AGENCY=experimenter/controller only; RULE=physical conservation; VALUE=declared performance measure; CONTEXT=experimental conditions; CLAIM=testable mechanism. Applicable edges: partOf, dependsOn, contextualizes, derivedFrom, supports/contradicts; use causes only after causal identification.
 Seven forms: CONSTRUCT=system; CONTRACT=units/domain; STATE=measured and hidden variables; RELATION=typed dependencies; PROCESS=state evolution; RULE=physical constraints; PROJECTION=baseline observable.
@@ -730,7 +773,7 @@ Evidence: CANDIDATE; domain-specific equation contract INCOMPLETE; numerical res
 050. Solar cells — contact ageing kinetics
 Existing reference model: drift–diffusion photovoltaic model; primary observable: carrier recombination rate.
 Observed/latent variable to examine: contact ageing kinetics.
-Mechanism diagnosis: network / geometry. Image or reconstruct the evolving contact/connection graph underlying contact ageing kinetics; hold aggregate counts fixed while varying graph statistics.
+Unverified title-derived mechanism hint: network / geometry. Image or reconstruct the evolving contact/connection graph underlying contact ageing kinetics; hold aggregate counts fixed while varying graph statistics.
 Candidate construction: Represent adjacency/connectivity explicitly; project to a minimal measurable graph statistic and check whether equal aggregate states have different futures.
 Garden graph: THING=physical components; TIME=trajectory; SPACE=physical domain; EVENT=state transition; ACTION=controlled perturbation where applicable; AGENCY=experimenter/controller only; RULE=physical conservation; VALUE=declared performance measure; CONTEXT=experimental conditions; CLAIM=testable mechanism. Applicable edges: partOf, dependsOn, contextualizes, derivedFrom, supports/contradicts; use causes only after causal identification.
 Seven forms: CONSTRUCT=system; CONTRACT=units/domain; STATE=measured and hidden variables; RELATION=typed dependencies; PROCESS=state evolution; RULE=physical constraints; PROJECTION=baseline observable.
@@ -741,7 +784,7 @@ Evidence: CANDIDATE; domain-specific equation contract INCOMPLETE; numerical res
 051. Photosynthesis — dynamic disorder correlation
 Existing reference model: exciton transport / trapping; primary observable: reaction-center capture yield.
 Observed/latent variable to examine: dynamic disorder correlation.
-Mechanism diagnosis: heterogeneity / joint distribution. Measure paired local fields or event-resolved distributions for dynamic disorder correlation; compare joint-data model with independently shuffled marginals.
+Unverified title-derived mechanism hint: heterogeneity / joint distribution. Measure paired local fields or event-resolved distributions for dynamic disorder correlation; compare joint-data model with independently shuffled marginals.
 Candidate construction: Add a measured joint-distribution statistic, not a free coefficient; derive aggregate response by averaging the local law and quantify the residual.
 Garden graph: THING=physical components; TIME=trajectory; SPACE=physical domain; EVENT=state transition; ACTION=controlled perturbation where applicable; AGENCY=experimenter/controller only; RULE=physical conservation; VALUE=declared performance measure; CONTEXT=experimental conditions; CLAIM=testable mechanism. Applicable edges: partOf, dependsOn, contextualizes, derivedFrom, supports/contradicts; use causes only after causal identification.
 Seven forms: CONSTRUCT=system; CONTRACT=units/domain; STATE=measured and hidden variables; RELATION=typed dependencies; PROCESS=state evolution; RULE=physical constraints; PROJECTION=baseline observable.
@@ -752,9 +795,8 @@ Evidence: CANDIDATE; domain-specific equation contract INCOMPLETE; numerical res
 052. Photosynthesis — reaction-center occupancy feedback
 Existing reference model: exciton transport / trapping; primary observable: reaction-center capture yield.
 Observed/latent variable to examine: reaction-center occupancy feedback.
-Mechanism diagnosis: coupled latent kinetics. Measure the candidate intermediate state for reaction-center occupancy feedback during perturbation/recovery; test whether it predicts held-out transients beyond baseline variables.
-Candidate construction: Introduce a measurable intermediate and couple it by mass/energy-balanced rate equations; test observability and parameter identifiability.
-Garden graph: THING=physical components; TIME=trajectory; SPACE=physical domain; EVENT=state transition; ACTION=controlled perturbation where applicable; AGENCY=experimenter/controller only; RULE=physical conservation; VALUE=declared performance measure; CONTEXT=experimental conditions; CLAIM=testable mechanism. Applicable edges: partOf, dependsOn, contextualizes, derivedFrom, supports/contradicts; use causes only after causal identification.
+Unverified title-derived mechanism hint: coupled latent kinetics. Measure the candidate intermediate state for reaction-center occupancy feedback during perturbation/recovery; test whether it predicts held-out transients beyond baseline variables.
+Candidate construction: Introduce a measurable intermediate and couple it by mass/energy-balanced rate equations; test observability and parameter identifiability.Garden graph: THING=physical components; TIME=trajectory; SPACE=physical domain; EVENT=state transition; ACTION=controlled perturbation where applicable; AGENCY=experimenter/controller only; RULE=physical conservation; VALUE=declared performance measure; CONTEXT=experimental conditions; CLAIM=testable mechanism. Applicable edges: partOf, dependsOn, contextualizes, derivedFrom, supports/contradicts; use causes only after causal identification.
 Seven forms: CONSTRUCT=system; CONTRACT=units/domain; STATE=measured and hidden variables; RELATION=typed dependencies; PROCESS=state evolution; RULE=physical constraints; PROJECTION=baseline observable.
 Falsification protocol: Measure the candidate intermediate state for reaction-center occupancy feedback during perturbation/recovery; test whether it predicts held-out transients beyond baseline variables. Fit extension and strong modern reference model on training experiments; compare blinded held-out predictive likelihood/error under matched complexity and budget. If no robust improvement, reject the increment.
 Benefit if validated: artificial photosynthesis.
@@ -763,7 +805,7 @@ Evidence: CANDIDATE; domain-specific equation contract INCOMPLETE; numerical res
 053. Photosynthesis — vibrational mode intermittency
 Existing reference model: exciton transport / trapping; primary observable: reaction-center capture yield.
 Observed/latent variable to examine: vibrational mode intermittency.
-Mechanism diagnosis: heterogeneity / joint distribution. Measure paired local fields or event-resolved distributions for vibrational mode intermittency; compare joint-data model with independently shuffled marginals.
+Unverified title-derived mechanism hint: heterogeneity / joint distribution. Measure paired local fields or event-resolved distributions for vibrational mode intermittency; compare joint-data model with independently shuffled marginals.
 Candidate construction: Add a measured joint-distribution statistic, not a free coefficient; derive aggregate response by averaging the local law and quantify the residual.
 Garden graph: THING=physical components; TIME=trajectory; SPACE=physical domain; EVENT=state transition; ACTION=controlled perturbation where applicable; AGENCY=experimenter/controller only; RULE=physical conservation; VALUE=declared performance measure; CONTEXT=experimental conditions; CLAIM=testable mechanism. Applicable edges: partOf, dependsOn, contextualizes, derivedFrom, supports/contradicts; use causes only after causal identification.
 Seven forms: CONSTRUCT=system; CONTRACT=units/domain; STATE=measured and hidden variables; RELATION=typed dependencies; PROCESS=state evolution; RULE=physical constraints; PROJECTION=baseline observable.
@@ -774,7 +816,7 @@ Evidence: CANDIDATE; domain-specific equation contract INCOMPLETE; numerical res
 054. Photosynthesis — antenna topology adaptation
 Existing reference model: exciton transport / trapping; primary observable: reaction-center capture yield.
 Observed/latent variable to examine: antenna topology adaptation.
-Mechanism diagnosis: network / geometry. Image or reconstruct the evolving contact/connection graph underlying antenna topology adaptation; hold aggregate counts fixed while varying graph statistics.
+Unverified title-derived mechanism hint: network / geometry. Image or reconstruct the evolving contact/connection graph underlying antenna topology adaptation; hold aggregate counts fixed while varying graph statistics.
 Candidate construction: Represent adjacency/connectivity explicitly; project to a minimal measurable graph statistic and check whether equal aggregate states have different futures.
 Garden graph: THING=physical components; TIME=trajectory; SPACE=physical domain; EVENT=state transition; ACTION=controlled perturbation where applicable; AGENCY=experimenter/controller only; RULE=physical conservation; VALUE=declared performance measure; CONTEXT=experimental conditions; CLAIM=testable mechanism. Applicable edges: partOf, dependsOn, contextualizes, derivedFrom, supports/contradicts; use causes only after causal identification.
 Seven forms: CONSTRUCT=system; CONTRACT=units/domain; STATE=measured and hidden variables; RELATION=typed dependencies; PROCESS=state evolution; RULE=physical constraints; PROJECTION=baseline observable.
@@ -785,7 +827,7 @@ Evidence: CANDIDATE; domain-specific equation contract INCOMPLETE; numerical res
 055. Photosynthesis — nonphotochemical quenching memory
 Existing reference model: exciton transport / trapping; primary observable: reaction-center capture yield.
 Observed/latent variable to examine: nonphotochemical quenching memory.
-Mechanism diagnosis: dynamic hidden state / delay. Use matched present-state trajectories with different prior forcing histories for nonphotochemical quenching memory; check whether their subsequent responses diverge.
+Unverified title-derived mechanism hint: dynamic hidden state / delay. Use matched present-state trajectories with different prior forcing histories for nonphotochemical quenching memory; check whether their subsequent responses diverge.
 Candidate construction: Introduce a physically measured relaxing state or convolution kernel; estimate its timescale from perturbation data, not arbitrary fitting.
 Garden graph: THING=physical components; TIME=trajectory; SPACE=physical domain; EVENT=state transition; ACTION=controlled perturbation where applicable; AGENCY=experimenter/controller only; RULE=physical conservation; VALUE=declared performance measure; CONTEXT=experimental conditions; CLAIM=testable mechanism. Applicable edges: partOf, dependsOn, contextualizes, derivedFrom, supports/contradicts; use causes only after causal identification.
 Seven forms: CONSTRUCT=system; CONTRACT=units/domain; STATE=measured and hidden variables; RELATION=typed dependencies; PROCESS=state evolution; RULE=physical constraints; PROJECTION=baseline observable.
@@ -796,7 +838,7 @@ Evidence: CANDIDATE; domain-specific equation contract INCOMPLETE; numerical res
 056. Neuroscience — phase-lag memory
 Existing reference model: neural mass / firing-rate model; primary observable: population response.
 Observed/latent variable to examine: phase-lag memory.
-Mechanism diagnosis: state switching / hysteresis. Cycle the driving variable in both directions and record branch-dependent response for phase-lag memory; test whether a single-valued constitutive law fails.
+Unverified title-derived mechanism hint: state switching / hysteresis. Cycle the driving variable in both directions and record branch-dependent response for phase-lag memory; test whether a single-valued constitutive law fails.
 Candidate construction: Introduce a branch/state variable with experimentally constrained transition rules; verify return-point and cycling behavior only if observed.
 Garden graph: THING=physical components; TIME=trajectory; SPACE=physical domain; EVENT=state transition; ACTION=controlled perturbation where applicable; AGENCY=experimenter/controller only; RULE=physical conservation; VALUE=declared performance measure; CONTEXT=experimental conditions; CLAIM=testable mechanism. Applicable edges: partOf, dependsOn, contextualizes, derivedFrom, supports/contradicts; use causes only after causal identification.
 Seven forms: CONSTRUCT=system; CONTRACT=units/domain; STATE=measured and hidden variables; RELATION=typed dependencies; PROCESS=state evolution; RULE=physical constraints; PROJECTION=baseline observable.
@@ -807,7 +849,7 @@ Evidence: CANDIDATE; domain-specific equation contract INCOMPLETE; numerical res
 057. Neuroscience — cell-type interaction topology
 Existing reference model: neural mass / firing-rate model; primary observable: population response.
 Observed/latent variable to examine: cell-type interaction topology.
-Mechanism diagnosis: network / geometry. Image or reconstruct the evolving contact/connection graph underlying cell-type interaction topology; hold aggregate counts fixed while varying graph statistics.
+Unverified title-derived mechanism hint: network / geometry. Image or reconstruct the evolving contact/connection graph underlying cell-type interaction topology; hold aggregate counts fixed while varying graph statistics.
 Candidate construction: Represent adjacency/connectivity explicitly; project to a minimal measurable graph statistic and check whether equal aggregate states have different futures.
 Garden graph: THING=physical components; TIME=trajectory; SPACE=physical domain; EVENT=state transition; ACTION=controlled perturbation where applicable; AGENCY=experimenter/controller only; RULE=physical conservation; VALUE=declared performance measure; CONTEXT=experimental conditions; CLAIM=testable mechanism. Applicable edges: partOf, dependsOn, contextualizes, derivedFrom, supports/contradicts; use causes only after causal identification.
 Seven forms: CONSTRUCT=system; CONTRACT=units/domain; STATE=measured and hidden variables; RELATION=typed dependencies; PROCESS=state evolution; RULE=physical constraints; PROJECTION=baseline observable.
@@ -818,7 +860,7 @@ Evidence: CANDIDATE; domain-specific equation contract INCOMPLETE; numerical res
 058. Neuroscience — adaptation-state retention
 Existing reference model: neural mass / firing-rate model; primary observable: population response.
 Observed/latent variable to examine: adaptation-state retention.
-Mechanism diagnosis: dynamic hidden state / delay. Use matched present-state trajectories with different prior forcing histories for adaptation-state retention; check whether their subsequent responses diverge.
+Unverified title-derived mechanism hint: dynamic hidden state / delay. Use matched present-state trajectories with different prior forcing histories for adaptation-state retention; check whether their subsequent responses diverge.
 Candidate construction: Introduce a physically measured relaxing state or convolution kernel; estimate its timescale from perturbation data, not arbitrary fitting.
 Garden graph: THING=physical components; TIME=trajectory; SPACE=physical domain; EVENT=state transition; ACTION=controlled perturbation where applicable; AGENCY=experimenter/controller only; RULE=physical conservation; VALUE=declared performance measure; CONTEXT=experimental conditions; CLAIM=testable mechanism. Applicable edges: partOf, dependsOn, contextualizes, derivedFrom, supports/contradicts; use causes only after causal identification.
 Seven forms: CONSTRUCT=system; CONTRACT=units/domain; STATE=measured and hidden variables; RELATION=typed dependencies; PROCESS=state evolution; RULE=physical constraints; PROJECTION=baseline observable.
@@ -829,7 +871,7 @@ Evidence: CANDIDATE; domain-specific equation contract INCOMPLETE; numerical res
 059. Neuroscience — dendritic compartment coupling
 Existing reference model: neural mass / firing-rate model; primary observable: population response.
 Observed/latent variable to examine: dendritic compartment coupling.
-Mechanism diagnosis: coupled latent kinetics. Measure the candidate intermediate state for dendritic compartment coupling during perturbation/recovery; test whether it predicts held-out transients beyond baseline variables.
+Unverified title-derived mechanism hint: coupled latent kinetics. Measure the candidate intermediate state for dendritic compartment coupling during perturbation/recovery; test whether it predicts held-out transients beyond baseline variables.
 Candidate construction: Introduce a measurable intermediate and couple it by mass/energy-balanced rate equations; test observability and parameter identifiability.
 Garden graph: THING=physical components; TIME=trajectory; SPACE=physical domain; EVENT=state transition; ACTION=controlled perturbation where applicable; AGENCY=experimenter/controller only; RULE=physical conservation; VALUE=declared performance measure; CONTEXT=experimental conditions; CLAIM=testable mechanism. Applicable edges: partOf, dependsOn, contextualizes, derivedFrom, supports/contradicts; use causes only after causal identification.
 Seven forms: CONSTRUCT=system; CONTRACT=units/domain; STATE=measured and hidden variables; RELATION=typed dependencies; PROCESS=state evolution; RULE=physical constraints; PROJECTION=baseline observable.
@@ -840,7 +882,7 @@ Evidence: CANDIDATE; domain-specific equation contract INCOMPLETE; numerical res
 060. Neuroscience — glial metabolic feedback
 Existing reference model: neural mass / firing-rate model; primary observable: population response.
 Observed/latent variable to examine: glial metabolic feedback.
-Mechanism diagnosis: coupled latent kinetics. Measure the candidate intermediate state for glial metabolic feedback during perturbation/recovery; test whether it predicts held-out transients beyond baseline variables.
+Unverified title-derived mechanism hint: coupled latent kinetics. Measure the candidate intermediate state for glial metabolic feedback during perturbation/recovery; test whether it predicts held-out transients beyond baseline variables.
 Candidate construction: Introduce a measurable intermediate and couple it by mass/energy-balanced rate equations; test observability and parameter identifiability.
 Garden graph: THING=physical components; TIME=trajectory; SPACE=physical domain; EVENT=state transition; ACTION=controlled perturbation where applicable; AGENCY=experimenter/controller only; RULE=physical conservation; VALUE=declared performance measure; CONTEXT=experimental conditions; CLAIM=testable mechanism. Applicable edges: partOf, dependsOn, contextualizes, derivedFrom, supports/contradicts; use causes only after causal identification.
 Seven forms: CONSTRUCT=system; CONTRACT=units/domain; STATE=measured and hidden variables; RELATION=typed dependencies; PROCESS=state evolution; RULE=physical constraints; PROJECTION=baseline observable.
@@ -851,7 +893,7 @@ Evidence: CANDIDATE; domain-specific equation contract INCOMPLETE; numerical res
 061. Pharmacokinetics — transporter saturation history
 Existing reference model: compartment PK model; primary observable: tissue drug concentration.
 Observed/latent variable to examine: transporter saturation history.
-Mechanism diagnosis: dynamic hidden state / delay. Use matched present-state trajectories with different prior forcing histories for transporter saturation history; check whether their subsequent responses diverge.
+Unverified title-derived mechanism hint: dynamic hidden state / delay. Use matched present-state trajectories with different prior forcing histories for transporter saturation history; check whether their subsequent responses diverge.
 Candidate construction: Introduce a physically measured relaxing state or convolution kernel; estimate its timescale from perturbation data, not arbitrary fitting.
 Garden graph: THING=physical components; TIME=trajectory; SPACE=physical domain; EVENT=state transition; ACTION=controlled perturbation where applicable; AGENCY=experimenter/controller only; RULE=physical conservation; VALUE=declared performance measure; CONTEXT=experimental conditions; CLAIM=testable mechanism. Applicable edges: partOf, dependsOn, contextualizes, derivedFrom, supports/contradicts; use causes only after causal identification.
 Seven forms: CONSTRUCT=system; CONTRACT=units/domain; STATE=measured and hidden variables; RELATION=typed dependencies; PROCESS=state evolution; RULE=physical constraints; PROJECTION=baseline observable.
@@ -862,7 +904,7 @@ Evidence: CANDIDATE; domain-specific equation contract INCOMPLETE; numerical res
 062. Pharmacokinetics — protein-binding displacement lag
 Existing reference model: compartment PK model; primary observable: tissue drug concentration.
 Observed/latent variable to examine: protein-binding displacement lag.
-Mechanism diagnosis: dynamic hidden state / delay. Use matched present-state trajectories with different prior forcing histories for protein-binding displacement lag; check whether their subsequent responses diverge.
+Unverified title-derived mechanism hint: dynamic hidden state / delay. Use matched present-state trajectories with different prior forcing histories for protein-binding displacement lag; check whether their subsequent responses diverge.
 Candidate construction: Introduce a physically measured relaxing state or convolution kernel; estimate its timescale from perturbation data, not arbitrary fitting.
 Garden graph: THING=physical components; TIME=trajectory; SPACE=physical domain; EVENT=state transition; ACTION=controlled perturbation where applicable; AGENCY=experimenter/controller only; RULE=physical conservation; VALUE=declared performance measure; CONTEXT=experimental conditions; CLAIM=testable mechanism. Applicable edges: partOf, dependsOn, contextualizes, derivedFrom, supports/contradicts; use causes only after causal identification.
 Seven forms: CONSTRUCT=system; CONTRACT=units/domain; STATE=measured and hidden variables; RELATION=typed dependencies; PROCESS=state evolution; RULE=physical constraints; PROJECTION=baseline observable.
@@ -873,7 +915,7 @@ Evidence: CANDIDATE; domain-specific equation contract INCOMPLETE; numerical res
 063. Pharmacokinetics — organ perfusion covariance
 Existing reference model: compartment PK model; primary observable: tissue drug concentration.
 Observed/latent variable to examine: organ perfusion covariance.
-Mechanism diagnosis: heterogeneity / joint distribution. Measure paired local fields or event-resolved distributions for organ perfusion covariance; compare joint-data model with independently shuffled marginals.
+Unverified title-derived mechanism hint: heterogeneity / joint distribution. Measure paired local fields or event-resolved distributions for organ perfusion covariance; compare joint-data model with independently shuffled marginals.
 Candidate construction: Add a measured joint-distribution statistic, not a free coefficient; derive aggregate response by averaging the local law and quantify the residual.
 Garden graph: THING=physical components; TIME=trajectory; SPACE=physical domain; EVENT=state transition; ACTION=controlled perturbation where applicable; AGENCY=experimenter/controller only; RULE=physical conservation; VALUE=declared performance measure; CONTEXT=experimental conditions; CLAIM=testable mechanism. Applicable edges: partOf, dependsOn, contextualizes, derivedFrom, supports/contradicts; use causes only after causal identification.
 Seven forms: CONSTRUCT=system; CONTRACT=units/domain; STATE=measured and hidden variables; RELATION=typed dependencies; PROCESS=state evolution; RULE=physical constraints; PROJECTION=baseline observable.
@@ -884,7 +926,7 @@ Evidence: CANDIDATE; domain-specific equation contract INCOMPLETE; numerical res
 064. Pharmacokinetics — intracellular sequestration memory
 Existing reference model: compartment PK model; primary observable: tissue drug concentration.
 Observed/latent variable to examine: intracellular sequestration memory.
-Mechanism diagnosis: dynamic hidden state / delay. Use matched present-state trajectories with different prior forcing histories for intracellular sequestration memory; check whether their subsequent responses diverge.
+Unverified title-derived mechanism hint: dynamic hidden state / delay. Use matched present-state trajectories with different prior forcing histories for intracellular sequestration memory; check whether their subsequent responses diverge.
 Candidate construction: Introduce a physically measured relaxing state or convolution kernel; estimate its timescale from perturbation data, not arbitrary fitting.
 Garden graph: THING=physical components; TIME=trajectory; SPACE=physical domain; EVENT=state transition; ACTION=controlled perturbation where applicable; AGENCY=experimenter/controller only; RULE=physical conservation; VALUE=declared performance measure; CONTEXT=experimental conditions; CLAIM=testable mechanism. Applicable edges: partOf, dependsOn, contextualizes, derivedFrom, supports/contradicts; use causes only after causal identification.
 Seven forms: CONSTRUCT=system; CONTRACT=units/domain; STATE=measured and hidden variables; RELATION=typed dependencies; PROCESS=state evolution; RULE=physical constraints; PROJECTION=baseline observable.
@@ -895,7 +937,8 @@ Evidence: CANDIDATE; domain-specific equation contract INCOMPLETE; numerical res
 065. Pharmacokinetics — circadian clearance state
 Existing reference model: compartment PK model; primary observable: tissue drug concentration.
 Observed/latent variable to examine: circadian clearance state.
-Mechanism diagnosis: coupled latent kinetics. Measure the candidate intermediate state for circadian clearance state during perturbation/recovery; test whether it predicts held-out transients beyond baseline variables.Candidate construction: Introduce a measurable intermediate and couple it by mass/energy-balanced rate equations; test observability and parameter identifiability.
+Unverified title-derived mechanism hint: coupled latent kinetics. Measure the candidate intermediate state for circadian clearance state during perturbation/recovery; test whether it predicts held-out transients beyond baseline variables.
+Candidate construction: Introduce a measurable intermediate and couple it by mass/energy-balanced rate equations; test observability and parameter identifiability.
 Garden graph: THING=physical components; TIME=trajectory; SPACE=physical domain; EVENT=state transition; ACTION=controlled perturbation where applicable; AGENCY=experimenter/controller only; RULE=physical conservation; VALUE=declared performance measure; CONTEXT=experimental conditions; CLAIM=testable mechanism. Applicable edges: partOf, dependsOn, contextualizes, derivedFrom, supports/contradicts; use causes only after causal identification.
 Seven forms: CONSTRUCT=system; CONTRACT=units/domain; STATE=measured and hidden variables; RELATION=typed dependencies; PROCESS=state evolution; RULE=physical constraints; PROJECTION=baseline observable.
 Falsification protocol: Measure the candidate intermediate state for circadian clearance state during perturbation/recovery; test whether it predicts held-out transients beyond baseline variables. Fit extension and strong modern reference model on training experiments; compare blinded held-out predictive likelihood/error under matched complexity and budget. If no robust improvement, reject the increment.
@@ -905,7 +948,7 @@ Evidence: CANDIDATE; domain-specific equation contract INCOMPLETE; numerical res
 066. Ecology — interaction-network rewiring
 Existing reference model: Lotka–Volterra dynamics; primary observable: population growth rate.
 Observed/latent variable to examine: interaction-network rewiring.
-Mechanism diagnosis: network / geometry. Image or reconstruct the evolving contact/connection graph underlying interaction-network rewiring; hold aggregate counts fixed while varying graph statistics.
+Unverified title-derived mechanism hint: network / geometry. Image or reconstruct the evolving contact/connection graph underlying interaction-network rewiring; hold aggregate counts fixed while varying graph statistics.
 Candidate construction: Represent adjacency/connectivity explicitly; project to a minimal measurable graph statistic and check whether equal aggregate states have different futures.
 Garden graph: THING=physical components; TIME=trajectory; SPACE=physical domain; EVENT=state transition; ACTION=controlled perturbation where applicable; AGENCY=experimenter/controller only; RULE=physical conservation; VALUE=declared performance measure; CONTEXT=experimental conditions; CLAIM=testable mechanism. Applicable edges: partOf, dependsOn, contextualizes, derivedFrom, supports/contradicts; use causes only after causal identification.
 Seven forms: CONSTRUCT=system; CONTRACT=units/domain; STATE=measured and hidden variables; RELATION=typed dependencies; PROCESS=state evolution; RULE=physical constraints; PROJECTION=baseline observable.
@@ -916,7 +959,7 @@ Evidence: CANDIDATE; domain-specific equation contract INCOMPLETE; numerical res
 067. Ecology — seed-bank recovery memory
 Existing reference model: Lotka–Volterra dynamics; primary observable: population growth rate.
 Observed/latent variable to examine: seed-bank recovery memory.
-Mechanism diagnosis: dynamic hidden state / delay. Use matched present-state trajectories with different prior forcing histories for seed-bank recovery memory; check whether their subsequent responses diverge.
+Unverified title-derived mechanism hint: dynamic hidden state / delay. Use matched present-state trajectories with different prior forcing histories for seed-bank recovery memory; check whether their subsequent responses diverge.
 Candidate construction: Introduce a physically measured relaxing state or convolution kernel; estimate its timescale from perturbation data, not arbitrary fitting.
 Garden graph: THING=physical components; TIME=trajectory; SPACE=physical domain; EVENT=state transition; ACTION=controlled perturbation where applicable; AGENCY=experimenter/controller only; RULE=physical conservation; VALUE=declared performance measure; CONTEXT=experimental conditions; CLAIM=testable mechanism. Applicable edges: partOf, dependsOn, contextualizes, derivedFrom, supports/contradicts; use causes only after causal identification.
 Seven forms: CONSTRUCT=system; CONTRACT=units/domain; STATE=measured and hidden variables; RELATION=typed dependencies; PROCESS=state evolution; RULE=physical constraints; PROJECTION=baseline observable.
@@ -927,7 +970,7 @@ Evidence: CANDIDATE; domain-specific equation contract INCOMPLETE; numerical res
 068. Ecology — spatial refuge connectivity
 Existing reference model: Lotka–Volterra dynamics; primary observable: population growth rate.
 Observed/latent variable to examine: spatial refuge connectivity.
-Mechanism diagnosis: network / geometry. Image or reconstruct the evolving contact/connection graph underlying spatial refuge connectivity; hold aggregate counts fixed while varying graph statistics.
+Unverified title-derived mechanism hint: network / geometry. Image or reconstruct the evolving contact/connection graph underlying spatial refuge connectivity; hold aggregate counts fixed while varying graph statistics.
 Candidate construction: Represent adjacency/connectivity explicitly; project to a minimal measurable graph statistic and check whether equal aggregate states have different futures.
 Garden graph: THING=physical components; TIME=trajectory; SPACE=physical domain; EVENT=state transition; ACTION=controlled perturbation where applicable; AGENCY=experimenter/controller only; RULE=physical conservation; VALUE=declared performance measure; CONTEXT=experimental conditions; CLAIM=testable mechanism. Applicable edges: partOf, dependsOn, contextualizes, derivedFrom, supports/contradicts; use causes only after causal identification.
 Seven forms: CONSTRUCT=system; CONTRACT=units/domain; STATE=measured and hidden variables; RELATION=typed dependencies; PROCESS=state evolution; RULE=physical constraints; PROJECTION=baseline observable.
@@ -938,7 +981,7 @@ Evidence: CANDIDATE; domain-specific equation contract INCOMPLETE; numerical res
 069. Ecology — predator-switching lag
 Existing reference model: Lotka–Volterra dynamics; primary observable: population growth rate.
 Observed/latent variable to examine: predator-switching lag.
-Mechanism diagnosis: state switching / hysteresis. Cycle the driving variable in both directions and record branch-dependent response for predator-switching lag; test whether a single-valued constitutive law fails.
+Unverified title-derived mechanism hint: state switching / hysteresis. Cycle the driving variable in both directions and record branch-dependent response for predator-switching lag; test whether a single-valued constitutive law fails.
 Candidate construction: Introduce a branch/state variable with experimentally constrained transition rules; verify return-point and cycling behavior only if observed.
 Garden graph: THING=physical components; TIME=trajectory; SPACE=physical domain; EVENT=state transition; ACTION=controlled perturbation where applicable; AGENCY=experimenter/controller only; RULE=physical conservation; VALUE=declared performance measure; CONTEXT=experimental conditions; CLAIM=testable mechanism. Applicable edges: partOf, dependsOn, contextualizes, derivedFrom, supports/contradicts; use causes only after causal identification.
 Seven forms: CONSTRUCT=system; CONTRACT=units/domain; STATE=measured and hidden variables; RELATION=typed dependencies; PROCESS=state evolution; RULE=physical constraints; PROJECTION=baseline observable.
@@ -949,7 +992,7 @@ Evidence: CANDIDATE; domain-specific equation contract INCOMPLETE; numerical res
 070. Ecology — nutrient feedback delay
 Existing reference model: Lotka–Volterra dynamics; primary observable: population growth rate.
 Observed/latent variable to examine: nutrient feedback delay.
-Mechanism diagnosis: dynamic hidden state / delay. Use matched present-state trajectories with different prior forcing histories for nutrient feedback delay; check whether their subsequent responses diverge.
+Unverified title-derived mechanism hint: dynamic hidden state / delay. Use matched present-state trajectories with different prior forcing histories for nutrient feedback delay; check whether their subsequent responses diverge.
 Candidate construction: Introduce a physically measured relaxing state or convolution kernel; estimate its timescale from perturbation data, not arbitrary fitting.
 Garden graph: THING=physical components; TIME=trajectory; SPACE=physical domain; EVENT=state transition; ACTION=controlled perturbation where applicable; AGENCY=experimenter/controller only; RULE=physical conservation; VALUE=declared performance measure; CONTEXT=experimental conditions; CLAIM=testable mechanism. Applicable edges: partOf, dependsOn, contextualizes, derivedFrom, supports/contradicts; use causes only after causal identification.
 Seven forms: CONSTRUCT=system; CONTRACT=units/domain; STATE=measured and hidden variables; RELATION=typed dependencies; PROCESS=state evolution; RULE=physical constraints; PROJECTION=baseline observable.
@@ -960,7 +1003,7 @@ Evidence: CANDIDATE; domain-specific equation contract INCOMPLETE; numerical res
 071. Epidemiology — contact-network memory
 Existing reference model: SIR / SEIR compartments; primary observable: incidence rate.
 Observed/latent variable to examine: contact-network memory.
-Mechanism diagnosis: network / geometry. Image or reconstruct the evolving contact/connection graph underlying contact-network memory; hold aggregate counts fixed while varying graph statistics.
+Unverified title-derived mechanism hint: network / geometry. Image or reconstruct the evolving contact/connection graph underlying contact-network memory; hold aggregate counts fixed while varying graph statistics.
 Candidate construction: Represent adjacency/connectivity explicitly; project to a minimal measurable graph statistic and check whether equal aggregate states have different futures.
 Garden graph: THING=physical components; TIME=trajectory; SPACE=physical domain; EVENT=state transition; ACTION=controlled perturbation where applicable; AGENCY=experimenter/controller only; RULE=physical conservation; VALUE=declared performance measure; CONTEXT=experimental conditions; CLAIM=testable mechanism. Applicable edges: partOf, dependsOn, contextualizes, derivedFrom, supports/contradicts; use causes only after causal identification.
 Seven forms: CONSTRUCT=system; CONTRACT=units/domain; STATE=measured and hidden variables; RELATION=typed dependencies; PROCESS=state evolution; RULE=physical constraints; PROJECTION=baseline observable.
@@ -971,7 +1014,7 @@ Evidence: CANDIDATE; domain-specific equation contract INCOMPLETE; numerical res
 072. Epidemiology — infection-age infectiousness
 Existing reference model: SIR / SEIR compartments; primary observable: incidence rate.
 Observed/latent variable to examine: infection-age infectiousness.
-Mechanism diagnosis: mechanism unresolved — requires domain diagnostics. Collect perturbation-response measurements for infection-age infectiousness; identify residual structure before selecting an extension.
+Unverified title-derived mechanism hint: mechanism unresolved — requires domain diagnostics. Collect perturbation-response measurements for infection-age infectiousness; identify residual structure before selecting an extension.
 Candidate construction: Do not choose a mechanism before observing structured residuals; record an unresolved research question.
 Garden graph: THING=physical components; TIME=trajectory; SPACE=physical domain; EVENT=state transition; ACTION=controlled perturbation where applicable; AGENCY=experimenter/controller only; RULE=physical conservation; VALUE=declared performance measure; CONTEXT=experimental conditions; CLAIM=testable mechanism. Applicable edges: partOf, dependsOn, contextualizes, derivedFrom, supports/contradicts; use causes only after causal identification.
 Seven forms: CONSTRUCT=system; CONTRACT=units/domain; STATE=measured and hidden variables; RELATION=typed dependencies; PROCESS=state evolution; RULE=physical constraints; PROJECTION=baseline observable.
@@ -982,7 +1025,7 @@ Evidence: CANDIDATE; domain-specific equation contract INCOMPLETE; numerical res
 073. Epidemiology — regional mixing covariance
 Existing reference model: SIR / SEIR compartments; primary observable: incidence rate.
 Observed/latent variable to examine: regional mixing covariance.
-Mechanism diagnosis: heterogeneity / joint distribution. Measure paired local fields or event-resolved distributions for regional mixing covariance; compare joint-data model with independently shuffled marginals.
+Unverified title-derived mechanism hint: heterogeneity / joint distribution. Measure paired local fields or event-resolved distributions for regional mixing covariance; compare joint-data model with independently shuffled marginals.
 Candidate construction: Add a measured joint-distribution statistic, not a free coefficient; derive aggregate response by averaging the local law and quantify the residual.
 Garden graph: THING=physical components; TIME=trajectory; SPACE=physical domain; EVENT=state transition; ACTION=controlled perturbation where applicable; AGENCY=experimenter/controller only; RULE=physical conservation; VALUE=declared performance measure; CONTEXT=experimental conditions; CLAIM=testable mechanism. Applicable edges: partOf, dependsOn, contextualizes, derivedFrom, supports/contradicts; use causes only after causal identification.
 Seven forms: CONSTRUCT=system; CONTRACT=units/domain; STATE=measured and hidden variables; RELATION=typed dependencies; PROCESS=state evolution; RULE=physical constraints; PROJECTION=baseline observable.
@@ -993,7 +1036,7 @@ Evidence: CANDIDATE; domain-specific equation contract INCOMPLETE; numerical res
 074. Epidemiology — behavioral response lag
 Existing reference model: SIR / SEIR compartments; primary observable: incidence rate.
 Observed/latent variable to examine: behavioral response lag.
-Mechanism diagnosis: dynamic hidden state / delay. Use matched present-state trajectories with different prior forcing histories for behavioral response lag; check whether their subsequent responses diverge.
+Unverified title-derived mechanism hint: dynamic hidden state / delay. Use matched present-state trajectories with different prior forcing histories for behavioral response lag; check whether their subsequent responses diverge.
 Candidate construction: Introduce a physically measured relaxing state or convolution kernel; estimate its timescale from perturbation data, not arbitrary fitting.
 Garden graph: THING=physical components; TIME=trajectory; SPACE=physical domain; EVENT=state transition; ACTION=controlled perturbation where applicable; AGENCY=experimenter/controller only; RULE=physical conservation; VALUE=declared performance measure; CONTEXT=experimental conditions; CLAIM=testable mechanism. Applicable edges: partOf, dependsOn, contextualizes, derivedFrom, supports/contradicts; use causes only after causal identification.
 Seven forms: CONSTRUCT=system; CONTRACT=units/domain; STATE=measured and hidden variables; RELATION=typed dependencies; PROCESS=state evolution; RULE=physical constraints; PROJECTION=baseline observable.
@@ -1004,7 +1047,7 @@ Evidence: CANDIDATE; domain-specific equation contract INCOMPLETE; numerical res
 075. Epidemiology — immunity heterogeneity topology
 Existing reference model: SIR / SEIR compartments; primary observable: incidence rate.
 Observed/latent variable to examine: immunity heterogeneity topology.
-Mechanism diagnosis: heterogeneity / joint distribution. Measure paired local fields or event-resolved distributions for immunity heterogeneity topology; compare joint-data model with independently shuffled marginals.
+Unverified title-derived mechanism hint: heterogeneity / joint distribution. Measure paired local fields or event-resolved distributions for immunity heterogeneity topology; compare joint-data model with independently shuffled marginals.
 Candidate construction: Add a measured joint-distribution statistic, not a free coefficient; derive aggregate response by averaging the local law and quantify the residual.
 Garden graph: THING=physical components; TIME=trajectory; SPACE=physical domain; EVENT=state transition; ACTION=controlled perturbation where applicable; AGENCY=experimenter/controller only; RULE=physical conservation; VALUE=declared performance measure; CONTEXT=experimental conditions; CLAIM=testable mechanism. Applicable edges: partOf, dependsOn, contextualizes, derivedFrom, supports/contradicts; use causes only after causal identification.
 Seven forms: CONSTRUCT=system; CONTRACT=units/domain; STATE=measured and hidden variables; RELATION=typed dependencies; PROCESS=state evolution; RULE=physical constraints; PROJECTION=baseline observable.
@@ -1015,7 +1058,7 @@ Evidence: CANDIDATE; domain-specific equation contract INCOMPLETE; numerical res
 076. Soil biogeochemistry — mineral-accessibility topology
 Existing reference model: soil carbon pool models; primary observable: carbon mineralization rate.
 Observed/latent variable to examine: mineral-accessibility topology.
-Mechanism diagnosis: network / geometry. Image or reconstruct the evolving contact/connection graph underlying mineral-accessibility topology; hold aggregate counts fixed while varying graph statistics.
+Unverified title-derived mechanism hint: network / geometry. Image or reconstruct the evolving contact/connection graph underlying mineral-accessibility topology; hold aggregate counts fixed while varying graph statistics.
 Candidate construction: Represent adjacency/connectivity explicitly; project to a minimal measurable graph statistic and check whether equal aggregate states have different futures.
 Garden graph: THING=physical components; TIME=trajectory; SPACE=physical domain; EVENT=state transition; ACTION=controlled perturbation where applicable; AGENCY=experimenter/controller only; RULE=physical conservation; VALUE=declared performance measure; CONTEXT=experimental conditions; CLAIM=testable mechanism. Applicable edges: partOf, dependsOn, contextualizes, derivedFrom, supports/contradicts; use causes only after causal identification.
 Seven forms: CONSTRUCT=system; CONTRACT=units/domain; STATE=measured and hidden variables; RELATION=typed dependencies; PROCESS=state evolution; RULE=physical constraints; PROJECTION=baseline observable.
@@ -1026,7 +1069,7 @@ Evidence: CANDIDATE; domain-specific equation contract INCOMPLETE; numerical res
 077. Soil biogeochemistry — wet-dry pulse memory
 Existing reference model: soil carbon pool models; primary observable: carbon mineralization rate.
 Observed/latent variable to examine: wet-dry pulse memory.
-Mechanism diagnosis: dynamic hidden state / delay. Use matched present-state trajectories with different prior forcing histories for wet-dry pulse memory; check whether their subsequent responses diverge.
+Unverified title-derived mechanism hint: dynamic hidden state / delay. Use matched present-state trajectories with different prior forcing histories for wet-dry pulse memory; check whether their subsequent responses diverge.
 Candidate construction: Introduce a physically measured relaxing state or convolution kernel; estimate its timescale from perturbation data, not arbitrary fitting.
 Garden graph: THING=physical components; TIME=trajectory; SPACE=physical domain; EVENT=state transition; ACTION=controlled perturbation where applicable; AGENCY=experimenter/controller only; RULE=physical conservation; VALUE=declared performance measure; CONTEXT=experimental conditions; CLAIM=testable mechanism. Applicable edges: partOf, dependsOn, contextualizes, derivedFrom, supports/contradicts; use causes only after causal identification.
 Seven forms: CONSTRUCT=system; CONTRACT=units/domain; STATE=measured and hidden variables; RELATION=typed dependencies; PROCESS=state evolution; RULE=physical constraints; PROJECTION=baseline observable.
@@ -1037,7 +1080,7 @@ Evidence: CANDIDATE; domain-specific equation contract INCOMPLETE; numerical res
 078. Soil biogeochemistry — microbial enzyme allocation
 Existing reference model: soil carbon pool models; primary observable: carbon mineralization rate.
 Observed/latent variable to examine: microbial enzyme allocation.
-Mechanism diagnosis: coupled latent kinetics. Measure the candidate intermediate state for microbial enzyme allocation during perturbation/recovery; test whether it predicts held-out transients beyond baseline variables.
+Unverified title-derived mechanism hint: coupled latent kinetics. Measure the candidate intermediate state for microbial enzyme allocation during perturbation/recovery; test whether it predicts held-out transients beyond baseline variables.
 Candidate construction: Introduce a measurable intermediate and couple it by mass/energy-balanced rate equations; test observability and parameter identifiability.
 Garden graph: THING=physical components; TIME=trajectory; SPACE=physical domain; EVENT=state transition; ACTION=controlled perturbation where applicable; AGENCY=experimenter/controller only; RULE=physical conservation; VALUE=declared performance measure; CONTEXT=experimental conditions; CLAIM=testable mechanism. Applicable edges: partOf, dependsOn, contextualizes, derivedFrom, supports/contradicts; use causes only after causal identification.
 Seven forms: CONSTRUCT=system; CONTRACT=units/domain; STATE=measured and hidden variables; RELATION=typed dependencies; PROCESS=state evolution; RULE=physical constraints; PROJECTION=baseline observable.
@@ -1048,7 +1091,7 @@ Evidence: CANDIDATE; domain-specific equation contract INCOMPLETE; numerical res
 079. Soil biogeochemistry — aggregate fragmentation
 Existing reference model: soil carbon pool models; primary observable: carbon mineralization rate.
 Observed/latent variable to examine: aggregate fragmentation.
-Mechanism diagnosis: network / geometry. Image or reconstruct the evolving contact/connection graph underlying aggregate fragmentation; hold aggregate counts fixed while varying graph statistics.
+Unverified title-derived mechanism hint: network / geometry. Image or reconstruct the evolving contact/connection graph underlying aggregate fragmentation; hold aggregate counts fixed while varying graph statistics.
 Candidate construction: Represent adjacency/connectivity explicitly; project to a minimal measurable graph statistic and check whether equal aggregate states have different futures.
 Garden graph: THING=physical components; TIME=trajectory; SPACE=physical domain; EVENT=state transition; ACTION=controlled perturbation where applicable; AGENCY=experimenter/controller only; RULE=physical conservation; VALUE=declared performance measure; CONTEXT=experimental conditions; CLAIM=testable mechanism. Applicable edges: partOf, dependsOn, contextualizes, derivedFrom, supports/contradicts; use causes only after causal identification.
 Seven forms: CONSTRUCT=system; CONTRACT=units/domain; STATE=measured and hidden variables; RELATION=typed dependencies; PROCESS=state evolution; RULE=physical constraints; PROJECTION=baseline observable.
@@ -1059,7 +1102,7 @@ Evidence: CANDIDATE; domain-specific equation contract INCOMPLETE; numerical res
 080. Soil biogeochemistry — root-exudate spatial coupling
 Existing reference model: soil carbon pool models; primary observable: carbon mineralization rate.
 Observed/latent variable to examine: root-exudate spatial coupling.
-Mechanism diagnosis: coupled latent kinetics. Measure the candidate intermediate state for root-exudate spatial coupling during perturbation/recovery; test whether it predicts held-out transients beyond baseline variables.
+Unverified title-derived mechanism hint: coupled latent kinetics. Measure the candidate intermediate state for root-exudate spatial coupling during perturbation/recovery; test whether it predicts held-out transients beyond baseline variables.
 Candidate construction: Introduce a measurable intermediate and couple it by mass/energy-balanced rate equations; test observability and parameter identifiability.
 Garden graph: THING=physical components; TIME=trajectory; SPACE=physical domain; EVENT=state transition; ACTION=controlled perturbation where applicable; AGENCY=experimenter/controller only; RULE=physical conservation; VALUE=declared performance measure; CONTEXT=experimental conditions; CLAIM=testable mechanism. Applicable edges: partOf, dependsOn, contextualizes, derivedFrom, supports/contradicts; use causes only after causal identification.
 Seven forms: CONSTRUCT=system; CONTRACT=units/domain; STATE=measured and hidden variables; RELATION=typed dependencies; PROCESS=state evolution; RULE=physical constraints; PROJECTION=baseline observable.
@@ -1070,7 +1113,7 @@ Evidence: CANDIDATE; domain-specific equation contract INCOMPLETE; numerical res
 081. Climate dynamics — ocean vertical heat memory
 Existing reference model: energy-balance / ocean uptake; primary observable: heat uptake.
 Observed/latent variable to examine: ocean vertical heat memory.
-Mechanism diagnosis: dynamic hidden state / delay. Use matched present-state trajectories with different prior forcing histories for ocean vertical heat memory; check whether their subsequent responses diverge.
+Unverified title-derived mechanism hint: dynamic hidden state / delay. Use matched present-state trajectories with different prior forcing histories for ocean vertical heat memory; check whether their subsequent responses diverge.
 Candidate construction: Introduce a physically measured relaxing state or convolution kernel; estimate its timescale from perturbation data, not arbitrary fitting.
 Garden graph: THING=physical components; TIME=trajectory; SPACE=physical domain; EVENT=state transition; ACTION=controlled perturbation where applicable; AGENCY=experimenter/controller only; RULE=physical conservation; VALUE=declared performance measure; CONTEXT=experimental conditions; CLAIM=testable mechanism. Applicable edges: partOf, dependsOn, contextualizes, derivedFrom, supports/contradicts; use causes only after causal identification.
 Seven forms: CONSTRUCT=system; CONTRACT=units/domain; STATE=measured and hidden variables; RELATION=typed dependencies; PROCESS=state evolution; RULE=physical constraints; PROJECTION=baseline observable.
@@ -1081,7 +1124,7 @@ Evidence: CANDIDATE; domain-specific equation contract INCOMPLETE; numerical res
 082. Climate dynamics — cloud-regime transition persistence
 Existing reference model: energy-balance / ocean uptake; primary observable: heat uptake.
 Observed/latent variable to examine: cloud-regime transition persistence.
-Mechanism diagnosis: state switching / hysteresis. Cycle the driving variable in both directions and record branch-dependent response for cloud-regime transition persistence; test whether a single-valued constitutive law fails.
+Unverified title-derived mechanism hint: state switching / hysteresis. Cycle the driving variable in both directions and record branch-dependent response for cloud-regime transition persistence; test whether a single-valued constitutive law fails.
 Candidate construction: Introduce a branch/state variable with experimentally constrained transition rules; verify return-point and cycling behavior only if observed.
 Garden graph: THING=physical components; TIME=trajectory; SPACE=physical domain; EVENT=state transition; ACTION=controlled perturbation where applicable; AGENCY=experimenter/controller only; RULE=physical conservation; VALUE=declared performance measure; CONTEXT=experimental conditions; CLAIM=testable mechanism. Applicable edges: partOf, dependsOn, contextualizes, derivedFrom, supports/contradicts; use causes only after causal identification.
 Seven forms: CONSTRUCT=system; CONTRACT=units/domain; STATE=measured and hidden variables; RELATION=typed dependencies; PROCESS=state evolution; RULE=physical constraints; PROJECTION=baseline observable.
@@ -1092,7 +1135,7 @@ Evidence: CANDIDATE; domain-specific equation contract INCOMPLETE; numerical res
 083. Climate dynamics — land-moisture feedback
 Existing reference model: energy-balance / ocean uptake; primary observable: heat uptake.
 Observed/latent variable to examine: land-moisture feedback.
-Mechanism diagnosis: coupled latent kinetics. Measure the candidate intermediate state for land-moisture feedback during perturbation/recovery; test whether it predicts held-out transients beyond baseline variables.
+Unverified title-derived mechanism hint: coupled latent kinetics. Measure the candidate intermediate state for land-moisture feedback during perturbation/recovery; test whether it predicts held-out transients beyond baseline variables.
 Candidate construction: Introduce a measurable intermediate and couple it by mass/energy-balanced rate equations; test observability and parameter identifiability.
 Garden graph: THING=physical components; TIME=trajectory; SPACE=physical domain; EVENT=state transition; ACTION=controlled perturbation where applicable; AGENCY=experimenter/controller only; RULE=physical conservation; VALUE=declared performance measure; CONTEXT=experimental conditions; CLAIM=testable mechanism. Applicable edges: partOf, dependsOn, contextualizes, derivedFrom, supports/contradicts; use causes only after causal identification.
 Seven forms: CONSTRUCT=system; CONTRACT=units/domain; STATE=measured and hidden variables; RELATION=typed dependencies; PROCESS=state evolution; RULE=physical constraints; PROJECTION=baseline observable.
@@ -1103,7 +1146,7 @@ Evidence: CANDIDATE; domain-specific equation contract INCOMPLETE; numerical res
 084. Climate dynamics — aerosol-pattern covariance
 Existing reference model: energy-balance / ocean uptake; primary observable: heat uptake.
 Observed/latent variable to examine: aerosol-pattern covariance.
-Mechanism diagnosis: heterogeneity / joint distribution. Measure paired local fields or event-resolved distributions for aerosol-pattern covariance; compare joint-data model with independently shuffled marginals.
+Unverified title-derived mechanism hint: heterogeneity / joint distribution. Measure paired local fields or event-resolved distributions for aerosol-pattern covariance; compare joint-data model with independently shuffled marginals.
 Candidate construction: Add a measured joint-distribution statistic, not a free coefficient; derive aggregate response by averaging the local law and quantify the residual.
 Garden graph: THING=physical components; TIME=trajectory; SPACE=physical domain; EVENT=state transition; ACTION=controlled perturbation where applicable; AGENCY=experimenter/controller only; RULE=physical conservation; VALUE=declared performance measure; CONTEXT=experimental conditions; CLAIM=testable mechanism. Applicable edges: partOf, dependsOn, contextualizes, derivedFrom, supports/contradicts; use causes only after causal identification.
 Seven forms: CONSTRUCT=system; CONTRACT=units/domain; STATE=measured and hidden variables; RELATION=typed dependencies; PROCESS=state evolution; RULE=physical constraints; PROJECTION=baseline observable.
@@ -1114,7 +1157,7 @@ Evidence: CANDIDATE; domain-specific equation contract INCOMPLETE; numerical res
 085. Climate dynamics — ice-albedo spatial connectivity
 Existing reference model: energy-balance / ocean uptake; primary observable: heat uptake.
 Observed/latent variable to examine: ice-albedo spatial connectivity.
-Mechanism diagnosis: network / geometry. Image or reconstruct the evolving contact/connection graph underlying ice-albedo spatial connectivity; hold aggregate counts fixed while varying graph statistics.
+Unverified title-derived mechanism hint: network / geometry. Image or reconstruct the evolving contact/connection graph underlying ice-albedo spatial connectivity; hold aggregate counts fixed while varying graph statistics.
 Candidate construction: Represent adjacency/connectivity explicitly; project to a minimal measurable graph statistic and check whether equal aggregate states have different futures.
 Garden graph: THING=physical components; TIME=trajectory; SPACE=physical domain; EVENT=state transition; ACTION=controlled perturbation where applicable; AGENCY=experimenter/controller only; RULE=physical conservation; VALUE=declared performance measure; CONTEXT=experimental conditions; CLAIM=testable mechanism. Applicable edges: partOf, dependsOn, contextualizes, derivedFrom, supports/contradicts; use causes only after causal identification.
 Seven forms: CONSTRUCT=system; CONTRACT=units/domain; STATE=measured and hidden variables; RELATION=typed dependencies; PROCESS=state evolution; RULE=physical constraints; PROJECTION=baseline observable.
@@ -1125,7 +1168,7 @@ Evidence: CANDIDATE; domain-specific equation contract INCOMPLETE; numerical res
 086. Materials mechanics — dislocation network topology
 Existing reference model: constitutive stress–strain laws; primary observable: plastic strain rate.
 Observed/latent variable to examine: dislocation network topology.
-Mechanism diagnosis: network / geometry. Image or reconstruct the evolving contact/connection graph underlying dislocation network topology; hold aggregate counts fixed while varying graph statistics.
+Unverified title-derived mechanism hint: network / geometry. Image or reconstruct the evolving contact/connection graph underlying dislocation network topology; hold aggregate counts fixed while varying graph statistics.
 Candidate construction: Represent adjacency/connectivity explicitly; project to a minimal measurable graph statistic and check whether equal aggregate states have different futures.
 Garden graph: THING=physical components; TIME=trajectory; SPACE=physical domain; EVENT=state transition; ACTION=controlled perturbation where applicable; AGENCY=experimenter/controller only; RULE=physical conservation; VALUE=declared performance measure; CONTEXT=experimental conditions; CLAIM=testable mechanism. Applicable edges: partOf, dependsOn, contextualizes, derivedFrom, supports/contradicts; use causes only after causal identification.
 Seven forms: CONSTRUCT=system; CONTRACT=units/domain; STATE=measured and hidden variables; RELATION=typed dependencies; PROCESS=state evolution; RULE=physical constraints; PROJECTION=baseline observable.
@@ -1136,7 +1179,7 @@ Evidence: CANDIDATE; domain-specific equation contract INCOMPLETE; numerical res
 087. Materials mechanics — grain-boundary slip memory
 Existing reference model: constitutive stress–strain laws; primary observable: plastic strain rate.
 Observed/latent variable to examine: grain-boundary slip memory.
-Mechanism diagnosis: dynamic hidden state / delay. Use matched present-state trajectories with different prior forcing histories for grain-boundary slip memory; check whether their subsequent responses diverge.
+Unverified title-derived mechanism hint: dynamic hidden state / delay. Use matched present-state trajectories with different prior forcing histories for grain-boundary slip memory; check whether their subsequent responses diverge.
 Candidate construction: Introduce a physically measured relaxing state or convolution kernel; estimate its timescale from perturbation data, not arbitrary fitting.
 Garden graph: THING=physical components; TIME=trajectory; SPACE=physical domain; EVENT=state transition; ACTION=controlled perturbation where applicable; AGENCY=experimenter/controller only; RULE=physical conservation; VALUE=declared performance measure; CONTEXT=experimental conditions; CLAIM=testable mechanism. Applicable edges: partOf, dependsOn, contextualizes, derivedFrom, supports/contradicts; use causes only after causal identification.
 Seven forms: CONSTRUCT=system; CONTRACT=units/domain; STATE=measured and hidden variables; RELATION=typed dependencies; PROCESS=state evolution; RULE=physical constraints; PROJECTION=baseline observable.
@@ -1147,18 +1190,17 @@ Evidence: CANDIDATE; domain-specific equation contract INCOMPLETE; numerical res
 088. Materials mechanics — strain-rate history
 Existing reference model: constitutive stress–strain laws; primary observable: plastic strain rate.
 Observed/latent variable to examine: strain-rate history.
-Mechanism diagnosis: dynamic hidden state / delay. Use matched present-state trajectories with different prior forcing histories for strain-rate history; check whether their subsequent responses diverge.
+Unverified title-derived mechanism hint: dynamic hidden state / delay. Use matched present-state trajectories with different prior forcing histories for strain-rate history; check whether their subsequent responses diverge.
 Candidate construction: Introduce a physically measured relaxing state or convolution kernel; estimate its timescale from perturbation data, not arbitrary fitting.
 Garden graph: THING=physical components; TIME=trajectory; SPACE=physical domain; EVENT=state transition; ACTION=controlled perturbation where applicable; AGENCY=experimenter/controller only; RULE=physical conservation; VALUE=declared performance measure; CONTEXT=experimental conditions; CLAIM=testable mechanism. Applicable edges: partOf, dependsOn, contextualizes, derivedFrom, supports/contradicts; use causes only after causal identification.
 Seven forms: CONSTRUCT=system; CONTRACT=units/domain; STATE=measured and hidden variables; RELATION=typed dependencies; PROCESS=state evolution; RULE=physical constraints; PROJECTION=baseline observable.
 Falsification protocol: Use matched present-state trajectories with different prior forcing histories for strain-rate history; check whether their subsequent responses diverge. Fit extension and strong modern reference model on training experiments; compare blinded held-out predictive likelihood/error under matched complexity and budget. If no robust improvement, reject the increment.
-Benefit if validated: stronger lightweight materials.
-Evidence: CANDIDATE; domain-specific equation contract INCOMPLETE; numerical result NOT RUN; literature novelty UNKNOWN; empirical verification NOT DONE.
+Benefit if validated: stronger lightweight materials.Evidence: CANDIDATE; domain-specific equation contract INCOMPLETE; numerical result NOT RUN; literature novelty UNKNOWN; empirical verification NOT DONE.
 
 089. Materials mechanics — phase-boundary stress covariance
 Existing reference model: constitutive stress–strain laws; primary observable: plastic strain rate.
 Observed/latent variable to examine: phase-boundary stress covariance.
-Mechanism diagnosis: heterogeneity / joint distribution. Measure paired local fields or event-resolved distributions for phase-boundary stress covariance; compare joint-data model with independently shuffled marginals.
+Unverified title-derived mechanism hint: heterogeneity / joint distribution. Measure paired local fields or event-resolved distributions for phase-boundary stress covariance; compare joint-data model with independently shuffled marginals.
 Candidate construction: Add a measured joint-distribution statistic, not a free coefficient; derive aggregate response by averaging the local law and quantify the residual.
 Garden graph: THING=physical components; TIME=trajectory; SPACE=physical domain; EVENT=state transition; ACTION=controlled perturbation where applicable; AGENCY=experimenter/controller only; RULE=physical conservation; VALUE=declared performance measure; CONTEXT=experimental conditions; CLAIM=testable mechanism. Applicable edges: partOf, dependsOn, contextualizes, derivedFrom, supports/contradicts; use causes only after causal identification.
 Seven forms: CONSTRUCT=system; CONTRACT=units/domain; STATE=measured and hidden variables; RELATION=typed dependencies; PROCESS=state evolution; RULE=physical constraints; PROJECTION=baseline observable.
@@ -1169,7 +1211,7 @@ Evidence: CANDIDATE; domain-specific equation contract INCOMPLETE; numerical res
 090. Materials mechanics — defect-cluster intermittency
 Existing reference model: constitutive stress–strain laws; primary observable: plastic strain rate.
 Observed/latent variable to examine: defect-cluster intermittency.
-Mechanism diagnosis: heterogeneity / joint distribution. Measure paired local fields or event-resolved distributions for defect-cluster intermittency; compare joint-data model with independently shuffled marginals.
+Unverified title-derived mechanism hint: heterogeneity / joint distribution. Measure paired local fields or event-resolved distributions for defect-cluster intermittency; compare joint-data model with independently shuffled marginals.
 Candidate construction: Add a measured joint-distribution statistic, not a free coefficient; derive aggregate response by averaging the local law and quantify the residual.
 Garden graph: THING=physical components; TIME=trajectory; SPACE=physical domain; EVENT=state transition; ACTION=controlled perturbation where applicable; AGENCY=experimenter/controller only; RULE=physical conservation; VALUE=declared performance measure; CONTEXT=experimental conditions; CLAIM=testable mechanism. Applicable edges: partOf, dependsOn, contextualizes, derivedFrom, supports/contradicts; use causes only after causal identification.
 Seven forms: CONSTRUCT=system; CONTRACT=units/domain; STATE=measured and hidden variables; RELATION=typed dependencies; PROCESS=state evolution; RULE=physical constraints; PROJECTION=baseline observable.
@@ -1180,7 +1222,7 @@ Evidence: CANDIDATE; domain-specific equation contract INCOMPLETE; numerical res
 091. Protein kinetics — conformational-state memory
 Existing reference model: Michaelis–Menten enzyme kinetics; primary observable: effective catalytic rate.
 Observed/latent variable to examine: conformational-state memory.
-Mechanism diagnosis: dynamic hidden state / delay. Use matched present-state trajectories with different prior forcing histories for conformational-state memory; check whether their subsequent responses diverge.
+Unverified title-derived mechanism hint: dynamic hidden state / delay. Use matched present-state trajectories with different prior forcing histories for conformational-state memory; check whether their subsequent responses diverge.
 Candidate construction: Introduce a physically measured relaxing state or convolution kernel; estimate its timescale from perturbation data, not arbitrary fitting.
 Garden graph: THING=physical components; TIME=trajectory; SPACE=physical domain; EVENT=state transition; ACTION=controlled perturbation where applicable; AGENCY=experimenter/controller only; RULE=physical conservation; VALUE=declared performance measure; CONTEXT=experimental conditions; CLAIM=testable mechanism. Applicable edges: partOf, dependsOn, contextualizes, derivedFrom, supports/contradicts; use causes only after causal identification.
 Seven forms: CONSTRUCT=system; CONTRACT=units/domain; STATE=measured and hidden variables; RELATION=typed dependencies; PROCESS=state evolution; RULE=physical constraints; PROJECTION=baseline observable.
@@ -1191,17 +1233,18 @@ Evidence: CANDIDATE; domain-specific equation contract INCOMPLETE; numerical res
 092. Protein kinetics — substrate microdomain gradients
 Existing reference model: Michaelis–Menten enzyme kinetics; primary observable: effective catalytic rate.
 Observed/latent variable to examine: substrate microdomain gradients.
-Mechanism diagnosis: heterogeneity / joint distribution. Measure paired local fields or event-resolved distributions for substrate microdomain gradients; compare joint-data model with independently shuffled marginals.
+Unverified title-derived mechanism hint: heterogeneity / joint distribution. Measure paired local fields or event-resolved distributions for substrate microdomain gradients; compare joint-data model with independently shuffled marginals.
 Candidate construction: Add a measured joint-distribution statistic, not a free coefficient; derive aggregate response by averaging the local law and quantify the residual.
 Garden graph: THING=physical components; TIME=trajectory; SPACE=physical domain; EVENT=state transition; ACTION=controlled perturbation where applicable; AGENCY=experimenter/controller only; RULE=physical conservation; VALUE=declared performance measure; CONTEXT=experimental conditions; CLAIM=testable mechanism. Applicable edges: partOf, dependsOn, contextualizes, derivedFrom, supports/contradicts; use causes only after causal identification.
-Seven forms: CONSTRUCT=system; CONTRACT=units/domain; STATE=measured and hidden variables; RELATION=typed dependencies; PROCESS=state evolution; RULE=physical constraints; PROJECTION=baseline observable.Falsification protocol: Measure paired local fields or event-resolved distributions for substrate microdomain gradients; compare joint-data model with independently shuffled marginals. Fit extension and strong modern reference model on training experiments; compare blinded held-out predictive likelihood/error under matched complexity and budget. If no robust improvement, reject the increment.
+Seven forms: CONSTRUCT=system; CONTRACT=units/domain; STATE=measured and hidden variables; RELATION=typed dependencies; PROCESS=state evolution; RULE=physical constraints; PROJECTION=baseline observable.
+Falsification protocol: Measure paired local fields or event-resolved distributions for substrate microdomain gradients; compare joint-data model with independently shuffled marginals. Fit extension and strong modern reference model on training experiments; compare blinded held-out predictive likelihood/error under matched complexity and budget. If no robust improvement, reject the increment.
 Benefit if validated: biomanufacturing.
 Evidence: CANDIDATE; domain-specific equation contract INCOMPLETE; numerical result NOT RUN; literature novelty UNKNOWN; empirical verification NOT DONE.
 
 093. Protein kinetics — crowding-induced correlation
 Existing reference model: Michaelis–Menten enzyme kinetics; primary observable: effective catalytic rate.
 Observed/latent variable to examine: crowding-induced correlation.
-Mechanism diagnosis: heterogeneity / joint distribution. Measure paired local fields or event-resolved distributions for crowding-induced correlation; compare joint-data model with independently shuffled marginals.
+Unverified title-derived mechanism hint: heterogeneity / joint distribution. Measure paired local fields or event-resolved distributions for crowding-induced correlation; compare joint-data model with independently shuffled marginals.
 Candidate construction: Add a measured joint-distribution statistic, not a free coefficient; derive aggregate response by averaging the local law and quantify the residual.
 Garden graph: THING=physical components; TIME=trajectory; SPACE=physical domain; EVENT=state transition; ACTION=controlled perturbation where applicable; AGENCY=experimenter/controller only; RULE=physical conservation; VALUE=declared performance measure; CONTEXT=experimental conditions; CLAIM=testable mechanism. Applicable edges: partOf, dependsOn, contextualizes, derivedFrom, supports/contradicts; use causes only after causal identification.
 Seven forms: CONSTRUCT=system; CONTRACT=units/domain; STATE=measured and hidden variables; RELATION=typed dependencies; PROCESS=state evolution; RULE=physical constraints; PROJECTION=baseline observable.
@@ -1212,7 +1255,7 @@ Evidence: CANDIDATE; domain-specific equation contract INCOMPLETE; numerical res
 094. Protein kinetics — allosteric network topology
 Existing reference model: Michaelis–Menten enzyme kinetics; primary observable: effective catalytic rate.
 Observed/latent variable to examine: allosteric network topology.
-Mechanism diagnosis: network / geometry. Image or reconstruct the evolving contact/connection graph underlying allosteric network topology; hold aggregate counts fixed while varying graph statistics.
+Unverified title-derived mechanism hint: network / geometry. Image or reconstruct the evolving contact/connection graph underlying allosteric network topology; hold aggregate counts fixed while varying graph statistics.
 Candidate construction: Represent adjacency/connectivity explicitly; project to a minimal measurable graph statistic and check whether equal aggregate states have different futures.
 Garden graph: THING=physical components; TIME=trajectory; SPACE=physical domain; EVENT=state transition; ACTION=controlled perturbation where applicable; AGENCY=experimenter/controller only; RULE=physical conservation; VALUE=declared performance measure; CONTEXT=experimental conditions; CLAIM=testable mechanism. Applicable edges: partOf, dependsOn, contextualizes, derivedFrom, supports/contradicts; use causes only after causal identification.
 Seven forms: CONSTRUCT=system; CONTRACT=units/domain; STATE=measured and hidden variables; RELATION=typed dependencies; PROCESS=state evolution; RULE=physical constraints; PROJECTION=baseline observable.
@@ -1223,7 +1266,7 @@ Evidence: CANDIDATE; domain-specific equation contract INCOMPLETE; numerical res
 095. Protein kinetics — product inhibition lag
 Existing reference model: Michaelis–Menten enzyme kinetics; primary observable: effective catalytic rate.
 Observed/latent variable to examine: product inhibition lag.
-Mechanism diagnosis: dynamic hidden state / delay. Use matched present-state trajectories with different prior forcing histories for product inhibition lag; check whether their subsequent responses diverge.
+Unverified title-derived mechanism hint: dynamic hidden state / delay. Use matched present-state trajectories with different prior forcing histories for product inhibition lag; check whether their subsequent responses diverge.
 Candidate construction: Introduce a physically measured relaxing state or convolution kernel; estimate its timescale from perturbation data, not arbitrary fitting.
 Garden graph: THING=physical components; TIME=trajectory; SPACE=physical domain; EVENT=state transition; ACTION=controlled perturbation where applicable; AGENCY=experimenter/controller only; RULE=physical conservation; VALUE=declared performance measure; CONTEXT=experimental conditions; CLAIM=testable mechanism. Applicable edges: partOf, dependsOn, contextualizes, derivedFrom, supports/contradicts; use causes only after causal identification.
 Seven forms: CONSTRUCT=system; CONTRACT=units/domain; STATE=measured and hidden variables; RELATION=typed dependencies; PROCESS=state evolution; RULE=physical constraints; PROJECTION=baseline observable.
@@ -1234,7 +1277,7 @@ Evidence: CANDIDATE; domain-specific equation contract INCOMPLETE; numerical res
 096. Optical materials — nano-inclusion spatial correlation
 Existing reference model: effective-medium / radiative transfer; primary observable: effective optical response.
 Observed/latent variable to examine: nano-inclusion spatial correlation.
-Mechanism diagnosis: heterogeneity / joint distribution. Measure paired local fields or event-resolved distributions for nano-inclusion spatial correlation; compare joint-data model with independently shuffled marginals.
+Unverified title-derived mechanism hint: heterogeneity / joint distribution. Measure paired local fields or event-resolved distributions for nano-inclusion spatial correlation; compare joint-data model with independently shuffled marginals.
 Candidate construction: Add a measured joint-distribution statistic, not a free coefficient; derive aggregate response by averaging the local law and quantify the residual.
 Garden graph: THING=physical components; TIME=trajectory; SPACE=physical domain; EVENT=state transition; ACTION=controlled perturbation where applicable; AGENCY=experimenter/controller only; RULE=physical conservation; VALUE=declared performance measure; CONTEXT=experimental conditions; CLAIM=testable mechanism. Applicable edges: partOf, dependsOn, contextualizes, derivedFrom, supports/contradicts; use causes only after causal identification.
 Seven forms: CONSTRUCT=system; CONTRACT=units/domain; STATE=measured and hidden variables; RELATION=typed dependencies; PROCESS=state evolution; RULE=physical constraints; PROJECTION=baseline observable.
@@ -1245,7 +1288,7 @@ Evidence: CANDIDATE; domain-specific equation contract INCOMPLETE; numerical res
 097. Optical materials — interface exciton coupling
 Existing reference model: effective-medium / radiative transfer; primary observable: effective optical response.
 Observed/latent variable to examine: interface exciton coupling.
-Mechanism diagnosis: coupled latent kinetics. Measure the candidate intermediate state for interface exciton coupling during perturbation/recovery; test whether it predicts held-out transients beyond baseline variables.
+Unverified title-derived mechanism hint: coupled latent kinetics. Measure the candidate intermediate state for interface exciton coupling during perturbation/recovery; test whether it predicts held-out transients beyond baseline variables.
 Candidate construction: Introduce a measurable intermediate and couple it by mass/energy-balanced rate equations; test observability and parameter identifiability.
 Garden graph: THING=physical components; TIME=trajectory; SPACE=physical domain; EVENT=state transition; ACTION=controlled perturbation where applicable; AGENCY=experimenter/controller only; RULE=physical conservation; VALUE=declared performance measure; CONTEXT=experimental conditions; CLAIM=testable mechanism. Applicable edges: partOf, dependsOn, contextualizes, derivedFrom, supports/contradicts; use causes only after causal identification.
 Seven forms: CONSTRUCT=system; CONTRACT=units/domain; STATE=measured and hidden variables; RELATION=typed dependencies; PROCESS=state evolution; RULE=physical constraints; PROJECTION=baseline observable.
@@ -1256,7 +1299,7 @@ Evidence: CANDIDATE; domain-specific equation contract INCOMPLETE; numerical res
 098. Optical materials — temperature-dependent disorder
 Existing reference model: effective-medium / radiative transfer; primary observable: effective optical response.
 Observed/latent variable to examine: temperature-dependent disorder.
-Mechanism diagnosis: heterogeneity / joint distribution. Measure paired local fields or event-resolved distributions for temperature-dependent disorder; compare joint-data model with independently shuffled marginals.
+Unverified title-derived mechanism hint: heterogeneity / joint distribution. Measure paired local fields or event-resolved distributions for temperature-dependent disorder; compare joint-data model with independently shuffled marginals.
 Candidate construction: Add a measured joint-distribution statistic, not a free coefficient; derive aggregate response by averaging the local law and quantify the residual.
 Garden graph: THING=physical components; TIME=trajectory; SPACE=physical domain; EVENT=state transition; ACTION=controlled perturbation where applicable; AGENCY=experimenter/controller only; RULE=physical conservation; VALUE=declared performance measure; CONTEXT=experimental conditions; CLAIM=testable mechanism. Applicable edges: partOf, dependsOn, contextualizes, derivedFrom, supports/contradicts; use causes only after causal identification.
 Seven forms: CONSTRUCT=system; CONTRACT=units/domain; STATE=measured and hidden variables; RELATION=typed dependencies; PROCESS=state evolution; RULE=physical constraints; PROJECTION=baseline observable.
@@ -1267,7 +1310,7 @@ Evidence: CANDIDATE; domain-specific equation contract INCOMPLETE; numerical res
 099. Optical materials — nonlocal scattering memory
 Existing reference model: effective-medium / radiative transfer; primary observable: effective optical response.
 Observed/latent variable to examine: nonlocal scattering memory.
-Mechanism diagnosis: dynamic hidden state / delay. Use matched present-state trajectories with different prior forcing histories for nonlocal scattering memory; check whether their subsequent responses diverge.
+Unverified title-derived mechanism hint: dynamic hidden state / delay. Use matched present-state trajectories with different prior forcing histories for nonlocal scattering memory; check whether their subsequent responses diverge.
 Candidate construction: Introduce a physically measured relaxing state or convolution kernel; estimate its timescale from perturbation data, not arbitrary fitting.
 Garden graph: THING=physical components; TIME=trajectory; SPACE=physical domain; EVENT=state transition; ACTION=controlled perturbation where applicable; AGENCY=experimenter/controller only; RULE=physical conservation; VALUE=declared performance measure; CONTEXT=experimental conditions; CLAIM=testable mechanism. Applicable edges: partOf, dependsOn, contextualizes, derivedFrom, supports/contradicts; use causes only after causal identification.
 Seven forms: CONSTRUCT=system; CONTRACT=units/domain; STATE=measured and hidden variables; RELATION=typed dependencies; PROCESS=state evolution; RULE=physical constraints; PROJECTION=baseline observable.
@@ -1278,7 +1321,7 @@ Evidence: CANDIDATE; domain-specific equation contract INCOMPLETE; numerical res
 100. Optical materials — defect-network percolation
 Existing reference model: effective-medium / radiative transfer; primary observable: effective optical response.
 Observed/latent variable to examine: defect-network percolation.
-Mechanism diagnosis: network / geometry. Image or reconstruct the evolving contact/connection graph underlying defect-network percolation; hold aggregate counts fixed while varying graph statistics.
+Unverified title-derived mechanism hint: network / geometry. Image or reconstruct the evolving contact/connection graph underlying defect-network percolation; hold aggregate counts fixed while varying graph statistics.
 Candidate construction: Represent adjacency/connectivity explicitly; project to a minimal measurable graph statistic and check whether equal aggregate states have different futures.
 Garden graph: THING=physical components; TIME=trajectory; SPACE=physical domain; EVENT=state transition; ACTION=controlled perturbation where applicable; AGENCY=experimenter/controller only; RULE=physical conservation; VALUE=declared performance measure; CONTEXT=experimental conditions; CLAIM=testable mechanism. Applicable edges: partOf, dependsOn, contextualizes, derivedFrom, supports/contradicts; use causes only after causal identification.
 Seven forms: CONSTRUCT=system; CONTRACT=units/domain; STATE=measured and hidden variables; RELATION=typed dependencies; PROCESS=state evolution; RULE=physical constraints; PROJECTION=baseline observable.
