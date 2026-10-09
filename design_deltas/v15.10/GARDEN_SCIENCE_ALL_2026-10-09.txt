@@ -3,7 +3,7 @@ Consolidated corrected plain-text edition | 2026-10-09
 Status: NONCANONICAL RESEARCH — not a set of established discoveries.
 
 READ THIS FIRST
-100 entries are research QUESTIONS/STUBS, not 100 complete scientific upgrades. All 100 now have explicit preliminary prior-art risk notes in Section 8; these are NOT completed literature reviews.
+100 entries are research QUESTIONS/STUBS, not 100 complete scientific upgrades. Section 13 freezes five ACTIVE economic-value investigations; the original 100 are PARKED for new work. All 100 now have explicit preliminary prior-art risk notes in Section 8; these are NOT completed literature reviews.
 10 worked mathematical examples are conditional results, predominantly established mathematics.
 Candidate 026 is a synthetic test of model selection, not new physics.
 33 industry opportunities overlap the 100 and each other. Do not add benefits.
@@ -2445,3 +2445,184 @@ Status: UNVERIFIED research candidate, no new empirical data.
 - Next benchmark: blind a costly assumed constraint and require Garden to find a
   verified counterexample versus a conventional literature/model-search baseline.
 - No canonical Garden source is modified. No-self-admission remains mandatory.
+
+
+13. ECONOMIC-VALUE DISCOVERY PROGRAM — FROZEN CANDIDATE SET
+Date: 2026-10-09 | Research status: PROTOCOL FROZEN, NOT EXPERIMENTALLY EXECUTED.
+Purpose: close the gap between plausible physical effects and measurable
+incremental economic decisions. This section records source-checked negative
+novelty findings and predefines tests before collecting experimental outcomes.
+
+13.1 ACTIVE/PARKED POLICY
+ACTIVE research problems (5):
+ A1 Second-life EV battery application-specific valuation (lead).
+ A2 Recycled HDPE/PP material acceptance and process selection.
+ A3 Heat-exchanger fouling diagnostics under constrained sensor budgets.
+ A4 Industrial motor/pump network energy optimization.
+ A5 Semiconductor process thermal/defect prediction.
+PARKED: all 100 original candidate stubs for new development, except where
+one is explicitly cited as background to an ACTIVE investigation. PARKED
+does not mean rejected or disproven; it means no new mechanism assignment,
+derivation, economic claim or empirical status is promoted. The 100-row
+historical summary is retained for provenance, not as an active work queue.
+Do not create new candidates until an active test is independently evaluated.
+
+13.2 PRIOR-ART CHECK — A1 SECOND-LIFE BATTERY VALUATION
+Strong existing work found:
+ - 2025 "Data-driven classification of lithium-ion batteries for second-life
+   applications", Journal of Energy Storage (ScienceDirect):
+   https://www.sciencedirect.com/science/article/abs/pii/S2352152X25027070
+   EIS-based rapid classification across FIVE second-life use cases; reported
+   average accuracy 92%, independent dataset 90%. Application-aware sorting
+   is already published, so it cannot be claimed as Garden-originated.
+ - 2025 "Technoeconomic decision support for second-life batteries",
+   Applied Energy, DOI https://doi.org/10.1016/j.apenergy.2025.125800
+   Integrates degradation and economic decisions across use cases.
+ - 2024 "Need of voltage and capacity profile reconstruction in incremental
+   capacity analysis for second life batteries from repurposer perspective":
+   https://www.sciencedirect.com/science/article/abs/pii/S2352152X24030391
+   ICA reconstruction/partial-voltage diagnostics for second-life batteries.
+ - 2024 review https://doi.org/10.3389/fchem.2024.1358417
+   DVA/ICA and degradation modes already recognized.
+ - 2018 "Technical Viability of Battery Second Life: A Study From the
+   Ageing Perspective", IEEE, https://ieeexplore.ieee.org/document/8279474/
+   First-life history and use case affect second-life performance.
+ - 2026 battery pack SOH/DVA measurement robustness:
+   https://www.sciencedirect.com/science/article/abs/pii/S2590116826000470
+Conclusion: Same SOH with different ageing modes, application-specific
+sorting, EIS and ICA/DVA are NOT novel ideas. Proposed six-month vs four-year
+lifetimes and $25-$100/kWh valuations are HYPOTHETICAL, not observations.
+A narrow frontier hypothesis remains: at a FIXED acquisition/testing budget,
+can a cost-aware sequence of partial-voltage measurements improve the
+OUT-OF-SAMPLE economic assignment value over a modern EIS-based
+application-specific classifier? Worldwide novelty of this precise protocol
+UNKNOWN; no guarantee of a positive result.
+
+13.3 A1 GARDEN PHYSICAL AND ECONOMIC CONTRACT
+Detailed state X: electrode inventories, loss of lithium inventory, active
+material losses, transport/impedance distributions, thermal and usage history.
+Coarse projection Y=(usable capacity Q [Ah], DC resistance R [ohm]).
+Additional observations Z: partial dQ/dV or dV/dQ features (units explicitly
+recorded per sensor protocol), optional EIS spectra, age/cycle history.
+Action a: select application (low-rate storage, high-power service, recycle),
+or select the next safe diagnostic measurement. Context: cell chemistry,
+voltage window, temperature, regulatory and safety limits.
+Outcome V(x,a) [USD/cell] is expected NET economic value, incorporating
+revenue, remaining service life, failure/warranty risk, testing costs and
+recycling value. Uncertainty must be estimated on held-out cells.
+An economically sufficient coarse projection at tolerance epsilon [USD/cell]
+would satisfy |V(x1,a)-V(x2,a)|<=epsilon for matched Y across a declared
+state distribution. This is a research adequacy criterion, not an
+assumption that conventional battery markets only use capacity.
+
+Decision rule: a*(y,z)=argmax_a E[V(X,a)|Y=y,Z=z].
+Baseline: a0*(y)=argmax_a E[V(X,a)|Y=y].
+The Bayes optimal expected value of additional information Z is nonnegative
+BEFORE test costs under an exact shared probability model. This is a known
+decision-theoretic result, NOT a new physical law. Real fitted predictors
+can overfit and make realized incremental value negative.
+Primary estimand (USD/cell):
+ Delta_net = E[V(X,a*(Y,Z))-V(X,a0*(Y))] - C_diagnostic.
+For randomized deployment, also account for opportunity cost and pack
+integration constraints. Value of a measurement is NOT the same as a
+higher classification accuracy percentage.
+Signed hypothesis to freeze: Delta_net > 0 for a declared population and
+diagnostic cost threshold. Falsifier: held-out 95% confidence interval does
+not support positive Delta_net after multiplicity and selection controls;
+do not equate non-significance with proof of zero effect.
+Potential ranking-reversal test: identify pairs matched on Q,R whose optimal
+application ordering reverses when Z is known. Test whether the reversal
+generalizes beyond training data and beyond the existing EIS model.
+
+13.4 A1 EXPERIMENT AND SAFETY PROTOCOL
+Pilot: approximately 20 retired cells, single chemistry and traceable source,
+used ONLY to check feasibility, sensor repeatability and power/sample-size
+estimation; cannot establish market-wide valuation gain.
+Confirm capacity, DC resistance, EIS, partial voltage profiles at controlled
+temperature and rest time; measure degradation-state proxies independently
+where feasible. Randomly assign matched cells to two safe application-duty
+protocols; a single cell cannot independently experience both lifetime
+trajectories, so use matched randomized groups or validated counterfactual
+methods with explicit assumptions. High-power cycling and thermal risk require
+a qualified battery laboratory, containment, fire safety and authorization.
+Blind the prediction team to eventual outcomes; freeze features and model
+selection before lifetime follow-up. Strong comparators: EIS application
+classifier, full ICA/DVA plus degradation model, and published economic
+decision model. Include training, validation, and fully held-out batches,
+chemistry/source transfer, calibration and bootstrap uncertainty.
+Primary outcome: realized or properly censored net application value
+(USD/cell or USD/kWh) after diagnostic costs. Secondary: lifetime
+forecast error, Brier/calibration, misclassification, test minutes/cell.
+An independent replication cohort is required before claiming economic value.
+Timeline assumption: weeks for initial measurements; 3-9+ months for
+accelerated pilot cycling; longer for representative field service life.
+No cells purchased or physically tested in this work.
+
+13.5 A2 RECYCLED PLASTICS — PRIOR ART AND NARROW CLAIM
+Existing prior art:
+ - 2024 Polymer morphology of mechanically recycled HDPE/PP blends:
+   https://www.sciencedirect.com/science/article/pii/S0032386124003343
+ - 2026 NIST, "The anisotropic structure and mechanical behavior of films
+   extruded from recycled polypropylene":
+   https://www.nist.gov/publications/anisotropic-structure-and-mechanical-behavior-films-extruded-recycled-polypropylene
+ - 2026 "Virgin blends do not accurately predict the properties of recycled
+   plastics": https://doi.org/10.1016/j.checir.2026.100118
+ - 2026 batch variability despite nominal specifications:
+   https://doi.org/10.1002/app.70501
+Conclusion: polymer contaminant morphology, phase topology, and limitations
+of melt-flow-index-only grading are ALREADY KNOWN.
+Narrow test: does a rapid, low-cost optical/thermal proxy of domain morphology
+improve injection-moulding batch ACCEPT/REJECT economic value at fixed
+measurement cost over existing spectroscopy/rheology-based QA?
+Compare production scrap, energy and downtime on blinded batches.
+No new polymer mechanism established; test remains unexecuted.
+
+13.6 A3-A5 FROZEN SECONDARY RESEARCH QUESTIONS
+A3 Heat exchangers: does optimal safe flow-perturbation scheduling improve
+net cleaning decisions versus modern flow-compensated fouling observers,
+including lost production and sensor costs? Prior art exists.
+A4 Motors: does a low-cost distributed state proxy improve pumping-network
+total energy/cavitation maintenance decisions versus digital-twin MPC at
+equal instrumentation and compute? Modern motor optimization is prior art.
+A5 Semiconductors: can a compressed stress-temperature covariance hazard
+model predict lot defects nearly as well as modern TCAD/defect statistics
+with fewer sensors or lower latency? Existing multiphysics prior art.
+All three remain mechanism NOVELTY UNKNOWN and EMPIRICAL NOT TESTED.
+
+13.7 BLIND GARDEN VS NON-GARDEN DISCOVERY BENCHMARK
+Freeze a problem statement containing only observable baseline variables,
+allowed intervention constraints, and raw training data. Do not reveal
+candidate titles, mechanism labels, future publications, or intended solution.
+Generate Garden hypotheses using 10 objects, typed relations, seven forms,
+projection-loss and necessity-challenge operations. Independently generate
+TRIZ/constraint-relaxation and standard system-identification hypotheses
+under identical time, compute and evidence budgets. Use independent judges,
+held-out outcomes and external novelty screening. Record all proposals,
+including failures, and publish falsifiers before unblinding.
+Model pretraining may contain historical discoveries, so a hidden-paper
+retrospective is not sufficient evidence of frontier novelty.
+No blind benchmark has been executed here; no discovery advantage claimed.
+
+13.8 ECONOMIC SCENARIOS, NOT ESTIMATED MARKET BENEFITS
+For a hypothetical operator processing 100 MWh/year = 100,000 kWh/year,
+a genuinely demonstrated +$10/kWh NET assignment gain would equal
+$1,000,000/year. This is a multiplication example, not a forecast.
+For 20 test cells at $50/kWh and 50 kWh total, nominal cell acquisition
+would be $2,500 before transport, equipment, labour, degradation testing
+and safety; the earlier "$30k" pilot estimate is not a verified quotation.
+Do not infer a global dollar market from this pilot. Calculate realized
+value using actual throughput, acquisition prices, failure costs, adoption
+and competing reuse/recycling opportunities.
+
+13.9 COMPLETION LEDGER
+Physical experiments performed: 0.
+Garden-originated novel laws established: 0.
+Frontier novelty certifications: 0.
+Scoped A1 prior-art screen: COMPLETED, broad application-aware valuation
+already known; narrow fixed-budget decision-value claim remains UNKNOWN.
+Scoped A2 prior-art screen: COMPLETED, morphology-quality coupling known.
+Candidate 006 scoped screen: COMPLETED previously, broad coupling known.
+A1 mathematical decision-value contract: DEFINED (known decision theory).
+A1 preregistered experiment: PROPOSED, NOT RUN.
+Five ACTIVE research investigations; original 100 PARKED for new work.
+TREE_CORE integrity remains OPEN. No canonical source changed.
