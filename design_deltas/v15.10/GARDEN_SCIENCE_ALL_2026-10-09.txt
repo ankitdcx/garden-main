@@ -1,9 +1,17 @@
 GARDEN v15.10 — SCIENTIFIC DISCOVERY AND ECONOMIC VALUE REGISTER
 Consolidated four-section text edition | 2026-10-09
 NONCANONICAL RESEARCH — NOT an accepted scientific discovery or canonical Garden update.
-100 candidate stubs rechecked for structure and existing scoped dispositions; only a SMALL
-SUBSET has literature-based checks. Desk classification is NOT a complete novelty search.
-The 100 original candidates are PARKED; five economic investigations remain ACTIVE.
+CURRENT RESEARCH POLICY: section 4.14 supersedes earlier research queue/gate ordering.
+Catalogue expansion is stopped. At most ONE experimental claim may be ACTIVE.
+Current experimental claims: 0. Sole pre-claim problem review: A3 heat-exchanger
+cleaning, CONTEXT_REQUIRED; no defensible residual against a named site baseline.
+All other investigations and candidate inventories are PARKED. The original 100
+stubs and later N001-N100 batch are different historical record sets; neither is
+a set of independent, matched discovery trials. Prior-art checks have varying depth.
+Verified novel Garden findings: 0. Measured incremental Garden savings: none.
+Comparative discovery performance: UNMEASURED, not a statistically powered failure.
+Historical equations, simulations, negative results and assumed financial scenarios
+are retained below. They are not current claims, pilot evidence or savings forecasts.
 
 1. OUR MECHANISM
 
@@ -49,14 +57,23 @@ G4 synthetic null recovery; G5 strong blind baseline comparison; G6 paper-level
 prior art; G7 independent physical test; G8 measured incremental net economic
 value; G9 independent admission. UNKNOWN never means PASS. The scientific
 research register cannot modify Garden's canonical authority.
+OPERATIVE ORDER (section 4.14): lock the real decision/baseline, conduct hostile
+paper/patent/practice screening (G6), and establish a specific residual (G1)
+BEFORE any new candidate equation (G2). Preregistration precedes fitting and
+outcome collection; blinded comparison precedes empirical/economic admission.
+G0-G9 are this register's research labels, not the GCSC twelve validity gates.
+Historical gate numbering above is preserved for traceability, not execution order.
 
-2. NEW IDEAS FOUND — CONSOLIDATED LIST
+2. HISTORICAL CANDIDATE INVENTORY — NOT VERIFIED FINDINGS
 
 The word "found" here means RESEARCH CANDIDATE GENERATED OR ORGANIZED in this
 discussion, not an original verified discovery. Novelty and economic gains remain
 unverified unless a row explicitly says otherwise.
 
-2.1 Economic decision-gap investigations (current focus)
+2.1 Economic decision-gap investigations (historical inventory)
+Current queue overlay: A3 is the sole pre-claim problem review, not an ACTIVE
+experimental hypothesis. A1/A2/A4-A10 are PARKED. Earlier questions and economic
+endpoints below do not establish a modern-baseline residual or authorize new work.
 ID | Idea | Projection/necessity gap | Economic endpoint | Status
 A1 | Second-life battery application assignment | Capacity+resistance omit degradation mode and application | Net USD/cell after tests | Known broad mechanism; narrow gain UNKNOWN
 A2 | Recycled plastic acceptance | Polymer/MFI omit contaminant morphology | Scrap/rework avoided net cost | Known broad mechanism; narrow gain UNKNOWN
@@ -70,6 +87,9 @@ A9 | Clinical trajectory support | Snapshot evidence omits longitudinal path | H
 A10 | Costly process prerequisites | Purity/temperature/step assumed necessary | Unit cost of verified in-spec product | Counterexample search; prior art required
 
 2.2 One hundred original theory candidates (PARKED)
+All NOT REVIEWED rows are PARKED_UNREVIEWED. Conditional benefits are historical
+motivations, not evidence or estimates. No new mechanism text until section 4.14
+reactivation gates pass; no automatic promotion from a desk label.
 ID | Theory family | Candidate research question | Recheck status | Conditional benefit
 001 | Battery electrochemistry | interfacial stress memory | NOT REVIEWED | safer fast charging
 002 | Battery electrochemistry | electrolyte concentration variance | NOT REVIEWED | safer fast charging
@@ -251,15 +271,18 @@ Economically demonstrated incremental savings: 0.
 
 4. DETAILS OF ALL IDEAS
 
-4.1 Detailed active decision-gap contracts
+4.1 Historical decision-gap contracts (queue/protocol superseded by 4.14)
+The older "frozen" and "preregistered" language below describes proposed plans.
+It does not constitute a complete, independently timestamped preregistration.
+No prospective experiment is activated by this retained section.
 13. ECONOMIC-VALUE DISCOVERY PROGRAM — FROZEN CANDIDATE SET
 Date: 2026-10-09 | Research status: PROTOCOL FROZEN, NOT EXPERIMENTALLY EXECUTED.
 Purpose: close the gap between plausible physical effects and measurable
 incremental economic decisions. This section records source-checked negative
 novelty findings and predefines tests before collecting experimental outcomes.
 
-13.1 ACTIVE/PARKED POLICY
-ACTIVE research problems (5):
+13.1 HISTORICAL ACTIVE/PARKED POLICY — SUPERSEDED BY 4.14
+Formerly labelled ACTIVE research problems (5), now subject to the current overlay:
  A1 Second-life EV battery application-specific valuation (lead).
  A2 Recycled HDPE/PP material acceptance and process selection.
  A3 Heat-exchanger fouling diagnostics under constrained sensor budgets.
@@ -382,7 +405,7 @@ measurement cost over existing spectroscopy/rheology-based QA?
 Compare production scrap, energy and downtime on blinded batches.
 No new polymer mechanism established; test remains unexecuted.
 
-13.6 A3-A5 FROZEN SECONDARY RESEARCH QUESTIONS
+13.6 HISTORICAL A3-A5 SECONDARY RESEARCH QUESTIONS — NOT ACTIVE CLAIMS
 A3 Heat exchangers: does optimal safe flow-perturbation scheduling improve
 net cleaning decisions versus modern flow-compensated fouling observers,
 including lost production and sensor costs? Prior art exists.
@@ -429,11 +452,11 @@ Scoped A2 prior-art screen: COMPLETED, morphology-quality coupling known.
 Candidate 006 scoped screen: COMPLETED previously, broad coupling known.
 A1 mathematical decision-value contract: DEFINED (known decision theory).
 A1 preregistered experiment: PROPOSED, NOT RUN.
-Five ACTIVE research investigations; original 100 PARKED for new work.
+Historical queue: five investigations formerly ACTIVE; superseded by section 4.14.
 TREE_CORE integrity remains OPEN. No canonical source changed.
 
 
-4.2 Mathematical examples from original register
+4.2 Mathematical examples from original register — PEDAGOGY, NOT DISCOVERIES
 3.1 TEN WORKED MATHEMATICAL EXAMPLES
 The following are conditional derivations; most reproduce established mathematics.
 
@@ -1770,7 +1793,9 @@ Economic test: platform reuse, regulatory and manufacturing costs, outcomes
 and equitable access; costs per patient remain unknown here.
 Evidence: pioneering initial clinical result, not established scalable cure.
 
-11. NARROW NEW ENGINEERING CANDIDATE — ACTIVE FOULING IDENTIFICATION
+11. HISTORICAL FOULING-IDENTIFICATION EXAMPLE — PEDAGOGY, NOT AN ACTIVE CLAIM
+Current disposition: PARKED_KNOWN_OVERLAP; see the decision-focused screen in 4.14.
+The following original derivation and limitations are retained as historical text.
 Status: mathematical identification under assumptions; NOT a novel physical law.
 Problem: infer a heat exchanger's flow-independent fouling resistance Rf while
 convection changes with flow. Assume the simplified model
@@ -9307,3 +9332,426 @@ engineering models and measured site inputs, preregister matched comparisons,
 then test the few material residual questions. A quota of additional ideas cannot
 substitute for those evidence steps. The present result is useful mapping and
 falsification work, with the primary novel-positive-value objective still unmet.
+
+
+4.14 SINGLE-CLAIM, PRIOR-ART-FIRST RESEARCH POLICY AND A3 STOP RECEIPT
+Date: 2026-10-09. Owner: this noncanonical scientific research register.
+Scope: prospective scientific work recorded here. Canonical effect: NONE.
+Source of policy change: the user's explicit process-reset instruction in this
+conversation. This replaces earlier research queue and execution-order choices;
+it does not amend GCSC, TREE_CORE, IDTD-001 or canonical Garden design sources.
+Repository input: main 07025ddbf3f5ce044a63dac76f268ac30cc87899.
+
+4.14.1 WHAT THE EVIDENCE DOES AND DOES NOT ESTABLISH
+
+The practical diagnosis is supported: the explored workflow repeatedly recovered
+known mechanisms and simplified-model counterexamples, while establishing no
+frontier-novel Garden finding or measured incremental Garden economic benefit.
+Section 4.13 contains 67 positive, 29 negative and four unknown ASSUMED financial
+scenarios. The positive numbers are not gains over the strongest modern method.
+Where the implemented strong comparator reproduces the same decision, its gross
+incremental benefit is zero within that specified model; any extra deployment
+cost would reduce net value. That is a bounded model result, not a measured
+industry-wide zero. Unchecked comparisons remain UNKNOWN, not zero.
+
+The proposed total 248 = 100 original stubs + 33 opportunities + 10 later cases
++ 100 N-series cases + five investigations is inventory arithmetic. It mixes
+different depths, units of work, inherited mechanisms and potentially overlapping
+records. A deduplicated count of independent experimental hypotheses has not
+been established. Most entries are not experiments; some remain unreviewed.
+The eight targeted referee prior-art confirmations in 4.13.8 are useful negative
+evidence for those selected claims, not a random sample of all possible gaps.
+
+Supported disposition: REDISCOVERY-HEAVY EXPLORATORY SCREEN; ORIGINAL SCIENTIFIC
+AND MEASURED ECONOMIC OBJECTIVES UNMET. Historical synthetic experiments do
+exist; zero PHYSICAL pilots and zero blind matched-budget discovery benchmarks
+must not be shortened to "zero experiments of any kind."
+
+Not established by these records:
+- "248 independent failures" or a statistically well-powered comparative test;
+- Garden discovers at the same rate as specialists (no measured control rate);
+- 100 independent domains are saturated or no novel industrial gaps exist;
+- the next 100 attempts must have the same result;
+- Garden's complete GCSC/SAL/TREE_CORE machinery has been empirically refuted.
+
+No binomial success-rate bound or power claim is calculated from this inventory.
+The sampling frame, independence, exposure, stopping rule and matched comparator
+needed for such an inference were not specified. Method advantage is UNMEASURED.
+Failure to establish a benefit is enough to stop unsupported expansion; it is
+not proof that no benefit is possible. Publication alone would likewise not
+establish novelty, replication or net value.
+
+4.14.2 OPERATIVE QUEUE AND STATUS OVERLAY
+
+Maximum concurrent experimental claims: ONE. Current experimental claims: ZERO.
+Sole selected problem review: existing A3 heat-exchanger cleaning decision.
+A3 status: CONTEXT_REQUIRED / NO_DEFENSIBLE_RESIDUAL_ESTABLISHED / DO_NOT_ADVANCE.
+A3 is not a new idea, candidate ID or admitted hypothesis. No new mechanism,
+equation, predicted saving, simulation or physical trial is created in this pass.
+All A1/A2/A4-A10, original 001-100, industrial opportunity rows, earlier individual
+cases and N001-N100 remain PARKED for new development. Existing A3 perturbation
+and two-flow resistance examples remain PARKED_KNOWN_OVERLAP, not experimental
+claims activated by selecting the decision for review.
+
+This overlay governs historical uses of ACTIVE, current focus, candidate, frozen,
+preregistered and next-cycle recommendations elsewhere in the file. Those words
+are retained only where needed to preserve what earlier work actually proposed.
+The old N072 follow-up suggestion is historical, not a parallel work instruction.
+No additional candidate quota is accepted by this research policy. Empty active
+slots do not authorize a new catalogue; the next problem also needs a real lock.
+
+Demotions are explicit and preserve provenance:
+- NOT REVIEWED plus conditional-benefit rows: PARKED_UNREVIEWED, no mechanism work.
+- Textbook/known-model derivations: PEDAGOGY or historical verification fixtures.
+- Assumed facility-dollar examples: SCENARIO_ONLY, excluded from measured savings.
+- World/sector-dollar arithmetic: HISTORICAL_ILLUSTRATION, inadmissible as current
+  economic estimates. Population scaling waits for G8 on a defined real population,
+  supported eligibility, adoption, transferability, costs and overlap accounting.
+- Negative findings: retained and displayed with the same evidential visibility
+  as positives; no silent replacement by a better-looking endpoint or comparator.
+
+This is a documented research execution policy, not a claim that a new runtime
+controller, persistent worker or automatic gate-enforcement service was installed.
+
+4.14.3 PROSPECTIVE EXECUTION CONTRACT
+
+Stage 1 — PROBLEM LOCK, before any idea title or new mechanism.
+Record site/process boundary; financially material decision and decision times;
+current deployed policy and strongest feasible contemporary comparator; exact Y
+actually available before each action, units, timestamps and calibration; feasible
+actions including defer/do nothing; full cost ledger, horizon and success threshold.
+Freeze population, constraints and evidence ownership. Missing items produce
+CONTEXT_REQUIRED, not an assumed toy baseline. Observed plant practice alone is
+insufficient if a stronger eligible method is available for the same decision.
+
+Stage 2 — HOSTILE PRIOR ART, before candidate equations.
+Search the locked decision across papers, patents and industrial practice. Retain
+queries, dates, primary sources, access limitations, tested populations and scope.
+Rank named comparators by decision/action/population compatibility and demonstrated
+performance, not publication date or how easy they are to beat. A monitoring-only
+paper is not automatically an end-to-end cleaning-policy comparator. Newer papers
+can supplement an older method without displacing a stronger deployed baseline.
+Required residual: "Baseline [name/version] still fails under [documented condition]
+on [this decision]; our only allowed claim is [bounded incremental consequence]."
+Evidence must support the alleged failure. A paper omitting a feature, an inaccessible
+implementation, or an untried combination does not establish that specialists fail.
+If this sentence cannot be justified, record the stop and create no claim stub.
+
+Stage 3 — ONE NARROW CLAIM, only after Stages 1-2 pass.
+Allowed: matched operational Y with different value-optimal actions and a feasible
+additional Z whose incremental net value can be tested; or a verified useful
+outcome without a supposedly necessary costly condition, accounting for all hidden
+steps, mass, energy, quality and constraints. Generic memory/topology claims and
+sector expenditure times a hoped-for percentage are not admissible. The source
+graph must identify the precise missing transfer/constraint in the named baseline.
+Typed equation contracts, units, limiting cases, conservation and falsifiers then
+become appropriate. Generated relations remain hypotheses, not admitted seeds.
+
+Stage 4 — PREREGISTRATION, before fitting and evaluation data collection.
+Freeze the sole claim, features/measurements, model classes, comparator versions,
+training/tuning budgets, population, exclusions/missingness rules, action policy,
+cost ledger, primary Delta_net estimand, practically worthwhile effect threshold,
+sample size and its design assumptions, stopping rule, uncertainty analysis and
+falsifier. Name the independent data custodian and outcome judge. Hash/time-stamp
+the exact protocol and source/data versions before unblinding; a hash alone proves
+neither independence nor truth. Separate calibration/variance-estimation data from
+evaluation outcomes. Earlier exploratory data cannot be relabelled held-out.
+Sample size cannot be invented before variance, clustering, horizon and effect-size
+requirements are known. Amendments remain visible and require fresh untouched data
+for any changed primary target; no post-hoc endpoint switching.
+
+Stage 5 — BLIND MATCHED COMPARISON.
+Garden arm uses the declared mapping and operators; control uses the strongest
+eligible domain workflow. Give both the same initial information, feasible actions,
+instrument-access rights, cost schedule and resource limits. Log time, searches,
+compute, expert assistance, failed attempts and measurement costs. Permit the
+control to exploit the same physical insight or affordable measurements when
+available to a competent specialist; never freeze it to a deliberately weak scalar.
+Mask method labels from the outcome judge and withhold outcomes from both teams.
+Freeze outputs before outcome unblinding and final novelty adjudication. During
+generation, ordinary literature access is matched across arms; concealed answer
+keys, future outcomes and solution-bearing benchmark packets are withheld.
+
+Two questions need distinct evidence:
+1. Does the frozen candidate policy increase held-out net value over its comparator?
+2. Does Garden generate better candidates than a conventional discovery workflow?
+A successful policy trial addresses (1). It addresses (2) only if the candidate
+generation itself was independently blinded and matched. One held-out win is a
+minimum eligibility condition, not sufficient evidence of general method superiority.
+The present operator has already seen the A3 mechanisms and literature. Replaying
+A3 with hidden labels cannot restore discovery blindness. An independent steward
+must supply untouched cases for a prospective method test. Retrospective hidden-paper
+tests remain vulnerable to model-training contamination. Report failures and ties.
+
+Stage 6 — PHYSICAL/PILOT AND ECONOMIC GATES.
+Require a qualified site/lab, authorization for the actual intervention, traceable
+assets/units, locked safe operating limits, held-out cohorts and real energy,
+measurement, labour, cleaning, consumables, scrap, downtime and integration costs.
+Account for quality/throughput differences, maintenance carryover, network coupling,
+lost production and intervention-induced degradation; do not monetize recovered
+heat and avoided fuel twice. Distinguish marginal value from allocated accounting
+cost. Unvalidated off-policy counterfactual savings do not pass G8. Simulators and
+replays are engineering checks and may reject claims, not substitute for real value.
+
+Stage 7 — INDEPENDENT ADMISSION.
+Keep formulation, math validity, simulation, scoped prior-art review, empirical
+validation, economic measurement, independent replication and admission separate.
+Under this project's stated standard, a novel economically valuable finding needs
+a named modern baseline, preregistered positive held-out net value after all costs,
+independent replication and protocol-level paper/patent screening without known
+anticipation. A non-significant result is inconclusive unless the study supports
+an equivalence/bounded-effect conclusion. A source hit may reject novelty even if
+the intervention works. Independent review cannot be supplied by proposer agreement.
+No self-admission; no scientific result changes canonical Garden through this file.
+
+G0-G9 identifiers in section 1.5 remain historical research labels. Execution
+places G6 before G2, and substantive residual evidence before new mechanism work.
+This does not reorder or rename the separate twelve GCSC semantic-validity gates.
+
+4.14.4 SOLE PROBLEM REVIEW: A3 CLEANING DECISION, BEFORE A NEW CLAIM
+
+Selection reason: A3 already has an explicit clean/defer decision, energy and
+downtime endpoints, known perturbation prior art and existing negative findings.
+It is selected for a bounded gate check, not because novelty is probable. No move
+to another domain or second active investigation is authorized by this selection.
+
+Provisional decision scope recorded on 2026-10-09:
+- Domain: an industrial heat-exchanger network with fouling, utility costs and
+  maintenance opportunities. Actual site, exchanger types and fouling chemistry:
+  UNKNOWN. Refinery and plate-exchanger examples below are literature contexts,
+  not interchangeable evidence that the target plant has either configuration.
+- Decision: clean/defer a specified exchanger at a permitted maintenance window;
+  choose diagnostic measurement only if it can change that admissible action.
+- Candidate action envelope: existing approved clean/defer options. Flow excitation,
+  bypass/redistribution or chemical changes are NOT assumed authorized actions.
+- Observables Y: actual plant channels UNKNOWN. Request timestamped inlet/outlet
+  temperatures, flow/pressure channels, controller setpoints/valve states, operating
+  mode, measurement quality and maintenance history if they exist. Their availability
+  and cost must be established; this request does not pretend they are installed.
+- Baseline: actual deployed algorithm, version, tuning and operator overrides UNKNOWN.
+  The named literature shortlist below is not proof of the strongest site baseline.
+- Cost model: whole-network decision cost over a locked horizon at required service
+  quality, including utility/pumping, cleaning, lost production, diagnostics and
+  deployment. Currency, prices, horizon, production losses and cost allocations UNKNOWN.
+- Success: positive held-out incremental net value versus the strongest eligible
+  comparator after costs, meeting a prespecified practical threshold and constraints.
+  Numeric threshold, precision and sample size UNKNOWN; none is invented here.
+
+Lock status: PROVISIONAL CONTEXT RECORD, NOT A COMPLETE PROBLEM LOCK.
+Exposure chronology: broad orientation searches and the historical A3 text were
+seen before this record was written. This desk review is exploratory, not a
+preregistered or blinded discovery attempt. No fitting or new experiment occurred.
+
+4.14.5 A3 DECISION-FOCUSED PRIOR-ART MEMO (SCOPED, NOT EXHAUSTIVE)
+
+Search date: 2026-10-09. Initial search families included:
+"heat exchanger fouling cleaning optimization uncertainty 2024 2025 2026";
+"heat exchanger optimal experiment design fouling";
+"patent heat exchanger cleaning decision flow compensated fouling economics";
+"Alfa Laval connected services heat exchanger cleaning condition monitoring".
+Exact-title follow-ups located the primary items below. Searches covered decision
+scheduling, uncertainty, sensing, physical excitation, patents and deployed practice.
+Some publisher pages returned 403/429. Accessible primary abstracts, indexed
+publisher excerpts, repository records, patent text and conference text are
+distinguished below. Search-result recommendation snippets were not attributed
+to the target paper. This is not a complete patent claim chart or a 2026 census.
+
+P1. Ren et al. (2024), "Deterministic scenarios guided K-Adaptability in multistage
+robust optimization for energy management and cleaning scheduling of heat transfer
+process", Energy 312, 133558, DOI 10.1016/j.energy.2024.133558.
+https://www.sciencedirect.com/science/article/abs/pii/S036054422403336X
+Evidence accessed: primary publisher indexed abstract/highlights/excerpts; direct
+full-page fetch blocked. It explicitly addresses energy/cleaning decisions under
+uncertain fouling using multistage robust optimization. This defeats a broad claim
+that existing cleaning models ignore uncertain future fouling. Full implementation,
+site transfer, computational budget and comparative net value remain unverified.
+
+P2. Al Ismaili, Lee, Wilson and Vassiliadis (2019), "Optimisation of heat exchanger
+network cleaning schedules: Incorporating uncertainty in fouling and cleaning model
+parameters", Computers & Chemical Engineering 121, DOI 10.1016/j.compchemeng.2018.11.009.
+https://www.repository.cam.ac.uk/handle/1810/287000
+Evidence accessed: author-institution accepted-manuscript repository record/abstract.
+It describes shared cleaning actions across parameter scenarios and refinery-network
+case studies. This is older direct prior art for uncertain fouling AND cleaning,
+not a new 2024 contribution. No unpublished plant net-value result is inferred.
+
+P3. Patil, Srinivasan and Srinivasan (2022), "Monitoring fouling in heat exchangers
+under temperature control based on excess thermal and hydraulic loads", Chemical
+Engineering Research and Design 181, 41-54, DOI 10.1016/j.cherd.2022.02.032.
+https://www.sciencedirect.com/science/article/pii/S0263876222000958
+Evidence accessed: primary publisher indexed abstract and section excerpts. It
+addresses feedback control masking degradation and changes in setpoints/flowrates
+through excess thermal/hydraulic indicators. Hence a constant-duty or raw-resistance
+projection witness alone does not establish a new diagnostic gap. Monitoring is
+not by itself a complete economic cleaning policy.
+
+P4. "Optimal design of tests for heat exchanger fouling identification" (2016),
+Applied Thermal Engineering, publisher record S1359431115012892.
+https://www.sciencedirect.com/science/article/abs/pii/S1359431115012892
+Evidence accessed: primary publisher indexed excerpts; direct fetch blocked. It
+optimizes test inputs/input trajectories for fouling identifiability using a
+D-optimal design framework in an aircraft environmental-control context. This
+establishes prior art for purposeful diagnostic excitation, not equivalence to
+every industrial plant protocol or proof of positive cleaning-decision net value.
+
+P5. Collett, Stasik, Casolo and Riemer-Sorensen (2026), "Fast Bayesian equipment
+condition monitoring via simulation based inference: applications to heat exchanger
+health", arXiv:2604.20735v1, submitted 22 April 2026.
+https://arxiv.org/abs/2604.20735
+Evidence accessed: primary preprint abstract/version metadata. It infers uncertain
+fouling/leakage parameters from thermal-fluid observations and compares with MCMC
+on synthetic scenarios. It is an observer candidate for comparison, not evidence
+of plant cleaning savings, independent replication or a verified strongest controller.
+
+P6. Tata Consultancy Services, US12547800B2, "System and method for identification
+and forecasting fouling of heat exchangers in a refinery", published 10 February
+2026; earlier publication US20220083716A1, 17 March 2022.
+https://patents.google.com/patent/US12547800B2/en
+Evidence accessed: primary patent text, description of observer/predictor/recommender
+and cleaning cost inputs, and claim text. It connects sensed operating/fouling states,
+network/design/maintenance history and costs to cleaning/operational recommendations.
+Cost categories include unavailability and production loss. This is substantive
+published overlap with a generic "diagnose then optimize cleaning economically"
+protocol. Patent disclosure is not independent evidence that the system works,
+is the best operational baseline, or is legally available for a particular use.
+No legal validity, infringement or freedom-to-operate opinion is made here.
+
+P7. L. G. Nilsson, Alfa Laval (2024), "Tackling Fouling Challenges with the Alfa
+Laval Smart Heat Exchanger", International Conference on Heat Exchanger Fouling
+and Cleaning, Lisbon, 21-26 April 2024, proceedings pp. 252-257.
+https://heatexchanger-fouling.com/wp-content/uploads/2024/11/31.-Nilsson.pdf
+Evidence accessed: conference PDF text, equipment/measurement and installation
+sections. The vendor-authored account describes connected condition monitoring,
+operational observations and cleaning history at a manufacturing cooling installation.
+This establishes an industrial-practice comparator to a fixed calendar assumption.
+It does not show that all plants deploy such monitoring or independently verify
+Garden's benefit. Vendor-reported gains are not adopted as our economic evidence.
+
+Additional 2025 leads retained, not promoted to fully reviewed comparators:
+P8. "Cleaning Schedule Optimization of Heat Exchangers with Fouling on Tube and
+Shell Sides: A Metaheuristic Approach", Energies 2025, 18, 71.
+https://www.mdpi.com/1996-1073/18/1/71
+Primary publisher search excerpt/version record only; direct fetch returned 429.
+Both-side fouling and discrete cleaning-time modelling are explicit in the excerpt.
+P9. "A deposition-removal-informed hybrid temporal model for online fouling estimation
+of industrial heat exchangers under parameter variability and nonstationarity",
+Energy 337 (2025), publisher record S0360544225040095.
+https://www.sciencedirect.com/science/article/pii/S0360544225040095
+Primary publisher title/volume records only. Detailed methods, performance and
+decision compatibility NOT REVIEWED. The title is not evidence of any superiority.
+
+Comparator priority for the PROVISIONAL clean/defer decision:
+1. Strongest feasible site policy: mandatory, but identity/performance UNKNOWN.
+2. P1 plus P2: leading decision-compatible scheduling methods to reproduce/inspect
+   if their network and resource assumptions match the site. Ranking is relevance,
+   not demonstrated head-to-head superiority or a claim of universal best method.
+3. P6 and P7: integrated disclosed/industrial workflows for prior-art and practical
+   comparison; different equipment contexts prevent automatic interchangeability.
+4. P3/P4/P5: diagnostic/experiment-design components a strong comparator may exploit.
+   They cannot be treated as weak standalone cleaning controllers to manufacture a win.
+P8/P9 remain access-limited leads; their unresolved scope cannot count as a novelty gap.
+
+Residual decision: CANNOT COMPLETE THE REQUIRED BASELINE-FAILURE SENTENCE.
+No retrieved evidence establishes that a named eligible modern site baseline loses
+net value in a specified condition that a new Garden protocol repairs. The older A3
+formulation's broad elements are already represented in prior art. A possible
+cheap safe protocol-level difference is UNKNOWN, not a residual established by
+absence of an exact phrase. Stop before a new hypothesis, equation or experiment.
+
+4.14.6 GARDEN BINDING AND BOUNDED REVIEW COVERAGE
+
+Actual retained source mechanics were rechecked: the Abstraction/GCSC delta,
+GCSC v0.1 validity pipeline/anti-gaming rules, IDTD-001 and TREE_CORE ownership,
+source fallback and no-self-admission sections. Exact source hashes and earlier
+span bindings remain in 4.9/4.13. No source version was silently replaced.
+
+Reuse existing owners: CLAIM for the scoped research assertion; CONTEXT for site,
+operating mode and evidence availability; VALUE for the typed cost endpoint;
+ACTION/AGENCY only for authorized human/organizational decisions; THING/STATE
+for equipment and measured state; PROCESS/EVENT for operation, observation and
+maintenance. Physical media acquire no human authority. PROJECTION records Y
+and its lost information; CONTRACT records the gate's preconditions and failure
+state. Evidence supports a claim within scope; missing site context blocks its
+promotion. This is a manual research binding, not proof of full SAL type admission.
+
+GCSC CONTEXT remains CONTEXT_REQUIRED; STATUS preserves PARKED/UNKNOWN; COMPOSITION
+requires checking the combined observer, decision policy, maintenance and network
+effects; OBSERVATIONAL_EQUIVALENCE prevents relabelling the same specialist method
+as a new finding. Materiality is decision cost at required physical performance,
+not the number of ontology objects or catalogue rows. The research policy reuses
+Evidence/Provenance and DependencyValidity rather than creating a new authority.
+
+Coverage for THIS bounded pass, not a domain coverage percentage:
+- New scientific candidates, mathematical mechanisms and financial scenarios: 0.
+- Existing problem families receiving the focused decision review: 1 (A3).
+- Unique primary source items retained: 9; P1-P7 have the scoped content access
+  stated above, P8-P9 remain leads. Nine items are not nine full protocol reviews.
+- Fully specified site problem locks / evidenced modern-baseline residuals: 0 / 0.
+- Preregistered experiments / blinded comparisons / new simulations / field pilots: 0.
+- New independent replications / measured positive Garden increments: 0 / 0.
+- New situation/transition/invariant enumeration: 0; earlier graph coverage is
+  retained, not inflated by this process change. Universal coverage: UNKNOWN.
+- Unresolved interfaces: actual sensor-to-observer data; observer-to-policy
+  calibration; policy-to-authorized action; intervention-to-network/quality effects;
+  and cost/outcome attribution. These are missing CONTEXT for a study, not claimed
+  previously unknown physical relationships.
+
+Gate ledger:
+Stage 1 | CONTEXT_REQUIRED | actual plant, Y, comparator, actions and costs absent.
+Stage 2 | SCOPED SCREEN RECORDED; DO_NOT_ADVANCE | no defensible residual; access limits.
+Stage 3 | NOT_OPENED | zero active experimental claims.
+Stage 4 | NOT_PREREGISTERED | required fields cannot yet be frozen honestly.
+Stage 5 | NOT_RUN | no blind matched-budget method or policy comparison.
+Stage 6 | NOT_RUN | no physical site, cohort, authorization or measured costs.
+Stage 7 | NOT_ELIGIBLE | no independently replicated/admitted scientific finding.
+TREE_CORE determinism/gzip/CRC/schema/source-retention debts: UNCHANGED/UNRESOLVED.
+
+4.14.7 CONCRETE RESTART INPUTS AND CONDITIONAL 90-DAY WORK PACKAGE
+
+The next evidence step is a site problem packet, not another idea batch. Needed:
+1. One nominated plant/network, exchanger identifiers, process duty, fouling
+   mechanism evidence, network drawing and operating/maintenance constraints.
+2. The actual clean/defer policy, vendor/model versions, tuned settings, operator
+   overrides and any stronger affordable contemporary method already evaluated.
+3. Representative pre-decision historian records with units/time alignment,
+   calibration/missingness flags, cleaning logs and post-cleaning outcomes; include
+   both profitable and unprofitable/failed interventions without outcome selection.
+4. Documented marginal utility, pumping, labour, consumable, waste, downtime,
+   diagnostic and integration costs; throughput/quality requirements and horizon.
+5. A qualified site decision owner, approved intervention envelope and independent
+   data/outcome custodian. No contact, purchase or plant action is made by this record.
+
+With that packet, freeze one exact decision and compare the real policy against
+the eligible P1-P9 methods. If there is still no evidenced residual, close the A3
+review as NO_CLAIM and publish that result; do not manufacture one to fill the slot.
+Only material new evidence, a documented baseline limitation or a genuinely changed
+decision context can reopen it, with provenance and invalidation of stale comparisons.
+
+Conditional schedule; these are bounded work windows, not scheduled background jobs:
+- Days 1-14 after data/site access: close Stage 1 and comparator eligibility. Missing
+  context stops the clock; do not fit or silently assume a baseline.
+- Days 15-30: acquire necessary full texts/implementations, reproduce the strongest
+  feasible comparator on calibration material, write or reject the residual. A
+  failed residual closes the review before an experimental claim is opened.
+- Days 31-45, only after a residual passes: independently review the narrow claim,
+  freeze preregistration, cost endpoint, data splits, power/sample-size assumptions
+  and stopping rule. Use separate feasibility data where justified; do not count
+  those observations as untouched evaluation outcomes.
+- Days 46-75, only with site authorization and an adequate observation horizon:
+  run the smallest safe informative pilot. Cleaning changes later fouling states;
+  do not treat successive timestamps or repeated runs on one asset as independent
+  replicates. Choose asset/network/campaign allocation and analysis around actual
+  carryover and shared utilities with independent design review. If fouling cycles
+  exceed this window, extend follow-up explicitly rather than declare success early.
+- Days 76-90: independent blinded analysis and publication of positive, negative
+  or inconclusive results with real costs, failures and exclusions. Independent
+  replication remains a separate requirement and may take longer than 90 days.
+
+No numerical effect size, success probability, annual saving or global market
+benefit can be supplied from the present evidence. The process correction makes
+unsupported claims harder to advance; it does not guarantee a novel result.
+
+Current completion: research policy applied; historical statuses demoted with
+meaning retained; one scoped A3 prior-art memo completed; no defensible residual
+established. Useful work now depends on a real site/baseline packet, not a quota
+of further candidates. Scientific discovery and measured savings remain unachieved.
