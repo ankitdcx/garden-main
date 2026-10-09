@@ -5384,3 +5384,9 @@ periodic balances and ten finite graph reference checks. No field gate PASS.
 Final status: ten investigated; zero verified novel money-saving discoveries;
 seven positive conditional scenarios; unresolved questions remain explicitly open.
 END SECTION 4.12
+
+
+4.13 WORKSTREAM INTENT — 100 ADDITIONAL INDUSTRIAL CANDIDATES
+NONCANONICAL RESEARCH IN PROGRESS. Candidate quantity is not novelty evidence.
+Five bounded process families, independent adversarial review and reproducible
+per-facility scenarios are planned. No new savings or discoveries admitted.
