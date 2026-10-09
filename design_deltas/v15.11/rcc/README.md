@@ -34,3 +34,6 @@ The [earlier v15.11 candidate ledger](https://github.com/ankitdcx/garden-main/bl
 
 The user authorized this candidate registration and repository publication on 2026-09-22. That authorization is not represented as implementation certification or canonical admission. No paid model calls were made.
 
+## 2026-10-09 reconciliation
+
+RCC relates to [VEI](../vei/README.md) (effect enforcement), [ERC](../erc/README.md) (evaluation reachability), [REP](../rep/README.md) (independent representation), [MCC](../GARDEN_MCC_001_CANDIDATE.md) (context closure), and [USM](../GARDEN_USM_001_CANDIDATE.md) (situation mapping).

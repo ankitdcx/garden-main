@@ -1,6 +1,6 @@
 {
   "schema": "GardenCorpusIndex/v1",
-  "updated": "2026-10-07",
+  "updated": "2026-10-09",
   "canonical": {
     "id": "Garden-v15.5",
     "gsl": "v45.1",
@@ -30,7 +30,62 @@
       "description": "Abstraction/GCSC/SAL/SAC, semantic retention and Tree Core lineage.",
       "companion_candidate_note": "design_deltas/v15.10/GENERATIVE_SEMANTIC_KERNEL_AND_DERIVED_GARDEN_CANDIDATE.md",
       "invariant_driven_theory_discovery": "design_deltas/v15.10/INVARIANT_DRIVEN_THEORY_DISCOVERY_IDTD_001.md",
-      "recursive_discovery_compression": "design_deltas/v15.10/RECURSIVE_SEMANTIC_DISCOVERY_COMPRESSION_RSDC_001.md"
+      "recursive_discovery_compression": "design_deltas/v15.10/RECURSIVE_SEMANTIC_DISCOVERY_COMPRESSION_RSDC_001.md",
+      "readme": "design_deltas/v15.10/README.md",
+      "files": [
+        {
+          "path": "design_deltas/v15.10/V15_10_ABSTRACTION_GCSC_DELTA.md",
+          "status": "NONCANONICAL_WORKING_DELTA"
+        },
+        {
+          "path": "design_deltas/v15.10/GSL_COMBINATORIAL_SEMANTIC_COVERAGE_v0.1.md",
+          "status": "NONCANONICAL_METHOD_CANDIDATE"
+        },
+        {
+          "path": "design_deltas/v15.10/GENERATIVE_SEMANTIC_KERNEL_AND_DERIVED_GARDEN_CANDIDATE.md",
+          "status": "NONCANONICAL_CANDIDATE_GSK_001_ALIAS"
+        },
+        {
+          "path": "design_deltas/v15.10/INVARIANT_DRIVEN_THEORY_DISCOVERY_IDTD_001.md",
+          "status": "NONCANONICAL_CANDIDATE"
+        },
+        {
+          "path": "design_deltas/v15.10/RECURSIVE_SEMANTIC_DISCOVERY_COMPRESSION_RSDC_001.md",
+          "status": "NONCANONICAL_CANDIDATE"
+        },
+        {
+          "path": "design_deltas/v15.10/TREE_CORE_v0.8.1_2026-09-23.txt",
+          "status": "NONCANONICAL_STRUCTURAL_CANDIDATE"
+        },
+        {
+          "path": "design_deltas/v15.10/V15X_RETENTION_RECOVERY_ADDENDUM_2026-09-20.md",
+          "status": "NONCANONICAL_RETENTION_ADDENDUM"
+        },
+        {
+          "path": "design_deltas/v15.10/GARDEN_TECHNICAL_v15.10_FULL_DELTA.txt",
+          "status": "SUPPORTING_WORKING_CANDIDATE"
+        },
+        {
+          "path": "design_deltas/v15.10/GCSC_RELATION_SIGNATURE_CANDIDATE.json",
+          "status": "NONCANONICAL_SIGNATURE_CANDIDATE"
+        },
+        {
+          "path": "design_deltas/v15.10/README.md",
+          "status": "NAVIGATION_ONLY"
+        },
+        {
+          "path": "design_deltas/v15.10/TREE_CORE_GUIDE.md",
+          "status": "NONCONTROLLING_GUIDE"
+        },
+        {
+          "path": "design_deltas/v15.10/TECHNICAL_DELTA_GUIDE.md",
+          "status": "NONCONTROLLING_GUIDE"
+        },
+        {
+          "path": "design_deltas/v15.10/RELATION_SIGNATURE_GUIDE.md",
+          "status": "NONCONTROLLING_GUIDE"
+        }
+      ]
     }
   ],
   "additive_candidates": [

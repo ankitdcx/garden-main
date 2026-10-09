@@ -53,3 +53,7 @@ These were explicitly recorded as non-admitting future candidates. Their exact s
 ## Retention/admission rule
 
 For every candidate: recover exact source/problem/intent; compare with the current owner graph and stronger duplicates; compare DO_NOTHING/simpler alternatives; identify minimal owners; add schemas/contracts/tests only where warranted; perform applicable rights/privacy/authority/safety/security/law review; close dependencies/references; obtain independent falsification; propagate admitted changes across affected sources; re-audit globally; preserve **specification != proof != implementation != empirical validation != certification**.
+
+## 2026-10-09 reconciliation
+
+**Current package reconciliation (2026-10-09):** Full retained candidate packages: `rcc/`, `rep/`, `shr/`, `erc/`, `vei/`. Retained candidate package: `rev2/`. Full candidate source files: `GARDEN_MCC_001_CANDIDATE.md`, `GARDEN_USM_001_CANDIDATE.md`, `GARDEN_v15.11_TRANSITION_AND_RESPONSIBILITY_CANDIDATE.md` (flat path intentionally retained). Protocol candidate: `MODEL_CAPABILITY_COMPARISON_CANDIDATE_2026-10-05.md` (not automatic reviewer qualification or admission evidence). Supporting projection: `GARDEN_TECHNICAL_v15.11_REVIEW_PROJECTION_2026-09-20.txt`. Entries in `RECOVERED_TECHNICAL_CANDIDATE_DIRECTIONS.md` lacking full source remain `DIRECTION_ONLY`. Earlier ERC/VEI direction entries are historical, not their current package status. Source retention is not proof, implementation, validation, certification or canonical admission.

@@ -299,3 +299,7 @@ Do not silently resurrect without materially new evidence:
 - SymphonyConductor top-level meta-engine;
 - interpretation that a recorded ConstitutionalEvent alone creates guilt/containment authority;
 - universal inspection authority.
+
+## 2026-10-09 reconciliation
+
+**Source classification:** Entries without separately recoverable full specifications are `DIRECTION_ONLY — NOT YET A CANDIDATE PACKAGE`. Preserve source gaps as UNKNOWN; do not invent missing schema or promote direction to verified design. Compare overlaps with retained full ERC, VEI, MCC, USM and Transition/Responsibility sources.

@@ -20,3 +20,7 @@ Files:
 - [Candidate specification](GARDEN_v15.11_ERC_CANDIDATE.md)
 - [Manifest](CANDIDATE_MANIFEST.json)
 - [Validation / scout reconciliation](VALIDATION.md)
+
+## 2026-10-09 reconciliation
+
+ERC complements [RCC](../rcc/README.md), [VEI](../vei/README.md), [REP](../rep/README.md), [MCC](../GARDEN_MCC_001_CANDIDATE.md), and [USM](../GARDEN_USM_001_CANDIDATE.md). Cross-references do not grant evaluation authority.
