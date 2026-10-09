@@ -1,3 +1,5 @@
+> **RECOVERY ONLY — NOT FULL RELEASES.** Exact predecessor comparisons and v15.9.1 COMPLETE-archive suffix coverage remain unresolved; no no-loss or canonical admission is claimed.
+
 # v15.8 → v15.9 → v15.9.1 delta recovery ledger
 
 This folder set preserves **source-defined added clauses**, not the full five-file releases. None of the three candidates is promoted to canonical by these commits.
