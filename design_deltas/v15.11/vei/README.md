@@ -21,3 +21,7 @@ Files:
 - [Candidate specification](GARDEN_v15.11_VEI_CANDIDATE.md)
 - [Manifest](CANDIDATE_MANIFEST.json)
 - [Validation / deduplication](VALIDATION.md)
+
+## 2026-10-09 reconciliation
+
+VEI complements [RCC](../rcc/README.md) (recursive change), [ERC](../erc/README.md) (evaluation reachability), [REP](../rep/README.md) (independent review), [MCC](../GARDEN_MCC_001_CANDIDATE.md) (material contexts), and [USM](../GARDEN_USM_001_CANDIDATE.md) (typed situation mapping).
