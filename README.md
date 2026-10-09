@@ -13,9 +13,13 @@ Current structure:
 - [canonical/current](canonical/current/) — **Garden v15.5 / GSL v45.1**, the only canonical five-file source.
 - [canonical/candidates/v15.6](canonical/candidates/v15.6/) — retained full five-file v15.6 candidate.
 - [canonical/candidates/v15.7](canonical/candidates/v15.7/) — retained full five-file v15.7 candidate.
+- [design_deltas/README.md](design_deltas/README.md) — full navigation for v15.6–v15.11, recovery ledgers, ownership and future-v16 notes.
 - [design_deltas/v15.6](design_deltas/v15.6/) and [design_deltas/v15.7](design_deltas/v15.7/) — supporting candidate/delta material.
+- [design_deltas/v15.8](design_deltas/v15.8/), [v15.9](design_deltas/v15.9/) and [v15.9.1](design_deltas/v15.9.1/) — **source-extracted incremental recovery**, not full five-file releases; exact no-loss comparison remains open.
 - [design_deltas/v15.10](design_deltas/v15.10/) — later abstraction/GCSC/Tree-Core working design.
 - [design_deltas/v15.11](design_deltas/v15.11/) — focused noncanonical successor candidates and recovered technical directions.
+- [15.x noncanonical consolidation index](design_deltas/GARDEN_15X_NONCANONICAL_CONSOLIDATION_INDEX.md) and [future-v16 design note](design_deltas/FUTURE_V16_NONCANONICAL_DESIGN_NOTE.md) — navigation and evaluation plans, **not** releases.
+- [CORPUS_INDEX.json](CORPUS_INDEX.json) — machine-readable repository index; candidate presence does not confer admission.
 - [USM-001 — Universal Situation Mapping](design_deltas/v15.11/GARDEN_USM_001_CANDIDATE.md) — source-bound fact ledger and deterministic GSL compiler; noncanonical.
 - [MCC-001 — Material Context Closure](design_deltas/v15.11/GARDEN_MCC_001_CANDIDATE.md) — bounded nested-context closure and anti-obstruction; noncanonical.
 - [CONTRIBUTING.md](CONTRIBUTING.md) — contribution guidance.
@@ -28,6 +32,9 @@ Current structure:
 | v15.5 / GSL v45.1 | **CANONICAL** |
 | v15.6 | retained full candidate, noncanonical |
 | v15.7 | retained full candidate, noncanonical |
+| v15.8 | historical full candidate exists outside this repository; retained added-clause extracts are incomplete comparison |
+| v15.9 | historical reviewed full candidate exists outside this repository; P001–P037 consolidation and selected closure extracts retained |
+| v15.9.1 | historical complete GCSC source lineage; retained earlier-edition clause extracts, COMPLETE suffix not fully recovered |
 | v15.10 | working-design / abstraction lineage, noncanonical |
 | v15.11 | additive candidate set, noncanonical |
 
@@ -67,6 +74,8 @@ Full retained technical candidates include:
 - [Verified Execution Integrity (VEI)](design_deltas/v15.11/vei/)
 - [Coupled Transitions and Responsibility Preservation](design_deltas/v15.11/GARDEN_v15.11_TRANSITION_AND_RESPONSIBILITY_CANDIDATE.md)
 - [Cross-Model Capability Measurement](design_deltas/v15.11/MODEL_CAPABILITY_COMPARISON_CANDIDATE_2026-10-05.md)
+- [Continuous Epistemic Assimilation (CEA / V1511-KR-001)](design_deltas/v15.11/cea/README.md) — full candidate specification, 14 invariants and 12 proposed tests; no execution or certification.
+- [Universal Situation Mapping (USM-001)](design_deltas/v15.11/GARDEN_USM_001_CANDIDATE.md) and [Material Context Closure (MCC-001)](design_deltas/v15.11/GARDEN_MCC_001_CANDIDATE.md) — full noncanonical candidate sources.
 
 The [technical review projection](design_deltas/v15.11/GARDEN_TECHNICAL_v15.11_REVIEW_PROJECTION_2026-09-20.txt) retains additional exact technical rules from the v15.11 integration lineage. Candidate directions for which no separate full source was recoverable are retained with their recoverable technical requirements in [RECOVERED_TECHNICAL_CANDIDATE_DIRECTIONS.md](design_deltas/v15.11/RECOVERED_TECHNICAL_CANDIDATE_DIRECTIONS.md). The [candidate retention ledger](design_deltas/v15.11/CANDIDATE_RETENTION_LEDGER.md) is an index/status map, not an admission mechanism.
 
@@ -84,6 +93,10 @@ At minimum, consequential promotion claims should preserve the existing Garden d
 - material predecessor semantics must not be silently lost;
 - unresolved conflicts, unknowns and counterexamples remain visible;
 - applicable rights, consent, privacy, safety, authority and Human-Effect constraints remain binding.
+
+## Repository integrity
+
+The repository contains source and candidate documents, not a certified implementation. Relative Markdown navigation and JSON parsing have been reviewed, but that does not establish semantic no-loss, executable tests, independent admission or verification of every embedded source hash. Historical/closed-branch references must not be interpreted as missing current-tree dependencies. See [design-delta retention audit](design_deltas/v15.6/RETENTION_AUDIT_2026-10-09.md) and [recovery ledger](design_deltas/V15_8_TO_15_9_1_RECOVERY_LEDGER.md). No earlier process version is safely deletable merely because v1.4 exists.
 
 ## Cleanup status
 

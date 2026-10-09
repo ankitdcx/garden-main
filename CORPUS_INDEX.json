@@ -148,6 +148,12 @@
       "status": "NONCANONICAL_CANDIDATE",
       "path": "design_deltas/v15.11/GARDEN_MCC_001_CANDIDATE.md",
       "description": "Material Context Closure — bounded recursive GSL context expansion"
+    },
+    {
+      "id": "V1511-KR-001",
+      "status": "NONCANONICAL_CANDIDATE",
+      "path": "design_deltas/v15.11/cea/GARDEN_V1511_KR_001_CEA_CANDIDATE.md",
+      "description": "Continuous Epistemic Assimilation & Consolidation; full candidate specified, tests and implementation not executed"
     }
   ],
   "recovered_candidate_material": [
@@ -164,7 +170,7 @@
       "path": "design_deltas/v15.11/CANDIDATE_RETENTION_LEDGER.md"
     },
     {
-      "status": "PENDING_CANDIDATES",
+      "status": "HISTORICAL_PENDING_SNAPSHOT_NONCANONICAL",
       "path": "design_deltas/PENDING_PROJECT_WIDE_CANDIDATES_2026-09-14.md"
     }
   ],
@@ -186,5 +192,36 @@
     "membership": "any eligible resident passing two objective tests may join and vote; open continuously",
     "votes_per_member": 1,
     "worldwide_revenue_scope": "100% of revenue from ideas worldwide including nonmember countries"
-  }
+  },
+  "recovery_packages": [
+    {
+      "id": "Garden-v15.8-delta",
+      "status": "NONCANONICAL_SOURCE_EXTRACT_INCOMPLETE_COMPARISON",
+      "path": "design_deltas/v15.8/"
+    },
+    {
+      "id": "Garden-v15.9-delta",
+      "status": "NONCANONICAL_SOURCE_EXTRACT_INCOMPLETE_COMPARISON",
+      "path": "design_deltas/v15.9/"
+    },
+    {
+      "id": "Garden-v15.9.1-delta",
+      "status": "NONCANONICAL_EARLIER_EDITION_EXTRACT_COMPLETE_SUFFIX_PENDING",
+      "path": "design_deltas/v15.9.1/"
+    }
+  ],
+  "navigation": [
+    {
+      "status": "NONCANONICAL_NAVIGATION_ONLY",
+      "path": "design_deltas/README.md"
+    },
+    {
+      "status": "NONCANONICAL_SYNTHESIS_ONLY",
+      "path": "design_deltas/GARDEN_15X_NONCANONICAL_CONSOLIDATION_INDEX.md"
+    },
+    {
+      "status": "NONCANONICAL_FUTURE_PLAN_ONLY",
+      "path": "design_deltas/FUTURE_V16_NONCANONICAL_DESIGN_NOTE.md"
+    }
+  ]
 }

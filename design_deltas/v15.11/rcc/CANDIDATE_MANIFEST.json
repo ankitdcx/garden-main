@@ -62,7 +62,10 @@
     "path": "design_deltas/v15.11/PENDING_CANDIDATES_2026-09-20.md",
     "pr": 95,
     "status_at_preflight": "CLOSED_UNMERGED_BRANCH_PRESERVED",
-    "superseded_by_this_patch": false
+    "superseded_by_this_patch": false,
+    "reference_kind": "HISTORICAL_CLOSED_UNMERGED_BRANCH_NOT_CURRENT_TREE_FILE",
+    "current_tree_presence": "ABSENT_EXPECTED",
+    "recovery_instruction": "Resolve at recorded historical commit/PR 95; do not treat as current-tree dependency or canonical source"
   },
   "validation": {
     "document_structure": "PASS",
