@@ -1,5 +1,7 @@
 # Garden design deltas — navigation
 
+**Noncanonical synthesis:** [15.x consolidation index](GARDEN_15X_NONCANONICAL_CONSOLIDATION_INDEX.md) · [future v16 evaluation note](FUTURE_V16_NONCANONICAL_DESIGN_NOTE.md). These are navigation/planning, not releases.
+
 These are **versioned, noncanonical candidate and recovery materials**, not full releases. Read [canonical candidates](../canonical/candidates/v15.7/README.md) for v15.7 five-file working source. No candidate, ledger, source extract or generated result is automatically admitted.
 
 | Folder | Purpose | Start here |
@@ -15,3 +17,7 @@ These are **versioned, noncanonical candidate and recovery materials**, not full
 **Reading order:** predecessor release → version delta → source-defined contracts → cross-version [ownership map](CROSS_VERSION_OWNERSHIP_MAP.md) → [recovery ledger](V15_8_TO_15_9_1_RECOVERY_LEDGER.md) → tests/admission receipts. A later folder does not imply supersession or promotion.
 
 **Status discipline:** CURRENT applies only within the source's own qualified scope; CANDIDATE/DEFERRED/RESEARCH/UNKNOWN remain distinct. Specification ≠ proof ≠ implementation ≠ empirical validation ≠ certification. Do not infer full semantic preservation from navigation files or generated source extracts. Historical [September 14 pending snapshot](PENDING_PROJECT_WIDE_CANDIDATES_2026-09-14.md) is not the active ledger.
+
+## Consolidation and future design
+
+[Noncanonical lineage, candidate consolidation index and future-v16 evaluation path](GARDEN_NONCANONICAL_CONSOLIDATION_AND_V16_PATH.md). This is navigation/design synthesis only; it neither creates v16 nor changes canonical status.
