@@ -3900,6 +3900,1487 @@ industrial_physical_screens.py SHA256 468f49091be1953db61e5373fdc0b9eb6ecf0bc8c9
 Existing bounded-adapter regression suite:18tests passed. Whitespace/diff check passed. Same-system independent reviewer read the full appended claims and found no blocking scope/novelty/economic overclaim. No external scientific approval or paid review was obtained.
 
 
-4.12 TEN FURTHER INDUSTRIAL INVESTIGATIONS — WORKSTREAM INTENT
-NONCANONICAL RESEARCH; IN_PROGRESS, 9 October 2026.
-Bounded package: ten distinct physically mapped candidates, primary-paper/patent checks, scoped quantitative predictions and conditional per-facility economics. Expected paths: this consolidated report and industrial_ten_cases.py. Canonical sources and external plants/software unchanged. Hypothesis, mathematical/model support, prior art, novelty and measured savings remain separate; no ten-discovery promise. Four mapping roles, adversarial novelty review and economic review are in progress. Base b9da78346f0ee38de5cdc154e522469066522e07; branch chatgpt/ten-industrial-gaps-20261009. This intent-only bootstrap precedes substantial repository edits; it will be replaced by the complete evidence record within this section.
+======================================================================
+4.12 TEN FURTHER INDUSTRIAL CLOSURE INVESTIGATIONS — 9 OCTOBER 2026
+======================================================================
+Status: NONCANONICAL RESEARCH. No established novel discovery or measured
+Garden-specific economic benefit. This section is an append-only research
+extension to the complete prior register; canonical Garden sources are unchanged.
+
+4.12.1 OUTCOME AND WHAT THE NUMBERS MEAN
+
+The request was for ten more novel ideas with savings. We investigated ten
+additional industrial interventions rather than declaring ten discoveries.
+The requested scientific novelty criterion has NOT been met in this batch.
+Seven cases have positive arithmetic under explicit hypothetical plant inputs;
+none establishes a novel increment over the strongest available engineering.
+One proposal loses to ordinary control, one fails the declared economic screen,
+and one has no demonstrated diagnostic advantage and only a cost threshold.
+These failures neither establish domain saturation nor invalidate the method.
+
+All financial amounts below are USD PER FACILITY PER YEAR after the stated
+recurring costs and annualized incremental capital. They are NOT global savings,
+measured savings, current vendor quotations, or probability-weighted forecasts.
+The assumed 8% discount rate and 10-year life give CRF=0.1490294887/year.
+Seven positive figures are opportunities conditional on the specified physical
+gain and comparison, not seven qualified investments. No success probability is
+estimated. The rows must not be summed into a Garden or worldwide benefit.
+
+Case | Process/interface | Conditional annual net | Controlling qualification
+H1 | Aluminium decoating -> ash removal -> compaction -> all recovery paths
+   | +$650,970.51 | Requires UNMEASURED extra 5 kg saleable Al/t feed at 100 kt/y;
+     existing hot ash separation is prior art; all fines/dross recovery counted.
+H2 | Steel surface/corner phase reset -> core self-reheat -> hot charging
+   | +$3,438,185.89 | IDEAL retained-heat scenario at 1 Mt/y versus full cooling;
+     core sequence already disclosed; no increment over modern selective cooling.
+H3 | Cement hot mineral separation -> chloride condensation -> return/purge
+   | +$237,637.18 | Requires UNMEASURED additional clean return of 14 kg/t at
+     1 Mt/y; modern coarse-return and heat-recovery baseline may erase benefit.
+U1 | Contaminated condensate -> flash split -> separate qualified destinations
+   | +$83,811.15 | Assumed eligible duty 10%, 30 t/h; chemistry and leak-repair
+     comparator unresolved; established stripping/recovery mechanism.
+U2 | Tower salt inventory -> combined blowdown -> receiving treatment
+   | REJECTED | Ordinary continuous blowdown has lower modeled receiver peak
+     at identical periodic water/salt totals; apparent +$45,670 is not credited.
+U3 | Stratified storage -> cold and tolerant loads -> full recharge
+   | +$50,196.37 | Assumed existing 4,000 m3 usable layer, 200 matched cycles/y;
+     equivalent modern multi-temperature routing ties the proposed action.
+F1 | Sectional defrost -> vapor collector -> drainage -> restored cooling
+   | NEGATIVE | Cooling-only net -$28,205.90; generous separate electric-heat
+     replacement sensitivity -$18,305.90. Original hot-gas case cannot assume
+     electric-resistance credit. Neither result proves universal unprofitability.
+F2 | Hot plate integrity -> pressure-coded tracer -> independent startup gate
+   | UNKNOWN | Needs >$18,461.18/y genuinely additional avoided loss. A strong
+     hot constant-pressure tracer test is more sensitive in the modeled noise.
+M1 | Thin-wall machining -> two safe nonzero preloads -> released acceptance
+   | +$91,763.72 | Assumes UNMEASURED 1 percentage-point scrap improvement on
+     100,000 parts/y; compensation family known, narrow integration unresolved.
+M2 | Resin identity in separate hot-runner branches -> endpoint purge -> restart
+   | +$62,990.11 | 500 assumed changes/y versus all-open purge; direct published
+     selective-gating prior art ties the material result; no time gain credited.
+
+Scale examples are deliberately explicit. H2's million-dollar figure belongs to
+one hypothetical million-tonne steel operation, not all steel plants. H1's figure
+belongs to one hypothetical 100,000-tonne scrap operation. Finding a real site
+with these unexploited conditions remains outstanding. A large affected industry
+is not evidence of an eligible population, incremental recovery, or adoption.
+
+4.12.2 SOURCE, GARDEN AND TREE STATUS BOUNDARIES
+
+Repository base: ankitdcx/garden-main at
+b9da78346f0ee38de5cdc154e522469066522e07 (merged preceding research PR185).
+The actual retained v15.10 GCSC delta, GCSC v0.1, IDTD-001, TREE_CORE v0.8.1
+and technical architecture were read; source identities and read scope appear
+in the packets below. The existing consolidated register was preserved.
+Source authority root retained from the repository:
+63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598.
+This is not a new admission of v15.10 candidate design or physical hypotheses.
+
+The ten Core Objects, applicable subset of the 24 Relations, seven Forms and ten
+cross-cutting facets are mapped in each branch. Physical matter has no invented
+AGENCY, ownership or delegated authority. Equation domains, evidence ownership,
+uncertainty, quality limits, dependencies, falsifiers and external review stay
+attached to each claim. Exact conservation, constitutive models, empirical
+regularities, engineering constraints and economic conditions are different
+kinds of obligation; their shared register does not turn them into new laws.
+
+This is a bounded manual/executable GCSC research adapter. Complete SAL/JOIN
+registries and formal compiler admission were not available as a certified
+execution substrate. No approximate adapter is called the complete Garden
+implementation. S0 keeps input assumptions/source identity; S1 derives finite
+obligations and predictions; S2 records results without self-admission or feeding
+derived hypotheses back as established seeds. TREE_CORE nondeterminism, gzip/CRC,
+schema and source-retention debt were not repaired or silently marked PASS.
+
+The simulations use independent case equations, not repeated candidate-number
+or keyword templates. Four roles mapped heat/materials, utilities, food/cold and
+manufacturing. A separate novelty reviewer attacked H1, U2, F2 and M2; a separate
+economics reviewer recalculated all ten. Review scope is not claimed to cover
+every literature source independently. Shared model-family reviews are useful
+adversarial checks, not independent industrial measurement or formal certification.
+
+Process-fact reading preceded candidate freezing. Targeted intervention/patent
+searches followed the local freezes, with one explicitly frozen H1 repair.
+These are local records, not externally timestamped blinded preregistrations.
+Training contamination and exposure to familiar process facts are uncontrolled.
+No matched-budget Garden-versus-conventional discovery advantage was measured.
+
+4.12.3 COVERAGE, OPERATORS AND CLOSURE
+
+Branch          Situations  Edges  Constraint records  Bindings  Deep motifs
+Heat/materials       26       27          21           scoped       10
+Utilities            36       49          26             119        11
+Food/cold            28       49          25             110        13
+Manufacturing        28       41          20              52        10
+Total record count  118      166          92          not summed     44
+
+The 118 IDs and 166 edges are explicit finite graph records, not a fraction of
+all real industrial situations. Graphs include temporal/material flow, control,
+dependency and next-cycle feedback edges; they are not all chronological time
+steps. Constraint families overlap across cases, so 92 is a count of scoped
+records, not 92 independent laws. Heat applicability is stated by node/stream
+scope and is not inflated into a synthetic binding total. The Python replay
+contains all ten adjacency graphs and checks references and duplicate edges.
+Text below binds situations to the applicable invariant and equation contracts.
+
+Ten original intervention claims were checked; one H1 repair did not become an
+eleventh idea. Three operators were applied to each case:
+- Projection-Loss constructs distinguishable future outcomes/actions from an
+  equal coarse observation, then asks whether strong engineering already retains
+  the distinction. Observation nonclosure alone does not imply novelty.
+- Necessity-Challenge tests an expensive prerequisite while preserving actual
+  physical, safety, quality and terminal-state obligations.
+- Decision-Sufficiency compares the best admissible action with extra information
+  to the strongest practical existing action, less measurement/implementation
+  costs. The value-of-information mathematics is established, not a new theorem.
+
+Known mechanisms and unresolved interfaces are individually named in each
+packet. No worldwide unknown-count or arbitrary coverage percentage is given.
+Examples of still-unresolved relationships: metallic versus elemental Al yield
+in classifier fines; feed-specific chloride phase partition; safe fixture-contact
+response versus released dimensions; actual local plate stress and interfering
+tracer signals; residual defrost vapor beyond a strong hood. These are research
+questions, not supported new effects. Physical experiments and measured economic
+results in this batch: ZERO.
+
+4.12.4 QUANTITATIVE RESULTS THAT SURVIVED ARITHMETIC CHECKS
+
+1. U2 conservation closes, but ordinary continuous control defeats the proposed
+   staggering. Receiver peaks: synchronous 3033.421 mg/L; staggered 1599.908;
+   continuous 1043.478, at the same 216 m3 and 1296 kg salt per 12 hours. No
+   biological injury claim is inferred from salinity alone.
+2. M1's linear model predicts 10 micrometres free shape with 1.118 micrometres
+   probe-noise standard deviation. Allowed quadratic curvature creates a
+   5-micrometre bias, exposing its limited applicability; no scrap gain measured.
+3. M2's repaired safe-flow schedule uses 13.81551 kg versus 69.07755 kg all-open
+   purge in a two-compartment model. Both take 69.07755 minutes. Known selective
+   gating ties the result. Final old-species inventories differ by 0.001 kg,
+   explicitly recorded; actual restart qualification may consume more resin.
+4. F2's solute modulation predicts 0.19164 uS/cm amplitude. A compliance-only
+   intact plate defeats pressure/volume diagnosis, motivating the tracer repair.
+   A calibrated hot DC tracer comparator gives 5 uS/cm in the same example and
+   stronger white-noise sensitivity. Synthetic null performance is not a field
+   false-positive estimate.
+5. H2's closed two-lump model reaches 750 C surface temperature in 44.8329 s,
+   with 939.4737 C core temperature and conserved mean 930 C. It predicts only
+   heat redistribution, not phase feasibility or crack-free industrial output.
+6. H1R's plausible-looking +$185,485 repair scenario becomes -$14,515 when even
+   50% existing fines recovery is included. Comparator choice changes the sign.
+
+The replay exercises 17 non-tautological heat/material checks, 47 utility checks,
+56 manufacturing checks and the food equation/null/100-seed synthetic comparison.
+The original heat role reported 18; integration removed one tautological zero
+multiplication check. Historical packet/reviewer counts are retained below with
+this correction. Check counts are software/model receipts, not scientific sample
+sizes. The graph adjacency checks are separate from physical validation.
+
+A quantitative falsifiable contract exists in every case. A newly written
+contract is not necessarily a new prediction: established VLE, heat transfer,
+compartment flow and fixture mechanics derive these outcomes too. Consequently,
+mathematical consistency and executable simulation do not upgrade novelty status.
+
+4.12.5 RANKED DISPOSITION AND ECONOMIC GATES
+
+No case survives as a proven novel positive-value improvement. Ranking below is
+for the next discriminating research question, not investment advice or a claim
+of high success probability. No additional physical test is implied to be running.
+
+Priority 1 — M1: narrow two-nonzero-preload fixture protocol. Threshold: >0.2353
+percentage points additional scrap reduction under the stated cost assumptions.
+First test is released-geometry error versus modern adaptive compensation, with
+contact stability and nonlinear thermomechanics. Near prior art makes success
+uncertain; do not fund from the assumed +$91.8k value alone.
+
+Priority 2 — H1/H1R: net metallic Al in the ash/fines interface. Large throughput
+makes it material, but the core interventions are old. Require genuine net yield
+beyond optimized decoating, separation AND dross/fines recovery. Original H1
+break-even 1.745 kg/t; H1R additional recovery break-even 0.6726 kg/t at its own
+cost. The repair already fails an illustrative 50%-recovery comparator.
+
+Priority 3 — F2: only if measured colored interference defeats a fully calibrated
+hot constant-pressure tracer baseline. Current white-noise comparison is adverse.
+Requires independently supported added avoided loss >$18,461/y; no current value
+estimate or superior detection has been established.
+
+Known-practice audits — H2, H3, U1, U3 and M2 can identify adoption opportunities
+at specific facilities. Their conditional per-facility figures justify asking
+for plant evidence, not claiming new science. Stop novelty expansion of the
+already matched H2/M2 core sequences. U1 must include fixing the source leak as a
+comparator; long contamination duty cannot simply be assumed to persist.
+
+Park under present contracts — U2 fails the stronger comparator; F1's declared
+scenarios fail costs. Changing constraints after seeing failure is a new
+hypothesis and must receive a new freeze, not retroactively rescue these claims.
+
+For every live research branch the economic acceptance condition is:
+  Delta_net = measured additional avoidable annual cost versus best baseline
+              - recurring incremental costs - CRF * installed incremental capex
+              - any separately uncounted quality, downtime or validation costs.
+No adoption/worldwide model is provided because eligible installed populations,
+measured improvements, implementation costs and baseline overlap are UNKNOWN.
+
+4.12.6 REPRODUCTION, RECEIPTS AND PACKET ORDER
+
+From repository root run:
+  python design_deltas/v15.10/industrial_ten_cases.py
+For equations' detailed numerical receipts and all graph adjacencies:
+  python design_deltas/v15.10/industrial_ten_cases.py --details
+Only Python standard-library modules are needed. No private data, network call,
+API key, paid model call or plant-control operation occurs in the replay.
+
+The following consolidated packets preserve case graphs, invariant applicability,
+equation domains/dimensions, limiting cases, falsifiers, primary-source URLs,
+negative findings and minimum independent-test designs. Historical local filenames
+are source receipts, not missing required dependencies. The four role modules are
+embedded in the single tracked replay as heat_material(), utilities(), food_cold()
+and manufacturing(). Original freeze contents are embedded at the end, including
+superseded predictions clearly marked HISTORICAL. Reviews preserve rejected
+preliminary financial figures for audit; section 4.12.1 and final case contracts
+control the current interpretation. No large raw simulation-output dump is added.
+
+
+4.12.7 HEAT AND MATERIALS: H1-H3
+Source packet owner and scope follow. Receipt SHA256 of original packet bytes:
+be8d40ae5b4f1090fbc898e18523c8124ccd1f4cc4bd8ee4734bcdbbc5d2f103
+Integration note: local replay commands below point to the single tracked harness.
+
+GARDEN v15.10 INDUSTRIAL CLOSURE: HEAT AND MATERIALS H1-H3
+Date: 2026-10-09. Proposer: /root/ten_heat_material.
+STATUS: NONCANONICAL RESEARCH. NO VERIFIED NOVEL DISCOVERY. NO MEASURED SAVINGS.
+
+OUTCOME
+Three materially different chains were mapped. All three broad interventions encountered adverse prior art. One bounded H1 repair was frozen and searched; its general separation mechanism also has prior art. Its exact feed variant remains unresolved and has no demonstrated advantage. Do not count these as three novel ideas. Their economic thresholds can guide investigation of adoption or genuinely incremental variants; the dollar amounts are not plant forecasts or Garden-specific value.
+
+METHOD AND SOURCE BINDING
+Read actual files in garden-discovery/design_deltas/v15.10:
+- V15_10_ABSTRACTION_GCSC_DELTA.md
+- GSL_COMBINATORIAL_SEMANTIC_COVERAGE_v0.1.md
+- INVARIANT_DRIVEN_THEORY_DISCOVERY_IDTD_001.md
+- TREE_CORE_v0.8.1_2026-09-23.txt, sections 1.2-1.9 and owner rules
+- GARDEN_TECHNICAL_v15.10_FULL_DELTA.txt, sections 10 and 45-47.
+This is a bounded manual adapter, not a complete SAL/SAC or Tree Core implementation. Candidate status, source ownership, uncertainty and no-self-admission remain intact. S0 freezes source seeds; S1 emits finite connected-motif obligations; S2 seals outputs. No derived-node self-feeding or canonical change.
+
+Original freeze: ten_heat_material_freeze.txt
+SHA256: b81d5a53348f18ccb46cb86886eacec4c082c59975b48ef9d5bb55b5daaef6b8
+Repair freeze: ten_heat_material_H1R_freeze.txt
+SHA256: 685317e5008917e4515278d83b9d148926df551eb9bca29c53eec8cdd049d260
+Directory: /workspace/scratch/5e8f47cbc766/
+Each freeze preceded targeted searches for its exact intervention. Broad process-fact reading occurred first; this is not a blind benchmark. Training contamination is possible.
+Reproduce: python design_deltas/v15.10/industrial_ten_cases.py --details (HEAT output)
+
+TYPED MAPPING
+THING identifies feed, metal, gas and equipment; STATE holds mass, metallic fraction, temperature fields, phases and inventory. TIME preserves history and residence. SPACE distinguishes core/surface and vessel domains. EVENT is transformation or separation. ACTION is an operator/controller command; AGENCY applies only to responsible humans/controllers, never matter. RULE holds scoped conservation, constitutive, quality or economic contracts. CONTEXT owns alloy/feed/operating domain; CLAIM holds frozen assertions and evidence status; VALUE holds the incremental economic estimand.
+Used relations include partOf, dependsOn, causes (within the declared model), governs, references, derivedFrom, supports and contradicts. All seven Forms occur through apparatus, contracts, states, dependencies, processes, constraints and economic projections. Missing formal registry bindings remain UNKNOWN.
+Facets checked: IdentityLifecycle; ScopeContext; EpistemicsProvenance; AuthorityHumanBoundary; EffectsSafety; DependencyValidity; ResourceTermination; AuditExplanation; RecoveryEvolution. PrivacyRetention has no private plant input in this public-source run. Plant deployment was not performed or authorized by a generated record. Irreversible oxidation cannot be treated as ROLLBACK.
+
+COVERAGE
+26 physical situations; 27 enumerated transition/dependency edges; 10 connected motifs; 21 case-specific constraint records (seven per branch, not 21 new physical laws). Three original gaps and one repair received targeted prior-art checks. Three broad originals are known; the repair's general method is also known. Three economic contracts and one closed thermal model are executable; 18 deterministic checks passed. Zero physical experiments, plant measurements or blind discovery comparisons. No claim of domain saturation.
+
+H1: REMOVE HOT INORGANIC ASH BEFORE COMPACTING ALUMINIUM SCRAP
+Gap: completion of organic decoating does not imply removal of nonvolatile pigments. Compaction can close accessible surfaces. Main-melt yield alone can hide metal lost to classifier dust or recovered later from dross.
+
+Situation graph (nine nodes):
+S1 coated sheet scrap received; S2 shredded loose feed; S3 controlled thermal decoating; S4 enclosed hot ash attrition/classification; S5 cleaned chips compacted; S6 submerged remelting; S7 skim/refine; S8 saleable metal; S9 fines/dross recovery and residue accounting.
+Edges: 1->2, 2->3, 3->4, 4->5, 5->6, 6->7, 7->8, 4->9, 7->9, 9->8.
+Motifs: 3-4-5 tests thermal cleaning versus accessibility; 4-9-8 plus 4-5-6 preserves both metal paths; 6-7-9-8 prevents main-melt versus downstream-recovery double counting.
+
+Scoped invariant/constraint register:
+I1 Exact element balance: Al, Si, Ti, Ba, S and relevant elements entering equal product, residue, gas and inventory change. Ambient oxygen is a separate input.
+I2 Exact energy balance includes gas/chip/ash enthalpy, electrical work and losses.
+I3 Constitutive oxidation depends on alloy, fresh surface area, temperature and gas. Low oxygen alone does not prove negligible oxidation.
+I4 Engineering phase limit: separator remains below the incipient melting point of every admitted alloy; dust handling must remain admissible.
+I5 Product quality: alloy and inclusion specifications must hold, including pigment-element transfer.
+I6 Closure: carbon removal is not inorganic removal; gas-only endpoints cannot certify all coatings removed.
+I7 Economics: total additional saleable metal after all fines/dross routes must exceed additional costs. Existing recovery cannot be claimed twice.
+
+Situation applicability: I1 and I2 cover all nodes and transfer edges; I3 covers S3/S4/S6/S9; I4 covers S3/S4/S5; I5 covers S6/S7/S8/S9; I6 covers S3/S4/S5; I7 covers all terminal recovery paths. These are explicit applicability assignments, not a claimed complete law inventory.
+
+Operators:
+Projection-Loss: the same organic off-gas endpoint can hide different inorganic residue and remelt outcomes; this is established chemistry.
+Necessity-Challenge: additional oxygen/soak is not necessarily useful when the residue is inorganic; mechanical removal is an existing alternative.
+Decision-Sufficiency: act only if expected total yield improvement exceeds costs and quality constraints versus the best available route. The incremental value of extra measurements is unknown.
+
+Equation contract:
+DeltaV = Q*v*(y_new-y_best) - Q*e*p - O - CRF*K.
+Q is tonnes feed/year; y is tonnes saleable Al/tonne feed after all recovery; v is USD/tonne incremental saleable Al net of forgone residue value; e is added kWh/tonne; p is USD/kWh; O is recurring USD/year; K is USD; CRF is 1/year. Feed chemistry and terminal recovery boundary must match. Element conservation provides no positive lower bound on the yield gain.
+Assumed scenario: Q=100000 t/year; v=$2000/t; e=10 kWh/t; p=$0.10/kWh; O=$100000/year; K=$1 million; 8%, 10 years gives CRF=0.1490294887/year.
+Frozen target, not a measured prediction: additional saleable yield 0.005 t/t = 5 kg/t. It gives $1000000 gross/year, $349029.49 annual cost and $650970.51 net/year. Break-even is 1.745147 kg/t, or 0.174515 percentage points of total recovery. Zero incremental yield loses $349029.49/year.
+
+Minimum test and falsifiers:
+Randomized matched alloy/feed batches against optimized existing decoating, ash separation, compaction, submerged melting AND downstream dross recovery. Assay metallic Al in every stream, not only total elemental Al. Record quality and energy. Proposed success threshold is >=5 kg/t additional saleable metal and <=10 kWh/t added electricity without downgrade. That threshold is not an evidence-based success probability. Falsifiers include oxidation/fines loss exceeding gain, contamination, or equal performance by existing ash separation. A melt-only yield endpoint is invalid.
+
+Primary evidence and status:
+H1.P1 https://link.springer.com/article/10.1007/s40831-023-00773-3
+Vallejo-Olivares et al., published 12 December 2023: compaction affects decoating/dross, and nonvolatile pigment residue remains. It does not support the assumed 5 kg/t gain.
+H1.P2 https://patents.google.com/patent/US9702022B2/en
+Ash removal by screening, settling or air entrainment is described as conventional, alongside controlled-atmosphere processing.
+H1.P3 https://patents.google.com/patent/CA2789519A1/en
+Intermediate HOT particulate removal between decoating and melting uses agitation and gas entrainment. Independent referee found this source.
+BROAD NOVELTY REJECTED. An exact low-oxygen precompaction arrangement was not proved identical, but that narrow distinction supplies neither demonstrated novelty nor benefit.
+
+H1R: ONE BOUNDED REPAIR AT THE CLASSIFIER REJECT INTERFACE
+Original H1 remains rejected. Refinement asks whether fine metallic Al sacrificed to ash removal can be recovered before oxidation.
+Added local chain: hot classified fines -> low-strain roll compaction below alloy solidus -> gentle brittle breakup -> re-screen -> assay metallic fraction and pigment transfer -> remelt recovered fraction; account for remaining residue.
+Hypothesis: ductile metal forms larger agglomerates while brittle pigment stays fine. Domain is decoater pigment/metal fines, not arbitrary molten dross. Counterexample: oxide films prevent welding, ash becomes trapped in compacts, or fresh hot surfaces oxidize. Screen size cannot establish metal purity.
+Delta_y = f_m*(r_new-r_best), with f_m in tonnes metallic Al in ash/tonne original feed, and r as saleable recovery fractions.
+Assumed f_m=0.002, r_new=0.8, baseline=0 gives $320000 gross/year and $185485.26 net/year at Q=100000, v=$2000/t, e=2 kWh/t, p=$0.10/kWh, O=$40000/year and K=$500000. The same proposal against only 50% existing recovery gives $120000 gross and NEGATIVE $14514.74 net/year. Break-even additional saleable Al is 0.672574 kg/t. All physical fractions remain unmeasured.
+Adverse sources:
+https://patents.google.com/patent/US4418892A/en — hot roll crushing and cold roll/screen recovery.
+https://patents.google.com/patent/US4772320A/en — compression/rolling to coalesce metal.
+These concern dross/skim, not necessarily wholly solid pigment fines. General mechanism is old. Exact feed-specific variant remains unresolved, untested, and unproven against existing recovery. No surviving novelty/value claim.
+
+H2: RESET SLAB SURFACE MICROSTRUCTURE WHILE RETAINING CORE HEAT
+Gap: surface quality depends on transformation history, whereas a temperature-only hot-charge decision may omit it. Proposed sequence cools only vulnerable surface/corners, then uses core heat to reheat them.
+
+Situation graph (eight nodes):
+S1 continuously cast HSLA slab; S2 local corner/surface quench; S3 hold/phase reset and stress evolution; S4 self-reheat from core; S5 hot-charge furnace; S6 final reheat/homogenization; S7 rolling/descaling; S8 inspection and acceptance/rejection.
+Edges: 1->2, 2->3, 3->4, 4->5, 5->6, 6->7, 7->8, plus retained-core dependency 1->4.
+Motifs: 1-2-4 couples energy and local phase; 2-3-7 preserves ductility/stress history; 4-5-6 preserves heat versus uniform rolling duty.
+
+Constraints:
+I1 Exact energy balance across core, surface, water, gas, furnace and losses.
+I2 Exact element/mass balance including scale and downgraded product.
+I3 Constitutive conduction uses grade/temperature-dependent properties; the model below is explicitly approximate.
+I4 Empirical phase, precipitation and grain kinetics depend on grade and path, not just final temperature.
+I5 Engineering stress/crack and rolling-ductility requirements.
+I6 Throughput and temporal compatibility across caster/furnace; no hidden delay cost.
+I7 Economic comparison against optimized existing selective cooling and hot handling.
+Situation applicability: I1/I2 cover all nodes; I3 covers S1-S6; I4 covers S1-S7; I5 covers S2-S8; I6 covers S1/S3/S5/S6/S7; I7 covers the complete input-to-accepted-product path.
+Projection-Loss: equal charging temperature can hide different phase/grain/stress histories. Necessity-Challenge: whole-slab cooling is not required for every surface treatment. Decision-Sufficiency: grade-specific thermal history changes admissible action. Existing engineering already addresses these mechanisms.
+
+Equation contract and quantitative conditional prediction:
+Closed two-lump model, common constant cp. Cs=f*m*cp, Cc=(1-f)*m*cp.
+Cs*dTs/dt=K*(Tc-Ts); Cc*dTc/dt=-K*(Tc-Ts).
+Tbar=f*Ts0+(1-f)*Tc0 is conserved; tau=Cs*Cc/[K*(Cs+Cc)].
+Ts(t)=Tbar-(1-f)*(Tc0-Ts0)*exp(-t/tau).
+Tc(t)=Tbar+f*(Tc0-Ts0)*exp(-t/tau).
+Capacitances are J/K; conductance K is W/K; time is seconds. This ignores radiation, latent heat, detailed geometry and phase kinetics. It predicts heat redistribution only, not crack-free steel.
+Assume f=0.05, Ts0=550 C, Tc0=950 C, tau=60 s. Tbar=930 C. The model predicts Ts reaches 750 C after 44.8329 s, with Tc=939.4737 C. Conservation is checked numerically.
+Compared with cooling the ENTIRE slab by 400 K, ideal retained useful heat is (1-f)*1000*.7*400/1000 =266 MJ/t, with cp=.7 kJ/kg/K. At marginal furnace efficiency .6 this is .443333 GJ fuel/t. It is an inventory upper bound; quality feasibility is unknown.
+Assume 1 million t/year, fuel $10/GJ, capex $5 million, recurring cost $250000/year and CRF above. Ideal gross=$4433333.33/year; annual cost=$995147.44; net=$3438185.89. Break-even requires 59.70885 MJ/t of genuinely additional useful heat versus the strongest baseline. If selective cooling is already used, the gross difference may be zero.
+
+Minimum test:
+Compare with optimized existing surface/corner cooling at matched grade, quality, throughput and terminal rolling temperature. Record temperature fields, microstructure, residual stress, cracks and fuel. Freeze an incremental energy target and a plant-specified quality noninferiority margin before testing; the margin is presently UNKNOWN. Counterexamples: grade needs through-section transformation, core cannot supply heat, quench generates cracks, or delay consumes retained heat.
+
+Adverse primary evidence:
+https://patents.google.com/patent/US10118218B2/en
+Exact corner-first cooling, recuperation and later surface-cooling sequence is described.
+https://patents.google.com/patent/CA2973071A1/en
+Explicitly uses internal sensible and latent heat to reheat the surface layer.
+https://cje.ustb.edu.cn/en/article/doi/10.13374/j.issn2095-9389.2017.12.009
+Charging-path research supports microstructure-history dependence.
+STATUS: CORE SEQUENCE KNOWN; NOVELTY REJECTED. Large conditional energy numbers illustrate existing-practice potential, not a new Garden saving.
+
+H3: KEEP MINERAL RETURN SEPARATE FROM CHLORIDE PURGE IN CEMENT
+Gap: bypass quenching/collection can mix valuable hot mineral with condensed alkali chloride. Returning heat/material must not silently return the salt that the bypass exists to purge.
+
+Situation graph (nine nodes):
+S1 withdraw kiln-inlet gas/solids; S2 hot mineral separation before salt condensation; S3 return assayed low-chloride mineral; S4 quench/nucleate salts; S5 capture salt-rich fines; S6 recover remaining gas heat; S7 purge salt residue; S8 clinker process receives admissible mineral/heat; S9 feed/fuel/stream assays.
+Edges: 9->1, 1->2, 2->3, 3->8, 2->4, 4->5, 5->6, 5->7, 6->8.
+Motifs: 1-2-4 tests phase before separation; 2-3-8 couples heat and chloride carryback; 4-5-7 verifies actual salt purge; 5-6-8 checks heat credit and gas-return pollutants.
+
+Constraints:
+I1 Exact chlorine, alkali and other element balances across feed, clinker, purge, gas and loop inventory.
+I2 Exact energy balance; mineral and gas heat credits cannot count the same energy twice.
+I3 Constitutive condensation depends on activities, partial pressures and surface temperature. Bulk gas temperature cannot certify clean solids.
+I4 Engineering separation efficiency, pressure drop and erosion limits.
+I5 Chloride-loop and clinker-quality limits; returning salt cannot count as purge.
+I6 Emissions, deposits and stability constraints persist through quench/gas return.
+I7 Marginal costs must exclude heat already recovered by the baseline and energy already included in mineral cost.
+Situation applicability: I1/I2 cover all streams and inventories; I3 covers S1-S5; I4 covers S2/S5; I5 covers S3/S7/S8/S9; I6 covers S4/S5/S6/S8; I7 covers the complete return/purge/heat boundary.
+Projection-Loss: equal bulk chlorine can hide different vapor/coarse/fine distributions. Necessity-Challenge: not every calcined particle must be cooled/discarded with salt. Decision-Sufficiency: phase partition alters return eligibility. Existing bypass engineering already uses these distinctions.
+
+Equation contract:
+DeltaV = Q*b*r*cp*DeltaT/(1e6*eta)*p_f + Q*b*r/1000*v_m - O - CRF*K.
+Q is t clinker/year; b is kg entrained mineral/t clinker; r is ADDITIONAL clean returned fraction versus baseline; cp is kJ/kg/K; DeltaT is K; eta is useful heat/fuel heat; p_f is USD/GJ fuel; v_m is nonenergy marginal USD/t mineral. First term uses 1e6 kJ/GJ. Second term uses 1000 kg/t.
+Chloride closure: C_feed = C_clinker + C_purge + C_gas + dI_Cl/dt. Returned solids are internal recirculation, not purge. Heat credit requires actual fuel displacement; salt purity/partition remains UNKNOWN.
+Assume b=20 kg/t, r=.7, cp=1 kJ/kg/K, DeltaT=800 K, Q=1 million t/year, eta=.6, fuel=$10/GJ, nonenergy mineral/disposal=$20/t, K=$1 million, O=$80000/year. Recovery=14 kg/t and useful heat=11.2 MJ/t. Gross heat value=$186666.67/year; nonenergy material/disposal=$280000; annual cost=$229029.49; net=$237637.18. Break-even ADDITIONAL clean recovery fraction is 34.3544%. No extra calcination reaction-heat credit is included. Inputs are hypothetical, not current plant values.
+
+Minimum test:
+Slipstream comparison against a modern bypass with coarse return and heat recovery. Measure vapor/coarse/fine chlorine, particle mass, enthalpy, pressure drop and net fuel at fixed clinker output/quality. Pre-register extra clean recovery, heat displacement and unchanged chloride purge. Counterexamples: coarse feed already carries condensed salt; wall condensation; agglomeration; poor hot-cyclone separation; or fan work/duplicated recovery cancels heat gain.
+
+Adverse primary sources:
+https://patents.google.com/patent/EP0808809B2/en
+Higher-temperature bypass separation and coarse return are old; 600-700 C return reduces heat loss.
+https://patents.google.com/patent/US7947242B2/en
+Coarse/fine split, coarse return and chloride-rich fine treatment.
+https://patents.google.com/patent/WO2022074552A1/en
+Modern recirculated quench gas and heat exchange reduce dilution; bottom-cyclone outlet extraction supplies low-dust gas. Strong baseline is not merely indiscriminate air quench and landfill.
+https://www.sciencedirect.com/science/article/abs/pii/S0957582016300969
+Research on chloride enrichment in fines and classification to reduce coarse-fraction chloride.
+STATUS: GENERAL SEPARATION/HEAT RECOVERY KNOWN. The exact composition-responsive control loop was not proved identically matched, but no independent physical effect or positive modern-baseline increment was established. Search absence is not novelty evidence.
+
+RANK AND REVIEW
+Priority 1: H1 exact metallic-fines yield question, if real feed can be obtained; strong prior-art overlap remains. Priority 2: H3 feed-specific salt partition and heat audit using actual plant streams. Priority 3: stop H2 novelty expansion because of an exact primary patent match; keep it as an established comparator.
+/root/novelty_referee independently identified H1 hot particulate-removal prior art and emphasized metallic Al versus elemental Al, fresh-surface oxidation and quality. /root/savings_review independently checked economic units/CRF and thresholds. An early H1 break-even arithmetic error was corrected before delivery: 0.174515 percentage points is correct. Same-session agent review is not external industrial validation.
+No worldwide scaling, success probability or measured incremental Garden benefit can be inferred from these examples. A zero strong-baseline improvement produces a loss equal to added cost in each case.
+
+
+4.12.8 UTILITIES: U1-U3
+Source packet owner and scope follow. Receipt SHA256 of original packet bytes:
+b5b082fa734893b07448c754289eec91d8065fdcf46cf5331f80b08f38585d5a
+Integration note: local replay commands below point to the single tracked harness.
+
+GARDEN UTILITIES INVESTIGATION U1–U3 — 9 OCTOBER 2026
+Owner: research agent /root/ten_utilities. Exactly three worked cases.
+Status: NONCANONICAL RESEARCH. None is an established novel discovery.
+
+RESULT FIRST
+U1 phase-qualified condensate recovery: conditional per-facility gross $143,520/year, annualized net $83,811/year. These are assumed plant inputs, not observed savings. The mechanism is established condensate stripping/reuse. An overbroad commercial flash-steam cleanliness statement appears inconsistent with volatile-contaminant conservation, but full-page verification was unavailable. This is an applicability warning, not a new physical law.
+U2 coordinated cooling-tower blowdown: the proposed $45,670/year avoided-capital case FAILS attribution. Ordinary continuous blowdown beats the proposed staggering at equal water and salt mass. Incremental demonstrated benefit against that comparator: zero. Do not include the apparent $45,670 in a Garden savings total.
+U3 temperature-qualified late TES discharge: conditional gross $144,711/year and annualized net $50,196/year for an unusually large existing-storage retrofit. Grade-matched hydronic routing and stratified-storage models are already established. No advantage over an equivalent modern controller demonstrated; exact narrow retrofit novelty remains unresolved.
+No fleet or worldwide multiplier is justified. No empirical savings, success probability, blind benchmark advantage, or historical/frontier novelty has been demonstrated. Three independently screened ideas did not become three novel findings merely because three were requested.
+
+METHOD AND SOURCE BOUNDARY
+Read actual local v15.10 GCSC delta, complete GCSC v0.1, complete IDTD-001; relevant TREE_CORE §§1.7–1.8 and Atomic Register, and Technical §§10,45–47. The typed mapping below is a bounded research adapter; missing complete relation-typing/SAL registries mean no claim of full Garden compiler certification. Retained v15.10 sources remain candidate design, not admission of scientific hypotheses.
+
+Source file identity (SHA256 of exact full bytes; whole-file source spans [0,length) retained):
+V15_10_ABSTRACTION_GCSC_DELTA.md | 3310 | 90a58c337bc87c2e445eb56d6197cddea845f74485339e074b0818d70dae8479
+GSL_COMBINATORIAL_SEMANTIC_COVERAGE_v0.1.md | 6958 | 27428feebc2fe8f2a4a9a5dd8fc5d680d36fb18623575ef19235427f9021e3b1
+INVARIANT_DRIVEN_THEORY_DISCOVERY_IDTD_001.md | 7529 | 14bf4fdced0cccebeb5cb22a0cec3b7aff765e57efa25230626ddcf3b24bfdf4
+TREE_CORE_v0.8.1_2026-09-23.txt | 30245 | 4af3a2c4c8d8577909735fb61c42e0f43324dc0147d8b24146b4561ee56511fa
+GARDEN_TECHNICAL_v15.10_FULL_DELTA.txt | 30234 | f61bc8e4f12418498f114f586c2d4e58b1ca575a788e0e5194430088a0f8f18f
+
+Physical freeze: ten_utilities_freeze.txt, SHA256 e2412991ada89952585d80f0eea5608db7f55fb501392ffab947cf3f26a75622. Freeze preceded targeted solution/patent search; process-source searches exposed conventional equalization and TES facts beforehand. Model-training contamination is uncontrolled; this was not a blind experiment. U1 financial capex/O&M and U2 receiver volume are explicitly post-freeze illustrative evaluation assumptions, not quietly claimed frozen predictions.
+
+Tree discipline: S0 materializes the declared graph/assumptions; S1 makes the bounded obligations and predictions below; S2 retains identities/results. No generated conclusion feeds itself back as an admitted seed. External engineering papers support domain knowledge, not Garden authority. Independent parent/referee/economic agents may reject these results. They share model-family limits and do not constitute independent laboratory certification. Known TREE_CORE integrity/retention/schema debt is untouched and not marked PASS.
+
+COMMON GARDEN MAPPING
+Core Objects: TIME=timestamp/phase/settlement period; SPACE=vessel, pipe, layer and control volume; THING=water, contaminant, equipment; EVENT=leak, valve transition, thermocline arrival; ACTION=operator-authorized routing or scheduling; AGENCY=plant operator/control system acting under declared authorization; RULE=typed laws/constraints below; VALUE=service and net cost; CONTEXT=temperature, pressure, species, tariff and duty; CLAIM=prediction with evidence status. Fluid/ions are THINGs, never AGENCY.
+Relations used where physically meaningful: causes for events/state changes; dependsOn for boundary inputs; partOf for vessel/network assemblies; governs for law scope; controls for authorized actuators; frames/contextualizes for operating envelope; assesses for measurements; supports/derivedFrom/references for evidence and calculations. No ownership or delegation is assigned to matter. Other Core Relations are not multiplied into synthetic situations. Registry-level typing remains SOURCE_FALLBACK_REQUIRED where not formally bound.
+Seven Forms: CONSTRUCT equipment topology; CONTRACT equations and limits; STATE physical snapshots; RELATION explicit edge lists; PROCESS SEQUENCE/BRANCH/PARALLEL/ITERATE; RULE invariant families; PROJECTION coarse versus retained representation. Recursion was used only where two outlets, three coupled towers or two service grades changed admissibility or decisions.
+Facets inspected: IdentityLifecycle (same mass/inventory across transitions); ScopeContext (species/temperature/duty); EpistemicsProvenance (assumed versus sourced); AuthorityHumanBoundary (who can operate valves); EffectsSafety (quality/pressure/treatment continuity); DependencyValidity (failed sensors invalidate decisions); ResourceTermination (finite simulation and plant capacities); PrivacyRetention (no personal data, no new physical class); AuditExplanation (record failed baselines); RecoveryEvolution (fallback operation and recalibration). Applicability inspection is not multiplication of coverage denominators.
+
+U1 — PHASE-QUALIFIED CONDENSATE RECOVERY
+Industrial situation: process steam condenses in heat exchangers; a leak can contaminate hot condensate. Pressure letdown creates both liquid and flash-vapor outlets. A clean-liquid decision cannot establish clean vapor, and treating either outlet as identical to the incoming stream can cause rejection of useful material or inappropriate reuse.
+
+Situation nodes (stable IDs U1.01...12):
+01 Steam supplies process heat; duty and boiler steam input.
+02 Heat-exchanger leak contaminates condensate; incoming species mass becomes nonzero.
+03 Trap/pressure letdown; enthalpy and pressure boundary.
+04 Flash receiver separates liquid and vapor; two physical mass ports.
+05 Vapor composition/sample and possible entrainment.
+06 Liquid composition/sample.
+07 Acceptance decision evaluates each destination against its own quality contract.
+08 Accepted liquid pumped into return header.
+09 Unacceptable vapor captured by existing compatible treatment/recovery destination.
+10 Rejected material enters qualified waste treatment.
+11 Feedwater preparation and boiler reheat.
+12 Makeup-water purchase, treatment and heating replaces rejected liquid.
+Typed dependencies and chronology (16): 01 causes the exposure opportunity in 02; 02 -> 03 -> 04 is physical flow; 04 -> 05 and 04 -> 06 are PARALLEL outlets; 05 -> 07, 06 -> 07 and 02 -> 07 are composition/identity dependencies. Node 07 controls the BRANCH to 08, 09 or 10; 08 -> 11 is liquid return; 09 -> 10 is treatment; 10 -> 12 is makeup demand; 12 -> 11 is replacement; and 11 -> 01 begins the next cycle. Arrow meanings are restricted as stated; not every arrow asserts causal sufficiency.
+
+Invariant register, type/domain/bindings/falsifiers:
+U1.I1 Species and total-mass conservation: exact control-volume balance with no unmodelled reaction. Bindings: 02, 03, 04, 05, 06, 08, 09, 10, 11, 12. The falsifier is a mass residual beyond metering/holdup uncertainty; an unknown reaction creates UNKNOWN, not apparent loss.
+U1.I2 Enthalpy balance: exact first law, with heat, work and kinetic terms retained as applicable. Bindings: 01, 03, 04, 08, 11, 12. The reduced adiabatic throttle model fails with substantial heat loss or non-equilibrium flashing.
+U1.I3 Dilute vapor/liquid partition: constitutive equilibrium c_v = K * c_l. Bindings: 04, 05, 06. K depends on species, temperature and pressure; slow transfer, reactions and droplet entrainment invalidate this simplification.
+U1.I4 Pressure/NPSH and receiver capacity: engineering constraints. Bindings: 03, 04, 08, 11. Saturated return may require a suitable pumping arrangement; negative suction margin blocks the intervention.
+U1.I5 Outlet-specific acceptance: engineering quality constraints. Bindings: 05, 06, 07, 08, 09. Neither conductivity alone nor acceptance of the other outlet proves acceptance. Actual limits must come from destination specifications.
+U1.I6 Detection/actuation latency: engineering temporal bound. Bindings: 02, 05, 06, 07. Sensor plus actuator delay must be shorter than travel/buffer residence to the protected boundary; otherwise divert or hold. Without response-time data, this remains unresolved.
+U1.I7 Boiler/material compatibility: engineering constraint. Bindings: 07, 08, 11, 12. A contaminant acceptable to one reuse process may still fail boiler chemistry or downstream steam purity.
+U1.I8 Net value and equal output: economic condition. Bindings: 01, 08, 09, 10, 11, 12. Compare identical production and final inventory; subtract capture, pumping, analysis, capital and maintenance.
+Eight families, 42 explicit situation bindings. None is a new fundamental law.
+
+Transition audit and operators:
+Projection-Loss: Y = (incoming water flow, bulk conductivity) can identify two streams with different volatile organic content; the two flash outlets then require different routing. This is only useful if the missing species is material and measurable.
+Necessity-Challenge: challenge 'the whole condensate batch must be discarded' by accepting just an admissible outlet. Do not challenge a destination quality limit without evidence.
+Decision-Sufficiency: choose reuse only if the expected retained heat/water value exceeds capture/analysis and false-accept costs, compared with species-aware conventional recovery.
+Material motif U1-M1: 04 branches to 05/06, then rejoins at 07. It generates the dual-outlet species contract. M2: 02 -> 07 controls 08 -> 11, generating latency/quality closure. M3: 10 -> 12 -> 11 -> 01 closes economic accounting.
+Unresolved inputs: real species/K; destination limits; entrainment; monitoring latency; return-pump margin; event frequency; capture capacity/cost. No deployment-ready PASS.
+
+Equation contract and falsifiable prediction:
+f = (h_in - h_l) / h_fg, with 0 <= f < 1; mass fractions use a consistent kg basis.
+c_l = c_in / (1 - f + f * K), and c_v = K * c_l. Concentrations are in mg/kg; K and f are dimensionless.
+For assumed f = .10, K = 50 and c_in = 10 mg/kg: liquid concentration is 1.694915 mg/kg and vapor concentration is 84.745763 mg/kg. For illustrative liquid and vapor limits of 2 and 5 mg/kg respectively, only liquid passes. Existing VLE/steam-stripping models make the same prediction.
+Limiting cases: K = 0 puts all contaminant in liquid; K = 1 leaves both concentrations equal to the feed; f = 0 leaves liquid concentration unchanged. At K < 41 in this scenario, liquid fails its assumed 2 mg/kg limit; code tests conservation and these nulls. An actual experiment would measure the inlet plus BOTH outlets and their flow rates, identify species, fix pressure and temperature, and compare retained mass/heat against the same-quality baseline. Empirical status: UNKNOWN.
+
+Economics, all assumed unless explicitly sourced:
+Assumptions: feed 30,000 kg/h; annual operation 8000 h; affected duty 10%; recovered liquid 90%; recovered temperature 100 C versus makeup at 20 C; cp = 4.18 kJ/kg/K; boiler efficiency .80; fuel $.04/kWh; and water, including the specified treatment, $2/m3. Recover 21.6 million kg/year and 2,006,400 kWh_th; displace 2,508,000 kWh_fuel ($100,320) plus 21,600 m3 of water ($43,200). Gross benefit: $143,520/year.
+Illustrative installed increment: $300,000; additional annual O&M: $15,000; life: 10 years; discount rate: 8%. CRF = .14902949; annualized net benefit = $83,811.15. Maximum viable capex under the other assumptions: $862,379.66. No vapor latent heat, failure-cost, carbon, demand or production benefit is credited. Capture energy and pumping must fit within O&M or be added; omitted costs reduce this result.
+The economic comparison is against discarding the event's entire liquid, not against best available treatment. No Garden-specific increment is measured; a competent conventional stripping/reuse process can equal or improve it. Repairing the source leak is also a required comparator and may dominate this retrofit. The assumed contaminated duty of 10% is not evidence that a plant should tolerate a leak. At this capex/O&M, the break-even duty is approximately 4.16% (333 h/year) before extra omitted costs, and no such eligible site has been identified. K and limits are deliberately hypothetical, so this is a conditional value region, not a validated real retrofit.
+
+Prior art/status:
+DOE Steam System Survey Guide, §6.5 and preceding contamination discussion: conductivity, pH, TOC and diversion are already recognized; flash recovery is established. https://www.energy.gov/sites/prod/files/2014/04/f15/steam_survey_guide.pdf
+Ben Lin, The Basics of Foul Condensate Stripping, TAPPI 2008: volatile pollutants in condensate are removed into an offgas stream, enabling treated-liquid reuse. https://www.tappi.org/content/events/08kros/manuscripts/3-5.pdf
+US9617173B2, Method for treatment and reuse of used water streams: covers dirty-condensate assessment/treatment/reuse and energy recovery. https://patents.google.com/patent/US9617173B2/en
+EP3004770A2, Condensate and flash steam recovery system: relevant baseline recovery topology; not evidence of volatile-chemistry acceptance. https://patents.google.com/patent/EP3004770A2/en
+Search-only applicability flag: Forbes Marshall page 'Recover Flash Steam From Contaminated Condensate' describes vapor as contamination-free. Full-page reads timed out twice, so do not attribute an unqualified complete-page claim; the retrieved text lacks a volatile-species restriction. https://www.forbesmarshall.com/energy-conservation/recover-flash-steam-from-contaminated-condensate/
+Disposition: broad mechanism REJECTED_KNOWN; narrow guideline applicability concern NEEDS_FULL_SOURCE_VERIFICATION; novelty/savings beyond established methods NOT DEMONSTRATED.
+
+U2 — COOLING-TOWER SALT CAPACITY AND RECEIVING-TREATMENT EXPOSURE
+Industrial situation: evaporative cooling concentrates salts; conductivity-controlled blowdown discharges to a common wastewater system. Several periodic discharges can coincide even when average daily salt loading is acceptable. Hypothesis: use existing basin salt-storage margin to stagger discharges, avoiding a new equalization tank while respecting tower chemistry and biological treatment.
+
+Situation nodes U2.01...12:
+01 Process heat rejection required.
+02 Evaporation removes water and leaves conservative salts.
+03 Makeup restores basin water inventory.
+04 Basin salt inventory evolves.
+05 Conductivity/composition measured.
+06 Discharge schedule chosen within basin and receiver constraints.
+07 Blowdown valve delivers salt/water pulse.
+08 Parallel tower flows join common sewer.
+09 Receiving tank/reactor mixes incoming salt and water.
+10 Biological treatment exposed to salinity and other inhibitors.
+11 Effluent quality assessed.
+12 Treatment/disposal cost and permit-compliant service evaluated.
+Edges (16): 01 -> 02, 02 -> 03, 03 -> 04, 04 -> 05, 05 -> 06, 06 -> 07, 07 -> 08, 08 -> 09, 09 -> 10, 10 -> 11, 11 -> 12; 07 -> 04 removes salt; 02 -> 04 concentrates salt; 04 -> 06 supplies the concentration margin; 09 -> 06 supplies receiver capacity; and 06 -> 03 preserves makeup compatibility. The same tower motif has three physical instances; these are not counted as three independent scientific classes.
+
+Invariant register:
+U2.I1 Water balance: exact conservative control volume. Bindings: 02, 03, 04, 07, 08, 09. The constant-volume model requires makeup = evaporation + blowdown; drift is explicitly omitted.
+U2.I2 Conservative dissolved salt balance. Bindings: 03, 04, 07, 08, 09, 11. Evaporation salt flux is 0 in this model; precipitation, reaction or other species transport requires additional balances.
+U2.I3 Maximum basin concentration and scaling/corrosion envelope: engineering/constitutive constraints. Bindings: 02, 04, 06, 07. Total salinity is not a sufficient saturation index; hypothetical bounds alone do not establish safety.
+U2.I4 Nitrification kinetics and inhibition: empirical relationships. Bindings: 09, 10, 11. There is no universal salt threshold; adaptation, organics, pH, temperature and shocks matter. This calculation deliberately does not infer biological harm from its salinity output.
+U2.I5 Hydraulic capacity/volume: engineering constraints. Bindings: 07, 08, 09. Shifting the pulse cannot exceed piping, receiver or valve capacities.
+U2.I6 Required heat rejection: engineering service constraint. Bindings: 01, 02, 04, 06. No cooling interruption is counted as saving.
+U2.I7 Full-cycle inventory equality: exact accounting. Bindings: 04, 06, 07. Delayed discharge is not permanently eliminated salt or water.
+U2.I8 Chemical compatibility/biocide control: engineering and empirical constraints. Bindings: 04, 07, 08, 09, 10. Biocide schedules and hygienic requirements can invalidate a salt-only schedule.
+U2.I9 Incremental capital value: economic condition. Bindings: 06, 09, 12. Only an actually avoidable future expenditure may be credited; existing sunk tank cost is not an annual saving.
+Nine families, 37 bindings. Material motifs: M1 = three instances of 07 join at 08 -> 09; M2 = 04 -> 06 -> 07 -> 04 closes the salt cycle; M3 = 09 -> 06 joined to 04 -> 06 couples the operating contexts; M4 = 09 -> 10 -> 11 qualifies the impact.
+
+Operators/audit:
+Projection-Loss: same daily discharge mass, different pulse overlap and receiving exposure.
+Necessity-Challenge: test whether a new equalization vessel is required when upstream permitted storage can shift discharge.
+Decision-Sufficiency: proposed controller must beat ordinary continuous/modulating blowdown at equal chemistry, water, final inventory and cooling service. This strong comparator kills the present benefit claim.
+
+Equation contract:
+V * dc/dt = (E + B) * c_m - B * c. Units: V [m3], E and B [m3/h], c [mg/L]; conversion to kg is applied consistently. Each tower has V = 600, E = 30 and c_m = 1000 in these units. Pulse B = 72 for 1 of every 12 hours; otherwise B = 0. The exact periodic tower solution sets the initial inventory, rather than assuming a convenient empty tank.
+Combined inlet: c_in = (120 * 300 + sum(B_i * c_i)) / (120 + sum(B_i)). A post-freeze evaluation adds a completely mixed receiving volume of 240 m3: dc_R/dt = (120 + sum(B_i)) * (c_in - c_R) / 240. No removal or inhibition kinetics are included.
+The simulation uses analytic tower states and exact CSTR updates with inputs at 0.1 min intervals, 29 warmup cycles and then a 12 h report. All strategies use the same mass inputs; performance is not fitted:
+Strategy | Inlet peak [mg/L] | Receiver peak [mg/L] | Salt [kg/12 h] | Blowdown [m3/12 h]
+Synchronous | 4144.294 | 3033.421 | 1296 | 216
+Staggered at 0, 4, 8 h | 2542.505 | 1599.908 | 1296 | 216
+Ordinary continuous, 6 m3/h/tower | 1043.478 | 1043.478 | 1296 | 216
+All pulsed basins range approximately 5730.5–6280.5 mg/L; continuous operation holds 6000 mg/L. These are steady periodic comparisons: each strategy returns to its own initial inventory every 12 h, while the different pulse phases need not have identical absolute initial salt inventory across strategies. The one-time transition into a new phase schedule is unmodelled; no startup benefit is credited. Continuous control achieves the smallest exposure without new equalization. No frozen minimum valve flow or mandatory pulsing constraint excludes it; inventing one afterward to preserve novelty would be invalid.
+Falsifiable prediction: in an otherwise compatible conservative-salt rig, these inputs generate the stated periodic mixing outputs. A biological experiment is separate and must establish the receiving organisms' dose-response. Nulls: continuous operation at the matched average preserves mass; inventories return after a whole cycle; and zero evaporation changes periodic salt load as the balance predicts. This is an implementation-level simulation, not new science.
+
+Economics:
+Naive comparison: proposed controls costing $60k avoid a new tank costing $400k. With a 10-year life, 8% discount rate and additional controls O&M of $5k/year, the apparent annualized benefit is $45,670.03. There are no quotes or detailed volume, civil-work or site estimates; this is conditional only. This amount cannot be credited as candidate savings because standard continuous blowdown also avoids the assumed tank and gives better physical performance. An existing tank is sunk cost. Demonstrated candidate increment: $0. Additional savings from lower water use are also $0: the volume is 216 m3/12 h under all three strategies.
+
+Prior art/status:
+DOE's advanced cooling tower controls page describes commercial real-time conductivity and cycles-of-concentration control. https://www.energy.gov/cmei/femp/water-efficient-technology-opportunity-advanced-cooling-tower-controls
+EPA Guidance Manual for Preventing Interference at POTWs, equalization discussion: damping industrial slug loads before biological treatment is long known. https://www.epa.gov/sites/default/files/2015-10/documents/owm0194.pdf
+Bassin, Dezotti and Sant'Anna (2011), Nitrification of industrial and domestic saline wastewaters in moving bed biofilm reactor and sequencing batch reactor, DOI 10.1016/j.jhazmat.2010.09.024: chemistry and adaptation matter; no universal salinity threshold is inferred here. The primary paper was identified through the EPA bibliographic record https://hero.epa.gov/reference/1686927/ ; the full article was not read.
+US9227864B2, Method and composition for operation of evaporative cooling systems: a comparator family, not an exact proof of joint receiver control. https://patents.google.com/patent/US9227864B2/en
+Disposition: REJECTED_NO_ADVANTAGE under the frozen domain. Exact distributed-tower/bioreactor patent novelty need not be fully settled because the strong performance comparison already fails. Remaining physical relationships—species-specific toxicity, scaling margin and dynamic constraints—are UNKNOWN. This is not proof that the domain is exhausted.
+
+U3 — TEMPERATURE-QUALIFIED LATE THERMAL-STORAGE DISCHARGE
+Industrial situation: an existing stratified water TES tank supplies both stringent and temperature-tolerant cooling users. At thermocline arrival, the tank may cease to meet the cold-user limit although a warmer layer can still serve another process. Hypothesis: route the remaining suitable layer to the tolerant loop while the critical-service chiller resumes, instead of terminating all storage use.
+
+Situation nodes U3.01...12:
+01 Off-peak chiller charges storage and establishes the initial state.
+02 Tank stratifies into temperature layers.
+03 Layer/outlet temperatures and inventory measured.
+04 Critical process requests supply <= 8 C.
+05 Tolerant process requests supply <= 14 C.
+06 Outlet thermocline arrives; water rises above the cold-service limit.
+07 Controller routes available water under both demand contracts.
+08 Critical user receives compliant cooling from the chiller or cold inventory.
+09 Tolerant user receives the remaining 12 C storage water.
+10 Return water at 18 C re-enters the proper tank region.
+11 Recharge restores the common end-cycle inventory.
+12 Electricity metering and tariff settlement calculate the cost of equal service.
+Edges (17): 01 -> 02 -> 03 -> 06 -> 07; 04 -> 07, 05 -> 07, 03 -> 07; 07 -> 08, 07 -> 09; 02 -> 09 supplies the available temperature; 01 -> 08 supplies chiller availability; 08 -> 10, 09 -> 10; 10 -> 11 -> 01 closes the next cycle; 11 -> 12 and 09 -> 12 are economic dependencies.
+
+Invariant register:
+U3.I1 Thermal energy balance: exact first law. Bindings: 01, 02, 08, 09, 10, 11. Stored cooling is an energy difference relative to the declared return temperature, not created energy.
+U3.I2 Service-temperature compatibility: engineering constraint. Bindings: 02, 03, 04, 05, 06, 07, 08, 09. A scalar kWh value does not guarantee delivery <= 8 C; the actual outlet temperature and heat-exchanger approach matter.
+U3.I3 Mass flow and pump capacity: engineering constraints. Bindings: 07, 08, 09, 10. Enough acceptable energy does not prove adequate instantaneous power.
+U3.I4 Mixing/buoyancy effects: constitutive relationships. Bindings: 02, 09, 10. Routing return water into the wrong region can destroy the remaining temperature grade; the ideal sharp-layer assumption must be checked.
+U3.I5 Critical-process continuity: engineering/safety constraint. Bindings: 04, 07, 08. Chiller restart delay and reliability must preserve quality; no relaxation of quality is credited.
+U3.I6 Chiller COP and parasitics: empirical performance. Bindings: 01, 08, 11. COP values of 5/6 are assumptions; temperature, lift, load and pump work determine actual consumption.
+U3.I7 Equal initial/final inventory: exact accounting. Bindings: 01, 02, 11. Later recharge cost is included; thermal efficiency is specified as .95.
+U3.I8 Bounded usable inventory: engineering constraint. Bindings: 02, 03, 06, 07. The volume remaining at 12 C must be measured; not all warm tank volume provides useful cooling.
+U3.I9 Net decision value: economic condition. Bindings: 01, 07, 08, 09, 11, 12. Only incremental charge/discharge benefit after capital and O&M counts; demand and fleet benefits must not be double-counted.
+Nine families, 40 bindings. Motifs: M1 = 04/05 -> 07 joined with 03 -> 07; M2 = 07 forks to 08/09, then joins at 10; M3 = 10 -> 11 -> 01 -> 02 closes inventory; M4 = 09/11 -> 12 closes the bill.
+
+Operators/audit:
+Projection-Loss: classifying the tank as simply 'unavailable' when the outlet is > 8 C discards a physically admissible action serving a 14 C user.
+Necessity-Challenge: test whether the entire tank must charge to the coldest user's temperature before any reuse. A warmer user may consume lower-grade inventory.
+Decision-Sufficiency: choose warm-layer discharge only when its later recharge cost, losses and retrofit cost are less than the contemporaneous chiller power cost. Compare an existing grade-matched loop controller, not merely a binary cold-user controller.
+
+Equation contract and calculation:
+E = rho * V * cp * (Treturn - Tlayer) / 3600 [kWh_th], with rho = 1000 kg/m3, V = 4000 m3, cp = 4.18 kJ/kg/K, Tlayer = 12 C and Treturn = 18 C. The result is 27,866.667 kWh_th/cycle. This large assumed remaining volume requires an existing large plant tank and coincident warm demand; it is not a typical small-facility volume.
+For 200 cycles/year, avoided peak electricity is E * 200 / 5 = 1,114,666.667 kWh_e. Recharge electricity is E * 200 / (6 * .95) = 977,777.778 kWh_e. At peak/off-peak tariffs of $.20/$.08, gross annual arbitrage is $144,711.11. An illustrative routing, valve, pump and controls retrofit costing $500k, with a 10-year life, 8% discount rate and additional O&M of $20k/year, gives an annualized net benefit of $50,196.37. Maximum viable capex is $836,821.71. Costs are not vendor quotes; additional pumping and inspection must fit within O&M or be added. Existing tank capex is excluded because the tank is already built; a new 4000 m3 tank would require a different, complete assessment.
+Model nulls: zero usable volume or zero temperature lift gives zero benefit; with the same COP, the same tariff and storage losses, arbitrage is negative. Warm demand must absorb 27.87 MWh_th each cycle during expensive hours; otherwise usable energy must be scaled to coincident demand. Charging to restore equal final inventory is already costed.
+Falsifiable engineering prediction: given qualified 12 C inventory and 14 C users, the additional delivered cooling before exhaustion at the 18 C return temperature has the stated bounded enthalpy. A temperature-resolved conventional model with the same routing capability predicts the same result. The simulation does not demonstrate actual performance against strong contemporary control.
+
+Prior art/status:
+DOE Thermal Energy Storage fact sheet DOE/EE-2271, September 2020 (distributed 2021): commercial stratified storage and industrial process cooling, with energy, tariff and capital economics. https://www.energy.gov/sites/default/files/2021/03/f83/Thermal_Energy_Storage_Fact_Sheet.pdf
+US9068757B2, Thermal gradient fluid header for multiple heating and cooling systems: routes multiple users to appropriate hot/warm/cool/chilled zones and return zones. The interconnection/hardware idea is already established. https://patents.google.com/patent/US9068757B2/en
+Stratified thermal energy storage model with constant layer volume for predictive control—Formulation, comparison, and empirical validation (2023), publisher article PII S096014812301426X: a strong modern baseline resolves layers and flow exchange. The abstract was retrieved; the full article was unavailable in this pass. https://www.sciencedirect.com/science/article/pii/S096014812301426X
+US10514200B2, efficient variable-capacity chilled-water plant: relevant multiple-loop/TES integration, not an exact identity proof. https://patents.google.com/patent/US10514200B2/en
+CN121140097A, chilled-water cascade control, surfaced as a closer recent patent through Patsnap; the primary Google Patents fetch failed. It is an UNRESOLVED search lead and is not used as decisive proof. Do not cite an unread claim as exact anticipation.
+Disposition: known broad mechanism; exact narrow retrofit novelty UNKNOWN; no incremental advantage established; status NOT_NOVELTY_SURVIVOR. A conventional model with the equivalent available action ties by construction. This rejects attribution of mathematical novelty, but alone would not disprove a new physical design. Broad configuration prior art independently weakens design novelty.
+
+COVERAGE AND REPRODUCIBILITY
+Countable bounded graph inventory: 36 situation classes, 49 edges, 26 typed invariant families, 119 explicit bindings, 11 material connected motifs audited (3 U1, 4 U2, 4 U3), and 3 primary gap claims checked. Three operators are applied to each case without counting their labels as new physical classes. Six established mechanism families were encountered: flash recovery, VLE/stripping, conductivity blowdown control, flow equalization, stratified TES, and temperature-grade hydronic routing. None is counted as a new law.
+There are 7 groups of unresolved physical/field relationships: U1 species partition; U1 measurement/destination limits; U1 return/treatment hardware; U2 inhibition/other chemicals; U2 tower chemistry/operating constraints; U3 actual remaining inventory/mixing/service profile; and U3 site cost/COP. This is a bounded list of material unknowns, not a count of all unknowns in the world. Registry-level SAL typing remains separately incomplete.
+All 49 declared edges were checked at the control-volume/interface level through the listed laws; empirical/prediction coverage is NOT 49/49 PASS. No statistically sampled coverage percentage is provided because graph selection is judgmental and no full-population denominator exists. There is no claim of overall industrial saturation.
+Run: python design_deltas/v15.10/industrial_ten_cases.py --details (UTILITIES output). Standard library only. Forty-seven conservation, limiting-case, periodic-inventory, comparative and economic-null checks pass. The three U2 simulations use the same input assumptions and water/salt throughput, with each strategy returning to its own periodic inventory as stated above. Tests do not validate assumed K, site quality limits, COP, tariffs, costs, plant uptime or novelty.
+Independent check: /root/novelty_referee independently identified the dominance of continuous blowdown in U2; /root/savings_review independently reproduced U1/U2 arithmetic and reviewed accounting. Neither review constitutes field validation.
+Final ranking for further physical investigation: U1 first, as an applicability-correction and measurement exercise if actual volatile contamination exists; U3 second, only with an existing large TES site and documented coincident warm, lower-grade inventory; stop U2 in the present domain because existing continuous control solves the physical constraint more effectively. None qualifies as a validated novel saving.
+
+
+4.12.9 FOOD AND COLD: F1-F2
+Source packet owner and scope follow. Receipt SHA256 of original packet bytes:
+5bf8d0e80332d2c59e3dc0859b65a569abd48d1ff8f866db1dd99c36863cbd23
+Integration note: local replay commands below point to the single tracked harness.
+
+GARDEN v15.10 INDUSTRIAL DISCOVERY — TWO FOOD/COLD CASES F1–F2
+2026-10-09. NONCANONICAL RESEARCH. Owner: /root/ten_food_cold.
+
+RESULT FIRST
+F1 is rejected as a presently credible large-savings opportunity: conventional defrost isolation is established and the generous additional latent-load scenario does not recover illustrative capital/maintenance costs.
+F2 is a narrow unresolved engineering test protocol, not a discovery: matching production thermal stress and detecting pressure-coded solute transfer during a water-only integrity test. Many constituent mechanisms are patented; a correctly calibrated hot constant-pressure test is stronger in the present white-noise synthetic example. Only interference rejection could justify the additional modulation. No field defect, additional detection probability, or financial benefit has been measured.
+No physical law, frontier novelty, independently measured value, full Garden implementation, or domain exhaustion is claimed.
+
+0. SOURCE / METHOD BINDING
+Read from garden-discovery/design_deltas/v15.10:
+V15_10_ABSTRACTION_GCSC_DELTA.md SHA256 90a58c337bc87c2e445eb56d6197cddea845f74485339e074b0818d70dae8479 (whole file).
+INVARIANT_DRIVEN_THEORY_DISCOVERY_IDTD_001.md SHA256 14bf4fdced0cccebeb5cb22a0cec3b7aff765e57efa25230626ddcf3b24bfdf4 (whole file).
+TREE_CORE_v0.8.1_2026-09-23.txt SHA256 4af3a2c4c8d8577909735fb61c42e0f43324dc0147d8b24146b4561ee56511fa (sections 1.2–1.8, 2.3–2.7, atomic-register R).
+GARDEN_TECHNICAL_v15.10_FULL_DELTA.txt SHA256 f61bc8e4f12418498f114f586c2d4e58b1ca575a788e0e5194430088a0f8f18f (architecture/typing/source ownership).
+Exact byte hashes establish input identity, not truth or canonical admission. Whole-file locators plus named sections are supplied, not a claim of completed atomic source-span certification. Missing complete GCSC SAL/JOIN registries remain UNKNOWN; this is a bounded research adapter.
+
+Procedure: inspect physical-process primary sources; manually map material situations and connected motifs; instantiate typed conservation/domain/engineering obligations; freeze mechanisms; target primary literature/patents; derive predictions; compare strong baselines; attack counterexamples; execute arithmetic/synthetic checks; reject or retain unresolved. No generated node automatically supplies a new scientific seed. S0/S1/S2 boundaries are respected conceptually: frozen inputs, bounded checks, sealed results; not execution of the full TREE compiler. Existing TREE engineering debt is untouched.
+Freeze: /workspace/scratch/5e8f47cbc766/food_cold_freeze.txt
+SHA256 8a762ed5d680ce91d641d533449aa33c5f3c6adea85d187561f7e7468f561206.
+Freeze preceded solution-specific patent searches. Initial process-fact searches could expose adjacent mechanisms, and model training contamination is acknowledged.
+Replay: python design_deltas/v15.10/industrial_ten_cases.py --details (FOOD output)
+
+Shared typed mapping:
+TIME = measured event/sample/cycle time; SPACE = declared control volumes and connected ports; THING = coils, plates, food, water, ice, sensors; EVENT = observed phase/valve/defect transitions; ACTION = commanded pump/valve/test sequence; AGENCY = authorized plant operator/independent verifier only; RULE = typed physical/engineering contracts; VALUE = incremental avoided cost conditional on same output; CONTEXT = operating state, material, source edition, baseline; CLAIM = predictions, measurements, novelty assertions with separate statuses.
+Applicable relations are partOf, dependsOn, causes (only physical hypothesized or established link), controls (actuator mechanism), governs, identifies, references, derivedFrom, supports, contradicts, assesses, hasHypothesis. Agency/owns/delegates are not assigned to fluid or metal. Physical dependency edges below are a shorthand for consumer.dependsOn(producer); they are not newly invented Core Relations.
+Forms: CONSTRUCT specifies apparatus; CONTRACT equations/units/falsifiers; STATE stores inventories and conditions; RELATION stores typed ports; PROCESS stores chronological operation; RULE stores domain/conservation/safety obligations; PROJECTION creates sensor/economic views.
+Facets: IdentityLifecycle tracks physical unit/cycle; ScopeContext binds operating domain; EpistemicsProvenance separates primary facts/assumptions; AuthorityHumanBoundary keeps test/release authority with operators; EffectsSafety preserves food-temperature, hygienic and pressure obligations; DependencyValidity invalidates calculations after equipment/configuration changes; ResourceTermination caps this two-case search; PrivacyRetention has no personal data and keeps apparatus receipts; AuditExplanation stores failures; RecoveryEvolution specifies safe return and reruns. All ten inspected, privacy personal-data processing N/A.
+
+1. F1 — RETURN DEFROST VAPOR'S HEAT TO A STILL-FROZEN COLLECTOR
+
+1.1 Physical source and question
+Industrial defrost removes coil ice but sends some heat and water vapor into a refrigerated room. An FAO primary engineering manual already recommends isolating the cooling unit with insulation and shutters while defrosting. Modern transient models explicitly track frost, retained water and repeated cycles. Thus neither moisture retention nor defrost isolation is a discovery.
+Narrow frozen configuration: enclose a sectional evaporator; heat section A first, use a still-frozen section B to condense escaping vapor and transfer its latent heat into existing B ice, drain both, then finish B. Need demonstrate an advantage beyond an ordinary closed hood, equal final coil states and equal refrigeration service.
+
+1.2 Situation graph (recursive within defrost, not arbitrary component enumeration)
+F1.S01 Moisture ingress/product evaporation: water source rate and air enthalpy.
+F1.S02 Active cooling air passes coil: airflow, surface temperature, duty.
+F1.S03 Frost accumulates/blocks passages: ice mass, distribution, pressure drop.
+F1.S04 Defrost demand recognized: sensors, threshold, model error.
+F1.S05 Coil isolated by hood/shutters: vapor leakage and available cooling elsewhere.
+F1.S06 Section A warmed: hot-gas energy, metal/ice/liquid inventories.
+F1.S07 A-generated vapor enters enclosed air: mass and enthalpy transfer.
+F1.S08 Vapor contacts frozen B collector: condensation/freezing and heat transfer.
+F1.S09 Meltwater drains: drain temperature, retained film, residence time.
+F1.S10 B receives finishing heat: complete removal of pre-existing/captured ice.
+F1.S11 Coil cooled to restart state: sensible cooling and retained-water refreezing.
+F1.S12 Hood opens/fans restart: room and product cooling service restored.
+F1.S13 Next-cycle inventory and meter closure: all heat/water/cooling endpoints counted.
+Chronology: 01>02>03>04>05>06>07>08>09>10>11>12>13.
+Additional physical dependencies: 01>03,02>04,04>06,05>07,05>08,06>09,07>09,08>10,09>11,12>03,13>01.
+23 unique edges. Last edge carries the next-cycle boundary, not a zero-time causal loop.
+
+1.3 Typed invariant register and applicability
+I01 EXACT water balance: ingress = drain+export+inventory change. Bind 01,03,06,07,08,09,13.
+I02 EXACT energy balance: all external heat/work/output/inventory over one boundary. Bind 02,06,08,09,10,11,12,13.
+I03 CONSTITUTIVE phase enthalpies with temperature domain; no latent heat creation. Bind 03,06,08,09.
+I04 CONSTITUTIVE heat flux follows temperature/chemical-potential gradients absent supplied work. Bind 08.
+I05 PHYSICAL STATE inventories >=0. Bind all 13 situations.
+I06 ENGINEERING equal useful cooling demand between comparator and proposal. Bind 02,11,12.
+I07 ENGINEERING equal complete-defrost/next-cycle endpoint. Bind 09,10,13.
+I08 ENGINEERING drainage capacity prevents carryover/refreezing. Bind 09,10.
+I09 SAFETY product-temperature/quality limits persist through interrupted cooling. Bind 05–11.
+I10 ENGINEERING hood pressure/air leakage explicitly measured. Bind 05,07,08.
+I11 ACCOUNTING same latent energy may not be credited twice. Bind 09,11,13.
+I12 ECONOMIC net incremental annual value after costs; no arbitrary fleet multiplier. Bind 13.
+55 applicability bindings, not 55 new laws. I03/I04 depend on physical properties; I06–I10 on installation/food-specific design data currently UNKNOWN.
+
+1.4 Transition/combination audit
+01+02>03: incoming water must match deposition and exported humidity. Known mechanism; missing plant data.
+05+06>07: heat retained by isolation and vapor escape cannot both be assumed total. Known hood baseline already closes much of gap.
+07+08>09: captured vapor may freeze before melting; using condensation heat alone ignores mass/latent endpoint. Exact balance required.
+08+09>10: collector ice may be depleted before vapor production ends; extra area/timing unresolved.
+09+10>11: apparent shorter defrost can merely leave more film or ice for restart. Rejected comparator if endpoint differs.
+11+12>13: extra cooling downtime and product heat inventory must be charged; no free latent store.
+All 23 edges reviewed at this coarse-port level; 12 possible incoming dependency pairs enumerated, six motifs deeply checked above. No complete enumeration of all geometric/material states claimed.
+Operators: Projection-Loss = equal room temperature with different collector/film inventories predicts different next cycle. Necessity-Challenge = does all defrost vapor need to enter room before removal? Existing shutters already answer no. Decision-Sufficiency = extra section control is worth installing only if incremental meter savings exceed capex/O&M at matched endpoints.
+
+1.5 Equation contract / bounds
+m_v [kg/cycle]: vapor that would escape the STRONG hood comparator, not an unhooded poor installation.
+eta [1] capture fraction 0..1; L_v≈2500 [kJ/kg] illustrative low-temperature condensation; L_f≈334 [kJ/kg] ice fusion; COP [1]>0; N [cycles/year]; p [$/kWh].
+Possible collector melt contribution <= min(eta*m_v*L_v/L_f, available collector frost mass, integrated heat-transfer-limited melt).
+The expression is a ceiling, not an achieved transfer prediction. If vapor initially freezes, include deposition/fusion heat and subsequent melting consistently. The condensation component of annual compressor-energy saving used here is N*eta*m_v*L_v/(3600*COP), before auxiliary work and downtime. It counts avoided room condensation load only; vapor deposition to ice and sensible changes require their own terms. This is NOT a rigorous upper bound on all possible system savings. Recovered heat could also replace purchased defrost heat; these are distinct input costs and may both be counted if separate meter/energy balances establish them. Repeating either credit itself would be double counting.
+Full-cycle meter comparison required if claiming any additional defrost-source saving.
+Limiting cases: m_v=0 or eta=0 implies zero latent opportunity; no remaining B ice gives no useful collector sink; COP->infinity gives zero compressor saving; zero actual advantage beyond hood implies zero Garden increment.
+Falsifier: matched complete cycles with humidity/drain/energy closure show no positive incremental energy after auxiliary loads; or collector mass/transfer ceiling below the target.
+
+1.6 Conditional annual economics and decision
+GENEROUS assumed large site: 100 evaporators, 2 cycles/day, 330 days => 66,000 cycles/year; residual escaped vapor 3 kg/cycle even with conventional hood; eta=.6, COP 1.5, electricity $.12/kWh.
+Condensation-only scenario avoided compressor electricity 55,000 kWh/year => $6,600/year gross. This is one energy component, not total-system ceiling.
+Illustrative incremental installation K=$200,000 ($2,000/evaporator; no vendor quote), O=$5,000/year. CRF(8%, 10 years)=.1490294887/year.
+Refrigeration-component-only annual net=$6,600-$5,000-$29,805.90=-$28,205.90/year, before cooling downtime. In a separate electric-resistance-defrost sensitivity, if every recovered condensation kWh also replaces purchased electric-resistance defrost heat at $.12/kWh, add $9,900/year: combined gross $16,500/year, net -$18,305.90/year. If remaining freezing/sensible terms raised the heat amount by 15%, combined gross $18,975/year still gives -$15,830.90/year. These are declared sensitivities, not complete physical measurements or universal cost bounds.
+For the cooling-only component, break-even residual escaped vapor is >15.8209 kg per evaporator per cycle with those assumptions. Under the separate two-bill electric-resistance sensitivity, the break-even amount is >6.328345 kg per evaporator per cycle, provided closed balances establish both distinct input savings. The original hot-gas case cannot assume an electric-resistance heat credit; it requires its own measured marginal hot-gas energy cost. These are required conditions, not evidence that plants satisfy them. Ordinary effective hoods may leave far less than 3 kg, reducing value further.
+Status: REJECTED_ECONOMIC_SCREEN / NOVELTY_UNRESOLVED narrow arrangement. Do not advertise as a new large saving.
+
+1.7 Prior-art receipt and minimum test
+Process query: 'industrial evaporator defrost water vapor migration adjacent evaporators frost study'. Targeted frozen queries: 'patent evaporator defrost sectional vapor condense hood latent heat'; 'defrost latent heat shutters evaporator'; 'defrost water vapor capture section heat'. Search date 2026-10-09, two search engines, bounded web/patent coverage.
+Primary sources:
+https://www.fao.org/4/t0098e/T0098E04.htm (opened; isolation during defrost already recommended).
+https://arxiv.org/abs/2412.00017 and https://arxiv.org/pdf/2412.00017 (primary author model with retained-water refreezing; strong model baseline).
+https://patents.google.com/patent/US9772124B2/en (opened; sequential sectional hot-refrigerant defrost, adjacent broad mechanism).
+https://patents.justia.com/patent/10077933 (air hood; retrieved result, limited inspection).
+CN121408908A (2026 indexed description reports an absorption hood exhausting defrost steam; primary Google patent open failed, so not treated as verified decisive evidence).
+Strong comparator=insulated closed hood+adaptive/sectional defrost and complete retained-water model. No exact frozen collector architecture was established absent in literature; no novelty inference from search failure.
+Minimum independent test if economics later justify: paired sections in cold chamber; weigh initial ice/drain/residual film; measure vapor/enthalpy leakage, refrigerant energy and compressor work; identical final metal/product/ice states; randomized ordinary hood vs candidate. Stop if upper bound remains below cost. Current recommendation is park F1 under the declared assumptions. This is not proof that every implementation or cold store is uneconomic.
+
+2. F2 — THERMAL-STRESS-MATCHED, PRESSURE-CODED SOLUTE LEAK TEST
+
+2.1 Physical situation and narrow question
+Food regenerators exchange heat across thin plates. Integrity, pressure ordering, sanitation and startup state all matter. The test question is whether the plate's cold or uniform-hot integrity state represents its production thermal-gradient/stress state. This is a hypothesis about defect opening, not an observed defect in any specific apparatus.
+Frozen proposal: water-only prestartup diagnostic recreates relevant production temperature/pressure states; apply a bounded pressure modulation and identify transferred solute after known lag. Does this reject temperature/pressure measurement artifacts and find an incremental leak missed by the best existing hot integrity protocol?
+Post-freeze repair: pressure or volume correlation ALONE is invalid because an intact flexible plate transmits displacement. Candidate now requires independently calibrated solute mass transfer, plus temperature compensation, path isolation and intact-plate controls. Original invalid alternative remains in frozen record.
+
+2.2 Situation graph
+F2.S01 Plate/material/gasket and configuration identity: production T/P/flow maps, defect history.
+F2.S02 Conventional integrity reference test: cold/hot pressure, tracer or helium receipts.
+F2.S03 Cleaning completed: residual chemistry and sanitation status.
+F2.S04 Final water circulation: known starting composition and water-only isolation.
+F2.S05 Match production thermal field: plate gradient, expansion/stress, fluid properties.
+F2.S06 Match bounded safe differential pressure: hydraulic stress plus margins.
+F2.S07 Isolate source/receiver paths: eliminate valve cross-leaks and unintended connections.
+F2.S08 Measure background/transfer response: baseline composition, delay/dispersion, sensor drift.
+F2.S09 Apply small pressure waveform: recorded amplitude/frequency and actuator behavior.
+F2.S10 Defect flow/plate compliance/transport: physically distinct candidate mechanisms.
+F2.S11 Receiver concentration and temperature sampled: independent timestamps and units.
+F2.S12 Fit known mass-transfer signature: lag, drift and quadrature terms, uncertainty.
+F2.S13 Compare with conventional test; record UNKNOWN/fail/pass claim separately.
+F2.S14 Flush/requalify: prove residual test tracer removed and original validated state restored.
+F2.S15 Authorized startup or repair: no automatic release from a generated hypothesis.
+Chronology: 01>02>03>04>05>06>07>08>09>10>11>12>13>14>15.
+Additional dependencies: 01>05,01>06,03>07,05>09,05>11,06>09,07>11,08>12,09>12,10>12,12>14,13>15.
+26 unique edges. No new nutrient/pathogen challenge or live-product experiment proposed.
+
+2.3 Typed invariant register
+J01 EXACT solute/water mass balance; composition change needs a real transfer path. Bind 03,04,07,10,11,14.
+J02 CONSTITUTIVE energy/thermal-expansion behavior; sensor temperature correction. Bind 05,08,09,10,11.
+J03 ENGINEERING pressure bounds and maintained authorized gradient. Bind 06,09,10.
+J04 CONSTITUTIVE local leak conductance with stated geometry/viscosity domain. Bind 09,10,12.
+J05 IDENTIFIABILITY pressure correlation alone cannot establish solute transfer. Bind 05,09,10,11,12.
+J06 EVIDENCE exact configuration/time/source identity and calibration retained. Bind 01,02,05,06,11,12,13,15.
+J07 SAFETY hygienic separation and posttest restored validated state. Bind 03,04,07,14,15.
+J08 MEASUREMENT detection threshold tied to empirical noise, no assumed white-noise proof. Bind 11,12.
+J09 TEMPORAL hydraulic delay/dispersion/clock alignment. Bind 08,09,10,11,12.
+J10 ENGINEERING thermal and flow state held/reconstructed during short waveform. Bind 05,06,08,09.
+J11 DOMAIN test-stress representativeness cannot be assumed from matching one thermometer. Bind 02,05,06,12.
+J12 AUTHORITY/SAFETY no release, reduced testing, or food safety certification from research output. Bind 13,14,15.
+J13 ECONOMIC only incremental detections/false positives and avoidable costs over strong baseline. Bind 12,13.
+55 applicability bindings. J01 physical conservation; J02/J04 constitutive; J05 mathematical identification; remaining records engineering/evidence/safety/economics. No candidate causal claim promoted to invariant.
+
+2.4 Transition/combination audit and operators
+01+02>05/06: annual cold test and production thermal gradient are different states; exact applicability must transfer. Missing local plate stress data remains UNKNOWN.
+05+06>09: matching bulk T and P does not ensure local aperture; need representative coupons and/or spatial thermal model.
+06+09>10: plate flexure creates pressure-synchronous volume on opposite side even with zero leak; this falsifies pressure-only proposed diagnosis.
+07+10>11: solute could arrive through valve bypass rather than plate; isolate or independently measure every alternative path.
+05+11>12: temperature affects conductivity and may be synchronous; independent T adapter and second trace assay needed.
+08+09+10>12: unknown lag can make a true leak orthogonal to reference; freeze or estimate lag independently within declared bounds.
+12+13>14/15: statistical detection is not authority to release food; uncertainty persists.
+All 26 edges checked at the coarse port level; 17 incoming pairs enumerated; seven connected motifs deeply checked.
+Projection-Loss: same cold-pressure-test output can come from intact plate or thermally opening defect. These are hypothesized physical states needing manufactured-test verification.
+Necessity-Challenge: is disassembly/cold-only testing necessary? Existing integrated daily testing already disproves that broad claim. New residual is whether a stress-matched diagnostic can be integrated economically.
+Decision-Sufficiency: does extra waveform/tracer data change correct repair/startup decisions beyond best hot constant-pressure/tracer test? Present evidence UNKNOWN; pure white-noise comparison disfavors the waveform.
+
+2.5 Equation contract and falsifiable prediction
+Baseline differential pressure dp0 [Pa]>0; waveform amplitude dphat [Pa], |dphat|<<dp0; baseline calibrated leak q0 [m3/s]; fixed-aperture thin-orifice law q=Cd*A*sqrt(2*dp/rho) only in its admissible geometry/flow domain.
+Then qhat=q0*dphat/(2*dp0). This follows ordinary differential calculus; it is not a novel theorem. For long narrow cracks, use calibrated viscous conductance instead. If A depends on dp, dq/ddp gains Cd*A'(dp)*sqrt(2dp/rho); fixed aperture assumption is invalid until verified.
+Receiver flow Qr [m3/s], source-receiver solute contrast dc [mass/volume]. For q<<Qr, receiver concentration amplitude before lag=dc*qhat/Qr.
+First-order measured transfer H(iw)=exp(-iw*t_delay)/(1+iw*tau), with independently identified tau/delay. Detection amplitude=|H|*dc*qhat/Qr.
+Electrical conductivity adapter locally linear and temperature compensated: replace dc by measured contrast in uS/cm only if calibration validates it; this is not a conservation equation for conductivity itself.
+Fit y(t)=a*sin(wt-phase)+b*cos(wt-phase)+offset+lineartrend+noise. If noise is white only, fit SE scales approximately sigma*sqrt(2/N); correlated noise requires measured covariance/effective N.
+Null intact plate can have q_apparent=omega*C_mech*dphat in a cross-side volume sensor (C_mech [m3/Pa]); it must have zero transferred solute in the isolated ideal model. Heat transport may still alter conductivity; actual blank required.
+
+Frozen synthetic operating point: q0=.5 mL/min, dp0=50 kPa, dphat=5 kPa, period 60 s, Qr=100 mL/min, conductivity contrast 1000 uS/cm, tau 8 s, delay 3 s, 240 samples at 1 Hz, independent noise SD .2 uS/cm. These are imagined rig parameters, not plant measurements.
+Prediction qhat=.025 mL/min; |H|=.766550592; concentration amplitude .191637648 uS/cm.
+Seed 20261009 synthetic replay fitted .200738246 uS/cm, SE .019077930; five-SE threshold .095389648. Intact null fit .009100598. Seeds 0..99 gave 100 detections and 0 false positives in this specified synthetic white-noise model only. Do not generalize rate to real defects or real noise.
+Counterexample C_mech=1e-6 mL/Pa gives apparent intact volume-flow amplitude .031415927 mL/min, larger than real modulated leak flow; raw pressure/volume correlation fails.
+Strong comparator: hot constant-pressure at the same calibrated q0, Qr and known background gives 5 uS/cm mean concentration signal with ideal mean SE .012909944. It is stronger than the .19164 uS/cm modulation under white noise. Therefore no incremental diagnostic benefit has been demonstrated. The narrow research case needs strong colored/background interference in which modulation helps but proper constant-pressure blanks/modeling do not already fix it.
+Limits: q0=0 => zero solute transfer; contrast 0 => no tracer information; tau->infinity => vanishing periodic response; deltaP->0 => zero coded response; unknown thermal conductivity interference => INCOMPLETE, not pass.
+
+2.6 Economic contract: threshold rather than imaginary saving
+Compare to EXISTING integrated daily hot integrity test; do not credit all testing benefits. Let A [$/year] be independently measured additional expected avoidable loss prevented, after comparing correct decisions against that baseline.
+Net=A-FP_rate*avoidable_false_stop_cost-recurring_incremental_cost-CRF*K.
+Illustrative incremental K=$40,000 for added measurement/control/qualification (no quote); recurring cost=$12,000/year inclusive of claimed extra time/water/calibration, not known; FP=.1/year at $5,000 avoidable cost each. CRF(8%, 10 y)=.1490294887.
+Required A>$18,461.18/year. If truly incremental avoidable loss/event=$250,000, require >.0738447 additional preventions/year (~one per 13.54 years), after effectiveness and baseline overlap. No evidence establishes either cost/event or frequency.
+Conditional example ONLY: if independent data later establish A=$75,000/year, then net=$56,538.82/year. This is an arithmetic sensitivity case, not forecast or measured saving. At A=0 net=-$18,461.18/year. Don't quote $56.5k without its unproven antecedent.
+Human health losses are not monetized in this scenario; no reduced safety obligation proposed.
+
+2.7 Prior-art receipt / scoped novelty
+Source first: CFIA HTST primary guidance; Tetra Pak process handbook. Targeted post-freeze queries included 'heat exchanger plate hot leak testing pressure pulse tracer pasteurizer thermal cracks detection'; 'patent heat exchanger leak detection pressure modulation thermal stress food'; 'heat exchanger leak detection pressure modulation'; 'pasteuriser hot integrity testing'; 'heat exchanger leak detection correlation pressure tracer'. Two engines, 2026-10-09; bounded, not an exhaustive global patent search.
+Primary sources inspected:
+https://inspection.canada.ca/en/preventive-controls/dairy-products/htst (operating relationships and routine integrity checks; official guidance; not new Garden rules).
+https://dairyprocessinghandbook.tetrapak.com/chapter/designing-process-line (source physical process).
+https://patents.google.com/patent/EP4026429A1/en (2022 publication, 2018 priority; integrated daily tests, pressure/flow readout and thermal expansion compensation). Broad daily automated test is known.
+https://patents.google.com/patent/WO2010139801A1/en (2010; startup integrity testing at working or higher pressure, temperature monitoring and existing pumps). Broad state-aware in-situ test known.
+https://patents.google.com/patent/WO1999019705A1/en (1999; heated circulating water, pressure changes, cross-side tracer gas). Warm test and pressure challenge known.
+https://patents.google.com/patent/EP4542191A1/en (2025; pressure modulation/reference signal with flow response in a utility network). Active excitation leak testing known in an adjacent domain.
+https://www.inficon.com/en/news/non-destructive-solution-for-identifying-leaks-on-plate-heat-exchangers (manufacturer primary source: tracer-gas methods; comparison benchmark, not independent performance certification).
+https://www.indei.global/pasteuriser-inspection-and-heat-exchanger-testing/ (retrieved manufacturer description of pressurized saline conductivity testing; entire page not inspected, not a decisive novelty source).
+Patent texts are evidence of disclosure, not proof that the device works or a legal opinion. Exact production-stress-matched, phase-identified solute transfer protocol not located in the bounded search; status UNKNOWN, not novel. Substantial prior art and the strong constant-pressure baseline lower its priority.
+
+2.8 Independent preregistered next bench test and stop rule
+Freeze an authorized water-only test rig with one intact plate and manufactured/characterized defects, including thermally responsive and permanently open examples. An independent technician randomizes labels; the analyst remains blind. Hold time, thermal gradient, pressure budget, tracer concentration and measurement time identical for the candidate and best existing hot constant-pressure/tracer test. Avoid unsafe alteration of a production food system.
+Declare before unblinding: measured statewise conductance predicts candidate amplitude within ±20% after applying the separately measured transfer function; the intact plate must remain below the predeclared false-positive cutoff despite pressure/thermal challenge; the waveform must improve detection or reduce false positives at fixed time over the hot constant-pressure baseline under independently characterized real noise. The ±20% threshold is a proposed engineering test criterion, not empirical uncertainty already established.
+Use a nonabsorbing permitted tracer and an independent chemical assay; calibrate source/receiver temperature effects, alternative valve paths, clock lag and aperture pressure dependence. Require a full flush and restoration of the validated state. No food release follows from research output.
+Stop or park if the modern hot constant-pressure test matches or outperforms, if thermal-stress matching cannot be verified, if the raw conductivity thermal artifact cannot be separated, or if incremental expected avoided loss is below the annual cost threshold.
+
+3. COVERAGE / RANKING / STATUS
+F1: 13 situations, 23 transitions/dependencies, 12 constraint families, 55 applicability bindings, 12 incoming pairs, 6 deep motifs, 3 broad known mechanisms (defrost isolation, sectional defrost, retained-water model), 1 narrow unresolved configuration, economic reject.
+F2: 15 situations, 26 transitions/dependencies, 13 constraint families, 55 bindings, 17 incoming pairs, 7 deep motifs, 4 known mechanism families (integrated daily test, warm tracer test, pressure excitation, saline conductivity), 1 narrow unresolved protocol, physical counterexample and repair, synthetic equation check only.
+Combined: 28 situations, 49 edges, 25 typed constraint families (some cross-case families overlap; not 25 unique new laws), 110 bindings, 29 incoming pairs, 13 deep motifs, 2 frozen interventions, 0 validated novel improvements, 0 measured savings. These are bounded coverage counts, not scientific coverage percentages. No arbitrary target expansion used.
+Rank 1: F2 only as possible bench research after a strong baseline comparison; mathematical prediction conditional, simulation arithmetic validated, physical field status UNKNOWN, novelty UNKNOWN, economically positive region conditional.
+Rank 2: F1 stop under the current economic screen; do not pad the user's positive ideas list with it.
+Independent agent review: novelty_referee identified intact plate compliance false positive and prior art; savings_review corrected preliminary F1 mental arithmetic and advised the annual cost threshold. Shared model-family review is adversarial assistance, not externally independent certification.
+
+CORRECTION RECEIPT: Post-replay audit clarified that the $6,600/year condensation refrigeration component is not a full-system upper bound. Useful recovered heat can reduce a separate purchased defrost input as well as a refrigeration input; that is legitimate when both boundaries are closed. The added heating-credit sensitivity remains negative in the declared case. Frozen original mechanism is unchanged.
+
+
+4.12.10 MANUFACTURING: M1-M2
+Source packet owner and scope follow. Receipt SHA256 of original packet bytes:
+715dc6d0e7fcb0f210f7db89df16c79b665a0b5fddf549f4395a043a99a90c10
+Integration note: local replay commands below point to the single tracked harness.
+
+GARDEN MANUFACTURING CANDIDATES M1-M2 — 2026-10-09
+NONCANONICAL RESEARCH PACKET. No established scientific novelty, measured savings, or Garden incremental benefit. Two independently mapped manufacturing interfaces; one exact rediscovery and one broad rediscovery with a narrowly unresolved implementation detail. Do not present these as two proven new inventions.
+
+SOURCE / METHOD CONTRACT
+Actual source files read: V15_10_ABSTRACTION_GCSC_DELTA.md; GSL_COMBINATORIAL_SEMANTIC_COVERAGE_v0.1.md; INVARIANT_DRIVEN_THEORY_DISCOVERY_IDTD_001.md in full; TREE_CORE_v0.8.1_2026-09-23.txt §§ 1.4-1.8 and R; GARDEN_TECHNICAL_v15.10_FULL_DELTA.txt §§ 10, 45-47. This is a bounded research adapter applying the source method, not a completed Garden/SAL compiler. Full relation-typing registries are not implemented. Physical invariants are laws, constitutive assumptions, or operating constraints as explicitly typed below; none acquires normative authority.
+S0: bind source/process facts, assumptions, local graphs and explicit equations.
+S1: derive bounded transition obligations, projection counterexamples and tests from this seed. Derived material is not fed automatically back into S1 as an admitted premise.
+S2: retain freeze identity, ordered results, failures and unresolved states.
+No-self-admission: mathematical replay is not external verification or empirical validation. Same-family independent review is useful adversarial checking, not scientific certification. No canonical file altered by this packet.
+
+Freeze: /workspace/scratch/5e8f47cbc766/manufacturing_freeze.txt
+SHA256 36b8a77827e5ec087b8f856682bb12fa8df1e358fee0519ca37c74e6e9d6f588.
+Broad process-fact searches preceded freeze; targeted intervention/patent searches followed freeze. Training-data contamination remains possible. Original freeze is preserved; later pressure-feasibility/economic repairs below do not overwrite it.
+Replay: python design_deltas/v15.10/industrial_ten_cases.py --details (MANUFACTURING output)
+
+TYPED ABSTRACTION BINDINGS SHARED BY THE CASES
+TIME: cycle timestamps, probe interval, purge residence time, annual evaluation period.
+SPACE: fixture/contact/probe coordinates for M1; manifold/branch/gate/cavity domains for M2.
+THING: blank, chips, fixture, probe, resin, manifold, valves, mould, instruments.
+EVENT: material removal, preload change, unclamping, contamination emergence, gate switching.
+ACTION: authorized probe/fixture commands or purge recipe changes. AGENCY: operator and responsible process-control organization; matter has no agency.
+RULE: owner-bound conservation, elasticity/washout equation contracts and engineering limits.
+VALUE: delivered geometry/color quality and conditional marginal avoided costs.
+CONTEXT: material, temperature, preload/contact condition, machine limits and financial assumptions.
+CLAIM: typed hypotheses, observed-source statements, mathematical results, unknown empirical parameters.
+Relations actually used: partOf (physical assembly), dependsOn (state/parameter requirements), causes (qualified physical causal model), governs (operating contract), assesses (test against claim), derivedFrom (equation derivation), supports/contradicts (bounded evidence), frames/contextualizes (domain), identifies (part/branch identity), references (sources), controls/acts (authorized controller only), hasHypothesis (research record), values (economic evaluator). Unused relations do not create padded graph copies. Exact canonical typing of every triple is MACHINE_BINDING_INCOMPLETE, not PASS.
+Forms: CONSTRUCT physical assembly; STATE physical variables; RELATION dependencies; PROCESS chronology/branches; RULE constraints; CONTRACT equations/test/quality scope; PROJECTION measured-to-delivered state mapping.
+Facets: IdentityLifecycle tracks part/branch/resin identity; ScopeContext binds force/temperature/flow; EpistemicsProvenance separates measured/assumed/derived; AuthorityHumanBoundary keeps operating authority with responsible people; EffectsSafety retains fixture/minimum force, high-temperature/polymer-pressure limits; DependencyValidity invalidates on material/contact/recipe change; ResourceTermination bounds rework/purge retries; PrivacyRetention has no personal data in this seed, plant records would need a separate retention owner; AuditExplanation preserves source/freeze/tests; RecoveryEvolution branches to requalification or scrap rather than imaginary rollback of removed material.
+
+M1 — TWO NONZERO PRELOAD MEASUREMENTS BEFORE FINAL MACHINING
+Research question: can delivered free-state geometry be estimated before irreversible final material removal without fully releasing and losing the workpiece datum?
+Status: BROAD_MECHANISM_KNOWN. Narrow 'two nonzero preload measurements preserving datum, then zero-load extrapolation' integration not proven novel; scoped search did not establish exact earlier identity, but evidence is insufficient to call it a research survivor. No demonstrated performance/economic advantage over strong adaptive fixtures.
+
+Actual situation graph (15 nodes; 22 edges)
+01 Receive characterized blank: alloy, initial stress, nominal geometry and uncertainty.
+02 Locate/support: contacts and reference frame established.
+03 Apply cutting preload: vector force and contact state change.
+04 Rough machine: irreversible material removal, cutting force and heat.
+05 Redistribute heat/residual stress: geometry/stiffness evolve.
+06 Establish finish allowance: remaining stock bounds feasible corrections.
+07 Stop spindle and probe at preload F1: observe y1, T1, force, datum.
+08 Perturb preload safely to F2: validated contact retained; no cutting.
+09 Probe at F2: observe y2, T2 and force.
+10 Estimate free shape and uncertainty: reject unidentified/nonlinear cases.
+11 Choose final cut, stabilization wait, or stop.
+12 Restore validated cutting preload and finish.
+13 Unclamp and thermally equilibrate.
+14 Independent coordinate measurement under delivery conditions.
+15 Release, bounded rework, or scrap.
+Edges: SEQUENCE 01>02>03>04>05>06>07>08>09>10>11>12>13>14>15 (14). Additional dependencies 01>10 material, 02>10 contacts, 05>10 thermal/residual state, 06>11 stock, 03>12 cutting force (5). BRANCH 11>05 wait, 11>15 stop, RETRY 15>06 only one qualified rework (3). Total 22. Cyclic rework is a process edge, not a claim of reversible machining.
+
+Invariant/constraint register (10 records; 27 node bindings)
+M1-I1 EXACT CONSERVATION: mass_before = mass_after + chips + collected losses; domain material removal, nodes 04, 12. Counterexample: balance residual exceeds measurement uncertainty; source physical mass conservation.
+M1-I2 EXACT BALANCE IN QUASISTATIC DOMAIN: sum force=0 and sum moment=0 at stationary probe states; nodes 02, 03, 07, 08, 09. Dynamic spindle operation lies outside scope.
+M1-I3 CONSTITUTIVE MODEL: y(F)=g0+C F only for stable contacts, linear elastic response and unchanged thermal/residual state; nodes 07, 08, 09, 10. Curvature/slip falsifies.
+M1-I4 ENGINEERING SAFETY: preload lower bound retains part safely; spindle stopped during perturbation; nodes 07, 08, 09. Machine-specific force bound UNKNOWN pending qualified fixture design.
+M1-I5 QUALITY CONSTRAINT: acceptance applies after unclamping and temperature equilibration; nodes 13, 14, 15. Owner is actual product drawing/customer contract, missing here: numerical tolerance UNKNOWN.
+M1-I6 ESTIMATION CONTRACT: force difference nonzero, measurement/reference uncertainties propagate; nodes 07, 09, 10. Unknown uncertainty cannot be treated as zero.
+M1-I7 RESOURCE / IRREVERSIBILITY: required correction cannot add already removed metal and must not consume below minimum wall/stock; nodes 06, 11, 12.
+M1-I8 DEPENDENCY INVALIDATION: stiffness/residual field changes with further removal; final state must be revalidated, nodes 12, 14.
+M1-I9 ECONOMIC: avoided scrap valued at marginal avoidable cost, not finished-product revenue; node 15.
+M1-I10 CANDIDATE PREDICTION: two nonzero preload probes can predict current free shape with stated error, node 10; not a new physical law.
+Bindings count: 2 + 5 + 4 + 3 + 3 + 3 + 3 + 2 + 1 + 1 = 27.
+
+Transition/composition audit (5 scoped gaps checked; 4 known mechanisms; 3 unresolved interfaces)
+A. 07>13 fixed-force observation loses clamp deformation: known fixture-compensation problem.
+B. 05>10 thermal and residual-stress evolution violates same-state premise: known coupled thermomechanics.
+C. 10>12 remaining-stock removal changes compliance and residual stress: known stiffness/update requirement.
+D. 08+09>10 small preload interval amplifies noise: derived estimator-conditioning constraint.
+E. 12>14 quality assurance requires final independent datum: known metrology requirement.
+Unresolved interfaces: (i) contact-preserving safe perturbation magnitude; (ii) extrapolation accuracy versus nonlinear strong baseline; (iii) marginal cost/throughput and actual scrap reduction. These are not scored covered. No exhaustive machining coverage percentage.
+
+Operators
+Projection-Loss: single observed y=g0+CF at F = 1000 N yields same 50 um for (g0 = 10 um, C = .04 um/N) and (g0 = 30 um, C = .02 um/N), but free-state dimensions differ. This is a constructed observation-equivalence counterexample, not novelty.
+Necessity-Challenge: full unclamping before estimating delivered geometry may be unnecessary IF a validated reversible force-response model holds and datum/contact preservation is verified. Existing before/after unclamping compensation remains the strong comparator.
+Decision-Sufficiency: extra probes useful only if their expected avoided rework/scrap exceeds probing, delay, calibration and equipment costs relative to the best existing method. No empirical action-value distribution is known.
+
+Equation contract / derivation
+Inputs: F1, F2 N; y1, y2 micrometres referenced to same frame and near-identical temperature; C micrometres/N; g0 micrometres. Domain: F1!=F2, elastic small displacement, stable support/contact, negligible or separately corrected thermal drift, no machining between probes.
+y1=g0+C F1+e1; y2=g0+C F2+e2.
+Subtract -> C_hat=(y2-y1)/(F2-F1).
+Eliminate C -> g0_hat=(F2*y1-F1*y2)/(F2-F1).
+Dimensional check: N*um /N=um. Independent equal probe standard deviations sigma give sd(g0_hat)=sigma*sqrt(F1^2+F2^2)/abs(F2-F1). General variance = (F2^2 Var(e1)+F1^2 Var(e2)-2 F1 F2 Cov(e1,e2))/(F2-F1)^2. A common thermal offset survives because estimator weights sum to one; thermal drift is not removed by differencing. Force calibration uncertainty would add further terms.
+Frozen numerical prediction: F1 = 1000 N, F2 = 500 N, y1 = 50 um, y2 = 30 um -> g0 = 10 um, C = .04 um/N; sigma = .5 um -> sd 1.11803399 um. This predicts current free geometry only; final-cut outcome needs updated compliance/residual-stress model.
+Limiting cases: C=0 gives identical free/clamped geometry; F1=F2 unidentifiable; F2->0 recovers direct free measurement but loses the proposed nonzero-preload operational advantage; force separation->0 makes noise diverge.
+Counterexample: y=g0+C F+dF^2 with g0 = 10 um, C = .04 um/N, d = .00001 um/N²: readings 60 um, 32.5 um yield inferred 5 um, a 5 um bias. In general bias=-dF1F2. A nonlinear strong comparator recovers 10 um if d is correctly known. This is a decisive rejection of unconditional accuracy.
+
+Prior-art evidence (primary sources)
+M1-P1 JP3064043B2, https://patents.google.com/patent/JP3064043B2/en ; paragraphs 0007, 0014-0017 already describe spindle touch-probe measurements before/after clamping, coordinate difference and NC compensation. Broad intervention is old. Do not claim the 1990s/2000 patent explicitly proves every modern two-nonzero-force estimator detail.
+M1-P2 2018 original experiment, Controlling deformations of thin-walled Al 6061-T6 components by adaptive clamping, https://www.sciencedirect.com/science/article/pii/S2351978918301112 ; adjustable hydraulic pressure, FEM and CMM validation. Search metadata accessed; full publisher page blocked, so detailed methods remain not fully reviewed.
+M1-P3 original 2023/2024 study, An adaptive clamp system for deformation control of aerospace thin-walled parts, https://www.sciencedirect.com/science/article/pii/S1526612523009878 ; release/reclamp adaptive supports explicitly address elastic deformation. Search abstract accessed, full methods not reviewed.
+M1-P4 NIST 2026 in-process thermal measurement/compensation primary research page, https://www.nist.gov/publications/process-optical-measurement-and-compensation-machine-tool-thermal-deformations ; provides contemporary thermal compensation comparator. It is not a clamp-release experiment; do not merge their measured gains into our hypothetical savings.
+M1-P5 WO2016170552A1, https://patents.google.com/patent/WO2016170552A1/en ; controllable supports and measured force address clamping deformation. Relevant near-prior-art, not exact zero-load extrapolation proof.
+Scoped search terms: clamping deformation compensation; two clamping forces workpiece; clamping force zero-force measurement; workpiece clamping extrapolation; force position adaptive fixture. Negative retrieval does not prove novelty.
+
+Conditional per-facility economics (ALL numerical operating/price/performance inputs assumed)
+100000 parts/year; baseline 5% scrap; hypothesized absolute 1 percentage-point reduction; marginal avoidable scrapped cost $120/part -> gross $120000/y. The geometry example does not establish 1 pp reduction.
+Extra 5 s probe on every part = 138.8889 machine-hours/y. At assumed constrained-capacity cost $60/h -> $8333.33/y. If there is spare capacity this opportunity cost may differ; do not simultaneously claim gross sales from freed hours.
+Assumed capital K = $100000, annual O = $5000, r = .08, n = 10 years. CRF=r(1+r)^n/((1+r)^n-1)=.1490294887. Annualized capital $14902.95. Conditional net 120000 - 8333.33 - 5000 - 14902.95 = $91763.72/y versus weak no-compensation baseline.
+Break-even absolute scrap reduction=(8333.33+5000+14902.95)/(100000*120)=.0023530235, i.e. 0.2353 percentage points. Against the best existing adaptive fixture, incremental scrap reduction and incremental capital/O costs are UNKNOWN; no Garden incremental savings claimed.
+Minimum falsification test: matched blanks/material lot; predeclared force safety range and point locations; compare nonzero-preload estimator against direct released metrology and nonlinear FEM/established adaptive fixture; randomize process order; log temperatures/contact slip; hold machine-hour and output-quality budgets equal. First gate: error bounds survive external metrology on held-out geometry. Second gate: actual incremental rejected-part rate/cost improve. No trial executed.
+
+M2 — STOP PURGING ALREADY CLEAR HOT-RUNNER BRANCHES
+Research question: can retained resin identity survive the branch-to-common-sample interface, allowing selective purge rather than overpurging a clean branch?
+Status: REJECTED_AS_NOVEL / EXACT_KNOWN_MECHANISM. Strong patent and first-person manufacturer instructions disclose the proposed intervention. It remains an actionable known savings audit at facilities not using it. Garden attribution is to mapping/rediscovery only.
+
+Actual situation graph (13 nodes; 19 edges)
+01 Final old-color shot.
+02 Clean feed path and barrel.
+03 Melt new resin.
+04 Displace common manifold.
+05 Partition branch flows.
+06 Open purge gates.
+07 Take branch-specific color samples.
+08 Close cleared branch.
+09 Purge uncleared branch at original permitted flow.
+10 Reopen production gate pattern.
+11 Validate resumed production per cavity.
+12 Accept product or restart qualified purge.
+13 Segregate purge stream for allowed recovery.
+Edges: SEQUENCE 01>02>03>04>05>06>07>08>09>10>11>12 (11). Dependencies 01>04 old identity, 03>09 rheology, 04>07 retained contaminant, 05>09 pressure/flow (4). Material transfers 06>13, 09>13 (2). BRANCH 07>09 not clear, RETRY 12>06 qualified bounded recipe (2). Total 19. Barrel and manifold clearing are explicit upstream prerequisites; synthetic branch calculations do not pretend to model them.
+
+Invariant/constraint register (10 records; 25 bindings)
+M2-I1 EXACT SPECIES CONSERVATION: old resin mass initially stored = emitted + remaining; nodes 01, 04, 05, 09, 13.
+M2-I2 EXACT TOTAL MASS: steady branch inventory Mi fixed requires inflow = outflow; nodes 04, 05, 09.
+M2-I3 CONSTITUTIVE APPROXIMATION: perfect mixing, ci decay exp(-Qi t/Mi); nodes 05, 09. Real laminar wall adsorption/dead zones may violate.
+M2-I4 QUALITY CONSTRAINT: every delivering branch ci <= actual threshold; common average insufficient; nodes 07, 11, 12.
+M2-I5 ENGINEERING LIMIT: safe branch pressure, flow, shear and temperature; nodes 06, 08, 09.
+M2-I6 THERMAL/EMPIRICAL: closed branch residence must not create degradation products; nodes 08, 10. Material-specific kinetics UNKNOWN.
+M2-I7 IDENTITY/QUALITY: recovered resin credited only if accepted grade/material properties permit; node 13.
+M2-I8 TERMINAL COMPARABILITY: normal gate pattern reopened and actual product validated; nodes 10, 11, 12.
+M2-I9 ECONOMIC: avoided virgin resin minus lost purge recovery credit; node 13.
+M2-I10 CANDIDATE RULE: isolate cleared branch instead of continuing all-open purge; nodes 07, 08.
+Bindings 5 + 3 + 2 + 3 + 3 + 2 + 1 + 3 + 1 + 2 = 25.
+
+Transition/composition audit (5 checked gaps; 5 known mechanisms; 3 unresolved empirical interfaces)
+A. 05>07 common sample dilutes branch residue: known gate-specific troubleshooting.
+B. 07>08 endpoint without branch identity cannot choose valve: known selective valve gating.
+C. 08>09 flow redistribution can violate pressure/shear limits: original freeze's full 1 kg/min routing is not assumed feasible; repaired schedule below retains each branch's permitted flow.
+D. 08>10 closed branch changes residence/temperature: known degradation limitation, requires qualifying test.
+E. 10>11 resumed production different flow may release old resin: known restart validation need.
+Unresolved: effective branch residence distribution, material-specific color/quality threshold versus linear old fraction, and plant-qualified purge/recovery costs. No whole-domain exhaustion claim.
+
+Operators
+Projection-Loss: identical bulk color can arise from uniformly clean branches or very dirty low-flow branch + clean high-flow branch. Subsequent gate pattern changes output quality; aggregate purge sample is not decision-sufficient.
+Necessity-Challenge: continued flow through every gate is not necessary for meeting each gate's color threshold; branch isolation is physically feasible on appropriate hardware and already known.
+Decision-Sufficiency: per branch color state can change gate closing decision and avoided resin. Increment over modern branch-aware method is zero in this specific synthetic model.
+
+Equation contract / repaired schedule
+Mi kg held in branch i; Qi kg/min; ci dimensionless old resin mass fraction; pure new feed; fixed Mi, perfect mixing, isothermal compatible materials, nonnegative flow, ci0 = 1. Mi*dci/dt = -Qi*ci -> ci = exp(-Qi*t/Mi). Required purge time ti = (Mi/Qi)*ln(1/c*). Bulk outlet color = sum Qi ci / sum Qi is not max ci.
+Baseline all open T = max ti, total purge Mbase = T*sum Qi. Close each branch when it clears schedule uses Mselect = sum Qi ti = sum Mi ln(1/c*), with duration T if original branch flows retained. Units kg/min * min = kg. Savings nonnegative because each ti <= T. Equality when all turnover times coincide: tested balanced branch null.
+Frozen ideal numbers: M1 = M2 = 1 kg, Q1 = .9 kg/min, Q2 = .1 kg/min, c* = .001. T = 69.07755279 min; fast branch clear at 7.675283643 min. All-open 69.07755279 kg; close cleared 13.81551056 kg; difference 55.26204223 kg/change.
+POST-FREEZE REPAIR: original spec directed 1 kg/min through each isolated branch and implied 13.8155 min total; that could require excessive pressure through slow branch. Repaired schedule closes fast branch at 7.6753 min, leaves slow at its original .1 kg/min until 69.0776 min. Same material benefit, no claimed time saving and no 10x flow. Flow controlled screw must reduce feed as the fast gate closes; blocked flow with unchanged feed is not allowed.
+Terminal total resin inventory 2 kg in both cases; both branches meet the same quality threshold. Terminal old species: baseline .001 kg versus selective .002 kg. Difference .001 kg is explicitly retained; no cash credit assigned to it. Exact microscopic composition is not identical: compare quality compliant output and quantity, not claim identical state. If downstream requires baseline's overclean fast branch, selective advantage collapses when tightened to identical componentwise end state. Production restart sample and thermal residence qualification remain mandatory; extra resin cost would reduce benefit.
+Strong baseline uses already known endpoint-aware selective gating. Its 13.81551056 kg result ties candidate exactly. Garden increment 0 kg/change in this model.
+Counterexamples: equal branch turnover times gives zero resin saving; indiscriminately adding full flow to high resistance branch exceeds machine pressure; actual dead zone contamination does not obey exponential washout; closed gate thermal hold creates black particles; final reopening releases material that was not sampled during purge; barrier-grade/color resin may not qualify for credit.
+
+Primary prior art
+M2-P1 JP3046629B2, https://patents.google.com/patent/JP3046629B2/en ; priority 1991-01-28, public application JPH04251721A 1992-09-08. Paragraph 0010 purges one gate, closes when complete, and moves next; 0012 flow concentration; 0013 efficiency. Direct same intervention, not merely similar physics. Translation is Google's; metadata/text review is not a patent legal opinion.
+M2-P2 Dyna-Purge first-person technical guide, April 2019, https://dynapurge.com/wp-content/uploads/2019/05/0419-KK-Trouble-Purging.pdf ; pp 1-2 advises each purge pile inspection and closing other gates when problematic gate is purged. This covers both branch-resolved assessment and targeted action. No credible 'narrow endpoint automation' novelty claim survives from this packet.
+M2-P3 CN106514963A/EP3144120A1, https://patents.google.com/patent/EP3144120A1/en ; pulsed valve opening and closing for rapid color changes already disclosed. Do not rebrand pulsing as next novel idea.
+Scoped queries: hot runner color change sequential valve gates purge individually patent; hot runner purge gate opening contamination; hot runner color sensor purge patent.
+
+Conditional economics (ALL numerical plant/price inputs ASSUMED)
+500 changes/y; virgin resin $4/kg; earned purge recovery credit $1/kg; net avoided material spend $3/kg. Gross = 500*55.26204223*3 = $82893.06/y.
+Assumed K 100000 USD, O 5000 USD/y, r 8%, life 10 years -> annualized cost 19902.95 USD/y -> conditional net $62990.11/y versus all-open weak baseline. Qualified restart validation material, quality loss or additional cost must be subtracted; modeled allowance O 5000 is unverified and may be inadequate.
+No additional time/throughput benefit claimed because repaired elapsed time unchanged. No energy benefit added. No global extrapolation. Best known selective baseline offers same modeled saving, therefore Garden increment is zero before any added Garden implementation cost.
+Break-even savings mass = (K*CRF+O)/(500*3) = 13.26863258 kg/change. Actual baseline purge quantity and color accepted endpoints are the decisive plant measurements.
+Minimum test: same resin pair, machine, manifold and clean feed; randomized matched changeovers; weigh new resin, purge, and accepted product; instrument branch pressures and temperatures; compare best qualified existing selective gating against candidate with identical final production validation. Independent lab measure color and mechanical requirements if recovery credit claimed. No trial executed.
+
+COVERAGE / OUTCOME
+15 + 13 = 28 materially supported situations; 22 + 19 = 41 edges; 10 + 10 = 20 scoped law/constraint/candidate records; 27 + 25 = 52 bindings; 5 + 5 = 10 audited connected motifs/gaps; 4 + 5 = 9 known mechanisms; 3 + 3 = 6 unresolved plant/model interfaces. Graph edges include physical process and dependency edges as labelled; these are not all time ordered transitions.
+One exact known purge intervention; machining broad compensation known, narrow two-nonzero-preload integration UNRESOLVED without demonstrated advantage. Zero established novel ideas. Zero empirically measured savings. Conditional weak-baseline savings are illustrations, not Garden-origin benefits. 56 bounded mathematical checks replayed including curvature counterexample, mass balance, equal-turnover null and strong baseline purge tie.
+Ranking for further testing: M1 low priority (unresolved implementation, high measurement/contact risk, prior art nearby); M2 stop novelty branch (exact published intervention). Do not sum conditional numbers into a Garden portfolio claim. Negative findings do not exhaust manufacturing or prove Garden method has no scope for future discovery.
+
+LOCAL SOURCE IDENTITIES (exact bytes; hash verifies identity, not semantic correctness)
+V15_10_ABSTRACTION_GCSC_DELTA.md 90a58c337bc87c2e445eb56d6197cddea845f74485339e074b0818d70dae8479
+GSL_COMBINATORIAL_SEMANTIC_COVERAGE_v0.1.md 27428feebc2fe8f2a4a9a5dd8fc5d680d36fb18623575ef19235427f9021e3b1
+INVARIANT_DRIVEN_THEORY_DISCOVERY_IDTD_001.md 14bf4fdced0cccebeb5cb22a0cec3b7aff765e57efa25230626ddcf3b24bfdf4
+TREE_CORE_v0.8.1_2026-09-23.txt 4af3a2c4c8d8577909735fb61c42e0f43324dc0147d8b24146b4561ee56511fa
+GARDEN_TECHNICAL_v15.10_FULL_DELTA.txt f61bc8e4f12418498f114f586c2d4e58b1ca575a788e0e5194430088a0f8f18f
+
+
+4.12.11 SCOPED INDEPENDENT NOVELTY REVIEW
+Source packet owner and scope follow. Receipt SHA256 of original packet bytes:
+63095962f1465d5ee948e33134d3cc93c4d6968e88d1b6f82a06b6110d40fa80
+Integration note: local replay commands below point to the single tracked harness.
+
+TEN INDUSTRIAL CANDIDATES — ADVERSARIAL NOVELTY / METHOD REVIEW
+9 October 2026. Same-system reviewer role; not independent-family or laboratory certification. No repository edits, upstream contact or paid calls. Review scope: independent targeted attacks on H1, U2, F2 and M2, with cross-cutting claim/economic gates. Remaining six cases are not represented as independently reviewed here.
+
+Garden source verification: current garden-ten HEAD b9da78346f0ee38de5cdc154e522469066522e07. Previously read v15.10 abstraction, GCSC, full TREE_CORE and IDTD source hashes match exactly: 90a58c...ae8479;27428f...21e3b1;4af3a2...56511fa;14bf4f...bfdf4. Candidate/no-self-admission boundaries remain. Frozen candidate files were read before these targeted searches. Prior factual searches/training knowledge mean this is not a blind discovery benchmark.
+
+H1 — HOT ALUMINUM ASH REMOVAL
+Strong adverse primary sources:
+1. US9702022B2, https://patents.google.com/patent/US9702022B2/en : its de-charring discussion explicitly identifies remaining ash and calls screening, settling or air entrainment conventional separation methods (description paragraphs near lines528–530 of retrieved text). Same document describes controlled low-oxygen multihearth/rabbling treatment.
+2. CA2789519A1, published2011, https://patents.google.com/patent/CA2789519A1/en : intermediate hot particulate removal after decoating and before melting, using agitation and stronger gas recirculation/entrainment; intended to prevent downstream dross/metal loss. Its separation stage uses7–20%oxygen, so it does not literally establish every proposed low-oxygen/precompaction detail.
+Verdict: core postdecoating mechanical/gas ash-removal mechanism is already disclosed. Exact proposed hot low-oxygen classifier plus compaction recipe remains UNRESOLVED, not a confirmed novel design. The5kg/t incremental saleable-metal figure is a chosen performance target, not a model-derived or measured yield. Require metallic-Al accounting across retained scrap, dust and dross, alloy quality, oxidation, and comparison with established ash removal; total elementalAl or removed ash mass is insufficient. No supported savings claim survives at present.
+
+U2 — STAGGER COOLING-TOWER BLOWDOWN
+An existing stronger comparator defeats the frozen constant-load example. Each tower's average blowdown is72/12=6m3/h. Continuous discharge at6m3/h yields equilibrium concentration(30+6)*1000/6=6000mg/L. For three towers plus120m3/h background at300mg/L, constant receiver inlet is(120*300+18*6000)/138=1043.478mg/L. This has the same average water/salt duty and no invented tank. It must be compared with synchronous/staggered pulses using periodic inventory, not a depleted initial basin.
+Primary technical source: N.C. Water Efficiency Manual,May2009,p44, https://www.deq.nc.gov/environmental-assistance-and-customer-service/ias-water-efficiency/water-efficiency-business/download explicitly describes proportional/continuous makeup and blowdown to reduce batch sawtooth where hardware/load permits. US4273146A also documents established conductivity/time-based tower blowdown control, https://patents.google.com/patent/US4273146A/en .
+No minimum valve-flow constraint existed in the freeze; inventing one afterward would not validate the original economic comparison. Author independently agreed to add continuous control as a strong comparator and retain rejection if it wins. Exact joint receiving-bioreactor scheduling novelty remains UNKNOWN, but claimed avoided equalization-tank cost cannot be attributed to staggering when existing control already meets the receiving constraint. Biological benefit requires actual inhibition/dose/time data, not only inlet peak concentration.
+
+F2 — HOT MATCHED-STRESS HEAT-EXCHANGER LEAK CHALLENGE
+Original pressure/volume correlation has a concrete false-positive route: an intact flexible plate can displace receiver-side water under the imposed pressure modulation. In a linear compliance illustration, apparent flow amplitude is omega*C_mech*dp_hat even with zero leak. Tracer mass transfer, independently calibrated lag/dispersion, temperature compensation and intact-hot nulls are required. The proposer accepted this attack and narrowed the post-freeze protocol; preserve original and revision separately. Crack aperture may itself depend on pressure, so the fixed-area orifice derivative is scoped rather than universal.
+Adverse/adjacent primary prior art:
+- WO2010139801A1,2010, https://patents.google.com/patent/WO2010139801A1/en : automated in-situ water integrity tests at startup, operating-or-higher pressure, temperature monitoring and optional flow measurement using plant equipment.
+- WO1999019705A1,1999, https://patents.google.com/patent/WO1999019705A1/en : warmed circulating liquid, detector-gas pressure steps and correlated cross-side indication.
+- EP4542191A1,2025, https://patents.google.com/patent/EP4542191A1/en : deliberate reference-signal pressure modulation and flow-response comparison for utility-pipe leak detection (adjacent application, not an exact dairy protocol).
+The exact combined matched-thermal-stress, tracer-response startup protocol was not matched in this bounded search; that is NOT novelty proof. Compare against a hot constant-pressure tracer test with equivalent temperature/stress and instrumentation. Incremental sensitivity, false positives, extra downtime and event frequency are unmeasured; no financial forecast is warranted.
+
+M2 — SEQUENTIAL BRANCH-ISOLATED HOT-RUNNER PURGE
+Direct primary match: JP3046629B2, application publication1992-09-08, https://patents.google.com/patent/JP3046629B2/en . Description0010 specifies opening one gate, purging its runner, closing it when complete, then doing the next gate;0012 explains full flow through the active branch and0013 the resin-change advantages over all-open flow splitting. This is the central proposed intervention, not merely related physics.
+Verdict: broad scheduling mechanism KNOWN. An added branch color endpoint may require its own narrow search, but does not make the old sequential-purge savings Garden-generated. The illustrative two-compartment reduction is against a weak all-open baseline; a conventional implementation of the published sequence can obtain that modeled benefit. Additional saving over that strong comparator remains UNKNOWN.
+
+CLAIM GATES FOR ALL TEN
+- Ten investigated candidates are not ten confirmed novel money-saving ideas. A request for a count cannot supply evidence.
+- Label assumed improvements TARGET, model calculations CONDITIONAL, measured effects MEASURED only when actual data exist. A target multiplied by throughput and price is not a saving forecast.
+- Known physics does not alone disprove engineering-design novelty; specific prior configurations/control sequences can. Lack of an exact search match leaves UNKNOWN.
+- Full-cycle mass/energy, initial/final inventories, useful output, quality, reliability and permitted control limits must match. A weaker incumbent comparison cannot establish increment over strongest available practice.
+- Large scale requires an evidenced eligible population/adoption and implementation cost. Do not sum unrelated synthetic site figures into a purported total.
+
+Current review outcome: H1 strong prior-art overlap; U2 stronger-comparator failure to be quantified by branch replay; F2 original observable invalidated and revised narrow protocol unverified; M2 core mechanism directly known. No reviewed case yet establishes novel industrial savings. This is bounded negative evidence, not exhaustion of the domains.
+
+
+4.12.12 INDEPENDENT ECONOMIC AND REPLAY REVIEW
+Source packet owner and scope follow. Receipt SHA256 of original packet bytes:
+9eed2999a51e5171a5dd917c5669e4c51df79e7f450357ac93d43b5eb92dcc84
+Integration note: local replay commands below point to the single tracked harness.
+
+TEN INDUSTRIAL CANDIDATES: INDEPENDENT ECONOMIC / MATHEMATICAL REVIEW
+Reviewer: savings_review. Date: 2026-10-09.
+Status: COMPLETE FOR DECLARED PACKETS AND POST-FREEZE REPAIRS.
+No field savings or frontier novelty is certified.
+
+COMMON COMPARISON CONTRACT
+The valid comparator is the strongest practicable existing engineering method
+with identical information, useful output, product quality, operating limits,
+maintenance condition, and starting/ending stored inventory. Comparison with a
+weak fixed schedule only establishes an opportunity against that schedule.
+Publicly reported industry savings do not establish an incremental benefit for
+the proposed Garden-derived candidate. No arbitrary fleet multiplier is used.
+
+For each facility, annual gross benefit B is explicitly reconstructed from
+resource quantities and assumed marginal prices. Annual operating benefit is
+B minus recurring incremental costs O. Annualized net benefit is
+N = B - O - CRF(r,n)*K, where K is incremental installed capital and
+CRF(r,n) = r*(1+r)^n / ((1+r)^n-1), or 1/n for r=0.
+Maximum viable K = (B-O)/CRF, when B>O. These comparisons omit tax, salvage,
+financing constraints, and risk premium unless specifically parameterized.
+Illustrative r=8%, n=10 years yields CRF=0.1490294887/year; it is a chosen
+economic assumption, not an observed borrowing rate or equipment lifetime.
+Simple payback K/(B-O) differs from annualized economic profit.
+
+ACCOUNTING GUARDS
+1. Heat: kW_th * operating hours / 1000 = MWh_th. If the price is per MWh_fuel,
+   fuel avoided = useful heat avoided / marginal delivered-heat efficiency.
+   Do not divide by efficiency again if the quoted price is per MWh useful heat.
+2. Electricity: integrate the whole changed boundary, including auxiliaries,
+   pumps, cooling, standby and rebound. A reduction in duty or leakage need not
+   cause the same fractional electrical reduction on a part-load machine.
+3. Tariff shift: count sum(E_baseline*price_baseline-E_candidate*price_candidate).
+   A bill reduction is not necessarily an energy reduction; cold/heat storage,
+   losses, changing COP, and recovery load must be included.
+4. Peak demand: apply actual billing-period coincident maxima and tariff rules.
+   A kW reduction at an arbitrary instant is not an avoided monthly demand bill.
+5. Production: capacity freed is not sold output. Extra sales count only at
+   contribution margin after incremental costs, with demand and bottleneck
+   evidence. Avoided scrap/rework must net out salvage and sunk/unavoidable cost.
+6. Avoid counting embodied energy both in avoided scrap cost and energy saving;
+   avoid counting recovered heat and reduced cooling when their costs overlap.
+7. Initial/final inventory, temperature, pressure, moisture, quality and deferred
+   maintenance must match or be valued explicitly; borrowing inventory is not
+   an efficiency improvement.
+8. Annual operating hours, eligible volume, recovery fraction, and persistence
+   are hypotheses unless backed by the facility's data. Repeated isolated
+   laboratory events do not establish annual benefit.
+9. Keep baseline opportunity B_current separate from candidate increment
+   B_incremental versus a strong engineering comparator. Do not infer novelty
+   or positive B_incremental from known B_current savings.
+
+CANDIDATE-SPECIFIC REVIEWS
+Frozen source packets read: ten_heat_material_freeze.txt,
+ten_utilities_freeze.txt, food_cold_freeze.txt, manufacturing_freeze.txt.
+All physical improvements below are ASSUMED TARGETS or model-derived conditional
+quantities. NONE is a measured incremental industrial result. Formulas were
+independently recalculated with Python. Annual figures are USD per facility.
+
+H1: Hot ash removal before aluminium compaction.
+Input target: 100,000 t feed/year; saleable net yield gain 0.005 t/t;
+$2,000/t marginal retained metal value; added electricity 10 kWh/t at $0.10/kWh.
+Gross = 100,000*0.005*2,000 = $1,000,000/year.
+Added electricity $100,000/year plus other O&M $100,000/year; K=$1,000,000.
+Annual capital $149,029.49; conditional annualized net $650,970.51.
+Break-even net yield gain = 0.00174514744 t/t = 0.174515 percentage points.
+Maximum viable K at the target = $5,368,065.
+Yield must be NET of Al carried into classifier dust and value recovered by the
+strong baseline's dross/secondary recovery. Retained metal value must be net of
+additional downstream finishing/marketing costs. One percentage point is .01,
+not a 1% proportional reduction in pre-existing loss. Target gain is unmeasured.
+Exact prior art reported by the novelty referee can defeat novelty independently
+of this arithmetic; the comparison must then use that known implementation.
+
+H1R bounded repair (not an eleventh industrial idea): recover metallic fines lost
+to the classifier. New frozen assumptions: .002t metallic Al/t original feed;
+candidate saleable recovery.8;100,000t/y;$2,000/t retained metal;2kWh/t at$.10;
+O=$40,000 maintenance plus$20,000 electricity;K=$500,000.
+Against an unrealistic discard baseline, gross=$320,000, annualized net=$185,485.26.
+Against merely50% existing saleable fines recovery, incremental gross=$120,000
+and net=-$14,514.74. Break-even incremental saleable gain=.67257372kg/t feed,
+requiring recovery-fraction improvement>.33628686 for the assumed2kg/t fines.
+The distinction between gross recovery and incremental recovery changes the
+economic sign. The general hot rolling/screening mechanism also has prior art;
+feed-specific selectivity and any incremental benefit remain unverified.
+
+H2: Selective surface/corner phase reset while retaining hot slab core heat.
+Input target: 1,000,000 t/year; 95% of slab retains a 400 K sensible-heat rise;
+cp=0.7 kJ/(kg K); marginal furnace efficiency .60; fuel price $10/GJ.
+Avoided useful sensible heat = .95*.7*400 = 266 MJ/t.
+Fuel avoided = .443333 GJ/t; gross = $4,433,333.33/year.
+O=$250,000/year; K=$5,000,000; annual capital $745,147.44.
+Conditional annualized net = $3,438,185.89/year.
+Break-even incremental useful heat retention = 59.7088466 MJ/t relative to the
+actual comparator at these throughput, efficiency and price assumptions.
+Maximum viable K at target = $28,070,507.
+The 266 MJ/t is an ideal SENSIBLE-HEAT INVENTORY calculation versus full cooling,
+not an observed furnace-fuel response or an increment over modern selective
+cooling/hot charging. Grade-specific transformation heat, heat loss, auxiliaries
+and defect cost remain unresolved. No novel saving follows if the strong
+comparator already preserves the same heat.
+
+H3: Return clean hot mineral before chloride condensation in a kiln bypass.
+Input target: 1,000,000 t clinker/year; 20 kg entrained mineral/t clinker;
+70% clean recovery; cp=1 kJ/(kg K); 800 K retained temperature difference.
+14,000 t mineral/year and 11.2 MJ useful heat/t clinker are retained.
+At .60 marginal fuel efficiency and $10/GJ fuel: heat value $186,666.67/year.
+At $20/t recovered material net marginal mineral/disposal value: $280,000/year.
+Gross $466,666.67; O=$80,000; K=$1,000,000; annual capital $149,029.49.
+Conditional annualized net $237,637.18/year.
+Break-even clean recovery fraction = 0.343544233, or 34.3544%, if benefits scale
+linearly with recovery and all other assumptions/requirements remain valid.
+Maximum viable K at target = $2,594,565.
+Do not credit particle sensible heat if the baseline already recovers it, or
+credit the same heat again in gas recuperation/calcination savings. The $20/t
+must exclude fuel savings already counted. Total extracted chloride mass and
+product specification must be preserved; otherwise recovery is not comparable.
+
+U1: Condensate phase-specific acceptance during qualifying leak events.
+Input target: 30 t/hour, 8,000 hours/year, events during 10% of operation;
+90% accepted liquid at 100 C versus 20 C makeup; cp=4.18 kJ/(kg K).
+Retained liquid 21,600 t/year; sensible heat 2,006,400 kWh_th/year.
+At .80 boiler efficiency and $0.04/kWh_fuel: $100,320/year heat value.
+At $2/m3 makeup water (1,000 kg/m3 reference): $43,200/year water value.
+Gross $143,520; O=$15,000; K=$300,000; annual capital $44,708.85.
+Conditional annualized net $83,811.15/year.
+Break-even qualifying event duty = 0.041603154, or 4.1603154% of operating time,
+assuming the same flow, flash split, qualified-liquid fraction and temperatures.
+Maximum viable K at target = $862,380.
+All relevant contaminants must satisfy return limits; vapor treatment capacity
+and incremental cost must be included. Conductivity alone cannot establish a
+volatile-species safety/quality claim. Comparison against existing dual-outlet
+recovery may eliminate the entire physical increment.
+
+U2: Stagger cooling-tower blowdown using basin inventory before wastewater.
+Original economic scenario: avoid a NEW $400,000 equalization tank by installing
+$60,000 controls and paying an extra $5,000/year O&M.
+Annual avoided baseline capital = $59,611.80; candidate annual capital $8,941.77.
+Conditional annualized difference = $45,670.03/year (not energy/bill savings).
+Break-even avoided NEW tank capital = $93,550.41, at those costs.
+STRONG-COMPARATOR FAILURE: continuous 6 m3/hour blowdown from each tower uses
+the same 216 m3 water and removes the same 1,296 kg salt per 12 hours. The
+utilities/referee replay gives a receiving concentration of 1,043.48 mg/L,
+below staggered 1,599.91 and synchronous 3,033.42. The frozen conditions do not
+prohibit continuous blowdown. Therefore the claimed tank avoidance cannot be
+attributed to staggering. No candidate incremental dollar benefit established.
+If equivalent continuous controls already exist and staggering needs the quoted
+extra equipment/O&M without additional benefit, net increment is -$13,941.77/year.
+Do not report the original +$45,670 scenario as a surviving novel saving.
+
+U3: Allocate remaining warm thermal-storage layers to tolerant cooling loads.
+Input target: 4,000 m3 water; 1,000 kg/m3; cp=4.18 kJ/(kg K); 12 C to18 C;
+200 matched charge/discharge cycles/year; peak COP5, off-peak COP6; efficiency.95;
+electricity prices $0.20 peak and $0.08 off-peak per kWh.
+Available heat per cycle = 27,866.6667 kWh_th; yearly = 5,573,333.333 kWh_th.
+Gross bill benefit = E_year*(.20/5-.08/(6*.95)) = $144,711.11/year.
+O=$20,000; K=$500,000; annual capital $74,514.74.
+Conditional annualized net $50,196.37/year.
+Break-even matched usable cycles = 130.6254/year, or at200 cycles peak tariff
+$0.1549674/kWh with the other assumed quantities held fixed.
+Maximum viable K at target = $836,822.
+This is mainly a temperature-qualified storage/bill calculation. Conditional
+electricity reduction is E_year*(1/5-1/(6*.95)) = 136,888.89 kWh/year, distinctly
+smaller than shifted peak electricity; never call all discharged heat saved
+electricity. New recharge energy is included. Useful demand must coincide with
+the layer availability, and end-cycle inventory must be restored. An existing
+multi-temperature allocator that already uses the warm layer ties this action.
+
+F1: Capture defrost vapor on a still-frozen collector and finish the same cycle.
+Initial packet gave no monetary assumptions; follow-up proposed 3 kg escaping
+vapor/cycle, .60 capture, COP1.5, 100 evaporators,2 cycles/day,330 days/year,
+$0.12/kWh. At Lv=2,500 kJ/kg, restricted avoided-latent-cooling gross bound is
+3*.6*2500/3600/1.5*100*2*330*.12 = $6,600/year, NOT $2,640/year.
+This is a single-channel screen of avoided room latent cooling, NOT an upper
+bound on all possible system benefits or proof the intervention cannot pay.
+Final replay uses K=$200,000,O=$5,000. Annual capital=$29,805.90, and that
+single-channel net is NEGATIVE $28,205.90/year. For that channel alone it requires
+escaping vapor>15.8208626kg/cycle at the same capture and cycle assumptions to
+break even. Maximum viable capital for that single channel at3kg/cycle is only
+$10,736.13, before additional unlisted costs.
+Do not present an earlier illustrativeK=$100,000 as the final packet input.
+CORRECTION / SECOND PURCHASED-INPUT LEDGER: heat recovered internally can also
+displace purchased defrost heat. This is legitimate in addition to lower cooling
+electricity ONLY when a closed whole-cycle energy balance and independent input
+meters show two distinct baseline input reductions with equal final service.
+Generous declared alternative: all captured condensation heat displaces direct
+electric resistance defrost heat at$0.12/kWh. Then added heat-input credit is
+3*.6*2500/3600*66000*.12=$9,900/year, alongside$6,600 cooling credit. Total gross
+=$16,500/year and annualized net=-$18,305.90/year. Break-even escaped vapor for
+these TWO explicit channels would be6.328345kg/cycle with all other assumptions
+held fixed. A further15% useful-heat sensitivity gives$18,975 gross and
+-$15,830.90/year net; it is an alternative assumption, not measured performance.
+The original hot-gas-defrost baseline does not automatically qualify for direct
+electric-heater credit. Its marginal purchased heat/shaft-work response must be
+measured or modeled correctly. Complete final defrost, drainage and restored
+cooling inventory are required. Both declared scenarios are negative at their
+costs; neither establishes global unprofitability of other configurations.
+
+F2: Matched-stress hot leak challenge before food-regenerator startup.
+ORIGINAL unsupported scenario retained for audit, not a surviving forecast:
+Input target: .5 otherwise undetected avoidable events/year; incremental
+sensitivity .30 over the strong comparator; $1,000,000 avoidable loss/event.
+Gross expected avoided loss = $150,000/year. False positives .1/year at
+$50,000/stop cost $5,000; other O=$20,000; K=$100,000.
+Annual capital $14,902.95; conditional expected annualized net $110,097.05.
+Break-even incremental sensitivity = .0798059, or 7.98059 percentage points,
+at .5 preventable events/year. Alternatively break-even event rate=.1330098/year
+at sensitivity gain .30 (roughly one qualifying event every7.52 years).
+Maximum viable K under the assumed event model = $838,760.
+All event rates, preventable-loss values and incremental detection probabilities
+were unmeasured. The original$110,097 cannot be reported as a candidate benefit.
+
+FINAL narrower incremental protocol economics versus an existing hot test:
+K=$40,000; O=$12,000/year; added false-positive frequency.1/year times$5,000/stop
+=$500/year. Annual capital=$5,961.18. Required independently verified incremental
+avoided loss is therefore>$18,461.18/year. At$250,000 avoidable loss per additional
+correct prevention, required rate is>.07384472/year; neither the rate nor that
+unit loss is established. A merely ASSUMED$75,000/year increment would leave
+$56,538.82 net, but the strong-comparator screen does not support such an input.
+Directly ran ten_food_cold_replay.py: candidate signal amplitude.19164uS/cm versus
+fit error.01908; null stayed below threshold;100 synthetic seeds yielded100
+detections and0false alarms. These artificial samples are not industrial rates.
+An ideal known-background same-hot-condition DC test has signal5uS/cm and
+standarderror.01291, substantially stronger in the frozen white-noise model.
+No incremental detection benefit is demonstrated; final saving NOT QUANTIFIABLE.
+Pressure-only sensing also failed a compliance counterexample: intact volume
+motion.03142ml/min exceeds the proposed leak modulation.025ml/min.
+The final regression computes the amplitude covariance explicitly, resolving the
+earlier shortcut's missing noise-equivalent-sample definition. Common-mode drift,
+lag, unknown background and crack response require independent calibration.
+False-negative safety/quality duties are not replaced by positive expected value.
+
+M1: Two-preload estimation of released thin-wall machining geometry.
+Input target: 100,000 parts/year; absolute scrap reduction .01; marginal avoided
+scrap/rework cost $120/part. Gross = $120,000/year.
+Extra probe time:5 seconds/part *100,000/3,600 *$60/hour = $8,333.33/year.
+Cost harmonization: K=$100,000; other O=$5,000; annual capital $14,902.95;
+combined O=$13,333.33. Conditional annualized net $91,763.72.
+Break-even absolute scrap reduction = .0023530235, or .235302 percentage points.
+Maximum viable K at target = $715,742.
+Original packet used an undivided $20,000/year implementation cost, producing
+$91,666.67; harmonized assumptions differ by$97.05/year, not by physical benefit.
+Time cost is capacity opportunity cost only if time is valuable/bottlenecked; use
+actual incremental expense if idle capacity exists. The $120 must not also count
+saved energy or unavailable new sales. No reduction in scrap was observed.
+
+M2: Branch-resolved hot-runner purge.
+Frozen model: two1kg well-mixed branches at .9 and .1kg/min, target old-fraction
+.001. All-open baseline reaches the slow endpoint at69.07755minutes and consumes
+69.07755kg. Candidate13.81551kg leaves55.26204kg/change avoided.
+Post-freeze repair: retain slowbranch flow .1kg/min and stop the fastbranch after
+7.67528minutes; total elapsed time STILL69.07755minutes. No10x slowbranch flow,
+pressure assumption, or throughput gain is needed. Additional valve/thermal
+residence/final production-validation constraints still require tests.
+At500changes/year and virgin-minus-recovery price($4-$1)/kg:
+gross = $82,893.06/year. K=$100,000,O=$5,000; annual capital$14,902.95.
+Conditional annualized net = $62,990.11/year versus all-open purge.
+Break-even avoided purge = 13.26863kg/change, relative to actual comparator.
+Maximum viable K at target=$522,669.
+Original combined$20,000/year implementation cost gave$62,893.06; harmonization
+changes only$97.05/year. No simultaneous credit for fasterproduction is allowed.
+Both final branches meet the same quality threshold, but exact species inventory
+differs: the candidate retains about.001kg more old resin per change. Report that
+qualification, charge any extra validation/reopen purge, and claim no inventory
+value. A strict identical microstate comparison would require an adjustment.
+The novelty referee found direct prior art for gate-by-gate purge, and a modern
+optimized gate schedule can achieve the same saving. No Garden increment shown.
+
+OVERALL ECONOMIC CONCLUSION
+Positive arithmetic conditional on assumed physical improvements is not evidence
+that those improvements exist, are new, persist, or beat strong comparators.
+U2 has a concrete stronger-comparator failure. M2 has a corrected feasible toy
+schedule but direct known control prior art. F1's single-channel screen and the
+generous two-input alternative both have negative net value under final stated
+costs, without proving all configurations unprofitable. F2 failed to show
+an advantage over the hot constant-pressure comparator. Other rows require the stated
+measurement and comparison before an incremental net-value claim is justified.
+Do not add the ten rows into a total: different facilities, industries, baseline
+qualities, target assumptions, and evidence levels make that sum meaningless.
+
+INDEPENDENT REPLAY COMPLETION
+Ran ten_heat_material_calc.py:18 declared contract checks passed; monetary rows
+and the H1R positive-to-negative baseline sensitivity matched this review.
+Ran ten_utilities_calc.py:47 declared checks passed; independently derived the
+continuous-blowdown steady-state6000mg/L tower concentration and receiver
+(120*300+18*6000)/(120+18)=1043.47826mg/L. It defeats staggered peak reduction
+as an incremental justification for the quoted avoided tank.
+Ran ten_manufacturing_replay.py:56 checks passed; free-shape10um, nonlinear
+curvature counterexample5um, purge results and conditional dollars matched.
+Ran ten_food_cold_replay.py: F1 single-channel negative screen and F2 cost threshold
+matched; white-noise synthetic signal/null checks passed, yet DC comparator was
+stronger. Subsequently independently calculated the corrected F1 two-input
+scenario:137,500kWh/year total electricity saved at$.12=$16,500 gross and
+-$18,305.90 annualized net, conditional on actual replacement of electric heat.
+These are code/model checks. They do not establish plant performance, independent
+measurement accuracy, calibration of event rates, or historical/frontier novelty.
+
+
+4.12.13 HISTORICAL FREEZE RECEIPTS — NOT CURRENT ACCEPTED CLAIMS
+The following exact text preserves assumptions frozen before targeted searches.
+Subsequent failures, corrections and repairs above control interpretation.
+In particular, M2 full slow-branch flow/time gain and F2 pressure-only inference
+are superseded; financial assumptions were harmonized explicitly in the reviews.
+Whitespace is retained for hash identity, even where the original prose was dense.
+These local hashes are identity receipts, not external timestamp certification.
+
+BEGIN EXACT FREEZE ten_heat_material_freeze.txt
+SHA256 b81d5a53348f18ccb46cb86886eacec4c082c59975b48ef9d5bb55b5daaef6b8
+BYTE_LENGTH 4230
+HEAT/MATERIAL CANDIDATE FREEZE — 2026-10-09
+NONCANONICAL RESEARCH. Frozen before exact-intervention searches. Broad process fact sources already read, including existing decoating/compaction effects; oxidation/descaling work; and chloride bypass chemistry. Not a blind historical novelty benchmark.
+
+H1 Hot ash removal between thermal decoating and compaction of aluminium sheet scrap.
+Graph: coated loose scrap -> controlled thermal organic removal -> hot, loose, brittle inorganic coating residue remains -> sealed low-oxygen mild agitation plus screened gas classification -> clean hot chips compacted -> submerged remelting -> dross and metal recovery.
+Generated closure obligation: removing coating carbon does not remove nonvolatile pigment elements. Every Al atom leaving with classifier dust must be charged against improved melting yield. Proposed narrow intervention integrates ash separation while scrap is still hot and before compaction closes the accessible surface, using low-oxygen recirculated hot gas and a fines recovery stream. Not simply more oxygen/longer decoating. Model prediction target: net additional recovered saleable Al >= 0.005 tonne per tonne feed, total added electrical work <= 10 kWh/t, no increase in alloy contamination or dust emissions, versus best existing decoat/compact/submerge route. This is a test target, not an evidence-based point estimate. Budget example: 100,000 t/y, retained metal value $2,000/t, target 0.005 t/t, added10 kWh/t at$0.10/kWh, maintenance$100,000/y, capex$1m,10y8% -> target incremental net approx$651k/y. No fleet scaling.
+
+H2 Retain hot slab core enthalpy while deliberately resetting only vulnerable surface/corner microstructure.
+Graph: continuous cast HSLA slab -> rapid local corner/surface cooling below transformation threshold -> brief hold/phase reset -> self-reheat from still-hot core -> hot-charge reheat furnace -> rolling/descaling -> inspect surface cracks. Proposed narrow intervention combines spatially selective corner cooling with core-driven reheating so recrystallization/phase-reset prerequisite applies only to vulnerable volume, not full slab. Generated obligation: energy benefit must preserve steel-grade phase path, surface crack limit and rolling throughput. Not ordinary bulk hotter charging. Prediction target: cool only 5% mass through400K while retaining rest of slab at hot-charge temperature; compared with full cooling/reheat of same400K and cp0.7kJ/kg/K, ideal avoided sensible heat266 MJ/t, requiring furnace efficiency0.60 yields0.443GJ fuel/t before auxiliaries, temperature losses and quality constraints. At1m t/y,$10/GJ, capex$5m10y8%,opex$250k/y,target netapprox$3.438m/y. This is an upper-bound heat inventory, not measured operational savings; strongest existing selective-cooling comparator may erase all increment.
+
+H3 Separate mineral particles before salt condensation in a cement kiln chloride bypass, then return only low-chloride hot mineral fraction.
+Graph: chloride-bearing kiln inlet gas+entrained calcined mineral -> high-temperature inertial separator above relevant chloride saturation temperature -> coarse hot mineral returned to process -> mineral-depleted vapor cooled in dedicated nucleation chamber -> chloride-rich fine salt captured and purged -> treated gas heat recovery. Generated closure: extracting total chloride mass is mandatory; recovery of calcined heat/minerals cannot silently return salt. Candidate intervention controls first-stage temperature from composition-dependent dewpoint and physically separates hot coarse stream from downstream condensed salt, rather than indiscriminately quenching mixture. Prediction target: if20kg mineral/t clinker accompanies bypass and70% is separated cleanly at900C, cp1kJ/kg/K and reference100C, retained heat11.2MJ/t; at1m t/y, fuel replacement eta0.60,$10/GJ=$186.7k/y; avoided marginal mineral/disposal cost$20/t recovered=> $280k/y; annualized$1m capex149k+opex80k=>targetnet$237.6k/y. Heat and mineral-disposal components require actual marginal costs; no credit for both raw meal reaction heat and sensible heat without distinguishing them. Need compare against strongest existing two-stage bypass design; broad mechanism probably old.
+
+END EXACT FREEZE ten_heat_material_freeze.txt
+
+BEGIN EXACT FREEZE ten_heat_material_H1R_freeze.txt
+SHA256 685317e5008917e4515278d83b9d148926df551eb9bca29c53eec8cdd049d260
+BYTE_LENGTH 1751
+H1R bounded repair freeze — 2026-10-09 — NONCANONICAL HYPOTHESIS
+H1 hot ash removal is prior art (US9702022B2; CA2789519A1), and its gas classifier may sacrifice small aluminium flakes into the ash stream. The post-classification material conservation audit produces a narrower recovery question, not a new claim for decoating.
+Proposed test: while separated ash/fines remain hot but below incipient melting of every admitted alloy, pass them through a low-strain roll-compaction stage in low oxygen; exploit metal ductility to compact/flatten or weld metal-bearing fines into screenable agglomerates while brittle inorganic pigment residue remains fine after gentle breakup. Re-screen and remelt the recovered fraction. Return nothing on screen size alone: assay Al metal fraction and pigment element transfer, include all oxidation and downstream dross recovery. This is not proposed for arbitrary dross. Domain is thermally decoated sheet-scrap pigment/fine-metal stream, no molten metal, known alloy solidus, sealed dust control.
+Conditional target frozen: if first separator ejects2kg metallic Al/t original feed and hot treatment recovers80% of those atoms as saleablemetal, retain1.6kg/t gross. At100kt/y,$2000/t netretainedAl => $320k/y; extra2kWh/t at$.10 => $20k/y,maintenance$40k/y,capex$0.5m10y8% => conditionalnet$185485/y. 80% is experimental target, no evidence. Minimal null: identically screened unrolled fines and cold rolled fines at matched work, plus strongest existing metallicfines recovery. Falsifier: incremental saleablemetal below economic break-even, excessiveoxideentrainment, particlewelding absent, metallurgicalcontamination, or standarddrossrecovery alreadycapturessamevalue. Noclaimnovelbeforepaper/patentsearch.
+
+END EXACT FREEZE ten_heat_material_H1R_freeze.txt
+
+BEGIN EXACT FREEZE ten_utilities_freeze.txt
+SHA256 e2412991ada89952585d80f0eea5608db7f55fb501392ffab947cf3f26a75622
+BYTE_LENGTH 5589
+UTILITIES CANDIDATE FREEZE — 2026-10-09 — targeted solution search NOT yet run
+Status: NONCANONICAL, hypotheses only. Novelty and economics UNRESOLVED.
+Source process facts inspected: DOE Steam System Survey Guide (2002) contamination monitoring and flash recovery; DOE Steam Tip 13 vent condensation; EPA cooling-tower water mass balance; EPA interference/equalization guidance (known equalization already exposed); DOE 2021 thermal storage fact sheet (stratified tank service temperatures). Process fact retrieval already exposed conventional equalization and TES technology; this is NOT a blind discovery benchmark.
+
+U1 Condensate phase-specific acceptance instead of all-or-nothing rejection.
+Chronology: process heat exchanger leak -> contaminated hot condensate -> trap -> flash receiver -> vapor delivered to LP header OR reject/condenser -> liquid return to boiler OR treatment -> makeup and reboil.
+Generated obligation: species mass and enthalpy must cross BOTH flash outlets. A liquid-only cleanliness gate cannot authorize vapor reuse. Candidate: assess both outlet contaminant concentrations, use existing separate destinations to retain the admissible liquid or vapor stream rather than reject entire condensate event. Narrow target: short volatile-solvent leaks, where liquid becomes acceptable after flash but vapor fails downstream exposure limits; route vapor to an already-available safe recovery device, return qualified liquid. Must account for latent heat loss, liquid dilution/partition, treatment capacity and contaminants NOT represented by conductivity. Candidate may be ordinary steam stripping and likely known; retain only if an exact unusual control configuration survives prior art.
+Contract: flash mass fraction f=(h_in-h_l)/h_fg, bounded0..1. Trace equilibrium c_v=K*c_l; c_in=(1-f)c_l+f*c_v, so c_l=c_in/(1-f+f*K). For f=.10,K=50,c_in=10mg/kg, c_l=1.695mg/kg,c_v=84.746mg/kg. Hypothetical liquid limit2 and vaporlimit5 imply retain liquid, reject vapor. K is assumed, species/T/P-specific, not a measured material constant. At30t/h feed,8000h/y,10% event duty, liquid recovery at100C versus20C makeup saves27t/h duringevents *4.18*80 kJ/kg, at80%boilerefficiency,$.04/kWhfuel plus water at$2/m3. Need capex/opex and compare strongest existing dual-outlet reuse.
+
+U2 Use allowable cooling-tower concentration excursions as distributed blowdown scheduling capacity before biological wastewater treatment.
+Chronology: evaporativecooling -> basin salt accumulation -> conductivitytrigger -> intermittentblowdown -> combinedindustrialsewer -> equalization/reactor -> nitrification -> effluent.
+Generated obligation: identical daily salt loads can have different peak exposures; postponingblowdown must preserve maximum basin salinity, treatment flow/salt limits, full daily mass balance and final saltinventory. Candidate: stagger three towers' otherwise coincident high-rate blowdown using each basin's allowable salt margin, jointly constrained by receiving bioreactor exposure, avoiding a NEW downstream equalization tank where existing tower vessels already supply adequate hold-up. Conventional flow equalization already known; novelty is unresolved for use of tower storage and joint receiving-biological constraint.
+Contract eachtower: V dc/dt=(E+B)c_makeup-Bc, constantV throughmakeup E+B, salt-freeevaporation. V600m3,E30m3/h,c_makeup1000mg/L,B72m3/h for1hofeach12h,otherwise0. Three identicaltowers. Compare synchronous pulses versus starttimes0,4,8h withsamecycles/endinventory (each periodicownphase). Receiverbackground Q120m3/h,c300mg/L. Inletc=(Q*c_bg+sumB_i*c_i)/(Q+sumB_i). Need include downstream mixing delay and empirical nitrification inhibition, not assume a universal threshold. Financialtarget: avoid dedicatedequalizationcapex, not destroy salt or invent energy savings. Illustrative tank$400k vs controls$60k,10yr8%capitalrecovery, extra annualcontrolsO&M$5k. No measuredquote or Garden increment.
+
+U3 Preserve temperature-qualified cooling inventory through shared thermal-storage discharge allocation.
+Chronology: chillercharge -> stratifiedcold/warmtank -> outletthermoclinearrival -> criticalcolduser(max8C) AND tolerantprocessuser(max14C) -> warmreturn18C -> recharge.
+Generated obligation: totalstoredcooling does not establish deliverability to a particular service; same water layer can be unusable for cold user but valuable to warmer user. Candidate: after coldservice becomes unavailable, divert remaining12C tanklayer to tolerant14C loop while coldservicechillerresumes; return18C separately, preservingtemperature grades instead of terminating whole-tankdispatch at8C. Must enforce endcycleenergyinventory,pump/mixinglosses, actualhardwareflowpaths, criticaluser continuity and contemporaneouswarm demand. This is potentially known multi-temperature/cascade storage; no novelty claim until literature comparison.
+Contract availablewarmlayerE=rho V cp (Treturn-Tlayer)/3600 kWh_th withrho1000kg/m3,cp4.18kJ/kg/K. V4000m3,Tlayer12C,Treturn18C ->27866.67kWh_th.200cycles/y. PeakchillerCOP5,offpeakchargeCOP6,storageeff.95,peak$.20/kWh,offpeak$.08. Grossannual arbitrage=E*200*(.20/5-.08/(6*.95)); subtract20k/yO&M andannualized$500k retrofit10yr8%. These are hypotheses, not plantquotes or measuredperformance; a modern multi-temp controller may already implement sameaction.
+
+All three: equations/assumptions frozen before targeted paper/patentsearch. No claim entireindustryexhausted if rejected. No novelphysicalconservationlaw proposed. Full GardenformalSAL compiler unavailable: bounded typed researchmapping only.
+
+END EXACT FREEZE ten_utilities_freeze.txt
+
+BEGIN EXACT FREEZE food_cold_freeze.txt
+SHA256 8a762ed5d680ce91d641d533449aa33c5f3c6adea85d187561f7e7468f561206
+BYTE_LENGTH 3388
+FOOD/COLD CANDIDATE FREEZE 2026-10-09
+Source-first facts inspected: CFIA HTST engineering guidance (thermal/pressure time histories; pinhole integrity tests); Wisconsin industrial evaporator/defrost research (water and heat expelled during defrost and imposed on other evaporators); Tetra Pak process design handbook (regeneration and transitions). Canonical Garden delta, IDTD and TREE relevant source rules read. No target-specific patent search yet. Training contamination possible; not blind.
+
+F1: Latent-heat-return defrost hood. Physically enclose a sectional industrial evaporator during hot-gas defrost; deliberately leave a thermally coupled collector section frozen while a neighboring section melts. Condense vapor escaping the first section on that still-frozen collector, using its released condensation/freezing heat to melt existing collector frost; drain that water during the same cycle, then complete collector defrost. Goal is intercept water before it moves to other active evaporators and turn otherwise exported latent heat into useful defrost heat. Distinct from generic adaptive defrost or simply adding shutters: require exported moisture reduction at equal complete defrost endpoint and compare to best shutter/hood baseline. Candidate may be known or fail because warm saturated air cannot transfer enough heat fast enough, drainage retention, lost cold supply, or terminal ice omitted. A configuration using known physics; no law claim.
+Prediction contract: with intercepted vapor m_v kg/cycle, capture fraction eta, latent condensation L_v kJ/kg, and melt latent L_f kJ/kg, ideal collector frost melted <= eta*m_v*L_v/L_f, further limited by available frost enthalpy and heat-transfer integral. Net electric saving <= avoided compressor removal of escaped heat + avoided subsequent frost-removal energy - fan/valve losses - extra cooling downtime. No credit for latent heat twice. Single thermal boundary required.
+
+F2: Matched-stress hot leak challenge in a food regenerator. During the already-required final water circulation before product startup, reproduce the production plate temperature profile and safe pressure differential, then superpose a small known zero-mean pressure modulation on one physically isolated water side. Detect correlated tracer/electrical/conductivity/volume response on the other side after hydraulic lag; estimate effective microleak conductance only under matched temperature/pressure. Return to validated clean baseline before food. The gap sought is a crack closed during cold annual integrity testing but opened under hot production stress. Contrast with existing helium/hydrogen integrity, hot pressure tests, and conductivity-based in-situ monitoring. No reduction of required testing or food release without independent validation.
+Prediction contract: open aperture area A(T,stress), Q=C_d*A*sqrt(2*dp/rho); a harmonic pressure perturbation dp_hat yields q_hat=(Q/(2*dp))*dp_hat for small perturbations with A fixed; thermal changes can dominate, so freeze temperature during each short diagnostic. Detectability q_hat >= 5*sigma_q/sqrt(N_effective), corrected for response lag and colored noise. Value = annual avoided-loss event frequency*incremental sensitivity*event contribution-cost - false-positive shutdowns - operating/annualized equipment cost; all probabilities measured or UNKNOWN, never invented as fact.
+
+END EXACT FREEZE food_cold_freeze.txt
+
+BEGIN EXACT FREEZE manufacturing_freeze.txt
+SHA256 36b8a77827e5ec087b8f856682bb12fa8df1e358fee0519ca37c74e6e9d6f588
+BYTE_LENGTH 5420
+NONCANONICAL manufacturing candidate freeze; mathematical predictions not empirical evidence.
+Date: 2026-10-09. Frozen before targeted intervention/patent searches. Broad process facts searched first (NIST machining sources); model training contamination cannot be excluded.
+M1 THIN-WALL PRECISION MACHINING: CLAMP-RELEASE ACCEPTANCE MEASUREMENT
+Process: receive stress-relieved blank -> locate/support -> apply fixture force -> rough machine -> redistribute residual stress/heat -> finish allowance -> probe at cutting preload -> small safe fixture-preload perturbation with spindle stopped -> probe again -> infer released shape -> compensated final pass or reject -> unclamp -> equilibrate -> independent coordinate measurement -> rework/scrap/release.
+Objects are blank, fixture, probe, machine, reference frame, physical fields; no agency assigned to matter. Responsible operator/machine command is agency/action.
+Generated scoped obligations: conservation of solid mass under cutting; static force equilibrium in each probe state; reversible elastic displacement only within validated no-slip/no-plasticity regime; delivered geometry must be within released/isothermal tolerance, not merely in-fixture tolerance; material removal is irreversible; torque/safety fixture minimum obeyed; probe error/thermal drift travel through extrapolation.
+Candidate: in-process two-preload, spindle-stopped metrology at near-identical temperatures estimates zero-preload geometry; known linear-elastic extrapolation is not novel; narrow novelty inquiry is economical integration as a release-state acceptance guard with minimal fixture perturbation before committing final stock removal.
+Projection loss: y=g_free+C F cannot distinguish true delivered g_free from compliance C. Two preload states separate them if scalar model valid.
+Contract: y1=g0+C F1+e1; y2=g0+C F2+e2; ghat0=(F2*y1-F1*y2)/(F2-F1). F N; y m; C m/N. For F1=1000N,F2=500N,y1=50um,y2=30um, g0=10um,C=.04um/N. Single-state 50um versus extrapolated 10um changes final cut decision. Errors amplify: sd ghat0=sigma*sqrt(F1^2+F2^2)/abs(F2-F1)=sqrt(5)*sigma; at sigma=.5um =>1.118um.
+False prediction if contact slip, plastic strain, nonlinear stiffness, drift, residual-stress removal, or independent final measurement contradicts extrapolation. Strong comparator is nonlinear thermomechanical FEM + off-machine inspection + modern adaptive fixture compensation, not a naive fixed-force controller.
+Synthetic financial screen: 100000 parts/y,$120 marginal scrapped value, baseline scrap5%,absolute scrap decrease1percentage point =>$120000 gross; 5seconds extra on EVERY part,$60/machinehour =>$8333.33 capacity cost only if throughput constrained; $20000/y annualized sensors/fixture/training =>conditional net $91666.67. No effects measured; baseline improvement unknown.
+M2 HOT-RUNNER COLOR/GRADE CHANGE: BRANCH-RESOLVED RESIN CLEANOUT
+Process: final old-color shot -> barrel purge -> new resin melt -> fill manifold -> split branch flows -> open gates -> purge shots -> sample common output -> declare color clear -> resume production -> late old-color streak from low-turnover branch -> inspect/rework/scrap -> reclaim eligible purge resin.
+Generated constraints: old-color mass balances through barrel/manifold/each branch/cavity/reject; every delivered gate stream must meet its actual local color threshold, rather than a mass-averaged sample; gate closure does not destroy trapped old resin; thermal residence/degradation threshold and pressure limits; delivered resin identity survives reclaim; fixed product/output and residual inventory at end for comparisons.
+Candidate: during grade/color change use a branch-isolated gated purge schedule and branch-specific color endpoint. A well-cleaned high-flow branch is closed while the slow branch is cleared; after reopening verify all branches under production flow. This preserves ability to act on the hidden retained resin rather than only measuring aggregate color. Narrow novelty is deployable control sequence using existing sequential valve gates, not new mixing mathematics.
+Compartment contract: each branch i well mixed fixed mass Mi kg, uncontaminated new feed, old fraction ci(t)=ci0 exp(-Qi t/Mi), Qi kg/min, common color cbar=sum Qi ci/sumQi. In sequential route all available safe flow Qmax is directed to uncleared branch; pressure/thermal limits and cross-manifold dead regions may defeat routing. With equal M1=M2=1kg, c10=c20=1, c*=.001, normal Q1=.9,Q2=.1kg/min: worst endpoint t=69.0776min,purge69.0776kg. Isolated full1kg/min perbranch clearing consumes13.8155kg (13.8155min) plus switch/validation. Apparent savings55.2620kg/change assumes manifold cavity contribution identical and negligible; it is NOT measured and same benefit may already be available through established valve-gate color-change recipes.
+Strong comparator: best existing independently controlled valve gate/manifold purge optimized schedule with CFD dead-zone model; vanilla all-open process is only weak illustrative comparator. Falsifier: actual contamination tail or pressure limit requires equal/more purge than optimized comparator.
+Synthetic financial screen: 500changes/y,resin$4/kg, recoveredpurgecredit$1/kg, grossdifference500*55.2620*3=$82893/y; $20000/y implementation/extra inspection/scrap allowance =>$62893/y conditional versus weak comparator. Increment over optimized conventional method UNKNOWN.
+
+END EXACT FREEZE manufacturing_freeze.txt
+
+4.12.14 INTEGRATION RECEIPT
+Prior report prefix retained byte-for-byte: 323549 bytes.
+Prior prefix SHA256: b982fda34e93145d05a33abc54f981f56c982f7d4f3c0836b85f59d7f27c07f6
+Replay SHA256: ecf60fd245a9174a042c3f07464f7cd847d45e5185430ef9e1dfeaa0b6c1eb10
+Expected changed repository paths: this consolidated register and
+industrial_ten_cases.py only. Canonical design files unchanged.
+Reproduction passed including declared nulls, stronger-comparator failures,
+periodic balances and ten finite graph reference checks. No field gate PASS.
+Final status: ten investigated; zero verified novel money-saving discoveries;
+seven positive conditional scenarios; unresolved questions remain explicitly open.
+END SECTION 4.12
