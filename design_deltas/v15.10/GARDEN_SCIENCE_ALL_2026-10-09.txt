@@ -7,7 +7,7 @@ READ THIS FIRST
 10 worked mathematical examples are conditional results, predominantly established mathematics.
 Candidate 026 is a synthetic test of model selection, not new physics.
 33 industry opportunities overlap the 100 and each other. Do not add benefits.
-No global novelty certification, real-world empirical validation or proven Garden-specific economic savings. A scoped prior-art review of Candidate 006 now establishes that its basic mechanism is already published.
+No global novelty certification, real-world empirical validation or proven Garden-specific economic savings. Sections 9–12 add necessity-challenge search and independently sourced 2025–2026 discoveries; those are external achievements, not Garden discoveries. A scoped prior-art review of Candidate 006 now establishes that its basic mechanism is already published.
 This file contains the scientific research and readable Candidate 026 result summaries. The two historical Python scripts remain embedded for reproducibility. Raw JSON dumps have been removed as redundant; original machine results remain recoverable from Git history.
 
 1. MECHANISM — GARDEN SCIENTIFIC ABSTRACTION AND DISCOVERY
@@ -2288,3 +2288,160 @@ claim to test, and (c) the search needed. No entry is promoted to DISCOVERY.
   Benchmark counts and test assumptions remain in Section 4.
 - Embedded Python source and readable result summaries are preserved; no new
   physical simulation was executed for Candidate 006.
+
+
+9. NEW SCIENTIFIC DISCOVERY OPERATOR — NECESSITY-CHALLENGE SEARCH
+Status: PROPOSED RESEARCH METHOD; not a newly established physical law.
+
+9.1 Why this is different
+The previous mechanism searches for projection loss: two detailed states share the
+same coarse observable but have different futures. A second discovery operator
+challenges assumptions that an expensive condition C is necessary for useful
+outcome Y. The target is a reproducible counterexample (not C) AND Y, where C
+and Y have explicit measurable thresholds, a defined domain and appropriate
+safety constraints. One valid counterexample falsifies a universal necessity
+claim within its specified domain, but does not automatically establish
+industrial scalability, global novelty, or a new underlying physical mechanism.
+
+9.2 Formal contract
+Define baseline necessity claim: for all x in admissible domain D,
+    Y(x) >= y_min  IMPLIES  C(x) = true.
+Seek x* in D such that:
+    Y(x*) >= y_min AND C(x*) = false.
+Require that Y is measured by an independent method and that x* does not
+silently violate a different critical constraint. Freeze the baseline,
+source/owner, domain, measurement uncertainty and counterexamples.
+Prioritize candidate constraints by annual avoidable cost times plausible
+adoption fraction, but rank scientific success separately from economic value.
+Distinguish necessity from sufficiency and from mere engineering convention.
+The operator adds no new GSL core object or relation; express assumptions as
+typed RULE/CLAIM, the counterexample as EVENT/EVIDENCE, and the mapping in
+CONTRACT/PROJECTION, with appropriate derivedFrom, contradicts and supports
+relations. AGENCY applies to experimenters, not molecules.
+
+9.3 Process
+(a) Inventory costly assumed prerequisites (purity, temperature, pressure,
+    specialized feedstocks, intermediate steps, tight tolerances).
+(b) Verify whether the prerequisite is actually claimed as universally
+    necessary or merely an accepted industrial practice.
+(c) Seek alternate physical routes or mechanisms that avoid it.
+(d) Predict discriminating observables and independent falsifiers.
+(e) Compare with existing alternatives and prior art, including patents.
+(f) Require replicated measurements, scale-up and complete economic accounting.
+(g) Preserve negative findings and prevent self-admission.
+Failure modes: hidden purification, transferred energy/material costs,
+unmeasured impurity effects, poor durability, low yield, or a narrower domain.
+
+10. REAL-WORLD SCIENTIFIC BREAKTHROUGHS — VERIFIED SOURCE-SCOPED EXAMPLES
+These are external scientific achievements, NOT discoveries produced by Garden.
+Their inclusion demonstrates how Garden could represent and search analogous
+opportunities. No verified absence of prior art is claimed.
+
+10.1 Semiconductor-quality pyrite from commercial iron ore (2026)
+Source: Lee et al., Physical Review Applied 26, 024033, published 13 Aug 2026.
+DOI: https://doi.org/10.1103/6twd-lvvg
+Researchers converted impurity-rich commercial iron ores, including taconite,
+into high-quality FeS2 crystals without a separate conventional precursor
+purification stage. IMPORTANT: the paper identifies TWO synergistic effects:
+few impurities efficiently dope FeS2, AND reduction/sulfidation/crystal-growth
+steps themselves introduce substantial purification. Thus the claim "dirty
+ore works because pyrite tolerates every impurity" is FALSE.
+Necessity challenge: ultra-high-purity starting ore is not universally
+necessary for semiconductor-quality FeS2 under this process.
+Economic hypothesis: lower feedstock purification cost if yields, performance,
+process energy, crystal growth scale and lifetime compete with existing routes.
+Validation: impurity mass balance, device metrics, pilot cost accounting.
+Evidence: published laboratory materials result; industrial economic gain UNKNOWN.
+
+10.2 Suzetrigine / JOURNAVX (2025)
+Source: US FDA approval 30 Jan 2025:
+https://www.fda.gov/news-events/press-announcements/fda-approves-novel-non-opioid-treatment-moderate-severe-acute-pain
+First approved medicine in a new non-opioid acute-pain class; targets peripheral
+NaV1.8 pain signalling. Two pivotal trials showed superiority to placebo.
+Do NOT infer it is categorically superior to opioids, completely without
+side effects, effective for all chronic pain, or proven to eliminate addiction
+at population scale. Approval is for moderate-to-severe acute pain in adults.
+Necessity challenge: central opioid-receptor engagement is not necessary for
+clinically useful acute analgesia.
+Economic hypothesis: value from an additional non-opioid option and reduced
+opioid exposure, subject to real comparative efficacy, pricing and adoption.
+Evidence: regulatory approval; population-scale economic impact unmeasured here.
+
+10.3 Perovskite–silicon tandem photovoltaics (2024–2026)
+Sources:
+https://www.oxfordpv.com/press-releases/oxford-pv-solar-technology-patent
+https://www.pv-magazine.com/2026/07/15/longi-sets-new-world-record-with-35-5-efficient-perovskite-silicon-tandem-cell/
+https://www.pv-magazine.com/2026/01/16/oxford-pv-targets-20-year-lifetime-for-perovskite-silicon-tandem-modules-by-2028/
+A 35.5% certified 2026 result concerns a laboratory tandem CELL, not a
+mass-produced MODULE. Oxford PV's reported commercial module efficiency was
+around 25%, and its 2026 roadmap targeted mass production expansion in 2027.
+Commercial first shipments began in 2024; full industry-wide scale is not
+established by a laboratory efficiency record.
+Necessity challenge: single-junction silicon is not the only feasible
+architecture compatible with much of the silicon manufacturing ecosystem.
+Economic test: lifetime energy yield and LCOE, not cell efficiency alone.
+Evidence: lab records and early commercial deployments; universal 34% modules
+or proven massive cost reductions NOT established.
+
+10.4 Direct lithium extraction from brines (2025–2026)
+Sources:
+https://www.sec.gov/Archives/edgar/data/1537137/000117184326002638/exh_991.htm
+https://www.evove.tech/dle-onsite-demo/
+Industrial-scale demonstrations have processed substantial brine volumes, but
+the commercial maturity, recovery and costs depend on brine chemistry and
+technology. Do not infer that every DLE method processes any brine in hours,
+or that demonstrations establish universal commercial profitability.
+Necessity challenge: months-long solar evaporation is not a universal
+prerequisite for extracting lithium from brines.
+Economic test: lithium recovery, selectivity, water/chemical/energy demand,
+sorbent degradation, capex, opex and commercial uptime.
+Evidence: operating demonstrations; general global cost savings UNKNOWN.
+
+10.5 Patient-specific gene editing for CPS1 deficiency (2025)
+Sources:
+https://www.nih.gov/news-events/news-releases/infant-rare-incurable-disease-first-successfully-receive-personalized-gene-therapy-treatment
+https://pmc.ncbi.nlm.nih.gov/articles/PMC12713542/
+One infant received individualized in-vivo base-editing therapy and showed
+encouraging early clinical responses. The study explicitly requires longer
+follow-up to establish durability and safety. This is not a generally approved
+personalized-CRISPR treatment for all rare disorders.
+Necessity challenge: a mass-market one-size-fits-all therapy is not the only
+possible development pathway for some rare variants.
+Economic test: platform reuse, regulatory and manufacturing costs, outcomes
+and equitable access; costs per patient remain unknown here.
+Evidence: pioneering initial clinical result, not established scalable cure.
+
+11. NARROW NEW ENGINEERING CANDIDATE — ACTIVE FOULING IDENTIFICATION
+Status: mathematical identification under assumptions; NOT a novel physical law.
+Problem: infer a heat exchanger's flow-independent fouling resistance Rf while
+convection changes with flow. Assume the simplified model
+    R(q) = Rf + A*q^(-n),  q>0, n>0 fixed and independently calibrated.
+Two stable flow points q1 != q2 imply
+    Rf = [R(q1)*q2^(-n) - R(q2)*q1^(-n)] /
+         [q2^(-n) - q1^(-n)].
+Dimensions: R and Rf are thermal resistance [K/W] for a specified device,
+A has [K/W] * [flow]^n. Formula is exact within the stated model, but
+poorly conditioned if q1 and q2 are too close; flow perturbations can
+change fouling or process state, invalidating the assumptions.
+Research extension: choose safe perturbation pairs to minimize uncertainty
+of Rf under a sensor-noise covariance model, while minimizing downtime and
+process energy. Compare against published flow-compensated thermal/hydraulic
+fouling diagnosis, adaptive observers and optimal experiment design.
+Prior art exists for flow-compensated fouling estimates and experiment design;
+worldwide novelty of this narrow combination is UNKNOWN.
+Economic benefit if validated: lower unnecessary cleaning and recovered heat
+transfer, conditional on avoided maintenance costs exceeding test disruption.
+Falsifier: out-of-sample resistance estimates and maintenance decisions fail
+to improve on a matched modern comparator.
+Status: UNVERIFIED research candidate, no new empirical data.
+
+12. CROSS-CUTTING STATUS AND NEXT GATES
+- Necessity-Challenge Search: formal candidate discovery operator, NOT proven
+  to outperform existing scientific hypothesis-generation methods.
+- Five real-world examples: externally published/approved/initially demonstrated;
+  none originated from Garden; none establishes Garden novelty.
+- Active fouling protocol: narrow engineering candidate; novelty unknown.
+- Previous 100 stubs and Candidate 026 evidence remain at their earlier statuses.
+- Next benchmark: blind a costly assumed constraint and require Garden to find a
+  verified counterexample versus a conventional literature/model-search baseline.
+- No canonical Garden source is modified. No-self-admission remains mandatory.
