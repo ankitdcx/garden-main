@@ -20,4 +20,4 @@ These are **versioned, noncanonical candidate and recovery materials**, not full
 
 ## Consolidation and future design
 
-[Noncanonical lineage, candidate consolidation index and future-v16 evaluation path](GARDEN_NONCANONICAL_CONSOLIDATION_AND_V16_PATH.md). This is navigation/design synthesis only; it neither creates v16 nor changes canonical status.
+[Noncanonical 15.x consolidation index](GARDEN_15X_NONCANONICAL_CONSOLIDATION_INDEX.md) and [future-v16 evaluation path](FUTURE_V16_NONCANONICAL_DESIGN_NOTE.md) are navigation/design synthesis only; they neither create v16 nor change canonical status.
