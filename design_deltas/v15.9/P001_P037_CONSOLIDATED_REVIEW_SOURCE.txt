@@ -1,0 +1,338 @@
+GARDEN v15.9 — COMPLETE CROSS-REVIEWED WORKING CANDIDATE
+SEMANTIC REVIEW COMPLETE
+NOT EXECUTABLY CERTIFIED / NOT PRODUCTION CERTIFICATION / NOT CANONICAL UNLESS SEPARATELY ADMITTED
+Campaign: GARDEN-V159-20260917
+Release date: 2026-09-18
+Frozen v15.8 source-root SHA-256: 835ab5ad52cf68f79af1d33269d9f24b58290c2a5e96c0d889726ac85c8bacf2
+predecessor_gsl_compatibility_status = NOT_STATED
+
+CONSOLIDATED UPGRADE DELIVERABLE
+===============================
+
+Purpose
+-------
+This sixth deliverable is the release-facing consolidation of the completed P001–P037 semantic review campaign.
+It does not rerun any reviewer call. It binds the accepted packet-level synthesis and the P037 cross-wave corrective
+overlay to the exact five final layer documents below. Review consensus is evidence only. Nothing in this document
+creates canonical authority, execution authority, production certification, external certification, or admission.
+
+Evidence freeze
+---------------
+review_evidence_commit = 9b3e7840147cde7d680f5a2f168ade8b4681514b
+P037 review run = 35268180631 (success)
+Wave-5 blind run = 35255993070 (success)
+Wave-5 challenge run = 35256718065 (success)
+configured independent-family minimum = 3
+No completed P001–P037 model call or packet is repeated by this materialization.
+
+Traceability binding
+--------------------
+UpgradeTraceabilityTable SHA-256 = e53122e8e38d21967dec9d9035c230a84e95e6ca5891ec2f733fe0267908a64f
+Any post-freeze semantic or traceability edit reopens release closure and requires regeneration/re-hash.
+
+Five final layer documents
+--------------------------
+- User: Garden_User_v15.9_COMPLETE_CROSS_REVIEWED_WORKING_CANDIDATE_2026-09-18.txt
+  SHA-256: 61f3e002762c41dfc8988fea22cf63ef5c9bd609b52d92f7d6e70fa02e0eac6b
+  bytes: 125796
+- System: Garden_System_v15.9_COMPLETE_CROSS_REVIEWED_WORKING_CANDIDATE_2026-09-18.txt
+  SHA-256: f800703ae004144ec50c31ac41ea8c0bde8486f15af4fa66838f785708485382
+  bytes: 276124
+- Technical: Garden_Technical_v15.9_COMPLETE_CROSS_REVIEWED_WORKING_CANDIDATE_2026-09-18.txt
+  SHA-256: eb794368c550decefe6b37a5734a4515e9338504d5d1e2f4c4c4365ce05be5e1
+  bytes: 1062486
+- Annexure: Garden_Annexure_v15.9_COMPLETE_CROSS_REVIEWED_WORKING_CANDIDATE_2026-09-18.txt
+  SHA-256: 37bb987758205ba5a82a9946666f7efd245a495700eb392c4face31db0dae06a
+  bytes: 1294801
+- Theories: Garden_Theories_v15.9_COMPLETE_CROSS_REVIEWED_WORKING_CANDIDATE_2026-09-18.txt
+  SHA-256: e090d07a602bf35129bff1601b9c46a754ff5e2bd4e65204304376256d41b438
+  bytes: 201794
+
+Global semantic precedence
+--------------------------
+1. Rights, consent, privacy, legitimate authority, safety, law, appeal/contestability, and human agency remain hard
+   applicable constraints wherever their owner says they apply.
+2. UNKNOWN / STALE / CONFLICT / BLOCKED / INCOMPLETE / NEEDS_SCHEMA_ADMISSION / NEEDS_REVALIDATION are not PASS
+   where hard resolution is required.
+3. Authority never arises from capability, evidence, reputation, model agreement, access, optimization, successful
+   outcome, cryptographic authenticity, emergency status, offline state, continuity machinery, or the RCI label.
+4. Specification != formal proof != implementation != empirical validation != external certification.
+5. Existing semantic owners are preferred. Naming convenience does not create a new SchemaID, top-level engine,
+   evidence truth system, authority source, justice lifecycle, reporting lifecycle, trust root, or execution loop.
+6. P037_FINAL_CORRECTIVE_OVERLAY controls any cross-wave conflict in the packet material below.
+
+Integrated cross-wave result
+----------------------------
+A. GSL / TYPES / CONTRACTS
+GSL v45.1 remains the predecessor semantic core for this working candidate. Six Pillars, ten Core Objects and 24 Core
+Relations remain unchanged absent a separately reviewed topology change. Bool is only for total deterministic predicates;
+epistemic, policy, proof, safety, authority, lifecycle, resource and distributed-finality operations preserve typed
+multi-status results. Every executable function resolves through an owner-qualified FunctionContract closing semantic
+I/O, effects, authority/consent, hard gates, result/failure algebra, dependencies/invalidators, resource/termination,
+DesignEpoch/EnvironmentCommitment/KnowledgeSnapshot, provenance and explanation.
+
+B. DESIGN EPOCH / DEPENDENCY / ADMISSION
+SPEC_DRAFT, SPEC_ACCEPTED, PROOF_COMPLETE_FOR_SCOPE, IMPLEMENTED_FOR_SCOPE, VALIDATED_FOR_SCOPE and
+DEPLOYMENT_CERTIFIED remain distinct. Relevant changes can stale dependent evidence/proof/assurance. Fragmenting a
+material change into small changes cannot evade requalification.
+
+C. PROCESS / STEP LOOP / AAP / RUNTIME
+Process Algebra owns typed composition, Runtime/Transition owns live effect/result behavior, and AAP owns activation and
+assurance selection. The Universal Per-Step loop remains the single functional action loop. Retry after uncertain or
+irreversible external effect requires effect identity, fencing/idempotency where available, and reconciliation.
+ROLLBACK != COMPENSATION. Resource pressure cannot lower mandatory rights/authority/safety floors.
+
+D. ALGEBRAS / COMPARE / REASON / PROOF / EXPLANATION / COMPILE
+Owner-qualified results are not implicit casts merely because labels resemble one another. NOT_APPLICABLE is not an
+implicit permit. Compare preserves hard-feasibility before compensatory comparison and defaults to partial ordering.
+Reason preserves typed inconclusive/unknown/contradicted/resource/model-scope/validation-required states. Formal proof
+is not empirical validation. Explanation distinguishes trace, rationale, causal explanation, model attribution and
+unknown cause. Compilation requires semantic-preservation evidence; successful build is not self-certification.
+
+E. HUMAN SOVEREIGNTY / HUMAN EFFECT / RIGHTS
+Human epistemic contribution is distinct from authority/consent. Delegation is current, scoped, attenuating and
+revocable. Human-Effect Closure covers material direct, indirect, latent, cumulative, relational and emergent effects.
+Reporting protection, merits, containment and bad-faith adjudication remain distinct. Reputation remains bounded,
+uncertainty-bearing and appealable and cannot create authority.
+
+F. SAFETY / SECURITY / LAW / PRIVACY / GOVERNANCE
+Mandatory gates compose conservatively; one PASS cannot dominate another mandatory UNKNOWN/STALE/FAIL. Authenticity,
+applicability, interpretation, conformance, operational admission and external certification remain distinct. Privacy
+purpose change, secondary use, metadata/provenance leakage, lawful hold and point-of-use checks remain explicit.
+Governance cannot bypass rights or minority protections.
+
+G. RUNTIME / CONTINUITY / DISTRIBUTED EFFECTS
+Timeout/cancel does not imply physical halt or total rollback. Duplicate/reordered events, retries, failover and
+cross-substrate execution preserve one effect identity. Offline/partition state creates no authority. Critical
+continuity fallback/handoff is prequalified, bounded, current, fenced and carries unresolved effect/state.
+
+H. KNOWLEDGE / EVIDENCE / CAUSAL / PHYSICAL
+Raw evidence, typed semantic state, profiles, active context and learned weights remain distinct. Evidence dependence
+survives copying/summarization. Twin prediction is model state, not independent observation. CLIC preserves units,
+frames, time, identity, scope, epistemic status, effects and authority. GCL remains bounded analytical machinery and
+does not create authority or moral value.
+
+I. TSI / TIA / ART / IIC / PIR / CSI / SMCD / CAD / OAC / CTSN / PAI
+Accountability/lineage survives rewriting subject to lawful erasure/minimum retention. Channel possession grants no
+disclosure authority. Trust allocation remains inside current parent authority. Capability/assurance are typed and
+deployment-bound. Wrappers/tools/prompts/memory/orchestration can be material derivatives. External interlocks require
+independence, currentness and composition evidence.
+
+J. STRUCTURAL / DOMAIN / THEORY / RELIABILITY
+Soft optimization never widens hard ceilings. Domain halt/fallback is profile-qualified minimum-risk transition, not a
+universal zero-output rule. Theory equations remain conditional. Deferred definitions remain DEFERRED/UNRESOLVED.
+Distinct architecture profiles remain distinct absent source-anchored migration. Reliability retry/cache/fallback
+revalidates current authority, privacy, evidence, epoch and effect state.
+
+P037 mandatory final repairs
+----------------------------
+- Consequential/material-rights proceedings preserve any mandatory appeal/contestability route. “Optional” means party
+  invocation/procedural qualification, not deletion of a required right.
+- Credential verifier-unknown and unsupported-profile states remain typed non-PASS, distinct from invalid and from PASS.
+- Urgent-preservation expiry is an effect invalidator across retry/failover/queue replay; fresh current authority and
+  fresh required evaluation are required after expiry. Uncertain prior external effect preserves
+  PARTIAL_EFFECT / OUTCOME_UNKNOWN and requires reconciliation.
+- P024 Causal Safety owns CausalClosureReceipt. Lawful erasure removes protected payload and retains only the strongest
+  lawful minimum tombstone/surrogate; dependent conclusions become STALE / NEEDS_REVALIDATION when their evidence basis
+  is removed.
+- Release-facing predecessor GSL compatibility remains NOT_STATED unless exact proof supports VERIFIED_COMPATIBLE.
+- CurrentReadingMap is generated from fixed final bytes before ReleaseManifest.
+- UpgradeTraceabilityTable is frozen before manifest computation and covers P001–P037.
+- Release labeling is administrative and non-authorizing. Any new semantic edit re-enters applicable P035 review.
+- ReleaseManifest binds the exact six deliverables plus CurrentReadingMap and UpgradeTraceabilityTable and is protected
+  by a detached digest computed after manifest finalization.
+
+Packet-by-packet reviewed semantic bindings
+------------------------------------------
+[V159-CONS-P001]
+P001 — GSL Core
+Evidence: review-inputs/v159-fast/P001_GSL_CORE.txt
+Binding: incorporate the packet's completed reviewed semantic result as frozen at review_evidence_commit. Packet-local REJECTED/DEFERRED/UNRESOLVED/nonactive clauses remain nonactive/non-PASS. P037 overlay controls cross-wave conflict. Exact layer projection anchors are recorded in UpgradeTraceabilityTable.
+
+[V159-CONS-P002]
+P002 — Core Objects
+Evidence: review-inputs/v159-batch-002-011/P002_CORE_OBJECTS.txt
+Binding: incorporate the packet's completed reviewed semantic result as frozen at review_evidence_commit. Packet-local REJECTED/DEFERRED/UNRESOLVED/nonactive clauses remain nonactive/non-PASS. P037 overlay controls cross-wave conflict. Exact layer projection anchors are recorded in UpgradeTraceabilityTable.
+
+[V159-CONS-P003]
+P003 — Core Relations
+Evidence: review-inputs/v159-batch-002-011/P003_CORE_RELATIONS.txt
+Binding: incorporate the packet's completed reviewed semantic result as frozen at review_evidence_commit. Packet-local REJECTED/DEFERRED/UNRESOLVED/nonactive clauses remain nonactive/non-PASS. P037 overlay controls cross-wave conflict. Exact layer projection anchors are recorded in UpgradeTraceabilityTable.
+
+[V159-CONS-P004]
+P004 — Type / Effect / Scope
+Evidence: review-inputs/v159-batch-002-011/P004_TYPE_EFFECT_SCOPE.txt
+Binding: incorporate the packet's completed reviewed semantic result as frozen at review_evidence_commit. Packet-local REJECTED/DEFERRED/UNRESOLVED/nonactive clauses remain nonactive/non-PASS. P037 overlay controls cross-wave conflict. Exact layer projection anchors are recorded in UpgradeTraceabilityTable.
+
+[V159-CONS-P005]
+P005 — Provenance
+Evidence: review-inputs/v159-batch-002-011/P005_PROVENANCE.txt
+Binding: incorporate the packet's completed reviewed semantic result as frozen at review_evidence_commit. Packet-local REJECTED/DEFERRED/UNRESOLVED/nonactive clauses remain nonactive/non-PASS. P037 overlay controls cross-wave conflict. Exact layer projection anchors are recorded in UpgradeTraceabilityTable.
+
+[V159-CONS-P006]
+P006 — Design Epoch
+Evidence: review-inputs/v159-batch-002-011/P006_DESIGN_EPOCH.txt
+Binding: incorporate the packet's completed reviewed semantic result as frozen at review_evidence_commit. Packet-local REJECTED/DEFERRED/UNRESOLVED/nonactive clauses remain nonactive/non-PASS. P037 overlay controls cross-wave conflict. Exact layer projection anchors are recorded in UpgradeTraceabilityTable.
+
+[V159-CONS-P007]
+P007 — Dependency Semantics
+Evidence: review-inputs/v159-batch-002-011/P007_DEPENDENCY_SEMANTICS.txt
+Binding: incorporate the packet's completed reviewed semantic result as frozen at review_evidence_commit. Packet-local REJECTED/DEFERRED/UNRESOLVED/nonactive clauses remain nonactive/non-PASS. P037 overlay controls cross-wave conflict. Exact layer projection anchors are recorded in UpgradeTraceabilityTable.
+
+[V159-CONS-P008]
+P008 — Process Algebra
+Evidence: review-inputs/v159-batch-002-011/P008_PROCESS_ALGEBRA.txt
+Binding: incorporate the packet's completed reviewed semantic result as frozen at review_evidence_commit. Packet-local REJECTED/DEFERRED/UNRESOLVED/nonactive clauses remain nonactive/non-PASS. P037 overlay controls cross-wave conflict. Exact layer projection anchors are recorded in UpgradeTraceabilityTable.
+
+[V159-CONS-P009]
+P009 — Universal Step Loop
+Evidence: review-inputs/v159-batch-002-011/P009_UNIVERSAL_STEP_LOOP.txt
+Binding: incorporate the packet's completed reviewed semantic result as frozen at review_evidence_commit. Packet-local REJECTED/DEFERRED/UNRESOLVED/nonactive clauses remain nonactive/non-PASS. P037 overlay controls cross-wave conflict. Exact layer projection anchors are recorded in UpgradeTraceabilityTable.
+
+[V159-CONS-P010]
+P010 — AAP
+Evidence: review-inputs/v159-batch-002-011/P010_AAP.txt
+Binding: incorporate the packet's completed reviewed semantic result as frozen at review_evidence_commit. Packet-local REJECTED/DEFERRED/UNRESOLVED/nonactive clauses remain nonactive/non-PASS. P037 overlay controls cross-wave conflict. Exact layer projection anchors are recorded in UpgradeTraceabilityTable.
+
+[V159-CONS-P011]
+P011 — Function Contract
+Evidence: review-inputs/v159-batch-002-011/P011_FUNCTION_CONTRACT.txt
+Binding: incorporate the packet's completed reviewed semantic result as frozen at review_evidence_commit. Packet-local REJECTED/DEFERRED/UNRESOLVED/nonactive clauses remain nonactive/non-PASS. P037 overlay controls cross-wave conflict. Exact layer projection anchors are recorded in UpgradeTraceabilityTable.
+
+[V159-CONS-P012]
+P012 — Algebras
+Evidence: review-inputs/v159-wave1/challenge/P012_CANDIDATE.txt
+Binding: incorporate the packet's completed reviewed semantic result as frozen at review_evidence_commit. Packet-local REJECTED/DEFERRED/UNRESOLVED/nonactive clauses remain nonactive/non-PASS. P037 overlay controls cross-wave conflict. Exact layer projection anchors are recorded in UpgradeTraceabilityTable.
+
+[V159-CONS-P013]
+P013 — Compare
+Evidence: review-inputs/v159-wave1/challenge/P013_CANDIDATE.txt
+Binding: incorporate the packet's completed reviewed semantic result as frozen at review_evidence_commit. Packet-local REJECTED/DEFERRED/UNRESOLVED/nonactive clauses remain nonactive/non-PASS. P037 overlay controls cross-wave conflict. Exact layer projection anchors are recorded in UpgradeTraceabilityTable.
+
+[V159-CONS-P014]
+P014 — Reason
+Evidence: review-inputs/v159-wave1/challenge/P014_CANDIDATE.txt
+Binding: incorporate the packet's completed reviewed semantic result as frozen at review_evidence_commit. Packet-local REJECTED/DEFERRED/UNRESOLVED/nonactive clauses remain nonactive/non-PASS. P037 overlay controls cross-wave conflict. Exact layer projection anchors are recorded in UpgradeTraceabilityTable.
+
+[V159-CONS-P015]
+P015 — Proof / Explanation
+Evidence: review-inputs/v159-wave1/challenge/P015_CANDIDATE.txt
+Binding: incorporate the packet's completed reviewed semantic result as frozen at review_evidence_commit. Packet-local REJECTED/DEFERRED/UNRESOLVED/nonactive clauses remain nonactive/non-PASS. P037 overlay controls cross-wave conflict. Exact layer projection anchors are recorded in UpgradeTraceabilityTable.
+
+[V159-CONS-P016]
+P016 — Orchestration / Search / Compile / Transition
+Evidence: review-inputs/v159-wave1/challenge/P016_CANDIDATE.txt
+Binding: incorporate the packet's completed reviewed semantic result as frozen at review_evidence_commit. Packet-local REJECTED/DEFERRED/UNRESOLVED/nonactive clauses remain nonactive/non-PASS. P037 overlay controls cross-wave conflict. Exact layer projection anchors are recorded in UpgradeTraceabilityTable.
+
+[V159-CONS-P017]
+P017 — Policy / Compliance / Evolve / Research
+Evidence: review-inputs/v159-wave2/challenge/P017_CANDIDATE.txt
+Binding: incorporate the packet's completed reviewed semantic result as frozen at review_evidence_commit. Packet-local REJECTED/DEFERRED/UNRESOLVED/nonactive clauses remain nonactive/non-PASS. P037 overlay controls cross-wave conflict. Exact layer projection anchors are recorded in UpgradeTraceabilityTable.
+
+[V159-CONS-P018]
+P018 — Human Sovereignty Core
+Evidence: review-inputs/v159-wave2/challenge/P018_CANDIDATE.txt
+Binding: incorporate the packet's completed reviewed semantic result as frozen at review_evidence_commit. Packet-local REJECTED/DEFERRED/UNRESOLVED/nonactive clauses remain nonactive/non-PASS. P037 overlay controls cross-wave conflict. Exact layer projection anchors are recorded in UpgradeTraceabilityTable.
+
+[V159-CONS-P019]
+P019 — Human Effect / HRAP / Reporting / Reputation
+Evidence: review-inputs/v159-wave2/challenge/P019_CANDIDATE.txt
+Binding: incorporate the packet's completed reviewed semantic result as frozen at review_evidence_commit. Packet-local REJECTED/DEFERRED/UNRESOLVED/nonactive clauses remain nonactive/non-PASS. P037 overlay controls cross-wave conflict. Exact layer projection anchors are recorded in UpgradeTraceabilityTable.
+
+[V159-CONS-P020]
+P020 — Safety / Security / Law / Government Access / Privacy
+Evidence: review-inputs/v159-wave2/challenge/P020_CANDIDATE.txt
+Binding: incorporate the packet's completed reviewed semantic result as frozen at review_evidence_commit. Packet-local REJECTED/DEFERRED/UNRESOLVED/nonactive clauses remain nonactive/non-PASS. P037 overlay controls cross-wave conflict. Exact layer projection anchors are recorded in UpgradeTraceabilityTable.
+
+[V159-CONS-P021]
+P021 — Runtime / Execution / Time / Event / Network / Fabric / Resilience
+Evidence: review-inputs/v159-wave2/challenge/P021_CANDIDATE.txt
+Binding: incorporate the packet's completed reviewed semantic result as frozen at review_evidence_commit. Packet-local REJECTED/DEFERRED/UNRESOLVED/nonactive clauses remain nonactive/non-PASS. P037 overlay controls cross-wave conflict. Exact layer projection anchors are recorded in UpgradeTraceabilityTable.
+
+[V159-CONS-P022]
+P022 — Knowledge Curation / GSL-KR / World Evidence
+Evidence: review-inputs/v159-wave3/challenge/P022_CANDIDATE.txt
+Binding: incorporate the packet's completed reviewed semantic result as frozen at review_evidence_commit. Packet-local REJECTED/DEFERRED/UNRESOLVED/nonactive clauses remain nonactive/non-PASS. P037 overlay controls cross-wave conflict. Exact layer projection anchors are recorded in UpgradeTraceabilityTable.
+
+[V159-CONS-P023]
+P023 — GSL-Physics / Digital Twin / Critical Continuity
+Evidence: review-inputs/v159-wave3/challenge/P023_CANDIDATE.txt
+Binding: incorporate the packet's completed reviewed semantic result as frozen at review_evidence_commit. Packet-local REJECTED/DEFERRED/UNRESOLVED/nonactive clauses remain nonactive/non-PASS. P037 overlay controls cross-wave conflict. Exact layer projection anchors are recorded in UpgradeTraceabilityTable.
+
+[V159-CONS-P024]
+P024 — Causal Safety / UBC / CLIC / GCL
+Evidence: review-inputs/v159-wave3/challenge/P024_CANDIDATE.txt
+Binding: incorporate the packet's completed reviewed semantic result as frozen at review_evidence_commit. Packet-local REJECTED/DEFERRED/UNRESOLVED/nonactive clauses remain nonactive/non-PASS. P037 overlay controls cross-wave conflict. Exact layer projection anchors are recorded in UpgradeTraceabilityTable.
+
+[V159-CONS-P025]
+P025 — TSI / TIA / ART / IIC / PIR
+Evidence: review-inputs/v159-wave3/challenge/P025_CANDIDATE.txt
+Binding: incorporate the packet's completed reviewed semantic result as frozen at review_evidence_commit. Packet-local REJECTED/DEFERRED/UNRESOLVED/nonactive clauses remain nonactive/non-PASS. P037 overlay controls cross-wave conflict. Exact layer projection anchors are recorded in UpgradeTraceabilityTable.
+
+[V159-CONS-P026]
+P026 — CSI / SMCD / CAD / OAC / CTSN / PAI
+Evidence: review-inputs/v159-wave3/challenge/P026_CANDIDATE.txt
+Binding: incorporate the packet's completed reviewed semantic result as frozen at review_evidence_commit. Packet-local REJECTED/DEFERRED/UNRESOLVED/nonactive clauses remain nonactive/non-PASS. P037 overlay controls cross-wave conflict. Exact layer projection anchors are recorded in UpgradeTraceabilityTable.
+
+[V159-CONS-P027]
+P027 — SCT / Structural Coherence
+Evidence: review-inputs/v159-wave4/challenge/P027_CANDIDATE.txt
+Binding: incorporate the packet's completed reviewed semantic result as frozen at review_evidence_commit. Packet-local REJECTED/DEFERRED/UNRESOLVED/nonactive clauses remain nonactive/non-PASS. P037 overlay controls cross-wave conflict. Exact layer projection anchors are recorded in UpgradeTraceabilityTable.
+
+[V159-CONS-P028]
+P028 — TRAIN / GAIA / Domain Profiles
+Evidence: review-inputs/v159-wave4/challenge/P028_CANDIDATE.txt
+Binding: incorporate the packet's completed reviewed semantic result as frozen at review_evidence_commit. Packet-local REJECTED/DEFERRED/UNRESOLVED/nonactive clauses remain nonactive/non-PASS. P037 overlay controls cross-wave conflict. Exact layer projection anchors are recorded in UpgradeTraceabilityTable.
+
+[V159-CONS-P029]
+P029 — VSM / RPM / PPM / TFT / FET Composition
+Evidence: review-inputs/v159-wave4/challenge/P029_CANDIDATE.txt
+Binding: incorporate the packet's completed reviewed semantic result as frozen at review_evidence_commit. Packet-local REJECTED/DEFERRED/UNRESOLVED/nonactive clauses remain nonactive/non-PASS. P037 overlay controls cross-wave conflict. Exact layer projection anchors are recorded in UpgradeTraceabilityTable.
+
+[V159-CONS-P030]
+P030 — Research / Learning / Deferred / Comparative
+Evidence: review-inputs/v159-wave4/challenge/P030_CANDIDATE.txt
+Binding: incorporate the packet's completed reviewed semantic result as frozen at review_evidence_commit. Packet-local REJECTED/DEFERRED/UNRESOLVED/nonactive clauses remain nonactive/non-PASS. P037 overlay controls cross-wave conflict. Exact layer projection anchors are recorded in UpgradeTraceabilityTable.
+
+[V159-CONS-P031]
+P031 — Reliability / GSL Architectures
+Evidence: review-inputs/v159-wave4/challenge/P031_CANDIDATE.txt
+Binding: incorporate the packet's completed reviewed semantic result as frozen at review_evidence_commit. Packet-local REJECTED/DEFERRED/UNRESOLVED/nonactive clauses remain nonactive/non-PASS. P037 overlay controls cross-wave conflict. Exact layer projection anchors are recorded in UpgradeTraceabilityTable.
+
+[V159-CONS-P032]
+P032 — Artifact / Schema / Owner Closure
+Evidence: review-inputs/v159-wave5/challenge/P032_CANDIDATE.txt
+Binding: incorporate the packet's completed reviewed semantic result as frozen at review_evidence_commit. Packet-local REJECTED/DEFERRED/UNRESOLVED/nonactive clauses remain nonactive/non-PASS. P037 overlay controls cross-wave conflict. Exact layer projection anchors are recorded in UpgradeTraceabilityTable.
+
+[V159-CONS-P033]
+P033 — Legacy-50 Reconciliation
+Evidence: review-inputs/v159-wave5/challenge/P033_CANDIDATE.txt
+Binding: incorporate the packet's completed reviewed semantic result as frozen at review_evidence_commit. Packet-local REJECTED/DEFERRED/UNRESOLVED/nonactive clauses remain nonactive/non-PASS. P037 overlay controls cross-wave conflict. Exact layer projection anchors are recorded in UpgradeTraceabilityTable.
+
+[V159-CONS-P034]
+P034 — Justice / Reference / Current Reading
+Evidence: review-inputs/v159-wave5/challenge/P034_CANDIDATE.txt
+Binding: incorporate the packet's completed reviewed semantic result as frozen at review_evidence_commit. Packet-local REJECTED/DEFERRED/UNRESOLVED/nonactive clauses remain nonactive/non-PASS. P037 overlay controls cross-wave conflict. Exact layer projection anchors are recorded in UpgradeTraceabilityTable.
+
+[V159-CONS-P035]
+P035 — Recursive Control Intelligence
+Evidence: review-inputs/v159-wave5/challenge/P035_CANDIDATE.txt
+Binding: incorporate the packet's completed reviewed semantic result as frozen at review_evidence_commit. Packet-local REJECTED/DEFERRED/UNRESOLVED/nonactive clauses remain nonactive/non-PASS. P037 overlay controls cross-wave conflict. Exact layer projection anchors are recorded in UpgradeTraceabilityTable.
+
+[V159-CONS-P036]
+P036 — Release / Admission / Registry / Test Status
+Evidence: review-inputs/v159-wave5/challenge/P036_CANDIDATE.txt
+Binding: incorporate the packet's completed reviewed semantic result as frozen at review_evidence_commit. Packet-local REJECTED/DEFERRED/UNRESOLVED/nonactive clauses remain nonactive/non-PASS. P037 overlay controls cross-wave conflict. Exact layer projection anchors are recorded in UpgradeTraceabilityTable.
+
+[V159-CONS-P037]
+P037 — Final Cross-Wave Integration
+Evidence: review-inputs/v159-final/P037_FINAL_CORRECTIVE_OVERLAY.txt + final-disposition.json
+Binding: incorporate the packet's completed reviewed semantic result as frozen at review_evidence_commit. Packet-local REJECTED/DEFERRED/UNRESOLVED/nonactive clauses remain nonactive/non-PASS. P037 overlay controls cross-wave conflict. Exact layer projection anchors are recorded in UpgradeTraceabilityTable.
+
+
+Release status boundary
+-----------------------
+These bytes may carry the reviewed working-candidate label only because semantic review is complete and the release
+supporting artifacts are hash-bound. The label does not mean executable certification, production certification,
+canonical admission, proof of deployment safety, or compatibility certification. Any required unresolved dependency
+continues to propagate its owner-qualified non-PASS/incomplete status.
