@@ -4,6 +4,8 @@
 
 Voting membership is open to every resident of every AI-Accord member country. Anyone passing objective general-reasoning and basic AI-knowledge tests may join and vote, with no political appointments, random-selection gate, ideological screening, discretionary filtering or mandatory coaching. At least 100,000 qualified members are required for the first decision, with no upper limit and one equal vote per member. Membership remains open as people and countries join. The community decides what happens afterward to 100% of the ideas and worldwide revenue earned from their use: keep them free or direct economic value to a common fund. No Garden branding or personal attribution is required. See [LICENSE](LICENSE).
 
+**Navigation:** [Candidate release guide](canonical/candidates/README.md) · [Version changelog](CHANGELOG.md) · [Manual read-only integrity checker](scripts/README.md). These are documentation and structural checks, not canonical admission or runtime automation.
+
 ## Repository purpose
 
 This repository intentionally contains **Garden design source and successor design candidates**. It is not the former runtime, deployment, review-automation or work-package workspace.

@@ -1,0 +1,8 @@
+# Preserve readable diffs; normalize source text consistently.
+*.md text eol=lf
+*.json text eol=lf
+# Preserve exact frozen text-source bytes for source-manifest SHA-256.
+*.txt -text
+*.py text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf
