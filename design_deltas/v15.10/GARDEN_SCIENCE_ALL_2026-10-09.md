@@ -1,3 +1,40 @@
+# GARDEN v15.10 — COMPLETE SCIENTIFIC RESEARCH REGISTER — 2026-10-09
+
+Status: NONCANONICAL RESEARCH; NOT 100 verified discoveries. This consolidated file contains all scientific proposal registers and evidence summaries produced today. It preserves the source sections below as historical records, including older claims corrected by later addenda. **When statements conflict, the latest explicit correction and evidence boundary controls.** The source text is not itself an admitted Garden design update.
+
+## Contents
+1. 100 candidate scientific theory upgrades — REV3 and its corrections
+2. Candidate 026 synthetic benchmark gap closure
+3. Five domain investigations and sixteen transfers
+4. Consolidated 33 high-value opportunity investigations
+
+## Evidence and corrections
+- No novel scientific law has been independently established. Worldwide novelty screening, real-world validation and comprehensive 100-theory derivations remain pending.
+- REV3 states that the 100 mechanisms were keyword-derived hints, not actual residual-based diagnoses.
+- Candidate 026 thermal memory is established physics; benchmark evidence tests a modelling procedure, not discovery of new physics.
+- Dollar figures supplied as total industry losses or theoretical opportunity must not be counted as Garden-specific incremental savings.
+- The full scientific text is unified here. **Executable source code and machine-readable results remain separate supporting assets** because merging them as prose would make them less usable.
+- Garden's canonical Book, Technical Core and Catalogue remain unchanged.
+
+## Supporting reproducible assets
+- `garden_candidate026_harness.py`
+- `garden_candidate026_harness_results.json`
+- `garden_candidate026_strong_comparator.py`
+- `garden_candidate026_strong_results.json`
+- `garden_candidate026_strong_results_high_noise.json`
+
+## Original source identities
+1. `Garden_v15_10_Scientific_Theory_Upgrades_100_REV3.txt` — Git blob 3caa7db98f118a22de20fb6749f2b79cefd8fea0
+2. `GARDEN_SCIENCE_REV3_GAP_CLOSURE_2026-10-09.md` — Git blob 088c1c767175d01cbc1ee34c000f9bfa8d0e68d6
+3. `GARDEN_SCIENCE_FIVE_DOMAINS_AND_16_TRANSFERS_2026-10-09.md` — Git blob 5710d99e091b7b80b421b3bad029a03197f7d8b6
+4. `GARDEN_SCIENCE_HIGH_VALUE_OPPORTUNITIES_FINAL_2026-10-09.md` — Git blob d0dc9ffb56a81c0a70b2f2cc61a9d9872edc22cc
+
+---
+
+
+---
+# PART 1: Garden_v15_10_Scientific_Theory_Upgrades_100_REV3.txt
+
 REV3 EVIDENCE / CORRECTION ADDENDUM — controlling over earlier REV2 assertions
 
 1. SOURCE AND EVIDENCE STATUS
@@ -1335,3 +1372,526 @@ A model's zero-coupling baseline limit is necessary but insufficient. Require st
 Gate G: THEORY_READY requires source pin + dimensional contract + derivation + synthetic recovery + novelty search + strong baseline comparison. EMPIRICALLY_SUPPORTED additionally requires independent data.
 Unresolved TREE_CORE build-integrity issues (truncated gzip, stale schema identifiers, nondeterminism) must not be silently marked PASS; this document is not a proof of canonical compilation.
 Final: This revision fixes the index-driven form assignment and supplies ten mathematical examples, but does not establish a globally novel scientific law or 100 fully derived upgrades.
+
+
+---
+# PART 2: GARDEN_SCIENCE_REV3_GAP_CLOSURE_2026-10-09.md
+
+# Garden v15.10 scientific discovery — gap-closure evidence
+
+Date: 2026-10-09
+Status: NONCANONICAL / SCIENTIFIC RESEARCH / NOT DISCOVERY
+
+## Scope and limitations
+This addendum does NOT claim to fix all 100 scientific candidates. The 100 proposals remain largely un-derived; novelty is unverified. The current evidence repairs one important benchmark comparator weakness for Candidate 026.
+
+## Candidate 026: noise-aware output-error comparator
+- Synthetic source: `garden_candidate026_harness.py` (unchanged reference generator).
+- New comparator: `garden_candidate026_strong_comparator.py`.
+- Fits one-body and two-body thermal RC state-space models to noisy observed temperature using least squares of **simulation output**, not regression on noisy lagged outputs.
+- Zero-order-hold discretization, positive capacities and conductances via log parameters, fitted initial temperatures, one fixed starting point per model, SciPy `least_squares` with parameter bounds.
+- Selection rule: training BIC(two-body) <= training BIC(one-body)-10. Held-out MSE reported separately and not used to select model.
+- Noise sigma=0.012, 20 null + 20 hidden-state synthetic cases: 0/20 false selections; 20/20 detections.
+- Noise sigma=0.024, 12 null + 12 hidden-state synthetic cases: 0/12 false selections; 12/12 detections.
+- These counts are finite-sample results, not guarantees; comparator is given both candidate model families, so it is not a blind scientific discovery benchmark.
+- The earlier ARX result (3/100 null false positives after calibration) remains as a historical diagnostic; it is no longer presented as the best baseline.
+
+## Corrections to prior claims
+- Keyword-based mechanism hints are NOT residual-driven discoveries.
+- '100 distinct diagnostics' is false. 100 entries are research prompts; only ten contain worked mathematics.
+- Candidate 017: positive Arrhenius log-rate curvature under constant positive prefactors and fixed barriers.
+- Candidate 041: information-theoretic conditioning inequality does not supply an implementable closure without a forecast of the conditioning variable.
+- Candidate 072: infection-age model is established, not unresolved as a mathematical mechanism.
+- Candidate 026: two-body RC physics is established. No claim of scientific novelty.
+
+## Explicit pending gates
+1. Global literature novelty search for 100/100: NOT DONE.
+2. Strongest current domain-specific baselines for 100/100: NOT DONE.
+3. Full dimensioned TheoryEquationContracts for remaining 99: NOT DONE.
+4. Blind residual-driven mechanism identification on unseen problems: NOT DONE.
+5. Real-world held-out experiments: NOT DONE.
+6. TREE_CORE build integrity, CRC, schema and deterministic compilation repairs: NOT DONE.
+7. Multiplicity-adjusted registered primary endpoints for a shortlisted candidate set: NOT DONE.
+
+## Proposed acceptance gates
+- G0: Pin current baseline theory and strongest alternatives.
+- G1: Define projection and find independent physical states with same projected state but different futures.
+- G2: Diagnose residual without title or mechanism leakage; report UNKNOWN when insufficient.
+- G3: Derive typed equations with units, limits, identifiability, conservation and positivity checks.
+- G4: Compare against noise-aware state-space and domain-specific baselines, with held-out forcing and matched budget.
+- G5: Search literature for novelty; downgrade rediscovered results to known mechanisms.
+- G6: Pre-register signed/magnitude predictions, multiple-comparison controls and independent replication.
+- G7: Human-reviewed scientific status; no self-admission or overwrite of controlling Garden sources.
+
+## Reproduction
+From this directory with NumPy and SciPy installed:
+`python garden_candidate026_strong_comparator.py --n 20 --output garden_candidate026_strong_results.json`
+`python garden_candidate026_strong_comparator.py --n 12 --noise 0.024 --seed 20000 --output garden_candidate026_strong_results_high_noise.json`
+
+The harness imports `garden_candidate026_harness.py` for synthetic trajectory generation. Numerical results may vary with dependency versions; reproducible pinned environments are a future gate.
+
+
+---
+# PART 3: GARDEN_SCIENCE_FIVE_DOMAINS_AND_16_TRANSFERS_2026-10-09.md
+
+# Garden v15.10 — Five Domain Investigations and Sixteen Transfer Candidates
+Date: 2026-10-09
+Status: NONCANONICAL RESEARCH / hypotheses, not discoveries
+Source: user-supplied five principal ideas and sixteen application ideas; Garden REV3 candidate register.
+Evidence scope: selective literature reconnaissance, analytical derivations under declared toy-model assumptions, no empirical benchmark or independent novelty certification.
+
+## 0. Universal projection-to-discovery contract
+For each investigation, freeze the strongest available baseline; define detailed state X, observable Y=A(X), physical dynamics T, and an admissible context C. Search for X1,X2 with A(X1)=A(X2) but A(T(X1)) != A(T(X2)). The difference is evidence that Y alone is not dynamically closed, not automatically a new physical law. Derive a minimal additional measurable state Z; check units, invariants, identifiability, limiting behavior, causal alternatives, held-out forecast skill, strong-baseline parity, multiplicity and literature priority.
+GSL: TIME/SPACE/THING/EVENT/ACTION/AGENCY/RULE/VALUE/CONTEXT/CLAIM; apply only valid relations from the 24-core registry; seven forms CONSTRUCT, CONTRACT, STATE, RELATION, PROCESS, RULE, PROJECTION. For physical systems, AGENCY ordinarily means experimenter/controller, not matter. Evidence/proof/novelty/utility remain separate. UNKNOWN != PASS. No self-admission.
+Proposed typed science-specific "approximates-in-limit" contract is an annotation on a derivation, not a new Garden core relation.
+Scientific status fields: hypothesis, dimensional check, analytical result, synthetic test, literature comparison, empirical test, benefit.
+For each candidate, demand a comparator using the best current domain model rather than a textbook strawman. Blinding: do not disclose the hidden mechanism in the candidate title given to the discovery model.
+
+## 1. Macroeconomic liquidity and transaction networks
+BASELINE: Heterogeneous-agent macroeconomics, agent-based monetary networks, input-output and payment networks already model many distributional and network effects; representative-agent DSGE is not universal.
+Detailed state: regional balances m_i [currency], edge flows f_ij [currency/time], delayed settlements q_ij(t,s), local prices and output. Projection: aggregate money M=sum_i m_i and national velocity V. 
+Candidate network-delay model: dm_i/dt = transfers_i + income_i - spending_i + sum_j(f_ji-f_ij); settlement arrivals may be represented by integral_0^infty K_ij(s) f_ji(t-s) ds with normalized K_ij(s) [1/time]. Settlement pipeline balances must be included for conservation. Units: currency/time on both sides.
+Derived distinction: two networks with the same M and average V but different edge bottlenecks can have different settlement-time distributions. This is a counterexample to a model using M,V alone; not a novel economic law.
+Signed test: at matched total transfer volume and region size, a measured increase in edge bottleneck concentration predicts increased upper-tail settlement latency if routing and service rates are held fixed; not necessarily higher inflation or GDP.
+Strong comparators: heterogeneous-agent New Keynesian, agent-based payment network, queueing-network models; compare distributional and regional out-of-sample prediction, not only aggregate GDP.
+Data: anonymized payments/settlement timestamps, regional price indices, GST receipts and transfer histories. Guard against re-identification and intervention harms.
+Benefit: better regional transfer targeting and cashflow resilience IF proven; cannot promise optimized GST windfalls or neutralized inflation.
+Status: equation-level candidate; novelty UNKNOWN; no data fit.
+
+## 2. Quantum transport / active matter
+BASELINE: quantum kinetic equations, NEGF, Lindblad/open-system models and non-Markovian transport already include coherence, scattering and memory. "Infinite Electron Theorem" is a proposed name, not a recognized demonstrated theorem.
+Detailed state: density operator rho(t), contacts, fields, phonon bath; projection to current I(t) and local density n(x,t).
+Candidate: drho/dt = L0[rho(t)] + integral_0^t K(t-s)[rho(s)] ds + drive(t), with K a superoperator of units 1/time^2 (when integrating ds) and trace-preserving, Hermiticity-preserving conditions; complete positivity is nontrivial and must be checked. Currents must satisfy charge continuity.
+Analytical distinction: identical instantaneous density/current with different system-bath correlations can yield different subsequent current; memoryless projection may be insufficient.
+Falsifier: measure pump-probe transient conductivity and fit NEGF/non-Markovian baseline; hold out pulse sequences; reject if additional memory structure has no independent predictive benefit.
+Benefit: improved transport design or reduced losses IF validated. Memory alone implies neither zero resistance nor room-temperature superconductivity. Active matter and electron transport are not interchangeable physical theories.
+Status: conditional modelling direction; no theorem or superconducting evidence.
+
+## 3. Deterministic AI safety / hardware kernels
+BASELINE: runtime verification, BFT protocols, formal methods, watchdogs, control barrier functions and hardware fault tolerance are established; none generally guarantees truthful semantic outputs.
+Detailed state: processor timing, scheduler, sensor freshness, network faults, model action proposals and physical plant state. Projection to "heartbeat present" and "action allowed".
+Candidate: barrier h(x)>=0 for physical safety set; require along continuous plant trajectories dot h(x,u)+alpha(h(x))>=0 with model uncertainty margins, verified actuator bounds, trusted state estimates, and sampled-data corrections. A 5.5 kHz heartbeat has period ~181.8 microseconds; frequency alone does not imply correctness.
+Failure counterexample: two systems with identical heartbeat timing can execute different unsafe commands. Therefore heartbeat is not a semantic invariant.
+Test: inject missed deadlines, Byzantine messages, sensor spoofing, model hallucinations and stale commitments; compare conventional certified runtime assurance and fault-tolerant control at identical fault budgets.
+Benefit: potentially more dependable industrial control; "zero hallucination", universal semantic closure and SEP/licensing income NOT established.
+Status: no deterministic semantic guarantee; focus on bounded physical safety only.
+
+## 4. Modular urban architecture (100 m x 100 m cells)
+BASELINE: district digital twins, multi-energy microgrids, water-energy-food nexus, integrated transport planning and vertical farm models already exist.
+Detailed state: nodal electricity/water/waste stocks, battery state, occupancy, transit flows, crop biomass, weather, costs. Projection to mean per-cell demand and annual yields.
+Proposed dynamic coupling: dE_i/dt = generation_i + imports_i - demand_i - exports_i - losses_i, with energy units and inter-node power flows integrated in time. Water and food have distinct mass balances; no shared "kinetics" term should be used without physically typed mappings.
+Derived distinction: equal annual average load does not imply equal coincident peak load; network congestion depends on joint time series and edge capacity.
+Experiment: simulated multi-cell scenarios with weather/load/crop time series; compare multi-energy district optimization, robust MPC and independent per-cell planning. Primary endpoint: lifecycle cost subject to reliability, water and food constraints. Test outage resilience separately.
+Benefit: possible infrastructure savings, not elimination of overprovisioning or guaranteed self-sufficiency.
+Literature: 2026 district digital-twin reviews already identify cross-system integration and sequential planning; claim novelty only for a specific independently verified capability.
+Status: feasible digital-twin research; unverified savings.
+
+## 5. Advanced semiconductor yield / local thermo-mechanical stress
+BASELINE: advanced foundries already use process TCAD, electrothermal, stress and defect statistics; "2 nm" is a process-node designation, not a literal universal feature width. Sub-nanometer predictive scales need atomistic methods where relevant.
+Detailed state: local temperature T(x,t) [K], strain epsilon [dimensionless], stress sigma [Pa], defect density d(x,t) [1/m^3], feature geometry, process history. Projection to wafer mean temperature and nominal recipe.
+Candidate model: rho*c_p*dT/dt = div(k grad T)+Q; thermoelastic constitutive sigma=C:(epsilon-alpha*(T-T0)I); local hazard lambda(x,t)=lambda0 exp[-Ea/(kB*T)] g(sigma/sigma0,d/d0) [1/(m^3 s)] with calibrated dimensionless g. Total expected defect count Lambda=int_volume int_time lambda dx dt. If a Poisson model is independently justified, P(no modeled defects)=exp(-Lambda); spatial dependence/clustered defects can invalidate Poisson.
+Derived mathematical consequence: E[lambda(T,sigma)] generally differs from lambda(E[T],E[sigma]); the second-order correction contains lambda_Tsigma Cov(T,sigma) and variance terms. Sign must be computed from the calibrated constitutive function, not asserted.
+Falsifier: paired wafers with matched mean thermal histories but different measured spatial covariance; preregister signed yield prediction from independently calibrated hazard law; compare TCAD + established statistical process control + advanced defect models, with held-out lots and process splits.
+Benefit: higher yield and fewer scrap lots if incremental prediction survives strongest existing comparators; no numeric savings asserted.
+Status: dimensionally specified conditional hazard candidate; physical calibration, identifiability, novelty and yield data pending.
+
+## 6. Cross-domain shortlist of sixteen further investigations
+All are candidate investigations, not independently validated novelty. Each requires a source-pinned strongest comparator and its own equation contract.
+ID | Domain | Observable projection loss | Discriminating experiment | Potential benefit
+A01 | Solid-state batteries | lithium inventory location hidden by capacity total | matched capacity, differing relaxation histories; impedance and plating measurements | longer life
+A02 | Polymer electrolyte fuel cells | local flooding distribution hidden by mean humidity | matched mean humidity, different spatial saturation maps | lower catalyst costs
+A03 | Polymer gel elasticity | crosslink topology hidden by average chain density | matched density, different topology and cyclic response | tougher gels
+A04 | Photovoltaic encapsulants | humidity-stress joint history hidden by average weather | humidity-mechanical accelerated ageing with held-out cycles | reduced delamination
+A05 | Continuous-flow reactors | intermediate occupation hidden by bulk conversion | transient spectroscopy during feed pulses | higher yield
+A06 | Protein formulations | pair-correlation hidden by mean concentration | scattering plus aggregation-rate prediction | longer shelf life
+A07 | Pharmaceutical crystallization | subcritical-cluster history hidden by supersaturation | matched supersaturation, varied preconditioning | reproducible polymorphs
+A08 | Groundwater remediation | capillary hysteresis hidden by saturation | wetting/drainage reversal curves with tracer transport | improved cleanup
+A09 | Structural fatigue | closure state hidden by present DeltaK | matched DeltaK, differing overload histories | inspection optimization
+A10 | Precision agriculture | moisture-nutrient spatial covariance hidden by field averages | spatial sensors, randomized irrigation plots | reduced runoff
+A11 | Photonic sensors | pair correlation hidden by inclusion density | matched density, varied structure factor | higher sensitivity
+A12 | Neuromorphic computing | glial/metabolic state hidden by firing rate | paired electrophysiology and metabolism under stimulation | energy efficiency
+A13 | Epidemic forecasting | infection-age distribution hidden by I total | age-of-infection surveillance and blind incidence forecast | staffing forecasts
+A14 | Precision dosing | transporter and circadian state hidden by plasma concentration | repeated sampling across dosing times; safety-governed studies | dose precision
+A15 | Neural mass models | phase-lag state hidden by mean firing rate | multichannel recordings and prospective seizure forecast | improved diagnostics
+A16 | Ecosystem resilience | refuge topology hidden by species counts | repeated perturbation with spatial refuge maps | conservation resilience
+
+## 7. Verification and status ledger
+Analytical modelling sketches: five principal cases. Empirical runs: 0. Strong-baseline benchmark runs: 0. Full novelty searches: 0. Selective prior-art reconnaissance: district digital twins only. Verified global novelty: 0. Accepted scientific discoveries: 0.
+Candidate priority: semiconductor (measurable but data access difficult); macro liquidity (public and private data constraints); urban (digital twin datasets and complex scope); AI hardware (physical safety only); quantum transport (high theory and instrumentation burden).
+Scientific gates: source pin; exact dimensions; conserved quantities; counterexample to closure; derived term; parameter identifiability; uncertainty; preregistered signed prediction; strong baseline; blind holdout; literature review; independent replication; conditional benefit.
+Tree Core and Garden v15.10 remain unchanged; do not infer canonical admission, executable GSL compliance, or source-retention closure from this document.
+References for initial reconnaissance:
+- Jalilzadeh et al. 2026, A comprehensive review and framework on applications of digital twins for energy transition at district level, Renewable and Sustainable Energy Reviews 234, 116872. DOI 10.1016/j.rser.2026.116872.
+- Frontiers in Sustainable Cities (2026), Digital twins for sustainable urban energy systems: systematic review of market mechanisms, flexibility, and coordination at district scale. DOI 10.3389/frsc.2026.1837026.
+- Frontiers in Sustainable Food Systems (2026), Optimizing urban agriculture with digital twins. DOI 10.3389/fsufs.2026.1871684.
+
+
+
+---
+# PART 4: GARDEN_SCIENCE_HIGH_VALUE_OPPORTUNITIES_FINAL_2026-10-09.md
+
+# Garden v15.10 — High-Value Scientific Opportunity Register (Consolidated)
+Date: 2026-10-09
+Status: NONCANONICAL RESEARCH CANDIDATES; no verified new scientific discoveries.
+Scope: 33 distinct opportunity lines from the user's twelve earlier proposals, four technical proposals, and seventeen broader industry proposals. Related lines intentionally overlap; benefits MUST NOT be summed.
+
+## Executive assessment
+This is an opportunity and falsification register, not proof of scientific novelty or an economic forecast. The user's supplied dollar figures ($150B+ heat, $875B corrosion, $540B food, $870B diagnostics, etc.) describe alleged total costs, addressable opportunities or illustrative industry claims; they are NOT validated incremental Garden benefits. None has been independently audited here. Success probabilities like 'High' from the source material are replaced with qualitative experimental tractability; probability of a novel scientific improvement remains UNKNOWN for every line.
+
+## Garden v15.10 mechanism
+Freeze modern domain baseline and primary observations. Map TIME, SPACE, THING, EVENT, ACTION, AGENCY (only where genuinely applicable), RULE, VALUE, CONTEXT and CLAIM. Add only type-valid edges among the 24 GSL relations, and instantiate CONSTRUCT, CONTRACT, STATE, RELATION, PROCESS, RULE and PROJECTION. Define detailed state X, observable abstraction Y=A(X), and controlled evolution T. Look for x1,x2 with identical A(x) but measurably distinct future A(Tx); derive missing state Z only when a real closure failure is observed or proved. Apply dimensional/conservation/causal/identifiability checks; distinguish predictive gain from mechanism novelty. Compare against the strongest modern baseline under matched compute/data/complexity; use blinded held-out evaluation, preregistered endpoints and multiplicity controls. Preserve source spans, equation contracts, status receipts, TREE_CORE dependencies and no-self-admission. Unknown stays UNKNOWN.
+
+## Economic quantification protocol
+For each case calculate incremental value = affected annual cost base × eligible fraction × incremental performance gain × adoption fraction − incremental deployment and operating cost. Bound uncertainty and avoid double counting across food/cold-chain, grid rating/congestion/losses, cement energy/carbon, industrial heat/cooling, and semiconductor equipment. A claim such as '15–30% more line capacity' does not imply 15–30% lower grid costs; neither an industry loss total nor a technical potential equals recoverable incremental benefit. 'Everyone knows' accelerates parallel testing and diffusion but not physical qualification, clinical approval or infrastructure deployment.
+All timelines below are *initial controlled demonstration or pilot* windows with adequate resources, not guaranteed proof of scientific novelty or global rollout. Wide deployment can take additional years.
+
+## Summary table
+| ID | Field | Candidate abstraction / testable variable | Conditional benefit | Initial test window | Experimental tractability |
+|---|---|---|---|---|---|
+| 01 | Industrial motor systems | Joint load/pressure/vibration histories | Energy and maintenance cost | 3–12 mo | High |
+| 02 | Food preservation | Microbial growth integrated with time-temperature and package transport | Spoilage avoided | 3–12 mo | High |
+| 03 | Industrial waste heat | Time-temperature-grade and network matching | Fuel and heat costs | 6–24 mo | High |
+| 04 | Water distribution | Pressure transient and deterioration-network memory | Water and pumping losses | 6–18 mo | High |
+| 05 | Industrial membrane separation | Fouling state and local concentration polarization | Energy and membrane life | 6–18 mo | High |
+| 06 | Cold-chain refrigeration | Thermal inertia, humidity, compressor switching | Energy and food quality | 3–12 mo | High |
+| 07 | Methane leak detection | Intermittent emissions with plume and sensor uncertainty | Recovered gas and avoided emissions | 3–12 mo | High |
+| 08 | Cement kiln efficiency | Particle thermal histories and calcination reaction gradients | Fuel and reject reduction | 6–24 mo | Medium |
+| 09 | Fertilizer efficiency | Soil N transport, microbial state, rainfall history | Yield and fertilizer savings | 1–3 yr | Medium |
+| 10 | Grid congestion optimization | Correlated flows, topology, storage and constraints | Congestion and curtailment | 6–24 mo | High |
+| 11 | Mining processing | Ore texture/fracture and liberation distributions | Energy and recovery | 6–24 mo | Medium |
+| 12 | Building cooling | Thermal mass, humidity and occupancy lag | Electricity and comfort | 3–12 mo | High |
+| 13 | Dynamic transmission line rating | Conductor thermal memory and span-wise weather fields | Congestion, capacity and deferred construction | 6–24 mo | High |
+| 14 | Biopharma bioreactor yield | Local shear/oxygen distribution and metabolic lag | Batch yield and reduced failures | 1–5 yr | Medium |
+| 15 | Metal additive manufacturing | Melt-pool thermal cycles, grain topology and residual stress | Lower rejection and rework | 1–4 yr | Medium |
+| 16 | Direct air capture | Water/CO2 coadsorption hysteresis and pore-network aging | Lower regeneration energy and sorbent replacement | 1–5 yr | Medium |
+| 17 | Corrosion prevention | Coating defects, electrochemistry and stress/flow histories | Avoided maintenance and failures | 1–5 yr | High |
+| 18 | Healthcare diagnostic error | Longitudinal evidence, uncertainty, workflow and escalation | Avoidable patient harm and care costs | 2–7 yr | Medium |
+| 19 | Drug discovery | Assay uncertainty, synthesis feasibility and distribution shift | Lower R&D cost per successful therapy | 1–7 yr | Medium |
+| 20 | Grid transmission losses | Electrical topology, reactive flow, conductor state | Reduced electrical losses | 1–5 yr | Medium |
+| 21 | Mining haulage efficiency | Haul cycles, terrain, state-of-charge and dispatch | Fuel and maintenance | 1–4 yr | High |
+| 22 | Water treatment energy | Membrane state, feed salinity, pressure recovery | Electricity and water cost | 1–4 yr | High |
+| 23 | Semiconductor fab energy | Tool-level thermal states and facility utility timing | Electricity and throughput | 1–4 yr | High |
+| 24 | Agricultural climate yield loss | Heat stress timing, water/nutrient state and cultivar response | Avoided crop losses | 2–10 yr | Medium |
+| 25 | Aviation fuel efficiency | Weather, routing, wake, aircraft state and operations | Fuel burn | 1–6 yr | Medium |
+| 26 | Shipping fuel efficiency | Hull fouling, wind assistance, route/weather state | Fuel burn | 1–6 yr | High |
+| 27 | Steel energy and carbon | Ore quality, furnace thermal profile and reduction kinetics | Fuel and emissions | 2–10 yr | Medium |
+| 28 | Cement carbon capture | Flue composition, solvent state and heat integration | Avoided emissions and energy | 2–10 yr | Medium |
+| 29 | Construction material reuse | Quality uncertainty, structural grading and logistics topology | Material and disposal costs | 1–7 yr | Medium |
+| 30 | Textile recycling | Fiber blend identification, degradation and sorting dynamics | Recovered material and avoided disposal | 1–7 yr | Medium |
+| 31 | Data-center cooling | Chip heat flux, coolant dynamics and facility power state | Electricity and capital utilization | 6–36 mo | High |
+| 32 | Soil carbon verification | Mineral accessibility, wet/dry microbial memory | Cheaper credible carbon measurement | 1–5 yr | Medium |
+| 33 | Precision chemical reactors | Intermediate populations and feed pulse histories | Higher conversion/selectivity | 6–24 mo | High |
+
+## Individual investigations
+### 01 — Industrial motor systems
+**Projection gap to test:** Joint load/pressure/vibration histories.
+**Strong modern comparator:** Motor-system digital twins, optimal pump/compressor control.
+**Proposed experiment:** Measure the stated missing variables directly where possible, construct matched aggregate states with contrasting local histories or topology, then compare out-of-sample outcomes under matched parameter and computational budgets. A domain-specific preregistration must supply signed predictions, primary endpoint, sample-size/power calculation, units, error tolerance and falsifiers before testing. This is a study design, not a completed experiment.
+**Conditional economic benefit:** Energy and maintenance cost. Formula: affected cost base × verified incremental gain × practical adoption − implementation cost; no numerical incremental saving has been established.
+**Earliest controlled test:** 3–12 mo (scenario); experimental tractability high, not probability of discovery.
+**Critical qualification:** Large electricity exposure; no attributable Garden savings established.
+**Evidence status:** HYPOTHESIS; full TheoryEquationContract NOT COMPLETE; strong-baseline test NOT RUN; literature novelty NOT CERTIFIED; real-world validation NOT DONE.
+
+### 02 — Food preservation
+**Projection gap to test:** Microbial growth integrated with time-temperature and package transport.
+**Strong modern comparator:** Predictive microbiology and modern cold-chain control.
+**Proposed experiment:** Measure the stated missing variables directly where possible, construct matched aggregate states with contrasting local histories or topology, then compare out-of-sample outcomes under matched parameter and computational budgets. A domain-specific preregistration must supply signed predictions, primary endpoint, sample-size/power calculation, units, error tolerance and falsifiers before testing. This is a study design, not a completed experiment.
+**Conditional economic benefit:** Spoilage avoided. Formula: affected cost base × verified incremental gain × practical adoption − implementation cost; no numerical incremental saving has been established.
+**Earliest controlled test:** 3–12 mo (scenario); experimental tractability high, not probability of discovery.
+**Critical qualification:** Food waste total is not wholly addressable.
+**Evidence status:** HYPOTHESIS; full TheoryEquationContract NOT COMPLETE; strong-baseline test NOT RUN; literature novelty NOT CERTIFIED; real-world validation NOT DONE.
+
+### 03 — Industrial waste heat
+**Projection gap to test:** Time-temperature-grade and network matching.
+**Strong modern comparator:** Pinch analysis, exergy optimization, heat-storage dispatch.
+**Proposed experiment:** Measure the stated missing variables directly where possible, construct matched aggregate states with contrasting local histories or topology, then compare out-of-sample outcomes under matched parameter and computational budgets. A domain-specific preregistration must supply signed predictions, primary endpoint, sample-size/power calculation, units, error tolerance and falsifiers before testing. This is a study design, not a completed experiment.
+**Conditional economic benefit:** Fuel and heat costs. Formula: affected cost base × verified incremental gain × practical adoption − implementation cost; no numerical incremental saving has been established.
+**Earliest controlled test:** 6–24 mo (scenario); experimental tractability high, not probability of discovery.
+**Critical qualification:** Do not equate theoretical heat resource with realizable savings.
+**Evidence status:** HYPOTHESIS; full TheoryEquationContract NOT COMPLETE; strong-baseline test NOT RUN; literature novelty NOT CERTIFIED; real-world validation NOT DONE.
+
+### 04 — Water distribution
+**Projection gap to test:** Pressure transient and deterioration-network memory.
+**Strong modern comparator:** Hydraulic digital twins, leak detection, pressure management.
+**Proposed experiment:** Measure the stated missing variables directly where possible, construct matched aggregate states with contrasting local histories or topology, then compare out-of-sample outcomes under matched parameter and computational budgets. A domain-specific preregistration must supply signed predictions, primary endpoint, sample-size/power calculation, units, error tolerance and falsifiers before testing. This is a study design, not a completed experiment.
+**Conditional economic benefit:** Water and pumping losses. Formula: affected cost base × verified incremental gain × practical adoption − implementation cost; no numerical incremental saving has been established.
+**Earliest controlled test:** 6–18 mo (scenario); experimental tractability high, not probability of discovery.
+**Critical qualification:** Commercial non-revenue water is not all physical leakage.
+**Evidence status:** HYPOTHESIS; full TheoryEquationContract NOT COMPLETE; strong-baseline test NOT RUN; literature novelty NOT CERTIFIED; real-world validation NOT DONE.
+
+### 05 — Industrial membrane separation
+**Projection gap to test:** Fouling state and local concentration polarization.
+**Strong modern comparator:** Multiphysics membrane fouling and optimal cleaning.
+**Proposed experiment:** Measure the stated missing variables directly where possible, construct matched aggregate states with contrasting local histories or topology, then compare out-of-sample outcomes under matched parameter and computational budgets. A domain-specific preregistration must supply signed predictions, primary endpoint, sample-size/power calculation, units, error tolerance and falsifiers before testing. This is a study design, not a completed experiment.
+**Conditional economic benefit:** Energy and membrane life. Formula: affected cost base × verified incremental gain × practical adoption − implementation cost; no numerical incremental saving has been established.
+**Earliest controlled test:** 6–18 mo (scenario); experimental tractability high, not probability of discovery.
+**Critical qualification:** Must outperform existing adaptive cleaning.
+**Evidence status:** HYPOTHESIS; full TheoryEquationContract NOT COMPLETE; strong-baseline test NOT RUN; literature novelty NOT CERTIFIED; real-world validation NOT DONE.
+
+### 06 — Cold-chain refrigeration
+**Projection gap to test:** Thermal inertia, humidity, compressor switching.
+**Strong modern comparator:** Model-predictive refrigeration and demand response.
+**Proposed experiment:** Measure the stated missing variables directly where possible, construct matched aggregate states with contrasting local histories or topology, then compare out-of-sample outcomes under matched parameter and computational budgets. A domain-specific preregistration must supply signed predictions, primary endpoint, sample-size/power calculation, units, error tolerance and falsifiers before testing. This is a study design, not a completed experiment.
+**Conditional economic benefit:** Energy and food quality. Formula: affected cost base × verified incremental gain × practical adoption − implementation cost; no numerical incremental saving has been established.
+**Earliest controlled test:** 3–12 mo (scenario); experimental tractability high, not probability of discovery.
+**Critical qualification:** Overlaps food preservation; count benefit once.
+**Evidence status:** HYPOTHESIS; full TheoryEquationContract NOT COMPLETE; strong-baseline test NOT RUN; literature novelty NOT CERTIFIED; real-world validation NOT DONE.
+
+### 07 — Methane leak detection
+**Projection gap to test:** Intermittent emissions with plume and sensor uncertainty.
+**Strong modern comparator:** Atmospheric inversion and probabilistic leak localization.
+**Proposed experiment:** Measure the stated missing variables directly where possible, construct matched aggregate states with contrasting local histories or topology, then compare out-of-sample outcomes under matched parameter and computational budgets. A domain-specific preregistration must supply signed predictions, primary endpoint, sample-size/power calculation, units, error tolerance and falsifiers before testing. This is a study design, not a completed experiment.
+**Conditional economic benefit:** Recovered gas and avoided emissions. Formula: affected cost base × verified incremental gain × practical adoption − implementation cost; no numerical incremental saving has been established.
+**Earliest controlled test:** 3–12 mo (scenario); experimental tractability high, not probability of discovery.
+**Critical qualification:** Avoid counting carbon and gas benefits twice.
+**Evidence status:** HYPOTHESIS; full TheoryEquationContract NOT COMPLETE; strong-baseline test NOT RUN; literature novelty NOT CERTIFIED; real-world validation NOT DONE.
+
+### 08 — Cement kiln efficiency
+**Projection gap to test:** Particle thermal histories and calcination reaction gradients.
+**Strong modern comparator:** Kiln CFD and process control.
+**Proposed experiment:** Measure the stated missing variables directly where possible, construct matched aggregate states with contrasting local histories or topology, then compare out-of-sample outcomes under matched parameter and computational budgets. A domain-specific preregistration must supply signed predictions, primary endpoint, sample-size/power calculation, units, error tolerance and falsifiers before testing. This is a study design, not a completed experiment.
+**Conditional economic benefit:** Fuel and reject reduction. Formula: affected cost base × verified incremental gain × practical adoption − implementation cost; no numerical incremental saving has been established.
+**Earliest controlled test:** 6–24 mo (scenario); experimental tractability medium, not probability of discovery.
+**Critical qualification:** Separate efficiency from carbon capture.
+**Evidence status:** HYPOTHESIS; full TheoryEquationContract NOT COMPLETE; strong-baseline test NOT RUN; literature novelty NOT CERTIFIED; real-world validation NOT DONE.
+
+### 09 — Fertilizer efficiency
+**Projection gap to test:** Soil N transport, microbial state, rainfall history.
+**Strong modern comparator:** Reactive transport and precision nutrient management.
+**Proposed experiment:** Measure the stated missing variables directly where possible, construct matched aggregate states with contrasting local histories or topology, then compare out-of-sample outcomes under matched parameter and computational budgets. A domain-specific preregistration must supply signed predictions, primary endpoint, sample-size/power calculation, units, error tolerance and falsifiers before testing. This is a study design, not a completed experiment.
+**Conditional economic benefit:** Yield and fertilizer savings. Formula: affected cost base × verified incremental gain × practical adoption − implementation cost; no numerical incremental saving has been established.
+**Earliest controlled test:** 1–3 yr (scenario); experimental tractability medium, not probability of discovery.
+**Critical qualification:** Field-season replication required.
+**Evidence status:** HYPOTHESIS; full TheoryEquationContract NOT COMPLETE; strong-baseline test NOT RUN; literature novelty NOT CERTIFIED; real-world validation NOT DONE.
+
+### 10 — Grid congestion optimization
+**Projection gap to test:** Correlated flows, topology, storage and constraints.
+**Strong modern comparator:** AC optimal power flow, stochastic unit commitment.
+**Proposed experiment:** Measure the stated missing variables directly where possible, construct matched aggregate states with contrasting local histories or topology, then compare out-of-sample outcomes under matched parameter and computational budgets. A domain-specific preregistration must supply signed predictions, primary endpoint, sample-size/power calculation, units, error tolerance and falsifiers before testing. This is a study design, not a completed experiment.
+**Conditional economic benefit:** Congestion and curtailment. Formula: affected cost base × verified incremental gain × practical adoption − implementation cost; no numerical incremental saving has been established.
+**Earliest controlled test:** 6–24 mo (scenario); experimental tractability high, not probability of discovery.
+**Critical qualification:** Overlaps dynamic line rating.
+**Evidence status:** HYPOTHESIS; full TheoryEquationContract NOT COMPLETE; strong-baseline test NOT RUN; literature novelty NOT CERTIFIED; real-world validation NOT DONE.
+
+### 11 — Mining processing
+**Projection gap to test:** Ore texture/fracture and liberation distributions.
+**Strong modern comparator:** Comminution digital twins and mineral separation.
+**Proposed experiment:** Measure the stated missing variables directly where possible, construct matched aggregate states with contrasting local histories or topology, then compare out-of-sample outcomes under matched parameter and computational budgets. A domain-specific preregistration must supply signed predictions, primary endpoint, sample-size/power calculation, units, error tolerance and falsifiers before testing. This is a study design, not a completed experiment.
+**Conditional economic benefit:** Energy and recovery. Formula: affected cost base × verified incremental gain × practical adoption − implementation cost; no numerical incremental saving has been established.
+**Earliest controlled test:** 6–24 mo (scenario); experimental tractability medium, not probability of discovery.
+**Critical qualification:** Ore variability must be held out.
+**Evidence status:** HYPOTHESIS; full TheoryEquationContract NOT COMPLETE; strong-baseline test NOT RUN; literature novelty NOT CERTIFIED; real-world validation NOT DONE.
+
+### 12 — Building cooling
+**Projection gap to test:** Thermal mass, humidity and occupancy lag.
+**Strong modern comparator:** Building MPC and calibrated energy models.
+**Proposed experiment:** Measure the stated missing variables directly where possible, construct matched aggregate states with contrasting local histories or topology, then compare out-of-sample outcomes under matched parameter and computational budgets. A domain-specific preregistration must supply signed predictions, primary endpoint, sample-size/power calculation, units, error tolerance and falsifiers before testing. This is a study design, not a completed experiment.
+**Conditional economic benefit:** Electricity and comfort. Formula: affected cost base × verified incremental gain × practical adoption − implementation cost; no numerical incremental saving has been established.
+**Earliest controlled test:** 3–12 mo (scenario); experimental tractability high, not probability of discovery.
+**Critical qualification:** Overlaps data-center cooling only partly.
+**Evidence status:** HYPOTHESIS; full TheoryEquationContract NOT COMPLETE; strong-baseline test NOT RUN; literature novelty NOT CERTIFIED; real-world validation NOT DONE.
+
+### 13 — Dynamic transmission line rating
+**Projection gap to test:** Conductor thermal memory and span-wise weather fields.
+**Strong modern comparator:** IEEE/CIGRE dynamic line rating and thermal state estimation.
+**Proposed experiment:** Measure the stated missing variables directly where possible, construct matched aggregate states with contrasting local histories or topology, then compare out-of-sample outcomes under matched parameter and computational budgets. A domain-specific preregistration must supply signed predictions, primary endpoint, sample-size/power calculation, units, error tolerance and falsifiers before testing. This is a study design, not a completed experiment.
+**Conditional economic benefit:** Congestion, capacity and deferred construction. Formula: affected cost base × verified incremental gain × practical adoption − implementation cost; no numerical incremental saving has been established.
+**Earliest controlled test:** 6–24 mo (scenario); experimental tractability high, not probability of discovery.
+**Critical qualification:** 15–30% capacity is a site-specific hypothesis, not guaranteed.
+**Evidence status:** HYPOTHESIS; full TheoryEquationContract NOT COMPLETE; strong-baseline test NOT RUN; literature novelty NOT CERTIFIED; real-world validation NOT DONE.
+
+### 14 — Biopharma bioreactor yield
+**Projection gap to test:** Local shear/oxygen distribution and metabolic lag.
+**Strong modern comparator:** CFD-population balance and cell-culture kinetic models.
+**Proposed experiment:** Measure the stated missing variables directly where possible, construct matched aggregate states with contrasting local histories or topology, then compare out-of-sample outcomes under matched parameter and computational budgets. A domain-specific preregistration must supply signed predictions, primary endpoint, sample-size/power calculation, units, error tolerance and falsifiers before testing. This is a study design, not a completed experiment.
+**Conditional economic benefit:** Batch yield and reduced failures. Formula: affected cost base × verified incremental gain × practical adoption − implementation cost; no numerical incremental saving has been established.
+**Earliest controlled test:** 1–5 yr (scenario); experimental tractability medium, not probability of discovery.
+**Critical qualification:** 10L-to-2000L+ qualification and product-specific risks.
+**Evidence status:** HYPOTHESIS; full TheoryEquationContract NOT COMPLETE; strong-baseline test NOT RUN; literature novelty NOT CERTIFIED; real-world validation NOT DONE.
+
+### 15 — Metal additive manufacturing
+**Projection gap to test:** Melt-pool thermal cycles, grain topology and residual stress.
+**Strong modern comparator:** Thermo-mechanical LPBF and microstructure models.
+**Proposed experiment:** Measure the stated missing variables directly where possible, construct matched aggregate states with contrasting local histories or topology, then compare out-of-sample outcomes under matched parameter and computational budgets. A domain-specific preregistration must supply signed predictions, primary endpoint, sample-size/power calculation, units, error tolerance and falsifiers before testing. This is a study design, not a completed experiment.
+**Conditional economic benefit:** Lower rejection and rework. Formula: affected cost base × verified incremental gain × practical adoption − implementation cost; no numerical incremental saving has been established.
+**Earliest controlled test:** 1–4 yr (scenario); experimental tractability medium, not probability of discovery.
+**Critical qualification:** Rosenthal is not modern strongest baseline.
+**Evidence status:** HYPOTHESIS; full TheoryEquationContract NOT COMPLETE; strong-baseline test NOT RUN; literature novelty NOT CERTIFIED; real-world validation NOT DONE.
+
+### 16 — Direct air capture
+**Projection gap to test:** Water/CO2 coadsorption hysteresis and pore-network aging.
+**Strong modern comparator:** Competitive adsorption and transient sorbent-cycle models.
+**Proposed experiment:** Measure the stated missing variables directly where possible, construct matched aggregate states with contrasting local histories or topology, then compare out-of-sample outcomes under matched parameter and computational budgets. A domain-specific preregistration must supply signed predictions, primary endpoint, sample-size/power calculation, units, error tolerance and falsifiers before testing. This is a study design, not a completed experiment.
+**Conditional economic benefit:** Lower regeneration energy and sorbent replacement. Formula: affected cost base × verified incremental gain × practical adoption − implementation cost; no numerical incremental saving has been established.
+**Earliest controlled test:** 1–5 yr (scenario); experimental tractability medium, not probability of discovery.
+**Critical qualification:** $100/t is an aspiration; no trillion-dollar market established.
+**Evidence status:** HYPOTHESIS; full TheoryEquationContract NOT COMPLETE; strong-baseline test NOT RUN; literature novelty NOT CERTIFIED; real-world validation NOT DONE.
+
+### 17 — Corrosion prevention
+**Projection gap to test:** Coating defects, electrochemistry and stress/flow histories.
+**Strong modern comparator:** Corrosion risk digital twins and physics-based monitoring.
+**Proposed experiment:** Measure the stated missing variables directly where possible, construct matched aggregate states with contrasting local histories or topology, then compare out-of-sample outcomes under matched parameter and computational budgets. A domain-specific preregistration must supply signed predictions, primary endpoint, sample-size/power calculation, units, error tolerance and falsifiers before testing. This is a study design, not a completed experiment.
+**Conditional economic benefit:** Avoided maintenance and failures. Formula: affected cost base × verified incremental gain × practical adoption − implementation cost; no numerical incremental saving has been established.
+**Earliest controlled test:** 1–5 yr (scenario); experimental tractability high, not probability of discovery.
+**Critical qualification:** $2.5T corrosion cost and 35% avoidable are external estimates, not incremental gain.
+**Evidence status:** HYPOTHESIS; full TheoryEquationContract NOT COMPLETE; strong-baseline test NOT RUN; literature novelty NOT CERTIFIED; real-world validation NOT DONE.
+
+### 18 — Healthcare diagnostic error
+**Projection gap to test:** Longitudinal evidence, uncertainty, workflow and escalation.
+**Strong modern comparator:** Validated diagnostic decision support and clinical trials.
+**Proposed experiment:** Measure the stated missing variables directly where possible, construct matched aggregate states with contrasting local histories or topology, then compare out-of-sample outcomes under matched parameter and computational budgets. A domain-specific preregistration must supply signed predictions, primary endpoint, sample-size/power calculation, units, error tolerance and falsifiers before testing. This is a study design, not a completed experiment.
+**Conditional economic benefit:** Avoidable patient harm and care costs. Formula: affected cost base × verified incremental gain × practical adoption − implementation cost; no numerical incremental saving has been established.
+**Earliest controlled test:** 2–7 yr (scenario); experimental tractability medium, not probability of discovery.
+**Critical qualification:** $870B estimate is unverified and not attributable to AI.
+**Evidence status:** HYPOTHESIS; full TheoryEquationContract NOT COMPLETE; strong-baseline test NOT RUN; literature novelty NOT CERTIFIED; real-world validation NOT DONE.
+
+### 19 — Drug discovery
+**Projection gap to test:** Assay uncertainty, synthesis feasibility and distribution shift.
+**Strong modern comparator:** Modern structure-based and experimental active learning.
+**Proposed experiment:** Measure the stated missing variables directly where possible, construct matched aggregate states with contrasting local histories or topology, then compare out-of-sample outcomes under matched parameter and computational budgets. A domain-specific preregistration must supply signed predictions, primary endpoint, sample-size/power calculation, units, error tolerance and falsifiers before testing. This is a study design, not a completed experiment.
+**Conditional economic benefit:** Lower R&D cost per successful therapy. Formula: affected cost base × verified incremental gain × practical adoption − implementation cost; no numerical incremental saving has been established.
+**Earliest controlled test:** 1–7 yr (scenario); experimental tractability medium, not probability of discovery.
+**Critical qualification:** Computational speedups do not equal drug development savings.
+**Evidence status:** HYPOTHESIS; full TheoryEquationContract NOT COMPLETE; strong-baseline test NOT RUN; literature novelty NOT CERTIFIED; real-world validation NOT DONE.
+
+### 20 — Grid transmission losses
+**Projection gap to test:** Electrical topology, reactive flow, conductor state.
+**Strong modern comparator:** AC power flow, HVDC planning, loss optimization.
+**Proposed experiment:** Measure the stated missing variables directly where possible, construct matched aggregate states with contrasting local histories or topology, then compare out-of-sample outcomes under matched parameter and computational budgets. A domain-specific preregistration must supply signed predictions, primary endpoint, sample-size/power calculation, units, error tolerance and falsifiers before testing. This is a study design, not a completed experiment.
+**Conditional economic benefit:** Reduced electrical losses. Formula: affected cost base × verified incremental gain × practical adoption − implementation cost; no numerical incremental saving has been established.
+**Earliest controlled test:** 1–5 yr (scenario); experimental tractability medium, not probability of discovery.
+**Critical qualification:** Distinct from congestion and DLR; avoid overlap.
+**Evidence status:** HYPOTHESIS; full TheoryEquationContract NOT COMPLETE; strong-baseline test NOT RUN; literature novelty NOT CERTIFIED; real-world validation NOT DONE.
+
+### 21 — Mining haulage efficiency
+**Projection gap to test:** Haul cycles, terrain, state-of-charge and dispatch.
+**Strong modern comparator:** Fleet routing and hybrid/electric haul optimization.
+**Proposed experiment:** Measure the stated missing variables directly where possible, construct matched aggregate states with contrasting local histories or topology, then compare out-of-sample outcomes under matched parameter and computational budgets. A domain-specific preregistration must supply signed predictions, primary endpoint, sample-size/power calculation, units, error tolerance and falsifiers before testing. This is a study design, not a completed experiment.
+**Conditional economic benefit:** Fuel and maintenance. Formula: affected cost base × verified incremental gain × practical adoption − implementation cost; no numerical incremental saving has been established.
+**Earliest controlled test:** 1–4 yr (scenario); experimental tractability high, not probability of discovery.
+**Critical qualification:** Electrification savings already studied.
+**Evidence status:** HYPOTHESIS; full TheoryEquationContract NOT COMPLETE; strong-baseline test NOT RUN; literature novelty NOT CERTIFIED; real-world validation NOT DONE.
+
+### 22 — Water treatment energy
+**Projection gap to test:** Membrane state, feed salinity, pressure recovery.
+**Strong modern comparator:** Modern reverse osmosis energy-recovery and MPC.
+**Proposed experiment:** Measure the stated missing variables directly where possible, construct matched aggregate states with contrasting local histories or topology, then compare out-of-sample outcomes under matched parameter and computational budgets. A domain-specific preregistration must supply signed predictions, primary endpoint, sample-size/power calculation, units, error tolerance and falsifiers before testing. This is a study design, not a completed experiment.
+**Conditional economic benefit:** Electricity and water cost. Formula: affected cost base × verified incremental gain × practical adoption − implementation cost; no numerical incremental saving has been established.
+**Earliest controlled test:** 1–4 yr (scenario); experimental tractability high, not probability of discovery.
+**Critical qualification:** RO-PRO claims need site-specific energy accounting.
+**Evidence status:** HYPOTHESIS; full TheoryEquationContract NOT COMPLETE; strong-baseline test NOT RUN; literature novelty NOT CERTIFIED; real-world validation NOT DONE.
+
+### 23 — Semiconductor fab energy
+**Projection gap to test:** Tool-level thermal states and facility utility timing.
+**Strong modern comparator:** Fab digital twins, lithography scheduling and cooling optimization.
+**Proposed experiment:** Measure the stated missing variables directly where possible, construct matched aggregate states with contrasting local histories or topology, then compare out-of-sample outcomes under matched parameter and computational budgets. A domain-specific preregistration must supply signed predictions, primary endpoint, sample-size/power calculation, units, error tolerance and falsifiers before testing. This is a study design, not a completed experiment.
+**Conditional economic benefit:** Electricity and throughput. Formula: affected cost base × verified incremental gain × practical adoption − implementation cost; no numerical incremental saving has been established.
+**Earliest controlled test:** 1–4 yr (scenario); experimental tractability high, not probability of discovery.
+**Critical qualification:** cuLitho mask compute claims not directly fab-wide savings.
+**Evidence status:** HYPOTHESIS; full TheoryEquationContract NOT COMPLETE; strong-baseline test NOT RUN; literature novelty NOT CERTIFIED; real-world validation NOT DONE.
+
+### 24 — Agricultural climate yield loss
+**Projection gap to test:** Heat stress timing, water/nutrient state and cultivar response.
+**Strong modern comparator:** Crop process models and breeding trials.
+**Proposed experiment:** Measure the stated missing variables directly where possible, construct matched aggregate states with contrasting local histories or topology, then compare out-of-sample outcomes under matched parameter and computational budgets. A domain-specific preregistration must supply signed predictions, primary endpoint, sample-size/power calculation, units, error tolerance and falsifiers before testing. This is a study design, not a completed experiment.
+**Conditional economic benefit:** Avoided crop losses. Formula: affected cost base × verified incremental gain × practical adoption − implementation cost; no numerical incremental saving has been established.
+**Earliest controlled test:** 2–10 yr (scenario); experimental tractability medium, not probability of discovery.
+**Critical qualification:** Yield-loss statistics are not Garden benefit.
+**Evidence status:** HYPOTHESIS; full TheoryEquationContract NOT COMPLETE; strong-baseline test NOT RUN; literature novelty NOT CERTIFIED; real-world validation NOT DONE.
+
+### 25 — Aviation fuel efficiency
+**Projection gap to test:** Weather, routing, wake, aircraft state and operations.
+**Strong modern comparator:** Flight planning and fleet operations optimization.
+**Proposed experiment:** Measure the stated missing variables directly where possible, construct matched aggregate states with contrasting local histories or topology, then compare out-of-sample outcomes under matched parameter and computational budgets. A domain-specific preregistration must supply signed predictions, primary endpoint, sample-size/power calculation, units, error tolerance and falsifiers before testing. This is a study design, not a completed experiment.
+**Conditional economic benefit:** Fuel burn. Formula: affected cost base × verified incremental gain × practical adoption − implementation cost; no numerical incremental saving has been established.
+**Earliest controlled test:** 1–6 yr (scenario); experimental tractability medium, not probability of discovery.
+**Critical qualification:** Formation flight certification distinct from software routing.
+**Evidence status:** HYPOTHESIS; full TheoryEquationContract NOT COMPLETE; strong-baseline test NOT RUN; literature novelty NOT CERTIFIED; real-world validation NOT DONE.
+
+### 26 — Shipping fuel efficiency
+**Projection gap to test:** Hull fouling, wind assistance, route/weather state.
+**Strong modern comparator:** Voyage optimization, wind assist and hull monitoring.
+**Proposed experiment:** Measure the stated missing variables directly where possible, construct matched aggregate states with contrasting local histories or topology, then compare out-of-sample outcomes under matched parameter and computational budgets. A domain-specific preregistration must supply signed predictions, primary endpoint, sample-size/power calculation, units, error tolerance and falsifiers before testing. This is a study design, not a completed experiment.
+**Conditional economic benefit:** Fuel burn. Formula: affected cost base × verified incremental gain × practical adoption − implementation cost; no numerical incremental saving has been established.
+**Earliest controlled test:** 1–6 yr (scenario); experimental tractability high, not probability of discovery.
+**Critical qualification:** Overlaps shipping decarbonization benefits.
+**Evidence status:** HYPOTHESIS; full TheoryEquationContract NOT COMPLETE; strong-baseline test NOT RUN; literature novelty NOT CERTIFIED; real-world validation NOT DONE.
+
+### 27 — Steel energy and carbon
+**Projection gap to test:** Ore quality, furnace thermal profile and reduction kinetics.
+**Strong modern comparator:** Plant energy integration, DRI and electric furnace models.
+**Proposed experiment:** Measure the stated missing variables directly where possible, construct matched aggregate states with contrasting local histories or topology, then compare out-of-sample outcomes under matched parameter and computational budgets. A domain-specific preregistration must supply signed predictions, primary endpoint, sample-size/power calculation, units, error tolerance and falsifiers before testing. This is a study design, not a completed experiment.
+**Conditional economic benefit:** Fuel and emissions. Formula: affected cost base × verified incremental gain × practical adoption − implementation cost; no numerical incremental saving has been established.
+**Earliest controlled test:** 2–10 yr (scenario); experimental tractability medium, not probability of discovery.
+**Critical qualification:** Hydrogen routes may increase near-term cost.
+**Evidence status:** HYPOTHESIS; full TheoryEquationContract NOT COMPLETE; strong-baseline test NOT RUN; literature novelty NOT CERTIFIED; real-world validation NOT DONE.
+
+### 28 — Cement carbon capture
+**Projection gap to test:** Flue composition, solvent state and heat integration.
+**Strong modern comparator:** Capture process optimization and clinker substitution.
+**Proposed experiment:** Measure the stated missing variables directly where possible, construct matched aggregate states with contrasting local histories or topology, then compare out-of-sample outcomes under matched parameter and computational budgets. A domain-specific preregistration must supply signed predictions, primary endpoint, sample-size/power calculation, units, error tolerance and falsifiers before testing. This is a study design, not a completed experiment.
+**Conditional economic benefit:** Avoided emissions and energy. Formula: affected cost base × verified incremental gain × practical adoption − implementation cost; no numerical incremental saving has been established.
+**Earliest controlled test:** 2–10 yr (scenario); experimental tractability medium, not probability of discovery.
+**Critical qualification:** Carbon price savings depend on policy.
+**Evidence status:** HYPOTHESIS; full TheoryEquationContract NOT COMPLETE; strong-baseline test NOT RUN; literature novelty NOT CERTIFIED; real-world validation NOT DONE.
+
+### 29 — Construction material reuse
+**Projection gap to test:** Quality uncertainty, structural grading and logistics topology.
+**Strong modern comparator:** Life-cycle assessment and structural reuse certification.
+**Proposed experiment:** Measure the stated missing variables directly where possible, construct matched aggregate states with contrasting local histories or topology, then compare out-of-sample outcomes under matched parameter and computational budgets. A domain-specific preregistration must supply signed predictions, primary endpoint, sample-size/power calculation, units, error tolerance and falsifiers before testing. This is a study design, not a completed experiment.
+**Conditional economic benefit:** Material and disposal costs. Formula: affected cost base × verified incremental gain × practical adoption − implementation cost; no numerical incremental saving has been established.
+**Earliest controlled test:** 1–7 yr (scenario); experimental tractability medium, not probability of discovery.
+**Critical qualification:** Single-case reused-wood percentages do not generalize.
+**Evidence status:** HYPOTHESIS; full TheoryEquationContract NOT COMPLETE; strong-baseline test NOT RUN; literature novelty NOT CERTIFIED; real-world validation NOT DONE.
+
+### 30 — Textile recycling
+**Projection gap to test:** Fiber blend identification, degradation and sorting dynamics.
+**Strong modern comparator:** NIR sorting and mechanical/chemical recycling models.
+**Proposed experiment:** Measure the stated missing variables directly where possible, construct matched aggregate states with contrasting local histories or topology, then compare out-of-sample outcomes under matched parameter and computational budgets. A domain-specific preregistration must supply signed predictions, primary endpoint, sample-size/power calculation, units, error tolerance and falsifiers before testing. This is a study design, not a completed experiment.
+**Conditional economic benefit:** Recovered material and avoided disposal. Formula: affected cost base × verified incremental gain × practical adoption − implementation cost; no numerical incremental saving has been established.
+**Earliest controlled test:** 1–7 yr (scenario); experimental tractability medium, not probability of discovery.
+**Critical qualification:** Textile waste tonnage not equal economic savings.
+**Evidence status:** HYPOTHESIS; full TheoryEquationContract NOT COMPLETE; strong-baseline test NOT RUN; literature novelty NOT CERTIFIED; real-world validation NOT DONE.
+
+### 31 — Data-center cooling
+**Projection gap to test:** Chip heat flux, coolant dynamics and facility power state.
+**Strong modern comparator:** Liquid cooling, CFD and facility MPC.
+**Proposed experiment:** Measure the stated missing variables directly where possible, construct matched aggregate states with contrasting local histories or topology, then compare out-of-sample outcomes under matched parameter and computational budgets. A domain-specific preregistration must supply signed predictions, primary endpoint, sample-size/power calculation, units, error tolerance and falsifiers before testing. This is a study design, not a completed experiment.
+**Conditional economic benefit:** Electricity and capital utilization. Formula: affected cost base × verified incremental gain × practical adoption − implementation cost; no numerical incremental saving has been established.
+**Earliest controlled test:** 6–36 mo (scenario); experimental tractability high, not probability of discovery.
+**Critical qualification:** Reported 40–48% and 75% savings are context-specific, unverified here.
+**Evidence status:** HYPOTHESIS; full TheoryEquationContract NOT COMPLETE; strong-baseline test NOT RUN; literature novelty NOT CERTIFIED; real-world validation NOT DONE.
+
+### 32 — Soil carbon verification
+**Projection gap to test:** Mineral accessibility, wet/dry microbial memory.
+**Strong modern comparator:** Soil carbon process models and MRV protocols.
+**Proposed experiment:** Measure the stated missing variables directly where possible, construct matched aggregate states with contrasting local histories or topology, then compare out-of-sample outcomes under matched parameter and computational budgets. A domain-specific preregistration must supply signed predictions, primary endpoint, sample-size/power calculation, units, error tolerance and falsifiers before testing. This is a study design, not a completed experiment.
+**Conditional economic benefit:** Cheaper credible carbon measurement. Formula: affected cost base × verified incremental gain × practical adoption − implementation cost; no numerical incremental saving has been established.
+**Earliest controlled test:** 1–5 yr (scenario); experimental tractability medium, not probability of discovery.
+**Critical qualification:** Requires field verification and permanence controls.
+**Evidence status:** HYPOTHESIS; full TheoryEquationContract NOT COMPLETE; strong-baseline test NOT RUN; literature novelty NOT CERTIFIED; real-world validation NOT DONE.
+
+### 33 — Precision chemical reactors
+**Projection gap to test:** Intermediate populations and feed pulse histories.
+**Strong modern comparator:** Detailed reaction kinetics and real-time spectroscopy.
+**Proposed experiment:** Measure the stated missing variables directly where possible, construct matched aggregate states with contrasting local histories or topology, then compare out-of-sample outcomes under matched parameter and computational budgets. A domain-specific preregistration must supply signed predictions, primary endpoint, sample-size/power calculation, units, error tolerance and falsifiers before testing. This is a study design, not a completed experiment.
+**Conditional economic benefit:** Higher conversion/selectivity. Formula: affected cost base × verified incremental gain × practical adoption − implementation cost; no numerical incremental saving has been established.
+**Earliest controlled test:** 6–24 mo (scenario); experimental tractability high, not probability of discovery.
+**Critical qualification:** Overlaps general membrane/process efficiency in some plants.
+**Evidence status:** HYPOTHESIS; full TheoryEquationContract NOT COMPLETE; strong-baseline test NOT RUN; literature novelty NOT CERTIFIED; real-world validation NOT DONE.
+
+## Four requested technical proposals — special constraints
+- Dynamic line rating: existing real-time thermal line rating is an established field; demonstrate improvement over deployed DLR/forecasting, not static ratings alone. Span-wise wind covariance may matter, but do not presume a free 15–30% capacity increase.
+- Bioreactors: modern CFD and process analytical technology already model gradients. A batch failure may have major indirect cost, but 5–10× material write-off is not validated as a universal multiplier.
+- Additive manufacturing: Rosenthal-type models are not state of the art; benchmark against modern melt-pool and microstructure prediction. Destructive qualification and material-specific standards are essential.
+- Direct air capture: competitive humidity adsorption and hysteresis are researched. A hypothetical $100/ton capture cost does not create a proven trillion-dollar industry.
+
+## Prioritization
+Fastest measurable pilot: motor optimization, refrigeration, industrial heat, methane leak detection, membrane operations, building cooling and data-center cooling.
+High impact but access-limited: dynamic line rating, semiconductor fab optimization, industrial bioreactors and macroeconomic payment networks.
+Long qualification: health diagnostics, drug discovery, aerospace additive manufacturing, steel decarbonization, DAC, agricultural resilience.
+Highest priority for *discovery-method evaluation*: choose one problem with raw observations, modern benchmark, hidden mechanism not given to the model, and a blind holdout. Run an independent conventional discovery baseline and Garden under equal budget. This is still pending.
+
+## Verification ledger
+New discovery proved: 0. Empirically validated incremental benefits: 0. Strong-baseline benchmark comparisons for these 33: 0. Literature novelty reviews completed: 0. Cross-domain Garden advantage demonstrated: NO. Existing Candidate 026 synthetic thermal experiment remains an engineering test, not evidence of new physics. This register is an additive scientific research artifact; Garden core and canonical sources remain unchanged.
+
