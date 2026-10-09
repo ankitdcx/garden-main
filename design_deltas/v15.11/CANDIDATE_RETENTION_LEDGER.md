@@ -57,3 +57,14 @@ For every candidate: recover exact source/problem/intent; compare with the curre
 ## 2026-10-09 reconciliation
 
 **Current package reconciliation (2026-10-09):** Full retained candidate packages: `rcc/`, `rep/`, `shr/`, `erc/`, `vei/`. Retained candidate package: `rev2/`. Full candidate source files: `GARDEN_MCC_001_CANDIDATE.md`, `GARDEN_USM_001_CANDIDATE.md`, `GARDEN_v15.11_TRANSITION_AND_RESPONSIBILITY_CANDIDATE.md` (flat path intentionally retained). Protocol candidate: `MODEL_CAPABILITY_COMPARISON_CANDIDATE_2026-10-05.md` (not automatic reviewer qualification or admission evidence). Supporting projection: `GARDEN_TECHNICAL_v15.11_REVIEW_PROJECTION_2026-09-20.txt`. Entries in `RECOVERED_TECHNICAL_CANDIDATE_DIRECTIONS.md` lacking full source remain `DIRECTION_ONLY`. Earlier ERC/VEI direction entries are historical, not their current package status. Source retention is not proof, implementation, validation, certification or canonical admission.
+
+## First-class retained source index (explicit)
+
+| Candidate | Exact retained source | Status |
+|---|---|---|
+| MCC-001 — Material Context Closure | [GARDEN_MCC_001_CANDIDATE.md](GARDEN_MCC_001_CANDIDATE.md) | Noncanonical candidate; independently qualified admission pending |
+| USM-001 — Universal Situation Mapping | [GARDEN_USM_001_CANDIDATE.md](GARDEN_USM_001_CANDIDATE.md) | Noncanonical candidate; independently qualified admission pending |
+| Coupled Transitions and Responsibility Preservation | [GARDEN_v15.11_TRANSITION_AND_RESPONSIBILITY_CANDIDATE.md](GARDEN_v15.11_TRANSITION_AND_RESPONSIBILITY_CANDIDATE.md) | Noncanonical candidate; distinct from broader TRN-001 staged-migration direction |
+| V1511-KR-001 — Continuous Epistemic Assimilation | [cea/README.md](cea/README.md) | New candidate package; not canonically admitted |
+
+These are retained **sources**, not merely directions; their exact implementation and certification remain separately unverified.
