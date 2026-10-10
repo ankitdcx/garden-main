@@ -9125,13 +9125,221 @@ GCSC detailed 37668b17f843428ece0466b92484fb656d8c5d1faa049a6be88db506437ac564
 RSDC 4feeb061748033c5e2bf3d83c25041093c5b06b0add7841fad6e33af690f86d4
 
 
-14. ONE-CLAIM COMPUTING FOLLOW-UP — WORKSTREAM INTENT (2026-10-10)
 
-Status: NONCANONICAL / PRIOR_ART_AND_PROTOCOL_IN_PROGRESS.
-Bounded scope: investigate exact finite-support nonlinear contractions in
-DAGPA's differentiable unreachability update, including distinct per-edge
-gradients. Baseline: PurdueMINDS/DAGPA at
-053bac751b15404902f69f608b5ab207f9aa5edc. No experiment has been run for this
-claim. No novelty, performance, economic or admission gate has passed.
-Only this consolidated TXT will change. Runtime files remain outside the
-repository. Prior chapters and canonical Garden sources remain preserved.
+14. ONE-CLAIM COMPUTING EXPERIMENT — FINITE-SUPPORT CONTRACTIONS
+Research ID: SCI-PALETTE-20261010. Status: NONCANONICAL / PROTOCOL_FROZEN.
+Date: 2026-10-10. No experimental output inspected at this freeze.
+
+14.1 Problem lock and hostile comparison
+
+Decision: choose an exact implementation for DAGPA's negative Bellman-Ford
+update when its sampled edge logits have finite support. Objective: lower CPU
+time per correct forward-and-backward evaluation, including palette discovery
+and masks. GPU, full training, dollars and scientific discovery remain UNKNOWN.
+
+Named baseline: PurdueMINDS/DAGPA, commit
+053bac751b15404902f69f608b5ab207f9aa5edc, dagpa.py blob
+10b8c74d15c7d412a9ad96e739731acf47564cba.
+The inspected _bellman_ford_neg constructs a [u,x,v,2] array, applies a
+two-argument smooth OR, averages over x, and adds the old state. Its discrete
+sampler uses configurable support logits; the published README example has
+[-2,0,2]. A zero mask adds a fourth distinct edge-complement log value.
+These are facts about this implementation, not all causal-discovery systems.
+
+Residual against that implementation:
+Its nonlinear reduction does not exploit equal current edge values while
+retaining different derivatives for the separately owned edge parameters;
+our only allowed claim is a cheaper equivalent evaluation at finite-support
+states, with the original full per-edge first derivative.
+
+Hostile comparators required: original upstream method; a direct stable
+logaddexp reduction; a torch.compile version if compilation works; and an
+ordinary dictionary-factorization control using the same mathematics.
+KeOps is a relevant modern fused-reduction comparator and compressed linear
+algebra / LUT-GEMM are adjacent prior art. No absence-of-paper conclusion
+establishes novelty. Generic deduplication, dictionary compression, matrix
+multiplication and custom differentiation are established methods.
+
+Initial cache search was closed without a new claim: permission-aware RAG
+caches and independence-aware LLM response reuse already have direct prior
+art. No cache experiment or new cache stub is added.
+
+Primary sources for this scope:
+https://github.com/PurdueMINDS/DAGPA/tree/053bac751b15404902f69f608b5ab207f9aa5edc
+https://arxiv.org/abs/2510.22031
+https://arxiv.org/abs/2511.22118
+https://arxiv.org/abs/2206.09557
+https://www.kernel-operations.io/keops/index.html
+https://systemds.apache.org/docs/2.1.0/api/java/org/apache/sysds/runtime/compress/colgroup/AColGroup.html
+
+14.2 Garden mapping and cross-situation closure
+
+Source substrate: v15.10 abstraction/GCSC delta, technical delta, GCSC
+functional and SAL/SAC contracts, TREE_CORE v0.8.1, RSDC-001. Their status
+boundaries remain unchanged. This is a bounded manual application, not a
+complete generated GCSC/SAL implementation or a repaired TREE build.
+
+Chronological situations:
+P1 declare model, mask, dtype and equation profile;
+P2 sample discrete per-edge logits;
+P3 transform logits into edge-complement logarithms;
+P4 exclude a conditioning node and construct exact membership masks;
+P5 initialize unreachability state;
+P6 broadcast pairwise nonlinear messages;
+P7 reduce messages to the next state and repeat to the declared depth;
+P8 contract with the downstream objective/cotangent;
+P9 backpropagate to each original edge coordinate;
+P10 choose the next sampler state;
+P11 benchmark the admitted implementation alternatives;
+P12 record results, costs and verification status.
+
+Directed interfaces:
+P1>P2, P1>P3, P1>P4, P1>P5, P2>P3, P3>P4, P4>P6, P5>P6,
+P6>P7, P7>P6 (bounded recurrence), P7>P8, P8>P9, P9>P10,
+P10>P2 (next sample), P1>P11, P7>P11, P9>P11, P11>P12.
+
+Objects: TIME=iteration and measurement epoch; SPACE=tensor axes/device;
+THING=weights, masks, palette, states and memory; EVENT=sample/update;
+ACTION=compute/compile/measure; AGENCY=researcher/software operator;
+RULE=equation/gradient/eligibility contracts; VALUE=compute cost;
+CONTEXT=hardware/dtype/support/temperature; CLAIM=typed result.
+Agency and authority belong to operators, not numerical values.
+
+Relations used: identifies, governs, frames, acts, assesses, contextualizes,
+controls, partOf, dependsOn, references, derivedFrom, equivalentTo,
+contradicts, supports, blocks, hasHypothesis, supersedes, originatesFrom.
+owns is used only for source/parameter attribution, not numerical agency.
+causes is confined to operational state changes, never inferred physical
+causality from a learned graph. delegates/obeys/values/conflictsWith are not
+required by this numerical subproblem; exclusion is applicability, not loss.
+
+Forms: CONSTRUCT defines kernel/profile; CONTRACT defines domain and
+acceptance; STATE records numerical inputs; RELATION binds source and
+dependencies; PROCESS defines sample/evaluate/differentiate; RULE encodes
+invariants; PROJECTION compresses value classes without merging ownership.
+Cross-cutting scope, time, provenance, uncertainty, dependency, evidence,
+verification and authority qualifications remain explicit in these records.
+
+Invariant register (engineering/mathematical contracts, not physical laws):
+I1 Exact current membership: each edge belongs to exactly one palette class.
+I2 Value equivalence does not imply parameter-identity equivalence.
+I3 Preserve upstream forward output within declared floating-point tolerance.
+I4 Preserve every original-coordinate first derivative, not only a shared
+   palette-parameter derivative.
+I5 No rounding/quantization is introduced to manufacture finite support.
+I6 Same masks, residual term, denominator, temperature and iteration count.
+I7 A changed edge/support/mask invalidates or rebuilds class membership.
+I8 Nonfinite input or alpha<=0 is outside the fast-path contract.
+I9 Charge palette construction and backward work to the optimization.
+I10 An unknown/failing numerical comparison cannot become PASS.
+I11 Timing is measured on the same inputs/resources, including negative cases.
+I12 Numerical success does not admit novelty or economic/world-scale claims.
+
+Critical combination audits:
+P2>P3>P6: sampled finite support is lost in dense broadcasting; inspect reuse.
+P4>P6>P7: exclusion must preserve the original n-denominator and residual.
+P6>P8>P9: equal values can be shared, but shared gradients cannot replace
+distinct edge gradients. This is the central cross-situation constraint.
+P9>P10>P2: membership must be recomputed after changing a sampled value.
+P1>P11>P12: output-only speed is insufficient if backward/cost changes.
+
+Projection-Loss operator: edge values alone omit their independently
+perturbable identities. Two equal-valued edges may require different
+gradients under a nonuniform objective.
+Necessity-Challenge operator: is materializing/evaluating every cubic
+nonlinear interaction necessary for exactly the same contracted result?
+Decision-Sufficiency operator: use total cost per numerically valid
+evaluation to select original, fused, or grouped execution. No selection
+advantage over an identically informed conventional optimizer is assumed.
+
+Coverage at protocol freeze: 12 situations, 18 directed interfaces, 12
+contracts, 5 material combination audits, 1 experimental claim.
+This denominator is local and bounded; no whole-domain coverage claim.
+
+14.3 Equation contract and pre-run derivation
+
+U and B are n-by-n dimensionless logarithmic state/edge-complement arrays.
+alpha>0, tau=alpha/log(2), all entries finite. Define
+ f(a,b)=tau*[log(exp(a/tau)+exp(b/tau))-log(2)]
+using stable logaddexp. The upstream update is
+ H(U,B)_{uv}=U_{uv}+(1/n)*sum_x f(U_{ux},B_{xv}).
+
+For exact distinct values b_1,...,b_q of B, let
+ M_r[x,v]=1[B_{xv}=b_r], F_r[u,x]=f(U_{ux},b_r).
+Then, by partitioning the finite x-sum,
+ H=U+(1/n)*sum_r F_r M_r.
+This is exact in real arithmetic. It reduces evaluations of the nonlinear
+function from n^3 to q*n^2. Dense matrix multiplications remain O(q*n^3);
+there is no claimed general arithmetic complexity reduction to O(n^2).
+
+Let G be an arbitrary output cotangent and
+ A_r[u,x]=sigmoid((U_{ux}-b_r)/tau).
+The full original-coordinate derivatives are
+ dU=G+(1/n)*sum_r A_r .* (G M_r^T);
+ dB=(1/n)*sum_r M_r .* ((1-A_r)^T G).
+Here .* is elementwise multiplication. Rebuilding memberships is a
+dispatch operation; differentiating through rounded class labels or tying
+all b_r occurrences would give the wrong parameter derivatives. The
+custom backward explicitly evaluates the derivatives of the ORIGINAL
+smooth function at the current equality point. No higher-order derivative
+guarantee is made.
+
+Limits/counterexamples:
+q=1: one nonlinear table and one contraction; q near n^2 can lose badly.
+n small: dispatch dominates. Continuous changed values require new exact
+classes/fallback, not old masks. Equality of forward values alone cannot
+test dB. Alpha approaching zero is numerically sharp but remains finite
+for alpha>0; alpha=0 excluded. Nonfinite sentinels excluded; upstream's
+finite -300 sentinel is preserved. No row/column may silently be dropped.
+
+14.4 Frozen experimental protocol
+
+Primary estimand: CPU seconds saved for one correct forward+backward
+negative Bellman-Ford update versus the fastest successful executable
+baseline on the same machine. Record wall time too. Cost after dtype and
+palette construction overhead, before any deployment economics.
+
+Implementation: use installed PyTorch CPU; extract the original method
+and its elementary helpers from the pinned public source without rewriting
+their operations. Compare direct stable logaddexp, compiled direct version
+if available, and grouped custom backward. The grouped conventional
+control is algorithmically identical: Garden-specific advantage is zero
+unless an independent matched discovery benchmark later establishes one.
+
+Input specification before execution:
+n in {16,50,100,200}; logits chosen uniformly from {-2,0,2}, masks including
+diagonal and one excluded node; B=logsigmoid(logit)-logit with masked
+entries 0. U is negative uniform [0,4] with diagonal -300; nonuniform
+Gaussian cotangent. Seed=20261010+n. Primary float64; float32 sensitivity.
+alpha=0.01 primary; alpha in {1e-5,1} numerical stress. Use CPU one thread,
+one warm-up, nine measured repetitions in rotating arm order. Compile time
+separately, no hidden free compilation; do not include it in steady-state
+median. Cost break-even must include it where applicable.
+
+Correctness gates: all finite outputs; float64 atol=1e-9, rtol=1e-8 against
+upstream forward and BOTH gradients. float32 atol=2e-4, rtol=2e-4.
+A single required mismatch fails that scope. Finite differences on small
+n perturb original independent coordinates, breaking ties intentionally.
+Nulls: q=1, unique-value small n, membership changes, tied-gradient
+incorrect control, and small n overhead. Same tests for the direct baseline.
+
+Application boundary test: unreachability recurrence at n=50, depth=25,
+all original conditioning-node exclusions plus the unexcluded graph;
+compare outputs and gradient under a fixed linear objective. This is an
+upstream subroutine test, not a complete causal-discovery/training run.
+Any implementation repair must be logged; no new target after results.
+
+Success threshold: at least 20% lower median CPU time against the fastest
+qualified tested baseline at n=50 or n=100, with all required correctness
+gates passed. Report n=16 and n=200 regardless. A custom optimized baseline
+that matches the grouping kills any Garden-specific algorithm advantage.
+Stop after these bounded checks and hostile follow-up review; no inflation
+of candidate counts. GPU, end-to-end learning quality, replication, patents,
+production workload prevalence and monetary savings remain separate gates.
+
+Economic contract:
+Delta_net=N_valid*(t_baseline-t_candidate)*price_per_CPU_second
+          - integration - validation - compilation - ongoing_maintenance.
+N_valid, production pricing and implementation costs are UNKNOWN.
+No industry-total multiplier and no claim of large cash savings.
+
