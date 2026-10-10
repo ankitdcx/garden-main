@@ -87,3 +87,12 @@ Keep source hashes, exact mappings, unit/assumption checks, all candidates and r
 **Completed:** consolidated candidate specification and risk-labeled idea inventory.  
 **Not completed:** executable operator, frozen benchmark, tests, validated novelty, measured savings.  
 **Next:** implement bounded typed-graph operator; freeze Test A positives+decoys; execute and publish receipts; only then consider Test B. Stop conceptual expansion until a concrete test failure warrants revision.
+
+
+## 2026-10-10 follow-up — separate within-system discovery track
+
+The research discussion distinguished (1) fundamental invariants, (2) derived model-specific invariants, and (3) empirical regularities. PHY-XFER transfers constraints **across** models; [INV-DISC-001](INV_DISC_001_PRELIMINARY.md) tests whether structural guidance helps discover invariants **within** one model. It is a separate noncanonical research candidate, not an expansion of PHY-XFER's admission status.
+
+A previous write-up confused the derivative sign for the unit disk. For g=x²+y²−1<=0, dg/dt=−2(x²+y²)+2xy²<0 on the boundary; the positive derivative belongs to h=−g>=0. The conclusion of forward invariance survives the correction. A reproducible 20-case SymPy sufficient-bound control was executed; 20/20 cases passed. This is a deliberately easy positive control, **not** a Garden search success, SOS/SMT comparison, independent certification, or new discovery. See the INV-DISC-001 file and script for exact method and limitations.
+
+Claims that dated source restrictions and provenance watermarking guarantee historical blindness are **not supported** for pretrained models. Source-bound controls and leakage audits remain required; named legacy K-INT/v10.25 controls are unverified unless pinned to authoritative source spans.
