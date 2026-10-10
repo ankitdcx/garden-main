@@ -8604,18 +8604,73 @@ No field experiment, new literature search or scientific admission occurred duri
 this cleanup. Current outcome remains zero verified discoveries and no measured
 incremental Garden economic savings.
 
+13. COMPUTING / DATA REUSE — FROZEN ENGINEERING PROTOCOL, 10 OCTOBER 2026
+============================================================================
+User direction: apply Garden mapping and other Garden ideas to data/compute savings.
+A3 is PARKED_CONTEXT_REQUIRED while this is the sole bounded work item.
+This is an engineering reproduction of established incremental retrieval, not a
+new scientific claim. No residual against incremental view maintenance has been
+established. The prior-art gate rejects claiming caching or top-k maintenance as
+Garden inventions. Historical research and all canonical sources are unchanged.
 
-COMPUTING WORKSTREAM — INTENT ONLY, 10 OCTOBER 2026
-User-directed bounded investigation of data/compute savings; source study and prior-art screen before claims. No new finding, deployment or admission.
-{
-  "schema": "GardenChatGPTWorkstreamIntent/v1",
-  "workstream_id": "chatgpt:compute-reuse-20261010",
-  "work_package_id": "COMPUTE-REUSE-20261010",
-  "branch": "chatgpt/compute-reuse-20261010",
-  "base_sha": "98093b77b4d52fa63956f96d9ccc4686132124c9",
-  "dependency_intent_ids": [],
-  "integration_strategy": "DIRECT_IF_NO_COLLISION",
-  "draft_pr_created_before_substantial_edit": true,
-  "substantial_edit_started": false,
-  "status": "PROBLEM_LOCK"
-}
+Problem lock: repeated exact retrieval of source paragraphs as this repository
+changes. Decision: reuse the prior ordered top-5 retrieval result or recompute.
+Population: all tracked .md/.txt UTF-8 text at the eight first-parent commits
+ending 98093b77b4d52fa63956f96d9ccc4686132124c9 (oldest through newest).
+No private files, external model calls, paid compute, plant action or production
+deployment. This is a local CPU retrieval probe, not a neural RAG quality trial.
+
+Frozen queries (one per requested source/decision subject):
+canonical Garden version; GSL core objects relations; GCSC SAL SAC;
+TREE CORE source fallback; atomic source owner register; dependency invalidation;
+no self admission; UNKNOWN CONFLICT status; authority consent revocation;
+human effect closure; resource termination budget; scientific novel savings;
+heat exchanger cleaning; electricity thermal current; compressed air pressure;
+blind independent comparison.
+
+Retrieval profile: paragraphs split on blank lines; each paragraph over 2048
+characters sliced consecutively at 2048 characters. Keep exact characters and
+path-qualified SHA256 occurrence identity; preserve multiplicity. Hash text with
+scikit-learn HashingVectorizer(n_features=65536, binary=True, norm=None,
+alternate_sign=False, dtype=float64), other defaults fixed by installed version.
+Score = integer query-feature intersection count, equal to sparse inner product.
+Order descending score, then ascending paragraph identity. k=5. This is a fixed
+lexical operator, not BM25, learned embeddings or a claim of semantic adequacy.
+Exact equality means equality of this operator's ordered results only.
+
+Arms:
+F: exact full sparse indexed retrieval after each revision; no answer reuse.
+I: conventional incremental top-k materialized view. Score additions; retain
+   surviving old winners. If fewer than k old winners survive, rescan that query.
+   Otherwise top-k of surviving winners and new entries is sufficient.
+G: same exact incremental kernel plus Garden-qualified result receipt and runtime
+   profile/current-source gate. This isolates overhead; it cannot establish
+   independent invention or blind discovery advantage.
+D: positive-dependency-only reuse, tested solely as an intentionally unsafe
+   negative control, not as the strongest economic baseline.
+
+Same update feed, encoder, initial corpus, query set and resource budget for F/I/G.
+Shared delta extraction/indexing cost is charged equally and reported separately;
+snapshot download and experiment instrumentation are outside serving timing.
+One warm-up and nine runs, rotating F/I/G execution order by run. Report median
+wall/CPU seconds for retrieval and common preparation; cold-start cost separately.
+Stop after all seven historical transitions and named adversarial fixtures. No
+selection of only favourable revisions. First result cannot tune the workload.
+
+Primary engineering estimand: local CPU seconds F minus G, after measured common
+update/preparation costs; also G minus I overhead. Decision agreement is mandatory.
+Money, GPU energy, neural quality, workload prevalence and annual savings UNKNOWN.
+Falsifiers: any different ordered result, stale profile accepted, insertion that
+changes winners silently missed, unaccounted deleted winner, or negative net CPU
+benefit for the complete frozen workload. A timing loss remains a reported failure.
+
+Attack fixtures: insertion outranking unchanged winners; deletion of a winner;
+deletion outside winners; equal-score tie insertion; profile change; incomplete
+update feed; source/authority mismatch; update arriving before final use.
+The last four must invalidate/defer through explicit status, never silently PASS.
+Model/prompt/tools/permissions/current state need separate gates before any answer
+or external action reuse; retrieval equality cannot prove factual truth or grant
+authority. No human-safety or constitutional rule is cached away.
+
+This freeze precedes code and outcome collection, but it is not independent or
+blinded preregistration. The proposer has seen the corpus and literature.
