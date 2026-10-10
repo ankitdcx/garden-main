@@ -24,7 +24,7 @@ CONTENTS
 12. Archive locations, cleanup record and section crosswalk
 13. Computing/data reuse: source mapping, two engineering cycles and measured limits
 14. One computing claim: finite-support contraction, distinct gradients and CPU tests
-15. Ten additional decision screens: mobile, AI, computing, transport and electricity
+15. Ten additional decision screens and deduplicated electricity follow-up
 
 READING RULES
 Current policy is in chapters 1-2 with chapter-14/15 queue updates; chapter 3
@@ -9641,7 +9641,7 @@ Garden method advantage: UNMEASURED.
 Scientific/canonical admission: NONE.
 
 
-15. TEN ADDITIONAL DECISION SCREENS: MOBILE, AI, COMPUTING, TRANSPORT, ELECTRICITY
+15. TEN ADDITIONAL DECISION SCREENS AND DEDUPLICATED ELECTRICITY FOLLOW-UP
 ============================================================================
 
 Work package: SCI-TEN-SCREEN-20261010. Date: 10 October 2026.
@@ -9925,53 +9925,49 @@ Residual decision: No new joint cost/charging/wear relationship. A solver or fie
 Falsifier / contract-invalidating witness: Missed departure/insufficient reserve, displaced rather than reduced grid peak, or degradation and integration costs cancel the bill saving.
 Evidence owners: S19, S20. Disposition: KNOWN_BROAD_MECHANISM; site-specific incremental net value UNKNOWN.
 
-D09 — Electricity: qualify dynamic line capacity through protection and contingency response
+D09 — Video AI: reuse temporal features while preserving change dependencies
 ------------------------------------------------------------------------
-Decision: dispatch using a weather-dependent rating while preserving protection and corrective-response constraints. Y = one ampacity value; needed state includes rating timestamp, conductor/sag state, topology, relay settings and response delay.
+Decision: recompute or reuse image/video features across frames. Y = local pixel/token change score; additional state = attention dependencies, scene cuts, cache age and model revision. Actions = full inference or a qualified token/feature-reuse policy.
 Situation nodes:
-  D09.S1: sample weather and validity time
-  D09.S2: estimate conductor state/rating
-  D09.S3: set dispatch
-  D09.S4: encounter contingency
-  D09.S5: evaluate protection response
-  D09.S6: execute permitted corrective action
-  D09.S7: verify recovered operating state
-Transition edges: (1,2) (2,3) (3,4) (4,5) (5,6) (6,7) (2,5) (6,2)
+  D09.S1: ingest frame and model revision
+  D09.S2: detect change and scene boundary
+  D09.S3: select reusable features
+  D09.S4: update attention and downstream features
+  D09.S5: produce recognition/answer
+  D09.S6: invalidate or refresh cache
+Transition edges: (1,2) (2,3) (3,4) (4,5) (5,6) (6,3) (1,4)
 Invariant/constraint register (not all fundamental laws):
-  D09.I01 [CONSTITUTIVE/THERMAL] S1,S2,S3: Conductor temperature follows a qualified heating/cooling balance, not a weather label alone.
-  D09.I02 [ENGINEERING/CLEARANCE] S2,S3: Temperature and mechanical sag/clearance limits must remain within the line's qualified envelope.
-  D09.I03 [SAFETY/PROTECTION] S2,S3,S5: A thermally allowable loading is not automatically compatible with protection settings or load-encroachment limits.
-  D09.I04 [ENGINEERING/CONTINGENCY] S3,S4,S5,S6,S7: Post-contingency trajectories and corrective actions must satisfy their own limits and response-time bounds.
-  D09.I05 [ENGINEERING/FRESHNESS] S1,S2,S3,S6: Stale telemetry/failed communications require the specified fallback, not indefinite use of the last high rating.
-  D09.I06 [ECONOMIC] S3,S6,S7: Value is avoided dispatch/congestion cost under the complete admissible schedule minus sensors, communications and integration; a capacity percentage is not a money percentage.
-Critical transition/combination audit and operators: Projection-Loss: equal thermal ratings can hide incompatible protection/response states. Necessity-Challenge: fixed conservative ratings are not always necessary. Decision-Sufficiency: dispatch may use an increased rating only when all coupled obligations remain qualified.
-Named existing baseline/evidence: Published DLR-supported protection and corrective security-constrained OPF already combine rating with protective/corrective operation. An official manufacturer page also describes DLR/interconnection-protection integration. Search-accessible primary abstracts were available for the specialist papers; their full ScienceDirect text returned 403.
-Residual decision: No new rating/protection/corrective-control principle. Exact combined coverage across sag, stale telemetry and every relay mode is NOT proved by these sources. A specific live interface defect could justify integration research; none was demonstrated here.
-Falsifier / contract-invalidating witness: A qualified contingency or stale-input trace causes an excluded trip, clearance violation or unachievable corrective response, or the dispatch baseline matches the benefit.
-Evidence owners: S21, S22, S23. Disposition: KNOWN_BROAD_MECHANISM; complete site-specific interface qualification UNKNOWN.
+  D09.I01 [MATHEMATICAL/DEPENDENCY] S2,S3,S4: An unchanged local patch need not have unchanged contextual features after attention to changed patches.
+  D09.I02 [ENGINEERING/QUALITY] S3,S4,S5: Approximate token reuse must meet the same agreed task-quality/error envelope; it is not automatically exact inference.
+  D09.I03 [ENGINEERING/INVALIDATION] S1,S2,S3,S6: Scene cuts, layout changes and model revisions invalidate affected cached features.
+  D09.I04 [ECONOMIC] S2,S3,S4,S5,S6: Count change detection, cache traffic, refreshes and downstream task failures in all-in inference cost.
+Critical transition/combination audit and operators: Projection-Loss: equal local patches can have different global attention context. Necessity-Challenge: complete re-encoding of every similar frame is not always required. Decision-Sufficiency: reuse is valuable only after quality, invalidation and cache overhead.
+Named existing baseline/evidence: Eventful Transformers (ICCV 2023) already update significantly changed tokens. STC (CVPR 2026) combines encoder feature caching with token pruning. Their approximation/quality trade-offs matter; exact full-output equality needs an equally exact comparator.
+Residual decision: No new temporal-redundancy reuse principle. Exact nonlocal invalidation might be an implementation requirement, but no new faster exact algorithm or unsupported behavior in these implementations was demonstrated.
+Falsifier / contract-invalidating witness: An unchanged local region with changed distant context, or a scene cut, breaches the output contract; alternatively detection/cache overhead erases the speed gain.
+Evidence owners: S27, S28. Disposition: KNOWN_BROAD_MECHANISM; exact implementation-level residual NOT_ESTABLISHED.
 
-D10 — Electricity: price voltage support together with inverter heating and ageing
+D10 — AI training: compute loss without materializing the full vocabulary-logit matrix
 ------------------------------------------------------------------------
-Decision: reactive-power and switching choices. Y = fundamental apparent-power headroom; needed state includes harmonics, losses, junction/capacitor temperature and duty history. Actions = qualified volt/var or switching schedules under grid and equipment limits.
+Decision: which classifier-head intermediates must exist in memory to compute the declared loss and gradients. Y = dense logits by default; needed information = actual consumers, label mask, loss reduction, auxiliary objectives and gradient tolerance.
 Situation nodes:
-  D10.S1: observe network voltage
-  D10.S2: select active/reactive command
-  D10.S3: establish current and harmonic waveform
-  D10.S4: calculate losses and temperature
-  D10.S5: update ageing estimate
-  D10.S6: issue next qualified command
-Transition edges: (1,2) (2,3) (3,4) (4,5) (5,6) (5,2) (4,2) (6,1)
+  D10.S1: bind labels and objective
+  D10.S2: compute contextual embeddings
+  D10.S3: tile classifier projection
+  D10.S4: reduce stable loss
+  D10.S5: compute embedding and weight gradients
+  D10.S6: apply optimizer update
+Transition edges: (1,2) (2,3) (3,4) (4,5) (5,6) (1,4) (1,5) (6,2)
 Invariant/constraint register (not all fundamental laws):
-  D10.I01 [MATHEMATICAL/DOMAIN] S2,S3: P^2+Q^2 headroom for a declared fundamental-frequency model is not a complete harmonic RMS-current or thermal limit.
-  D10.I02 [CONSTITUTIVE/THERMAL] S3,S4: Switching and conduction losses depend on waveform and device conditions; temperature needs a calibrated model.
-  D10.I03 [EMPIRICAL/AGEING] S4,S5: Ageing proxies require qualified lifetime models; calculated damage is not a measured replacement date.
-  D10.I04 [ENGINEERING/GRID_QUALITY] S1,S2,S3,S6: Voltage and harmonic constraints apply alongside equipment reliability limits.
-  D10.I05 [ECONOMIC] S2,S4,S5,S6: Reactive-service and network-loss benefits must exceed extra inverter losses, wear and control costs at the same grid-service contract.
-Critical transition/combination audit and operators: Projection-Loss: equal fundamental power can hide different waveforms and thermal stress. Necessity-Challenge: using all apparent headroom for voltage support is not always economically necessary. Decision-Sufficiency: useful reactive support must be assessed with its reliability cost.
-Named existing baseline/evidence: Chai et al. published inverter-reliability-constrained volt/var optimization and a 2023 Pareto treatment of capacitor lifetime/network losses. Zeng et al. include IGBT junction temperature. A 2026 variable-frequency paper explicitly includes thermal and harmonic constraints; its full MDPI page was rate-limited, so only the primary indexed summary was available.
-Residual decision: No new volt/var-versus-lifetime principle. These separate works do not prove that one available controller implements every combined constraint; a novel joint algorithm would still need a named benchmark and device/network evidence, absent here.
-Falsifier / contract-invalidating witness: Any grid-quality or thermal constraint fails, a lifetime model is invalid for the device, or a reliability-aware comparator obtains the same net benefit.
-Evidence owners: S24, S25, S26. Disposition: KNOWN_BROAD_MECHANISM; unified device-specific comparator test UNRESOLVED.
+  D10.I01 [MATHEMATICAL/OBJECTIVE] S1,S3,S4: For ordinary cross-entropy only the target logit and full normalizer are needed as outputs; vocabulary tiling must retain all contributions to the normalizer.
+  D10.I02 [MATHEMATICAL/GRADIENT] S3,S4,S5,S6: Preserve the declared embedding/classifier gradient contract; dropping small terms is a qualified approximation, not exactness.
+  D10.I03 [ENGINEERING/DEPENDENCY] S1,S2,S3,S4: An ignored loss label does not imply its input token can be removed from causal context. If another objective or consumer needs full logits, its requirement remains.
+  D10.I04 [ECONOMIC/RESOURCE] S2,S3,S4,S5,S6: Measure peak live memory and complete training-step time, including backward/recomputation; smaller loss scratch memory is not identical to fewer GPUs or a lower bill.
+Critical transition/combination audit and operators: Projection-Loss: the same scalar loss interface can hide different gradient and auxiliary-output obligations. Necessity-Challenge: materializing every logit is unnecessary for supported cross-entropy consumers. Decision-Sufficiency: memory relief has value only when it changes feasible batch/device cost after compute and integration.
+Named existing baseline/evidence: Cut Cross-Entropy (ICLR 2025) already fuses projection with stable reduction. Its current official implementation offers torch_compile and cce_exact/unfiltered-gradient reference variants, along with shifts, ignored labels and related losses. A dense unoptimized head is therefore an inadequate scientific comparator.
+Residual decision: No new loss-fusion, streaming-normalizer or gradient-preservation principle. A novel residual would need a precise unsupported objective/layout and superiority to the qualified optimized variant; none was established here.
+Falsifier / contract-invalidating witness: Loss/gradient mismatch beyond the declared tolerance, an auxiliary consumer loses required logits, or the full training step becomes uneconomic despite lower scratch memory.
+Evidence owners: S29, S30. Disposition: KNOWN_BROAD_MECHANISM; no new kernel or memory saving measured.
 
 15.4 COMBINATION AUDITS THAT PREVENT FALSE SAVINGS
 
@@ -9994,11 +9990,13 @@ and departure time. Adding a vehicle-level energy saving to a fleet-level
 charging saving can double-count the same electricity or omit the shared peak.
 Evaluate one joint fleet bill and the same service/arrival-reserve requirement.
 
-C04 — D08 + D09 + D10: A bus charging plan, line thermal rating and inverter
-reactive schedule share the network's feasible operating region. More thermal
-capacity does not certify protection, voltage, harmonic or ageing limits.
-The maximum of shared power over the tariff interval must be evaluated once.
-No combined physical pilot or complete coupled model was run here.
+C04 — D01 + D09 + D10: Similar or unchanged values do not erase computational
+dependencies. Cross-adapter KV sharing, temporal video features and loss-only
+logit reduction have distinct invalidation and output/gradient contracts.
+An input token with no direct loss can still affect later tokens; an unchanged
+image patch can acquire different contextual features; a shared prefix under
+different weights can change KV. Any combined memory claim must count peak live
+state rather than summing isolated scratch-memory reductions.
 
 Each Cxx is a composition obligation with known constituent reasoning, not
 a claim that this particular conjunction is already solved in every product
@@ -10043,22 +10041,23 @@ Decision-specific necessary accounting:
 - D08: C = sum_t(price_t * grid_energy_t) + demand_price * max_t(grid_power_t)
   + qualified wear cost + other operating costs, subject to bus/charger/service
   constraints. Use the tariff's actual metering interval and ratchet terms.
-- D09: admissible dispatch belongs to the intersection of thermal, clearance,
-  protection, contingency and freshness-qualified feasible sets. This set
-  statement does not assume all constraints can be reduced to one scalar
-  current limit. Value is a dispatch-cost difference, not rating uplift.
-- D10: compare grid-service benefit and network-loss reduction with inverter
-  losses, wear and implementation costs under the same admissible waveform,
-  voltage and device limits.
+- D09: all-in video cost includes change detection, feature/cache transfer,
+  refreshes and downstream error cost at the same quality contract.
+- D10: for ordinary unweighted per-token cross-entropy, with target y and
+  dimensionless logits z_j, loss = log(sum_j exp(z_j)) - z_y. Stable streaming
+  reduction can avoid retaining the full vector but must preserve its sum.
+  Masks, normalization, auxiliary consumers and all required gradients remain
+  part of the contract. This is established mathematics already used by CCE.
+
 
 Limiting cases and falsifiers retained:
 A cache miss/revision change can eliminate D01's saving; controller overhead
 can dominate D02/D03; drafting rejection can make D04 slower; high churn or
 late data can make D05 expensive; low storage price/high transfer cost can make
 D06 repacking uneconomic; absent descents make D07 heating a loss; already
-optimized service schedules may leave no D08 increment; binding protection or
-voltage limits can remove D09 capacity benefit; device wear can outweigh D10
-reactive-service value. None is a measured occurrence in a supplied deployment.
+optimized service schedules may leave no D08 increment; frequent scene changes
+can remove D09 reuse; backward recomputation or other logits consumers can
+remove D10's memory or economic advantage. None is a measured occurrence in a supplied deployment.
 
 External published numbers, solely to distinguish real opportunity from novelty:
 - PELM's authors report up to 52.4% energy reduction in their evaluated setting.
@@ -10068,15 +10067,20 @@ External published numbers, solely to distinguish real opportunity from novelty:
 - The Caustur et al. bus study reports 5% lower daily costs from adding demand
   charges to its optimization in the stated case. Its larger PV/storage/V2G
   scenario percentages are not Garden-generated savings and are not reused here.
-No percentage from either source is used to calculate a world or customer bill.
+- Cut Cross-Entropy's ICLR 2025 paper reports classifier-head training memory
+  dropping from 28 GB to 1 GB for its Gemma 2 (2B) example. This is a scoped
+  published result, not total-model memory, our measurement, or an exact-mode
+  performance guarantee. Its current implementation includes exact-gradient
+  reference variants that a new candidate would have to compare against.
+None of these external results is used to calculate a world or customer bill.
 
 15.6 COVERAGE, RANKING AND EVIDENCE STATES
 
 Local graph counts, checked from the explicit records:
   Reviewed decisions: 10.
-  Declared situation nodes: 62.
-  Declared directed transition links: 72.
-  Typed invariant/constraint records: 43.
+  Declared situation nodes: 61.
+  Declared directed transition links: 71.
+  Typed invariant/constraint records: 40.
   Decision-critical transition/combination audits: 10.
   Cross-decision composition audits: 4.
   Broad mechanisms with direct adverse prior art: 10.
@@ -10084,7 +10088,7 @@ Local graph counts, checked from the explicit records:
   New experiments or empirical savings measurements in this batch: 0.
 
 Node/edge/invariant references were checked for valid local identifiers.
-This is structural validation only. The 72 links were declared, not all
+This is structural validation only. The 71 links were declared, not all
 individually validated through specialist models or real traces. Coverage of
 complete lifecycles, the 2,400-cell GCSC L0 denominator, registered joins,
 semantics, executable assurance and real operating populations is NOT MEASURED.
@@ -10096,10 +10100,9 @@ UNKNOWN. Ranking them by invented dollar amounts would violate the economic
 gate. Known-method adoption opportunities are distinct from scientific gaps.
 
 Practical evidence access, not a claim of economic ranking:
-D01/D04/D05/D06 have public software or precise documentation, making a later
+D01/D04/D05/D06/D09/D10 have public software or precise documentation, making a later
 pinned implementation audit possible. D02 needs suitable device/power traces;
-D03 needs current handset/location traces; D07/D08 need vehicle/fleet data;
-D09/D10 need qualified network/protection/device models and relevant permissions.
+D03 needs current handset/location traces; D07/D08 need vehicle/fleet data.
 None of these access conditions alone constitutes a defensible scientific
 residual or authorizes another experimental pipeline.
 
@@ -10225,14 +10228,32 @@ S26 | Parameter Design of Variable Frequency Modulation for Grid-Tied Inverter w
   https://www.mdpi.com/1996-1073/19/4/1032
   Access/support: Primary indexed summary inspected; direct page returned 429. No optional retries or full-methods claim.
 
+S27 | Eventful Transformers, ICCV 2023
+  https://arxiv.org/abs/2308.13494
+  Access/support: OPENED primary preprint and official repository https://github.com/wision-lab/eventful-transformer . CVF page returned 403. Approximate quality trade-off retained.
+
+S28 | Accelerating Streaming Video LLMs via Hierarchical Token Compression, CVPR 2026 / STC
+  https://arxiv.org/abs/2512.00891
+  Access/support: OPENED primary preprint record; primary CVF indexed abstract also inspected, full CVF page returned 403. No replication.
+
+S29 | Cut Your Losses in Large-Vocabulary Language Models, ICLR 2025
+  https://proceedings.iclr.cc/paper_files/paper/2025/hash/aa963ac256590bb7ad5fc26c68229a3a-Abstract-Conference.html
+  Access/support: OPENED primary proceedings abstract; loss-memory and gradient-filtering scope retained.
+
+S30 | Official Cut Cross-Entropy implementation, usage/variants
+  https://github.com/apple-aiml-research/ml-cross-entropy
+  Access/support: OPENED official repository (redirect from apple/ml-cross-entropy); exact/unfiltered and torch_compile comparators, ignored labels, shifts and consumer limitations. No benchmark rerun.
+
 Search families actually used: LoRA/activated-adapter KV reuse; grammar and
 speculative decoding/distribution preservation; mobile thermal/DVFS inference;
 GPS/geofence uncertainty and duty cycling; incremental aggregates with deletes;
 backup chunking and repacking; route regenerative preconditioning; bus charging
 with ageing/peak/uncertainty; DLR protection and security-constrained OPF;
-inverter volt/var with lifetime, temperature and harmonics.
+inverter volt/var with lifetime, temperature and harmonics (deduplicated revisits);
+temporal video-feature reuse; fused cross-entropy and exact-gradient variants.
 
-Patent searches were run for all ten decisions, plus a corrected "low rank
+Patent searches were run for the ten decisions and the two electricity revisits,
+plus a corrected "low rank
 adaptation" query after "LoRA" returned irrelevant radio-network patents.
 Only S08 and S17 patent texts were opened successfully and used as direct
 technical evidence. S18 is an adverse indexed lead, not a full-text inspection.
@@ -10243,6 +10264,9 @@ WO2024058878A1 and CN106067680B (inverter thermal/reliability operation).
 Their claims were not independently verified and are not needed to support a
 positive novelty finding; no such finding is made. Backup and bus patent
 queries produced weak/no sufficiently specific leads in the returned set.
+Video attention-reuse searches found US20230112862A1 as an unverified broad
+lead; cross-entropy queries did not produce a sufficiently specific patent
+match. Neither changes the direct paper/implementation overlap finding.
 A missing patent hit never counts as evidence of originality.
 
 Several search1 queries returned irrelevant results. They were not counted as
@@ -10250,6 +10274,17 @@ coverage or supporting evidence. Search2 and direct primary-source inspection
 supplied the cited material. Publisher access failures (403/429), PDF failure
 and indexed-only evidence remain explicit above. No exhaustive literature,
 all-patent-family or strongest-method-on-every-platform review is claimed.
+
+Deduplicated electricity follow-up (excluded from the ten):
+The initial rating/protection and inverter-reliability screens overlap chapter
+7's existing P10/P11 and P2/ageing/Volt-VAr investigations. They are not counted
+again as additional ideas or additional graphs. S21-S23 update the adverse
+rating/protection/corrective-control evidence; S24-S26 update the inverter
+lifetime/thermal/harmonic evidence. Exact joint site qualification still remains
+unresolved; no new solution, field result or savings figure was produced.
+D09/D10 in this final chapter instead examine video inference and training loss
+memory. Earlier draft-PR revisions used those temporary IDs for the electricity
+screens; the final D01-D10 meanings above control this noncanonical chapter.
 
 15.8 DISPOSITION AND REPOSITORY HYGIENE
 
