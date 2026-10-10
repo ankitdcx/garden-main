@@ -9632,3 +9632,13 @@ Full-system / production validation: NO.
 Incremental monetary value measured: NO.
 Garden method advantage: UNMEASURED.
 Scientific/canonical admission: NONE.
+
+
+WORKSTREAM INTENT ONLY — SCI-TEN-SCREEN-20261010
+Noncanonical investigation authorized by user request for ten more opportunities.
+Base: eb645e0fc83e55d5829e276e199e7304e6c61607
+Branch: chatgpt/ten-decision-screen-20261010
+Only this consolidated report may change. No runtime/Python files.
+Substantial editing not started. Previous SCI-PALETTE claim remains unresolved.
+{"schema":"GardenChatGPTWorkstreamIntent/v1","workstream_id":"chatgpt:ten-decision-screen-20261010","work_package_id":"SCI-TEN-SCREEN-20261010","branch":"chatgpt/ten-decision-screen-20261010","base_sha":"eb645e0fc83e55d5829e276e199e7304e6c61607","dependency_intent_ids":[],"integration_strategy":"DIRECT_IF_NO_COLLISION","draft_pr_created_before_substantial_edit":true,"substantial_edit_started":false,"status":"ACTIVE"}
+{"schema":"AgentWorkIntent/v1","intent_id":"chatgpt:ten-decision-screen:20261010","agent_id":"ChatGPT","work_package_id":"SCI-TEN-SCREEN-20261010","base_sha":"eb645e0fc83e55d5829e276e199e7304e6c61607","source_root_sha256":"63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598","design_epoch_ref":"Garden-v15.5@63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598","target_paths":["design_deltas/v15.10/GARDEN_SCIENCE_ALL_2026-10-09.txt"],"target_symbols":["SCI-TEN-SCREEN-20261010"],"semantic_domains":["noncanonical scientific decision screening and prior-art evidence"],"affected_invariants":["evidence qualification","no self-admission"],"affected_contracts":["one active experimental claim","net incremental value"],"intended_effect":"Record ten user-requested additional decision screens with source-bound mappings, adverse prior art and honest savings limits. No canonical or runtime changes.","parallel_mode":"INDEPENDENT_COMPARISON"}
