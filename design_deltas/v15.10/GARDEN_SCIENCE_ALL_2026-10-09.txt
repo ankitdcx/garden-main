@@ -1,10 +1,11 @@
 GARDEN v15.10 — SCIENTIFIC DISCOVERY AND ECONOMIC VALUE REGISTER
-Consolidated plain-text edition | Research: 9 October 2026 | Organized: 10 October 2026
+Consolidated plain-text edition | Research through: 10 October 2026 | Organized: 10 October 2026
 NONCANONICAL RESEARCH — no scientific admission or canonical Garden change.
 
 RESULT: zero verified novel Garden discoveries; no measured incremental Garden savings.
-CURRENT QUEUE: zero experimental claims; A3 is the sole pre-claim problem review,
-CONTEXT_REQUIRED with no defensible modern-baseline residual. Other work is PARKED.
+CURRENT QUEUE: zero frontier experimental claims. Computing/data reuse evaluation
+completed in chapter 13; known-method CPU savings measured locally, money UNKNOWN.
+A3 is PARKED_CONTEXT_REQUIRED after the user-directed switch to computing.
 
 CONTENTS
  1. Current result, evidence limits and queue
@@ -19,9 +20,11 @@ CONTENTS
 10. Ten industrial investigations and independent reviews
 11. One hundred industrial investigations and independent reviews
 12. Archive locations, cleanup record and section crosswalk
+13. Computing/data reuse: source mapping, two engineering cycles and measured limits
 
 READING RULES
-Current policy is in chapters 1-3. Chapters 4-11 preserve historical scientific
+Current policy is in chapters 1-2 and the dated chapter-13 queue update; chapter 3
+preserves the earlier A3 review. Chapters 4-11 preserve historical scientific
 work: a proposed test, scenario saving or old ACTIVE label does not activate a
 claim. Case IDs and numerical assumptions retain their original scope. Distinct
 record families overlap; do not sum their counts as independent trials or their
@@ -88,10 +91,11 @@ establish novelty, replication or net value.
 1.3 OPERATIVE QUEUE AND STATUS OVERLAY
 
 Maximum concurrent experimental claims: ONE. Current experimental claims: ZERO.
-Sole selected problem review: existing A3 heat-exchanger cleaning decision.
-A3 status: CONTEXT_REQUIRED / NO_DEFENSIBLE_RESIDUAL_ESTABLISHED / DO_NOT_ADVANCE.
-A3 is not a new idea, candidate ID or admitted hypothesis. No new mechanism,
-equation, predicted saving, simulation or physical trial is created in this pass.
+Current user-directed focus (10 October 2026): computing/data reuse, chapter 13.
+Its two bounded known-method engineering cycles are complete; no frontier claim
+was admitted. A3 is PARKED_CONTEXT_REQUIRED / NO_DEFENSIBLE_RESIDUAL_ESTABLISHED.
+A3's prior problem review remains in chapter 3; its earlier stop is preserved.
+The computing work does not restart any parked industrial mechanism.
 All A1/A2/A4-A10, original 001-100, industrial opportunity rows, earlier individual
 cases and N001-N100 remain PARKED for new development. Existing A3 perturbation
 and two-flow resistance examples remain PARKED_KNOWN_OVERLAP, not experimental
@@ -276,10 +280,10 @@ G0-G9 identifiers in section 2.5 remain historical research labels. Execution
 places G6 before G2, and substantive residual evidence before new mechanism work.
 This does not reorder or rename the separate twelve GCSC semantic-validity gates.
 
-3. A3 HEAT-EXCHANGER CLEANING — CURRENT REVIEW
+3. A3 HEAT-EXCHANGER CLEANING — PRIOR REVIEW, NOW PARKED
 ============================================================================
 
-3.1 SOLE PROBLEM REVIEW: A3 CLEANING DECISION, BEFORE A NEW CLAIM
+3.1 PREVIOUS SOLE PROBLEM REVIEW: A3 CLEANING DECISION, BEFORE A NEW CLAIM
 
 Selection reason: A3 already has an explicit clean/defer decision, energy and
 downtime endpoints, known perturbation prior art and existing negative findings.
@@ -532,7 +536,7 @@ of further candidates. Scientific discovery and measured savings remain unachiev
 ============================================================================
 
 4.1 Economic decision-gap investigations (historical inventory)
-Current queue: A3 is the sole pre-claim problem review, not an ACTIVE
+Historical queue at the A3 review: A3 was the sole pre-claim problem review, not an ACTIVE
 experimental hypothesis. A1/A2/A4-A10 are PARKED. Earlier questions and economic
 endpoints below do not establish a modern-baseline residual or authorize new work.
 ID | Idea | Projection/necessity gap | Economic endpoint | Status
@@ -8698,3 +8702,424 @@ Report old versus repaired complete local CPU as an engineering comparison;
 report Garden versus conventional incremental within the repaired implementation.
 Do not ascribe a shared implementation improvement to Garden-specific novelty.
 No new model call or financial extrapolation; stop after this repair comparison.
+
+13.2 SOURCE-BOUND SITUATION GRAPH, INVARIANTS AND CLOSURE AUDIT
+
+Status: bounded source-derived research implementation. This is not the full
+GSL/SAL compiler, an independently complete atomic owner register, or TREE_CORE
+qualification. Existing gzip/CRC/schema/retention issues remain OPEN. Missing
+COMPLETE GCSC suffix extraction and source interpretation gates are not marked PASS.
+
+Garden source owners at base 98093b77b4d52fa63956f96d9ccc4686132124c9:
+- V15_10_ABSTRACTION_GCSC_DELTA.md: objects, relations, forms and ten facets.
+- GARDEN_TECHNICAL_v15.10_FULL_DELTA.txt §§1,3,9-16,39,41,45-50: source ownership,
+  multi-status results, dependency closure, bounded processes and status boundaries.
+- TREE_CORE_v0.8.1_2026-09-23.txt §§1.5-1.8,2.4-2.5: scoped owner identity,
+  edition-specific S0/S1/S2, source fallback, distinct algebras and no self-admission.
+- GCSC_SAL_SAC_DETAILED_SEMANTIC_PATCH.md under v15.9.1: qualified binary
+  relations, diagnostic products, joins, materiality and candidate-only generation.
+- RSDC-03: retain source ownership while sharing identical computation.
+  RSDC-04: changed dependencies invalidate reuse.
+  RSDC-07: relevant runtime qualification, not blind whole-epoch acceptance.
+  These are reused candidate design ideas, not newly admitted rules or algorithms.
+
+Object bindings: TIME = commit/update/read time; SPACE = public repository/cache
+namespace; THING = source paragraph/vector/index/receipt; EVENT = insertion,
+deletion or profile change; ACTION = index/retrieve/reuse/defer; AGENCY = user and
+authorized experimental operator, not the data; RULE = fixed retrieval and validity
+contracts; VALUE = CPU seconds and byte counts (money UNKNOWN); CONTEXT = source
+epoch, query/profile/runtime; CLAIM = bounded output/cost assertion with status.
+
+Qualified relations used: identifies (source identity), originatesFrom (paragraph
+to file), derivedFrom (vector/result to source), dependsOn (result to complete
+retrieval inputs), governs (contract to action), frames (profile to evaluation),
+partOf (row/block/index), assesses (comparison to claim), supports (test to bounded
+claim), blocks (non-PASS gate to reuse), equivalentTo (ordered retrieval equality
+only), supersedes (new qualified snapshot). No new Core Relation or anthropomorphic
+authority. Every relation keeps source version, scope, profile and evidence status.
+
+Seven Forms: CONSTRUCT source/receipt; CONTRACT retrieval/reuse preconditions;
+STATE active membership and cache validity; RELATION dependencies above; PROCESS
+the graph below; RULE exactness/invalidation; PROJECTION lexical vectors and top-k.
+Ten facets: IdentityLifecycle binds path/hash/occurrence; ScopeContext pins query/
+namespace/profile; EpistemicsProvenance distinguishes a retrieved passage from
+truth; AuthorityHumanBoundary keeps permission separate from computational reuse;
+EffectsSafety limits this read-only experiment; DependencyValidity includes new
+competitors and deletions; ResourceTermination bounds snapshots/runs/fallback;
+PrivacyRetention uses public sources and flags retained retired vectors;
+AuditExplanation retains both engineering cycles and failures; RecoveryEvolution
+rebuilds or defers after mismatch. These checks do not multiply coverage counts.
+
+Situation graph (14 nodes; identifiers are research-local, not Garden SchemaIDs):
+C01 Receive recurring query and caller scope.
+C02 Pin source epoch, retrieval profile and applicability.
+C03 Observe complete insertion/deletion/update feed.
+C04 Parse path-qualified exact source paragraphs.
+C05 Reuse/create vector from exact text under pinned encoder.
+C06 Maintain immutable blocks and current active memberships.
+C07 Decide whether prior retrieval certificate is applicable.
+C08 Score new candidate rows; test omitted-competitor boundary.
+C09 Detect removed winner and perform exact fallback when required.
+C10 Select deterministic ordered top-5.
+C11 Bind source/profile/result receipt.
+C12 Recheck live source epoch and authority at final use.
+C13 Return retrieval result or explicit non-PASS status.
+C14 Account for indexing, scoring, receipts, memory and unresolved money costs.
+
+Invariant register. These are engineering/algorithmic contracts, not new physical laws:
+R1 C02/C04/C11: source identity includes path, content and duplicate occurrence;
+   immutable source snapshots remain recoverable. Falsifier: cross-owner collapse.
+R2 C02/C05/C07/C10: same query, encoder, scoring and tie policy are required;
+   corpus-dependent scoring must declare its extra dependencies. Falsifier: drift
+   accepted under a supposedly unchanged profile.
+R3 C03/C06/C07: complete delta and predecessor lineage required. Missing feed is
+   UNKNOWN, not "nothing changed." Falsifier: omitted insertion/deletion accepted.
+R4 C07/C08: unchanged previous winners do not imply an unchanged query result;
+   new competitors must be considered. Falsifier: unseen higher-ranked insertion.
+R5 C08/C10: if all previous k winners survive and scorer is fixed, top-k of old
+   winners plus additions equals full top-k. Domain and proof are in 13.3.
+R6 C09/C10: a removed winner requires full fallback unless another valid reserve
+   certificate supplies the missing candidates. Falsifier: wrong replacement.
+R7 C08/C10: total score/identity order preserves exact ties and multiplicity.
+R8 C11/C12: qualified receipt is epoch/profile-bound; later changes reopen it.
+   Falsifier: result released under a different live epoch.
+R9 C07/C12/C13: retrieval equivalence is neither truth nor permission; missing
+   authority/status remains non-PASS. Synthetic flags are not a deployed auth system.
+R10 C04/C05/C06: identical text may share a numerical vector while every source
+    membership remains distinct. Falsifier: lost source/result multiplicity.
+R11 C06/C14: report full measured pipeline costs, not only the accelerated kernel;
+    array bytes are not total resident memory or a commercial storage bill.
+R12 C07/C09/C13: resource exhaustion/incomplete qualification defers; successful
+    generation cannot admit its own semantics. No unbounded graph expansion.
+
+Transition audit (19 declared interfaces; all inspected, status scope below):
+T01 C01>C02 | query/scope identity | R2,R9 | fixed public namespace; production caller gate unresolved.
+T02 C02>C03 | pinned predecessor/current epoch | R3,R8 | actual immutable Git history.
+T03 C03>C04 | all changed source bytes | R1,R3 | complete manifests, UTF-8 strict.
+T04 C04>C05 | exact text and encoder version | R1,R2,R10 | deterministic frozen encoder.
+T05 C05>C06 | shared vector plus distinct source members | R10,R11 | both layouts compared.
+T06 C03>C06 | deletion/active membership | R3,R6 | removed rows cannot rank.
+T07 C02>C07 | fixed query/profile/context | R2,R9 | profile-mismatch fixture.
+T08 C06>C07 | old result and current memberships | R3,R5 | cannot use only positive dependencies.
+T09 C07>C08 | additions and exact reuse domain | R4,R5 | 14 historical stale-control witnesses.
+T10 C08>C09 | surviving old winners | R6 | seven query fallbacks across history.
+T11 C09>C10 | complete rescored candidate set | R6,R7 | equality with full operator.
+T12 C08>C10 | no-deleted-winner fast path | R5,R7 | equality with full operator.
+T13 C10>C11 | ordered identities/scores/support | R1,R7,R8 | receipt digest, not semantic proof.
+T14 C02>C11 | source/profile binding | R2,R8 | frozen identity.
+T15 C11>C12 | receipt/current-use epoch | R8,R9 | serial read fixture, not concurrent service test.
+T16 C03>C12 | later update invalidator | R3,R8 | stale-commit fixture.
+T17 C12>C13 | eligible retrieval or blocked/unknown | R8,R9 | explicit status product obligations.
+T18 C07>C13 | incomplete/inapplicable reuse | R3,R9,R12 | gate fixtures, no silent PASS.
+T19 C13>C14 | complete execution/resource record | R11,R12 | CPU/array accounting; cash UNKNOWN.
+
+Material combination checks:
+M1 insertion + unchanged winners + reuse: positive-only dependency projection loses
+   competitors; repaired by complete deltas. Known search-cache problem.
+M2 source ownership + identical text + vector storage: share numerical work, preserve
+   multiple source instances. Exact result equality checked; no semantic owner merger.
+M3 winner deletion + ranking: fallback required; deleting a nonwinner needs none.
+M4 profile change + cached score + action: reuse ceases to be qualified.
+M5 receipt + late update + release: current-epoch recheck required.
+M6 indexing + retrieval + resource ledger: whole-index reconstruction hid most of
+   the first cycle's kernel saving; second cycle removes that observed bottleneck.
+M7 fixed-vector score + corpus-statistic change: this proof does not cover drifting
+   BM25 IDF, retrained embeddings or changed rerankers without new qualification.
+M8 deletion + retained immutable blocks + retention rules: membership removal is
+   not physical erasure. All source data here are public; bounded retired vectors
+   remain resident. Production deletion/compaction and access isolation are OPEN.
+
+Coverage: 14 situations; 19 transition audits; 12 constraint families; 8 selected
+material combinations; 128 query/snapshot output comparisons per implementation,
+112 after updates; 8 attack families instantiated as 9 cases. No exhaustive L0
+2,400-cell or L2/L3 universe was executed; full GCSC/SAL coverage UNKNOWN.
+All 9 attack fixtures produced their declared exact-result or non-PASS outcomes.
+No independent judge, separate domain team, blind discovery benchmark or production
+authorization/concurrency test was performed. Gate flags are bounded fixtures.
+
+13.3 EQUATION CONTRACT AND OPERATORS
+
+Let D_t be finite current source records, Q a frozen query set, k=5, and p a fixed
+retrieval profile. s_p(q,d) is a dimensionless nonnegative integer feature-overlap
+score. Total order is descending score then ascending source-qualified identity.
+T_t(q) = Top_k(D_t,s_p,q).
+U = D_(t+1) minus D_t; R = D_t minus D_(t+1). Edits use old deletion + new insertion.
+
+If R intersects T_t(q) in the empty set and p is unchanged:
+ T_(t+1)(q) = Top_k(T_t(q) union U, s_p, q).
+Proof: every surviving old nonwinner ranks below the k surviving old winners.
+It cannot enter the next top-k ahead of those winners; only a new record can do so.
+This uses a total tie order and fixed scoring, not a new theorem. If a winner was
+removed, the implemented policy rescans all current records for that query.
+Integer scores are exactly representable here; float64 operations return those
+integers. Feature-hash collisions are part of the frozen lexical operator and
+are not semantic equivalence. Cryptographic source-hash identity assumes collision
+resistance; it does not certify truth, owner admission or independent evidence.
+
+With N_t current records, m_t additions, Q=16 queries and f_t fallback queries:
+logical_score_pairs_full = sum_t Q*N_t
+logical_score_pairs_incremental = sum_t (Q*m_t + f_t*N_t).
+This is accounting of candidate-query pairs, not CPU instructions/FLOPs or a
+runtime theorem; sparse indexes, vector deduplication and bookkeeping change cost.
+For this frozen history: 2,586,080 versus 185,486 pairs, a 92.83% reduction.
+All-new corpus or frequent winner deletions erase much of the benefit. No update
+means no candidate scoring, while profile/live-state checks still apply.
+
+Projection-Loss: Y = previous top-k plus current versions of its members. Two
+corpora can have equal Y but different correct next top-k because one contains a
+new winning paragraph. 14 such historical transition/query cases were observed.
+Necessity-Challenge: full corpus rescoring after every revision is unnecessary
+under the stated completeness/fixed-scorer/winner-survival conditions.
+Decision-Sufficiency: Z = complete delta, new-record scores, active membership and
+profile/current-use checks. Reuse is selected only when Z certifies the same exact
+retrieval; otherwise recompute/defer. These are established caching/IVM applications.
+
+CPU estimand: Delta_CPU = CPU_baseline - CPU_reuse, in process-CPU seconds, including
+measured update/index work and receipts. No dimensions are mixed with bytes.
+Commercial contract, only if later measured:
+ Delta_money = price_CPU_second*avoided_CPU_seconds
+             + price_byte_second*avoided_resident_byte_seconds
+             + price_network_byte*avoided_transferred_bytes
+             - integration - maintenance - extra checks/storage - error costs.
+Each term needs a real marginal price and measured quantity, matched service and
+no double counting. A resident array is not a transmitted payload; retrieval
+reuse is not automatically an avoided model call. Money remains UNKNOWN.
+
+13.4 PRIOR-ART SCREEN AND COMPARATOR DISPOSITION
+
+Search date: 10 October 2026. Decision-focused searches covered incremental
+computation/build dependencies, mutable-document RAG reuse, insertion-sensitive
+search invalidation, reverse top-k queries and patents. Initial broad orientations
+were followed by primary papers/docs/patent text. This is scoped, not exhaustive.
+
+P1 Mokhov/Mitchell/Peyton Jones, Build systems a la carte: theory and practice
+(JFP 2020): executable organization of incremental build/reuse strategies.
+https://www.microsoft.com/en-us/research/publication/build-systems-a-la-carte/
+
+P2 Bazel Skyframe official documentation: dependency registration, invalidation and
+change pruning are established. Hidden reads make reuse incorrect; matching an
+output can stop downstream recomputation. Its documented node granularity limits
+also motivate decomposing expensive work, not pretending this is a new principle.
+https://bazel.build/reference/skyframe
+
+P3 Vlachou et al., Reverse Top-k Queries (ICDE 2010): established threshold reuse
+and reverse relevance questions for changes in ranked data. Different implementation
+from this probe; sufficient to reject novelty of generic top-k impact reasoning.
+https://www.ds.unipi.gr/prof/cdoulk/papers/icde10.pdf
+
+P4 US20110173177A1, Sightful cache: efficient invalidation for search engine caching
+(priority 2010): new documents can invalidate cached queries even when their old
+result documents remain. The text also describes repairing cached result sets.
+This is a technical prior-art hit, not a legal validity/freedom-to-operate opinion.
+https://patents.google.com/patent/US20110173177A1/en
+
+P5 Zeng/Jin, FinCacheServe (arXiv:2607.26076v1, 2026 preprint): modern answer reuse
+binds request identity, document/evidence/tool versions, model and generation
+configuration. Its gate receives resolved retrieval evidence. This investigation
+does NOT attribute the positive-dependency-only control's insertion failure to
+FinCacheServe. Its GPU/full-answer results were not reproduced here.
+https://arxiv.org/html/2607.26076v1
+
+P6 US20110113408A1, Partial on-demand lazy semantic analysis: object-granular
+dependency and cached semantic computation are additional prior art.
+https://patents.google.com/patent/US20110113408A1/en
+
+Implementation references: sparse arrays and HashingVectorizer official APIs.
+Installed versions below govern this experiment; current web editions may be newer.
+https://docs.scipy.org/doc/scipy/reference/sparse.html
+https://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.text.HashingVectorizer.html
+
+Comparator ranking by locked decision:
+1. Conventional incremental top-k/materialized-view maintenance with identical
+   source/profile information: direct exact comparator I, implemented here.
+2. Full sparse exact retrieval F: correct conservative reference and output oracle,
+   not the strongest reuse baseline.
+3. FinCacheServe: relevant modern end-to-end answer-cache comparator for a future
+   neural serving trial; not implemented or ranked numerically against this probe.
+4. Positive-dependency-only D: intentionally incomplete negative control.
+
+Residual against I: NONE ESTABLISHED. Same exact kernel and ranking decisions;
+Garden adds source/status/receipt checks. Accordingly no novel scientific claim
+is opened. The bounded implementation improvements below remain useful engineering.
+
+13.5 TWO COMPLETED ENGINEERING CYCLES AND RESULTS
+
+Measured environment: Python 3.12.14; NumPy 2.3.5; SciPy 1.17.0; scikit-learn 1.8.0;
+Linux 6.18.44 x86_64, glibc 2.39. Local CPU; no GPU/model/API call. Results are warm
+in-memory replay measurements, not service traces from a deployed user population.
+
+Snapshot history (exact commits ordered oldest to newest):
+45d9093f45b968a05a38a5fc0d68ba14b90f6d0c
+ce2b1eaf6f37c31b845202655b09b8694791dd81
+193f454ff96419c568845ecd90f59cdd4171a602
+b9da78346f0ee38de5cdc154e522469066522e07
+512b7cbefa8d3bac9736f0bce7efa87db1bf50e0
+07025ddbf3f5ce044a63dac76f268ac30cc87899
+5f26e58e6a6cdb09e818d4969771d75e0c9f8a91
+98093b77b4d52fa63956f96d9ccc4686132124c9
+
+Transition | current paragraphs | added | removed | fallback queries | F pairs | I/G pairs
+1 | 22628 | 75  | 1   | 1 | 362048 | 23828
+2 | 22653 | 26  | 1   | 0 | 362448 | 416
+3 | 22719 | 67  | 1   | 0 | 363504 | 1072
+4 | 22918 | 200 | 1   | 0 | 366688 | 3200
+5 | 23579 | 662 | 1   | 0 | 377264 | 10592
+6 | 23629 | 66  | 16  | 2 | 378064 | 48314
+7 | 23504 | 253 | 378 | 4 | 376064 | 98064
+
+Initial snapshot: 117 text files, 22,554 paragraph records, 8,691,982 raw bytes.
+Final snapshot: 116 text files, 23,504 paragraph records, 9,417,908 raw bytes.
+Queries: the 16 frozen subjects in the protocol. Unchanged retrievals: 91/112
+post-update query results; changed: 21/112. Of these changes, 14 were missed by
+positive-dependency-only reuse. This is descriptive workload evidence, not an
+independent error-rate estimate or proof of real RAG factual accuracy.
+The unchanged results comprise 736,983 bytes of paragraph content across requests.
+Those bytes were counted, not sent over a network; no network saving was measured.
+
+Median CPU seconds across nine runs (seven updates; cold start separate):
+Implementation                         | F full | I conventional | G with Garden checks
+Initial, retrieval only                | 0.055220 | 0.011345 | 0.012603
+Initial, including shared preparation  | 1.271567 | 1.226960 | 1.227559
+Block store, retrieval only            | 0.066851 | 0.018419 | 0.018821
+Block store, including preparation     | 0.308832 | 0.259760 | 0.258658
+Including cold start, initial          | 1.839834 | 1.796290 | 1.796318
+Including cold start, block store      | 0.548590 | 0.502931 | 0.504145
+
+Shared preparation median: initial 1.216039 CPU s; block store 0.240438 CPU s.
+It includes parsing changed files, source hashing/membership, encoding, index
+construction and related bookkeeping. Git snapshot loading and instrumentation are
+outside serving timing in all arms. F also benefits from the repaired block store.
+
+Inclusive wall-time medians, same seven updates:
+Initial F/I/G: 1.271580 / 1.226978 / 1.227576 s.
+Block F/I/G: 0.308962 / 0.260076 / 0.258793 s.
+
+Paired differences are the relevant within-cycle comparisons:
+- Initial median F minus G: 0.042288 CPU s; median paired reduction including
+  preparation 3.28%. Ratio of separate medians gives 3.46%; do not confuse them.
+- Block median F minus G: 0.047328 CPU s; median paired reduction including
+  preparation 15.29%. Ratio of separate medians gives 16.25%.
+- Median paired G minus I overhead: initial +0.001169 CPU s; block +0.000630 CPU s.
+  The small opposite ordering of some separate inclusive medians is timing noise,
+  not evidence that the same kernel plus receipts beats conventional I.
+- Repair comparison G initial -> G block: 1.227559 -> 0.258658 CPU s for seven
+  updates, 78.93% reduction of this prototype's measured pipeline. This cross-cycle
+  implementation result is not a blind matched-budget discovery advantage.
+  Including cold start, 1.796318 -> 0.504145 CPU s, about 71.93%.
+
+Initial G inclusive range: 1.160485..1.272428 CPU s.
+Block G inclusive range: 0.241106..0.285434 CPU s. These are nine-run descriptive
+ranges, not confidence intervals for a production population.
+
+Sparse numerical storage at final snapshot:
+- Materialized per-source CSR: 9,810,792 bytes.
+- Immutable shared-vector blocks, including retired vectors: 5,048,728 bytes,
+  48.54% less in these numerical arrays.
+- Block store: 10,784 retained unique vectors; 10,386 currently active. All 23,504
+  path-qualified source records retain distinct memberships.
+Python dictionaries, row maps, source strings, cache policy, residency duration,
+replicas, network transfer and compaction are not included in those array bytes.
+Therefore 48.54% is not a total-memory, cloud-bill or source-compression result.
+
+All outputs in both cycles matched the original full-matrix exact operator:
+128 query/snapshot cases each, of which 112 follow an update. Nine timed repetitions
+are repeatability observations, not 1,152 independent scientific tasks.
+Attack outcomes: insertion/deletion/tie fixtures exact; changed profile requalifies;
+incomplete feed and wrong lineage UNKNOWN; missing authority BLOCKED; changed live
+epoch STALE. The fixtures do not validate a concurrent service or real auth system.
+
+13.6 RANKED GAPS, LIMITS AND NEXT DECISION
+
+Rank 1 — Rebuilding unchanged index representation.
+Observed bottleneck in the first local implementation; fixed by immutable shared
+blocks. Largest measured local CPU improvement. Mechanism KNOWN; additional
+Garden advantage over conventional implementation NOT ESTABLISHED. It is a repair
+to this prototype, not evidence that modern production vector databases do this
+inefficiently.
+
+Rank 2 — New source competes with unchanged old support.
+Observed 14 exact-retrieval counterexamples. Complete delta + top-k maintenance
+repairs them. Mechanism KNOWN from search invalidation/IVM; a correctness repair,
+not a financial windfall. Do not blame this failure on an untested modern product.
+
+Rank 3 — Repeated support transport / model generation.
+91/112 retrieval sets unchanged here, but prompt/tool/model/caller/current-state
+compatibility, retrieval quality, production frequency and actual marginal costs
+are unmeasured. Not activated as a new claim; modern answer-cache prior art applies.
+
+Unresolved relationships: lexical retrieval to correct human answer; real caller/
+permission state to cache eligibility; concurrent update serialization; global
+scoring statistics to invalidation; retained retired blocks to mandatory erasure;
+bounded cache eviction/compaction to total cost; actual workload to commercial
+marginal prices. None is asserted absent from specialist methods.
+
+Engineering decision: use known incremental indexing/retrieval where measured
+workload economics justify it; retain current-source and status checks. This pass
+shows a small real CPU reduction on public repository data, not a new scientific
+law, a new cache algorithm, industrial-scale savings or measured money. At this
+scale the seven-update repair saves about 0.969 process-CPU seconds; large percentage
+does not imply a large bill. The strong conventional arm recovers the same benefit.
+
+Scientific disposition: scoped prior art checked; existing-method implementation
+tested; new scientific residual NONE ESTABLISHED; frontier novelty NOT CLAIMED;
+independent replication NOT PERFORMED; method advantage UNMEASURED; commercial
+Delta_net UNKNOWN; canonical admission NONE. No active frontier claim remains.
+
+13.7 REPRODUCTION RECORD (NO RUNTIME FILES ADDED)
+
+First outcome-free protocol commit:
+d830e6fdf5c0695123bfea90bef2e40d03e076e2
+Second protocol, after retaining first outcomes but before repair implementation:
+99de6e63cb138c201279b4d9b8eee433cc1e798c
+Frozen operator/profile hash:
+6b67da72875e26d8c15192c87484f21dfbd6c61522593931a1e3356f4bf210f2
+
+Temporary measurement implementation hashes (code intentionally outside repository):
+first 2237512aac30baf661155842bfe2430037ba5017457e7be42686d61b82989392
+repair 19002ae9f17c1e3475a2be3e9fe6fadfe948e6a04c2d0fb5c9dedfde670e6dc5
+Hashes identify local implementations; they are not a durable source distribution
+or independent verification. The plain-text recipe below permits reimplementation;
+exact timing is hardware/runtime dependent. No hidden implementation is necessary
+to understand the research claim. A publishable executable benchmark remains OPEN.
+
+Recipe:
+1. Read each pinned Git tree; include every tracked .md/.txt strict UTF-8 file.
+   Fetch immutable blob contents once outside measurement, preserving all files.
+2. Split text on newline + optional spaces/tabs + newline. Discard empty segments,
+   then slice each paragraph every 2048 Unicode characters without stripping.
+   Identity = path + ":" + SHA256(UTF-8 chunk) + ":" + within-file identical-hash
+   occurrence index, starting zero. Do not remove duplicate source occurrences.
+3. HashingVectorizer settings are frozen above. Remaining sklearn 1.8.0 defaults:
+   input content; UTF-8 strict; word analyzer; lowercase; no stop words or accents
+   stripping; unigrams; default Unicode word token pattern, two or more word chars;
+   no custom tokenizer/preprocessor. Binary features, no normalization/IDF.
+4. Maintain file/blob chunk cache and exact text-hash vector cache. First cycle
+   materializes a CSR row per sorted current source identity on every update.
+   Second stores each new unique text vector once in immutable sparse blocks,
+   keeps a current source-to-vector row map, and uses active membership for searches.
+   Retired block rows may remain stored but never become active implicitly.
+5. F scores current rows against all 16 queries; stable sort descending integer
+   overlap, with identity-ascending ties, gives top-5.
+   I scores added records; if any old winner disappeared, rescore that query's
+   current corpus. Otherwise merge old winners with the added-record top-5.
+   G uses I plus profile/lineage/feed/current-epoch gates and SHA256 of serialized
+   (query index, ordered source identities/scores/content hashes) support receipt.
+   Receipt compilation creates no authority.
+6. Compare exact ordered outputs to F at every snapshot. In the repair cycle,
+   also compare with the original materialized-matrix F outputs.
+   Run one warm-up; nine measured iterations; rotate F/I/G ordering by iteration
+   modulo three. Same preparation state within each iteration; fresh caches at
+   the start of each complete eight-snapshot run. No fit, outcome tuning or
+   stochastic model generation. Retain medians, paired differences and ranges.
+7. Reproduce the nine attack cases from 13.2/13.5. For insertion/tie/deletion, a
+   minimal fixture uses d0..d9 with scores 10..1; insert "new" at 100; remove d0;
+   remove d9; or insert "a" at score 6. The tie must replace d4. Change each
+   qualification input separately; it must block or require rebuilding.
+
+Source text hashes at the pinned base:
+Abstraction delta 90a58c337bc87c2e445eb56d6197cddea845f74485339e074b0818d70dae8479
+TREE_CORE 4af3a2c4c8d8577909735fb61c42e0f43324dc0147d8b24146b4561ee56511fa
+Technical f61bc8e4f12418498f114f586c2d4e58b1ca575a788e0e5194430088a0f8f18f
+GCSC coverage 27428feebc2fe8f2a4a9a5dd8fc5d680d36fb18623575ef19235427f9021e3b1
+GCSC detailed 37668b17f843428ece0466b92484fb656d8c5d1faa049a6be88db506437ac564
+RSDC 4feeb061748033c5e2bf3d83c25041093c5b06b0add7841fad6e33af690f86d4
