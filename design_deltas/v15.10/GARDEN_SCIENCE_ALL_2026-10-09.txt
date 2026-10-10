@@ -8674,3 +8674,27 @@ authority. No human-safety or constitutional rule is cached away.
 
 This freeze precedes code and outcome collection, but it is not independent or
 blinded preregistration. The proposer has seen the corpus and literature.
+
+13.1 SECOND ENGINEERING CYCLE — DECLARED AFTER FIRST RESULTS
+The first frozen cycle is complete: 128 exact query/snapshot matches, including
+112 transition comparisons; 14 positive-dependency-only stale retrieval cases.
+Median CPU, seven transitions: F retrieval 0.055219674 s; I 0.011344892 s;
+G 0.012603173 s. Inclusive of common preparation: F 1.271566534 s,
+I 1.226959578 s, G 1.227559207 s. The 77% retrieval reduction is only 3.46%
+of inclusive CPU, and G is slower than I. No novelty or financial gain established.
+
+A separate engineering repair now targets observed whole-index materialization:
+retain immutable sparse blocks and score only additions, using complete active
+membership masks for fallback searches. Exact source identities, profile and
+final-use gates remain. This is established structural sharing/incremental indexing,
+not a new hypothesis. First-cycle outcomes are retained, not replaced.
+
+Freeze before second implementation/outcomes: same revisions, queries, profile,
+one warm-up plus nine rotated runs, and previous correctness/attack conditions.
+Compare full sparse retrieval, conventional incremental maintenance and Garden
+wrapper with the same shared block storage. Account for input parsing, extraction,
+hashing, encoding, active membership, result maintenance and receipt work.
+Report old versus repaired complete local CPU as an engineering comparison;
+report Garden versus conventional incremental within the repaired implementation.
+Do not ascribe a shared implementation improvement to Garden-specific novelty.
+No new model call or financial extrapolation; stop after this repair comparison.
