@@ -2,9 +2,10 @@ GARDEN v15.10 — SCIENTIFIC DISCOVERY AND ECONOMIC VALUE REGISTER
 Consolidated plain-text edition | Research through: 10 October 2026 | Organized: 10 October 2026
 NONCANONICAL RESEARCH — no scientific admission or canonical Garden change.
 
-RESULT: zero verified novel Garden discoveries; no measured incremental Garden savings.
-CURRENT QUEUE: zero frontier experimental claims. Computing/data reuse evaluation
-completed in chapter 13; known-method CPU savings measured locally, money UNKNOWN.
+RESULT: zero verified novel Garden discoveries; no measured incremental monetary savings.
+CURRENT QUEUE: one narrow computing claim, SCI-PALETTE-20261010 (chapter 14),
+with bounded numerical support; novelty and production net value UNRESOLVED.
+Chapter 13's known-method computing/data reuse evaluation remains complete.
 A3 is PARKED_CONTEXT_REQUIRED after the user-directed switch to computing.
 
 CONTENTS
@@ -21,9 +22,10 @@ CONTENTS
 11. One hundred industrial investigations and independent reviews
 12. Archive locations, cleanup record and section crosswalk
 13. Computing/data reuse: source mapping, two engineering cycles and measured limits
+14. One computing claim: finite-support contraction, distinct gradients and CPU tests
 
 READING RULES
-Current policy is in chapters 1-2 and the dated chapter-13 queue update; chapter 3
+Current policy is in chapters 1-2 and the latest chapter-14 queue update; chapter 3
 preserves the earlier A3 review. Chapters 4-11 preserve historical scientific
 work: a proposed test, scenario saving or old ACTIVE label does not activate a
 claim. Case IDs and numerical assumptions retain their original scope. Distinct
@@ -90,9 +92,10 @@ establish novelty, replication or net value.
 
 1.3 OPERATIVE QUEUE AND STATUS OVERLAY
 
-Maximum concurrent experimental claims: ONE. Current experimental claims: ZERO.
-Current user-directed focus (10 October 2026): computing/data reuse, chapter 13.
-Its two bounded known-method engineering cycles are complete; no frontier claim
+Maximum concurrent experimental claims: ONE. Current queued claim: ONE,
+SCI-PALETTE-20261010 (chapter 14), local tests complete, independent review
+and novelty unresolved. No background execution is running.
+The chapter-13 computing/data reuse cycles are complete; no frontier claim
 was admitted. A3 is PARKED_CONTEXT_REQUIRED / NO_DEFENSIBLE_RESIDUAL_ESTABLISHED.
 A3's prior problem review remains in chapter 3; its earlier stop is preserved.
 The computing work does not restart any parked industrial mechanism.
@@ -9343,3 +9346,289 @@ Delta_net=N_valid*(t_baseline-t_candidate)*price_per_CPU_second
 N_valid, production pricing and implementation costs are UNKNOWN.
 No industry-total multiplier and no claim of large cash savings.
 
+
+14.5 Executed results and negative controls
+
+Protocol freeze commit: a411d5ea71565883c9f105f7fcf1934f304f00c6.
+Bootstrap intent commit: be5eef7ea3be36e08699688ff945121b09528c0c.
+Execution date: 2026-10-10. Hardware: AMD EPYC 9V74; CPU-only.
+Python 3.12.14, PyTorch 2.14.1+cpu, torch/BLAS one thread.
+These are local, same-process, non-blinded numerical benchmarks. No external
+model inference service, paid review or plant/production experiment was run.
+
+Primary table: median PROCESS CPU milliseconds per forward plus backward,
+nine rotating repetitions; original dense n-by-n U/B/G inputs; exact palette
+discovery/masks inside every grouped evaluation. Positive reduction is good.
+The compiled column is the stable direct kernel compiled with torch.compile.
+dtype  n    original_ms  direct_ms   compiled_ms  grouped_ms  reduction_vs_fastest
+f64    16   0.532838     0.215689    0.210502     0.294675    -39.99%
+f64    50   9.878763     2.299411    1.828324     0.701799    61.62%
+f64    100  89.233327    19.124450   11.200048    2.053748    81.66%
+f64    200  1014.513719  289.604481  75.768640    8.219769    89.15%
+f32    16   0.392841     0.291031    0.211753     0.327034    -54.44%
+f32    50   5.402231     3.701626    1.239353     0.597103    51.82%
+f32    100  51.271893    24.111938   6.513865     1.384768    78.74%
+f32    200  559.281672   271.317231  44.829743    5.028248    88.78%
+
+Thus the frozen >=20% threshold passes at n=50 and n=100 for float64.
+The usual float32 precision also shows a measured gain at n>=50.
+n=16 is a negative result: grouped loses to the faster existing implementation.
+These are kernel savings, NOT overall causal-discovery training speedups.
+Compiled-original follow-up at n=50/100 in both precisions also passed
+correctness, but was slower than compiled direct; it does not replace the
+faster comparator to inflate the headline.
+
+The frozen 48 stress comparisons passed: two precisions, four sizes, three
+temperatures, two alternative kernels. Each comparison checked forward,
+dU and dB. Maximum absolute discrepancy among float64 stress comparisons
+was 1.14e-13; float32 was 6.11e-5, within the frozen tolerances.
+Eight central finite differences independently perturbed original coordinates,
+including broken ties; maximum absolute discrepancy 2.96e-9.
+This checks a separate numerical formula, not independent human replication.
+
+All 51 conditioning contexts (unexcluded plus every excluded node), n=50,
+25 recurrent updates, float64, fixed linear objective:
+ original: 13.474474 CPU s; direct: 3.010370 CPU s;
+ compiled direct: 2.553575 CPU s; grouped: 0.593840 CPU s.
+Maximum grouped output discrepancy: 1.31e-12; gradient discrepancy: 3.42e-13.
+The grouped CPU reduction versus compiled direct is 76.74%, saving 1.959735
+CPU s for this specified recurrence workload. This is ONE timing observation,
+not a nine-repeat confidence interval. Compiled wall time includes a new
+compilation at this call shape, so its 4.442457 s wall observation is not
+an uncontaminated steady-state latency claim. The primary table above is
+the appropriate steady-state comparison.
+
+Implementation execution note:
+The primary process had already loaded its source when a proposed streaming
+recurrence edit was saved locally. That edit was not used for its recurrence
+result; the original full-graph evaluation produced the figures above.
+The exact executed first version is reconstructed and hashed below. A later
+follow-up imported unchanged kernel definitions only. No OOM, interrupted
+numerical run or partial result was counted as a pass. Attempts to signal the
+running process from a different process namespace did not reach it.
+This harness-maintenance event changed no primary inputs or acceptance target.
+
+Null findings:
+- q=1, all-unique small matrix and a changed single class member all preserved
+  outputs and gradients when class membership was rebuilt.
+- Deliberately tying equal-valued parameters produced a maximum dB error of
+  2.130795 in the small counterexample. Forward equivalence is insufficient.
+- n=16, all 256 B values unique: direct 0.257761 ms; grouped 8.427706 ms.
+  Grouping loses badly (about 32.7x slower); it needs a qualified dispatch.
+- n=16, q=1: direct 0.201849 ms; grouped 0.163792 ms in the supplemental run.
+  This was not an extra primary success endpoint.
+- The prototype rebuilds memberships for every call; no stale-mask reuse was
+  used. A production dispatcher/fallback is not implemented in Garden.
+- Nonfinite input handling, automatic eligibility selection, higher-order
+  derivatives and live update concurrency were not tested.
+
+Compilation was charged separately, not hidden: initial direct compilation/
+first calls took about 13.35 s (f64 n=16), 2.91 s (f64 n=50), 3.35 s
+(f32 n=16), and 2.70 s (f32 n=50). Larger dynamic shapes mostly reused code.
+These are wall times including first execution, not exact compiler CPU costs.
+The grouped arm used eager tensor/BLAS operations and no torch.compile step.
+No installation or developer-time saving was inferred from this.
+
+Application boundary: the pinned task_losses method calls both d-connection
+and d-separation paths, so unreachability is an actual downstream training
+dependency when reuse_R_for_U is false. Positive reachability, final losses,
+sampler trajectories, statistical discovery quality and complete training
+runtime were NOT reproduced in this experiment. It is invalid to apply the
+kernel reduction percentage to total training cost.
+
+14.6 Adversarial prior-art result and remaining novelty claim
+
+Specific implementation comparison: positive numerical/CPU evidence above.
+General method originality: NOT CLAIMED. Finite dictionary reuse, algebraic
+factorization, compressed execution and separate differentiation semantics
+have significant prior art:
+
+P-CLA. Elgohary et al., VLDB 2016, Compressed Linear Algebra:
+https://vldb.org/pvldb/vol9/p960-elgohary.pdf
+Lossless value-based matrix representation and computation are established.
+This defeats any claim to invent compute-on-compressed-values generally.
+
+P-LUT. Park et al., LUT-GEMM, ICLR 2024:
+https://arxiv.org/abs/2206.09557
+Lookup-based operations for quantized matrix multiplication are established.
+Our inputs use an existing exact support, but that difference alone proves
+neither originality nor economic superiority.
+
+P-KEOPS. KeOps:
+https://www.kernel-operations.io/keops/index.html
+Formula-defined reductions with automatic derivatives can avoid large
+intermediate tensors. No KeOps/CUDA comparison was run. Its existence defeats
+a claim that ordinary engineers cannot avoid cubic temporary storage.
+
+P-AD. Shaikhha, Huot and Hashemian, CGO 2024 / arXiv 2303.07030:
+https://www.pure.ed.ac.uk/ws/portalfiles/portal/470102594/ShaikhhaEtalCGO2024ATensorAlgebraCompiler.pdf
+Differentiating the logical computation separately from optimized sparse
+storage is established. This is particularly relevant adverse evidence
+against broad novelty for keeping coordinate derivatives during compression.
+
+P-DS. Apache SystemDS compressed column operations:
+https://systemds.apache.org/docs/2.1.0/api/java/org/apache/sysds/runtime/compress/colgroup/AColGroup.html
+Existing compressed scalar and aggregate operations further limit novelty.
+
+Patent screen (technical overlap only, no legal or patentability conclusion):
+https://patents.google.com/patent/US20040107091A1/en
+Nonlinear lookup-table compression and associated gradient/slope information.
+https://patents.google.com/patent/US20220171627A1/en
+Matrix compression instructions, value dictionaries and preserved positions.
+https://patents.google.com/patent/US8775495B2/en
+Compressed sparse matrix execution and amortization of compression cost.
+These sources defeat broad lookup/compression inventions; none was established
+here to contain the exact frozen DAGPA forward-and-full-coordinate-VJP
+protocol. That is a limited search outcome, NOT evidence of no such prior art.
+
+Search families included the decision (accelerating DAGPA/repeated nonlinear
+reductions), mechanism-independent compressed linear algebra, finite-support
+kernels, automatic differentiation through compression, lookup methods and
+patents. Some exact-word searches returned irrelevant/general hits; those
+queries provide no positive novelty evidence. Coverage of publications,
+languages, patent families, unpublished work and industry practice is incomplete.
+
+The only surviving research question is now narrow:
+Is this exact finite-support negative Bellman-Ford forward/VJP specialization
+an unreported useful implementation contribution beyond existing compiler/
+compressed-algebra capabilities, with positive end-to-end cost after integration?
+Status: NOVELTY_UNRESOLVED; not HISTORICAL_NOVELTY_DEMONSTRATED.
+
+An ordinary specialist supplied the same factorization and derivative contract
+can implement exactly the same kernel. The conventional dictionary control is
+mathematically identical and was not counted as an independent discovery arm.
+No Garden-specific speed advantage or matched-budget discovery advantage was
+measured. Garden helped direct the representation/ownership audit in this
+session; that process attribution is not causal experimental evidence.
+
+14.7 Ranked gap, value and falsifiers
+
+Rank 1, and only open claim: SCI-PALETTE-20261010.
+Material gap: loss of finite-support information between discrete sampling and
+nonlinear contraction, combined with loss of independent coordinate identity
+if naive value deduplication is used for differentiation.
+Engineering evidence: exact-on-tests kernel implementation faster than the
+strongest tested CPU baseline at n>=50; slower at small n or high diversity.
+Value rank: positive measured kernel CPU saving, production net dollars UNKNOWN.
+Novelty rank: unresolved narrow application; high overlap in underlying methods.
+
+The measured n=100 float32 difference is 0.005129097 CPU seconds per update.
+The n=50 float32 difference is 0.000642250 CPU seconds per update.
+These are absolute observed amounts, not claims that every job qualifies.
+Use only a traced count of eligible production updates in the economic
+contract in 14.4. Costs for integration, regression qualification, maintenance
+and fallback must be subtracted. No dollar, adoption or worldwide saving is
+estimated without those data.
+
+Whole-job limit: if fraction f of actual baseline CPU time lies in eligible
+updates and the observed kernel time ratio transfers as r, then the ideal
+whole-job ratio before overhead is (1-f)+f*r. f and transferability are UNKNOWN.
+A faster kernel cannot establish a correspondingly faster entire system.
+
+Predeclared prediction survived locally: >=20% saving at n=50 or n=100
+against the tested qualified CPU alternatives, preserving full first gradients.
+Still-live falsifiers:
+- an existing method already supplies this exact protocol;
+- a stronger fused/compiled implementation erases its incremental saving;
+- actual edge values do not retain a small palette often enough;
+- full training changes outputs/decisions materially through floating-point
+  differences, or the optimized fraction is too small to repay overhead;
+- a priced deployment has Delta_net<=0 after integration and ongoing costs.
+
+Current disposition: BOUNDED_NUMERICAL_SUPPORT / INDEPENDENT_REVIEW_PENDING.
+One claim remains in the research queue; no next claim is opened. Local runs
+are complete; no background worker or unattended ongoing search is claimed.
+
+14.8 Coverage closure, receipts and reproducibility limits
+
+Coverage completed: 12 situation records, 18 interfaces inspected, 12
+contracts stated, 5 material combinations audited, 1 experimental gap tested.
+Kernel equivalence scope: 48 stress comparisons plus primary/sensitivity
+checks, 3 correctness nulls, 8 finite-difference coordinates and one
+51-context recurrence comparison. Counts overlap by purpose; they are not
+independent discoveries or independent replications.
+Five named established method families and three patent documents delimit the
+claim; unresolved relationships are (1) strongest specialized backend,
+(2) full training/decision equivalence, (3) protocol-level prior art and
+(4) deployment net value. No claim of exhaustive GCSC/domain coverage.
+
+The ten actual v15.10 facet names and their bounded dispositions:
+IdentityLifecycle: distinct edge coordinates survive value sharing.
+ScopeContext: fixed CPU, dtype, alpha, support and excluded-node profile.
+EpistemicsProvenance: pinned source, frozen protocol, tests versus claims.
+AuthorityHumanBoundary: no generated admission or third-party changes.
+EffectsSafety: isolated numerical runs; no clinical/industrial causal action.
+DependencyValidity: rebuild memberships when values or masks change.
+ResourceTermination: bounded sizes, repetitions and recurrence depth; stopped.
+PrivacyRetention: public source and synthetic arrays only; no private data.
+AuditExplanation: equations, adverse cases, timings and limitations retained.
+RecoveryEvolution: slower/ineligible inputs require ordinary baseline dispatch.
+
+TREE/RSDC correspondence is conceptual and source-bound:
+S0 source catalogue analog = pinned upstream definitions and frozen contracts;
+S1 analog = the bounded seed-local algebraic projection and its tests;
+S2 analog = ordered evidence/hashes. The TREE executable itself was not run.
+RSDC-03 motivates preservation of owners across compaction; RSDC-04/07
+motivate membership invalidation/requalification. These remain NONCANONICAL
+candidate ideas, not new controlling rules or implemented Garden subsystems.
+TREE determinism/gzip/CRC/schema/source-retention debt remains OPEN.
+
+Exact Garden source ownership at base
+7775c39b6f034eafc1fa58edacec1493734e8cb5 (SHA-256 file hashes):
+v15.10/V15_10_ABSTRACTION_GCSC_DELTA.md
+ 90a58c337bc87c2e445eb56d6197cddea845f74485339e074b0818d70dae8479
+v15.10/GARDEN_TECHNICAL_v15.10_FULL_DELTA.txt
+ f61bc8e4f12418498f114f586c2d4e58b1ca575a788e0e5194430088a0f8f18f
+v15.10/TREE_CORE_v0.8.1_2026-09-23.txt
+ 4af3a2c4c8d8577909735fb61c42e0f43324dc0147d8b24146b4561ee56511fa
+v15.10/RECURSIVE_SEMANTIC_DISCOVERY_COMPRESSION_RSDC_001.md
+ 4feeb061748033c5e2bf3d83c25041093c5b06b0add7841fad6e33af690f86d4
+v15.9.1/GCSC_FUNCTIONAL_CONTRACTS.md
+ 05cc4ed3c1d310ffa7efcce571946d9d9d3fdb94a8470496f80febe77c84c08a
+v15.9.1/GCSC_SAL_SAC_DETAILED_SEMANTIC_PATCH.md
+ 37668b17f843428ece0466b92484fb656d8c5d1faa049a6be88db506437ac564
+All six paths above are relative to design_deltas/. Hashes identify evidence,
+not correctness or admission.
+
+Temporary local execution receipts (not added to the repository):
+Upstream dagpa.py bytes SHA-256:
+ 8cc5c4d962466542789252a39430e4222ae89bc091a0a0eef3cbda189ae45b30
+Exact primary harness first-version reconstruction SHA-256:
+ 8f1459cdbfd920ad238487885d988416e5494111517d9015dd180e6fd07c52ba
+Primary results SHA-256:
+ 64604e2fb5782b1a2b33416a61cf469727290b541b5cae0fa3f46bd892079c34
+Follow-up harness SHA-256:
+ 12b3873f5ec6f9b4343617382c4efc2ab48e62a76eab534d7d59ef79802ce69b
+Follow-up results SHA-256:
+ 4fc20f963893d427fae4a6260a19298023abda7c1bd694b6fa79fbf721741cfd
+
+Replay recipe is the input generator, equations, coordinate VJP, baseline
+source pin, parameters, tests and timing order in 14.1-14.5. Regenerate
+randint logits first, then uniform U, then Gaussian G with a local torch
+Generator; mask diagonal and row/column 1; use autograd.grad with G.
+For recurrence use seed 20261060, draw logits then Gaussian G, mask diagonal,
+initialize U=-300*identity, apply the 25 updates separately in each of the
+51 contexts, stack outputs and differentiate their G-weighted sum.
+Actual primary implementation uses one accumulated graph for that recurrence.
+Finite differences use n=5, alpha=1, epsilon=1e-5 and coordinates
+(0,2),(2,3),(3,4),(1,0) independently for U and B.
+Exact timings vary by machine and load.
+
+Per the user's no-runtime-files preference, this repository contains no new
+Python/script/JSON artifacts. The executable harness and raw output were local
+intermediates, not a durable public benchmark package. Therefore full
+independent executable replay/replication remains NOT ESTABLISHED from this
+TXT alone; source recipes/hashes must not be mislabeled as replication.
+
+Status axes at close of local execution:
+Hypothesis formulated: YES, narrow engineering specialization.
+Mathematical derivation: explicit, internally checked; external review absent.
+Numerical support: YES, within recorded precision/input boundaries.
+Prior-art search: PARTIAL with significant generic overlap.
+Historical novelty demonstrated: NO.
+Frontier novelty: UNRESOLVED.
+Independent replication: NO.
+Full-system / production validation: NO.
+Incremental monetary value measured: NO.
+Garden method advantage: UNMEASURED.
+Scientific/canonical admission: NONE.
