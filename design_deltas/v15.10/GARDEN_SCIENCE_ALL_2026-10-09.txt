@@ -12450,14 +12450,68 @@ END POST-REVIEW COMPOSITION SOURCE
 END CHAPTER 17. No canonical sources changed; no self-admission.
 
 
-WORKSTREAM INTENT ONLY: SCI-PHY-XFER-20261010
-{
-  "schema": "GardenChatGPTWorkstreamIntent/v1",
-  "workstream_id": "chatgpt:physical-transfer-cooling-20261010",
-  "work_package_id": "SCI-PHY-XFER-20261010",
-  "branch": "chatgpt/physical-transfer-cooling-20261010",
-  "base_sha": "54b1789f8cdcae4c00e8c057987ae6e592d51fb8",
-  "dependency_intent_ids": [],
-  "integration_strategy": "DIRECT_IF_NO_COLLISION",
-  "substantial_edit_started": false
-}
+18. PHYSICAL INVARIANT TRANSFER — TWO-PHASE SERVER COOLING
+Work SCI-PHY-XFER-20261010; 10 October 2026; NONCANONICAL RESEARCH.
+Source: user-supplied G15.10-PHY-XFER-003 consolidation summary, plus retained
+Garden sources. Exact patch artifact was absent from verified main
+54b1789f8cdcae4c00e8c057987ae6e592d51fb8 and its open PRs at preflight.
+This is a bounded prototype of supplied steps, not certification against the
+unseen full patch. Missing COMPLETE/r6 source remains unresolved (chapter16).
+Prior RO qualification is complete; previous computing claim remains parked.
+Zero active admitted scientific experimental claims; one method-qualification
+attempt. No new candidate catalogue, plant actuation or canonical changes.
+
+18.1 Frozen qualification protocol — BEFORE numerical execution
+Decision: reduce dissipative inlet pressure head required for stable parallel
+two-phase GPU cold-plate operation, while preserving branch delivery, thermal
+limits, throughput, component reliability and full net cost.
+Source-domain motif: electrical differential series-RC damping branch.
+Proposed target: sealed diaphragm compliance plus resistance between two
+hydraulically distinct branch pressure taps. No steady mass bypass is assumed.
+Known comparators: ordinary circuit/hydraulic small-signal analysis; contemporary
+passive constant-flow valves (US20250071954A1); cross-connected microchannels
+(US8479806B2); differential hydraulic dampers (US20240010039A1 family); and
+frequency-selective resistance/accumulator dampers (US11440366B1).
+Broad novelty is already defeated by prior art. GPU-specific applicability and
+net improvement over these feasible alternatives remain UNKNOWN, not a passed
+residual. The following tests calibrate transfer/falsification mechanics; they
+do not advance a novel physical hypothesis into an experiment pipeline.
+
+Bounded operator: normalize four authored motif roles (left/right port,
+dissipator, store); enumerate all 24 bijections; reject role/edge mismatches;
+check effort-times-flow and stored-energy dimensions, coefficient sign,
+frequency/mode scope, observability of distinct pressure taps, and assumptions;
+derive a port balance only for eligible mathematical transfers; sort receipts
+deterministically, including rejections and UNKNOWNs. No autonomous extraction
+of governing equations from literature or complete GCSC/SAL implementation.
+Two orientation-equivalent electrical/hydraulic RC matches are expected.
+A claimed thermal temperature-times-heatflow power pair and pressure-times-
+massflow without density conversion must be rejected. Negative resistance,
+unknown target validity, ideal-common-header taps and insufficient diaphragm
+stroke must not pass their respective target qualifications.
+
+Frozen numerical fixtures (normalized illustrative coefficients, not plant):
+R=C=C0=L=1; destabilizing conductance g=0.1. Dynamic tank coordinates p,i,z:
+  dp/dt=(g-1/R)*p/C0-i/C0+z/(R*C0);
+  di/dt=p/L; dz/dt=(p-z)/(R*C).
+Without the RC branch use the p,i subsystem dp/dt=g*p/C0-i/C0.
+A conventional DC damping comparator adds conductance G=0.2 to that subsystem.
+Check eigenvalues, Routh-Hurwitz coefficients, port-energy identity and
+continuous matrix-exponential response over 0..40 normalized time units
+(401 points), initial p=1,i=z=0. Prediction: AC damping stabilizes this
+oscillatory fixture; ordinary matrix analysis makes the identical prediction.
+
+Static counterexample uses only p,z:
+  dp/dt=(g-1/R)*p/C0+z/(R*C);
+  dz/dt=(p-z)/(R*C).
+Its determinant is -g/(C0*R*C)<0, so one positive pole persists. Test R,C in
+{0.5,1,2} with g=C0=0.1,1 respectively (nine combinations); no fitting,
+random search, plant calibration or physical-failure forecast.
+Energy identity: with H=(C0*p^2+L*i^2+C*z^2)/2,
+  dH/dt = g*p^2 - (p-z)^2/R.
+This is a normalized incremental model with an active energy term, not proof
+that an externally heated boiling loop is passive. Actual two-phase model,
+pump curve, delays, cavitation, stroke/fatigue and asymmetric-load validation
+remain required. No percentage industrial saving or dollar amount is forecast.
+No Test-A 20-transfer historical benchmark or blinded Test-B claim is made.
+
