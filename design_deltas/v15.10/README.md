@@ -16,6 +16,9 @@
 
 8. [INV-DISC-001 preliminary invariant discovery](INV_DISC_001_PRELIMINARY.md) — corrected sign convention, nonlinear inequality benchmark protocol and executed 20-case symbolic control; [reproducible script](inv_disc_001_control.py). **Not a Garden advantage test.**
 
+9. [INV-DISC-001 lessons and 100-system symbolic controls](INV_DISC_001_LESSONS_AND_CONTROL_RESULTS.md) — corrected analytic proof, 99/100 sufficient-condition certificates, limitations and benchmark plan; [runnable Python](inv_disc_001_100_controls.py).
+10. [INV-DISC-100 candidate portfolio](INV_DISC_100_CANDIDATE_PORTFOLIO.md) — 100 structured research questions, **all unverified for novelty and untested for Garden advantage**.
+
 ## Supporting artifacts
 
 - [Technical full delta](GARDEN_TECHNICAL_v15.10_FULL_DELTA.txt) — supporting historical technical design text; [scope note](TECHNICAL_DELTA_GUIDE.md).
