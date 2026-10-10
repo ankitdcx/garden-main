@@ -2,6 +2,15 @@
 
 **Status:** NONCANONICAL WORKING DESIGN. Garden v15.5 remains canonical; no file here grants authority or self-admission.
 
+## Consolidated scientific discovery research (2026-10-10)
+
+**Start here for today's scientific discovery work:**
+
+- [Unified Scientific Discovery Theory](G15_10_UNIFIED_SCIENTIFIC_DISCOVERY_THEORY.md) — **primary** noncanonical research synthesis; centers coverage-guided consequence discovery (CGCD-001), preserves PHY-XFER as a supporting mechanism, corrects prior claims and defines controlled evaluation.
+- [All Scientific Ideas Register](G15_10_ALL_SCIENTIFIC_IDEAS_REGISTER.md) — **single** inventory of 132 historical entries (100 template cells + 22 transfer candidates + 10 applied ideas), with overlap warnings and zero validated novelty/advantage.
+
+The earlier PHY-XFER, INV-DISC, screening and audit files are retained as **historical source/receipts**, not competing controlling designs. The original 70 toy passes do not validate physical-domain hypotheses. No candidate is canonically admitted, and v15.5 remains canonical.
+
 ## Recommended reading order
 
 1. [Abstraction and GCSC delta](V15_10_ABSTRACTION_GCSC_DELTA.md) — six Pillars, ten Objects, 24 Relations, seven Forms, ten facets; GCSC → SAL → Materiality → SAC.
