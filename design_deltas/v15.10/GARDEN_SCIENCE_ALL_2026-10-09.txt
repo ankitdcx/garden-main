@@ -2,10 +2,6 @@ GARDEN v15.10 — SCIENTIFIC DISCOVERY AND ECONOMIC VALUE REGISTER
 Consolidated plain-text edition | Research through: 10 October 2026 | Organized: 10 October 2026
 NONCANONICAL RESEARCH — no scientific admission or canonical Garden change.
 
-WORKSTREAM INTENT — SCI-CLOSURE-20261010 (not a result)
-{"schema":"GardenChatGPTWorkstreamIntent/v1","workstream_id":"chatgpt:source-closure-20261010","work_package_id":"SCI-CLOSURE-20261010","branch":"chatgpt/source-closure-20261010","base_sha":"814002184ab3fc9e5972d2253730eba11e684a81","dependency_intent_ids":[],"integration_strategy":"DIRECT_IF_NO_COLLISION","substantial_edit_started":false}
-{"schema":"AgentWorkIntent/v1","intent_id":"chatgpt:source-closure:20261010","agent_id":"ChatGPT","work_package_id":"SCI-CLOSURE-20261010","base_sha":"814002184ab3fc9e5972d2253730eba11e684a81","source_root_sha256":"63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598","design_epoch_ref":"Garden-v15.5@63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598","target_paths":["design_deltas/v15.10/GARDEN_SCIENCE_ALL_2026-10-09.txt"],"target_symbols":["SCI-CLOSURE-20261010","SCI-PALETTE-20261010"],"semantic_domains":["bounded scientific process abstraction","finite-support graph computation","source-qualified closure coverage"],"affected_invariants":["distinct-coordinate derivative preservation","mask partition and transition validity","no self admission","unknown remains non-PASS"],"affected_contracts":["bounded research GCSC profile","SAC candidate obligations","finite-support contraction equation contract"],"intended_effect":"Apply every available Garden abstraction surface to existing computing claim; execute source-qualified bounded audits and experiments while exposing unavailable full-source contracts. Consolidated noncanonical TXT only.","parallel_mode":"SINGLE_WORKSTREAM"}
-
 RESULT: zero verified novel Garden discoveries; no measured incremental monetary savings.
 CURRENT QUEUE: one narrow computing claim, SCI-PALETTE-20261010 (chapter 14),
 with bounded numerical support; novelty and production net value UNRESOLVED.
@@ -10308,3 +10304,95 @@ and the contents/status pointers receive the bounded queue update. No Python,
 JSON, notebook, executable or separate research report is added to the repo.
 This record is not canonical admission, an independent scientific review,
 a TREE repair, an upstream publication or an experiment preregistration.
+
+
+16. SOURCE-QUALIFIED GARDEN CLOSURE ON THE EXISTING COMPUTING CLAIM
+Work ID: SCI-CLOSURE-20261010. Extends SCI-PALETTE-20261010, not a second claim.
+NONCANONICAL; FULL_GARDEN_EXECUTION_NOT_ESTABLISHED; SOURCE_FALLBACK_REQUIRED.
+
+16.1 Frozen scope and implementation boundary (before new numerical execution)
+Base: 814002184ab3fc9e5972d2253730eba11e684a81. Draft PR #193.
+Process: discrete DAGPA logits -> complement probabilities -> fixed diagonal/
+node-exclusion mask -> nine unreachability updates -> gradients -> sampler.
+Upstream: PurdueMINDS/DAGPA@053bac751b15404902f69f608b5ab207f9aa5edc/dagpa.py.
+SHA256: 8cc5c4d962466542789252a39430e4222ae89bc091a0a0eef3cbda189ae45b30.
+The existing palette claim is the sole active experimental claim.
+
+Source recovery inspected current repo, complete available git history,
+attached archive filenames/nested archive headers, and relevant exported chat
+matches. No exact Garden_v15.9.1_COMPLETE.zip or r6 executable Technical+
+Catalogue was recovered. chatgpt.zip is not a readable archive in this turn.
+The retained GCSC extraction explicitly lacks COMPLETE suffix clauses.
+Relation signatures are an unadmitted candidate with PROCESS_PLACEHOLDER.
+Historical 346 admissible cells cannot be reproduced from this broad registry.
+No full GCSC/r6 conformance, source retention, gzip/CRC fix or Garden advantage
+is claimed. New domain registries below are explicitly research-authored.
+
+Named baselines: frozen DAGPA definition; stable direct recurrence compiled
+with torch.compile; chapter-14 grouped kernel improved fairly by discovering
+support/masks once per recurrence. Generic compressed/default-tuple algebra
+and sparse/constant derivative elimination are prior art. The residual is
+implementation-specific: prepared dense grouping still multiplies a structured
+zero-mask class and computes a B-gradient that the outer fixed mask discards.
+Only permitted experimental claim: preserve the masked-logit recurrence and
+its first derivatives while reducing local CPU cost relative to those arms.
+This is not a claim that existing scientific methods lack the invariant.
+
+16.2 Equation contract and derivation
+w,U,G are n-by-n real dimensionless arrays; alpha>0; tau=alpha/log(2).
+D has zero diagonal and zero rows/columns in an immutable excluded set K,
+otherwise one. B=D*(logsigmoid(w)-w). All products with * are elementwise.
+f(a,b)=tau*(logaddexp(a/tau,b/tau)-log(2)).
+H(U,B)=U+(1/n)*sum_r F_r M_r, F_r[u,x]=f(U[u,x],b_r),
+M_r[x,v]=1[B[x,v]=b_r]. Masks form a disjoint partition of all entries.
+
+New scoped inference from I10(chain rule), I12(fixed masked value),
+I13(mask provenance), I17(derivative input contract):
+D[x,v]=0 => dB[x,v]/dw[x,v]=0 => masked logit derivative is zero.
+This inference is conventional mathematics, not a new physical invariant.
+It does NOT imply that partial H/partial B is zero at those same positions.
+
+For M0=1[B=0], require M0=1-D exactly; a free numerical zero invalidates this
+fast path. For any F, the structured right multiplication Q_K(F)=F M0 is:
+ v in K: Q_K(F)[u,v]=sum_x F[u,x];
+ v not in K: Q_K(F)[u,v]=F[u,v]+sum_(k in K) F[u,k].
+M0 is symmetric. Replace zero-class F0 M0 and G M0^T by Q_K.
+In reverse mode retain the zero-class contribution to dU, but omit dB for
+that class ONLY inside the composed masked-logit function. Keep distinct
+coordinate derivatives for every unmasked edge.
+For q=4 this removes three dense n-by-n products per update from the generic
+forward+reverse implementation: 12 -> 9; nonlinear work and other overhead
+remain. This predicts an operation-count reduction, not a 25% wall-time gain.
+Dense arithmetic still scales cubically; no quadratic total-runtime claim.
+
+First-derivative contract only. Higher derivatives, GPU, mixed precision,
+full causal-discovery accuracy and identical sampler trajectories are excluded.
+Finite inputs, exact support, n>=2, bounded alpha, valid K and original-coordinate
+first gradients are required. No quantization, new convergence stop, altered
+normalization, removed residual or empirical science admission is allowed.
+
+16.3 Preregistered new numerical protocol
+Freeze occurs before running closure_work/experiment.txt.
+Script SHA256 6939e09c7a052eb1b6247ebddb1e8c5077573ab95802603470a048259a13b3d7.
+Mapping script SHA256 f19e9f59c891b5383acb64251e119424ceb009f206b3f81307d495189d3795f5.
+CPU only, torch available runtime, one intra/inter-op thread; no paid calls.
+Primary endpoint: n=100,float64,alpha=.01,K={1},nine recurrent steps,
+median process CPU seconds for forward+gradients including preparation.
+Success threshold: structured route >=10% faster than the fastest qualified
+noncandidate arm (compiled direct or prepared grouped; eager also recorded).
+Falsifier: any output/dw/dU mismatch beyond tolerance, failed eligibility/null
+check, or primary reduction below 10%. Monetary Delta_net remains unmeasured.
+Fifteen round-robin timing repetitions, arms rotated each round; no early
+stopping or tuning after results. Record warmup/compilation wall time separately.
+Secondary fixed cells: n=16,50,100; float64 and float32, same recurrence.
+Timing seeds 871001+n, randint logits first in {-2,0,2}, then uniform U and
+Gaussian G; timing U replaced by -300*identity. No fitting/training.
+Held-out correctness seeds 761001+n: n=5,16,50; float64/32;
+alpha=1e-5,.01,1; K={}, {1}, {1,3}; three steps: 81 comparisons.
+Tolerance float64 atol=1e-9 rtol=1e-8; float32 atol=rtol=2e-4.
+Nulls: invalid standalone-B gradient use; off-support changed value fallback;
+free numerical zero from saturation; nonfinite fast-path rejection; four
+original-logit finite differences with epsilon1e-5 at alpha1, depth3, n5,
+seed881001. NaN fallback is not asserted safe; only eligibility rejection.
+No independent discovery arm, reviewer or replication is claimed.
+The full executable text and observed outcomes will be retained in this TXT.
