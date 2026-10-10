@@ -9755,3 +9755,10 @@ Current completion: research policy applied; historical statuses demoted with
 meaning retained; one scoped A3 prior-art memo completed; no defensible residual
 established. Useful work now depends on a real site/baseline packet, not a quota
 of further candidates. Scientific discovery and measured savings remain unachieved.
+
+CLEANUP WORKSTREAM — 2026-10-10
+GardenChatGPTWorkstreamIntent/v1; base 5f26e58e6a6cdb09e818d4969771d75e0c9f8a91;
+branch chatgpt/science-cleanup-20261010; work package SCIENCE-CLEANUP-20261010;
+dependencies NONE; integration DIRECT_IF_NO_COLLISION; substantial_edit_started false.
+Intent only: reorganize/deduplicate this register without losing unique scientific
+data; remove Python files and obsolete script instructions at the user's request.
