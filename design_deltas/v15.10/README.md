@@ -21,16 +21,9 @@ The earlier PHY-XFER, INV-DISC, screening and audit files are retained as **hist
 6. [Tree Core v0.8.1](TREE_CORE_v0.8.1_2026-09-23.txt) — structural ownership, dependencies, retention and status. [Short guide](TREE_CORE_GUIDE.md).
 7. [Retention Recovery Addendum](V15X_RETENTION_RECOVERY_ADDENDUM_2026-09-20.md) — preserves predecessor meaning and unresolved directions.
 
-8. [Physical Invariant Transfer consolidation — PHY-XFER-003](G15_10_PHY_XFER_003_CONSOLIDATED_CANDIDATE.md) — noncanonical consolidation of PHY-XFER-001/002, bounded transfer algorithm specification, benchmark gates, and **unverified** hypothesis inventory; no executed discovery claim.
+8. [PHY-XFER-003 technical specification](G15_10_PHY_XFER_003_CONSOLIDATED_CANDIDATE.md) — optional transfer adapter/operator details, not a validated discovery.
 
-8. [INV-DISC-001 preliminary invariant discovery](INV_DISC_001_PRELIMINARY.md) — corrected sign convention, nonlinear inequality benchmark protocol and executed 20-case symbolic control; [reproducible script](inv_disc_001_control.py). **Not a Garden advantage test.**
-
-9. [INV-DISC-001 lessons and 100-system symbolic controls](INV_DISC_001_LESSONS_AND_CONTROL_RESULTS.md) — corrected analytic proof, 99/100 sufficient-condition certificates, limitations and benchmark plan; [runnable Python](inv_disc_001_100_controls.py).
-10. [INV-DISC-100 candidate portfolio](INV_DISC_100_CANDIDATE_PORTFOLIO.md) — 100 structured research questions, **all unverified for novelty and untested for Garden advantage**.
-
-11. [INV-DISC-100 screening receipts](INV_DISC_100_SCREEN_RESULTS_2026-10-10.md) — 70 toy-model passes, 10 toy failures, 20 not testable; **zero scientifically validated ideas**; [reproducible screening code](inv_disc_100_screen.py).
-
-12. [70-candidate full-test readiness and prior-art audit](INV_DISC_070_FULL_TEST_READINESS_AND_PRIOR_ART.md) — all 70 toy passes reclassified as **full-test blocked / novelty unknown**; zero scientific passes. Includes 70 individual gap records and method-level literature references.
+The **two primary consolidated documents** above contain today's discovery theory, all 132 indexed candidate entries, the negative/null evidence ledger and lessons. Superseded preliminary reports, duplicated grids, synthetic screening notes and standalone Python scripts were removed from this *design-only* folder; their earlier versions remain recoverable through Git history. The 70 surrogate passes were withdrawn as domain evidence. No validated scientific novelty or Garden advantage is claimed.
 
 ## Supporting artifacts
 
