@@ -5,6 +5,9 @@ NONCANONICAL RESEARCH — no scientific admission or canonical Garden change.
 RESULT: zero verified novel Garden discoveries; no measured incremental monetary savings.
 CURRENT QUEUE: one narrow computing claim, SCI-PALETTE-20261010 (chapter 14),
 with bounded numerical support; novelty and production net value UNRESOLVED.
+Chapter 16 extends that claim with a source-qualified mapping and mask-gradient
+experiment: 7.46% local CPU reduction in its checked follow-up; no new science.
+Full GCSC/r6 execution is blocked by unrecovered source contracts.
 Chapter 13's known-method computing/data reuse evaluation remains complete.
 Chapter 15 records ten further decision screens: no new claim cleared the prior-art gate.
 A3 is PARKED_CONTEXT_REQUIRED after the user-directed switch to computing.
@@ -25,9 +28,10 @@ CONTENTS
 13. Computing/data reuse: source mapping, two engineering cycles and measured limits
 14. One computing claim: finite-support contraction, distinct gradients and CPU tests
 15. Ten additional decision screens and deduplicated electricity follow-up
+16. Source-qualified Garden closure, mask-gradient experiment and full-source blocker
 
 READING RULES
-Current policy is in chapters 1-2 with chapter-14/15 queue updates; chapter 3
+Current policy is in chapters 1-2 with chapter-14/15/16 queue updates; chapter 3
 preserves the earlier A3 review. Chapters 4-11 preserve historical scientific
 work: a proposed test, scenario saving or old ACTIVE label does not activate a
 claim. Case IDs and numerical assumptions retain their original scope. Distinct
@@ -36,8 +40,10 @@ financial figures as industry savings. Negative findings and UNKNOWNs are retain
 
 All Python filenames, invocations, source-role hashes and implementation statements
 in the historical chapters refer to archived work at the commit listed in chapter
-12. The Python files and embedded code have been removed from the current edition
+12. The historical Python files and their embedded code were removed during cleanup
 at the user's request. Historical replay receipts are not tests rerun today.
+Chapter 16 retains its newly executed reproducibility source within this TXT;
+no standalone Python/JSON files are added to the repository.
 Unique detailed case data are retained; repeated candidate templates are factored
 into shared contracts and one row per original candidate/opportunity.
 
@@ -95,8 +101,9 @@ establish novelty, replication or net value.
 1.3 OPERATIVE QUEUE AND STATUS OVERLAY
 
 Maximum concurrent experimental claims: ONE. Current queued claim: ONE,
-SCI-PALETTE-20261010 (chapter 14), local tests complete, independent review
-and novelty unresolved. No background execution is running.
+SCI-PALETTE-20261010 (chapters 14 and 16), local tests complete, scoped
+adversarial code review performed; independent replication, novelty and
+production net value unresolved. Full GCSC/r6 source contracts are unrecovered. No background execution is running.
 The user's subsequent ten-more request authorized chapter 15's bounded prior-art
 screens; it did not activate ten experimental claims. No new claim passed that
 screen's residual gate, and the one-claim queue remains unchanged.
@@ -10396,3 +10403,1246 @@ original-logit finite differences with epsilon1e-5 at alpha1, depth3, n5,
 seed881001. NaN fallback is not asserted safe; only eligibility rejection.
 No independent discovery arm, reviewer or replication is claimed.
 The full executable text and observed outcomes will be retained in this TXT.
+
+
+16.4 Outcome and corrections after execution — 10 October 2026
+
+The complete requested GCSC/r6 execution was NOT achieved. Required source
+contracts are unrecovered; the working artifact is a bounded research adapter.
+All ten objects, 24 relation names, seven forms, ten facets, six pillars and
+21 macros were inspected against the retained design. Their local bindings
+below are explicit research interpretations, not recovered missing contracts.
+
+The executable audit covered 20 situations, 23 transition/dependency links,
+32 seeded conventional constraints and seven inspected interfaces. It exposed
+an optimization opportunity across a mask/kernel/gradient interface. The
+invariant already follows from the chain rule. It is not absent from science.
+No new physical law, full-Garden capability or methodological advantage passed.
+
+Preregistered primary local CPU reduction: 10.3348%, against prepared grouped
+evaluation in one n=100 float64 nine-step fixture. This narrowly passes the
+frozen point-estimate threshold; it does not prove a reliable >=10% benefit.
+Post-review first-order wrapper: 7.4649% reduction against an equally wrapped
+grouped baseline on a separately frozen fixture. Do not replace the primary
+result with this follow-up, combine percentages or describe either as dollars.
+No total-training, GPU, deployed energy, production quality or monetary result.
+
+Corrections to the retained preregistration, not silent rewriting:
+- Section 16.3 says 81 stress comparisons. Its enumerated Cartesian fixture
+  set is 3 sizes x 2 dtypes x 3 temperatures x 3 exclusion sets = 54. The
+  frozen script and executed test both use those 54. No omitted fixture was
+  invented to make the earlier arithmetic correct.
+- Exact preregistration commit, before the numerical run:
+  9251380aaaf812d41418572ec8834abff6a727db (PR193).
+- The mapping was subsequently extended with macro/facet dispositions,
+  finite composition fixtures, relation statuses and signature provenance.
+  Its final hash differs from the preregistered mapping hash. The numerical
+  experiment script was not changed. Mapping metadata edits are not new
+  evidence of numerical correctness or independent law generation.
+- An adversarial code reviewer was added after the numerical execution, with
+  instructions not to inspect the timing/result files. Thus 16.3's statement
+  that no reviewer was claimed describes the initial protocol, not the final
+  code-review receipt. This is not a blind discovery-method comparison.
+
+16.5 Exact source recovery and the remaining full-execution blocker
+
+Read: retained v15.10 abstraction/GCSC delta, full technical delta, TREE_CORE
+v0.8.1 and guide, semantic coverage specification, relation-signature candidate,
+v15.9.1 extracted GCSC Technical/Annexure clauses and semantic patches, RSDC,
+canonical v15.5 process/evidence clauses, and the existing science register.
+Available complete git history and supplied archive indices were also checked.
+Old design ZIPs and exported conversations do not recover the missing package.
+The file project_sources/12-chatgpt.zip could not be read as a valid ZIP.
+
+The retained extractions explicitly omit the COMPLETE suffix contracts for
+algorithm/generated schema/validity, JOIN, CONSTRAINT, INTERPRETATION,
+MATERIALITY, primitive disposition, assurance, coverage, retention and release.
+TREE identifies a separate executable proposal, not this retained text delta:
+  Garden_v15.9.1_COMPLETE.zip
+    SHA256 53898a8d1832cfcba932cb83e81b8212c38b0954b68db8bfd29ad40f01946f50
+  GARDEN_TECHNICAL_proposed_v15.10.txt
+    SHA256 5cecfcb9892d201108dcb46e52ffebe9e29bec153184ecf1ed239873adde41bd
+    embedded r6 core SHA256
+    fe20d8f1b4cd18778002c6162de749b5250c760f8ad636d055682efe1172ebe4
+  Matching r6 Catalogue, declared root
+    d41c44fc28e5c43c5532846174ef46abca0f9b85c70f64813c481fb4f0856c9a
+Those exact files, including GSL_FORM_BINDINGS and registry semantics, are
+needed before claiming full execution. No approximate replacement is admitted.
+
+Canonical baseline remains Garden v15.5 / GSL v45.1. Canonical source root:
+63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598.
+The v15.10/TREE materials retain their candidate/research statuses. Historical
+TREE determinism, gzip truncation/CRC, stale r5/r6 identifiers and complete
+source-retention issues remain OPEN. The adapter's deterministic JSON hash
+does not test, repair or admit that unavailable executable package.
+
+16.6 Abstraction binding, without anthropomorphic or automatic authority
+
+Object | Binding in this concrete computing process
+TIME | sample/parameter epoch, iteration number and CPU measurement interval
+SPACE | array index frame u,x,v; local CPU/dtype/device domain
+THING | logits, mask, palette, state, prepared plan and gradient arrays
+EVENT | sampled parameter change and consequent invalidation
+ACTION | normalization, mask application, recurrence, differentiation and test
+AGENCY | human-authorized research operator; arrays have no agency
+RULE | typed equation, derivative, eligibility and evidence obligations
+VALUE | measured CPU cost; financial benefit remains UNKNOWN
+CONTEXT | fixed-source synthetic CPU scope and numerical operating conditions
+CLAIM | proposed equivalence/speedup plus explicit adverse claims
+
+All relation names were reviewed. Counts below are research edge records,
+not verified truths or a target number of applicable relationships. In
+particular equivalentTo/supports/contradicts/conflictsWith/blocks are queries
+or hypotheses pending scope-specific evidence. Other edges are author-written
+interpretations. Every edge has a domain, epoch, provenance and invalidators;
+NONE carries semantic admission. No delegation is invented for this process.
+
+identifies | 1 | claim targets the recurrence result; identity assertion unresolved
+causes | 1 | sample action changes parameter event in the source program
+governs | 20 | local contract attached to each mapped action
+values | 1 | context selects CPU seconds as the bounded value metric
+frames | 1 | context fixes the array/device frame
+acts | 20 | authorized operator performs research actions
+obeys | 1 | retention action checked against research rules
+assesses | 1 | candidate is assessed against the cost metric
+contextualizes | 20 | scope accompanies every mapped action
+controls | 1 | qualification rule selects a permissible implementation plan
+partOf | 1 | membership representation is part of the prepared plan
+dependsOn | 43 | 20 input links plus 23 chronology/dependency links
+owns | 1 | research operator owns the local hypothesis record, not scientific truth
+delegates | 0 | NOT_APPLICABLE: no research authority delegation represented
+references | 1 | claim refers to retained test record
+derivedFrom | 1 | claim traces to scoped measurements
+equivalentTo | 1 | plan/config semantic-equivalence QUESTION, not asserted equality
+contradicts | 1 | counterexample may contradict an overbroad claim
+supports | 1 | measurement may support only its tested claim scope
+blocks | 1 | failed qualification would block plan use; conditional query
+hasHypothesis | 1 | operator holds the local candidate
+supersedes | 1 | fresh configuration replaces stale local epoch, not canonical law
+conflictsWith | 1 | claim and adverse example require conflict resolution
+originatesFrom | 20 | each output records its producing action
+
+Seven Design Forms, with preserved specialist meaning:
+CONSTRUCT: typed state/plan/source records. CONTRACT: original-coordinate
+function, first-order derivative and fallback contract. STATE: U, current
+palette, cache and epoch. RELATION: typed dependency/evidence questions.
+PROCESS: bounded recurrence and comparison workflow. RULE: guards, conservation
+of function/gradient semantics, source/authority restrictions. PROJECTION:
+palette representation, cost summary and coverage view. Overlapping forms
+are recorded, not collapsed into one generic form. Exact GSL_FORM_BINDINGS
+and full parser/type-checker semantics remain unavailable.
+
+Six pillars are declared interpretation views, not six executed engines:
+Existence -> source/state identity; Change -> recurrence and sample update;
+Agency -> operator permission only; Law -> contract/chain-rule obligations;
+Value -> CPU cost and unknown net money; Frame -> array/epoch/device context.
+
+Ten cross-cutting facet dispositions:
+IdentityLifecycle: source/epoch and object lifetime; ScopeContext: fixed CPU
+profile; EpistemicsProvenance: known algebra vs local observations vs unknown
+novelty; AuthorityHumanBoundary: local research only; EffectsSafety: no physical
+actuation, production deployment or safety certification; DependencyValidity:
+mask/coordinate/temperature invalidators; ResourceTermination: declared n,
+depth and finite repetitions; PrivacyRetention: public code and synthetic
+inputs, no personal dataset; AuditExplanation: equations, negative results and
+timing protocol retained; RecoveryEvolution: explicit rejection or source-
+preserving fallback, never silent admission after an update. The adapter
+stores dispositions; it is not a full facet-specific theorem prover.
+
+The 21 macros were reviewed against TREE's form patterns. Eighteen receive
+specific research roles, producing 68 macro/form bindings. Three are explicitly
+inapplicable. This does not establish full macro grammar/schema conformance.
+
+ArchitectureObject | bounded kernel contract
+Function | recurrence and VJP
+Lifecycle | sample/rebuild/qualify
+Schema | typed relation and source records
+Receipt | local test result
+Registry | frozen research predicates
+Test | differential and adverse controls
+ProofObligation | original-coordinate equivalence
+Theory | NOT_APPLICABLE_no_new_theory
+Algebra | chain rule and profile union
+Profile | fixed CPU scope
+EventRecord | sample mutation
+Binding | source/shape/time bindings
+Plan | bounded run plan
+FailureMode | unsafe zero elision
+Query | coverage query
+EventSubscription | NOT_APPLICABLE_no_live_subscription
+ContinuousWorker | NOT_APPLICABLE_no_background_worker
+DynamicalSystemProfile | bounded recurrence
+AuthorityGatedContract | local execution scope
+RecoveryEnvelope | qualified fallback
+
+TREE attachment and source ownership:
+ROOT: bounded authorized computation, no self-admission, no deployment claim.
+SUBSTRATE: typed records, exact source bytes, scope/epoch and UNKNOWN states.
+TRUNK: available process/evidence operators and finite research checks.
+BOUNDARY: this DAGPA recurrence/equation/implementation profile, versioned
+SCI-CLOSURE-20261010; it cannot become a new universal Garden rule.
+REGISTER: the exact anchors below preserve source identity. They supply
+context/provenance, not entailment of every author-written domain obligation.
+The domain interpretations and derived equations are owned by this research
+record. There is no migration of controlling canonical ownership.
+RELEASE GATE: SOURCE_FALLBACK_REQUIRED; no full predecessor-retention or
+independent semantic-admission receipt. Old source material cannot be elided.
+
+Source-qualified UPA use (not a new process algebra): SEQUENCE orders the
+numerical operations; BRANCH chooses an eligible route; COMPOSE retains the
+outer logit derivative contract; ITERATE is explicitly bounded. TERMINATE
+records unsupported scope or completed comparison; DO_NOTHING retains the
+baseline when the optimization is ineligible or loses value. RECONSTRUCT is
+not claimed as trusted replay from unsigned local records. No unbounded RETRY
+or RECURSE is allowed. PARALLEL has only a separately scoped code-review role,
+not independent scientific replication. ROLLBACK/COMPENSATE are not invoked
+as physical recovery. None of these names imply the complete UPA runtime ran.
+
+P0-P11 view, not an imposed serial scientific workflow:
+P0 request/one existing claim; P1 normalize source/decision; P2 applicability
+and hostile prior art; P3 mask/gradient dependencies; P4 source/evidence status;
+P5 equation/operation-count prediction; P6 fixed CPU resource plan;
+P7 differential/negative tests; P8 user authorization limited to research;
+P9 preregistration and local execution; P10 measurements/adverse review;
+P11 retain failure, scope follow-up, terminate without scientific admission.
+Skipping a runtime implementation for one view does not give that view PASS.
+
+Evidence algebra, as a documented application rather than executed full schema:
+CORROBORATE: direct, compiled and grouped comparisons support a scoped numerical
+claim but share code, machine and mathematical assumptions. CONTRADICT:
+standalone-B, duplicated-index and higher-derivative cases refute broader use.
+CONDITION: speed evidence depends on size/dtype/mask/first-order CPU scope.
+ASSESS_DEPENDENCE: repeated timings and same-family model review are dependent;
+neither their count nor agreement creates independent proof or novelty.
+
+16.7 Actual situation graph and invariant register
+
+Expansion criterion: distinct input contract, state transition, dependency,
+cost boundary or uncertainty. The 20 situations are not a claim to exhaust
+causal discovery, industrial computing or even the complete DAGPA program.
+Parent links describe local decomposition; chronology/dependency links follow.
+Each constraint binding is source-contextualized and retains noncanonical status.
+
+ID | parent | action | input -> output | applicable invariant IDs
+
+S01 | root | load frozen code and configuration | source -> config | I01,I02
+
+S02 | root | admit bounded local research run | config -> permit | I03,I04,I05
+
+S03 | root | draw discrete edge coordinates | permit -> logits | I06,I07
+
+S04 | S03 | bind shape dtype and device | logits -> typed_logits | I08,I09
+
+S05 | root | form complement log probabilities | typed_logits -> complement | I10,I11
+
+S06 | root | apply diagonal and exclusion mask | complement -> masked_B | I12,I13
+
+S07 | S06 | identify support and coordinate membership | masked_B -> membership | I14,I06
+
+S08 | root | initialize negative reachability state | masked_B -> U0 | I15
+
+S09 | root | prepare current qualified implementation | membership -> plan | I16,I17
+
+S10 | root | evaluate nonlinear messages | U0 -> messages | I18,I09
+
+S11 | S10 | aggregate messages over intermediate nodes | messages -> aggregate | I19,I14
+
+S12 | root | add residual and advance recurrence | aggregate -> U_next | I20,I21
+
+S13 | S12 | continue bounded recurrence | U_next -> U_final | I22,I23
+
+S14 | root | consume scores in loss | U_final -> loss | I24
+
+S15 | root | propagate per-coordinate cotangents | loss -> gradient_B | I25,I26
+
+S16 | S15 | apply mask and sigmoid chain rule | gradient_B -> gradient_logits | I27,I10
+
+S17 | root | score and choose next discrete sample | gradient_logits -> next_logits | I06,I28
+
+S18 | S17 | invalidate and rebuild affected state | next_logits -> fresh_config | I22,I29
+
+S19 | root | compare correctness and CPU cost | U_final -> measurement | I30,I31
+
+S20 | root | retain result and stop or requalify | measurement -> record | I01,I32
+
+Directed transition/dependency graph (23 links):
+S01 -> S02; S02 -> S03; S03 -> S04; S04 -> S05; S05 -> S06; S06 -> S07; S06 -> S08; S07 -> S09; S08 -> S10; S09 -> S10; S10 -> S11; S11 -> S12; S12 -> S13; S13 -> S10; S13 -> S14; S14 -> S15; S15 -> S16; S16 -> S17; S17 -> S18; S18 -> S03; S13 -> S19; S19 -> S20; S20 -> S09.
+
+S13->S10 is bounded iteration, not unbounded feedback. S18->S03 is a new
+parameter epoch requiring rebuilding. S20->S09 requires requalification.
+The recurrence has a nonlinear-message branch and a mask/plan branch that join
+at S10. Context, resources and source identity remain cross-cutting.
+
+Register: 32 distinct seeded mathematical/engineering/research obligations,
+39 situation bindings. They were specified from program semantics and known
+mathematics, not autonomously discovered as 32 new invariants. Exact physical
+conservation or symmetry laws are NOT claimed for CPU seconds or this algebra.
+The program has mathematical identities, implementation semantics, operating
+guards and research/economic conditions. All bindings are author interpretations.
+
+ID | type | constraint | domain | evidence/dependency | falsifier
+
+I01 | provenance | exact source and qualified owner survive projection | all scoped records | source comparison | changed or unresolved source identity
+
+I02 | dependency | source, parameters and implementation have a frozen epoch | reused prepared state | pinned source and parameters | undetected parameter/version change
+
+I03 | engineering | stop at stated memory/time/iteration bounds | local experiment | frozen sizes/depth/repeats | bound exceeded or hidden retry
+
+I04 | governance | local simulation permission does not authorize deployment | local research action | user task, no deployment | action exceeds permission
+
+I05 | contract | research results retain their tested scope | every reported conclusion | test specification | generalization outside its domain
+
+I06 | mathematical | equal values do not identify independent coordinates | untied coordinates with repeated values | coordinate chain rule | tie grouping merges distinct derivatives
+
+I07 | domain | palette route requires exact finite support; no quantization | exact palette fast path | unique values and membership check | off-support value or approximate quantization
+
+I08 | typing | u,x,v dimensions and contractions are compatible | n by n recurrence | explicit u,x,v contraction | transposition/shape mismatch
+
+I09 | numerical | positive temperature, finite values and declared tolerance | tested numeric profile only | stable formula and stress tests | nonfinite or over-tolerance output
+
+I10 | mathematical | differentiate the composed original-coordinate function | declared differentiable inputs | standard chain rule | original-coordinate finite difference mismatch
+
+I11 | numerical | nonfinite inputs reject or use qualified fallback | fast-path qualification | eligibility/null checks | nonfinite input silently enters fast path
+
+I12 | mathematical | complement value is exactly zero on excluded edges | fixed diagonal/node mask | B=D*(logsigmoid(w)-w) | masked B not zero
+
+I13 | dependency | zero caused by a fixed mask is distinguished from a free zero parameter | structural zero optimization | M0==1-D eligibility | free/saturated zero treated as masked
+
+I14 | mathematical | membership masks are disjoint and sum to the all-ones matrix | finite exact B values | one-hot equality partition | overlap or uncovered entry
+
+I15 | implementation | preserve U initialization including finite -300 sentinel | this recurrence definition | upstream initialization | changed finite sentinel or start state
+
+I16 | engineering | structured fast path requires the exact declared mask family | structured Q_K operation | declared set K and exact D | wrong mask family or duplicate accumulation
+
+I17 | contract | input-coordinate choice determines which gradients must be preserved | composed w->B->H function only | equation contract | standalone B treated as composed logits
+
+I18 | mathematical | replacement matches the original function within tolerance | declared fixture/tolerance | direct differential tests | output tolerance exceeded
+
+I19 | implementation | retain divisor n and temperature alpha/log(2) | each update | upstream equation | wrong n divisor or temperature
+
+I20 | implementation | retain additive U residual each iteration | each update | upstream residual rule | residual U dropped or duplicated
+
+I21 | engineering | retain min(n,max_path_length), not an invented convergence stop | source program integration | min(n,max_path_length) | unbounded or changed stopping rule
+
+I22 | dependency | changed logits, mask, alpha or code invalidate affected reuse | cached/prepared data | parameter dependency inspection | reuse across invalidating event
+
+I23 | numerical | one-step tolerance alone does not certify recurrent outputs | bounded recurrence output | multi-step comparisons | one-step pass but multi-step failure
+
+I24 | contract | changing a surrogate is not exact implementation acceleration | original consumer semantics | fixed function contract | surrogate substitution presented as exact
+
+I25 | mathematical | untied per-edge VJP is retained through equal-value grouping | unmasked untied edge coordinates | full VJP comparisons | tied-coordinate derivative reused
+
+I26 | mathematical | preserve VJP for every declared differentiable input | first-order dw,dU only | VJP and finite differences | wrong VJP for a declared input
+
+I27 | mathematical | fixed masked logits have zero derivative after chain composition | fixed masked original logits | I10+I12+I13+I17 derivation | mask variable or input actually B
+
+I28 | statistical | numeric tolerance does not imply identical stochastic trajectory | full sampler, not tested here | known stochastic sensitivity | trajectory equivalence assumed from tolerance
+
+I29 | dependency | autograd graph lifetime and parameter epoch bound cached results | prepared/autograd lifetime | source cache clear + review | stale membership or freed graph reused
+
+I30 | experimental | compare identical outputs, gradients and input preparations | head-to-head fixture | same inputs, work, setup and cotangent | asymmetric workload or missing gradient
+
+I31 | economic | include preparation and qualification costs; no sector extrapolation | local CPU cost; money unknown | preparation included, no extrapolation | setup/integration omitted or invented deployment
+
+I32 | evidence | generator, tester and proposer do not supply independent admission | every admission decision | canonical evidence rule and status separation | self-promotion from hash/test/consensus
+
+I27 is the selected interface inference. I10 and I12 already imply it once
+I13 and I17 establish the right provenance/input domain. Its scientific status
+is conventional mathematical consequence; its local optimization status is
+tested implementation extension. No source GCSC clause is claimed to prove
+the domain mathematics. I28, full I29 integration and production I31 remain
+partly untested; listing them does not discharge their obligations.
+
+16.8 Transition/combination closure audit and three discovery operators
+
+Audit | interface | result and disposition
+A01 | S06->S09, mask to prepared generic-B plan | generic interface loses
+mask provenance, zero logit-gradient fact and exact mask-shape guard. This is
+optimization information loss, not an incorrect baseline computation.
+A02 | S15->S16, B-VJP to outer logit chain rule | generic kernel computes a
+zero-class B-VJP that the fixed outer mask discards. Same opportunity as A01,
+not a second discovery. Eliminating it is invalid for independent B inputs.
+A03 | S17->S18, sample update to cache | actual upstream already clears cache;
+no missing invariant found at that documented interface.
+A04 | S09->S13, plan to recurrence | chapter14 already tested a bounded actual
+recurrence. Accumulated error and iteration scope were not silently missing.
+A05 | S06->S10, actual source mask path | value masking/provenance are present
+in the source, although the generic grouped kernel does not exploit structure.
+A06 | S07->S15, deliberately tied lookup negative control | loses distinct
+coordinate derivatives; known-invalid control, not a field-level gap.
+A07 | S19->S20, cost result to retained claim | existing reporting already
+retains setup/scope/no-admission limits; no uncovered obligation established.
+
+The seven audits are selected interfaces, not all possible 23 links or all
+motifs. Three records contain six missing semantic tokens. A01/A02 are one
+optimization theme; A06 is one already-known invalid control. Four inspected
+interfaces have no identified missing token. Tokens/required sets were entered
+from human code inspection; set difference executes an audit, not automatic
+scientific invariant discovery. These counts must not be called novel survivors.
+
+Projection-Loss: A maps a detailed (w,D,B,derivative-domain) situation to the
+generic (U,B) kernel interface. Equal numerical B can represent a free matrix
+or a fixed-mask composition. Function values can agree while the permissible
+gradient-elision action differs. This is loss of optimization provenance and
+contract information, not new dynamical nonclosure of a physical theory.
+
+Necessity-Challenge: challenge the need to evaluate every B-coordinate VJP
+before applying D. Counterexample to that implementation prerequisite: for a
+fixed masked logit coordinate, dB/dw=0, so the downstream original-logit VJP
+can be preserved without calculating that B contribution. Keep the zero-class
+dU term. The standalone-B counterexample rejects the broader proposal.
+
+Decision-Sufficiency: Y=(U,B) lacks the fixed-mask derivative contract;
+Z=(mask provenance, set K, differentiable-input identity) permits choosing
+the structured or general route. Z is available from software metadata, but
+its extraction/checking has a measured cost. At small n the compiled route
+wins. CPU comparisons are a local cost proxy, not measured monetary Delta_net.
+No learned selector or cost-free oracle is claimed. The three operators
+converge on the same existing claim, not three independently novel ideas.
+
+16.9 Equation qualification, dimensional check and limiting cases
+
+All logits, U, B, alpha and tau are dimensionless; f and H have the same
+dimensionless output type. Matrix products contract x; division by n is
+dimensionless. Cotangents and derivatives use the original w and U coordinates.
+CPU time has units seconds and is not a conservation quantity. Energy/joules
+and dollar cost were not observed. Matrix/vector identities do not imply a
+new physical conservation law or a hardware power-saving percentage.
+
+For arbitrary output cotangent G, one-step reverse mode for a generic class r:
+ dU = G + (1/n) sum_r sigmoid((U-b_r)/tau) * (G M_r^T)
+ dB_r = M_r * [(sigmoid((b_r-U)/tau)^T G)/n].
+For composed logits, dw = dB * D * (-sigmoid(w)).
+Replacing r=0's products by Q_K preserves its dU contribution. Its dB_r can
+be omitted only because multiplication by D kills exactly those coordinates.
+This is an original-coordinate derivative contract: do not differentiate a
+single shared palette scalar as though all same-valued coordinates were tied.
+
+Derivation of Q_K: M0[x,v]=1 when x=v, x in K or v in K. If v in K every
+x contributes. Otherwise the contributing indices are x=v plus the distinct
+set K. A repeated index in a tuple is not a repeated physical contribution.
+This both derives the shortcut and predicts the reviewer-found duplicate bug.
+
+Limiting cases:
+- K empty: M0 is identity and Q_K(F)=F.
+- K all nodes: M0 is all ones and each output column is the row sum; original
+  w has zero derivative, while U generally still has a nonzero derivative.
+- Off-support logits: palette eligibility must re-evaluate; no lossy rounding.
+- A free zero B value: M0 may differ from 1-D; reject structural treatment.
+- Independent B input: dB at a masked position generally is nonzero, so the
+  shortcut's deliberately incomplete B-VJP cannot be exposed as that API.
+- Small n: bookkeeping dominates; a mathematically valid optimization loses.
+- alpha approaches zero: the formal limiting function is not a license to
+  execute alpha=0 or underflowing temperatures; reject outside tested profile.
+- Differentiable alpha/mask, Hessians, arbitrary mask and graph reuse: require
+  additional contracts/implementations, not extrapolation from first-order tests.
+
+The falsifiable operation-count prediction (q=4, unique K) is 12->9 dense
+matrix products per forward+reverse step in this prepared algorithm. The
+frozen runtime prediction was >=10% at its one primary fixture, subject to
+output/gradient tolerances; the follow-up makes clear that interface checks
+and operating conditions can reduce that percentage.
+
+16.10 Reproducible numerical observations
+
+Runtime: 2.14.1+cpu; Linux-6.18.44-x86_64-with-glibc2.39. One intra/inter-op thread; CPU only.
+
+Medians below are process CPU milliseconds, forward + dw + dU, including
+per-recurrence support/mask preparation. Warmup includes comparison/setup and
+compiler work, is wall time, and is reported separately rather than amortized.
+Size/dtype | eager | compiled direct | prepared grouped | structured | reduction vs fastest tested noncandidate
+
+16/float64 | 1.285592 | 0.639536 | 2.114438 | 2.472197 | -286.5610%
+
+16/float32 | 2.100056 | 0.526759 | 2.198903 | 2.666074 | -406.1278%
+
+50/float64 | 25.095171 | 13.244342 | 4.776035 | 4.719852 | 1.1764%
+
+50/float32 | 21.918532 | 7.672630 | 3.438045 | 3.620685 | -5.3123%
+
+100/float64 | 272.330584 | 82.215686 | 13.374264 | 11.992059 | 10.3348%
+
+100/float32 | 185.898858 | 49.530126 | 7.729273 | 7.344965 | 4.9721%
+
+Warmup wall seconds in that same row order: 7.058836, 3.980280, 10.704547, 7.578942, 0.658965, 0.440121.
+
+All 54 preregistered correctness fixtures pass output/dw/dU tolerances. The six
+timing cells also pass against the direct reference for every tested arm.
+These are synthetic workload comparisons using the actual recurrence formula,
+not held-out field observations or a blind scientific-discovery benchmark.
+
+torch.float64 maximum absolute errors [output,dw,dU]: [1.7053025658242404e-13, 4.440892098500626e-15, 6.661338147750939e-15].
+
+torch.float32 maximum absolute errors [output,dw,dU]: [9.1552734375e-05, 4.76837158203125e-07, 1.0728836059570312e-06].
+
+Negative controls retained:
+- Standalone-B shortcut use has max gradient error 0.4256860074; masked B
+  gradients are not inherently zero. The overbroad derivative claim fails.
+- One off-support changed value rejects the fast route and matches direct
+  fallback exactly in its fixed test.
+- A free zero caused by saturation rejects the structural route.
+- NaN rejects eligibility; the original general fallback is NOT certified safe.
+- Four original-logit finite differences (epsilon 1e-5) have maximum absolute
+  error 2.0836645e-9 at their declared alpha/depth/seed.
+
+Primary reduction is 13.374264 ms -> 11.992059 ms, delta 1.382205 ms per
+nine-step recurrence. A post-hoc paired-round bootstrap (10,000 resamples,
+Python Random seed10010, 15 paired indices, ratio of sample medians, sorted
+order statistics 249 and 9749) gives approximately 3.81%-13.55%. This was
+not preregistered, and repeated microbenchmarks do not sample independent
+deployments. It does not establish that the true reduction exceeds 10%.
+The smaller cells include clear losses; they are not dropped from reporting.
+
+16.11 Adversarial review, repairs and separately frozen follow-up
+
+Reviewer: separate closure_review agent, instructed to inspect source/equations
+and not result/log files. Same model family and available context; no claim of
+independent-family replication, domain-expert acceptance or outcome-blind
+scientific-method judging. The reviewer accepted the narrow first-order
+unique-set mathematics and found material unguarded API cases:
+
+1. Repeated exclusion tuple (1,1) is idempotent in the source mask but was
+counted twice in Q_K. Fixed seed91401, n5/f64/alpha.01/depth3: raw output error
+0.007200000000517015. This does not invalidate the frozen unique-set fixtures.
+2. A generic public B-gradient API is unsafe; the optimization belongs only
+inside the original masked-logit composition.
+3. Higher derivatives were not supported and could be wrong rather than
+raising. Example reviewed second derivative: direct -0.0296815560 versus
+structured -0.0360480274 at the reviewer's declared alpha1 fixture. Alpha
+gradients are also not supplied. No Hessian claim is permitted.
+4. Original fast-path checks did not validate U/alpha/shape/index domains.
+5. Real upstream accepts custom masks/log_probs and reuse_R_for_U branches.
+The isolated recurrence implementation is not a drop-in replacement for all.
+
+Follow-up code, separately frozen before running (not tuning the first test):
+guard_check.txt SHA256
+176ddc1e399bc28b1079ab04068a659c9d1f44d17cf42ad7bdb4c755b19198eb.
+It canonicalizes exclusion tuples, validates basic input/temperature/depth
+conditions, and preserves a supplied custom mask in a direct reference
+fallback. It wraps the complete original-logit function, keeps the partial
+B-VJP private and uses once_differentiable to reject second derivatives.
+The compiled/grouped comparators receive the same validation and first-order
+wrapper; no asymmetric uncharged qualification is introduced.
+
+Ten fixed guard/contract checks pass: duplicated exclusions, custom mask,
+zero/underflow/NaN/tensor alpha, nonfinite U, bad index, incompatible shape,
+and second-derivative rejection. Duplicated-exclusion output error falls to
+1.7053025658242404e-13; custom-mask fallback matches exactly in its fixture.
+The three follow-up arms also pass output/dw/dU comparison.
+
+Separate exploratory timing: n100/f64/alpha.01/K={1}/depth9, seed91410,
+15 rotated repetitions, no new success threshold or after-result tuning.
+
+Guarded CPU medians: compiled=81.412859 ms, grouped=13.262699 ms, structured=12.272654 ms. Reduction=7.4649%; warmup wall=6.878265 s.
+
+This follow-up is not the identical primary fixture and is not independent
+replication. Its 7.4649% is below the earlier 10% target; use the measured
+follow-up value when discussing this checked wrapper, not the larger raw one.
+
+Reviewer inspected the wrapper without reading its timing results and confirmed
+those fixes, with remaining restrictions that block general release:
+- Finite inputs are not automatically numerically safe. Arbitrarily large
+  finite w/U or custom masks can overflow after temperature scaling. The
+  fixed tested bounded fixtures pass; no all-finite-input guarantee exists.
+- Exclusions must be reusable tuples/lists. A generator can be consumed during
+  validation before canonicalization; such iterators are outside this profile.
+- One first-order VJP is supported per forward. Internal graph lifetime does
+  not support repeated VJPs merely because the caller requests retain_graph.
+- Arbitrary upstream log_probs/reuse_R_for_U, higher derivatives, differentiable
+  masks/temperature, GPU and actual sampler integration remain unqualified.
+
+These limitations are retained as failures/unresolved constraints, not hidden
+behind the passing local test count. The scratch wrapper is research code,
+not an upstream production patch. No automatic dispatcher was deployed.
+
+16.12 Hostile prior art, economic limits and ranked remaining question
+
+The search concerned the decision: reduce exact recurrence and derivative
+compute while retaining coordinate/mask structure. It included compressed
+linear algebra, default-tuple matrices, structure-aware compilation, sparse
+automatic differentiation, the specific DAGPA recurrence and patents. The
+stronger literature leads below prevent broad mechanism novelty claims.
+Bounded search is neither patent clearance nor evidence of absent prior art.
+
+Source | What it covers | Effect on this claim
+[C16-1] PurdueMINDS/DAGPA, official NeurIPS2025 implementation, pinned commit
+053bac751b15404902f69f608b5ab207f9aa5edc; inspected recurrence/mask/sampler.
+https://github.com/PurdueMINDS/DAGPA/tree/053bac751b15404902f69f608b5ab207f9aa5edc
+https://papers.nips.cc/paper_files/paper/2025/hash/bc688efcf83bb744e1283897bfd4afa0-Abstract-Conference.html
+Defines the real decision/model rather than a toy replacement. Exact source
+did not use this local structured palette implementation. That observation
+alone cannot establish priority for the implementation idea.
+
+[C16-2] Elgohary et al., compressed linear algebra, PVLDB2016 and VLDBJ2018.
+https://vldb.org/pvldb/vol9/p960-elgohary.pdf
+https://mboehm7.github.io/resources/vldbj2018.pdf
+Known dictionary/grouped computation over repeated values. Reject broad
+novelty for finite-value factorization or compressed computation itself.
+
+[C16-3] Baunsgaard, Workload-aware Compressed Linear Algebra, 2025 thesis.
+https://baunsgaard.github.io/assets/pdf/thesis.pdf
+Default tuples and workload-aware compression are known optimization tools;
+a structured zero/default class is not by itself a novel scientific mechanism.
+
+[C16-4] Shaikhha, Huot, Hashemian, A Tensor Algebra Compiler for Sparse
+Differentiation, CGO2024; DOI10.1109/CGO57630.2024.10444787.
+https://www.research.ed.ac.uk/en/publications/a-tensor-algebra-compiler-for-sparse-differentiation/
+https://arxiv.org/abs/2303.07030
+Compiler optimization of sparse derivatives is a strong relevant comparator
+family, not an unknown Garden invention. Not ported/benchmarked in this turn.
+
+[C16-5] Ghorbani, Bauer, Grosser, Shaikhha, Compressed and Parallelized
+Structured Tensor Algebra (DASTAC), PACMPL9/OOPSLA1 article141, 2025;
+DOI10.1145/3720506.
+https://www.pure.ed.ac.uk/ws/files/590068632/GhorbaniEtalACMProgramLang9CompressedandParallelizedStructuredTensorAlgebra.pdf
+Structure/redundancy propagation and compressed low-level code generation
+are modern prior art. The paper supplies an adverse broad-method comparison;
+it was not run on the exact nonlinear DAGPA composition, so neither dominance
+nor failure on this kernel is asserted. Strongest-comparator gate stays OPEN.
+
+[C16-6] Urban and van der Smagt, Automatic Differentiation for Tensor
+Algebras, 2017. https://arxiv.org/abs/1711.01348
+Derivative/index structure and chain-rule transformation are established.
+Eliding a contribution killed by a constant mask is conventional calculus.
+
+[C16-7] US10067909B2, sparse linear algebra and dictionary/column-store
+processing. https://patents.google.com/patent/US10067909B2/en
+Broader technical overlap concerning compressed representation and processing;
+not a finding that every patent claim covers this exact code or a legal opinion.
+Related search leads US20220171627A1 and US20200348937A1 concern dictionary
+matrix compression/decompression, not established exact protocol matches.
+
+No exact narrow publication match located in this bounded search means UNKNOWN,
+not novel. DASTAC/sparse AD/other competent compilers may already express this
+optimization. Modern compressed/sparse implementations, GPU routes and full
+training remain untested. The recorded winner is fastest TESTED eligible arm,
+not the strongest possible contemporary implementation.
+
+Ranked gaps, without opening another experimental claim:
+Rank1: propagate fixed-mask provenance into this composed DAGPA gradient kernel.
+Status EXTEND_LOCAL_IMPLEMENTATION; conventional invariant REUSE; narrow
+application priority UNKNOWN; measured local CPU improvement; dollar value
+UNKNOWN. Next meaningful gate is a stronger implementation/full-workload
+comparison, not another list of ideas. Falsifier: competent existing compiler
+matches/beats the result after all costs, or real integration changes outputs.
+Rank2: complete safe API qualification of that SAME implementation (iterator,
+bounded numeric range, graph lifetime, all real source branches). This is
+engineering debt, not a new scientific candidate or separately valued saving.
+Rank3: Garden source/method qualification. Recover exact missing source inputs
+and run the actual machinery; then a blind matched-budget discovery comparison.
+This is a methodological prerequisite, not a claimed industrial improvement.
+Cache invalidation and tied-coordinate corrections stay known mechanisms.
+No NEW_SCIENCE item survives. One local implementation extension remains.
+
+Economic contract for any future real population:
+ Delta_annual = N_eligible * (t_baseline-t_candidate)/3600 * p_CPU_hour
+                - implementation - validation - maintenance - other added cost.
+N_eligible must be observed qualified annual invocations; p_CPU_hour must be
+actual marginal avoidable cost. CPU seconds, wall time, billed capacity and
+joules differ. Their conversion is not assumed. Full-workload invocation count,
+hardware mix, adoption, integration effort, quality and avoidable billing are
+UNKNOWN. Thus no defensible dollar/year, worldwide saving, large-scale claim
+or probability of positive deployment value can be provided from this run.
+Against the checked local grouped arm, measured follow-up delta is 0.990045 ms
+per tested recurrence. Against untested stronger code, even its sign is UNKNOWN.
+The previous chapter14 percentage is a different comparison; do not add it.
+
+16.13 Coverage, qualification and admission report
+
+situations = 20
+
+transitions = 23
+
+invariants = 32
+
+obligation_bindings = 39
+
+nodes = 50
+
+edges = 141
+
+l0_raw = 2400
+
+l0_signature_plausible = 659
+
+l0_signature_rejected = 1741
+
+l0_semantically_admitted = 0
+
+l1_applied_lifts = 129
+
+l2_paths = 309
+
+l3_paths = 629
+
+typed_edges = 141
+
+structurally_rejected_edges = 0
+
+interface_audits = 7
+
+interfaces_with_missing_tokens = 3
+
+missing_tokens = 6
+
+macro_form_bindings = 68
+
+macro_applicable = 18
+
+Coverage denominators/dispositions:
+L0: all 10x24x10=2400 raw relation cells retained, not just successes.
+659 fit the broad candidate signatures; 1741 fail that candidate screen.
+ZERO full semantic admissions. The registry contains PROCESS_PLACEHOLDER in
+a target signature; the adapter does not turn it into an eleventh Core Object.
+The historical 346 figure is not reproduced or replaced by 659 semantic PASSes.
+L1: 129 selected Function/facet bindings, not every legal form/facet/record.
+L2/L3: 309 directed endpoint-joined paths and 629 length-three paths. They
+exclude forks/converging and other connected motifs, and do not implement the
+missing full typed JoinWitnessRegistry. An endpoint join is not semantic closure.
+L4/L5: ten hand-authored finite composition/materiality checks pass: seven
+true/false/UNKNOWN mask-elision cases and three no-loss/conflict/authority
+composition cases. No full consequential search, shrinker, depth64 canonical
+schema validation or universal adversarial coverage was executed.
+Eight structural checks pass (source resolvability, raw count, deterministic
+reverse ordering, no derived-seed feedback, status separation and object scope).
+These validate this adapter's invariants, not complete Garden conformance.
+
+SAL axes remain separate:
+STRUCTURAL = CANDIDATE_SIGNATURE_SCREEN_ONLY.
+COMPLETENESS = INCOMPLETE_SOURCE.
+JOIN = BOUNDED_ENDPOINT_PATHS_ONLY.
+COHERENCE = NOT_GLOBALLY_PROVED.
+INTERPRETATION = RESEARCH_BINDINGS_NOT_ADMITTED.
+
+SAC dispositions: existing chain rule/compression/mask mathematics REUSE;
+the scoped implementation EXTEND; source-incomplete full machinery
+NOT_EXECUTABLE; narrow historical/frontier novelty UNKNOWN; no admitted NEW.
+Formal GSL semantics, source entailment for each generated binding, missing
+registry contracts and complete retention are NOT discharged by these counts.
+
+Separate scientific statuses:
+Hypothesis formulated: YES, one bounded existing computing claim extension.
+Mathematical derivation: valid for the explicit fixed-set first-order contract;
+broader independent-B/higher-order claims refuted.
+Simulation/numerical support: YES, only declared fixtures and implementation.
+Prior art checked: bounded literature/patent screen; broad mechanism known.
+Historical novelty demonstrated: NO. Frontier novelty: UNKNOWN.
+Real-world empirical validation: NO. Independent replication: NO.
+Economic value measured in money: NO. Local CPU cost measured: YES.
+Garden discovery-process advantage: UNMEASURED, no matched blind control arm.
+Admission: NONE. Full Garden execution: NOT_ESTABLISHED.
+
+16.14 Source anchors and reproducibility in the single consolidated document
+
+The following byte ranges are UTF-8, start inclusive/end exclusive, at the
+frozen source versions. Anchors preserve source identity; they are not a claim
+that a source's contents automatically entail an author-written domain rule.
+
+SIGNATURE: design_deltas/v15.10/GCSC_RELATION_SIGNATURE_CANDIDATE.json
+  bytes [0,4499); file SHA256 434c21a203a6eb3ebde3728800ddc37ea55ed9eb17212a2b1650955b29f180ed
+  span SHA256 434c21a203a6eb3ebde3728800ddc37ea55ed9eb17212a2b1650955b29f180ed
+
+GCSC: design_deltas/v15.9.1/TECHNICAL_GCSC_SOURCE_CLAUSES.md
+  bytes [276,4719); file SHA256 3c5d45509d354c2e37f3cef7ed5a9eefc339e8326e60786f0f67d472b0099ee6
+  span SHA256 9ef87e7aa1c92a8aba99cf827b6ae4a731f8c0fc676676a7a76a3abe9ebe7b6c
+
+BASIS: design_deltas/v15.9.1/ANNEXURE_GCSC_SOURCE_CLAUSES.md
+  bytes [274,2928); file SHA256 f0431454e8589971fc38eabfde635d602be7afaec8a02b7deb410bde0356aa21
+  span SHA256 204fd436a8f881b819d72595ea01f610f1e77cfd4094ec151c8463576e656699
+
+TREE: design_deltas/v15.10/TREE_CORE_v0.8.1_2026-09-23.txt
+  bytes [4349,14164); file SHA256 4af3a2c4c8d8577909735fb61c42e0f43324dc0147d8b24146b4561ee56511fa
+  span SHA256 e8fc267fce36c5c420a43fd540aaf86ba6db24d9920d4a078a4bfe0b1bd71978
+
+OWNER: design_deltas/v15.10/TREE_CORE_v0.8.1_2026-09-23.txt
+  bytes [22106,24052); file SHA256 4af3a2c4c8d8577909735fb61c42e0f43324dc0147d8b24146b4561ee56511fa
+  span SHA256 d1e1d0b603fa9892b2cea8a4efc8a0a8a52e729f694f2d92bb6a86825d51eb56
+
+PROCESS: canonical/current/Garden_Technical_v15.5_FULL_2026-09-12.txt
+  bytes [33432,36088); file SHA256 865f5ded862cb30d51ad213fa05cdc342983a31fb6a23bb9aad5b25a84d1cb9b
+  span SHA256 90b3840caaa9096cc822e5e1ede4831e4b0f442886a00792642b737f7ab11998
+
+EVIDENCE: canonical/current/Garden_Technical_v15.5_FULL_2026-09-12.txt
+  bytes [658397,658802); file SHA256 865f5ded862cb30d51ad213fa05cdc342983a31fb6a23bb9aad5b25a84d1cb9b
+  span SHA256 9d137fe76a373e4c35ee96bb861ffcc6c4dae68a1618e05f5276a00f7f407d22
+
+MASK: PurdueMINDS/DAGPA@053bac751b15404902f69f608b5ab207f9aa5edc/dagpa.py
+  bytes [10432,12370); file SHA256 8cc5c4d962466542789252a39430e4222ae89bc091a0a0eef3cbda189ae45b30
+  span SHA256 ed981a119b4c9ed992fe0ea39611660bf8679f0b721ba9ad2354863989fae8c6
+
+STEP: PurdueMINDS/DAGPA@053bac751b15404902f69f608b5ab207f9aa5edc/dagpa.py
+  bytes [15029,16548); file SHA256 8cc5c4d962466542789252a39430e4222ae89bc091a0a0eef3cbda189ae45b30
+  span SHA256 a2f8db263d2c10a1330599bc9e25d81ac7cdb076e7bda16c387b93669ff9ff53
+
+RECURRENCE: PurdueMINDS/DAGPA@053bac751b15404902f69f608b5ab207f9aa5edc/dagpa.py
+  bytes [16548,18500); file SHA256 8cc5c4d962466542789252a39430e4222ae89bc091a0a0eef3cbda189ae45b30
+  span SHA256 1522e3a6a2912e1f99b56d23a975d72ab0c6f1196dc568c37d69c4da1eff454d
+
+SAMPLER: PurdueMINDS/DAGPA@053bac751b15404902f69f608b5ab207f9aa5edc/dagpa.py
+  bytes [55608,69265); file SHA256 8cc5c4d962466542789252a39430e4222ae89bc091a0a0eef3cbda189ae45b30
+  span SHA256 fab50ee8a0ab6ffcc1838ff18974c21e68c15da28e817e03c6f455b70ffb9cad
+
+Final research graph root: 59537e4ae2161bfb2c9091b0ba4eceb4cbcfebfb6830070e9acff53d73d3dc0e.
+This uses the adapter JSON encoding, not GardenCanonicalEncoding/v3 certification.
+
+map.txt SHA256 d6f322d42f482f10ec3f04769ec78fbbb3601e3b251f86fab2ef5c5070944c56
+
+map_results.json SHA256 720ec88fcb0d5a0ec1006a2404c8c96b7784172abf7dc6904de0ead38890c4cb
+
+experiment.txt SHA256 6939e09c7a052eb1b6247ebddb1e8c5077573ab95802603470a048259a13b3d7
+
+experiment_results.json SHA256 d9db92c959ca56a888896587d66bdb66837b3cc948edd16fb14b3432a7c441e1
+
+guard_check.txt SHA256 176ddc1e399bc28b1079ab04068a659c9d1f44d17cf42ad7bdb4c755b19198eb
+
+guard_results.json SHA256 0e06080eb04df3f9889b5b4554d6cc299b77f8ebefa6f65853bcb239d54f5a9f
+
+Replay: use Python3.12 with torch2.14.1+cpu on an appropriately isolated CPU
+environment. Copy the three following source blocks into a scratch directory;
+they are embedded here to preserve reproducibility without adding any tracked
+.py, .json, notebook or standalone report files. These are research scripts,
+not an installed Garden runtime or repair of TREE_CORE. No private data,
+external APIs, paid inference or hardware actuation is required.
+
+Use the Garden base commit cited in16.1, the exact pinned upstream dagpa.py
+bytes, and local path layout shown in the source, or edit ROOT/REPO path constants
+only and record the resulting new source hashes. Put upstream bytes at the
+map script's dagpa_dagpa_source.txt path. Run map.txt, experiment.txt and then
+guard_check.txt as Python programs. Each writes scratch JSON results; do not
+add those files to the repository. Numeric comparisons/timing interpretation
+must retain declared tolerances and limitations. Timing is hardware/runtime
+dependent; exact elapsed values are not promised to reproduce.
+The source blocks are the actual retained tested scripts. In particular the
+frozen raw experiment still contains its documented duplicate-index and API
+limitations; do not deploy it as a generic kernel. The guard follow-up retains
+the remaining scope restrictions identified in16.11.
+
+BEGIN REPRODUCIBLE SOURCE map.txt
+"""Executable bounded research profile; NOT the missing r6/GCSC COMPLETE implementation."""
+import pathlib,json,hashlib,itertools,collections
+ROOT=pathlib.Path('/workspace/scratch/5e8f47cbc766')
+REPO=ROOT/'garden-source-closure'
+def canon(x): return json.dumps(x,sort_keys=True,separators=(',',':'),ensure_ascii=False,allow_nan=False)
+def digest(x): return hashlib.sha256(canon(x).encode()).hexdigest()
+sigpath='design_deltas/v15.10/GCSC_RELATION_SIGNATURE_CANDIDATE.json'
+sig=json.loads((REPO/sigpath).read_text()); objects=sig['objects']; relations=list(sig['signatures'])
+forms='CONSTRUCT CONTRACT STATE RELATION PROCESS RULE PROJECTION'.split()
+facets='IdentityLifecycle ScopeContext EpistemicsProvenance AuthorityHumanBoundary EffectsSafety DependencyValidity ResourceTermination PrivacyRetention AuditExplanation RecoveryEvolution'.split()
+pillars='Existence Change Agency Law Value Frame'.split()
+macros={
+'ArchitectureObject':forms,'Function':['CONTRACT','PROCESS'],'Lifecycle':['STATE','PROCESS','RULE'],
+'Schema':['RULE','PROJECTION'],'Receipt':['CONSTRUCT','STATE','RELATION','PROJECTION'],
+'Registry':['CONSTRUCT','STATE','RELATION','RULE','PROJECTION'],'Test':['PROCESS','RULE','PROJECTION'],
+'ProofObligation':['CONTRACT','PROCESS','RULE'],'Theory':forms,'Algebra':['CONSTRUCT','CONTRACT','RELATION','PROCESS','RULE','PROJECTION'],
+'Profile':forms,'EventRecord':['CONSTRUCT','STATE','RELATION','PROJECTION'],'Binding':['RELATION','RULE'],
+'Plan':['CONTRACT','PROCESS'],'FailureMode':['STATE','PROCESS','RULE'],'Query':['CONTRACT','PROCESS','PROJECTION'],
+'EventSubscription':['CONTRACT','STATE','RELATION','PROCESS'],'ContinuousWorker':['CONTRACT','STATE','PROCESS','RULE'],
+'DynamicalSystemProfile':['CONSTRUCT','CONTRACT','STATE','RELATION','RULE','PROJECTION'],
+'AuthorityGatedContract':['CONTRACT','RULE'],'RecoveryEnvelope':['CONTRACT','STATE','PROCESS','RULE']}
+# Exact file-byte anchors. Domain interpretations below are author-written research seeds.
+spans={}
+signature_bytes=(REPO/sigpath).read_bytes()
+spans['SIGNATURE']={'path':sigpath,'file_sha256':hashlib.sha256(signature_bytes).hexdigest(),'start_byte':0,'end_byte':len(signature_bytes),'span_sha256':hashlib.sha256(signature_bytes).hexdigest()}
+def anchor(name,path,start,end):
+ b=(REPO/path).read_bytes(); a=b.index(start.encode()); z=b.index(end.encode(),a) if end else len(b)
+ spans[name]={'path':path,'file_sha256':hashlib.sha256(b).hexdigest(),'start_byte':a,'end_byte':z,'span_sha256':hashlib.sha256(b[a:z]).hexdigest()}
+anchor('GCSC','design_deltas/v15.9.1/TECHNICAL_GCSC_SOURCE_CLAUSES.md','[T-GCSC-1591]',None)
+anchor('BASIS','design_deltas/v15.9.1/ANNEXURE_GCSC_SOURCE_CLAUSES.md','[A-GCSC-1591]',None)
+anchor('TREE','design_deltas/v15.10/TREE_CORE_v0.8.1_2026-09-23.txt','1. SUBSTRATE','2. TRUNK')
+anchor('OWNER','design_deltas/v15.10/TREE_CORE_v0.8.1_2026-09-23.txt','R. ATOMIC REGISTER','G. NO-LOSS')
+anchor('PROCESS','canonical/current/Garden_Technical_v15.5_FULL_2026-09-12.txt','3.1 UNIVERSAL PROCESS ALGEBRA','3.2 GARDEN TRANSITION')
+anchor('EVIDENCE','canonical/current/Garden_Technical_v15.5_FULL_2026-09-12.txt','SemanticAnchor: [T-EVIDENCE-ALGEBRA]','SemanticAnchor: [T-PHYSICAL-INGRESS-EGRESS]')
+source=ROOT/'dagpa_dagpa_source.txt'; src=source.read_bytes()
+for name,start,end in [('MASK','    def W_not(','    def _bellman_ford('),('STEP','    def _bellman_ford_neg(','    def _U('),('RECURRENCE','    def _U(','    def clear_cache('),('SAMPLER','    def sample(',None)]:
+ a=src.index(start.encode());z=src.index(end.encode(),a) if end else len(src)
+ spans[name]={'path':'PurdueMINDS/DAGPA@053bac751b15404902f69f608b5ab207f9aa5edc/dagpa.py','file_sha256':hashlib.sha256(src).hexdigest(),'start_byte':a,'end_byte':z,'span_sha256':hashlib.sha256(src[a:z]).hexdigest()}
+# Chronological situations are expanded only at state, contract or cost boundaries.
+# id | parent | action | input | output | source owner | required semantic tokens
+table='''S01|root|load frozen code and configuration|source|config|GCSC|source_identity epoch
+S02|root|admit bounded local research run|config|permit|PROCESS|budget authority scope
+S03|root|draw discrete edge coordinates|permit|logits|SAMPLER|coordinate_identity finite_support
+S04|S03|bind shape dtype and device|logits|typed_logits|STEP|axes numerical_domain
+S05|root|form complement log probabilities|typed_logits|complement|MASK|chain_rule finite_values
+S06|root|apply diagonal and exclusion mask|complement|masked_B|MASK|masked_zero mask_provenance
+S07|S06|identify support and coordinate membership|masked_B|membership|STEP|partition coordinate_identity
+S08|root|initialize negative reachability state|masked_B|U0|RECURRENCE|boundary_state
+S09|root|prepare current qualified implementation|membership|plan|GCSC|shape_guard derivative_contract
+S10|root|evaluate nonlinear messages|U0|messages|STEP|same_primal numerical_domain
+S11|S10|aggregate messages over intermediate nodes|messages|aggregate|STEP|normalization partition
+S12|root|add residual and advance recurrence|aggregate|U_next|STEP|residual_state iteration_limit
+S13|S12|continue bounded recurrence|U_next|U_final|RECURRENCE|dependency_epoch accumulated_error
+S14|root|consume scores in loss|U_final|loss|SAMPLER|consumer_scope
+S15|root|propagate per-coordinate cotangents|loss|gradient_B|STEP|distinct_gradients same_derivative
+S16|S15|apply mask and sigmoid chain rule|gradient_B|gradient_logits|MASK|masked_gradient_zero chain_rule
+S17|root|score and choose next discrete sample|gradient_logits|next_logits|SAMPLER|coordinate_identity random_state
+S18|S17|invalidate and rebuild affected state|next_logits|fresh_config|RECURRENCE|dependency_epoch cache_lifetime
+S19|root|compare correctness and CPU cost|U_final|measurement|EVIDENCE|same_workload setup_cost
+S20|root|retain result and stop or requalify|measurement|record|OWNER|source_identity no_self_admission'''
+situations=[]
+for line in table.splitlines():
+ i,p,a,inp,out,owner,req=line.split('|')
+ situations.append(dict(id=i,parent=p,action=a,input=inp,output=out,owner=owner,requires=req.split()))
+transition_pairs=[('S%02d'%a,'S%02d'%b) for a,b in [(1,2),(2,3),(3,4),(4,5),(5,6),(6,7),(6,8),(7,9),(8,10),(9,10),(10,11),(11,12),(12,13),(13,10),(13,14),(14,15),(15,16),(16,17),(17,18),(18,3),(13,19),(19,20),(20,9)]]
+# Seeds: conventional mathematical, implementation and research obligations; none is a new law.
+rules={
+'source_identity':('I01','provenance','exact source and qualified owner survive projection'),
+'epoch':('I02','dependency','source, parameters and implementation have a frozen epoch'),
+'budget':('I03','engineering','stop at stated memory/time/iteration bounds'),
+'authority':('I04','governance','local simulation permission does not authorize deployment'),
+'scope':('I05','contract','research results retain their tested scope'),
+'coordinate_identity':('I06','mathematical','equal values do not identify independent coordinates'),
+'finite_support':('I07','domain','palette route requires exact finite support; no quantization'),
+'axes':('I08','typing','u,x,v dimensions and contractions are compatible'),
+'numerical_domain':('I09','numerical','positive temperature, finite values and declared tolerance'),
+'chain_rule':('I10','mathematical','differentiate the composed original-coordinate function'),
+'finite_values':('I11','numerical','nonfinite inputs reject or use qualified fallback'),
+'masked_zero':('I12','mathematical','complement value is exactly zero on excluded edges'),
+'mask_provenance':('I13','dependency','zero caused by a fixed mask is distinguished from a free zero parameter'),
+'partition':('I14','mathematical','membership masks are disjoint and sum to the all-ones matrix'),
+'boundary_state':('I15','implementation','preserve U initialization including finite -300 sentinel'),
+'shape_guard':('I16','engineering','structured fast path requires the exact declared mask family'),
+'derivative_contract':('I17','contract','input-coordinate choice determines which gradients must be preserved'),
+'same_primal':('I18','mathematical','replacement matches the original function within tolerance'),
+'normalization':('I19','implementation','retain divisor n and temperature alpha/log(2)'),
+'residual_state':('I20','implementation','retain additive U residual each iteration'),
+'iteration_limit':('I21','engineering','retain min(n,max_path_length), not an invented convergence stop'),
+'dependency_epoch':('I22','dependency','changed logits, mask, alpha or code invalidate affected reuse'),
+'accumulated_error':('I23','numerical','one-step tolerance alone does not certify recurrent outputs'),
+'consumer_scope':('I24','contract','changing a surrogate is not exact implementation acceleration'),
+'distinct_gradients':('I25','mathematical','untied per-edge VJP is retained through equal-value grouping'),
+'same_derivative':('I26','mathematical','preserve VJP for every declared differentiable input'),
+'masked_gradient_zero':('I27','mathematical','fixed masked logits have zero derivative after chain composition'),
+'random_state':('I28','statistical','numeric tolerance does not imply identical stochastic trajectory'),
+'cache_lifetime':('I29','dependency','autograd graph lifetime and parameter epoch bound cached results'),
+'same_workload':('I30','experimental','compare identical outputs, gradients and input preparations'),
+'setup_cost':('I31','economic','include preparation and qualification costs; no sector extrapolation'),
+'no_self_admission':('I32','evidence','generator, tester and proposer do not supply independent admission')}
+# Actual observed comparators and missing information at interfaces. Missing tokens are obligations,
+# not claims of unknown science. The records are human code inspection seeds, not inferred facts.
+interfaces=[
+('A01','S06','S09','generic grouped B interface','same_primal distinct_gradients partition','same_primal distinct_gradients partition mask_provenance masked_gradient_zero shape_guard'),
+('A02','S15','S16','generic grouped B interface','same_derivative distinct_gradients chain_rule','same_derivative distinct_gradients chain_rule masked_gradient_zero derivative_contract'),
+('A03','S17','S18','DAGPA documented cache clear','dependency_epoch cache_lifetime','dependency_epoch cache_lifetime'),
+('A04','S09','S13','chapter14 bounded recurrence results','same_primal same_derivative accumulated_error iteration_limit','same_primal same_derivative accumulated_error iteration_limit'),
+('A05','S06','S10','DAGPA actual mask path','masked_zero mask_provenance chain_rule','masked_zero mask_provenance chain_rule'),
+('A06','S07','S15','naively tied lookup negative control','same_primal partition','same_primal partition distinct_gradients'),
+('A07','S19','S20','reported kernel CPU comparison','same_workload setup_cost scope no_self_admission','same_workload setup_cost scope no_self_admission')]
+# Finite domain graph. Semantic interpretations are explicit research bindings, not recovered r6 registries.
+nodes={}
+def node(i,t,label,owner='GCSC'):
+ form_map={'TIME':['STATE'],'SPACE':['CONSTRUCT'],'THING':['CONSTRUCT','STATE','PROJECTION'],'EVENT':['CONSTRUCT','STATE'],'ACTION':['CONTRACT','PROCESS'],'AGENCY':['CONSTRUCT','CONTRACT'],'RULE':['RULE','CONTRACT'],'VALUE':['PROJECTION'],'CONTEXT':['STATE','CONTRACT'],'CLAIM':['CONSTRUCT','RELATION','PROJECTION']}
+ nodes[i]=dict(id=i,type=t,label=label,owner=owner,status='RESEARCH_SEED',epoch='CLOSURE-1',forms=form_map[t],
+  facets={f:('APPLICABLE' if f not in ['EffectsSafety','PrivacyRetention','RecoveryEvolution'] else 'DECLARED_LOCAL_SCOPE_ONLY') for f in facets},
+  applicability='local public-source synthetic computation; no external causal action',
+  status_axes={'design':'RESEARCH','math':'OBLIGATION_OR_SEED','empirical':'NOT_INFERRED','admission':'NONE'},
+  exceptions=['no physical-law inference','no full r6 or GSL grammar conformance'],historical_disposition='NEW_RESEARCH_RECORD_NO_PREDECESSOR_ELISION')
+for i,t,l in [('T','TIME','parameter epoch and iteration'),('X','SPACE','array index and device frame'),('A','AGENCY','research operator'),('C','CONTEXT','local CPU synthetic research'),('V','VALUE','CPU seconds after setup'),('R','RULE','no-self-admission and source contract'),('H','CLAIM','candidate speedup, unresolved'),('E','EVENT','parameter update'),('Z','CLAIM','negative-control counterexample')]:node(i,t,l)
+edges=[]
+def edge(a,r,b,owner='GCSC',context='C'):
+ edges.append(dict(source=a,relation=r,target=b,owner=owner,context_ref=context,time_ref='T',scope_ref='bounded-research',provenance=owner,epoch_id='CLOSURE-1',validity_domain='named local research situation and epoch only',status='UNVERIFIED_RELATION_HYPOTHESIS' if r in ['equivalentTo','supports','contradicts','conflictsWith','identifies','assesses','blocks'] else 'AUTHOR_INTERPRETATION_REQUIRES_SEMANTIC_REVIEW',admission='NONE',invalidators=['source or contract change','counterexample','context mismatch']))
+for s in situations:
+ node(s['id'],'ACTION',s['action'],s['owner'])
+ for k in ['input','output']:
+  if s[k] not in nodes:node(s[k],'THING',s[k],s['owner'])
+ edge(s['id'],'dependsOn',s['input'],s['owner']);edge(s['output'],'originatesFrom',s['id'],s['owner'])
+ edge('A','acts',s['id']);edge('C','contextualizes',s['id']);edge('R','governs',s['id'])
+for a,b in transition_pairs:edge(b,'dependsOn',a,'PROCESS')
+for a,r,b in [('H','identifies','U_final'),('S17','causes','E'),('C','values','V'),('C','frames','X'),('S20','obeys','R'),('H','assesses','V'),('R','controls','S09'),('membership','partOf','plan'),('A','owns','H'),('H','references','record'),('H','derivedFrom','measurement'),('plan','equivalentTo','config'),('Z','contradicts','H'),('measurement','supports','H'),('R','blocks','S09'),('A','hasHypothesis','H'),('fresh_config','supersedes','config'),('H','conflictsWith','Z')]:edge(a,r,b)
+# above equivalentTo/support/conflict edges are hypotheses to inspect, never asserted equivalence/evidence.
+def structural(e):
+ s=sig['signatures'][e['relation']]
+ return nodes[e['source']]['type'] in s['source'] and nodes[e['target']]['type'] in s['target']
+def build(reverse=False):
+ # S0 analogue validates and materializes research seeds; does not certify r6 conformance.
+ ns=dict(sorted(nodes.items(),reverse=reverse)); es=sorted(edges,key=canon,reverse=reverse)
+ assert len(objects)==10 and len(relations)==24 and len(forms)==7 and len(macros)==21
+ assert all(e['source'] in ns and e['target'] in ns for e in es)
+ raw=[]
+ for a,r,b in itertools.product(objects,relations,objects):
+  rs=sig['signatures'][r]; ok=a in rs['source'] and b in rs['target']
+  raw.append((a,r,b,'SIGNATURE_PLAUSIBLE_NOT_SEMANTIC_PASS' if ok else 'CANDIDATE_SIGNATURE_REJECTED'))
+ # S1 analogue is pure seed-local projection: derived obligations never re-enter it.
+ obligations=sorted([(s['id'],rules[t][0],s['owner'],t) for s in situations for t in s['requires']])
+ audits=[dict(id=i,from_situation=a,to_situation=b,comparator=c,missing=sorted(set(req.split())-set(got.split()))) for i,a,b,c,got,req in interfaces]
+ # Register only exact shared endpoint join. Conflicts/authority/interpretation remain separate.
+ valid=[e for e in es if structural(e)]
+ pairs=[];triples=[]
+ for i,e in enumerate(valid):
+  for j,f in enumerate(valid):
+   if i!=j and e['target']==f['source']:
+    pairs.append((canon(e),canon(f)))
+    for k,g in enumerate(valid):
+     if k not in (i,j) and f['target']==g['source']:triples.append((canon(e),canon(f),canon(g)))
+ # L1 research applicability is declared per actual action, no universal semantic reduction inferred.
+ lifts=[]
+ for s in situations:
+  relevant=['IdentityLifecycle','ScopeContext','EpistemicsProvenance','DependencyValidity','ResourceTermination','AuditExplanation']
+  if s['id'] in ['S02','S20']:relevant+=['AuthorityHumanBoundary','EffectsSafety','PrivacyRetention']
+  if s['id'] in ['S17','S18','S20']:relevant+=['RecoveryEvolution']
+  for f in relevant:lifts.append((s['id'],'Function',tuple(macros['Function']),f))
+ # All 21 macro names inspected; only those with an explicit research role are applied.
+ macro_roles={'ArchitectureObject':'bounded kernel contract','Function':'recurrence and VJP','Lifecycle':'sample/rebuild/qualify','Schema':'typed relation and source records','Receipt':'local test result','Registry':'frozen research predicates','Test':'differential and adverse controls','ProofObligation':'original-coordinate equivalence','Theory':'NOT_APPLICABLE_no_new_theory','Algebra':'chain rule and profile union','Profile':'fixed CPU scope','EventRecord':'sample mutation','Binding':'source/shape/time bindings','Plan':'bounded run plan','FailureMode':'unsafe zero elision','Query':'coverage query','EventSubscription':'NOT_APPLICABLE_no_live_subscription','ContinuousWorker':'NOT_APPLICABLE_no_background_worker','DynamicalSystemProfile':'bounded recurrence','AuthorityGatedContract':'local execution scope','RecoveryEnvelope':'qualified fallback'}
+ macro_lifts=sorted((m,f) for m,fs in macros.items() for f in fs if not macro_roles[m].startswith('NOT_APPLICABLE'))
+ payload=dict(nodes=sorted(ns.values(),key=canon),edges=sorted(es,key=canon),obligations=obligations,audits=audits,lifts=sorted(lifts),macro_roles=macro_roles,macro_lifts=macro_lifts,raw=sorted(raw),pairs=sorted(pairs),triples=sorted(triples),sources=spans)
+ # S2 analogue seals deterministic semantic records; no gzip or r6 schema claim.
+ stats=dict(situations=len(situations),transitions=len(transition_pairs),invariants=len(rules),obligation_bindings=len(obligations),nodes=len(ns),edges=len(es),l0_raw=len(raw),l0_signature_plausible=sum(x[3].startswith('SIGNATURE_PLAUSIBLE') for x in raw),l0_signature_rejected=sum(x[3].endswith('REJECTED') for x in raw),l0_semantically_admitted=0,l1_applied_lifts=len(lifts),l2_paths=len(pairs),l3_paths=len(triples),typed_edges=len(valid),structurally_rejected_edges=len(es)-len(valid),interface_audits=len(audits),interfaces_with_missing_tokens=sum(bool(x['missing']) for x in audits),missing_tokens=sum(len(x['missing']) for x in audits))
+ stats['macro_form_bindings']=len(macro_lifts);stats['macro_applicable']=sum(not x.startswith('NOT_APPLICABLE') for x in macro_roles.values())
+ return payload,stats
+
+def zero_elision_oracle(mask_fixed,zero_from_mask,input_is_logits):
+ # Research property oracle for this one composition; supplied mathematical meaning is explicit.
+ if None in (mask_fixed,zero_from_mask,input_is_logits):return 'UNKNOWN'
+ return 'ELIGIBLE_ONLY_FOR_COMPOSED_VJP' if all((mask_fixed,zero_from_mask,input_is_logits)) else 'REJECT'
+def compose(a,b):
+ # Restricted set representation of the source non-laws: not a general policy algebra.
+ return {'hard':a['hard']|b['hard'],'unknowns':a['unknowns']|b['unknowns'],'conflicts':a['conflicts']|b['conflicts'],'authority_ceiling':a['authority_ceiling']&b['authority_ceiling']}
+def adversarial_checks():
+ fixtures=[((True,True,True),'ELIGIBLE_ONLY_FOR_COMPOSED_VJP'),((False,True,True),'REJECT'),((True,False,True),'REJECT'),((True,True,False),'REJECT'),((None,True,True),'UNKNOWN'),((True,None,True),'UNKNOWN'),((True,True,None),'UNKNOWN')]
+ checks={'composition_'+str(i):zero_elision_oracle(*args)==expected for i,(args,expected) in enumerate(fixtures)}
+ a={'hard':{'original_gradient'},'unknowns':{'deployment_cost'},'conflicts':set(),'authority_ceiling':{'local'}}
+ b={'hard':{'fixed_mask'},'unknowns':set(),'conflicts':{'standalone_B_contract'},'authority_ceiling':{'local','deployment'}}
+ c=compose(a,b)
+ checks['no_scope_amplification']=c['authority_ceiling']=={'local'}
+ checks['conflict_and_unknown_retained']=c['unknowns']=={'deployment_cost'} and c['conflicts']=={'standalone_B_contract'}
+ checks['parent_hard_obligations_preserved']=c['hard']=={'original_gradient','fixed_mask'}
+ return checks
+if __name__=='__main__':
+ p,s=build();q,t=build(True);assert digest(p)==digest(q)
+ tests={
+ 'deterministic_reverse_seed_order':digest(p)==digest(q),
+ 'raw_denominator_2400':s['l0_raw']==2400,
+ 'no_process_placeholder_core_object':'PROCESS_PLACEHOLDER' not in objects,
+ 'no_self_admission':s['l0_semantically_admitted']==0,
+ 'unknown_signature_not_semantic_pass':all(x[3]!='PASS' for x in p['raw']),
+ 'derived_does_not_feed_seed':len(nodes)==s['nodes'],
+ 'all_obligations_resolve_owner':all(x[2] in spans for x in p['obligations']),
+ 'all_ten_object_types_represented':set(n['type'] for n in nodes.values())==set(objects)}
+ adverse=adversarial_checks();assert all(adverse.values())
+ result=dict(profile='research adapter, not full GCSC/r6',source_spans=spans,coverage=s,tests=tests,l4_l5_research_checks=adverse,graph_root=digest(p),audits=p['audits'],rules=rules,situations=situations,transitions=transition_pairs,macro_roles=p['macro_roles'],relation_application={r:sum(e['relation']==r for e in edges) for r in relations},sal=dict(structural='CANDIDATE_SIGNATURE_SCREEN_ONLY',completeness='INCOMPLETE_SOURCE',join='BOUNDED_REGISTERED_ENDPOINT_PATHS',coherence='NOT_GLOBALLY_PROVED',interpretation='RESEARCH_BINDINGS_NOT_ADMITTED'),release='SOURCE_FALLBACK_REQUIRED')
+ (ROOT/'closure_work/map_results.json').write_text(json.dumps(result,indent=2))
+ print(json.dumps({'coverage':s,'tests':tests,'graph_root':digest(p),'audits':p['audits']},indent=2))
+END REPRODUCIBLE SOURCE map.txt
+
+BEGIN REPRODUCIBLE SOURCE experiment.txt
+"""Frozen qualification of the existing SCI-PALETTE claim; no novel-principle assertion."""
+import torch,math,time,statistics,json,hashlib,pathlib,platform
+torch.set_num_threads(1);torch.set_num_interop_threads(1)
+ROOT=pathlib.Path('/workspace/scratch/5e8f47cbc766/closure_work')
+LOG2=math.log(2)
+def fixed_mask(w,excluded):
+ d=1-torch.eye(w.shape[0],dtype=w.dtype,device=w.device)
+ for k in excluded:d[k,:]=0;d[:,k]=0
+ return d
+def zero_action(f,excluded):
+ # Right multiplication by M0 = complement of fixed diagonal/node mask.
+ if not excluded:return f
+ out=f+f[:,list(excluded)].sum(1,keepdim=True)
+ out[:,list(excluded)]=f.sum(1,keepdim=True)
+ return out
+def preparation(w,excluded):
+ d=fixed_mask(w,excluded)
+ b=(torch.nn.functional.logsigmoid(w)-w)*d
+ vals=torch.unique(b.detach())
+ masks=(b.detach()[None,:,:]==vals[:,None,None]).to(w.dtype)
+ # Shape proof is only valid if all zero B entries originate in the fixed mask.
+ eligible=bool(torch.isfinite(w).all() and torch.isfinite(b).all() and (vals.numel()<=4) and torch.equal((b==0),(d==0)))
+ return d,b,vals,masks,eligible
+class PaletteStep(torch.autograd.Function):
+ @staticmethod
+ def forward(ctx,u,b,vals,masks,alpha,excluded,structured):
+  tau=alpha/LOG2;n=u.shape[0];y=u.clone()
+  for val,m in zip(vals,masks):
+   f=tau*(torch.logaddexp(u/tau,val/tau)-LOG2)
+   y=y+(zero_action(f,excluded) if structured and val.item()==0 else f@m)/n
+  ctx.save_for_backward(u,vals,masks);ctx.tau=tau;ctx.excluded=excluded;ctx.structured=structured
+  return y
+ @staticmethod
+ def backward(ctx,g):
+  u,vals,masks=ctx.saved_tensors;n=u.shape[0];du=g.clone();db=torch.zeros_like(u)
+  for val,m in zip(vals,masks):
+   a=torch.sigmoid((u-val)/ctx.tau)
+   if ctx.structured and val.item()==0:
+    du=du+a*zero_action(g,ctx.excluded)/n
+    # Permitted ONLY in outer masked-logit contract: db here is not a full B VJP.
+   else:
+    du=du+a*(g@m.T)/n
+    db=db+m*(torch.sigmoid((val-u)/ctx.tau).T@g)/n
+  return du,db,None,None,None,None,None
+def recurrence_direct(w,u,alpha,excluded,depth):
+ d=fixed_mask(w,excluded);b=(torch.nn.functional.logsigmoid(w)-w)*d;tau=alpha/LOG2
+ for _ in range(depth):u=u+tau*(torch.logaddexp(u[:,:,None]/tau,b[None,:,:]/tau)-LOG2).mean(1)
+ return u
+def recurrence_grouped(w,u,alpha,excluded,depth,structured=False):
+ d,b,vals,masks,eligible=preparation(w,excluded)
+ if structured and not eligible:return recurrence_direct(w,u,alpha,excluded,depth)
+ for _ in range(depth):u=PaletteStep.apply(u,b,vals,masks,alpha,excluded,structured)
+ return u
+def structured(w,u,alpha,excluded,depth):return recurrence_grouped(w,u,alpha,excluded,depth,True)
+def fixture(n,dtype,seed):
+ gen=torch.Generator().manual_seed(seed)
+ w=torch.tensor([-2.,0.,2.],dtype=dtype)[torch.randint(0,3,(n,n),generator=gen)]
+ u=-4*torch.rand((n,n),dtype=dtype,generator=gen);u.fill_diagonal_(-300)
+ g=torch.randn((n,n),dtype=dtype,generator=gen)
+ return w,u,g
+def evaluate(fn,w,u,g,alpha,excluded,depth):
+ w=w.detach().requires_grad_();u=u.detach().requires_grad_();y=fn(w,u,alpha,excluded,depth)
+ dw,du=torch.autograd.grad(y,(w,u),g)
+ return y.detach(),dw.detach(),du.detach()
+def compare(a,b,dtype):
+ atol,rtol=(1e-9,1e-8) if dtype==torch.float64 else (2e-4,2e-4)
+ return {'pass':all(bool(torch.isfinite(x).all() and torch.isfinite(y).all() and torch.allclose(x,y,atol=atol,rtol=rtol)) for x,y in zip(a,b)),'max_abs':[float((x-y).abs().max()) for x,y in zip(a,b)]}
+def run():
+ out={'script_sha256':hashlib.sha256(pathlib.Path(__file__).read_bytes()).hexdigest(),'torch':torch.__version__,'platform':platform.platform(),'stress':[],'timings':[],'nulls':{}}
+ # Correctness test set is specified before timings and uses separate seeds from timing fixtures.
+ for n in [5,16,50]:
+  for dtype in [torch.float64,torch.float32]:
+   for alpha in [1e-5,.01,1.]:
+    for ex in [(),(1,),(1,3)]:
+     w,u,g=fixture(n,dtype,761001+n)
+     a=evaluate(recurrence_direct,w,u,g,alpha,ex,3)
+     b=evaluate(structured,w,u,g,alpha,ex,3)
+     out['stress'].append(dict(n=n,dtype=str(dtype),alpha=alpha,excluded=ex,**compare(a,b,dtype)))
+ assert all(x['pass'] for x in out['stress'])
+ # Strong baseline includes a compiled entire recurrence and prepared grouped recurrence.
+ compiled=torch.compile(recurrence_direct,fullgraph=True)
+ arms={'eager_direct':recurrence_direct,'compiled_direct':compiled,'prepared_grouped':recurrence_grouped,'structured_mask':structured}
+ for n in [16,50,100]:
+  for dtype in [torch.float64,torch.float32]:
+   w,u,g=fixture(n,dtype,871001+n);u=-300*torch.eye(n,dtype=dtype)
+   args=(w,u,g,.01,(1,),9);compile_started=time.perf_counter();ref=evaluate(recurrence_direct,*args)
+   comparisons={k:compare(ref,evaluate(fn,*args),dtype) for k,fn in arms.items()}
+   warmup_wall=time.perf_counter()-compile_started
+   assert all(v['pass'] for v in comparisons.values())
+   timings={k:[] for k in arms};names=list(arms)
+   for r in range(15):
+    for k in names[r%4:]+names[:r%4]:
+     t=time.process_time();evaluate(arms[k],*args);timings[k].append(time.process_time()-t)
+   item=dict(n=n,dtype=str(dtype),depth=9,alpha=.01,excluded=[1],comparisons=comparisons,warmup_wall=warmup_wall,cpu_seconds=timings,median_cpu={k:statistics.median(v) for k,v in timings.items()})
+   out['timings'].append(item);print('TIMING',n,dtype,item['median_cpu'],flush=True)
+   (ROOT/'experiment_results.json').write_text(json.dumps(out,indent=2))
+ # Falsifiers: malformed zero provenance, changed epoch and invalid standalone B use.
+ w,u,g=fixture(5,torch.float64,881001);ex=(1,)
+ d,b,vals,masks,ok=preparation(w,ex)
+ u1=u.clone().requires_grad_();b1=b.detach().requires_grad_()
+ bad_y=PaletteStep.apply(u1,b1,vals,masks,.01,ex,True)
+ bad_db=torch.autograd.grad(bad_y,b1,g)[0]
+ u2=u.clone().requires_grad_();b2=b.detach().requires_grad_();tau=.01/LOG2
+ direct_y=u2+tau*(torch.logaddexp(u2[:,:,None]/tau,b2[None,:,:]/tau)-LOG2).mean(1)
+ true_db=torch.autograd.grad(direct_y,b2,g)[0]
+ out['nulls']['standalone_B_contract_rejected']={'max_dB_error':float((true_db-bad_db).abs().max()),'masked_true_gradient_nonzero':bool((true_db[d==0].abs()>1e-8).any())}
+ wchanged=w.clone();wchanged[0,2]=.123
+ out['nulls']['off_support_fallback']=dict(eligible=preparation(wchanged,ex)[4],**compare(evaluate(recurrence_direct,wchanged,u,g,.01,ex,3),evaluate(structured,wchanged,u,g,.01,ex,3),torch.float64))
+ # A zero created by numerical saturation rather than masking cannot enter structural zero treatment.
+ ws=w.clone();ws[0,2]=-1000
+ out['nulls']['saturated_free_zero_rejected']={'eligible':preparation(ws,ex)[4]}
+ wn=w.clone();wn[0,2]=float('nan')
+ out['nulls']['nonfinite_rejected_fast_path']={'eligible':preparation(wn,ex)[4],'general_fallback_safety':'NOT_CLAIMED'}
+ # Original-coordinate finite differences at logits, using unfactorized reference when ties split.
+ dw=evaluate(structured,w,u,g,1.,ex,3)[1];errors=[]
+ for i,j in [(0,2),(2,3),(1,0),(4,4)]:
+  wp=w.clone();wm=w.clone();wp[i,j]+=1e-5;wm[i,j]-=1e-5
+  fd=((recurrence_direct(wp,u,1.,ex,3)-recurrence_direct(wm,u,1.,ex,3))*g).sum()/(2e-5)
+  errors.append(float(abs(fd-dw[i,j])))
+ out['nulls']['finite_difference_logits']={'coordinates':4,'max_abs':max(errors)}
+ (ROOT/'experiment_results.json').write_text(json.dumps(out,indent=2));print('NULLS',json.dumps(out['nulls']),flush=True)
+if __name__=='__main__':run()
+END REPRODUCIBLE SOURCE experiment.txt
+
+BEGIN REPRODUCIBLE SOURCE guard_check.txt
+"""Post-review qualification; does not modify the preregistered experiment.
+Frozen before execution: one n100 float64 cell, 15 rotated rounds, seed91410.
+No new acceptance threshold. Report incremental CPU against equally guarded
+compiled direct and grouped arms. This is a separate exploratory follow-up.
+"""
+import runpy,pathlib,math,time,statistics,json,hashlib
+ROOT=pathlib.Path('/workspace/scratch/5e8f47cbc766/closure_work')
+f=runpy.run_path(str(ROOT/'experiment.txt'))
+torch=f['torch']; LOG2=f['LOG2']
+def direct_mask(w,u,alpha,excluded,depth,base_mask=None):
+ d=(1-torch.eye(w.shape[0],dtype=w.dtype)) if base_mask is None else base_mask.clone()
+ for k in excluded:d[k,:]=0;d[:,k]=0
+ b=(torch.nn.functional.logsigmoid(w)-w)*d;tau=alpha/LOG2
+ for _ in range(depth):u=u+tau*(torch.logaddexp(u[:,:,None]/tau,b[None,:,:]/tau)-LOG2).mean(1)
+ return u
+compiled=torch.compile(f['recurrence_direct'],fullgraph=True)
+class _FirstOrder(torch.autograd.Function):
+ @staticmethod
+ def forward(ctx,w,u,alpha,excluded,depth,base_mask,arm):
+  with torch.enable_grad():
+   wi=w.detach().requires_grad_();ui=u.detach().requires_grad_()
+   if base_mask is not None:y=direct_mask(wi,ui,alpha,excluded,depth,base_mask)
+   elif arm=='compiled':y=compiled(wi,ui,alpha,excluded,depth)
+   elif arm=='grouped':y=f['recurrence_grouped'](wi,ui,alpha,excluded,depth)
+   else:y=f['structured'](wi,ui,alpha,excluded,depth)
+  ctx.save_for_backward(wi,ui,y)
+  return y.detach()
+ @staticmethod
+ @torch.autograd.function.once_differentiable
+ def backward(ctx,g):
+  wi,ui,y=ctx.saved_tensors
+  dw,du=torch.autograd.grad(y,(wi,ui),g,create_graph=False)
+  return dw,du,None,None,None,None,None
+def qualified(w,u,alpha,excluded,depth,base_mask=None,arm='structured'):
+ if w.ndim!=2 or w.shape[0]!=w.shape[1] or u.shape!=w.shape or w.shape[0]<2:raise ValueError('shape')
+ if w.device.type!='cpu' or u.device!=w.device or w.dtype not in (torch.float32,torch.float64) or u.dtype!=w.dtype:raise ValueError('type')
+ if not bool(torch.isfinite(w).all() and torch.isfinite(u).all()):raise ValueError('finite')
+ if type(alpha) not in (int,float) or not 1e-5<=alpha<=1:raise ValueError('fixed temperature profile')
+ if type(depth)!=int or not 1<=depth<=min(w.shape[0],9):raise ValueError('depth profile')
+ if any(type(k)!=int or k<0 or k>=w.shape[0] for k in excluded):raise ValueError('indices')
+ excluded=tuple(sorted(set(excluded)))
+ if base_mask is not None:
+  if base_mask.shape!=w.shape or base_mask.dtype!=w.dtype or base_mask.device!=w.device or base_mask.requires_grad or not bool(torch.isfinite(base_mask).all()):raise ValueError('mask')
+  if torch.equal(base_mask,1-torch.eye(w.shape[0],dtype=w.dtype)):base_mask=None
+ if arm not in ('compiled','grouped','structured'):raise ValueError('arm')
+ return _FirstOrder.apply(w,u,alpha,excluded,depth,base_mask,arm)
+def rejected(call):
+ try:call();return False
+ except (ValueError,RuntimeError):return True
+out={'script_sha256':hashlib.sha256(pathlib.Path(__file__).read_bytes()).hexdigest(),'scope':'post-review, first-order research wrapper; not full upstream integration','checks':{}}
+w,u,g=f['fixture'](5,torch.float64,91401)
+ref=f['evaluate'](f['recurrence_direct'],w,u,g,.01,(1,1),3)
+raw=f['evaluate'](f['structured'],w,u,g,.01,(1,1),3)
+fixed=f['evaluate'](qualified,w,u,g,.01,(1,1),3)
+out['duplicate_before']=f['compare'](ref,raw,torch.float64)
+out['duplicate_after']=f['compare'](ref,fixed,torch.float64)
+out['checks']['duplicate_indices_canonicalized']=out['duplicate_after']['pass'] and not out['duplicate_before']['pass']
+mask=1-torch.eye(5,dtype=w.dtype);mask[0,2]=.25;mask[3,4]=0
+candidate=lambda a,b,c,d,e:qualified(a,b,c,d,e,base_mask=mask)
+reference=lambda a,b,c,d,e:direct_mask(a,b,c,d,e,base_mask=mask)
+out['custom_mask']=f['compare'](f['evaluate'](reference,w,u,g,.01,(1,),3),f['evaluate'](candidate,w,u,g,.01,(1,),3),torch.float64)
+out['checks']['custom_mask_preserved_in_reference_fallback']=out['custom_mask']['pass']
+for label,alpha in [('zero',0.),('underflow',1e-320),('nan',float('nan')),('tensor',torch.tensor(.01,requires_grad=True))]:
+ out['checks']['reject_alpha_'+label]=rejected(lambda:qualified(w,u,alpha,(1,),3))
+bad=u.clone();bad[0,0]=float('nan')
+out['checks']['reject_nonfinite_U']=rejected(lambda:qualified(w,bad,.01,(1,),3))
+out['checks']['reject_invalid_index']=rejected(lambda:qualified(w,u,.01,(5,),3))
+out['checks']['reject_incompatible_shape']=rejected(lambda:qualified(w,u[:3],.01,(1,),3))
+wi=w.clone().requires_grad_();ui=u.clone().requires_grad_()
+first=torch.autograd.grad(qualified(wi,ui,1.,(1,),3).sum(),wi,create_graph=True)[0]
+out['checks']['reject_second_derivative']=rejected(lambda:torch.autograd.grad(first.sum(),wi))
+assert all(out['checks'].values())
+n=100;w,u,g=f['fixture'](n,torch.float64,91410);u=-300*torch.eye(n,dtype=w.dtype)
+arms={arm:(lambda w,u,a,k,d,arm=arm:qualified(w,u,a,k,d,arm=arm)) for arm in ('compiled','grouped','structured')}
+args=(w,u,g,.01,(1,),9);ref=f['evaluate'](f['recurrence_direct'],*args)
+start=time.perf_counter();out['correctness']={name:f['compare'](ref,f['evaluate'](fn,*args),torch.float64) for name,fn in arms.items()};out['warmup_wall_seconds']=time.perf_counter()-start
+assert all(v['pass'] for v in out['correctness'].values())
+samples={name:[] for name in arms};names=list(arms)
+for r in range(15):
+ for name in names[r%3:]+names[:r%3]:
+  start=time.process_time();f['evaluate'](arms[name],*args);samples[name].append(time.process_time()-start)
+out['cpu_seconds']=samples;out['median_cpu']={k:statistics.median(v) for k,v in samples.items()}
+base=min(out['median_cpu'][k] for k in ('compiled','grouped'))
+out['reduction']=1-out['median_cpu']['structured']/base
+(ROOT/'guard_results.json').write_text(json.dumps(out,indent=2))
+print(json.dumps(out,indent=2))
+END REPRODUCIBLE SOURCE guard_check.txt
+
+16.15 Stop condition and required next input
+
+This cycle terminates with one scoped implementation improvement and zero
+verified novel discoveries. It does not exhaust computing or industrial science.
+No new candidate quota or background worker is activated. A full Garden run
+requires the exact missing COMPLETE/r6 source files identified in16.5. A useful
+engineering continuation then needs a real complete-workload comparator and
+deployment cost evidence; a novelty claim needs independent priority review.
+These are distinct gates. A git merge records research; it admits none of them.
