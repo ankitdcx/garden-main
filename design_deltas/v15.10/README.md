@@ -12,6 +12,8 @@
 6. [Tree Core v0.8.1](TREE_CORE_v0.8.1_2026-09-23.txt) — structural ownership, dependencies, retention and status. [Short guide](TREE_CORE_GUIDE.md).
 7. [Retention Recovery Addendum](V15X_RETENTION_RECOVERY_ADDENDUM_2026-09-20.md) — preserves predecessor meaning and unresolved directions.
 
+8. [Physical Invariant Transfer consolidation — PHY-XFER-003](G15_10_PHY_XFER_003_CONSOLIDATED_CANDIDATE.md) — noncanonical consolidation of PHY-XFER-001/002, bounded transfer algorithm specification, benchmark gates, and **unverified** hypothesis inventory; no executed discovery claim.
+
 ## Supporting artifacts
 
 - [Technical full delta](GARDEN_TECHNICAL_v15.10_FULL_DELTA.txt) — supporting historical technical design text; [scope note](TECHNICAL_DELTA_GUIDE.md).
