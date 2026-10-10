@@ -14,6 +14,8 @@
 
 8. [Physical Invariant Transfer consolidation — PHY-XFER-003](G15_10_PHY_XFER_003_CONSOLIDATED_CANDIDATE.md) — noncanonical consolidation of PHY-XFER-001/002, bounded transfer algorithm specification, benchmark gates, and **unverified** hypothesis inventory; no executed discovery claim.
 
+8. [INV-DISC-001 preliminary invariant discovery](INV_DISC_001_PRELIMINARY.md) — corrected sign convention, nonlinear inequality benchmark protocol and executed 20-case symbolic control; [reproducible script](inv_disc_001_control.py). **Not a Garden advantage test.**
+
 ## Supporting artifacts
 
 - [Technical full delta](GARDEN_TECHNICAL_v15.10_FULL_DELTA.txt) — supporting historical technical design text; [scope note](TECHNICAL_DELTA_GUIDE.md).
