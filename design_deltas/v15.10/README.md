@@ -21,6 +21,8 @@
 
 11. [INV-DISC-100 screening receipts](INV_DISC_100_SCREEN_RESULTS_2026-10-10.md) — 70 toy-model passes, 10 toy failures, 20 not testable; **zero scientifically validated ideas**; [reproducible screening code](inv_disc_100_screen.py).
 
+12. [70-candidate full-test readiness and prior-art audit](INV_DISC_070_FULL_TEST_READINESS_AND_PRIOR_ART.md) — all 70 toy passes reclassified as **full-test blocked / novelty unknown**; zero scientific passes. Includes 70 individual gap records and method-level literature references.
+
 ## Supporting artifacts
 
 - [Technical full delta](GARDEN_TECHNICAL_v15.10_FULL_DELTA.txt) — supporting historical technical design text; [scope note](TECHNICAL_DELTA_GUIDE.md).
