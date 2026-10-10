@@ -1,6 +1,6 @@
 # Garden design deltas — navigation
 
-**Repository navigation:** [Full candidate releases](../canonical/candidates/README.md) · [Version changelog](../CHANGELOG.md) · [Manual integrity checker](../scripts/README.md).
+**Repository navigation:** [Full candidate releases](../canonical/candidates/README.md) · [Version changelog](../CHANGELOG.md) · [Scientific research register](v15.10/GARDEN_SCIENCE_ALL_2026-10-09.txt).
 
 **Noncanonical synthesis:** [15.x consolidation index](GARDEN_15X_NONCANONICAL_CONSOLIDATION_INDEX.md) · [future v16 evaluation note](FUTURE_V16_NONCANONICAL_DESIGN_NOTE.md). These are navigation/planning, not releases.
 
