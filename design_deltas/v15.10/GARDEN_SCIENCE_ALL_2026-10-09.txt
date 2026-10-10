@@ -6,6 +6,7 @@ RESULT: zero verified novel Garden discoveries; no measured incremental monetary
 CURRENT QUEUE: one narrow computing claim, SCI-PALETTE-20261010 (chapter 14),
 with bounded numerical support; novelty and production net value UNRESOLVED.
 Chapter 13's known-method computing/data reuse evaluation remains complete.
+Chapter 15 records ten further decision screens: no new claim cleared the prior-art gate.
 A3 is PARKED_CONTEXT_REQUIRED after the user-directed switch to computing.
 
 CONTENTS
@@ -23,9 +24,10 @@ CONTENTS
 12. Archive locations, cleanup record and section crosswalk
 13. Computing/data reuse: source mapping, two engineering cycles and measured limits
 14. One computing claim: finite-support contraction, distinct gradients and CPU tests
+15. Ten additional decision screens: mobile, AI, computing, transport and electricity
 
 READING RULES
-Current policy is in chapters 1-2 and the latest chapter-14 queue update; chapter 3
+Current policy is in chapters 1-2 with chapter-14/15 queue updates; chapter 3
 preserves the earlier A3 review. Chapters 4-11 preserve historical scientific
 work: a proposed test, scenario saving or old ACTIVE label does not activate a
 claim. Case IDs and numerical assumptions retain their original scope. Distinct
@@ -95,6 +97,9 @@ establish novelty, replication or net value.
 Maximum concurrent experimental claims: ONE. Current queued claim: ONE,
 SCI-PALETTE-20261010 (chapter 14), local tests complete, independent review
 and novelty unresolved. No background execution is running.
+The user's subsequent ten-more request authorized chapter 15's bounded prior-art
+screens; it did not activate ten experimental claims. No new claim passed that
+screen's residual gate, and the one-claim queue remains unchanged.
 The chapter-13 computing/data reuse cycles are complete; no frontier claim
 was admitted. A3 is PARKED_CONTEXT_REQUIRED / NO_DEFENSIBLE_RESIDUAL_ESTABLISHED.
 A3's prior problem review remains in chapter 3; its earlier stop is preserved.
@@ -108,8 +113,10 @@ This overlay governs historical uses of ACTIVE, current focus, candidate, frozen
 preregistered and next-cycle recommendations elsewhere in the file. Those words
 are retained only where needed to preserve what earlier work actually proposed.
 The old N072 follow-up suggestion is historical, not a parallel work instruction.
-No additional candidate quota is accepted by this research policy. Empty active
-slots do not authorize a new catalogue; the next problem also needs a real lock.
+No unsupported candidate quota is treated as scientific success. The explicit
+user-requested ten-screen exception is recorded in chapter 15; empty active
+slots otherwise do not authorize a new catalogue. Any new experimental claim
+still needs a real problem lock and the named-baseline residual gate.
 
 Demotions are explicit and preserve provenance:
 - NOT REVIEWED plus conditional-benefit rows: PARKED_UNREVIEWED, no mechanism work.
@@ -9634,11 +9641,631 @@ Garden method advantage: UNMEASURED.
 Scientific/canonical admission: NONE.
 
 
-WORKSTREAM INTENT ONLY — SCI-TEN-SCREEN-20261010
-Noncanonical investigation authorized by user request for ten more opportunities.
-Base: eb645e0fc83e55d5829e276e199e7304e6c61607
-Branch: chatgpt/ten-decision-screen-20261010
-Only this consolidated report may change. No runtime/Python files.
-Substantial editing not started. Previous SCI-PALETTE claim remains unresolved.
-{"schema":"GardenChatGPTWorkstreamIntent/v1","workstream_id":"chatgpt:ten-decision-screen-20261010","work_package_id":"SCI-TEN-SCREEN-20261010","branch":"chatgpt/ten-decision-screen-20261010","base_sha":"eb645e0fc83e55d5829e276e199e7304e6c61607","dependency_intent_ids":[],"integration_strategy":"DIRECT_IF_NO_COLLISION","draft_pr_created_before_substantial_edit":true,"substantial_edit_started":false,"status":"ACTIVE"}
-{"schema":"AgentWorkIntent/v1","intent_id":"chatgpt:ten-decision-screen:20261010","agent_id":"ChatGPT","work_package_id":"SCI-TEN-SCREEN-20261010","base_sha":"eb645e0fc83e55d5829e276e199e7304e6c61607","source_root_sha256":"63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598","design_epoch_ref":"Garden-v15.5@63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598","target_paths":["design_deltas/v15.10/GARDEN_SCIENCE_ALL_2026-10-09.txt"],"target_symbols":["SCI-TEN-SCREEN-20261010"],"semantic_domains":["noncanonical scientific decision screening and prior-art evidence"],"affected_invariants":["evidence qualification","no self-admission"],"affected_contracts":["one active experimental claim","net incremental value"],"intended_effect":"Record ten user-requested additional decision screens with source-bound mappings, adverse prior art and honest savings limits. No canonical or runtime changes.","parallel_mode":"INDEPENDENT_COMPARISON"}
+15. TEN ADDITIONAL DECISION SCREENS: MOBILE, AI, COMPUTING, TRANSPORT, ELECTRICITY
+============================================================================
+
+Work package: SCI-TEN-SCREEN-20261010. Date: 10 October 2026.
+Source base: eb645e0fc83e55d5829e276e199e7304e6c61607.
+Status: NONCANONICAL; bounded desk screen, not ten experimental discoveries.
+User instruction: "Ok 10 more. Any domain. Mobile or transport or computer. Or AI.
+Or electricity." This authorizes ten additional bounded decision screens. It
+does not turn unverified mechanisms into novel findings or activate ten claims.
+
+15.1 RESULT AND STOPPING DECISION
+
+Ten decisions examined; direct prior art found for every broad saving mechanism.
+Zero new protocol-level claims cleared the named-baseline residual gate.
+Zero new performance experiments, field pilots, independent replications or
+monetary measurements were run for this batch. No scientific novelty admitted.
+
+Several precise joint interfaces remain unresolved. Finding separate component
+papers does not prove a single implementation already covers every conjunction.
+Conversely, an untested conjunction is not a discovery merely because no exact
+paper was found. No concrete new algorithm with a measured advantage emerged.
+
+The prior-art-first stop is intentional: no toy benchmark against an obsolete
+baseline was constructed to manufacture a positive saving. SCI-PALETTE-20261010
+in chapter 14 remains the sole queued experimental claim, awaiting independent
+review and further novelty qualification. Its earlier results are not rerun,
+multiplied or counted as one of these ten.
+
+These are ten reviewed decisions, not ten new independent experimental failures.
+Do not add them to "248 trials" or infer that their fields are saturated.
+Real deployment savings from established methods may exist; the incremental
+Garden-generated saving for these ten is UNMEASURED, not proved zero.
+
+15.2 SOURCE-BOUND MAPPING AND COVERAGE BOUNDARY
+
+Garden owners: the exact source family already pinned in chapter 14, read at
+the above base. Refreshed: V15_10_ABSTRACTION_GCSC_DELTA.md; v15.9.1
+GCSC_FUNCTIONAL_CONTRACTS.md and GCSC_SAL_SAC_DETAILED_SEMANTIC_PATCH.md;
+GARDEN_TECHNICAL_v15.10_FULL_DELTA.txt; TREE_CORE_v0.8.1_2026-09-23.txt;
+RECURSIVE_SEMANTIC_DISCOVERY_COMPRESSION_RSDC_001.md; CONTRIBUTING.md.
+Canonical v15.5/GSL45.1 remains unchanged.
+
+This is a manually qualified application of the retained mapping design.
+It is NOT an execution of complete canonical GCSC or TREE_CORE. The retained
+GCSC extraction itself reports incomplete extraction of historical COMPLETE
+suffixes. No claim of a full finite-registry SAL implementation, L0 sweep,
+L1-L5 exhaustive generation or GCSC coverage percentage is made.
+
+Source ownership:
+- Garden owns the mapping/evidence/status rules.
+- Named primary technical sources own the existing specialist methods.
+- Each Dxx record below owns this batch's decision question and audit inference.
+- No generated record owns an external scientific law or grants deployment
+  authority. No source is replaced by its short summary.
+
+Typed object bindings used across the decision subgraphs:
+TIME = sample age, invocation point, transaction epoch, deadline or cost horizon.
+SPACE = device/cache location, geographical region or electrical-network site.
+THING = hardware, data, model parameters, vehicles, lines or inverters.
+EVENT = adapter change, correction, expiry, arrival, fault or boundary crossing.
+ACTION = recompute/reuse, sense, schedule, repack, condition or dispatch.
+AGENCY = human/operator or explicitly delegated software decision maker only.
+RULE = scoped mathematical, engineering, service or policy requirement.
+VALUE = qualified cost/energy/service objective; not an asserted saving.
+CONTEXT = model/device/network/workload/quality and uncertainty profile.
+CLAIM = source-bound hypothesis, counterexample or result with separate status.
+
+Applicable qualified relations: partOf for components; dependsOn for input and
+validity dependencies; derivedFrom for computed artifacts; identifies for scoped
+identities; governs for a source-bound applicable constraint; supports for
+limited evidence; contradicts for a scoped counterexample; contextualizes for
+operating profile; controls for the qualified controller/device relationship.
+Human ownership/authority is used only where actually relevant. Unused primitive
+relations are not forced onto physical objects. Chronological edge pairs below
+are PROCESS transitions, not invented new Core Relations; they do not by
+themselves assert causation or authority.
+
+Seven Forms: CONSTRUCT identifies the system and data; CONTRACT preserves
+input/output/quality/failure requirements; STATE records the detailed variables;
+RELATION binds dependencies; PROCESS records transitions; RULE holds the typed
+constraints; PROJECTION names Y and what it leaves out.
+
+All ten facets are inspected as obligations, with case-specific effects:
+IdentityLifecycle (revision/deletion/ageing); ScopeContext (eligible operating
+profile); EpistemicsProvenance (paper versus experiment versus unknown);
+AuthorityHumanBoundary (permission and operator responsibility);
+EffectsSafety (service integrity and physical limits); DependencyValidity
+(invalidation, late data and stale telemetry); ResourceTermination (bounded
+research and complete resource accounting); PrivacyRetention (location, model
+data, snapshots and retention); AuditExplanation (source and negative outcome);
+RecoveryEvolution (rollback, restore, updates and requalification).
+A facet check is not a new invariant or an empirical PASS.
+
+RSDC use: reuse existing owners; retain unknowns; invalidate changed dependencies;
+separate runtime/value qualification from graph compression. TREE use: preserve
+source/owner/history and non-authoritative projections. S0/S1/S2 were not run.
+Determinism, gzip/CRC, stale schema identifiers and source-retention debt remain
+OPEN. A report merge does not change those statuses.
+
+Graph notation: Dxx.Sk is the kth listed situation. Edge (a,b) means a declared
+PROCESS transition from Ska to Skb within the stated lifecycle; cycles represent
+a later decision/time step. Each invariant lists the situations to which it
+applies. Lists below are machine-readable adjacency data in the plain-text
+report, not a substitute for qualified source semantics.
+
+15.3 DECISION GRAPHS, TYPED CONSTRAINTS AND HOSTILE BASELINE AUDITS
+
+D01 — Mobile AI: avoid repeated prefill when switching adapters
+------------------------------------------------------------------------
+Decision: reuse or recompute a prefix when an application changes LoRA adapter. Y = prefix tokens alone; actions = recompute, same-adapter reuse, qualified cross-adapter reuse. Model/adapter hashes, invocation boundary and cache layout are additional required observables.
+Situation nodes:
+  D01.S1: tokenize request
+  D01.S2: bind model and adapter revision
+  D01.S3: compute prefix KV
+  D01.S4: switch adapter
+  D01.S5: qualify and reuse blocks
+  D01.S6: decode answer
+Transition edges: (1,2) (2,3) (3,4) (4,5) (5,6) (2,5) (4,2) (6,3)
+Invariant/constraint register (not all fundamental laws):
+  D01.I01 [ENGINEERING/IDENTITY] S2,S4,S5: Equal token text does not imply equal KV under different active weights; cache identity includes the relevant model, adapter and positional configuration.
+  D01.I02 [MATHEMATICAL/CONDITIONAL] S3,S5,S6: Exact reuse requires the reused keys and values to equal recomputation under the target profile; approximate similarity is a different contract.
+  D01.I03 [ENGINEERING/INVALIDATION] S2,S4,S5: Reloading different weights under the same adapter name invalidates name-only qualification.
+  D01.I04 [ECONOMIC] S3,S5,S6: Avoided prefill cost must exceed lookup, reconstruction, invalidation and integration cost at the same output-quality contract.
+Critical transition/combination audit and operators: Projection-Loss: same prefix, different adapter weights. Necessity-Challenge: recomputing every prefix is unnecessary for an adapter architecture that leaves that prefix unadapted. Decision-Sufficiency: adapter/invocation identity determines eligibility, not a semantic-similarity score alone.
+Named existing baseline/evidence: MobiLoRA (ACL 2025) already combines delta KV encoding with application-context management. Activated LoRA (aLoRA) and current PEFT documentation explicitly provide base-prefix interchangeability before invocation, with restrictions. These are distinct approximate/storage and architecture-qualified exact baselines; neither implies arbitrary standard LoRA caches are interchangeable.
+Residual decision: No new residual established against aLoRA for its supported contract. Exact sharing between arbitrary unmodified adapters is NOT established and cannot be obtained merely by declaring cache equivalence. Retraining into aLoRA must be charged, not treated as free.
+Falsifier / contract-invalidating witness: Change an adapter while retaining its display name, or cross the invocation boundary; any undetected output discrepancy rejects exact reuse.
+Evidence owners: S01, S02, S03. Disposition: KNOWN_BROAD_MECHANISM; exact arbitrary-adapter extension UNRESOLVED.
+
+D02 — Mobile/edge AI: coordinate heat, frequency and decoding work
+------------------------------------------------------------------------
+Decision: choose CPU/GPU frequency and decoding work during sustained inference. Y = instantaneous tokens/s; needed state includes temperature trajectory, cooling and output contract. Actions include qualified DVFS and exact or explicitly approximate decoding configurations.
+Situation nodes:
+  D02.S1: accept request and quality contract
+  D02.S2: prefill
+  D02.S3: decode tokens
+  D02.S4: update thermal state
+  D02.S5: throttle or reschedule
+  D02.S6: complete valid answer
+Transition edges: (1,2) (2,3) (3,4) (4,5) (5,3) (3,6) (4,2)
+Invariant/constraint register (not all fundamental laws):
+  D02.I01 [CONSTITUTIVE] S2,S3,S4,S5: A calibrated thermal balance is needed; instantaneous power alone does not determine later throttling.
+  D02.I02 [ENGINEERING/QUALITY] S1,S3,S6: A full-model output-distribution contract cannot be replaced by comparable benchmark accuracy without declaring the change.
+  D02.I03 [ECONOMIC] S2,S3,S4,S5,S6: Measure joules per qualified completed task, including controller and failed/retried work, at the same latency and quality limits.
+Critical transition/combination audit and operators: Projection-Loss: equal present throughput can hide different thermal trajectories. Necessity-Challenge: maximum frequency is not always necessary for a latency target. Decision-Sufficiency: a saving that changes the required output law is ineligible.
+Named existing baseline/evidence: PELM (SenSys 2026; public code and September 2026 preprint) already jointly controls frequency, speculation and variable verification depth using temperature feedback. Its paper section 3.1 explicitly acknowledges that partial verification can diverge from the full-model distribution. Exact speculative decoding is separately established by Leviathan et al. (ICML 2023).
+Residual decision: No new joint-control mechanism established. For exact-output services, compare qualified full-depth verification configurations and exact speculative baselines; do not import PELM's unrestricted energy result as a matched comparison. A remaining hardware-specific improvement requires measurements unavailable here.
+Falsifier / contract-invalidating witness: Fail the same quality/distribution test, thermal limit or deadline, or consume more total joules after controller overhead.
+Evidence owners: S04, S05. Disposition: KNOWN_BROAD_MECHANISM; exact-quality incremental value UNMEASURED.
+
+D03 — Mobile positioning: wake GNSS according to boundary uncertainty
+------------------------------------------------------------------------
+Decision: when to obtain an expensive location fix for a geofence. Y = last reported position; additional state = fix age, uncertainty, motion and nearby low-power radio observations. Actions = wait, cheap observation or GNSS fix.
+Situation nodes:
+  D03.S1: obtain qualified location fix
+  D03.S2: propagate motion uncertainty
+  D03.S3: evaluate geofence crossing risk
+  D03.S4: choose wake/sensing action
+  D03.S5: obtain next fix
+Transition edges: (1,2) (2,3) (3,4) (4,5) (5,2)
+Invariant/constraint register (not all fundamental laws):
+  D03.I01 [ENGINEERING/UNCERTAINTY] S1,S2,S3: A stale point estimate is not a bound on current location; uncertainty must include unobserved motion and sensor error.
+  D03.I02 [ENGINEERING/SERVICE] S3,S4,S5: Any power reduction must preserve the agreed missed-event probability and notification delay, not merely average position accuracy.
+  D03.I03 [ECONOMIC/ENERGY] S1,S4,S5: Include motion-sensor, radio, processor and reacquisition energy, not only GNSS on-time.
+  D03.I04 [PRIVACY/AUTHORITY] S1,S4,S5: Location sensing remains within the user's granted scope; a battery optimization cannot expand monitoring.
+Critical transition/combination audit and operators: Projection-Loss: same last point, different motion uncertainty. Necessity-Challenge: continuous GNSS is unnecessary where a cheaper observation meets the event contract. Decision-Sufficiency: distance to boundary and uncertainty jointly govern a useful wake decision.
+Named existing baseline/evidence: RAPS (MobiSys 2010) already adapts GPS sampling using uncertainty, movement and low-power sensors. Current Android guidance treats accuracy, frequency and latency as power trade-offs. US20250126592A1 describes low-power geofencing using learned radio context.
+Residual decision: No new uncertainty-aware wake principle. Modern-device energy and missed-event performance are not supplied by the older RAPS result; a contemporary handset trace is required for a device-specific residual.
+Falsifier / contract-invalidating witness: A boundary crossing is missed outside the permitted error/delay budget, or auxiliary sensing and reacquisition erase the energy saving.
+Evidence owners: S06, S07, S08. Disposition: KNOWN_BROAD_MECHANISM; handset-specific value UNKNOWN.
+
+D04 — AI structured output: avoid expensive decoding without changing the target law
+------------------------------------------------------------------------
+Decision: draft and verify structured tokens cheaply. Y = prefix and locally legal next tokens; needed state includes grammar/parser state and a precise choice of sampling law. Actions = ordinary constrained decoding, speculative lookahead or a qualified distribution-correct method.
+Situation nodes:
+  D04.S1: bind prefix and target law
+  D04.S2: derive grammar state
+  D04.S3: draft tokens
+  D04.S4: verify draft
+  D04.S5: accept or roll back
+  D04.S6: advance prefix
+Transition edges: (1,2) (2,3) (3,4) (4,5) (5,6) (2,4) (6,2)
+Invariant/constraint register (not all fundamental laws):
+  D04.I01 [MATHEMATICAL] S1,S4,S5: Acceptance/rejection must preserve the declared target distribution, not just produce syntactically valid strings.
+  D04.I02 [ENGINEERING/STATE] S2,S4,S5,S6: Rollback must restore parser, token and KV state to the same prefix.
+  D04.I03 [MATHEMATICAL/CONDITIONAL] S1,S2,S4: Local masking and conditioning on eventual valid completion are generally different distributions.
+  D04.I04 [ECONOMIC] S3,S4,S5,S6: Count drafting, grammar, verification, rollback and downstream repair per qualified completion.
+Critical transition/combination audit and operators: Projection-Loss: two locally legal prefixes can have different probabilities of valid future completion. Necessity-Challenge: serial full-model execution for every accepted token is not necessary. Decision-Sufficiency: cheap drafting is useful only after verification/rollback cost and the intended law are preserved.
+Named existing baseline/evidence: Flexible and Efficient Grammar-Constrained Decoding (ICML 2025), Constrained Decoding with Speculative Lookaheads (NAACL 2025), exact speculative sampling, and Future Validity is the Missing Statistic (May 2026 preprint) cover the broad mechanisms and the missing-future-validity distinction. The latter scopes its fidelity evidence to enumerable grammars/token tries.
+Residual decision: No new grammar/speculation or future-validity claim. Efficient general exact future-validity estimation is not solved by Garden's mapping and cannot be inferred from finite-language examples.
+Falsifier / contract-invalidating witness: A finite enumerable grammar gives a different output distribution from its declared target, rollback leaks state, or total qualified-completion cost increases.
+Evidence owners: S05, S09, S10, S11. Disposition: KNOWN_BROAD_MECHANISM; general efficient exact correction NOT_ESTABLISHED.
+
+D05 — Computing: update database results without rescanning unchanged history
+------------------------------------------------------------------------
+Decision: maintain an aggregate after inserts, deletes and late corrections. Y = current aggregate value alone; needed state includes multiplicities, ordering/transaction identity and admissible lateness. Actions = full refresh or correctly qualified incremental maintenance.
+Situation nodes:
+  D05.S1: receive committed change
+  D05.S2: update tuple multiplicities
+  D05.S3: update retained operator state
+  D05.S4: compute aggregate delta
+  D05.S5: publish consistent result
+  D05.S6: advance retention frontier
+Transition edges: (1,2) (2,3) (3,4) (4,5) (5,6) (6,3)
+Invariant/constraint register (not all fundamental laws):
+  D05.I01 [MATHEMATICAL/MULTISET] S1,S2,S3,S4: Insert/delete weights preserve multiplicity; deleting one of two equal maxima does not delete both.
+  D05.I02 [ENGINEERING/RETENTION] S3,S6: Discard state only when the specified future-update contract makes it unnecessary; a late correction cannot be answered from missing history by assertion.
+  D05.I03 [ECONOMIC] S1,S3,S4,S6: Include change capture, indexes, retained state, recovery and idle infrastructure in incremental cost.
+  D05.I04 [ENGINEERING/DETERMINISM] S1,S4,S5: An impure/time-varying function needs explicit invalidation or a different contract; old results are not automatically reusable.
+Critical transition/combination audit and operators: Projection-Loss: equal aggregate values can hide different second-best values and duplicate counts. Necessity-Challenge: full history scans are unnecessary for supported incremental operators. Decision-Sufficiency: retention can save memory only if future correction obligations remain answerable.
+Named existing baseline/evidence: DBSP supplies automatic incremental view maintenance; current Feldera documents incremental aggregates, deletion state, waterlines and garbage collection. This is stronger than comparing with a batch-only SQL query. The broader reuse mechanism overlaps chapter 13 and is not an independent rediscovery success.
+Residual decision: No new incremental-maintenance principle or deletion/waterline correction. Any residual must identify a pinned query/operator and outperform its existing incremental implementation after state costs.
+Falsifier / contract-invalidating witness: Delete the last current extreme, insert a permitted late correction, or recover after a restart; any mismatch with recomputation rejects the optimization.
+Evidence owners: S12, S13, S14. Disposition: KNOWN_BROAD_MECHANISM; no qualified operator-level residual.
+
+D06 — Computing/storage: avoid costly backup repacking when it is not worth doing
+------------------------------------------------------------------------
+Decision: retain partially unused packs or repack after snapshots expire. Y = unused byte count; needed state includes retained-snapshot reachability, pack layout, storage horizon, transfer/operation cost and recovery requirements.
+Situation nodes:
+  D06.S1: detect source changes
+  D06.S2: chunk and encrypt
+  D06.S3: commit snapshot
+  D06.S4: expire authorized snapshots
+  D06.S5: mark reachable chunks
+  D06.S6: retain or repack packs
+  D06.S7: verify retained restore
+Transition edges: (1,2) (2,3) (3,4) (4,5) (5,6) (6,7) (3,7)
+Invariant/constraint register (not all fundamental laws):
+  D06.I01 [ENGINEERING/REACHABILITY] S3,S4,S5,S6,S7: A chunk referenced by any retained snapshot must remain recoverable; removal of one reference is not removal of all references.
+  D06.I02 [ENGINEERING/RECOVERY] S3,S6,S7: Publish replacement data/indexes before deleting obsolete packs according to the repository's interruption-safety contract.
+  D06.I03 [PRIVACY/RETENTION] S3,S4,S6: Optional economic deferral is inapplicable if a controlling retention or deletion obligation forbids keeping the data.
+  D06.I04 [ECONOMIC] S5,S6: Compare storage cost of unused bytes over the relevant horizon with repacking transfer, operation, compute and temporary-space costs.
+Critical transition/combination audit and operators: Projection-Loss: identical unused-byte totals can require different rewrite volumes because pack occupancy differs. Necessity-Challenge: immediately rewriting every partially used pack is unnecessary. Decision-Sufficiency: pack layout and the cost horizon determine whether cleanup has net value.
+Named existing baseline/evidence: Restic already distinguishes unused and partially used packs and supports max-unused, max-repack-size and dry-run controls. Its documented pruning process explicitly trades storage against downloads/reuploads. Content-defined deduplication is also existing practice.
+Residual decision: No new deduplication or selective-repacking principle. A tariff-aware scheduler might be useful integration work, but no superiority to a tuned restic policy has been measured.
+Falsifier / contract-invalidating witness: A retained restore loses a chunk, interruption breaks the promised recovery contract, or repacking costs exceed avoided storage charges.
+Evidence owners: S15, S16. Disposition: KNOWN_BROAD_MECHANISM; deployment tuning value UNKNOWN.
+
+D07 — Transport: precondition an EV only when recovered braking energy justifies it
+------------------------------------------------------------------------
+Decision: heat a battery before a route and reserve charging headroom. Y = present state of charge; needed state includes battery temperature/charge acceptance, descent forecast, traction demand and arrival requirements. Actions = no preheat or a qualified conditioning/charge target.
+Situation nodes:
+  D07.S1: bind route and arrival requirement
+  D07.S2: forecast traction and braking
+  D07.S3: choose preheat and charge target
+  D07.S4: establish battery acceptance
+  D07.S5: execute descent and braking
+  D07.S6: update energy and temperature
+Transition edges: (1,2) (2,3) (3,4) (4,5) (5,6) (6,3) (1,5)
+Invariant/constraint register (not all fundamental laws):
+  D07.I01 [EXACT/ENERGY_ACCOUNTING] S2,S3,S5,S6: Recovered electrical energy is bounded by available mechanical energy and conversion losses; heating consumes energy that must be counted.
+  D07.I02 [ENGINEERING/BATTERY] S3,S4,S5,S6: Regeneration is bounded by temperature-dependent charge acceptance and remaining energy capacity.
+  D07.I03 [SAFETY] S1,S5: The plan must preserve braking capability and arrival reserve even when expected regenerative capture is unavailable.
+  D07.I04 [ECONOMIC] S2,S3,S5,S6: Extra recovery minus conditioning and wear costs must be positive relative to an optimized route-aware controller.
+Critical transition/combination audit and operators: Projection-Loss: equal SOC can hide different charging acceptance. Necessity-Challenge: heating to a fixed temperature for every trip is unnecessary. Decision-Sufficiency: conditioning is useful only if its net route benefit exceeds its complete cost.
+Named existing baseline/evidence: US11447016B2 explicitly connects preconditioning with desired regenerative capability. The March 2026 application US20260084584A1 additionally appears to address route-limited conditioning versus recoverable braking energy; only its search-indexed text was accessible here. Modern route/regen optimization is also established.
+Residual decision: The broad temperature-regeneration relationship is prior art. The narrow route-limited version has a direct adverse patent lead, so it cannot be promoted as novel while primary full-text access and independent comparison remain incomplete.
+Falsifier / contract-invalidating witness: Forecast error removes the expected descent, a full/cold battery cannot accept the power, or heating plus degradation exceeds extra capture.
+Evidence owners: S17, S18. Disposition: KNOWN_BROAD_MECHANISM; narrower route claim blocked by adverse prior-art lead.
+
+D08 — Transport: co-schedule electric bus service, charging peaks and battery wear
+------------------------------------------------------------------------
+Decision: charger assignment and charge/discharge schedule. Y = aggregate daily kWh; needed state includes per-trip deadlines, arrival uncertainty, charger occupancy, tariff peak interval and degradation. Actions = feasible joint schedules, not isolated charger settings.
+Situation nodes:
+  D08.S1: assign service trips
+  D08.S2: estimate arrivals and energy
+  D08.S3: assign available chargers
+  D08.S4: schedule charge/discharge
+  D08.S5: calculate shared grid peak
+  D08.S6: account for battery wear
+  D08.S7: meet next-trip departure
+Transition edges: (1,2) (2,3) (3,4) (4,5) (5,6) (6,7) (7,1) (5,4) (6,4)
+Invariant/constraint register (not all fundamental laws):
+  D08.I01 [EXACT/ENERGY_ACCOUNTING] S2,S4,S7: Each bus's energy balance includes charging efficiency, route use and allowed discharge.
+  D08.I02 [ENGINEERING/SERVICE] S1,S3,S4,S7: Charger occupancy, connector capability and departure reserve constrain the schedule.
+  D08.I03 [ECONOMIC/NONADDITIVITY] S4,S5: A common demand-charge peak depends on simultaneous power; per-bus peak savings cannot simply be summed.
+  D08.I04 [CONSTITUTIVE/WEAR] S4,S6: Battery ageing is model- and duty-dependent; V2G revenue is not net value before wear.
+  D08.I05 [ENGINEERING/UNCERTAINTY] S2,S4,S7: Arrival and energy uncertainty must use the same service-reliability requirement in both arms.
+Critical transition/combination audit and operators: Projection-Loss: equal daily kWh hides coincident demand and charger conflicts. Necessity-Challenge: immediate full charging after every arrival is not always necessary. Decision-Sufficiency: optimization must minimize the joint service bill with wear and uncertainty.
+Named existing baseline/evidence: The 2025/2026 Caustur et al. discrete-event framework includes peak charges, PV, storage, V2G and ageing, using a Brussels case of 28 buses and 232 trips. A 2025 robust fleet-charging paper separately includes energy-use uncertainty. Existing methods already cross the proposed interfaces.
+Residual decision: No new joint cost/charging/wear relationship. A solver or field integration may still improve a particular fleet, but no new algorithm, fleet trace or measured residual was established here.
+Falsifier / contract-invalidating witness: Missed departure/insufficient reserve, displaced rather than reduced grid peak, or degradation and integration costs cancel the bill saving.
+Evidence owners: S19, S20. Disposition: KNOWN_BROAD_MECHANISM; site-specific incremental net value UNKNOWN.
+
+D09 — Electricity: qualify dynamic line capacity through protection and contingency response
+------------------------------------------------------------------------
+Decision: dispatch using a weather-dependent rating while preserving protection and corrective-response constraints. Y = one ampacity value; needed state includes rating timestamp, conductor/sag state, topology, relay settings and response delay.
+Situation nodes:
+  D09.S1: sample weather and validity time
+  D09.S2: estimate conductor state/rating
+  D09.S3: set dispatch
+  D09.S4: encounter contingency
+  D09.S5: evaluate protection response
+  D09.S6: execute permitted corrective action
+  D09.S7: verify recovered operating state
+Transition edges: (1,2) (2,3) (3,4) (4,5) (5,6) (6,7) (2,5) (6,2)
+Invariant/constraint register (not all fundamental laws):
+  D09.I01 [CONSTITUTIVE/THERMAL] S1,S2,S3: Conductor temperature follows a qualified heating/cooling balance, not a weather label alone.
+  D09.I02 [ENGINEERING/CLEARANCE] S2,S3: Temperature and mechanical sag/clearance limits must remain within the line's qualified envelope.
+  D09.I03 [SAFETY/PROTECTION] S2,S3,S5: A thermally allowable loading is not automatically compatible with protection settings or load-encroachment limits.
+  D09.I04 [ENGINEERING/CONTINGENCY] S3,S4,S5,S6,S7: Post-contingency trajectories and corrective actions must satisfy their own limits and response-time bounds.
+  D09.I05 [ENGINEERING/FRESHNESS] S1,S2,S3,S6: Stale telemetry/failed communications require the specified fallback, not indefinite use of the last high rating.
+  D09.I06 [ECONOMIC] S3,S6,S7: Value is avoided dispatch/congestion cost under the complete admissible schedule minus sensors, communications and integration; a capacity percentage is not a money percentage.
+Critical transition/combination audit and operators: Projection-Loss: equal thermal ratings can hide incompatible protection/response states. Necessity-Challenge: fixed conservative ratings are not always necessary. Decision-Sufficiency: dispatch may use an increased rating only when all coupled obligations remain qualified.
+Named existing baseline/evidence: Published DLR-supported protection and corrective security-constrained OPF already combine rating with protective/corrective operation. An official manufacturer page also describes DLR/interconnection-protection integration. Search-accessible primary abstracts were available for the specialist papers; their full ScienceDirect text returned 403.
+Residual decision: No new rating/protection/corrective-control principle. Exact combined coverage across sag, stale telemetry and every relay mode is NOT proved by these sources. A specific live interface defect could justify integration research; none was demonstrated here.
+Falsifier / contract-invalidating witness: A qualified contingency or stale-input trace causes an excluded trip, clearance violation or unachievable corrective response, or the dispatch baseline matches the benefit.
+Evidence owners: S21, S22, S23. Disposition: KNOWN_BROAD_MECHANISM; complete site-specific interface qualification UNKNOWN.
+
+D10 — Electricity: price voltage support together with inverter heating and ageing
+------------------------------------------------------------------------
+Decision: reactive-power and switching choices. Y = fundamental apparent-power headroom; needed state includes harmonics, losses, junction/capacitor temperature and duty history. Actions = qualified volt/var or switching schedules under grid and equipment limits.
+Situation nodes:
+  D10.S1: observe network voltage
+  D10.S2: select active/reactive command
+  D10.S3: establish current and harmonic waveform
+  D10.S4: calculate losses and temperature
+  D10.S5: update ageing estimate
+  D10.S6: issue next qualified command
+Transition edges: (1,2) (2,3) (3,4) (4,5) (5,6) (5,2) (4,2) (6,1)
+Invariant/constraint register (not all fundamental laws):
+  D10.I01 [MATHEMATICAL/DOMAIN] S2,S3: P^2+Q^2 headroom for a declared fundamental-frequency model is not a complete harmonic RMS-current or thermal limit.
+  D10.I02 [CONSTITUTIVE/THERMAL] S3,S4: Switching and conduction losses depend on waveform and device conditions; temperature needs a calibrated model.
+  D10.I03 [EMPIRICAL/AGEING] S4,S5: Ageing proxies require qualified lifetime models; calculated damage is not a measured replacement date.
+  D10.I04 [ENGINEERING/GRID_QUALITY] S1,S2,S3,S6: Voltage and harmonic constraints apply alongside equipment reliability limits.
+  D10.I05 [ECONOMIC] S2,S4,S5,S6: Reactive-service and network-loss benefits must exceed extra inverter losses, wear and control costs at the same grid-service contract.
+Critical transition/combination audit and operators: Projection-Loss: equal fundamental power can hide different waveforms and thermal stress. Necessity-Challenge: using all apparent headroom for voltage support is not always economically necessary. Decision-Sufficiency: useful reactive support must be assessed with its reliability cost.
+Named existing baseline/evidence: Chai et al. published inverter-reliability-constrained volt/var optimization and a 2023 Pareto treatment of capacitor lifetime/network losses. Zeng et al. include IGBT junction temperature. A 2026 variable-frequency paper explicitly includes thermal and harmonic constraints; its full MDPI page was rate-limited, so only the primary indexed summary was available.
+Residual decision: No new volt/var-versus-lifetime principle. These separate works do not prove that one available controller implements every combined constraint; a novel joint algorithm would still need a named benchmark and device/network evidence, absent here.
+Falsifier / contract-invalidating witness: Any grid-quality or thermal constraint fails, a lifetime model is invalid for the device, or a reliability-aware comparator obtains the same net benefit.
+Evidence owners: S24, S25, S26. Disposition: KNOWN_BROAD_MECHANISM; unified device-specific comparator test UNRESOLVED.
+
+15.4 COMBINATION AUDITS THAT PREVENT FALSE SAVINGS
+
+C01 — D01 + D02 + D04: Reuse, reduced verification and constrained decoding
+cannot each claim independent savings on the same model passes. Bind the
+model/adapter/cache version, target law and quality contract before composing
+the optimizations. aLoRA reuse, MobiLoRA delta coding and PELM partial-depth
+verification have different applicability domains. Their headline percentages
+cannot be multiplied or added. Existing individual methods do not establish
+their joint benefit.
+
+C02 — D05 + D06: A transaction watermark and a backup-retention horizon have
+different owners. Garbage-collecting old query state does not authorize deleting
+a retained backup; keeping a backup does not make an incremental query able to
+answer a permitted late correction without recovery work. Recovery/restore
+cost and required access must be counted in any claimed memory saving.
+
+C03 — D07 + D08: Route preconditioning may shift charger occupancy, grid peak
+and departure time. Adding a vehicle-level energy saving to a fleet-level
+charging saving can double-count the same electricity or omit the shared peak.
+Evaluate one joint fleet bill and the same service/arrival-reserve requirement.
+
+C04 — D08 + D09 + D10: A bus charging plan, line thermal rating and inverter
+reactive schedule share the network's feasible operating region. More thermal
+capacity does not certify protection, voltage, harmonic or ageing limits.
+The maximum of shared power over the tariff interval must be evaluated once.
+No combined physical pilot or complete coupled model was run here.
+
+Each Cxx is a composition obligation with known constituent reasoning, not
+a claim that this particular conjunction is already solved in every product
+or that writing the conjunction creates a novel scientific solution.
+
+15.5 EQUATION CONTRACTS AND ECONOMIC ADMISSIBILITY
+
+These are existing accounting/contracts used to reject false positives,
+not ten new theorems or fitted models. All unknown prices, populations,
+deployment rates and resource measurements remain UNKNOWN.
+
+For a fixed workload and equivalent admissible outputs:
+  Delta_net = C_baseline - C_candidate - C_integration - C_validation
+              - C_maintenance.
+Costs must use one currency and horizon. Energy, bytes and CPU seconds cannot
+be added directly; conversion needs actual tariffs/prices. Migration/training,
+change capture, cache reconstruction, controller work, failures and recovery
+belong inside the relevant costs. No sector-spend-times-percentage estimate.
+
+Decision-specific necessary accounting:
+- D01: avoided prefill work > lookup + decode/reconstruction + invalidation
+  overhead, before integration/retraining. Equal token strings alone do not
+  qualify the left-hand side.
+- D02: E = integral P(t) dt in joules; compare at the same accepted task,
+  latency and quality contract, including controller and retry work.
+- D03: E_saved = E_GNSS_avoided - E_auxiliary - E_reacquisition_extra.
+  Preserve the event-detection error/delay contract. Its parameters are not
+  supplied by a location point or an on-time ratio.
+- D04: cost per qualified completion includes drafting, masking, verification
+  and rollback. A different target law is a contract change, not a free saving.
+- D05: include CPU, state memory/storage, change capture and recovery. A smaller
+  delta is not a guarantee that an incremental deployment is cheaper.
+- D06: for unused bytes U retained for H days at storage price p_s per byte-day,
+  retention cost is U*H*p_s. Repack only if the qualified avoided cost exceeds
+  read/write/operation/compute/temp-space cost, except where retention rules
+  require action irrespective of this economic comparison. H is uncertain;
+  this local threshold is not a globally optimal policy.
+- D07: Delta_E = extra recovered electrical energy - conditioning energy
+  - additional auxiliary energy. Battery wear, braking reserve and arrival
+  service remain additional constraints/costs. Conversion efficiency is not
+  assumed one.
+- D08: C = sum_t(price_t * grid_energy_t) + demand_price * max_t(grid_power_t)
+  + qualified wear cost + other operating costs, subject to bus/charger/service
+  constraints. Use the tariff's actual metering interval and ratchet terms.
+- D09: admissible dispatch belongs to the intersection of thermal, clearance,
+  protection, contingency and freshness-qualified feasible sets. This set
+  statement does not assume all constraints can be reduced to one scalar
+  current limit. Value is a dispatch-cost difference, not rating uplift.
+- D10: compare grid-service benefit and network-loss reduction with inverter
+  losses, wear and implementation costs under the same admissible waveform,
+  voltage and device limits.
+
+Limiting cases and falsifiers retained:
+A cache miss/revision change can eliminate D01's saving; controller overhead
+can dominate D02/D03; drafting rejection can make D04 slower; high churn or
+late data can make D05 expensive; low storage price/high transfer cost can make
+D06 repacking uneconomic; absent descents make D07 heating a loss; already
+optimized service schedules may leave no D08 increment; binding protection or
+voltage limits can remove D09 capacity benefit; device wear can outweigh D10
+reactive-service value. None is a measured occurrence in a supplied deployment.
+
+External published numbers, solely to distinguish real opportunity from novelty:
+- PELM's authors report up to 52.4% energy reduction in their evaluated setting.
+  Variable verification depth can alter outputs, and their supplied artifact
+  targets Jetson AGX Orin. This is not a measured smartphone saving here, an
+  exact-output guarantee, or a Garden improvement.
+- The Caustur et al. bus study reports 5% lower daily costs from adding demand
+  charges to its optimization in the stated case. Its larger PV/storage/V2G
+  scenario percentages are not Garden-generated savings and are not reused here.
+No percentage from either source is used to calculate a world or customer bill.
+
+15.6 COVERAGE, RANKING AND EVIDENCE STATES
+
+Local graph counts, checked from the explicit records:
+  Reviewed decisions: 10.
+  Declared situation nodes: 62.
+  Declared directed transition links: 72.
+  Typed invariant/constraint records: 43.
+  Decision-critical transition/combination audits: 10.
+  Cross-decision composition audits: 4.
+  Broad mechanisms with direct adverse prior art: 10.
+  New claims passing the named-baseline residual gate: 0.
+  New experiments or empirical savings measurements in this batch: 0.
+
+Node/edge/invariant references were checked for valid local identifiers.
+This is structural validation only. The 72 links were declared, not all
+individually validated through specialist models or real traces. Coverage of
+complete lifecycles, the 2,400-cell GCSC L0 denominator, registered joins,
+semantics, executable assurance and real operating populations is NOT MEASURED.
+Only the ten explicit critical audits and four compositions are claimed here.
+
+No surviving novel claim is eligible for a measured-net-value ranking.
+All ten incremental monetary values against qualified current baselines are
+UNKNOWN. Ranking them by invented dollar amounts would violate the economic
+gate. Known-method adoption opportunities are distinct from scientific gaps.
+
+Practical evidence access, not a claim of economic ranking:
+D01/D04/D05/D06 have public software or precise documentation, making a later
+pinned implementation audit possible. D02 needs suitable device/power traces;
+D03 needs current handset/location traces; D07/D08 need vehicle/fleet data;
+D09/D10 need qualified network/protection/device models and relevant permissions.
+None of these access conditions alone constitutes a defensible scientific
+residual or authorizes another experimental pipeline.
+
+Status vector for all D01-D10:
+  hypothesis novelty: NOT_ESTABLISHED;
+  broad scientific mechanism: PRIOR_ART;
+  specific new protocol derivation: NONE_ADMITTED;
+  prior-art screen: BOUNDED/PARTIAL, with access limits below;
+  simulation/local performance: NOT_RUN_THIS_BATCH;
+  independent review/replication: NOT_RUN;
+  empirical net monetary value: UNMEASURED;
+  frontier novelty: UNRESOLVED for unformulated narrower residuals, not supported;
+  Garden discovery-process advantage: UNMEASURED;
+  admission/canonical effect: NONE.
+
+15.7 SOURCE AND SEARCH LEDGER
+
+All web sources below were retrieved/searched on 10 October 2026. A live
+documentation URL is not an immutable software/version pin. No binary or paper
+experiment was replicated simply by reading its page. Source summaries are
+bounded technical prior-art evidence, not legal patentability opinions.
+S01 | MobiLoRA (ACL 2025), abstract and paper landing page
+  https://aclanthology.org/2025.acl-long.1140/
+  Access/support: OPENED primary; context-aware/delta KV reuse. Not arbitrary exact cache equivalence.
+
+S02 | Activated LoRA multi-adapter serving, v1
+  https://arxiv.org/html/2512.17910v1
+  Access/support: OPENED primary preprint; pre-invocation cache reuse and workload-bound latency evaluation.
+
+S03 | PEFT LoRA documentation, activated LoRA and cache-use sections
+  https://huggingface.co/docs/peft/en/package_reference/lora
+  Access/support: OPENED official current documentation; supported scope and tainted-cache caution.
+
+S04 | PELM, SenSys 2026 / September preprint, sections 3.1 and 3.2
+  https://arxiv.org/html/2609.09662v1
+  Access/support: OPENED primary full HTML. Official artifact also opened: https://github.com/imec-nu/PELM . No hardware run. ACM DOI access returned 403.
+
+S05 | Leviathan et al., Fast Inference from Transformers via Speculative Decoding, ICML 2023
+  https://proceedings.mlr.press/v202/leviathan23a.html
+  Access/support: OPENED primary; preservation of target distribution is established prior art.
+
+S06 | Paek et al., Energy-efficient rate-adaptive GPS-based positioning for smartphones, MobiSys 2010
+  https://pure.korea.ac.kr/en/publications/energy-efficient-rate-adaptive-gps-based-positioning-for-smartpho/
+  Access/support: Primary institutional landing page/indexed abstract retrieved; subsequent find hit processing wall. University-hosted PDF failed. No current-handset replication.
+
+S07 | Android Developers, About background location and battery life
+  https://developer.android.com/develop/sensors-and-location/location/battery
+  Access/support: OPENED official; accuracy/frequency/latency trade-offs.
+
+S08 | US20250126592A1, low power consumption geofencing
+  https://patents.google.com/patent/US20250126592A1/en
+  Access/support: OPENED patent text; technical prior art only, no legal opinion.
+
+S09 | Flexible and Efficient Grammar-Constrained Decoding, ICML 2025
+  https://proceedings.mlr.press/v267/park25l.html
+  Access/support: OPENED primary proceedings page.
+
+S10 | Constrained Decoding with Speculative Lookaheads, NAACL 2025
+  https://aclanthology.org/2025.naacl-long.239/
+  Access/support: OPENED primary proceedings page.
+
+S11 | Future Validity is the Missing Statistic, May 2026, v1
+  https://arxiv.org/html/2605.07698v1
+  Access/support: OPENED primary preprint/full HTML and abstract; finite enumerable evaluation scope retained.
+
+S12 | DBSP: Automatic Incremental View Maintenance for Rich Query Languages
+  https://arxiv.org/abs/2203.16684
+  Access/support: OPENED primary preprint; later journal version located at https://doi.org/10.1007/s00778-025-00922-y .
+
+S13 | Feldera, Time Series Analysis documentation
+  https://docs.feldera.com/tutorials/time-series/
+  Access/support: OPENED official; incremental operators, waterlines and state garbage collection.
+
+S14 | Feldera, SQL on Streams: How to Write Incremental Queries That Work
+  https://felderahq.com/blog/sql-on-streams-writing-incremental-queries-that-actually-work
+  Access/support: OPENED implementer source; deletion and MIN/MAX state.
+
+S15 | restic, Removing backup snapshots, Customizing pruning
+  https://restic.readthedocs.io/en/stable/060_forget.html
+  Access/support: OPENED official; selective repacking and bandwidth/storage controls.
+
+S16 | restic, References / design, repository and pack format
+  https://restic.readthedocs.io/en/stable/100_references.html
+  Access/support: OPENED official; immutable packs, snapshot/chunk references, encryption and integrity.
+
+S17 | US11447016B2, battery preconditioning based on selected regenerative braking amount
+  https://patents.google.com/patent/US11447016B2/en
+  Access/support: OPENED patent text; battery-temperature/regen relation and controller. No patentability conclusion.
+
+S18 | US20260084584A1, preconditioning for a limited route of travel
+  https://patents.google.com/patent/US20260084584A1/en
+  Access/support: ADVERSE LEAD ONLY: primary indexed excerpts and publisher mirror search; direct opening inaccessible. Not a claim of full specification/claims review.
+
+S19 | Caustur et al., Integrated Optimization Framework for Smart Charging of Electric Bus Fleets, v2 February 2026
+  https://arxiv.org/abs/2509.05940
+  Access/support: OPENED primary abstract/version record; specific Brussels study and reported scenario results, not our field data.
+
+S20 | Electric bus fleet charging management: robust optimisation with ageing, tariffs and energy uncertainty, Applied Energy 2025
+  https://www.sciencedirect.com/science/article/pii/S0306261924025212
+  Access/support: Primary publisher indexed abstract; full methods not inspected.
+
+S21 | DLR-supported overcurrent line protection for blackout prevention
+  https://www.sciencedirect.com/science/article/abs/pii/S0378779617304133
+  Access/support: Primary indexed abstract inspected; direct full page returned 403.
+
+S22 | Corrective security-constrained OPF with dynamic thermal rating and fast battery/VSC-HVDC control
+  https://www.sciencedirect.com/science/article/pii/S2352152X24032912
+  Access/support: Primary indexed abstract inspected; direct full page returned 403.
+
+S23 | Schneider Electric, protection relays, Dynamic Line Rating and Interconnection Protection section
+  https://www.se.com/in/en/product-category/4600-electric-relays-and-protection-relays-by-application/
+  Access/support: OPENED official industrial-practice source; no certification of a site or every protective function.
+
+S24 | Chai et al., Pareto Front Analysis for PV Inverter Volt/Var Control Considering Inverter Lifetime, 2023
+  https://www.sciopen.com/article/10.17775/CSEEJPES.2022.00840
+  Access/support: OPENED primary publisher abstract, not its unrelated AI summary. Related 2021 author-institution record also opened at https://scholars.cityu.edu.hk/en/publications/pv-inverter-reliability-constrained-voltvar-control-of-distributi/ .
+
+S25 | Zeng et al., Inverter reliability-constrained Volt/Var optimization, Journal of Energy Storage 2023
+  https://www.sciencedirect.com/science/article/pii/S2352152X23025380
+  Access/support: Primary indexed abstract inspected; direct full page returned 403. DOI 10.1016/j.est.2023.109140.
+
+S26 | Parameter Design of Variable Frequency Modulation for Grid-Tied Inverter with Thermal and Harmonic Constraints, 2026
+  https://www.mdpi.com/1996-1073/19/4/1032
+  Access/support: Primary indexed summary inspected; direct page returned 429. No optional retries or full-methods claim.
+
+Search families actually used: LoRA/activated-adapter KV reuse; grammar and
+speculative decoding/distribution preservation; mobile thermal/DVFS inference;
+GPS/geofence uncertainty and duty cycling; incremental aggregates with deletes;
+backup chunking and repacking; route regenerative preconditioning; bus charging
+with ageing/peak/uncertainty; DLR protection and security-constrained OPF;
+inverter volt/var with lifetime, temperature and harmonics.
+
+Patent searches were run for all ten decisions, plus a corrected "low rank
+adaptation" query after "LoRA" returned irrelevant radio-network patents.
+Only S08 and S17 patent texts were opened successfully and used as direct
+technical evidence. S18 is an adverse indexed lead, not a full-text inspection.
+Other indexed leads included WO2026050635A1 (runtime-constrained speculative
+engines), CN120631377A (grammar-related code inference), US8103689B2 and
+US6882993B1 (materialized-view operations), US10447041B2 (DLR estimation),
+WO2024058878A1 and CN106067680B (inverter thermal/reliability operation).
+Their claims were not independently verified and are not needed to support a
+positive novelty finding; no such finding is made. Backup and bus patent
+queries produced weak/no sufficiently specific leads in the returned set.
+A missing patent hit never counts as evidence of originality.
+
+Several search1 queries returned irrelevant results. They were not counted as
+coverage or supporting evidence. Search2 and direct primary-source inspection
+supplied the cited material. Publisher access failures (403/429), PDF failure
+and indexed-only evidence remain explicit above. No exhaustive literature,
+all-patent-family or strongest-method-on-every-platform review is claimed.
+
+15.8 DISPOSITION AND REPOSITORY HYGIENE
+
+Close this batch at the decision-screen gate. Do not create ten ACTIVE stubs,
+manufacture a successful experiment against a weak baseline, or multiply any
+published saving into a Garden economic result. Reopening a Dxx requires an
+actual deployment/problem lock and one sentence identifying an unpreserved
+relationship against a named, equally qualified modern comparator.
+
+The ten screened saving routes are useful prior-art pointers and contract
+checks. They did not produce the ten novel improvements requested. The next
+experimental work remains the existing chapter-14 candidate's unresolved
+comparison/review, not an unannounced switch to another catalogue.
+
+Only this consolidated TXT changes. Chapters 2-14 remain unchanged; chapter 1
+and the contents/status pointers receive the bounded queue update. No Python,
+JSON, notebook, executable or separate research report is added to the repo.
+This record is not canonical admission, an independent scientific review,
+a TREE repair, an upstream publication or an experiment preregistration.
