@@ -2,10 +2,6 @@ GARDEN v15.10 — SCIENTIFIC DISCOVERY AND ECONOMIC VALUE REGISTER
 Consolidated plain-text edition | Research through: 10 October 2026 | Organized: 10 October 2026
 NONCANONICAL RESEARCH — no scientific admission or canonical Garden change.
 
-WORKSTREAM INTENT ONLY — SCI-RO-RESET-20261010
-{"schema":"GardenChatGPTWorkstreamIntent/v1","workstream_id":"chatgpt:ro-reset-closure-20261010","work_package_id":"SCI-RO-RESET-20261010","branch":"chatgpt/ro-reset-closure-20261010","base_sha":"83b05238b97163dcf89d8868c8a0f318134bdee6","dependency_intent_ids":[],"integration_strategy":"DIRECT_IF_NO_COLLISION","substantial_edit_started":false}
-{"schema":"AgentWorkIntent/v1","intent_id":"chatgpt:ro-reset-closure:20261010","agent_id":"ChatGPT","work_package_id":"SCI-RO-RESET-20261010","base_sha":"83b05238b97163dcf89d8868c8a0f318134bdee6","source_root_sha256":"63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598","design_epoch_ref":"Garden-v15.5@63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598","target_paths":["design_deltas/v15.10/GARDEN_SCIENCE_ALL_2026-10-09.txt"],"target_symbols":["SCI-RO-RESET-20261010"],"semantic_domains":["batch reverse-osmosis cycle boundaries","physical-state conservation and regeneration","bounded industrial prior-art screening"],"affected_invariants":["species and net-water accounting","retained surface inventory across flush","unknown non-PASS","no self-admission"],"affected_contracts":["bounded research mapping","first-prior-art industrial decision gate"],"intended_effect":"Apply retained Garden technical contracts to one industrial decision; preserve qualified mapping, strongest baselines, falsifiers and negative findings in one noncanonical TXT. No plant commands, source admission or standalone code files.","parallel_mode":"SINGLE_WORKSTREAM_WITH_READ_ONLY_ADVERSARIAL_REVIEW"}
-
 RESULT: zero verified novel Garden discoveries; no measured incremental monetary savings.
 CURRENT QUEUE: one narrow computing claim, SCI-PALETTE-20261010 (chapter 14),
 with bounded numerical support; novelty and production net value UNRESOLVED.
@@ -11650,3 +11646,59 @@ requires the exact missing COMPLETE/r6 source files identified in16.5. A useful
 engineering continuation then needs a real complete-workload comparator and
 deployment cost evidence; a novelty claim needs independent priority review.
 These are distinct gates. A git merge records research; it admits none of them.
+
+
+17. INDUSTRIAL APPLICATION — BATCH-RO FLUSH / RESTART CLOSURE
+Work ID SCI-RO-RESET-20261010; 10 October 2026; NONCANONICAL.
+Uses the retained Garden technical subset, not the unrecovered COMPLETE/r6
+implementation. Source limits and exact missing packages remain in chapter16.
+The new user instruction changes the focus to one industrial decision.
+SCI-PALETTE-20261010 is PARKED_PENDING_EXTERNAL_VALIDATION; its results persist.
+No concurrent new scientific experimental claim is admitted by this change.
+
+17.1 Problem lock and pre-execution qualification protocol
+Decision: when to end the flush/backwash stage and restart a true batch reverse-
+osmosis unit treating scaling-prone brine. Objective: qualified net delivered
+water after electricity, cleaning, membrane wear, downtime and measurement cost.
+Y: routine feed/brine composition, pressure/flow histories, product quality and
+available concentrate optical measurements. Surface inventory remains a
+separate, potentially unobservable quantity. Actions are existing validated
+flush durations/recovery settings, hold or stop; no physical command is issued.
+
+Named comparators: Tow et al. 2025 pilot model; Abdelkawi/Lindsey/Wright 2026
+dynamic survival model; Schwiebert et al. 2024 optical scaling detection;
+US20230280266A1 adaptive RO preventative-control disclosure; 2026 Futterlieb/
+Panglisch feedback experiments. Different chemicals/configurations are not
+silently treated as identical. No textbook fixed-timer baseline may establish
+novelty or incremental industrial benefit.
+
+Before new numerical work: the broad hypotheses are already rejected by
+prior art (retained crystals, optical endpoints, adaptive backwashing).
+Residual question: can available post-flush signals bound the remaining
+surface scaling propensity well enough to improve this specific decision
+against current control? Identification and economic advantage are UNRESOLVED.
+No cheap sufficiently informative measurement or novel solution has passed.
+
+The following is a mathematical qualification fixture, NOT an industrial
+experiment or a newly invented physical model. Freeze before running:
+normalized pre-flush attached inventory x in [0,1], upper peak limit M=1;
+next-cycle peak x_next = g*r*x + b. Three ASSUMED fixed actions:
+short: g=1.1,r=.8,b=.15,cost=1;
+medium: g=1.2,r=.5,b=.2,cost=2;
+long: g=1.4,r=.25,b=.3,cost=4.
+Cost is dimensionless fixture cost, not dollars or plant calibration.
+Increasing g/b across actions tests the possibility that replacing consumed
+backwash water raises gross production/concentration; it is not an empirical
+law. Fixed action, 250 cycles, x0=0; compare explicit propagation with the
+standard affine-map fixed point and a one-interval mathematical bound.
+Check incorrect clean-state reset, low versus high latent surface inventory,
+unidentified removal efficacy, signed net water and complete species accounting.
+No fitting, random sampling, probability or economic-saving claim.
+A conventional state-aware implementation gets identical information and
+action/cost sets. Equality is recorded rather than manufactured advantage.
+
+The physical falsifier for any future proposed controller is independent
+held-out evidence that measured surface state/next-cycle degradation violates
+its preregistered prediction or that net value does not exceed the strongest
+implemented control after all costs. No plant dataset, calibrated coefficients
+or independent physical experiment is available in this turn.
