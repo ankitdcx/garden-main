@@ -8603,3 +8603,19 @@ this rearranged report. The chapter crosswalk resolves old document references.
 No field experiment, new literature search or scientific admission occurred during
 this cleanup. Current outcome remains zero verified discoveries and no measured
 incremental Garden economic savings.
+
+
+COMPUTING WORKSTREAM — INTENT ONLY, 10 OCTOBER 2026
+User-directed bounded investigation of data/compute savings; source study and prior-art screen before claims. No new finding, deployment or admission.
+{
+  "schema": "GardenChatGPTWorkstreamIntent/v1",
+  "workstream_id": "chatgpt:compute-reuse-20261010",
+  "work_package_id": "COMPUTE-REUSE-20261010",
+  "branch": "chatgpt/compute-reuse-20261010",
+  "base_sha": "98093b77b4d52fa63956f96d9ccc4686132124c9",
+  "dependency_intent_ids": [],
+  "integration_strategy": "DIRECT_IF_NO_COLLISION",
+  "draft_pr_created_before_substantial_edit": true,
+  "substantial_edit_started": false,
+  "status": "PROBLEM_LOCK"
+}
