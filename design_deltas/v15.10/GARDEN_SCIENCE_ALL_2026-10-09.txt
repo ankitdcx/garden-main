@@ -12502,7 +12502,7 @@ continuous matrix-exponential response over 0..40 normalized time units
 oscillatory fixture; ordinary matrix analysis makes the identical prediction.
 
 Static counterexample uses only p,z:
-  dp/dt=(g-1/R)*p/C0+z/(R*C);
+  dp/dt=(g-1/R)*p/C0+z/(R*C0);
   dz/dt=(p-z)/(R*C).
 Its determinant is -g/(C0*R*C)<0, so one positive pole persists. Test R,C in
 {0.5,1,2} with g=C0=0.1,1 respectively (nine combinations); no fitting,
@@ -12515,3 +12515,5 @@ pump curve, delays, cavitation, stroke/fatigue and asymmetric-load validation
 remain required. No percentage industrial saving or dollar amount is forecast.
 No Test-A 20-transfer historical benchmark or blinded Test-B claim is made.
 
+Pre-execution correction: static p-equation z coefficient is 1/(R*C0),
+not 1/(R*C); this follows the node-C0 balance. Corrected before any run.
