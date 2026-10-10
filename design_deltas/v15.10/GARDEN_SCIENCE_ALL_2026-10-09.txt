@@ -3,14 +3,14 @@ Consolidated plain-text edition | Research through: 10 October 2026 | Organized:
 NONCANONICAL RESEARCH — no scientific admission or canonical Garden change.
 
 RESULT: zero verified novel Garden discoveries; no measured incremental monetary savings.
-CURRENT QUEUE: one narrow computing claim, SCI-PALETTE-20261010 (chapter 14),
-with bounded numerical support; novelty and production net value UNRESOLVED.
-Chapter 16 extends that claim with a source-qualified mapping and mask-gradient
-experiment: 7.46% local CPU reduction in its checked follow-up; no new science.
-Full GCSC/r6 execution is blocked by unrecovered source contracts.
-Chapter 13's known-method computing/data reuse evaluation remains complete.
-Chapter 15 records ten further decision screens: no new claim cleared the prior-art gate.
-A3 is PARKED_CONTEXT_REQUIRED after the user-directed switch to computing.
+CURRENT QUEUE: one industrial problem qualification, SCI-RO-RESET-20261010
+(chapter 17); zero admitted active experimental claims. Broad RO mechanisms
+failed the novelty screen; measurement sufficiency and plant net value remain
+UNRESOLVED. Mathematical fixtures show no Garden advantage over ordinary control.
+SCI-PALETTE-20261010 (chapters 14/16) is PARKED_PENDING_EXTERNAL_VALIDATION;
+its bounded computing results are preserved. Full GCSC/r6 execution remains
+blocked by unrecovered source contracts. No measured industrial savings.
+A3 remains PARKED_CONTEXT_REQUIRED. Historical results retain their scope.
 
 CONTENTS
  1. Current result, evidence limits and queue
@@ -29,9 +29,10 @@ CONTENTS
 14. One computing claim: finite-support contraction, distinct gradients and CPU tests
 15. Ten additional decision screens and deduplicated electricity follow-up
 16. Source-qualified Garden closure, mask-gradient experiment and full-source blocker
+17. Industrial batch-RO restart: situation closure, prior art and adverse-control test
 
 READING RULES
-Current policy is in chapters 1-2 with chapter-14/15/16 queue updates; chapter 3
+Current policy is in chapters 1-2 with chapter-14/15/16/17 queue updates; chapter 3
 preserves the earlier A3 review. Chapters 4-11 preserve historical scientific
 work: a proposed test, scenario saving or old ACTIVE label does not activate a
 claim. Case IDs and numerical assumptions retain their original scope. Distinct
@@ -42,7 +43,7 @@ All Python filenames, invocations, source-role hashes and implementation stateme
 in the historical chapters refer to archived work at the commit listed in chapter
 12. The historical Python files and their embedded code were removed during cleanup
 at the user's request. Historical replay receipts are not tests rerun today.
-Chapter 16 retains its newly executed reproducibility source within this TXT;
+Chapters 16-17 retain their newly executed reproducibility sources within this TXT;
 no standalone Python/JSON files are added to the repository.
 Unique detailed case data are retained; repeated candidate templates are factored
 into shared contracts and one row per original candidate/opportunity.
@@ -100,17 +101,21 @@ establish novelty, replication or net value.
 
 1.3 OPERATIVE QUEUE AND STATUS OVERLAY
 
-Maximum concurrent experimental claims: ONE. Current queued claim: ONE,
-SCI-PALETTE-20261010 (chapters 14 and 16), local tests complete, scoped
-adversarial code review performed; independent replication, novelty and
-production net value unresolved. Full GCSC/r6 source contracts are unrecovered. No background execution is running.
-The user's subsequent ten-more request authorized chapter 15's bounded prior-art
-screens; it did not activate ten experimental claims. No new claim passed that
-screen's residual gate, and the one-claim queue remains unchanged.
-The chapter-13 computing/data reuse cycles are complete; no frontier claim
-was admitted. A3 is PARKED_CONTEXT_REQUIRED / NO_DEFENSIBLE_RESIDUAL_ESTABLISHED.
-A3's prior problem review remains in chapter 3; its earlier stop is preserved.
-The computing work does not restart any parked industrial mechanism.
+Maximum concurrent experimental claims: ONE. Current active experimental claims:
+ZERO. Current problem qualification: SCI-RO-RESET-20261010 (chapter 17), selected
+by the user's subsequent industrial-process request. Its broad ideas failed
+prior-art screening; no defensible new measurement solution or plant residual
+has cleared the admission gate. Local mathematical qualification is complete.
+SCI-PALETTE-20261010 (chapters 14/16) is PARKED_PENDING_EXTERNAL_VALIDATION;
+local results and scoped adversarial review are preserved. Independent
+replication, novelty and production net value remain unresolved. Full GCSC/r6
+source contracts are unrecovered. No background execution is running.
+The user's ten-more request authorized chapter 15's bounded prior-art screens;
+it did not activate ten experimental claims. No new claim passed that gate.
+Chapter 13's computing/data reuse cycles remain complete. A3 remains
+PARKED_CONTEXT_REQUIRED / NO_DEFENSIBLE_RESIDUAL_ESTABLISHED; its prior review
+and stop are preserved. Selecting the RO decision does not reactivate A3.
+
 All A1/A2/A4-A10, original 001-100, industrial opportunity rows, earlier individual
 cases and N001-N100 remain PARKED for new development. Existing A3 perturbation
 and two-flow resistance examples remain PARKED_KNOWN_OVERLAP, not experimental
@@ -11702,3 +11707,744 @@ held-out evidence that measured surface state/next-cycle degradation violates
 its preregistered prediction or that net value does not exceed the strongest
 implemented control after all costs. No plant dataset, calibrated coefficients
 or independent physical experiment is available in this turn.
+
+17.2 Outcome, evidence boundary and source qualification
+
+Editorial clarification of the preserved frozen protocol: prior art rejects
+the broad NOVELTY claims, not the physical mechanisms. The monetary objective
+is net service value from qualified delivered water after the listed costs;
+costs are not subtracted from physical water volume. Fixture inputs are unchanged.
+
+RESULT: one real industrial decision mapped; no novel solution admitted; no
+measured incremental plant savings. Five broad mechanism families are known:
+crystal carry-over, wall/history-sensitive scaling, incomplete wash/reset,
+optical/adaptive intervention, and cycle-level product-water accounting.
+The unresolved question is measurement sufficiency at the restart boundary,
+not the discovery that crystals can survive a wash. No evidence yet establishes
+that the strongest feasible specialist control fails on a particular plant.
+This is a retained-source Garden application and an adverse-control test, not
+full GCSC/r6 execution or autonomous discovery of laws from raw observations.
+
+The problem and original equality fixture were frozen in repository commit
+48e671012ae3aa00b6d4a600785ce7d7dbf29b87 before numerical execution.
+The later two-step composition test is explicitly POST-REVIEW, not silently
+included in that preregistration. The original script/results are unchanged.
+All coefficients and costs below are author-specified illustrations. There
+was no fitting, plant measurement, blinded hidden-answer study or paid run.
+
+Source basis: actual retained abstraction delta, functional contracts,
+technical delta, TREE_CORE and candidate relation signatures, with exact
+hashes in 17.10. The missing COMPLETE suffix semantics and r6 packages remain
+as listed in 16.5. Inspection of the supplied old-design and asset archive
+indices did not recover them. The current chatgpt.zip attachment failed to
+arrive; its content is not represented as read. TREE_CORE's old integrity,
+schema, determinism and source-retention debt remains OPEN. Canonical Garden
+v15.5/GSL45.1 ownership and admission remain unchanged.
+
+17.3 Abstraction, TREE routing and coverage mechanics
+
+Bindings below are research-authored interpretations, owned by work item
+SCI-RO-RESET-20261010. A paper owns its reported empirical/model result; this
+register owns its interpretation and test. A citation is not entailment of
+every proposed obligation. Unknown plant identity, authority and sensor
+calibration remain UNKNOWN. Nothing authorizes operating real equipment.
+
+Core object | Concrete industrial binding
+TIME | production/flush epoch, elapsed exposure and sensor sample time
+SPACE | membrane channel, boundary layer, permeate side and disposal boundary
+THING | water, dissolved ions, crystals, membrane, pumps, valves and sensors
+EVENT | nucleation, attachment, valve switch, pressure change or threshold hit
+ACTION | operator-directed fill, pressurize, produce, flush, inspect and restart
+AGENCY | accountable human plant/research roles; none assigned to matter
+RULE | elemental balances, constitutive domains, safety and qualification rules
+VALUE | qualified delivered water and net service value after all costs
+CONTEXT | feed chemistry, membrane, temperature, geometry and cycle protocol
+CLAIM | scoped reset, state-estimation, safety, economic and novelty assertions
+
+All 24 relation names were inspected. These are scoped edge interpretations
+or questions, not a completed typed-GSL instance store or semantic admissions.
+Chronological links in 17.4 carry EVENT/ACTION dependencies; they do not invent
+a 25th Core Relation. PROCESS is a Form, not an eleventh Core Object.
+
+Relation | Industrial/evidence use | Disposition
+identifies | qualified sample identifies batch/epoch | requires traceability
+causes | pressure change induces water transfer in stated transport domain | known conditional physics
+governs | manufacturer/research rule governs action | scope must be supplied
+values | operating context selects qualified net water/value | objective declared
+frames | chemistry/geometry context frames spatial interpretation | applicable
+acts | authorized human role directs flush action | plant actor UNKNOWN
+obeys | proposed action is checked against pressure/quality rules | obligation
+assesses | operator assesses restart/value claim | research assessment only
+contextualizes | temperature/feed epoch qualifies claim | applicable
+controls | operating rule selects qualified action | no runtime/actuation claim
+partOf | membrane channel belongs to equipment boundary | physical decomposition
+dependsOn | restart claim depends on residual-state evidence | applicable
+owns | research role owns this claim record | no claim of owning any real plant
+delegates | no delegation of plant authority supplied | NOT_APPLICABLE
+references | claim cites primary study or local fixture | applicable
+derivedFrom | bound claim traces to equations and assumptions | applicable
+equivalentTo | compare Garden and ordinary constant-action checks | proved only in fixture
+contradicts | periodic example contradicts an overbroad optimality claim | model-scoped
+supports | numerical replay supports stated algebra only | no physical admission
+blocks | unknown removal blocks this reset certificate | not an operational command
+hasHypothesis | research role holds identification question | not established science
+supersedes | new measured calibration may replace old epoch | conditional, not exercised
+conflictsWith | cheap restart conflicts with bound if assumed state is high | model-scoped
+originatesFrom | receipt records generating action/source epoch | applicable
+
+Seven Forms retain different jobs: CONSTRUCT defines equipment/state records;
+CONTRACT states units, boundary and validity; STATE carries dissolved,
+suspended and attached inventories; RELATION carries dependencies; PROCESS
+orders and combines cycles; RULE expresses qualified obligations; PROJECTION
+creates sensor/control and cost views without silently deleting relevant state.
+Six pillars are views: Existence (inventories), Change (transfer/reaction),
+Agency (human roles), Law (constraints), Value (service cost), Frame (scope).
+
+Ten facet dispositions:
+IdentityLifecycle: track batch, membrane condition and calibration epoch.
+ScopeContext: distinguish true-batch/semibatch/CCRO and gypsum/carbonate systems.
+EpistemicsProvenance: separate known physics, paper evidence, assumed fixtures.
+AuthorityHumanBoundary: local research only; no real controller execution.
+EffectsSafety: pressure, product quality, disposal and membrane limits remain.
+DependencyValidity: feed/membrane/sensor changes invalidate unsupported bounds.
+ResourceTermination: one decision; 250-cycle finite tests; no catalogue quota.
+PrivacyRetention: public sources/synthetic values; no private plant records.
+AuditExplanation: source paths, hashes, graph, adverse findings and code retained.
+RecoveryEvolution: UNKNOWN returns to qualified existing practice, not auto-reset.
+
+The 21 TREE macros are reviewed as design roles, not certified schema instances:
+ArchitectureObject -> bounded RO process adapter;
+Function -> state propagation, balance and certificate;
+Lifecycle -> feed/production/reset/inspection;
+Schema -> typed quantity and source records;
+Receipt -> local execution outcome;
+Registry -> rule/interface register;
+Test -> equality, adverse reset and composition fixtures;
+ProofObligation -> finite bound and state-transfer requirement;
+Theory -> NOT_APPLICABLE, no new theory;
+Algebra -> balance and affine-map composition;
+Profile -> chemistry/equipment/sensor domain;
+EventRecord -> cycle/valve/calibration event;
+Binding -> state/unit/epoch/source binding;
+Plan -> frozen qualification protocol;
+FailureMode -> unsupported clean-state reset or missed intermediate bound;
+Query -> coverage and unresolved-interface question;
+EventSubscription -> NOT_APPLICABLE, no live telemetry;
+ContinuousWorker -> NOT_APPLICABLE, no persistent service;
+DynamicalSystemProfile -> declared cycle map;
+AuthorityGatedContract -> research-only execution scope;
+RecoveryEnvelope -> qualified baseline/hold recommendation, not actuation.
+No count of these role labels is counted as new physical coverage.
+
+TREE routing: ROOT preserves purpose/authority/no-self-admission. SUBSTRATE
+retains source, typed quantity, epoch and uncertainty. TRUNK applies available
+process/evidence operations. BOUNDARY owns this industrial interpretation.
+REGISTER records controlling sources without transferring their ownership.
+RELEASE remains SOURCE_FALLBACK_REQUIRED; no full r6 retention/admission proof.
+
+Process-algebra application: SEQUENCE orders stages; BRANCH distinguishes
+restart/hold/clean; COMPOSE carries intermediate state through a two-action
+cycle; ITERATE is bounded to 250 steps. TERMINATE closes this qualification
+cycle. DO_NOTHING retains the established baseline where evidence is absent.
+No trusted RECONSTRUCT, physical ROLLBACK or unbounded RETRY/RECURSE is claimed.
+P0-P11 inspection views follow request, normalization, applicability, dependency,
+evidence, prediction, resources, verification, authority, execution, review and
+retention. This is not proof that the complete Garden runtime executed.
+Evidence algebra: CONDITION ties predictions to assumed coefficients;
+CONTRADICT retains the reviewer's stronger periodic control;
+CORROBORATE compares iteration with a closed form;
+ASSESS_DEPENDENCE notes shared formulas, machine and model-family review.
+None of these constitute independent physical replication.
+
+Actual generator: author-entered physical situations have material tags. Known
+typed constraints bind where their declared tags apply. Every binding remains
+OBLIGATION_NOT_DISCHARGED_BY_LISTING. Three persistent-state interfaces generate
+the existing requirement: carry a qualified state/bound, establish removal, or
+return UNKNOWN. This is deterministic requirement reuse, not law discovery.
+Endpoint signatures are screened over 10 x 24 x 10 possibilities; 659 survive
+that candidate syntactic screen, 1,741 do not. The 659 are not 659 valid edges.
+Complete SAL, macro grammar, L1-L5 coverage, joins and no-loss certification
+remain unimplemented/unavailable. No missing semantics were synthesized.
+
+17.4 Actual bounded situation graph and invariant register
+
+The process is recursively divided into feed qualification, production,
+reset and lifecycle assessment. Expansion follows where chemistry, surface
+state, product withdrawal and future-cycle decisions meet. S05-S09 can overlap
+physically. Feedback links return to production or requalification; accounting
+links are dependencies, not assertions of serial physical chronology.
+
+ID | Parent | Physical situation
+S01 | feed | Characterize feed chemistry and existing solids
+S02 | feed | Qualify hardware valves pressure and initial condition
+S03 | feed | Fill retentate control volume
+S04 | production | Ramp pressure with qualified pump
+S05 | production | Recirculate through channel and boundary layer
+S06 | production | Transfer water and solutes across membrane
+S07 | production | Concentrate dissolved species and form solids
+S08 | production | Attach grow detach and dissolve surface deposits
+S09 | production | Collect and qualify permeate
+S10 | production | Stop at qualified production endpoint
+S11 | reset | Depressurize and reverse osmotic water flow
+S12 | reset | Draw permeate backwash and release deposits
+S13 | reset | Flush channel and measure exiting solutes and particles
+S14 | reset | Route purge to defined waste or treatment boundary
+S15 | reset | Refill and mix for next batch
+S16 | reset | Assess residual state and restart eligibility
+S17 | production | Carry retained state into next production epoch
+S18 | assessment | Close full-cycle net water and electricity ledgers
+S19 | assessment | Assess long-run membrane condition
+S20 | assessment | Clean inspect and requalify changed equipment
+S21 | assessment | Account for waste cleaning and replacement lifecycle
+
+28 directed chronology/dependency links:
+S01 -> S02; S02 -> S03; S03 -> S04; S04 -> S05
+S05 -> S06; S06 -> S07; S07 -> S08; S06 -> S09
+S07 -> S10; S08 -> S10; S09 -> S10; S10 -> S11
+S11 -> S12; S12 -> S13; S13 -> S14; S13 -> S15
+S15 -> S16; S16 -> S17; S17 -> S04; S09 -> S18
+S12 -> S18; S14 -> S18; S18 -> S19; S08 -> S19
+S19 -> S20; S20 -> S02; S19 -> S21; S14 -> S21
+
+The 22 seeds below are conventional domain constraints or explicit research
+controls, not newly generated fundamental invariants. Conservation refers to
+the full stated control volume, including phases and transfers. Actual site
+values and discharge/safety limits are not supplied.
+
+ID | Type | Constraint / research obligation
+R01 | provenance | Freeze chemistry geometry operator domain and source epoch
+R02 | conservation | Signed water inventory equals inflows minus outflows
+R03 | conservation | Close each element across dissolved suspended and attached phases
+R04 | constitutive | Species may transform; nuclei count is not an exact conserved quantity
+R05 | conservation/measurement | Account for pump electricity and all interval energy terms
+R06 | constitutive | Membrane flux changes sign with net driving force in its validity domain
+R07 | constitutive | Salt transport and activity require qualified chemistry and temperature
+R08 | engineering | Local wall concentration cannot be replaced unconditionally by bulk concentration
+R09 | empirical | Supersaturation history affects nucleation; probability is not a material inventory
+R10 | conservation | Surface deposits persist until an explicit removal or dissolution process changes them
+R11 | model-domain | Growth dissolution attachment and size distribution require qualified kinetics
+R12 | measurement | A bulk sensor value does not alone identify all hidden surface state
+R13 | uncertainty | Detection limits and proxy calibration bound any reset claim
+R14 | engineering/safety | Pressure ramp backpressure and component compatibility retain manufacturer limits
+R15 | engineering/quality | Qualify integrated delivered water and its contaminant limits
+R16 | conservation/economic | Subtract backwash and other product-side withdrawals from delivered water
+R17 | economic | Compare equal service including throughput downtime and end inventories
+R18 | engineering | Check long-run state bounds instead of only a fresh first cycle
+R19 | governance | Research capability supplies no plant actuation permission
+R20 | conservation/engineering | Exported dissolved and solid material has a counted destination
+R21 | evidence | UNKNOWN inputs cannot become eligible control or admitted science
+R22 | research-control | Compare named modern controls and preserve adverse findings
+
+Validity/falsifier register (paired with the rule IDs above):
+R01 all records; missing epoch/source blocks a reproducible identity claim.
+R02 water accounting boundary; unexplained imbalance beyond error rejects ledger.
+R03 chosen elements/full phases; unexplained elemental imbalance rejects ledger.
+R04 reacting system; counting species or nuclei as conserved is a category error.
+R05 defined time/control volume; omitted storage/heat/work invalidates closure.
+R06 qualified transport regime; measured flux inconsistent with law rejects model.
+R07 qualified species/activity model; mismatch rejects that constitutive fit.
+R08 polarized channel; independent wall data can reject a bulk-only approximation.
+R09 scoped nucleation model; held-out induction data can reject its probability law.
+R10 chosen solid element/phase; unaccounted disappearance rejects reset ledger.
+R11 calibrated kinetics; held-out growth/removal outside bounds rejects model.
+R12 stated observation function; demonstrated identifiability can remove this concern.
+R13 defined instrument/calibration; failed recovery or drift invalidates bound.
+R14 qualified equipment; any limit violation rejects proposed operating action.
+R15 delivered product standard; off-spec water is not counted as qualified output.
+R16 product-side boundary; compare signed integrated meter totals.
+R17 equal-service comparison; unequal throughput/end inventory rejects cost claim.
+R18 admitted peak map; violating any intermediate/peak bound rejects certificate.
+R19 authorized actor/action; absent authorization precludes physical execution.
+R20 full export/treatment boundary; hidden disposal invalidates balance/cost.
+R21 epistemic policy; unsupported UNKNOWN-to-PASS is an admission defect.
+R22 research policy; weak comparator or suppressed failure rejects advantage claim.
+R12 is a conditional observability obligation, not a theorem that every bulk
+sensor combination is inadequate. R14/R19 are engineering/governance constraints,
+not conservation laws. Statistical model failures do not falsify exact physics.
+
+Situation | Applicable rule IDs (not discharged by binding)
+S01 | R01,R02,R03,R07,R12,R13,R21,R22
+S02 | R01,R12,R13,R14,R19,R21,R22
+S03 | R01,R02,R03,R10,R21,R22
+S04 | R01,R05,R14,R21,R22
+S05 | R01,R02,R08,R21,R22
+S06 | R01,R02,R05,R06,R07,R21,R22
+S07 | R01,R03,R04,R07,R09,R10,R21,R22
+S08 | R01,R03,R04,R09,R10,R11,R13,R21,R22
+S09 | R01,R02,R12,R13,R15,R16,R21,R22
+S10 | R01,R12,R13,R14,R19,R21,R22
+S11 | R01,R02,R06,R07,R14,R21,R22
+S12 | R01,R02,R03,R10,R11,R13,R21,R22
+S13 | R01,R02,R03,R07,R12,R13,R21,R22
+S14 | R01,R02,R03,R10,R20,R21,R22
+S15 | R01,R02,R03,R10,R21,R22
+S16 | R01,R10,R11,R12,R13,R19,R21,R22
+S17 | R01,R03,R09,R10,R11,R13,R18,R21,R22
+S18 | R01,R05,R15,R16,R17,R21,R22
+S19 | R01,R09,R10,R11,R12,R13,R18,R21,R22
+S20 | R01,R02,R10,R11,R13,R14,R19,R21,R22
+S21 | R01,R16,R17,R20,R21,R22
+
+Coverage: 21 situations; 28 directed links; 22 seeded constraints; 154 generated
+applicability bindings; 9 selected interface audits; 3 reused reset obligations;
+35 adjacent two-link paths enumerated, not all scientifically discharged.
+The post-review medium->short path is explicitly checked. Five broad known
+mechanism families; one unresolved identification question plus unresolved
+deployment economics; zero new scientifically admitted rules; zero physical
+experiments; zero frontier-novel survivors. There is no meaningful denominator
+for all possible industrial situations, so no percentage-complete claim.
+
+17.5 Cross-situation closure audit and discovery-operator results
+
+ID | Transfer | Required quantity | Comparator / status
+A01 | S03->S06 | water_salt | RO transport balances; COVERED; transfer=carried
+A02 | S05->S07 | wall_history | 2026 spatial dynamic hazard; COVERED; transfer=carried
+A03 | S07->S08 | solid_growth_state | 2026 nucleation framework; MODEL_SCOPE_GAP_KNOWN; transfer=out_of_scope
+A04 | S08->S16 | attached_inventory | 2025 per-cycle reset; ASSUMPTION_REQUIRES_EVIDENCE_KNOWN; transfer=reset_assumption
+A05 | S12->S18 | negative_product_flow | 2025 full-cycle water accounting; COVERED; transfer=carried
+A06 | S13->S16 | remaining_surface_bound | optical effluent proxy; UNRESOLVED_IDENTIFICATION; transfer=unknown
+A07 | S16->S17 | residual_seed_state | 2019/2023/2026 scaling literature; KNOWN_MECHANISM; transfer=recognized
+A08 | S19->S13 | adaptive_intervention | US20230280266A1 optical control; KNOWN_METHOD; transfer=carried
+A09 | S18->S21 | net_deployment_cost | no real deployment supplied; UNRESOLVED_ECONOMICS; transfer=unknown
+
+A03 is outside a nucleation-only model's declared scope, not proof that modern
+coupled specialist models cannot address it. A04 is an explicit assumption
+requiring qualification, not a concealed discovery. A06 cannot become a novel
+measurement scheme merely because its observability has not been demonstrated.
+A09 cannot be filled by multiplying world water spending by a hopeful percent.
+
+Projection-Loss: the detailed state includes dissolved activities, suspended
+solids, attached mass/location, crystal population, membrane condition and
+exposure. A projection to bulk/sensor signals must be tested for predictive and
+decision sufficiency. The fixture only assigns the same placeholder observation
+to two latent states; it does NOT establish a real sensor ambiguity or a cheap
+resolving measurement. A real observation function and calibration are missing.
+
+Necessity-Challenge: examine the claimed necessity that EACH action preserve
+the full admissible interval on its own. It is unnecessary for a fixed safe
+action sequence when phase-specific reachable bounds are preserved. The
+post-review example in 17.7 proves that within the assumed model. This is known
+composition/control reasoning, not a newly discovered industrial requirement.
+It does not relax pressure, product-quality or disposal constraints.
+
+Decision-Sufficiency: identical information gives identical constant-action
+choices under the two mathematical checks. A stronger ordinary periodic policy
+beats the overrestricted constant-policy comparison. No measured additional
+signal Z, observation cost or held-out plant value exists. Therefore the actual
+incremental industrial Delta_net is UNKNOWN, not positive and not measured zero.
+
+17.6 Equation contracts and physical boundary checks
+
+EC1. Element inventory, conventional balance. For element e, define N_e in mol
+as dissolved + suspended + attached amount within a fixed equipment boundary:
+  dN_e/dt = sum_in(Q*c_e) - sum_out(Q*c_e) + counted external transfers.
+Q is m3/s and c_e is mol/m3; each term is mol/s. Precipitation/dissolution move
+the element between phases, so cancel in this full sum. Crystal number and
+individual chemical species need not be conserved. A pressure/valve reset is
+not an elemental sink. Unmeasured phase inventory leaves closure UNKNOWN.
+
+EC2. Signed membrane/product transfer. In a qualified solution-diffusion
+domain, J_w=L_p*(DeltaP-DeltaPi), with J_w in m/s, L_p in m/(Pa*s), driving
+pressures in Pa. Local activity, polarization, temperature and fouling affect
+the domain and effective coefficients; this is constitutive, not universal.
+  V_net = integral_A,t J_w dA dt - other product-side withdrawals.
+Positive J_w denotes product delivery, negative J_w reverse/backwash transfer.
+If instead gross forward volume is metered separately, subtract backwash once;
+do not subtract it twice. Equal-service accounting also requires quality,
+throughput, end inventories and all pump/cleaning/treatment costs. Fixture:
+100 gross volume units - 8 withdrawn = 92 net, not 108.
+
+EC3. Persistent attached material. Let m_a be attached solid mass [kg] within
+the boundary. dm_a/dt = deposition + growth - dissolution - detachment/export,
+with each rate [kg/s] and qualified composition. This is a phase ledger; total
+element balance still includes liquid and exported particles. A low effluent
+particle signal alone supplies no universal upper bound on m_a. Measuring
+exported mass and measuring residual surface state are different tasks.
+An actual upper bound requires identified initial stock, counted transfers or
+a calibrated observation model. Existing surface imaging is relevant prior art.
+
+EC4. Cycle bound, an ASSUMED reduction used only for qualification. x_n is the
+pre-flush peak attached inventory normalized by a chosen reference mass, not
+nucleation probability and not a post-flush sensor reading. Assume a qualified
+map bounds the next production interval's peak, not just its endpoint:
+  0 <= x_(n+1) <= g_a*r_a*x_n + b_a = q_a*x_n+b_a.
+g is a nonnegative dimensionless growth multiplier; r is surviving fraction in
+[0,1]; b>=0 is new normalized attached inventory; M>0 is normalized peak limit.
+All are finite. For x_n in [0,M], monotonicity gives an invariant interval if
+  q_a*M+b_a <= M, equivalently q_a+b_a/M <= 1.
+This condition is necessary and sufficient for the affine upper map itself
+to preserve the whole interval; a failed bound need not mean physical failure.
+For the equality fixture with q!=1:
+  x_n=q^n*x_0+b*(1-q^n)/(1-q).
+If q<1 its fixed point is b/(1-q). The domain and x0 eligibility are essential.
+As r->0, inherited mass vanishes but newly formed b remains. If b=0, no-growth
+q<=1 suffices. At q=1, b=0 preserves the boundary; b>0 accumulates without an
+invariant finite interval. Unknown coefficients yield no certificate.
+This scalar contract does not certify local deposits, pressure drop, membrane
+damage, spatial heterogeneity or within-cycle maxima unless its bound covers
+them. The illustrative coefficient values have no measured plant provenance.
+
+EC5. Economic estimand for a future matched decision study. For the same
+qualified delivery service over an agreed horizon, define monetary V as
+revenue/service value minus energy, feed, backwash, downtime, cleaning,
+replacement, monitoring and disposal costs, with capital treatment explicit.
+  Delta_net = E[V(policy_new)-V(best_feasible_comparator)] - incremental
+              implementation/measurement costs not already included in V.
+Do not charge any cost twice. No value, adoption fraction or population
+estimate is supplied here. Dimensionless action scores cannot be converted
+into dollars, water or annual industry savings.
+
+17.7 Executed numerical results, adversarial correction and repair
+
+Original frozen fixture: 250 equality-map steps from x0=0, M=1. Every iteration
+agrees with the closed form within 1e-12. All nine declared qualification/null
+checks passed on their declared inputs. They are checks, not nine experiments.
+
+Action | q | b | Assumed cost | Fixed point | Constant interval certificate
+short | 0.880000 | 0.15 | 1 | 1.2500000000 | REJECT
+medium | 0.600000 | 0.2 | 2 | 0.5000000000 | PASS_MODEL_ONLY
+long | 0.350000 | 0.3 | 4 | 0.4615384615 | PASS_MODEL_ONLY
+
+The short-action equality trajectory first exceeds 1 at cycle 13. An actual
+plant satisfying only the upper inequality might remain below 1 indefinitely;
+for example, zero attached mass satisfies that inequality. Therefore cycle 13
+is a falsifiable numerical prediction for the equality fixture ONLY, not a
+forecast of real membrane failure. Both constant-action interval checks select
+medium, cost 2. Their incremental gross fixture value is zero.
+
+Independent adversarial role / shared model-family review found a stronger
+ordinary comparator: repeat medium then short. Preserve that negative result.
+From any cycle-boundary x in [0,1]:
+  x_after_medium <= .6*x+.2 <= .8;
+  x_after_short <= .88*(.6*x+.2)+.15 = .528*x+.326 <= .854.
+The pair returns inside [0,1] and its intermediate state is also safe; induction
+proves the repeated pair stays within the assumed bound. Pair fixed point is
+.326/(1-.528)=.6906779661, with intervening medium state .6144067797.
+Post-review execution: 250 cycles from worst-case x0=1; first steps .8 and .854;
+no violation; iteration agrees with the two-step closed form within 1e-12.
+Mean assumed cost is 1.5 versus 2 for constant medium. This 25% difference is
+a dimensionless fixture result, NOT a claim of 25% plant savings. It is not
+claimed globally optimal over all sequences, feedback policies or constraints.
+
+Repair to the research procedure: carry phase-conditioned reachable bounds
+through COMPOSE and check intermediate states. Do not demand each constituent
+action map preserve unreachable states of the whole global interval. The
+Garden-style repaired check and ordinary affine composition accept the same
+pair. The improved result came from adversarial conventional reasoning, not
+evidence that Garden alone discovered it or outperformed specialists.
+
+Additional review limitations retained: the original certificate helper tests
+missing coefficients but does not enforce all domain restrictions; every frozen
+input satisfies them. It is not a production API. The separate composition
+fixture adds finite/nonnegative/fraction/initial-state domain checks. The
+two-latent-state check uses an assigned illustrative observation, not empirical sensor
+identifiability. Same-family review is not independent physical replication.
+
+17.8 Hostile primary-source prior-art memo
+
+The screen precedes candidate derivation. It searches the restart/flush decision,
+not a coined mechanism name. No exhaustive patent novelty opinion is claimed.
+The strongest comparator must combine relevant existing capabilities, not
+pretend every paper is a complete controller or that one implementation is
+universally strongest. Deployment feasibility for a real site is UNKNOWN.
+
+PA1 Tow et al., npj Clean Water 8, 30 (2025), DOI 10.1038/s41545-025-00462-6.
+https://www.nature.com/articles/s41545-025-00462-6
+Full article inspected. Real pilot and scoped model; wash/reset assumptions
+and possible crystal carry-over are acknowledged. Product consumed by backwash
+must be recovered, affecting the production/concentration decision. This is a
+strong real-process anchor and prior identification of the broad reset issue.
+
+PA2 Abdelkawi, Lindsey and Wright, Water Research 304, 126345 (2026),
+DOI 10.1016/j.watres.2026.126345. Author-uploaded full text inspected:
+https://www.researchgate.net/publication/408013268_A_survival_analysis_framework_for_predicting_gypsum_scaling_risk_in_dynamically_concentrating_desalination_systems
+University record: https://experts.umn.edu/en/publications/a-survival-analysis-framework-for-predicting-gypsum-scaling-risk-/
+Spatially and temporally resolved gypsum nucleation risk is already modeled.
+Its stated limitations include growth/morphology and some heterogeneous-site
+effects. Do not misrepresent it as a bulk-average or history-free baseline.
+Supplementary implementation was not inspected. Nucleation probability is not
+interchangeable with damaging fouling probability or attached mass.
+
+PA3 Hosseinipour et al., Desalination (2023), DOI 10.1016/j.desal.2023.116875.
+https://pure-oai.bham.ac.uk/ws/files/203466115/1_s2.0_S0011916423005076_main.pdf
+Full text inspected, including 4.3.2/4.3.4. True-batch RO; crystals not removed
+can persist/grow over cycles, and backwash affects delivered output. Broad
+cross-cycle persistence and product accounting are direct prior art.
+
+PA4 Futterlieb and Panglisch, Desalination (2026),
+DOI 10.1016/j.desal.2025.119622.
+https://www.uni-due.de/imperia/md/images/wassertechnik/1-s2.0-s0011916425010999-main.pdf
+Full text inspected. pH-guided carbonate-scaling CCRO feedback and consequences
+of delayed intervention/retained crystals bear on the decision. Carbonate CCRO
+is not silently equated with gypsum true-batch operation. This reference was
+already present elsewhere in this register; this is reuse, not a new source find.
+
+PA5 Lee, Choi and Cohen (2019), DOI 10.1016/j.memsci.2019.05.030; related
+author dissertation full text, especially 5.4.4.2:
+https://escholarship.org/content/qt58r3b80r/qt58r3b80r_noSplash_0727e3639aedc8f5cbd7a9fbea753661.pdf
+Surface imaging and incomplete dissolution of larger crystals in semibatch
+operation already address residual surface scaling. Different configuration,
+same broad prior-art mechanism; no claim of a universal quantitative transfer.
+
+PA6 US20230280266A1, technical disclosure inspected:
+https://patents.google.com/patent/US20230280266A1/en
+RO concentrate optical signals, responsive preventative actions and adjustment
+of future control thresholds are disclosed. Broad adaptive optical wash control
+cannot be admitted here as a novel solution. This is a technical overlap screen,
+not a legal determination of claim scope, validity or freedom to operate.
+
+PA7 Schwiebert et al. (2024), DOI 10.1016/j.desal.2024.117817,
+"Turbidity-based scaling detection system for batch reverse osmosis combined
+with gypsum crystal recovery."
+https://www.sciencedirect.com/science/article/pii/S0011916424005289
+Title/abstract-level coverage only; publisher full-text retrieval did not
+succeed. Used to identify an existing comparator, not to assert unseen details.
+No novelty conclusion rests on pretending this full text was available.
+
+17.9 Ranked residuals, admission status and next discriminating evidence
+
+Priority 1, UNRESOLVED_IDENTIFICATION: establish whether actual available
+post-wash measurements identify or conservatively bound residual surface state
+for this restart decision, and whether any inexpensive added measurement beats
+existing optical/surface-monitoring and feedback methods after its cost.
+Scientific novelty potential UNKNOWN; economic magnitude UNKNOWN. This is the
+only primary unresolved technical question, not an admitted experimental claim.
+There is no evidence-grounded assertion yet of "baseline fails when X" for a
+named real deployment, nor a proven new measurement/protocol solution.
+
+Priority 2, KNOWN_OPERATIONAL_QUALIFICATION: integrate signed product-water,
+residual-state and future-cycle constraints in an equal-service comparison.
+Useful if absent at a specific site; already known science/engineering. Site
+implementation benefit UNKNOWN; Garden-specific incremental value UNMEASURED.
+
+Priority 3, KNOWN_CONTROL_COMPOSITION: retain phase-specific bounds rather than
+rejecting every globally non-invariant action. Numerically demonstrated in
+17.7; ordinary control gives the same result. No novelty or industrial-money
+claim survives. These priorities rank evidence work, not three new active ideas.
+
+Gates: real decision locked; primary literature/patent screen performed with
+retrieval limits; bounded mathematical qualification valid under assumptions;
+synthetic/equality replay complete; blind matched-budget comparison NOT RUN;
+historical/frontier novelty NOT ESTABLISHED; physical validation NOT RUN;
+independent replication NOT RUN; economic value UNMEASURED; admission NONE.
+
+Next useful evidence is a traceable repeated-cycle dataset at one authorized
+unit: feed chemistry/solids, wall/operating histories, signed product flows,
+wash settings, calibrated residual-surface proxy/inspection, product quality,
+energy, downtime, cleaning and replacement costs. Compare feasible modern
+optical/feedback/surface-observer control under the same information and budget.
+Before collecting outcomes, a real residual must clear the prior-art gate, then
+freeze the model/measurement, sample-size/stopping rule, held-out cohort,
+Delta_net and falsifier. No arbitrary sample size is invented without variance
+or effect/cost evidence. A rejected bound or nonpositive held-out net value
+must be published with the same status weight as success.
+
+This turn ends a useful bounded qualification cycle. It does not conclude RO
+or industrial science is exhausted, and it does not count these graph nodes
+as independent scientific discovery attempts. No new candidate catalogue is
+opened while the measurement/baseline problem remains unresolved.
+
+17.10 Reproducibility receipts and compact replay source
+
+Input repository: main 83b05238b97163dcf89d8868c8a0f318134bdee6.
+Original protocol commit: 48e671012ae3aa00b6d4a600785ce7d7dbf29b87.
+Research graph canonical-JSON SHA-256: b4cc5c562007efbaa906e8f97fcd68df0720b54c98e1a8dd0a454cc4b6c425e1.
+This research hash is not a TREE_CORE release or scientific-admission root.
+Source files, SHA-256:
+design_deltas/v15.10/V15_10_ABSTRACTION_GCSC_DELTA.md
+  90a58c337bc87c2e445eb56d6197cddea845f74485339e074b0818d70dae8479
+design_deltas/v15.10/GARDEN_TECHNICAL_v15.10_FULL_DELTA.txt
+  f61bc8e4f12418498f114f586c2d4e58b1ca575a788e0e5194430088a0f8f18f
+design_deltas/v15.10/TREE_CORE_v0.8.1_2026-09-23.txt
+  4af3a2c4c8d8577909735fb61c42e0f43324dc0147d8b24146b4561ee56511fa
+design_deltas/v15.9.1/GCSC_FUNCTIONAL_CONTRACTS.md
+  05cc4ed3c1d310ffa7efcce571946d9d9d3fdb94a8470496f80febe77c84c08a
+design_deltas/v15.10/GCSC_RELATION_SIGNATURE_CANDIDATE.json
+  434c21a203a6eb3ebde3728800ddc37ea55ed9eb17212a2b1650955b29f180ed
+Scratch replay audit.txt: 5af8a974d1702a89f1e7d4331dafc0fa2d485a48b0608a8b8ca51590e98f9e19
+Scratch replay results.json: ecdfda62a34fb9c87ca1c03e5235ba23c4e8f97ec1b602386f0f905274888010
+Scratch replay composition.txt: d60803533b312cc694cfacaac67ff7f059ffbae03371f45c02a8b1518f21856b
+Scratch replay composition_results.json: 3dab5276ce56f8b23834805f5cb8768c91af3e24572855c511ae4625a2e16d3d
+Original run: 3 x 250 equality steps; nine checks passed.
+Post-review run: 250 alternating steps; domain/adverse and composition checks passed.
+
+Scratch output files are not added to the repository. The following sources
+are embedded in this single TXT so the user's no-standalone-Python/JSON rule
+is preserved. Extract to a working directory and adjust ROOT/REPO paths for a
+local checkout containing the pinned source files. The original audit requires
+the pinned relation-signature source. Python standard library only. Replaying
+with different source bytes is a different source-qualified graph.
+
+BEGIN ORIGINAL FROZEN QUALIFICATION SOURCE
+"""Retained-Garden research adapter. Not a full GCSC/r6 implementation.
+Physical interpretation seeds are author-entered; no autonomous law discovery.
+Numeric cases are the frozen mathematical qualification fixtures, not plant data.
+"""
+import json,pathlib,hashlib,itertools,math
+ROOT=pathlib.Path('/workspace/scratch/5e8f47cbc766/ro_work')
+REPO=ROOT.parent/'garden-ro-closure'
+def canonical(x):return json.dumps(x,sort_keys=True,separators=(',',':'),allow_nan=False)
+def digest(x):return hashlib.sha256(canonical(x).encode()).hexdigest()
+sigpath=REPO/'design_deltas/v15.10/GCSC_RELATION_SIGNATURE_CANDIDATE.json'
+sig=json.loads(sigpath.read_text())
+# id,parent,physical situation,tags
+seed='''S01,feed,Characterize feed chemistry and existing solids,stream chemistry observation
+S02,feed,Qualify hardware valves pressure and initial condition,hardware observation authorization
+S03,feed,Fill retentate control volume,stream inventory
+S04,production,Ramp pressure with qualified pump,energy hardware
+S05,production,Recirculate through channel and boundary layer,stream local
+S06,production,Transfer water and solutes across membrane,stream transport energy
+S07,production,Concentrate dissolved species and form solids,chemistry inventory reaction
+S08,production,Attach grow detach and dissolve surface deposits,inventory surface reaction
+S09,production,Collect and qualify permeate,stream product observation
+S10,production,Stop at qualified production endpoint,hardware observation authorization
+S11,reset,Depressurize and reverse osmotic water flow,stream transport hardware
+S12,reset,Draw permeate backwash and release deposits,stream surface inventory
+S13,reset,Flush channel and measure exiting solutes and particles,stream chemistry observation
+S14,reset,Route purge to defined waste or treatment boundary,stream inventory disposal
+S15,reset,Refill and mix for next batch,stream inventory
+S16,reset,Assess residual state and restart eligibility,observation surface authorization
+S17,production,Carry retained state into next production epoch,inventory surface recurrence
+S18,assessment,Close full-cycle net water and electricity ledgers,product energy accounting
+S19,assessment,Assess long-run membrane condition,observation surface recurrence
+S20,assessment,Clean inspect and requalify changed equipment,stream surface hardware authorization
+S21,assessment,Account for waste cleaning and replacement lifecycle,disposal accounting'''
+situations=[]
+for line in seed.splitlines():
+ i,p,label,t=line.split(',');situations.append(dict(id=i,parent=p,label=label,tags=t.split(),owner='SCI-RO-RESET-20261010',status='AUTHOR_RESEARCH_INTERPRETATION'))
+links=[(f'S{a:02d}',f'S{b:02d}') for a,b in [(1,2),(2,3),(3,4),(4,5),(5,6),(6,7),(7,8),(6,9),(7,10),(8,10),(9,10),(10,11),(11,12),(12,13),(13,14),(13,15),(15,16),(16,17),(17,4),(9,18),(12,18),(14,18),(18,19),(8,19),(19,20),(20,2),(19,21),(14,21)]]
+# Conditions bind existing laws and obligations to physical situations.
+rules=[
+('R01','all','provenance','Freeze chemistry geometry operator domain and source epoch'),
+('R02','stream','conservation','Signed water inventory equals inflows minus outflows'),
+('R03','chemistry inventory reaction','conservation','Close each element across dissolved suspended and attached phases'),
+('R04','reaction','constitutive','Species may transform; nuclei count is not an exact conserved quantity'),
+('R05','energy','conservation/measurement','Account for pump electricity and all interval energy terms'),
+('R06','transport','constitutive','Membrane flux changes sign with net driving force in its validity domain'),
+('R07','transport chemistry','constitutive','Salt transport and activity require qualified chemistry and temperature'),
+('R08','local','engineering','Local wall concentration cannot be replaced unconditionally by bulk concentration'),
+('R09','reaction recurrence','empirical','Supersaturation history affects nucleation; probability is not a material inventory'),
+('R10','surface inventory','conservation','Surface deposits persist until an explicit removal or dissolution process changes them'),
+('R11','surface','model-domain','Growth dissolution attachment and size distribution require qualified kinetics'),
+('R12','observation','measurement','A bulk sensor value does not alone identify all hidden surface state'),
+('R13','observation surface','uncertainty','Detection limits and proxy calibration bound any reset claim'),
+('R14','hardware','engineering/safety','Pressure ramp backpressure and component compatibility retain manufacturer limits'),
+('R15','product','engineering/quality','Qualify integrated delivered water and its contaminant limits'),
+('R16','product accounting','conservation/economic','Subtract backwash and other product-side withdrawals from delivered water'),
+('R17','accounting','economic','Compare equal service including throughput downtime and end inventories'),
+('R18','recurrence','engineering','Check long-run state bounds instead of only a fresh first cycle'),
+('R19','authorization','governance','Research capability supplies no plant actuation permission'),
+('R20','disposal','conservation/engineering','Exported dissolved and solid material has a counted destination'),
+('R21','all','evidence','UNKNOWN inputs cannot become eligible control or admitted science'),
+('R22','all','research-control','Compare named modern controls and preserve adverse findings')]
+bindings=[]
+for s in situations:
+ for i,t,kind,law in rules:
+  if t=='all' or set(t.split()) & set(s['tags']):bindings.append(dict(situation=s['id'],rule=i,type=kind,owner='SCI-RO-RESET-20261010',basis='retained Garden qualification plus conventional domain science',status='OBLIGATION_NOT_DISCHARGED_BY_LISTING'))
+# Audited typed requirement transfer, with comparator-specific known/unknown status.
+interfaces=[
+('A01','S03','S06','water_salt','carried','RO transport balances','COVERED'),
+('A02','S05','S07','wall_history','carried','2026 spatial dynamic hazard','COVERED'),
+('A03','S07','S08','solid_growth_state','out_of_scope','2026 nucleation framework','MODEL_SCOPE_GAP_KNOWN'),
+('A04','S08','S16','attached_inventory','reset_assumption','2025 per-cycle reset','ASSUMPTION_REQUIRES_EVIDENCE_KNOWN'),
+('A05','S12','S18','negative_product_flow','carried','2025 full-cycle water accounting','COVERED'),
+('A06','S13','S16','remaining_surface_bound','unknown','optical effluent proxy','UNRESOLVED_IDENTIFICATION'),
+('A07','S16','S17','residual_seed_state','recognized','2019/2023/2026 scaling literature','KNOWN_MECHANISM'),
+('A08','S19','S13','adaptive_intervention','carried','US20230280266A1 optical control','KNOWN_METHOD'),
+('A09','S18','S21','net_deployment_cost','unknown','no real deployment supplied','UNRESOLVED_ECONOMICS')]
+raw=[]
+for a,r,b in itertools.product(sig['objects'],sig['signatures'],sig['objects']):
+ rs=sig['signatures'][r];raw.append([a,r,b,'SIGNATURE_ONLY' if a in rs['source'] and b in rs['target'] else 'CANDIDATE_REJECT'])
+assert len(raw)==2400
+# Research-derived requirement: if a physical state persists over a reset boundary,
+# a projection must carry it, carry a qualified bound, or return UNKNOWN.
+def reset_obligation(persists,qualified_reset,carried_bound):
+ if qualified_reset is True:return 'RESET_WITH_EVIDENCE'
+ if persists is True and carried_bound is True:return 'CARRY_BOUND'
+ return 'UNKNOWN_NO_RESTART_CERTIFICATE'
+derived=[{'interface':a[0],'requirement':'measure/carry attached-state bound or qualify removal; otherwise UNKNOWN','status':'REUSE_OBLIGATION'} for a in interfaces if a[3] in ('attached_inventory','remaining_surface_bound','residual_seed_state')]
+actions=[dict(name='short',g=1.1,r=.8,b=.15,cost=1),dict(name='medium',g=1.2,r=.5,b=.2,cost=2),dict(name='long',g=1.4,r=.25,b=.3,cost=4)]
+def certificate(a):
+ if any(a.get(k) is None for k in ['g','r','b']):return 'UNKNOWN'
+ return 'PASS_MODEL_ONLY' if a['g']*a['r']+a['b']<=1 else 'REJECT'
+results=[]
+for a in actions:
+ q=a['g']*a['r'];x=0;history=[]
+ for n in range(1,251):
+  x=q*x+a['b'];closed=a['b']*(1-q**n)/(1-q)
+  assert abs(x-closed)<1e-12;history.append(x)
+ results.append({**a,'certificate':certificate(a),'fixed_point':a['b']/(1-q),'peak_250':max(history),'first_exceed':next((i+1 for i,v in enumerate(history) if v>1),None)})
+eligible=[a for a in actions if certificate(a)=='PASS_MODEL_ONLY']
+garden=min(eligible,key=lambda a:a['cost'])['name']
+# Conventional invariant interval test independently evaluates the same affine map at endpoints.
+conventional=min((a for a in actions if max(a['b'],a['g']*a['r']+a['b'])<=1),key=lambda a:a['cost'])['name']
+nulls={
+ 'incorrect_clean_reset_misses_failure':actions[0]['b']<1 and results[0]['first_exceed']==13,
+ 'unknown_removal_stays_unknown':certificate(dict(g=1.2,r=None,b=.2))=='UNKNOWN',
+ 'garden_matches_conventional':garden==conventional=='medium',
+ 'low_bulk_signal_not_surface_certificate':reset_obligation(True,False,False)=='UNKNOWN_NO_RESTART_CERTIFICATE',
+ 'carried_bound_not_auto_reset':reset_obligation(True,False,True)=='CARRY_BOUND',
+ 'same_observation_different_short_action':(.88*.1+.15<=1) and (.88*.99+.15>1),
+ 'signed_net_water':abs((100-8)-92)<1e-12 and (100+8)!=92,
+ 'species_ledger_counts_attached_phase':abs(1-(.8+.1+.1))<1e-12 and abs(1-(.8+.1))>.09,
+ 'reverse_seed_order_deterministic':digest(sorted(situations,key=lambda s:s['id']))==digest(sorted(reversed(situations),key=lambda s:s['id']))}
+assert all(nulls.values())
+assert len({x['id'] for x in situations})==len(situations)
+assert all(a in {s['id'] for s in situations} and b in {s['id'] for s in situations} for a,b in links)
+paths2=[(a,b,d) for a,b in links for c,d in links if b==c]
+source_hashes={}
+for path in ['design_deltas/v15.10/V15_10_ABSTRACTION_GCSC_DELTA.md','design_deltas/v15.10/GARDEN_TECHNICAL_v15.10_FULL_DELTA.txt','design_deltas/v15.10/TREE_CORE_v0.8.1_2026-09-23.txt','design_deltas/v15.9.1/GCSC_FUNCTIONAL_CONTRACTS.md','design_deltas/v15.10/GCSC_RELATION_SIGNATURE_CANDIDATE.json']:
+ source_hashes[path]=hashlib.sha256((REPO/path).read_bytes()).hexdigest()
+coverage=dict(situations=len(situations),transition_links=len(links),seed_constraints=len(rules),generated_applicability_bindings=len(bindings),interface_audits=len(interfaces),derived_reset_obligations=len(derived),adjacent_two_link_paths=len(paths2),l0_raw=len(raw),l0_signature_only=sum(x[3]=='SIGNATURE_ONLY' for x in raw),full_semantic_admissions=0,novel_survivors=0,plant_experiments=0,known_broad_mechanism_families=5)
+payload=dict(situations=situations,links=links,rules=rules,bindings=bindings,interfaces=interfaces,derived=derived,sources=source_hashes)
+out=dict(coverage=coverage,graph_root=digest(payload),source_hashes=source_hashes,situations=situations,links=links,rules=rules,bindings=bindings,interfaces=interfaces,derived=derived,fixture_results=results,nulls=nulls,choices={'garden':garden,'conventional':conventional,'incremental_gross_fixture_value':0},status={'source':'INCOMPLETE','join':'BOUNDED_ENDPOINT_ONLY','interpretation':'RESEARCH_AUTHORED','scientific_novelty':'NOT_ESTABLISHED','economic_value':'UNMEASURED'},script_sha256=hashlib.sha256(pathlib.Path(__file__).read_bytes()).hexdigest())
+(ROOT/'results.json').write_text(json.dumps(out,indent=2))
+print(json.dumps({k:out[k] for k in ['coverage','graph_root','fixture_results','nulls','choices']},indent=2))
+END ORIGINAL FROZEN QUALIFICATION SOURCE
+
+BEGIN POST-REVIEW COMPOSITION SOURCE
+"""Post-review composition qualification; assumptions only, not plant evidence.
+Frozen before execution: 250 cycles from x0=1; repeat medium then short.
+Primary check: both intermediate bounds <=1. Compare constant medium cost 2
+with pair mean cost 1.5; neither value is a currency or water measurement.
+This follow-up is disclosed as reviewer-induced, not original preregistration.
+"""
+import math,json,pathlib,hashlib
+ROOT=pathlib.Path(__file__).resolve().parent
+def valid(g,r,b,M,x):
+    return all(math.isfinite(z) for z in [g,r,b,M,x]) and g>=0 and 0<=r<=1 and b>=0 and M>0 and 0<=x<=M
+assert valid(1.2,.5,.2,1,1)
+assert not valid(-1,.5,.2,1,1)
+assert not valid(1,float('nan'),.2,1,1)
+assert not valid(1,1.1,.2,1,1)
+assert not valid(1,.5,.2,1,1.1)
+medium=(.6,.2,2);short=(.88,.15,1)
+# Ordinary affine-map composition, including intermediate endpoints.
+q=short[0]*medium[0]; b=short[0]*medium[1]+short[1]
+assert abs(q-.528)<1e-15 and abs(b-.326)<1e-15
+assert medium[0]+medium[1]<=1 and q+b<=1
+x=1;history=[];cost=0
+for n in range(1,251):
+    a=medium if n%2 else short
+    x=a[0]*x+a[1];history.append(x);cost+=a[2]
+    assert 0<=x<=1
+    if n%2==0:
+        k=n//2;closed=q**k+b*(1-q**k)/(1-q)
+        assert abs(x-closed)<1e-12
+# Garden-style phase-bound transfer describes the same established operation.
+bound_after_medium=medium[0]*1+medium[1]
+bound_after_short=short[0]*bound_after_medium+short[1]
+assert abs(bound_after_short-(q+b))<1e-15
+out=dict(status='POST_REVIEW_MATHEMATICAL_FIXTURE_ONLY',cycles=250,x0=1,
+         pair_q=q,pair_b=b,first_intermediate=history[0],first_pair_end=history[1],
+         max_new_peak=max(history),pair_fixed_point=b/(1-q),
+         steady_after_medium=medium[0]*b/(1-q)+medium[1],
+         constant_medium_cost=2,pair_mean_cost=cost/250,
+         garden_and_conventional_agree=True,physical_experiments=0,
+         plant_savings='UNMEASURED',global_policy_optimality='NOT_CLAIMED',
+         source_sha256=hashlib.sha256(pathlib.Path(__file__).read_bytes()).hexdigest())
+(ROOT/'composition_results.json').write_text(json.dumps(out,indent=2))
+print(json.dumps(out,indent=2))
+END POST-REVIEW COMPOSITION SOURCE
+
+END CHAPTER 17. No canonical sources changed; no self-admission.
