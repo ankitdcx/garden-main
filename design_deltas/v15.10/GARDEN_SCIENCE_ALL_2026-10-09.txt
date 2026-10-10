@@ -12448,3 +12448,16 @@ print(json.dumps(out,indent=2))
 END POST-REVIEW COMPOSITION SOURCE
 
 END CHAPTER 17. No canonical sources changed; no self-admission.
+
+
+WORKSTREAM INTENT ONLY: SCI-PHY-XFER-20261010
+{
+  "schema": "GardenChatGPTWorkstreamIntent/v1",
+  "workstream_id": "chatgpt:physical-transfer-cooling-20261010",
+  "work_package_id": "SCI-PHY-XFER-20261010",
+  "branch": "chatgpt/physical-transfer-cooling-20261010",
+  "base_sha": "54b1789f8cdcae4c00e8c057987ae6e592d51fb8",
+  "dependency_intent_ids": [],
+  "integration_strategy": "DIRECT_IF_NO_COLLISION",
+  "substantial_edit_started": false
+}
