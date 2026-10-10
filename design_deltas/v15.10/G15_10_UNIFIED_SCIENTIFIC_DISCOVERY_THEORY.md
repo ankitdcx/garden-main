@@ -73,7 +73,7 @@ Pre-register benchmark selection, effect threshold, confidence/multiplicity proc
 - A toy two-dimensional disk invariant was correctly concluded but had a sign-convention error in one write-up. For h=x²+y²−1<=0 and dynamics xdot=−x+y², ydot=−y: Lie(h)=−2(x²+y²)+2xy²; on the boundary Lie(h)=−2(1−xy²)<0. For g=−h>=0, Lie(g)>0.
 - A later 100-system analytic control reported 99 sufficient-condition certificates and one inconclusive case; these were constructed related systems, not 99 discoveries.
 - INV-DISC-100 contains **10 technique motifs × 10 domains**, not 100 independent inventions. Some cells are not applicable. It is an archived candidate universe.
-- A 100-row generic two-state surrogate screening reported 70 PASS_TOY, 10 FAIL_TOY, 20 NOT_TESTABLE; all 70 purported scientific passes were **withdrawn**. Those surrogates did not implement the labeled physical domains. INV_DISC_070_FULL_TEST_READINESS_AND_PRIOR_ART.md records all 70 as FULL_TEST_BLOCKED / NOVELTY_UNKNOWN.
+- A 100-row generic two-state surrogate screening reported 70 PASS_TOY, 10 FAIL_TOY, 20 NOT_TESTABLE; all 70 purported scientific passes were **withdrawn**. Those surrogates did not implement the labeled physical domains. The consolidated ideas register retains the 70 statuses as FULL_TEST_BLOCKED / NOVELTY_UNKNOWN.
 - The high-stakes physical examples (grid delay, PFAS breakthrough, water leak detection, robot heating, battery charging) have dense relevant prior art. No individual result has passed novelty plus matched-baseline plus independent evidence gates.
 - Temporal source masking does not erase a pretrained model's latent knowledge. Hashes/receipts detect provenance and changes, not guarantee historical blindness.
 - Estimated grid savings in prior discussion were hypothetical scenarios, not demonstrated Garden benefit.
@@ -92,9 +92,7 @@ Theory specified: YES. Formal implementation of CGCD: NO. Controlled CGCD-vs-bas
 
 - [v15.10 abstraction/GCSC](V15_10_ABSTRACTION_GCSC_DELTA.md)
 - [PHY-XFER-003 consolidated candidate](G15_10_PHY_XFER_003_CONSOLIDATED_CANDIDATE.md)
-- [INV-DISC-001 lessons and control](INV_DISC_001_LESSONS_AND_CONTROL_RESULTS.md)
-- [INV-DISC-100 original universe](INV_DISC_100_CANDIDATE_PORTFOLIO.md)
-- [INV-DISC-070 withdrawal audit](INV_DISC_070_FULL_TEST_READINESS_AND_PRIOR_ART.md)
+- Prior toy controls and withdrawn surrogate results are summarized in §6; historical source remains available in Git history.
 - [Unified idea register](G15_10_ALL_SCIENTIFIC_IDEAS_REGISTER.md)
 
 **Status invariant:** specification != proof != implementation != experimental validation != novelty != economic value != canonical admission.
