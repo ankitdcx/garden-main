@@ -191,3 +191,12 @@ These were presented as a separate shortlist but largely overlap Part A. Origina
 - Original 100-row grid is incorporated verbatim into Part A of this register; previous file is recoverable from Git history.
 - [PHY-XFER-003](G15_10_PHY_XFER_003_CONSOLIDATED_CANDIDATE.md)
 - Original 70-item audit is summarized in the status key and Part A; detailed prior version is recoverable from Git history.
+
+
+## Part E — CGCD worked candidate (2026-10-11)
+
+| ID | Idea | Derived result | Status |
+|---|---|---|---|
+| CGCD-THERM-LAT-001 | Coupled thermal-system and controller-latency safety obligation | If temperature rises at most `r_pre` during total response delay `tau`, and effective control subsequently prevents further increase, `x(0)+r_pre*tau <= x_max` suffices to prevent threshold exceedance during the episode. | DERIVED CONDITIONALLY; NOVELTY_UNKNOWN; EMPIRICAL_UNKNOWN; GARDEN_ADVANTAGE_UNKNOWN |
+
+**Counterexample:** initial margin less than `r_pre*tau` with maximum heating throughout the delay crosses the threshold. **Important:** This is an established *type* of delay/reachability reasoning, not a verified novel law. The precise interface omission is relative to an incomplete coverage ledger; a competent delay-aware specialist may already know it. The complete derivation and proposed three-arm benchmark are in [Unified Scientific Discovery Theory, §11](G15_10_UNIFIED_SCIENTIFIC_DISCOVERY_THEORY.md). This additional entry is not counted as a validated discovery.
