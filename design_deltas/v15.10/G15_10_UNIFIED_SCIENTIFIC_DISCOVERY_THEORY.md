@@ -151,3 +151,41 @@ This is **not** a time-invariant claim that `h(x(t))>=0` throughout delay; only 
 **Experiment:** compare A (delay-aware thermal/reachability baseline), B (generic consequence search), C (typed-interface CGCD) on independently prepared models with hidden latency constraints and decoys. Measure valid omissions recovered per equal compute budget and false positives. Do not use a delay-free baseline as the sole comparator.
 
 **Status:** DERIVED under assumptions; analytically checked by integration, not machine-checked in this turn; no validated scientific novelty or measured practical benefit.
+
+
+## 12. G15.10-GSH-001 — Frozen candidate search policy (2026-10-11)
+
+**Status:** NONCANONICAL / SPECIFICATION FROZEN FOR INITIAL IMPLEMENTATION; not implemented, benchmarked or admitted. This is a search policy within CGCD-001, not a new core module or a substitute for domain solvers.
+
+**Contract:** `GSH(S,K,L,W,B) -> ordered Candidate stream + PruningReceipts + SEARCH_INCOMPLETE/COMPLETE`. S=typed semantic/structural model, K=frozen known-consequence and coverage ledger, L=frozen mathematical template library and optional training-only motif records, W=declared objectives/normalized weights, B=hard budget (time, memory, candidate and solver-call limits). Deterministic under frozen versions/seeds. No proof, novelty or admission status can be emitted by ranking.
+
+**Initial executable scope (three of seven Forms):**
+
+| Form | Candidate template | Proof obligation | Applicability |
+|---|---|---|---|
+| STATE | `x_i >= 0` | For continuous locally Lipschitz dynamics and an appropriate domain, check inward-pointing vector field at `x_i=0` along the candidate boundary, with other active constraints accounted for | Declared real-valued state and positivity requirement |
+| RULE | `a^T F(x)=0` for candidate constant vector a | Independently prove zero Lie derivative throughout declared domain; for polynomial F use coefficient matching or symbolic/SMT methods | Continuous dynamics and candidate linear conserved quantity |
+| RELATION | `h_ij(x_i,x_j)>=0` across actual graph edge | Check boundary viability/derivative or applicable compositional barrier conditions for full coupled dynamics | Declared coupling edge, typed state and safety semantics |
+
+CONSTRUCT, CONTRACT, PROCESS and PROJECTION remain mapped to *families* but have **no executable templates in this initial freeze**. Do not claim seven-family implementation.
+
+**SAL / typing minimum:** Verify referenced state variables exist; units/dimensions match each expression; relation endpoints and actual coupling are present; physical THING is not assigned intentional AGENCY; assumptions and boundary semantics are declared. Reject only demonstrably invalid candidates, proven duplicates and out-of-scope templates. UNKNOWN and low-priority safety obligations are retained in a quarantine ledger, not silently discarded. Do not use arbitrary universal exclusions such as all CLAIM-to-CLAIM causal relations being invalid without source-supported semantics.
+
+**Scoring (frozen baseline):** `H(c)=w_m*M+w_g*G+w_u*U+w_t*T-w_r*R-w_c*C`. Every feature is predeclared on [0,1]: M=declared objective relevance, G=actual interface/coupling relevance, U=gap in preexisting coverage ledger, T=availability of a known verification path, R=verified or likely dependence on known candidates, C=normalized estimated checker cost. Weights, tie-break order and normalization are frozen *before held-out evaluation*; scores rank attempts and do not estimate probability of truth. Any learned `P(success)*DeltaU/cost` score is a separately trained, preregistered future ablation, not a requirement for GSH-001.
+
+**Execution:** Generate typed template instances from actual model variables and edges → SAL filter → remove provable duplicates → rank → allocate bounded best-first search with a reserved exploration quota for admissible low-ranked/safety-tagged candidates → cheap sampled falsification (rejection only when genuine counterexample is independently checked) → domain solver → independent proof checker → ledger update. Sampling alone cannot establish validity. Return `SEARCH_INCOMPLETE` when budget expires with unvisited candidates. Store pruned, deferred and failed candidates, reasons, scores, dependency and cost receipts.
+
+**Verification and independence:** Checker, not heuristic, decides mathematical validity; use model-appropriate SOS/SMT/CEGIS/symbolic tools and declare proof semantics (including delta-complete caveats). Count distinct consequences only after classifying EQUIVALENT, DERIVED_FROM_KNOWN, INDEPENDENT_WITHIN_DECLARED_CLASS or DEPENDENCE_UNKNOWN relative to a frozen language/domain/known set. UNKNOWN is never counted as an independent finding.
+
+**CGCD-BENCH-001 four-arm ablation:**
+
+- A: strongest relevant specialist solver/search (including sparsity, cheap falsification and other standard optimizations).
+- B: generic structural candidate ordering with the *same* solver/templates/structural inputs.
+- C: Garden semantic typing and frozen coverage-aware ordering without historical retrieval.
+- D: C plus frozen cross-situation typed-signature motif retrieval; an untyped-signature retrieval control is required.
+
+Use independent held-out model families, leave-one-family-out evaluation for D, sealed planted obligations/decoys for *rediscovery recall* only, fixed hardware/time and solver budget, equal information access and independent checking. Primary: independently certified systems or distinct valid obligations per fixed budget, chosen before execution for each benchmark; secondary: time-to-certificate, precision/recall, certified-region volume and false-acceptance. Report uncertainty, contamination, and all null/negative results. A hidden known obligation is not evidence of novel science.
+
+**Interpretation:** C>B supports a semantic-routing effect; D>C supports retrieval value; equality or reversal fails to show added value on tested families. None of these by itself establishes scientific novelty, real-world model fidelity, or universal capability.
+
+**Freeze boundary:** No additional ontology, module, patch version, or architecture expansion is needed before the minimal templates, type predicates, ledger, ranker, solver/checker interfaces and benchmark are implemented and executed.
