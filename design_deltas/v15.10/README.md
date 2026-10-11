@@ -6,7 +6,7 @@
 
 **Start here for today's scientific discovery work:**
 
-- [Unified Scientific Discovery Theory](G15_10_UNIFIED_SCIENTIFIC_DISCOVERY_THEORY.md) — **primary** noncanonical research synthesis; centers coverage-guided consequence discovery (CGCD-001), now incorporates ABSTRACT-002 + H1 hardening and a worked thermal/controller-latency bound (§§10–11); preserves PHY-XFER as a supporting mechanism, corrects prior claims and defines controlled evaluation.
+- [Unified Scientific Discovery Theory](G15_10_UNIFIED_SCIENTIFIC_DISCOVERY_THEORY.md) — **primary** noncanonical research synthesis; centers coverage-guided consequence discovery (CGCD-001), now incorporates ABSTRACT-002 + H1 hardening, a worked thermal/controller-latency bound (§§10–11), and the frozen GSH-001 search policy (§12), including initial STATE/RULE/RELATION templates and the four-arm benchmark; preserves PHY-XFER as a supporting mechanism, corrects prior claims and defines controlled evaluation.
 - [All Scientific Ideas Register](G15_10_ALL_SCIENTIFIC_IDEAS_REGISTER.md) — **single** inventory of 132 historical entries (100 template cells + 22 transfer candidates + 10 applied ideas), with overlap warnings and zero validated novelty/advantage.
 
 Earlier PHY-XFER, INV-DISC, screening and audit versions are retained in Git history as **historical source/receipts**, not competing controlling designs. The original 70 toy passes do not validate physical-domain hypotheses. No candidate is canonically admitted, and v15.5 remains canonical.
