@@ -96,3 +96,58 @@ Theory specified: YES. Formal implementation of CGCD: NO. Controlled CGCD-vs-bas
 - [Unified idea register](G15_10_ALL_SCIENTIFIC_IDEAS_REGISTER.md)
 
 **Status invariant:** specification != proof != implementation != experimental validation != novelty != economic value != canonical admission.
+
+
+## 10. G15.10-ABSTRACT-002 + H1 — Operational hardening (2026-10-11)
+
+**Status:** NONCANONICAL, additive; no changes to 6 pillars / 10 objects / 24 relations / 7 forms. Supersedes no source semantics. The earlier `G15.10-ABSTRACT-001` architecture is treated as the conceptual view, `ABSTRACT-002` as the bounded operational contract, and H1 as the following corrections.
+
+**Typed model:** S=(X,F,G,C,B,E): state space, transformations, interaction graph, constraints, boundaries/scope, evidence/provenance. This is a typed adapter to established physics and formal methods, not a new universal physical ontology.
+
+**CGCD-001 executable contract:** Input=(source model, typed situation graph, frozen known-consequence ledger, target consequence class, budget). Output=(derived candidates, counterexamples, independent proof receipts, coverage gaps, rejections, unresolved). Every operator declares preconditions, deterministic or explicitly bounded algorithm, search ordering, candidate cap, time/memory/solver budget, failure status, and source/hash/assumption dependencies. No candidate may self-admit.
+
+**Search:** normalize without unreported loss → enumerate admissible typed combinations → SAL checks → derive using established mathematical methods → compare to frozen coverage ledger → test equivalence/dependence → counterexample search → rank using declared utility and risk → independent check → record. Track pruned items, denominator, termination and `SEARCH_INCOMPLETE`. Do not claim completeness outside the frozen finite universe.
+
+**H1 corrections:**
+1. `LOSS_UNRESOLVED` blocks only derivation branches dependent on the missing/lossy semantics. Emit source-span-specific BLOCKED receipt; independent unaffected branches may continue.
+2. Materiality must use an explicitly declared objective/utility, constraints and budget. High-impact actions still pass existing authority/human-effect gates; an AI-generated score alone cannot authorize an action.
+3. Invalidated or revoked premises trigger dependency traversal. Downgrade exclusively dependent descendants to `UNKNOWN_PENDING_REVIEW`; preserve descendants with alternative valid proofs. Keep historical provenance and re-evaluate coverage.
+4. Keep separate status axes: SPECIFIED, DERIVED, FORMALLY_PROVEN, EMPIRICALLY_VALIDATED, NOVELTY_SCREENED, USEFUL, ADMITTED; additionally INVALIDATED, REVOKED, BLOCKED and UNKNOWN_PENDING_REVIEW as appropriate. These are not a single automatic progression.
+5. Independently construct/freeze reference obligations, planted omissions and decoys. Pre-register Garden heuristic, comparator, consequence type, budgets, stopping, contamination and proof checker. Distinguish *rediscovery recall* from scientific novelty.
+
+**CGCD-BENCH-001:** For the first test, restrict to one consequence class (e.g., forward-invariant safety barriers). Arm A = strong domain specialist baseline; B = same checker with generic candidate ordering; C = same checker with GSL/typed-interface-coverage ordering. Match model, access, compute, certificate family and proof standard; disclose any structural heuristics also available to baselines. Primary endpoint = independently verified distinct missing consequences per fixed budget, with precision/recall, time, certified-region size and false-acceptance as secondary metrics. Run a separate interface/cross-domain test against *integrated* specialist baselines, not artificially siloed ones.
+
+**Independence:** logical independence is relative to a declared model, domain and consequence language; algebraic restatements do not increase discovery count. Novelty and measured utility are separate from formal validity. Prior art includes bond graphs, port-Hamiltonian, Modelica/FMI, SOS/SMT/CEGIS, Lyapunov-Krasovskii, SINDy and symbolic regression.
+
+## 11. Worked candidate — delayed thermal control interface (2026-10-11)
+
+**Situation:** A heated physical component is regulated by a computational controller with delayed reaction. This is an *illustrative model-derived bound*, not an experimentally discovered physical law.
+
+Let x(t)=T(t)-T_ambient be temperature rise. In a bounded operating regime, assume:
+- While the controller has not reacted, the worst-case temperature rise rate is `dx/dt <= r_pre`, with `r_pre > 0`.
+- A dangerous temperature threshold is `x_max`.
+- Detection plus computation plus communication plus actuation take at most `tau` seconds.
+- After reaction, a controller ensures `dx/dt <= 0` whenever at/above the intended safety region, under stated actuator authority and disturbances.
+- Initial state `x(0) <= x_max - r_pre*tau`; no unmodeled heating or actuation saturation outside those assumptions.
+
+**Derived interface safety margin:**
+
+`h(x)=x_max-x-r_pre*tau`.
+
+Before effective control, integration gives `x(t) <= x(0)+r_pre*t` for `0<=t<=tau`. Thus `x(t)<=x_max` during delay. After effective control, non-increase ensures `x(t)<=x_max` thereafter. Therefore the sufficient *initial* safety obligation is:
+
+`x(0) + r_pre*tau <= x_max`.
+
+This is **not** a time-invariant claim that `h(x(t))>=0` throughout delay; only the physical threshold `x(t)<=x_max` is guaranteed. For repeated delay episodes, the margin must be re-established at each episode, including controller state and queued actions.
+
+**Counterexample:** If `x(0)=x_max-r_pre*tau+epsilon` and heating equals `r_pre` for the full delay, then `x(tau)=x_max+epsilon`; the safety condition fails. If delay exceeds `tau`, heating exceeds `r_pre`, or post-actuation nonincrease fails, the proof does not apply.
+
+**Garden mapping:** THING=heated component/controller/sensor; TIME=latency; SPACE=physical location; EVENT=threshold detection; ACTION=command/cooling; AGENCY=operator/controller authority only when applicable; RULE=thermal bound and safety limit; VALUE=avoid overheating; CONTEXT=ambient/actuator limits; CLAIM=conditional safety guarantee. GSL relations `dependsOn`, `causes`, `controls`, `governs`, `derivedFrom`, `supports` track the physical-computational interface. No invented physical agency.
+
+**Candidate gap:** A physical-only coverage ledger may contain `x<=x_max` and a cooling-rate limit but omit the cross-interface obligation `r_pre*tau <= x_max-x(0)`. CGCD could flag it through TIME × ACTION × RULE × CONTEXT coupling. This is an example of a *missing obligation relative to a particular ledger*, not evidence that specialists have overlooked the bound.
+
+**Prior art:** delay margins, thermal safety and reachability bounds are well-established classes. No exhaustive technique/application literature search or independent domain validation has been performed; `NOVELTY_UNKNOWN`, `EMPIRICAL_UNKNOWN`, `GARDEN_ADVANTAGE_UNKNOWN`.
+
+**Experiment:** compare A (delay-aware thermal/reachability baseline), B (generic consequence search), C (typed-interface CGCD) on independently prepared models with hidden latency constraints and decoys. Measure valid omissions recovered per equal compute budget and false positives. Do not use a delay-free baseline as the sole comparator.
+
+**Status:** DERIVED under assumptions; analytically checked by integration, not machine-checked in this turn; no validated scientific novelty or measured practical benefit.
