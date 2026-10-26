@@ -14,3 +14,8 @@ This is a **navigation changelog**, not a declaration that later versions are ca
 | v15.11 | Noncanonical additive RCC, REP, VEI, ERC, SHR, USM, MCC, CEA, DSC and other candidates | [retention ledger](design_deltas/v15.11/CANDIDATE_RETENTION_LEDGER.md) |
 
 **2026-10-09 repository maintenance:** recovered v15.8–v15.9.1 delta source excerpts; indexed v15.11 candidate packages; added DSC Rev 2; consolidated navigation and marked historical tracking; added manual integrity-checking capability. This summary does not replace source-bound functional deltas, validate claims or create a v16 release.
+
+
+## Use-terms history
+
+**2026-10-26 — rollback to the 2026-10-25 stable state:** A more humane attempt to update the Garden use terms was made today, but it was not well received. The attempted update was rolled back, and the LICENSE was restored to the last stable wording that was in effect yesterday evening. This entry records the attempted change and rollback; the restored LICENSE remains the controlling text.
