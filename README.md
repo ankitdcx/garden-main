@@ -112,3 +112,8 @@ Git history remains available for historical recovery; the current tree is inten
 ## License / economic governance
 
 **Use terms — privacy first, then free use pending public review.** Under the proposed [LICENSE](LICENSE), operational use is not offered until the owner's full privacy, consent, dignity and security requirements are satisfied. After that condition is met, Garden ideas are offered for free use without fees or mandatory attribution while a public review is pending. The review does **not** delay that interim free use. After privacy, openly recruit at least 100,000 verified citizens of participating AI Accord countries for future decisions on patents, licensing, fees, revenue, design changes and governance through public voting. No special political voting authority or concealed decision-making. Public proceedings are auditable; individual ballots and personal data remain private. See [LICENSE](LICENSE) for the controlling terms.
+
+
+## Canonical LICENSE and proposed changes
+
+The [LICENSE](LICENSE) on the default branch is the canonical use-terms text. Future changes must be proposed separately, reviewed for coherence and practical consequences, and expressly approved by the repository owner before they can be adopted. Proposals do not change the LICENSE by themselves. See [LICENSE_CHANGE_POLICY.md](LICENSE_CHANGE_POLICY.md) and [LICENSE_PROPOSALS_2026-10-26.md](LICENSE_PROPOSALS_2026-10-26.md). The 2026-10-26 items are proposals only; the existing LICENSE remains unchanged.
