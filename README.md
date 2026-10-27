@@ -116,4 +116,4 @@ Git history remains available for historical recovery; the current tree is inten
 
 ## Canonical LICENSE and proposed changes
 
-The [LICENSE](LICENSE) on the default branch is the canonical use-terms text. Future changes must be proposed separately, reviewed for coherence and practical consequences, and expressly approved by the repository owner before they can be adopted. Proposals do not change the LICENSE by themselves. See [LICENSE_CHANGE_POLICY.md](LICENSE_CHANGE_POLICY.md) and [LICENSE_PROPOSALS_2026-10-26.md](LICENSE_PROPOSALS_2026-10-26.md). The 2026-10-26 items are proposals only; the existing LICENSE remains unchanged.
+The [LICENSE](LICENSE) on the default branch is the canonical use-terms text. Future changes must be proposed separately, reviewed for coherence and practical consequences, and expressly approved by the repository owner before they can be adopted. Proposals do not change the LICENSE by themselves. See [LICENSE_CHANGE_POLICY.md](LICENSE_CHANGE_POLICY.md). No active proposal from 2026-10-26 is retained in the current tree.
