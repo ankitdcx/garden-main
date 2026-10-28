@@ -71,3 +71,8 @@ For every candidate: recover exact source/problem/intent; compare with the curre
 | V1511-KR-001 — Continuous Epistemic Assimilation | [cea/README.md](cea/README.md) | New candidate package; not canonically admitted |
 
 These are retained **sources**, not merely directions; their exact implementation and certification remain separately unverified.
+
+
+## New candidate — 2026-10-28
+
+- **V1511-BIO-001 — Biological State, Repair, Cross-Species Mechanism Transfer & Healthy-Lifespan Research** — [candidate specification](bio/GARDEN_v15.11_BIO_CANDIDATE.md). Preserves the AI-assisted research direction spanning nutrient/mineral/vitamin systems, cross-species adaptations, human repair and rejuvenation, programmable medicine, directed biological intervention, and lifespan/healthspan horizons. Explicitly distinguishes mechanisms from literal trait transfer, hypothesis from evidence, and healthspan goals from speculative 200-year or trillion-year thought experiments. Additive noncanonical candidate; no clinical efficacy, implementation, certification or canonical admission claimed.
