@@ -24,3 +24,5 @@ This is a **navigation changelog**, not a declaration that later versions are ca
 ## LICENSE governance — 2026-10-26
 
 The canonical-LICENSE change policy was established. The separate proposal document created on this date has since been removed from the current tree at the owner's request; the canonical LICENSE was not changed. Git history may retain earlier revisions.
+
+**2026-11-15 — proposed Garden rights sale:** Added [P-2026-11-15-A](LICENSE_PROPOSAL_RIGHTS_SALE_2026-11-15.md), a non-binding proposal for a full transfer of the owner's transferable Garden rights to the first qualifying purchaser for ₹20 crore net after Indian taxes. The canonical LICENSE is unchanged; legal, title and tax review are required.
