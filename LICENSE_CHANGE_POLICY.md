@@ -1,7 +1,6 @@
 # Canonical LICENSE change policy
 
 ## Purpose
-
 Keep the repository's current `LICENSE` stable and authoritative while allowing future improvements to be considered without silently changing the terms.
 
 ## Rules
@@ -17,4 +16,4 @@ Keep the repository's current `LICENSE` stable and authoritative while allowing 
 
 ## Current decision
 
-The LICENSE present on the default branch remains unchanged by this policy document. The 2026-10-26 proposals are recorded separately and are not adopted.
+**2026-11-16 — adopted:** The Garden rights-sale terms dated 2026-11-15 (proposal identifier `P-2026-11-15-A`) were expressly selected by the repository owner as the canonical LICENSE text for both `garden-main` and `garden-swarm`. The prior LICENSE wording is superseded in the current trees. The canonical text records the intended ₹20 crore net consideration and transfer conditions; it does not itself execute or complete a rights assignment. The definitive agreement, title schedule, tax treatment and required legal formalities remain necessary.
