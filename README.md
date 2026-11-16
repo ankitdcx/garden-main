@@ -1,6 +1,6 @@
 # Garden Main — Design Archive and Candidate Corpus
 
-**Use terms — privacy first, then free use pending public review.** Under the proposed [LICENSE](LICENSE), operational use is not offered until the owner's full privacy, consent, dignity and security requirements are satisfied. After that condition is met, Garden ideas are offered for free use without fees or mandatory attribution while a public review is pending. The review does **not** delay that interim free use. After privacy, openly recruit at least 100,000 verified citizens of participating AI Accord countries for future decisions on patents, licensing, fees, revenue, design changes and governance through public voting. No special political voting authority or concealed decision-making. Public proceedings are auditable; individual ballots and personal data remain private. See [LICENSE](LICENSE) for the controlling terms.
+**Canonical use terms — Garden rights sale.** The canonical [LICENSE](LICENSE) records the owner's terms for a complete transfer of all Garden rights the owner legally owns and can transfer, for consideration that delivers **₹20 crore net after Indian taxes**. The first-completed-purchaser criteria and closing requirements are specified in the LICENSE. It is not an executed assignment: transfer occurs only after the owner signs the definitive agreement and all required closing steps are complete.
 
 **Navigation:** [Candidate release guide](canonical/candidates/README.md) · [Version changelog](CHANGELOG.md) · [Scientific research register](design_deltas/v15.10/GARDEN_SCIENCE_ALL_2026-10-09.txt). These are documentation and research records, not canonical admission or runtime automation.
 
@@ -111,9 +111,8 @@ Git history remains available for historical recovery; the current tree is inten
 
 ## License / economic governance
 
-**Use terms — privacy first, then free use pending public review.** Under the proposed [LICENSE](LICENSE), operational use is not offered until the owner's full privacy, consent, dignity and security requirements are satisfied. After that condition is met, Garden ideas are offered for free use without fees or mandatory attribution while a public review is pending. The review does **not** delay that interim free use. After privacy, openly recruit at least 100,000 verified citizens of participating AI Accord countries for future decisions on patents, licensing, fees, revenue, design changes and governance through public voting. No special political voting authority or concealed decision-making. Public proceedings are auditable; individual ballots and personal data remain private. See [LICENSE](LICENSE) for the controlling terms.
+The canonical [LICENSE](LICENSE) contains the Garden rights-sale terms: ₹20 crore net to the owner after Indian taxes, a first-completed-purchaser rule, and transfer only after execution of a definitive agreement and completion of required closing steps. The same canonical text is maintained in Garden Swarm. See [LICENSE_CHANGE_POLICY.md](LICENSE_CHANGE_POLICY.md) for future changes.
 
+## Canonical LICENSE history
 
-## Canonical LICENSE and proposed changes
-
-A non-binding [2026-11-15 Garden rights-sale proposal](LICENSE_PROPOSAL_RIGHTS_SALE_2026-11-15.md) is open for review. It does not change the canonical LICENSE or itself transfer any rights.
+The rights-sale terms identified as P-2026-11-15-A were adopted as the canonical LICENSE on 2026-11-16. The former privacy-conditional/free-use wording is superseded in the current repository tree; Git history retains prior versions.
