@@ -1,6 +1,6 @@
 # Garden rights-sale proposal — ₹20 crore net to owner
 
-**Status: ADOPTED AS THE CANONICAL REPOSITORY LICENSE TEXT ON 2026-11-16.** This document records a proposed route for a complete sale and transfer of Garden rights. It does not amend, replace, suspend, or override the current `LICENSE`. No rights are transferred by publishing this proposal, sending an email, or making a Git commit.
+**Status: ADOPTED AS THE CANONICAL REPOSITORY LICENSE TEXT ON 2026-11-16.** This archived source document records the terms adopted into the canonical `LICENSE` on 2026-11-16. It does not itself execute an assignment or transfer rights; no rights are transferred by publication, email, payment alone, or a Git commit.
 
 ## 1. Commercial offer
 
