@@ -26,3 +26,6 @@ This is a **navigation changelog**, not a declaration that later versions are ca
 The canonical-LICENSE change policy was established. The separate proposal document created on this date has since been removed from the current tree at the owner's request; the canonical LICENSE was not changed. Git history may retain earlier revisions.
 
 **2026-11-15 — proposed Garden rights sale:** Added [P-2026-11-15-A](LICENSE_PROPOSAL_RIGHTS_SALE_2026-11-15.md), a non-binding proposal for a full transfer of the owner's transferable Garden rights to the first qualifying purchaser for ₹20 crore net after Indian taxes. The canonical LICENSE is unchanged; legal, title and tax review are required.
+
+
+**2026-11-16 — canonical LICENSE adopted:** P-2026-11-15-A, the ₹20 crore net Garden rights-sale terms, was adopted as the canonical LICENSE in Garden Main and Garden Swarm. The prior LICENSE wording was superseded in both current trees. This repository status change does not itself execute or complete a rights transfer; the definitive agreement and required closing steps remain necessary.
