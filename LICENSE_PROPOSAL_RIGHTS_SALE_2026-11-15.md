@@ -1,6 +1,6 @@
 # Garden rights-sale proposal — ₹20 crore net to owner
 
-**Status: PROPOSED / NOT ADOPTED / SUBJECT TO LEGAL REVIEW.** This document records a proposed route for a complete sale and transfer of Garden rights. It does not amend, replace, suspend, or override the current `LICENSE`. No rights are transferred by publishing this proposal, sending an email, or making a Git commit.
+**Status: ADOPTED AS THE CANONICAL REPOSITORY LICENSE TEXT ON 2026-11-16.** This document records a proposed route for a complete sale and transfer of Garden rights. It does not amend, replace, suspend, or override the current `LICENSE`. No rights are transferred by publishing this proposal, sending an email, or making a Git commit.
 
 ## 1. Commercial offer
 
@@ -59,11 +59,11 @@ This proposal is a statement of commercial intent for review. It is not a legal 
 
 ## 6. Canonical status and decision record
 
-- The existing repository `LICENSE` remains canonical and unchanged.
-- This proposal is separate and non-binding unless and until a definitive agreement is independently prepared, reviewed, signed and completed.
-- No purchaser has priority merely because this proposal is public.
-- The owner may revise, withdraw or reject this proposal before execution, subject to any binding agreement already entered into.
-- Any later decision to change the repository's canonical LICENSE must follow `LICENSE_CHANGE_POLICY.md` and receive the owner's express approval of the exact text.
+- This text was adopted as the canonical repository `LICENSE` in Garden Main and Garden Swarm on 2026-11-16.
+- It records the owner's commercial intention and conditions but is not itself a binding definitive sale agreement or completed assignment.
+- No purchaser obtains priority merely because this text is public; the first-completed-purchaser rule and legal checks in Section 3 apply.
+- No transfer is effective until the owner signs the definitive agreement and all required closing steps are completed.
+- Future canonical changes must follow `LICENSE_CHANGE_POLICY.md` and receive express owner approval of the specific text.
 
 **Proposal date:** 2026-11-15  
 **Proposal identifier:** P-2026-11-15-A  
