@@ -15,14 +15,4 @@ This is a **navigation changelog**, not a declaration that later versions are ca
 
 **2026-10-09 repository maintenance:** recovered v15.8–v15.9.1 delta source excerpts; indexed v15.11 candidate packages; added DSC Rev 2; consolidated navigation and marked historical tracking; added manual integrity-checking capability. This summary does not replace source-bound functional deltas, validate claims or create a v16 release.
 
-
-## LICENSE governance — 2026-10-26
-
-The canonical-LICENSE change policy was established. The separate proposal document created on this date has since been removed from the current tree at the owner's request; the canonical LICENSE was not changed. Git history may retain earlier revisions.
-
-**2026-11-15 — Garden rights-sale terms drafted:** P-2026-11-15-A was prepared as a separate proposal for a full transfer of the owner's transferable Garden rights for ₹20 crore net after Indian taxes.
-
-
-**2026-11-16 — canonical LICENSE adopted:** P-2026-11-15-A became the canonical LICENSE in Garden Main. The prior LICENSE wording was superseded. The separate proposal copy was removed as redundant; the canonical LICENSE is the single controlling repository text. This repository status change does not itself execute or complete a rights transfer; the definitive agreement and required closing steps remain necessary.
-
 **2026-11-16 — Garden Swarm retired:** The duplicate repository's five current files were removed after confirming its active workspace had already been retired and the retained design corpus is maintained in Garden Main. Its Git history remains available.
