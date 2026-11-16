@@ -1,4 +1,4 @@
-name: One-use delete all non-main branches
+name: One-use delete final leftover branch
 on:
   push:
     branches: [main]
@@ -10,7 +10,7 @@ jobs:
   delete:
     runs-on: ubuntu-latest
     steps:
-      - name: Delete temporary carrier branch
+      - name: Delete the final non-main branch
         env:
           GH_TOKEN: ${{ github.token }}
         uses: actions/github-script@v7
@@ -18,12 +18,12 @@ jobs:
           script: |
             const owner = context.repo.owner;
             const repo = context.repo.repo;
-            const carrier = 'chatgpt/one-use-delete-all-nonmain-20261116';
+            const branch = 'docs/remove-git-history-commentary';
             const token = process.env.GH_TOKEN;
-            const url = 'https://api.github.com/repos/' + owner + '/' + repo + '/git/refs/heads/' + carrier;
+            const url = 'https://api.github.com/repos/' + owner + '/' + repo + '/git/refs/heads/' + branch;
             const response = await fetch(url, {
               method: 'DELETE',
               headers: {'Authorization':'Bearer ' + token, 'Accept':'application/vnd.github+json'}
             });
-            if (!response.ok && response.status !== 404) throw new Error('Carrier deletion failed: ' + response.status + ' ' + await response.text());
-            core.info('Temporary carrier deleted. main is the only retained branch.');
+            if (!response.ok && response.status !== 404) throw new Error('Branch deletion failed: ' + response.status + ' ' + await response.text());
+            core.info('Final non-main branch deleted: ' + branch);
