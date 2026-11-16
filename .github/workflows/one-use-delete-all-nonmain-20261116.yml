@@ -1,0 +1,42 @@
+name: One-use delete all non-main branches
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/one-use-delete-all-nonmain-20261116.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  delete:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Delete all non-main refs and remove this workflow
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const owner = context.repo.owner;
+            const repo = context.repo.repo;
+            const carrier = 'chatgpt/one-use-delete-all-nonmain-20261116';
+            const branches = await github.paginate(github.rest.repos.listBranches, {
+              owner, repo, per_page: 100
+            });
+            const deleted = [];
+            for (const b of branches) {
+              if (b.name === 'main' || b.name === carrier) continue;
+              await github.rest.git.deleteRef({owner, repo, ref: 'heads/' + b.name});
+              deleted.push({name: b.name, sha: b.commit.sha});
+            }
+            core.info('Deleted ' + deleted.length + ' non-main branches.');
+            await github.rest.git.deleteRef({owner, repo, ref: 'heads/' + carrier});
+            const file = await github.rest.repos.getContent({
+              owner, repo, path: '.github/workflows/one-use-delete-all-nonmain-20261116.yml',
+              ref: 'main'
+            });
+            await github.rest.repos.deleteFile({
+              owner, repo, path: '.github/workflows/one-use-delete-all-nonmain-20261116.yml',
+              message: 'Remove one-use branch cleanup workflow',
+              sha: file.data.sha,
+              branch: 'main'
+            });
