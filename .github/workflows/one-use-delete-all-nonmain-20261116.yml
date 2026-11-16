@@ -1,0 +1,57 @@
+name: One-use delete all non-main branches
+on:
+  push:
+    branches:
+      - 'chatgpt/one-use-delete-all-nonmain-20261116'
+
+permissions:
+  contents: write
+
+jobs:
+  delete:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Delete every branch except main
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const owner = context.repo.owner;
+            const repo = context.repo.repo;
+            const carrier = context.ref.replace('refs/heads/', '');
+            const branches = await github.paginate(github.rest.repos.listBranches, {
+              owner, repo, per_page: 100
+            });
+            const deleted = [];
+            const skipped = [];
+            for (const b of branches) {
+              if (b.name === 'main' || b.name === carrier) {
+                skipped.push({name: b.name, sha: b.commit.sha});
+                continue;
+              }
+              try {
+                await github.rest.git.deleteRef({owner, repo, ref: 'heads/' + b.name});
+                deleted.push({name: b.name, sha: b.commit.sha});
+              } catch (e) {
+                core.setFailed('Could not delete ' + b.name + ': ' + e.message);
+                throw e;
+              }
+            }
+            fs.writeFileSync(process.env.RUNNER_TEMP + '/branch-cleanup.json',
+              JSON.stringify({schema:'GardenAllNonMainBranchDeletion/v1',
+                repository:owner+'/'+repo, preserved_main:true,
+                deleted, skipped, canonical_effect:'NONE'}, null, 2));
+            core.setOutput('deleted_count', String(deleted.length));
+      - name: Upload deletion receipt
+        uses: actions/upload-artifact@v4
+        with:
+          name: garden-main-nonmain-branch-deletion-${{ github.run_id }}
+          path: ${{ runner.temp }}/branch-cleanup.json
+          retention-days: 90
+      - name: Delete temporary carrier
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          test "$(gh api "repos/${GITHUB_REPOSITORY}/git/ref/heads/${GITHUB_REF_NAME}" --jq .object.sha)" = "${GITHUB_SHA}"
+          gh api --method DELETE "repos/${GITHUB_REPOSITORY}/git/refs/heads/${GITHUB_REF_NAME}"
