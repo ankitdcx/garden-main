@@ -92,7 +92,7 @@ Theory specified: YES. Formal implementation of CGCD: NO. Controlled CGCD-vs-bas
 
 - [v15.10 abstraction/GCSC](V15_10_ABSTRACTION_GCSC_DELTA.md)
 - [PHY-XFER-003 consolidated candidate](G15_10_PHY_XFER_003_CONSOLIDATED_CANDIDATE.md)
-- Prior toy controls and withdrawn surrogate results are summarized in §6; historical source remains available in Git history.
+- Prior toy controls and withdrawn surrogate results are summarized in §6.
 - [Unified idea register](G15_10_ALL_SCIENTIFIC_IDEAS_REGISTER.md)
 
 **Status invariant:** specification != proof != implementation != experimental validation != novelty != economic value != canonical admission.
