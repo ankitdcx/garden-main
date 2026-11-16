@@ -4,10 +4,6 @@
 
 **Navigation:** [Candidate release guide](canonical/candidates/README.md) · [Version changelog](CHANGELOG.md) · [Scientific research register](design_deltas/v15.10/GARDEN_SCIENCE_ALL_2026-10-09.txt). These are documentation and research records, not canonical admission or runtime automation.
 
-## Version-control history
-
-**2026-10-26 — rollback to the 2026-10-25 stable state:** A more humane attempt to update the Garden use terms was made today, but it was not well received. The attempted update was rolled back, and the LICENSE was restored to the last stable wording that was in effect yesterday evening. This entry records the attempted change and rollback; the restored LICENSE remains the controlling text.
-
 ## Repository purpose
 
 This repository intentionally contains **Garden design source and successor design candidates**. It is not the former runtime, deployment, review-automation or work-package workspace.
@@ -107,12 +103,7 @@ The repository contains source and candidate documents, not a certified implemen
 
 The current tree intentionally excludes obsolete runtime implementations, deployment experiments, browser/mobile council code, old work packages, review automation, retired archives, stale receipts/workstreams and derived GSL implementation profiles.
 
-Git history remains available for historical recovery; the current tree is intended to be the compact design/candidate corpus.
-
 ## License / economic governance
 
 The canonical [LICENSE](LICENSE) contains the Garden rights-sale terms: ₹20 crore net to the owner after Indian taxes, a first-completed-purchaser rule, and transfer only after execution of a definitive agreement and completion of required closing steps. The same canonical text is maintained in Garden Swarm. See [LICENSE_CHANGE_POLICY.md](LICENSE_CHANGE_POLICY.md) for future changes.
 
-## Canonical LICENSE history
-
-The rights-sale terms identified as P-2026-11-15-A were adopted as the canonical LICENSE on 2026-11-16. The former privacy-conditional/free-use wording is superseded in the current repository tree; Git history retains prior versions.
