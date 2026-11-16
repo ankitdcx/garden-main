@@ -116,6 +116,3 @@ The canonical [LICENSE](LICENSE) contains the Garden rights-sale terms: ₹20 cr
 ## Canonical LICENSE history
 
 The rights-sale terms identified as P-2026-11-15-A were adopted as the canonical LICENSE on 2026-11-16. The former privacy-conditional/free-use wording is superseded in the current repository tree; Git history retains prior versions.
-## Canonical LICENSE and proposed changes
-
-A non-binding [2026-11-15 Garden rights-sale proposal](LICENSE_PROPOSAL_RIGHTS_SALE_2026-11-15.md) is open for review. It does not change the canonical LICENSE or itself transfer any rights.
