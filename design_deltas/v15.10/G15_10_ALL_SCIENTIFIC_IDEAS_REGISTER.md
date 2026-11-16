@@ -188,9 +188,9 @@ These were presented as a separate shortlist but largely overlap Part A. Origina
 ## Sources
 
 - [Unified scientific discovery theory](G15_10_UNIFIED_SCIENTIFIC_DISCOVERY_THEORY.md)
-- Original 100-row grid is incorporated verbatim into Part A of this register; previous file is recoverable from Git history.
+- Original 100-row grid is incorporated verbatim into Part A of this register.
 - [PHY-XFER-003](G15_10_PHY_XFER_003_CONSOLIDATED_CANDIDATE.md)
-- Original 70-item audit is summarized in the status key and Part A; detailed prior version is recoverable from Git history.
+- Original 70-item audit is summarized in the status key and Part A.
 
 
 ## Part E — CGCD worked candidate (2026-10-11)
