@@ -43,9 +43,9 @@ The definitive agreement should specify the exact transfer date, asset schedules
 
 After valid execution and completion, the owner will send a written confirmation email recording that the transfer has closed. The parties should also retain the signed agreement, proof of cleared funds, tax documentation and a closing inventory. Email confirmation is evidence of closing; it is not a substitute for any deed, registration, filing, consent or other formality required by law.
 
-## 5. Review required before adoption or execution
+## 5. Review required before execution
 
-Before this proposal is used as an offer or contract, independent Indian legal and tax professionals should verify:
+Before a definitive agreement is signed, independent Indian legal and tax professionals should verify:
 
 - the seller's chain of title and authority to transfer each included asset;
 - whether the proposed transfer is an assignment of copyright, patent, trademark, domain, repository, contractual or other rights, and the formalities required for each;
@@ -55,7 +55,7 @@ Before this proposal is used as an offer or contract, independent Indian legal a
 - enforceability of the first-completed purchaser mechanism and a fair process for timestamp disputes; and
 - appropriate warranties, indemnities, liability allocation and dispute-resolution provisions.
 
-This proposal is a statement of commercial intent for review. It is not a legal opinion, binding offer, executed assignment, tax calculation, or guarantee that every category of Garden material can be transferred.
+This LICENSE records the owner's published commercial intention and conditions. It is not a legal opinion, binding definitive sale contract, executed assignment, tax calculation, or guarantee that every category of Garden material can be transferred.
 
 ## 6. Canonical status and decision record
 
@@ -65,6 +65,6 @@ This proposal is a statement of commercial intent for review. It is not a legal 
 - No transfer is effective until the owner signs the definitive agreement and all required closing steps are completed.
 - Future canonical changes must follow `LICENSE_CHANGE_POLICY.md` and receive express owner approval of the specific text.
 
-**Proposal date:** 2026-11-15  
+**Original proposal date:** 2026-11-15  
 **Proposal identifier:** P-2026-11-15-A  
-**Decision:** Open for review; not adopted into the canonical LICENSE.
+**Decision:** Adopted as the canonical repository LICENSE on 2026-11-16; definitive sale and transfer remain subject to the execution and closing requirements above.
