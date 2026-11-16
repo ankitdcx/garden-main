@@ -1,6 +1,6 @@
 {
   "schema": "GardenCorpusIndex/v1",
-  "updated": "2026-10-09",
+  "updated": "2026-11-16",
   "canonical": {
     "id": "Garden-v15.5",
     "gsl": "v45.1",
@@ -183,22 +183,13 @@
   ],
   "status_rule": "Presence in this index does not admit, prove, implement, validate or certify a candidate.",
   "economic_governance": {
-    "status": "FREE_USE_WITHOUT_ATTRIBUTION_PENDING_100000_PERSON_REVIEW",
-    "selection": "OPEN_VOLUNTARY_MEMBERSHIP_FOR_ALL_RESIDENTS_OF_AI_ACCORD_MEMBER_COUNTRIES",
-    "decision_scope": "100% of individual ideas and their economic value",
-    "outcomes": [
-      "KEEP_IDEAS_FREE",
-      "COMMON_FUND"
-    ],
-    "attribution_required": false,
-    "name_garden_required": false,
-    "git_owner_personal_share": "NONE",
-    "review_population_minimum": 100000,
-    "review_population_maximum": null,
-    "voter_qualification": "general reasoning and basic AI knowledge only; no decision-specific test or coaching; no political appointment, ideology screening or discretionary filtering",
-    "membership": "any eligible resident passing two objective tests may join and vote; open continuously",
-    "votes_per_member": 1,
-    "worldwide_revenue_scope": "100% of revenue from ideas worldwide including nonmember countries"
+    "status": "RIGHTS_SALE_TERMS_PUBLISHED_IN_CANONICAL_LICENSE",
+    "canonical_license": "LICENSE",
+    "minimum_net_consideration_inr": 200000000,
+    "transfer_scope": "All Garden rights the owner legally owns and is entitled to transfer, subject to third-party rights and applicable law.",
+    "purchaser_rule": "First qualifying purchaser under the canonical LICENSE, subject to mandatory legal checks.",
+    "transfer_condition": "No transfer is effective until the owner signs the definitive agreement and all required closing steps are complete.",
+    "note": "The repository LICENSE records published commercial intent and conditions; it is not itself an executed assignment or completed sale."
   },
   "recovery_packages": [
     {
