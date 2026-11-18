@@ -1,83 +1,48 @@
-# GARDEN CANONICAL LICENSE — ₹20 CRORE NET RIGHTS-SALE TERMS
+# GARDEN LICENSE — ₹20 CRORE NET SALE
 
-**Status: CANONICAL REPOSITORY LICENSE TEXT — EFFECTIVE AS THE PROJECT'S PUBLISHED RIGHTS-SALE TERMS.** This LICENSE records the owner's current intention and conditions for a complete sale and transfer of Garden rights. It is not itself an executed assignment or a binding definitive sale contract. No rights are transferred by publication, email, payment alone, or a Git commit; transfer takes effect only after the owner signs the definitive agreement and all required closing steps are completed.
+**Status:** Sale offer. No transfer is complete until the final agreement is signed and all required formalities are completed.
 
-## 1. Commercial offer
+## 1. Sale and ownership
 
-The owner is willing to sell and permanently transfer all Garden rights that the owner legally owns and is entitled to transfer to the first qualifying purchaser who completes the requirements in Section 3.
+The owner offers to sell all Garden rights that they legally own or control for **₹20,00,00,000 (twenty crore Indian rupees), net of all applicable taxes**.
 
-**Minimum consideration:** the owner must receive **₹20,00,00,000 (twenty crore Indian rupees) net after all taxes payable by the owner in India in connection with the transaction**.
+After completion, the purchaser is intended to receive exclusive, worldwide, permanent and irrevocable ownership of the included rights, with the ability to use, modify, develop, commercialise, license, sell and transfer them.
 
-The intended economic result is that the owner retains ₹20 crore after applicable Indian taxes. Any withholding, deduction, transaction charge, or other amount that would reduce the owner's net receipt must be addressed in the transaction documents and funded by the purchaser in addition to the net amount, subject to applicable law and tax advice. The gross amount and tax treatment must be determined by qualified Indian tax advisers before signing.
+The sale may include Garden's original documents, designs, specifications, software, source materials, names, marks, domains, repositories and related assets, to the extent legally owned or transferable by the owner.
 
-## 2. Intended scope of transfer
+Third-party materials, contributions, open-source components and other people's rights are excluded unless they can legally be transferred.
 
-Subject to ownership verification, third-party rights, applicable law, and a definitive written assignment, the intended transfer is a **full, exclusive, worldwide, perpetual and irrevocable transfer** to the purchaser of all transferable rights owned or controlled by the owner in Garden, including, where applicable:
+## 2. Purchaser priority and transfer
 
-- copyright and other intellectual-property rights in Garden source materials, specifications, documentation, designs, written works and other original project materials;
-- transferable rights in names, marks, domains, repositories, project assets and associated goodwill, if owned by the owner;
-- rights to use, reproduce, modify, commercialize, license, sublicense, distribute, publish, assign and further transfer the acquired rights;
-- the right to control future licensing, governance, development and commercial exploitation of the acquired rights; and
-- transferable rights in future Garden improvements created by the owner, only if expressly included in the definitive agreement.
+Priority goes to the first eligible purchaser who completes both requirements:
 
-The commercial intention is that the purchaser becomes the sole owner of the transferred Garden rights and the seller retains no continuing ownership or control over those transferred rights, except for any non-waivable rights or obligations under applicable law.
+1. The full payment required to leave the owner with ₹20 crore net reaches the nominated bank account as cleared, irrevocable funds.
+2. The complete proposed transfer agreement and supporting documents reach the owner's nominated email address.
 
-**Limits that must be respected:** the seller can transfer only rights actually owned or legally controlled by the seller. Third-party code, contributions, open-source components, data, patents, marks, repository-hosted material owned by others, and rights held by collaborators are not automatically included. A schedule must identify included assets, excluded assets, third-party dependencies, existing grants and any rights that cannot legally be assigned.
+Reliable timestamps determine priority. An incomplete payment or agreement does not qualify.
 
-## 3. First-completed purchaser rule
+The owner must verify the purchaser and documents and sign the final agreement. The transfer becomes effective only after signing and completion of all required legal formalities.
 
-The purchaser may be any eligible individual, company, institution, public body or other legal person, subject to identity, sanctions, anti-money-laundering, source-of-funds and other mandatory legal checks.
+The final agreement must identify the assets, payment and tax arrangements, responsibilities, liabilities, handover process and applicable dispute procedure.
 
-The intended priority rule is **first qualifying completion**, not merely first expression of interest. A purchaser qualifies only when both of the following have occurred:
+## 3. No unauthorized use
 
-1. The full amount required to deliver ₹20 crore net to the owner has been received as cleared, irrevocable funds in the owner's designated bank account; and
-2. The purchaser's complete proposed definitive transfer agreement and required supporting legal documents have been received at the owner's designated email address, with the documents identifying the purchaser, the assets and rights to be transferred, the consideration, payment evidence, representations, warranties, closing conditions and transfer mechanics.
+Nobody may use, copy, modify, implement, distribute, sell or commercially benefit from Garden's protected work without the owner's written permission. This includes indirect use and use through another person or organisation.
 
-The order and time of receipt of both completed requirements must be recorded using reliable bank and email timestamps. The first purchaser to satisfy both requirements, and pass mandatory legal checks, receives priority for closing. A payment alone, an email alone, a draft agreement alone, or an unverified payment does not complete the requirements.
+Anyone who makes unauthorized use and gains a benefit explicitly agrees to pay **1,000% (10 times) of the total benefit gained from using Garden ideas**.
 
-The owner must review and execute the definitive agreement. **No transfer is effective until the owner has accepted and signed the definitive agreement and all required closing steps have been completed.** If the first claimant fails legal checks, cannot establish cleared funds, or does not provide legally sufficient documents, the owner may reject that claim and consider the next qualifying claimant.
+The owner may seek an order to stop the use, claim compensation and take other legal action. Where the conduct is a criminal offence, the owner may report it and seek prosecution under applicable law.
 
-## 4. Confirmation and closing
+This clause covers only rights the owner legally owns or controls. It does not claim ownership over ideas that the law does not allow anyone to own.
 
-The definitive agreement should specify the exact transfer date, asset schedules, payment and tax mechanics, representations and warranties, treatment of liabilities, third-party rights, repository and account handover, confidentiality, dispute resolution, governing law, and any mandatory filings or registrations.
+## 4. Final conditions
 
-After valid execution and completion, the owner will send a written confirmation email recording that the transfer has closed. The parties should also retain the signed agreement, proof of cleared funds, tax documentation and a closing inventory. Email confirmation is evidence of closing; it is not a substitute for any deed, registration, filing, consent or other formality required by law.
+Before completion, the parties must verify ownership, third-party rights, purchaser identity, source of funds, applicable taxes and any required approvals or registrations.
 
-## 5. Review required before execution
+The repository's default-branch LICENSE is the canonical published version. Any change must follow `LICENSE_CHANGE_POLICY.md` and receive the owner's express approval of the exact wording.
 
-Before a definitive agreement is signed, independent Indian legal and tax professionals should verify:
+This LICENSE is a sale offer, not a completed sale, signed transfer agreement, tax opinion or guarantee that every Garden asset is transferable.
 
-- the seller's chain of title and authority to transfer each included asset;
-- whether the proposed transfer is an assignment of copyright, patent, trademark, domain, repository, contractual or other rights, and the formalities required for each;
-- the treatment of third-party contributions, open-source licenses, prior permissions, existing users and repository history;
-- the correct gross consideration required to deliver ₹20 crore net after Indian taxes, including withholding, GST or other applicable transaction taxes if relevant;
-- purchaser eligibility, source-of-funds checks, banking compliance, foreign purchaser/payment rules and any required approvals;
-- enforceability of the first-completed purchaser mechanism and a fair process for timestamp disputes; and
-- appropriate warranties, indemnities, liability allocation and dispute-resolution provisions.
-
-This LICENSE records the owner's published commercial intention and conditions. It is not a legal opinion, binding definitive sale contract, executed assignment, tax calculation, or guarantee that every category of Garden material can be transferred.
-
-## 6. Canonical status and operation
-
-- The LICENSE records the owner's published commercial intention and first-completed-purchaser criteria. It is not, by itself, a binding definitive sale agreement or completed assignment.
-- No purchaser obtains priority merely because this LICENSE is public. Priority is determined only under Section 3 after both completion requirements and mandatory legal checks are satisfied.
-- No transfer is effective until the owner accepts and signs the definitive agreement and all required closing steps have been completed, as stated in Sections 3 and 4.
-- Any later change to this canonical LICENSE must follow `LICENSE_CHANGE_POLICY.md` and receive the owner's express approval of the specific text being merged.
-
-**Original proposal date:** 2026-11-15  
-**Proposal identifier:** P-2026-11-15-A  
-**Decision:** Adopted as the canonical repository LICENSE on 2026-11-16; definitive sale and transfer remain subject to the execution and closing requirements above.
-
-## 7. No Unauthorized Use of Garden
-
-1. Nobody is allowed to use, copy, reproduce, modify, implement, distribute, sell or commercially benefit from Garden's protected work without written permission from the owner.
-
-2. This rule also covers indirect use, use through another person or company, and work derived from Garden's protected materials.
-
-3. Anyone who makes unauthorized use and gains a benefit from it agrees to pay **1,000% (10 times) of the total benefit gained**. The owner may seek this amount as compensation to the fullest extent allowed by law.
-
-4. The owner may take legal action, seek an order to stop the unauthorized use, and claim any other compensation allowed by law.
-
-5. Where the conduct is a criminal offence under applicable law, the owner may report it to the authorities and seek criminal prosecution.
-
-6. This rule applies to all Garden rights that the owner legally owns or controls. It does not remove any protection required by law or claim ownership over ideas that the law does not allow anyone to own.
+**Original proposal:** 2026-11-15  
+**Proposal ID:** P-2026-11-15-A  
+**Canonical adoption date:** 2026-11-16
