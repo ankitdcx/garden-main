@@ -28,11 +28,9 @@ It is not an implemented safety guarantee. The 54 cases are test specifications;
 
 ## Version and preservation boundary
 
-This is an additive candidate for the v15.10 working design's v15.11 successor. It is not a complete v15.11 source release. The connected repository still binds canonical/current to Garden v15.5 and its materialized candidate pointer to v15.7; this package does not rewrite either identity.
+This is an additive candidate for the v15.10 working design's v15.11 successor. It is not a complete v15.11 source release. The repository's only canonical source remains Garden v15.5 in `canonical/current/`. The v15.7 five-file candidate is retained separately; no selected-candidate pointer is present in the current tree.
 
-The [earlier v15.11 candidate ledger](https://github.com/ankitdcx/garden-main/blob/2d86894cbde364706463a3658f43dea41dcc0b6f/design_deltas/v15.11/PENDING_CANDIDATES_2026-09-20.md) is retained on its original branch. [PR #95](https://github.com/ankitdcx/garden-main/pull/95) was closed without merging. RCC supplements its admission, assurance, authority and evolution themes; no prior candidate is removed, superseded or silently admitted. This directory is not an exhaustive candidate index.
-
-The user authorized this candidate registration and repository publication on 2026-09-22. That authorization is not represented as implementation certification or canonical admission. No paid model calls were made.
+The earlier [v15.11 pending-candidate ledger snapshot](https://github.com/ankitdcx/garden-main/blob/2d86894cbde364706463a3658f43dea41dcc0b6f/design_deltas/v15.11/PENDING_CANDIDATES_2026-09-20.md) was associated with [PR #95](https://github.com/ankitdcx/garden-main/pull/95), which closed without merging. That snapshot is not present in the current tree. RCC supplements its admission, assurance, authority and evolution themes; no prior candidate is removed, superseded or silently admitted. This directory is not an exhaustive candidate index.
 
 ## 2026-10-09 reconciliation
 

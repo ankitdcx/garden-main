@@ -4,7 +4,7 @@
 
 ## Consolidated scientific discovery research (2026-10-10)
 
-**Start here for today's scientific discovery work:**
+**Start with the consolidated scientific-discovery research:**
 
 - [Unified Scientific Discovery Theory](G15_10_UNIFIED_SCIENTIFIC_DISCOVERY_THEORY.md) — **primary** noncanonical research synthesis; centers coverage-guided consequence discovery (CGCD-001), now incorporates ABSTRACT-002 + H1 hardening, a worked thermal/controller-latency bound (§§10–11), and the frozen GSH-001 search policy (§12), including initial STATE/RULE/RELATION templates and the four-arm benchmark; preserves PHY-XFER as a supporting mechanism, corrects prior claims and defines controlled evaluation.
 - [All Scientific Ideas Register](G15_10_ALL_SCIENTIFIC_IDEAS_REGISTER.md) — **single** inventory of 132 historical entries (100 template cells + 22 transfer candidates + 10 applied ideas), with overlap warnings and zero validated novelty/advantage.
@@ -23,7 +23,7 @@ The original 70 toy passes do not validate physical-domain hypotheses. No candid
 
 8. [PHY-XFER-003 technical specification](G15_10_PHY_XFER_003_CONSOLIDATED_CANDIDATE.md) — optional transfer adapter/operator details, not a validated discovery.
 
-The **two primary consolidated documents** above contain today's discovery theory, all 132 indexed candidate entries, the negative/null evidence ledger and lessons. Superseded preliminary reports, duplicated grids, synthetic screening notes and standalone Python scripts were removed from this *design-only* folder; their earlier versions remain recoverable through Git history. The 70 surrogate passes were withdrawn as domain evidence. No validated scientific novelty or Garden advantage is claimed.
+The **two primary consolidated documents** above contain the research synthesis, all 132 indexed candidate entries, and the negative/null evidence ledger and lessons. Superseded preliminary reports, duplicated grids, synthetic screening notes and standalone Python scripts were removed from this *design-only* folder; their earlier versions remain recoverable through Git history. The 70 surrogate passes were withdrawn as domain evidence. No validated scientific novelty or Garden advantage is claimed.
 
 ## Supporting artifacts
 
