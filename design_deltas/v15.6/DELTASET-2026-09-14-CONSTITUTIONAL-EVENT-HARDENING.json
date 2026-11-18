@@ -5,7 +5,7 @@
   "predecessor_source_root_sha256": "63561ce9fcd4a72f44af333662b342fd18c4e99930209c30c5f801bcc5c74598",
   "candidate_release": "Garden v15.6",
   "status": "CANDIDATE_PENDING_WHOLE_SOURCE_PROPAGATION_AND_REVIEW",
-  "origin": "Machine-readable companion to the whole-source hourly ConstitutionalEvent triage admitted to ankitdcx/legacy external workspace NEXT_RELEASE_HARDENING.md at commit f34479d50f5e0b5d8bc9c94c2f56eb549c4fb103.",
+  "origin": "Machine-readable companion to the whole-source hourly ConstitutionalEvent triage admitted to archived review material at commit f34479d50f5e0b5d8bc9c94c2f56eb549c4fb103.",
   "human_authorization": "User explicitly delegated worthy hourly-finding triage and repository updates; this authorizes candidate integration work only. Canonical promotion remains a separate human act.",
   "canonical_predecessor_immutable": true,
   "topology_change": false,
@@ -119,8 +119,8 @@
     "Create a new containment authority source: rejected; reuse existing authority/action/admission ownership."
   ],
   "implementation_evidence": {
-    "public_successor_queue_commit": "legacy external commit f34479d50f5e0b5d8bc9c94c2f56eb549c4fb103:NEXT_RELEASE_HARDENING.md",
-    "public_reference_pr": "ankitdcx/legacy external workspace#55",
+    "public_successor_queue_commit": "historical source commit f34479d50f5e0b5d8bc9c94c2f56eb549c4fb103:NEXT_RELEASE_HARDENING.md",
+    "public_reference_pr": "historical reference #55",
     "public_reference_scope": [
       "prototype/hardening.py",
       "tests/adversarial/test_swarm_hardening.py"

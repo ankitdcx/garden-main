@@ -3617,7 +3617,7 @@ Source: https://github.com/ankitdcx/garden-main/issues/54
     "observed_gap": "No exact current canonical/public implementation match was found for a deployment invariant/test that treats every shared mutable service reachable by separate tenants/sessions as a potential covert channel and proves cross-tenant write->read non-interference plus runtime denial of management/annotation write APIs."
   },
   "observed_repo_shas": {
-    "ankitdcx/legacy external workspace": "2aebb9aa92f200149869179092d454ab90c5593c",
+    "historical_external_source": "2aebb9aa92f200149869179092d454ab90c5593c",
     "ankitdcx/garden-main": "9ce9e1179aa41d6ab26be0ee7079668c6719cc75"
   },
   "design_epoch": {
@@ -3700,7 +3700,7 @@ Source: https://github.com/ankitdcx/garden-main/issues/55
     "observed_gap": "Current repository searches found no explicit equivariance, opaque-identifier renaming, or temporal-logic verification contract/test corresponding to this property. This is therefore an alternative proof/testing technique candidate, not evidence that Garden's current identity model is defective."
   },
   "observed_repo_shas": {
-    "ankitdcx/legacy external workspace": "2aebb9aa92f200149869179092d454ab90c5593c",
+    "historical_external_source": "2aebb9aa92f200149869179092d454ab90c5593c",
     "ankitdcx/garden-main": "9ce9e1179aa41d6ab26be0ee7079668c6719cc75"
   },
   "design_epoch": {
