@@ -1,6 +1,6 @@
 # Garden design deltas — navigation
 
-**Status:** the materials in this directory are noncanonical unless a separate admission record says otherwise. They are incremental proposals, research, source extracts, recovery records and navigation indexes—not complete canonical releases.
+**Status:** materials in this directory are noncanonical unless a separate admission record says otherwise. These folders contain incremental proposals, research, source extracts, recovery records and navigation indexes—not complete canonical releases.
 
 Start with:
 - [Whole-release candidates](../canonical/candidates/README.md) — complete five-file successor working sets.
@@ -13,11 +13,11 @@ Start with:
 
 | Folder | Main content | Recommended entry |
 |---|---|---|
-| [v15.6](v15.6/) | GSL, governance, engineering, knowledge and successor-process candidates | [Candidate registry](v15.6/ARCHIVE_DERIVED_V15_6_CANDIDATE_REGISTRY_2026-09-14.md) |
-| [v15.7](v15.7/) | Additive cognitive, TRACE, human and event-routing candidate work | [Folder index](v15.7/) |
-| [v15.8](v15.8/) | Source-labelled additions and recovery material | [Delta from v15.7](v15.8/DELTA_FROM_v15.7.md) |
-| [v15.9](v15.9/) | P001–P037 review material and selected source-level closure clauses | [Consolidated review](v15.9/P001_P037_CONSOLIDATED_REVIEW_SOURCE.txt) |
-| [v15.9.1](v15.9.1/) | GCSC, SAL and SAC source extracts and semantic patches | [Detailed semantic patch](v15.9.1/GCSC_SAL_SAC_DETAILED_SEMANTIC_PATCH.md) |
+| [v15.6](v15.6/) | GSL, governance, engineering, knowledge and successor-process candidates; JSON source records consolidated into Markdown | [Folder index](v15.6/README.md) · [consolidation audit](v15.6/CONSOLIDATION_AUDIT_2026-11-18.md) |
+| [v15.7](v15.7/) | Additive cognitive, TRACE, human and event-routing candidate work; candidate index consolidated into Markdown | [Folder index](v15.7/README.md) · [candidate register](v15.7/V15.7_CANDIDATE_REGISTER.md) |
+| [v15.8](v15.8/) | Source-labelled additions and recovery material; already text-based | [Folder index](v15.8/README.md) |
+| [v15.9](v15.9/) | P001–P037 review material and selected source-level closure clauses; already text-based | [Folder index](v15.9/README.md) |
+| [v15.9.1](v15.9.1/) | GCSC, SAL and SAC source extracts and semantic patches; already text-based | [Folder index](v15.9.1/README.md) |
 | [v15.10](v15.10/) | Generative design, semantic-kernel and reconstruction ideas, theory discovery, Tree Core, retention and scientific research | [Guide](v15.10/README.md) |
 | [v15.11](v15.11/) | Focused candidate directions and review material, including RCC, REP, VEI, ERC, SHR, QSE/Rev 2, DSC, CEA, MCC and USM | [Candidate retention ledger](v15.11/CANDIDATE_RETENTION_LEDGER.md) |
 
