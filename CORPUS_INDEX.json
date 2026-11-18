@@ -1,6 +1,6 @@
 {
   "schema": "GardenCorpusIndex/v1",
-  "updated": "2026-11-16",
+  "updated": "2026-11-18",
   "canonical": {
     "id": "Garden-v15.5",
     "gsl": "v45.1",
@@ -220,6 +220,19 @@
     {
       "status": "NONCANONICAL_FUTURE_PLAN_ONLY",
       "path": "design_deltas/FUTURE_V16_NONCANONICAL_DESIGN_NOTE.md"
+    }
+  ],
+  "historical_source_documents": [
+    {
+      "id": "Garden-Standalone-Master-2026-08-21-R2",
+      "status": "HISTORICAL_NONCANONICAL_SOURCE",
+      "source_date": "2026-08-21",
+      "path": "history/2026-08-21/GARDEN_COMPLETE_STANDALONE_DESIGN_MASTER_2026-08-21_R2.txt",
+      "archive_note": "Original uploaded source preserved without editorial changes. Its internal 'canonical/latest-only' status is a statement from the source date and does not confer current canonical authority.",
+      "original_upload_size_bytes": 707192,
+      "original_upload_sha256": "71fd75db07e9acc52b623b2c1fb6907e84e8b1d0a24281aefb26f49d189873c5",
+      "current_canonical_reference": "canonical/current/ (Garden v15.5 / GSL v45.1)",
+      "admission_effect": "NONE"
     }
   ]
 }
