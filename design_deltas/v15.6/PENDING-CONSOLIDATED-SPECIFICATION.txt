@@ -1268,7 +1268,7 @@ tests:
 EXT-1 — 1. Normalize emergency source-independence semantics
 Owner: Technical / existing Emergency, Consent, Event and review owners
 Disposition: INCORPORATE_CANDIDATE
-Source: ankitdcx/garden-swarm:NEXT_RELEASE_HARDENING.md#1. Normalize emergency source-independence semantics
+Source: legacy external source:NEXT_RELEASE_HARDENING.md#1. Normalize emergency source-independence semantics
 complete_specification: 1. Normalize emergency source-independence semantics
 
 ### Problem
@@ -1301,7 +1301,7 @@ Additional hardening:
 EXT-2 — 2. Typed consent-validity assessment
 Owner: Technical / existing Emergency, Consent, Event and review owners
 Disposition: INCORPORATE_CANDIDATE
-Source: ankitdcx/garden-swarm:NEXT_RELEASE_HARDENING.md#2. Typed consent-validity assessment
+Source: legacy external source:NEXT_RELEASE_HARDENING.md#2. Typed consent-validity assessment
 complete_specification: 2. Typed consent-validity assessment
 
 ### Problem
@@ -1354,7 +1354,7 @@ Suggested semantic fields:
 EXT-3 — 3. External-review regression bundle
 Owner: Technical / existing Emergency, Consent, Event and review owners
 Disposition: INCORPORATE_CANDIDATE
-Source: ankitdcx/garden-swarm:NEXT_RELEASE_HARDENING.md#3. External-review regression bundle
+Source: legacy external source:NEXT_RELEASE_HARDENING.md#3. External-review regression bundle
 complete_specification: 3. External-review regression bundle
 
 Preserve these scenarios even when the current design already contains the intended safeguard:
@@ -1374,7 +1374,7 @@ A successor should add these as executable tests where the runtime/security harn
 EXT-5 — 5. Mechanically derived ReviewPacket and reviewer-ordering hardening
 Owner: Technical / existing Emergency, Consent, Event and review owners
 Disposition: INCORPORATE_CANDIDATE
-Source: ankitdcx/garden-swarm:NEXT_RELEASE_HARDENING.md#5. Mechanically derived ReviewPacket and reviewer-ordering hardening
+Source: legacy external source:NEXT_RELEASE_HARDENING.md#5. Mechanically derived ReviewPacket and reviewer-ordering hardening
 complete_specification: 5. Mechanically derived ReviewPacket and reviewer-ordering hardening
 
 Status: **CANDIDATE / NOT RATIFIED / NEEDS REQUIRED REVIEW**
@@ -1389,7 +1389,7 @@ This is review-assurance infrastructure only. Recording it here does not ratify 
 
 ### Candidate owner/bindings
 
-Prefer a review-orchestration/evidence owner in `garden-swarm`; do not create a new authority source.
+Prefer a review-orchestration/evidence owner in `legacy external workspace`; do not create a new authority source.
 
 A packet should bind, at minimum:
 
@@ -1985,15 +1985,15 @@ Use these existing issue identities; do not duplicate them or treat an issue's c
 
 | Priority | Work and existing identity | Next action and closure evidence |
 | --- | --- | --- |
-| P0 | Packet/state/evidence control plane — swarm [#148](https://github.com/ankitdcx/garden-swarm/issues/148), packet sub-obligation [#111](https://github.com/ankitdcx/garden-swarm/issues/111) | Complete the smallest executable packet builder/validator and durable instance ledger under process 1.4. Salvage compatible candidate code without installing a second state machine. Demonstrate one packet hash through blind review, cross-examination, repair/NO_CHANGE and post-fix verification. No qualification from gate-name strings alone. |
-| P0 | Paid budget accounting — swarm [#75](https://github.com/ankitdcx/garden-swarm/issues/75) | Durable atomic reservations across runs and all callers, reconcile ambiguous charges, enforce routine/escalation boundaries and the $1/day cap before calls. An hourly cap of $0.05 would permit $1.20 over 24 invocations without the daily guard. Current finite-number repair is only a sub-fix. |
-| P0 | Protected verification and privacy — swarm [#66](https://github.com/ankitdcx/garden-swarm/issues/66), [#78](https://github.com/ankitdcx/garden-swarm/issues/78), [#77](https://github.com/ankitdcx/garden-swarm/issues/77) | Implement externally bound authority/approval evidence, privacy routing, semantic-impact and Challenger enforcement. Existing health records block dependent protected actions; keep those blocks until independent verification exists. |
-| P1 | Reviewer yield/quorum — swarm [#138](https://github.com/ankitdcx/garden-swarm/issues/138), [#114](https://github.com/ankitdcx/garden-swarm/issues/114), [#113](https://github.com/ankitdcx/garden-swarm/issues/113) | Use one missing qualified review at a time and persist progress. Stop provider work on transient failures; measure qualified findings, not token use or successful HTTP responses. Verify a current cycle before claiming recovery. |
-| P1 | Canonical coverage — swarm [#137](https://github.com/ankitdcx/garden-swarm/issues/137) | Inventory tooling is now in private main: 266 units (251 A, 14 B, 1 C), zero qualified in its bootstrap output. Persist and update genuine review coverage instead of repeatedly resetting an inventory. Triage 66 units with parser-unresolved references; that count alone is not proof of 66 canonical defects. |
-| P1 | Evidence retention and source binding — swarm [#65](https://github.com/ankitdcx/garden-swarm/issues/65), [#110](https://github.com/ankitdcx/garden-swarm/issues/110), main [#41](https://github.com/ankitdcx/garden-main/issues/41) | Consume immutable CI artifacts before their 30-day retention expires; publish selected receipts through the governed path, revalidate exact source/commit and verify old receipt repairs independently. |
+| P0 | Packet/state/evidence control plane — legacy work item [#148], packet sub-obligation [#111] | Complete the smallest executable packet builder/validator and durable instance ledger under process 1.4. Salvage compatible candidate code without installing a second state machine. Demonstrate one packet hash through blind review, cross-examination, repair/NO_CHANGE and post-fix verification. No qualification from gate-name strings alone. |
+| P0 | Paid budget accounting — legacy work item [#75] | Durable atomic reservations across runs and all callers, reconcile ambiguous charges, enforce routine/escalation boundaries and the $1/day cap before calls. An hourly cap of $0.05 would permit $1.20 over 24 invocations without the daily guard. Current finite-number repair is only a sub-fix. |
+| P0 | Protected verification and privacy — legacy work item [#66], [#78], [#77] | Implement externally bound authority/approval evidence, privacy routing, semantic-impact and Challenger enforcement. Existing health records block dependent protected actions; keep those blocks until independent verification exists. |
+| P1 | Reviewer yield/quorum — legacy work item [#138], [#114], [#113] | Use one missing qualified review at a time and persist progress. Stop provider work on transient failures; measure qualified findings, not token use or successful HTTP responses. Verify a current cycle before claiming recovery. |
+| P1 | Canonical coverage — legacy work item [#137] | Inventory tooling is now in private main: 266 units (251 A, 14 B, 1 C), zero qualified in its bootstrap output. Persist and update genuine review coverage instead of repeatedly resetting an inventory. Triage 66 units with parser-unresolved references; that count alone is not proof of 66 canonical defects. |
+| P1 | Evidence retention and source binding — legacy work item [#65], [#110], main [#41](https://github.com/ankitdcx/garden-main/issues/41) | Consume immutable CI artifacts before their 30-day retention expires; publish selected receipts through the governed path, revalidate exact source/commit and verify old receipt repairs independently. |
 | P1 | Scheduler health/closure — existing #148 workstream | Wire recovery to the actual Coordinator and durable ledger; record next action, attempts, due-obligation timestamps and verified closures. The initial lookup showed one enabled Coordinator; the final lookup showed it paused by a separate update at 2026-09-15T04:38:08Z. No last/next-run timestamps were available. All Garden schedules are now paused, so automatic continuation must not be promised until the newer pause is explicitly resolved. Keep health's protected-action restrictions; replace its stale lane inventory only with a fresh audited receipt. |
 | P1 | Canonical successor — main WP-005/WP-006 and `design_deltas/v15.6/PENDING_CANDIDATE_INDEX.json` | Reconcile admitted deltas, full affected-source closure, dependencies, retention and actual five-file composition. The inspected default branch contains a delta pool, not a complete promoted v15.6. Do not bump versions for audit/docs-only changes. |
-| P2 | Remaining executable core — main [#1](https://github.com/ankitdcx/garden-main/issues/1)–[#4](https://github.com/ankitdcx/garden-main/issues/4); swarm [#83](https://github.com/ankitdcx/garden-swarm/issues/83), [#67](https://github.com/ankitdcx/garden-swarm/issues/67), [#68](https://github.com/ankitdcx/garden-swarm/issues/68) | Continue bounded kernel, extractor, KR and verifier work; stabilize Python contracts before cross-language work and retire compatibility adapters only with evidence. |
+| P2 | Remaining executable core — main [#1](https://github.com/ankitdcx/garden-main/issues/1)–[#4](https://github.com/ankitdcx/garden-main/issues/4); swarm [#83], [#67], [#68] | Continue bounded kernel, extractor, KR and verifier work; stabilize Python contracts before cross-language work and retire compatibility adapters only with evidence. |
 | P2 | Historical proposals | UCAS, justice, FDE/CFBR, KR-CEA, Kindergarten, reasoning strategies and other residuals are already in the September 14 candidate ledgers. Compare/reuse those entries rather than producing another speculative patch collection. Full later-chat recovery remains open. |
 | P2 | External evaluation/discovery | Finish independent live MCP/A2A evidence and human adversarial evaluation: swarm #7/#9/#23. Keep research #140 and main #54/#55 behind higher-priority execution/repair. No unrequested outreach is sent. |
 
@@ -2036,7 +2036,7 @@ Source: https://github.com/ankitdcx/garden-main/issues/54
     "observed_gap": "No exact current canonical/public implementation match was found for a deployment invariant/test that treats every shared mutable service reachable by separate tenants/sessions as a potential covert channel and proves cross-tenant write->read non-interference plus runtime denial of management/annotation write APIs."
   },
   "observed_repo_shas": {
-    "ankitdcx/garden-swarm": "2aebb9aa92f200149869179092d454ab90c5593c",
+    "ankitdcx/legacy external workspace": "2aebb9aa92f200149869179092d454ab90c5593c",
     "ankitdcx/garden-main": "9ce9e1179aa41d6ab26be0ee7079668c6719cc75"
   },
   "design_epoch": {
@@ -2119,7 +2119,7 @@ Source: https://github.com/ankitdcx/garden-main/issues/55
     "observed_gap": "Current repository searches found no explicit equivariance, opaque-identifier renaming, or temporal-logic verification contract/test corresponding to this property. This is therefore an alternative proof/testing technique candidate, not evidence that Garden's current identity model is defective."
   },
   "observed_repo_shas": {
-    "ankitdcx/garden-swarm": "2aebb9aa92f200149869179092d454ab90c5593c",
+    "ankitdcx/legacy external workspace": "2aebb9aa92f200149869179092d454ab90c5593c",
     "ankitdcx/garden-main": "9ce9e1179aa41d6ab26be0ee7079668c6719cc75"
   },
   "design_epoch": {
