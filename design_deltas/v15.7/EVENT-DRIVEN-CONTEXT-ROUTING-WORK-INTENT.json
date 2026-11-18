@@ -6,7 +6,7 @@
   "status": "NON_CANONICAL_CANDIDATE_IMPLEMENTATION_AND_QUALIFICATION_PENDING",
   "source": "design_deltas/v15.7/EVENT-DRIVEN-CONTEXT-ROUTING-CANDIDATE.md",
   "intent": "Bind existing completion-driven execution, AttestedObservation/Evidence semantics and GSL-KR into provenance-preserving event-driven context routing; qualify selective frontier-model escalation without creating a new top-level engine or authority source.",
-  "implementation_target": "ankitdcx/garden-swarm public OpenRouter review adapter",
+  "implementation_target": "ankitdcx/legacy external workspace public OpenRouter review adapter",
   "required_checks": [
     "materiality gate is reason-coded and fail-closed",
     "raw/evidence retention is not replaced by compression",
