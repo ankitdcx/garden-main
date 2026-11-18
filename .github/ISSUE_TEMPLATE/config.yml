@@ -1,5 +1,0 @@
-blank_issues_enabled: true
-contact_links:
-  - name: Read the Garden contribution guide
-    url: https://github.com/ankitdcx/garden-main/blob/main/CONTRIBUTING.md
-    about: Check contribution requirements and source-authority boundaries before opening an issue.

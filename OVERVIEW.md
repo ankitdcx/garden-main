@@ -50,12 +50,10 @@ The source manifest records each file's name, byte count and SHA-256 hash, toget
 A practical first reading sequence is:
 
 1. Read this overview to understand the project boundary.
-2. Read [ARCHITECTURE.md](ARCHITECTURE.md) to understand the repository's authority model.
-3. Use [GLOSSARY.md](GLOSSARY.md) when unfamiliar terms appear.
-4. Read the canonical User and System sources for the human-facing and system-level design.
-5. Consult the Technical and Annexure sources for detailed contracts, structures and supporting material.
-6. Consult Theories for theory and reference-architecture material.
-7. Read candidates and deltas only after understanding the canonical baseline; keep their noncanonical status visible.
+2. Read the canonical User and System sources for the human-facing and system-level design.
+3. Consult the Technical and Annexure sources for detailed contracts, structures and supporting material.
+4. Consult Theories for theory and reference-architecture material.
+5. Read candidates and deltas only after understanding the canonical baseline; keep their noncanonical status visible.
 
 The five canonical documents are large. Read them by their own headings and stable identifiers rather than treating the repository as a single linear book.
 
@@ -71,4 +69,4 @@ The five canonical documents are large. Read them by their own headings and stab
 
 The presence of a specification does not prove that its requirements are complete, mutually consistent, formally proved, implemented or empirically satisfied. A successful hash check proves byte identity only. A candidate is not canonical because it is newer, more detailed or has received positive reviews.
 
-For the version lineage, see [VERSION_HISTORY.md](VERSION_HISTORY.md). To propose a correction or extension, see [CONTRIBUTING.md](CONTRIBUTING.md).
+For the version lineage, see [VERSION_HISTORY.md](VERSION_HISTORY.md).

@@ -17,11 +17,8 @@ Later version numbers, candidate folders, generated documents, reviews or passin
 | I want to… | Start with |
 |---|---|
 | Understand Garden without reading the full specification | [Overview](OVERVIEW.md) |
-| See how the repository and version authority work | [Architecture and repository model](ARCHITECTURE.md) |
-| Look up Garden terminology | [Glossary](GLOSSARY.md) |
 | Read the current canonical source | [Canonical source guide](canonical/current/README.md) |
 | Compare releases and historical work | [Version history](VERSION_HISTORY.md) |
-| Propose a change or report a problem | [Contributing](CONTRIBUTING.md) |
 | Explore incremental proposals and research | [Design deltas](design_deltas/README.md) |
 
 ## Version map
@@ -54,5 +51,3 @@ For the complete lineage and status distinctions, see [VERSION_HISTORY.md](VERSI
 - A hash verifies file identity, not semantic completeness or correctness.
 - Specification, formal proof, implementation, empirical validation, certification and deployment are distinct claims.
 - A proposal, review, model response or local test cannot admit itself into canonical status.
-
-See [ARCHITECTURE.md](ARCHITECTURE.md) for the repository model and [CONTRIBUTING.md](CONTRIBUTING.md) for the protected proposal path.
