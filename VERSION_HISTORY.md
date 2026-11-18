@@ -42,7 +42,6 @@ Garden v15.5 / GSL v45.1 remains canonical unless a successor is separately revi
 ## Related navigation
 
 - [Overview](OVERVIEW.md)
-- [Architecture and authority model](ARCHITECTURE.md)
 - [Design-delta index](design_deltas/README.md)
 - [15.x noncanonical consolidation index](design_deltas/GARDEN_15X_NONCANONICAL_CONSOLIDATION_INDEX.md)
 - [Future v16 noncanonical design note](design_deltas/FUTURE_V16_NONCANONICAL_DESIGN_NOTE.md)
