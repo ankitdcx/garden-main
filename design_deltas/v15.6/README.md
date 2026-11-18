@@ -1,14 +1,23 @@
 # v15.6 historical candidate index
 
-**Not canonical.** This folder includes independent, sometimes superseding **candidate revisions**, not a single admitted release.
+**Noncanonical.** This folder contains independent candidate proposals, versioned process revisions, historical recovery records and reconciliation material. It is not one admitted release.
 
-- Start with [pending candidate index](PENDING_CANDIDATE_INDEX.json) and [pending reconciliation](PENDING-RECONCILIATION-2026-09-15.json) for source-qualified dispositions.
-- GSL gap closure, constitutional-event hardening, GAIA naming, historical chat recovery, multi-agent archive recovery and KR-CEA are independent delta sets.
-- The multiple SUCCESSOR-PROCESS-HARDENING and GardenCanonicalUpdateProcess version files are **versioned review history**; do not assume the newest filename alone is admitted or earlier revisions deleted.
-- [Engineering hardening](ENGINEERING-HARDENING-SPECIFICATION.txt) and [pending consolidated specification](PENDING-CONSOLIDATED-SPECIFICATION.txt) are large historical source candidates; their detailed rules are not replaced by this guide.
-- Later v15.7–v15.11 may incorporate, extend or conflict with these. **No blanket claim of absorption or canonical promotion** is established by the folder contents.
-- [CEA candidate delta](DELTASET-2026-09-14-KR-CEA.json) is the historical precursor of [V1511-KR-001](../v15.11/cea/README.md).
+## Start here
 
-## 2026-10-09 cleanup review
+- [Candidate index and reconciliation register](V15.6_CANDIDATE_INDEX_AND_RECONCILIATION.md) — complete tracking index, source-qualified dispositions, original source hashes, reconciliation records and qualification limits.
+- [Design delta and catalogue records](V15.6_DESIGN_DELTA_AND_CATALOGUE_RECORDS.md) — GSL gap closure, constitutional-event hardening, GAIA naming, historical chat recovery, KR-CEA, multi-agent archive recovery and catalogue additions.
+- [Successor-process hardening revision history](V15.6_SUCCESSOR_PROCESS_HARDENING_HISTORY.md) — base plus v1.1–v1.4; all revisions retained separately.
+- [Canonical update process candidates](V15.6_CANONICAL_UPDATE_PROCESS_HISTORY.md) — process v1.0–v1.4 and the bootstrap simplification receipt.
+- [Engineering hardening and executable qualification specification](V15.6_ENGINEERING_HARDENING_SPECIFICATION.md) — all 20 patches and 38 work-register items, including owner bindings, invariants, tests and review limits.
+- [Original retention audit (2026-10-09)](RETENTION_AUDIT_2026-10-09.md) — historical audit explaining why latest-version-only deletion was unsafe.
+- [Consolidation audit (2026-11-18)](CONSOLIDATION_AUDIT_2026-11-18.md) — source-to-document mapping and original Git blob hashes.
+- [Pending consolidated specification](PENDING-CONSOLIDATED-SPECIFICATION.txt) and [engineering hardening specification](ENGINEERING-HARDENING-SPECIFICATION.txt) remain separate substantive text sources; they are not replaced by this navigation page.
 
-[Retention audit](RETENTION_AUDIT_2026-10-09.md): process v1.0–v1.3 contain distinct fields absent from v1.4; **do not collapse or delete them** without full semantic mapping. The large engineering/reconciliation files retain distinct source roles and are not certified redundant. [Historical index note](HISTORICAL_INDEX_STATUS.md) distinguishes tracking from active candidate status. No source bytes were deleted.
+## Reading and authority rules
+
+- All material here remains candidate, historical or tracking material unless a separate admission record establishes otherwise.
+- Process versions v1.0–v1.4 are retained as distinct revisions. Do not infer that v1.4 reproduces every earlier field or requirement.
+- Reconciliation means content disposition only; it does not mean formal admission.
+- The consolidation changes document format and navigation only. It does not admit proposals, reconcile semantic conflicts, alter canonical v15.5, or promote v15.6.
+- The old JSON paths and exact source blob identities are recorded in the consolidation audit. Their complete structured contents are represented in the linked Markdown records.
+- Later v15.7–v15.11 work may incorporate, extend or conflict with these candidates. No blanket absorption or supersession claim is made.
