@@ -11,7 +11,7 @@ This repository intentionally contains **Garden design source and successor desi
 Current structure:
 
 - [canonical/current](canonical/current/) — **Garden v15.5 / GSL v45.1**, the only canonical five-file source.
-- [history/2026-08-21](history/2026-08-21/) — preserved August 21 standalone 50-module master, explicitly historical and noncanonical.
+- [history/2026-08-21](history/2026-08-21/) — archived text rendition of the August 21 standalone 50-module master, explicitly historical and noncanonical.
 - [canonical/candidates/v15.6](canonical/candidates/v15.6/) — retained full five-file v15.6 candidate.
 - [canonical/candidates/v15.7](canonical/candidates/v15.7/) — retained full five-file v15.7 candidate.
 - [design_deltas/README.md](design_deltas/README.md) — full navigation for v15.6–v15.11, recovery ledgers, ownership and future-v16 notes.
