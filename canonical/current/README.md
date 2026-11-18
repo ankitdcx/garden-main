@@ -1,9 +1,43 @@
 # Current Garden source identity
 
-Current canonical source: **Garden v15.5 / GSL v45.1, 2026-09-12**.
+**Current canonical source: Garden v15.5 / GSL v45.1, dated 2026-09-12.**
 
-`SOURCE_MANIFEST.json` pins the exact names, sizes and SHA-256 hashes of the five full source texts. Those five files are the controlling canonical design artifacts for this repository and must match the manifest before any source-driven successor work or admission claim.
+This directory contains the only canonical source release in this repository. The five full source texts are:
 
-Later material under `canonical/candidates/` and `design_deltas/` is noncanonical unless separately admitted.
+| Role | File |
+|---|---|
+| User | [Garden_User_v15.5_FULL_2026-09-12.txt](Garden_User_v15.5_FULL_2026-09-12.txt) |
+| System | [Garden_System_v15.5_FULL_2026-09-12.txt](Garden_System_v15.5_FULL_2026-09-12.txt) |
+| Technical | [Garden_Technical_v15.5_FULL_2026-09-12.txt](Garden_Technical_v15.5_FULL_2026-09-12.txt) |
+| Annexure | [Garden_Annexure_v15.5_FULL_2026-09-12.txt](Garden_Annexure_v15.5_FULL_2026-09-12.txt) |
+| Theories | [Garden_Theories_v15.5_FULL_2026-09-12.txt](Garden_Theories_v15.5_FULL_2026-09-12.txt) |
 
-Source-identity verification does not by itself imply proof, implementation, empirical validation, certification or deployment status.
+## How to read the five files
+
+- **User** — human-facing design, user experience, user rights and interaction expectations.
+- **System** — system-level structure, components and flows.
+- **Technical** — detailed technical design and operational contracts.
+- **Annexure** — supporting clauses, registers, detailed material and cross-references.
+- **Theories** — theory and reference-architecture material.
+
+These role descriptions are reading aids. Consult the documents themselves for their full scope and controlling definitions.
+
+## Verify source identity
+
+[`SOURCE_MANIFEST.json`](SOURCE_MANIFEST.json) pins the exact file names, byte counts and SHA-256 hashes, and records the source-root algorithm and digest.
+
+From this directory, run:
+
+```sh
+sha256sum Garden_User_v15.5_FULL_2026-09-12.txt \
+  Garden_System_v15.5_FULL_2026-09-12.txt \
+  Garden_Technical_v15.5_FULL_2026-09-12.txt \
+  Garden_Annexure_v15.5_FULL_2026-09-12.txt \
+  Garden_Theories_v15.5_FULL_2026-09-12.txt
+```
+
+Compare each digest and byte count with the corresponding role in the manifest. A matching set verifies file identity against that manifest. It does **not** establish semantic completeness, consistency, proof, implementation, empirical validation, certification or deployment.
+
+## Authority boundary
+
+Later material under [`canonical/candidates/`](../candidates/) and [`design_deltas/`](../../design_deltas/) is noncanonical unless separately admitted. Do not replace these files in place as part of candidate work. Preserve this source set as the immutable predecessor baseline.

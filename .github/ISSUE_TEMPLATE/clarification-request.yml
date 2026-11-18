@@ -1,0 +1,43 @@
+name: Clarification request
+description: Ask for clarification of existing Garden text without proposing a semantic change.
+title: "[Clarification]: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this form when existing text is ambiguous or difficult to interpret. If you want to change the design, use Specification proposal.
+  - type: input
+    id: source_baseline
+    attributes:
+      label: Source baseline
+      description: State the exact release, source root or commit.
+    validations:
+      required: true
+  - type: input
+    id: location
+    attributes:
+      label: Source location
+      description: File path and heading, stable anchor or identifier.
+    validations:
+      required: true
+  - type: textarea
+    id: ambiguous_text
+    attributes:
+      label: Text needing clarification
+      description: Quote only the minimum necessary text.
+    validations:
+      required: true
+  - type: textarea
+    id: interpretations
+    attributes:
+      label: Possible interpretations
+      description: Explain what is unclear and list plausible readings.
+    validations:
+      required: true
+  - type: textarea
+    id: question
+    attributes:
+      label: Specific question
+      description: What needs to be clarified?
+    validations:
+      required: true
