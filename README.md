@@ -1,45 +1,58 @@
 # Garden Main
 
-Garden's canonical design source, successor candidates, technical proposals, research and historical records.
+Garden is an evolving design specification for a governed AGI system. It describes how an AI system should represent the world, reason about information, make decisions, act, learn and remain accountable to human interests.
 
-**Current authority:** [Garden v15.5 / GSL v45.1](canonical/current/README.md). This is the only canonical release in this repository.
+The repository contains **design artifacts and research records**, not a claim that a complete AGI system has been implemented or validated. Its documents are intended for researchers, system designers, implementers, reviewers and anyone who wants to inspect how the design is structured.
 
-**Use terms:** [LICENSE](LICENSE).
+## Current authority
 
-## Design and version map
+> **Canonical release: Garden v15.5 / GSL v45.1 (2026-09-12)**
 
-| Version / area | Repository location | What it contains | Status |
-|---|---|---|---|
-| **v15.5 / GSL v45.1** | [`canonical/current/`](canonical/current/) | Five controlling source texts: User, System, Technical, Annexure and Theories; plus the source manifest. GSL baseline: 10 Objects, 24 Relations and 7 Forms. | **Canonical current** |
-| v15.6 | [Full candidate](canonical/candidates/v15.6/README.md) · [supporting deltas](design_deltas/v15.6/) | Complete five-file successor working candidate, plus separate engineering, governance, GSL, process and recovery materials. | Noncanonical candidate |
-| v15.7 | [Full candidate](canonical/candidates/v15.7/README.md) · [supporting deltas](design_deltas/v15.7/) | Complete five-file successor working candidate; cognitive qualification, TRACE, design closure and additional human/evidence/privacy proposals. | Noncanonical candidate |
-| v15.8 | [`design_deltas/v15.8/`](design_deltas/v15.8/) | Source-labelled additions and recovery material from the v15.8 working line. | Historical/noncanonical deltas |
-| v15.9 | [`design_deltas/v15.9/`](design_deltas/v15.9/) | P001–P037 review material and selected source-level closure clauses. | Historical/noncanonical deltas |
-| v15.9.1 | [`design_deltas/v15.9.1/`](design_deltas/v15.9.1/) | GCSC, SAL and SAC source extracts and detailed semantic patches. | Historical/noncanonical deltas |
-| v15.10 | [`design_deltas/v15.10/`](design_deltas/v15.10/README.md) | Generative design and abstraction work: GCSC coverage, semantic-kernel/reconstruction ideas, theory discovery, recursive compression, Tree Core, retention and scientific research. | Noncanonical working design/research |
-| v15.11 | [`design_deltas/v15.11/`](design_deltas/v15.11/) | Focused additive candidates, including RCC, REP, VEI, ERC, SHR, QSE/Rev 2, DSC, CEA, MCC, USM and transition/responsibility work. | Noncanonical candidate set |
-| Future v16 | [Design path](design_deltas/FUTURE_V16_NONCANONICAL_DESIGN_NOTE.md) | Evaluation and reconstruction plan for a possible successor; no v16 release is created by this note. | Experimental planning only |
-| Historical archive | [`history/`](history/) | Preserved standalone 50-module design master and its historical interpretation notice. | Historical; not current authority |
+The only canonical release in this repository is the five-file source in [`canonical/current/`](canonical/current/). Its exact file identities are pinned by [`SOURCE_MANIFEST.json`](canonical/current/SOURCE_MANIFEST.json).
 
-**Important distinction:** `canonical/candidates/` contains complete five-file successor candidates (currently v15.6 and v15.7). `design_deltas/` contains incremental proposals, source extracts, technical/research records and recovery material. These are different kinds of artifacts, not duplicate release folders.
+Later version numbers, candidate folders, generated documents, reviews or passing tests do not change canonical status. A successor requires separate review and admission.
+
+## Start here
+
+| I want to… | Start with |
+|---|---|
+| Understand Garden without reading the full specification | [Overview](OVERVIEW.md) |
+| See how the repository and version authority work | [Architecture and repository model](ARCHITECTURE.md) |
+| Look up Garden terminology | [Glossary](GLOSSARY.md) |
+| Read the current canonical source | [Canonical source guide](canonical/current/README.md) |
+| Compare releases and historical work | [Version history](VERSION_HISTORY.md) |
+| Propose a change or report a problem | [Contributing](CONTRIBUTING.md) |
+| Explore incremental proposals and research | [Design deltas](design_deltas/README.md) |
+
+## Version map
+
+| Material | Location | Status |
+|---|---|---|
+| **v15.5 / GSL v45.1** | [Canonical source](canonical/current/) | **Canonical** |
+| v15.6 | [Full candidate](canonical/candidates/v15.6/README.md) · [supporting deltas](design_deltas/v15.6/) | Noncanonical candidate |
+| v15.7 | [Full candidate](canonical/candidates/v15.7/README.md) · [supporting deltas](design_deltas/v15.7/) | Noncanonical candidate |
+| v15.8–v15.9.1 | [Versioned deltas](design_deltas/README.md) | Historical/noncanonical |
+| v15.10 | [Working design and research](design_deltas/v15.10/README.md) | Noncanonical working design |
+| v15.11 | [Candidate set](design_deltas/v15.11/CANDIDATE_RETENTION_LEDGER.md) | Noncanonical candidate work |
+| Future v16 | [Evaluation note](design_deltas/FUTURE_V16_NONCANONICAL_DESIGN_NOTE.md) | Planning only |
+| Earlier design master | [Historical archive](history/README.md) | Historical; not current authority |
+
+For the complete lineage and status distinctions, see [VERSION_HISTORY.md](VERSION_HISTORY.md).
 
 ## Repository map
 
-| Path | Purpose |
-|---|---|
-| [`canonical/current/`](canonical/current/) | Sole canonical source; five source texts and `SOURCE_MANIFEST.json`. |
-| [`canonical/candidates/`](canonical/candidates/README.md) | Complete, noncanonical successor working candidates. |
-| [`design_deltas/`](design_deltas/README.md) | Versioned incremental candidates, technical proposals, research, recovery records and navigation indexes. |
-| [`history/`](history/) | Historical source archive; retained for provenance and comparison, not authority. |
-| [`LICENSE`](LICENSE) | Published use terms. |
+- [`canonical/current/`](canonical/current/) — the five controlling v15.5 source texts and their manifest.
+- [`canonical/candidates/`](canonical/candidates/) — complete five-file successor working candidates.
+- [`design_deltas/`](design_deltas/) — incremental proposals, source extracts, research, recovery records and indexes.
+- [`history/`](history/) — preserved historical material for provenance and comparison.
+- [`LICENSE`](LICENSE) — published use terms.
 
-## Reading and authority
+## Authority and evidence boundaries
 
-- Start with [the current source guide](canonical/current/README.md) for the controlling baseline.
-- Use the [15.x consolidation index](design_deltas/GARDEN_15X_NONCANONICAL_CONSOLIDATION_INDEX.md) to navigate candidate lineage and individual proposals.
-- Use the [future-v16 note](design_deltas/FUTURE_V16_NONCANONICAL_DESIGN_NOTE.md) only as an evaluation plan.
-- Use the [scientific research register](design_deltas/v15.10/GARDEN_SCIENCE_ALL_2026-10-09.txt) for the v15.10 research corpus.
+- Canonical source, candidate source, incremental delta and historical archive are different artifact classes.
+- A later version label does not supersede an earlier canonical source.
+- A hash verifies file identity, not semantic completeness or correctness.
+- Specification, formal proof, implementation, empirical validation, certification and deployment are distinct claims.
+- A proposal, review, model response or local test cannot admit itself into canonical status.
 
-A later version number, folder name, generated output, model agreement or passing local test does not promote a candidate. v15.5 / GSL v45.1 remains canonical unless a successor is separately reviewed and admitted.
-
-**Evidence boundary:** specification, formal proof, implementation, empirical validation and external certification are distinct. Source hashes verify file identity, not semantic completeness or correctness.
+See [ARCHITECTURE.md](ARCHITECTURE.md) for the repository model and [CONTRIBUTING.md](CONTRIBUTING.md) for the protected proposal path.
