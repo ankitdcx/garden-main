@@ -1,108 +1,22 @@
-# Garden Main — Design Archive and Candidate Corpus
+# Garden Main
 
-**Canonical use terms — Garden rights sale.** The canonical [LICENSE](LICENSE) records the owner's terms for a complete transfer of all Garden rights the owner legally owns and can transfer, for consideration that delivers **₹20 crore net after Indian taxes**. The first-completed-purchaser criteria and closing requirements are specified in the LICENSE. It is not an executed assignment: transfer occurs only after the owner signs the definitive agreement and all required closing steps are complete.
+Garden design source, noncanonical candidates and research records.
 
-**Navigation:** [Candidate release guide](canonical/candidates/README.md) · [Scientific research register](design_deltas/v15.10/GARDEN_SCIENCE_ALL_2026-10-09.txt). These are documentation and research records, not canonical admission or runtime automation.
+**Canonical source:** [Garden v15.5 / GSL v45.1](canonical/current/README.md), held in [canonical/current](canonical/current/). Its five source files and [SOURCE_MANIFEST.json](canonical/current/SOURCE_MANIFEST.json) define the current baseline.
 
-## Repository purpose
+**Use terms:** [LICENSE](LICENSE).
 
-This repository intentionally contains **Garden design source and successor design candidates**. It is not the former runtime, deployment, review-automation or work-package workspace.
+## Repository map
 
-Current structure:
+- [canonical/current](canonical/current/) — the only canonical source.
+- [canonical/candidates](canonical/candidates/README.md) — complete, noncanonical successor candidates.
+- [design_deltas](design_deltas/README.md) — incremental candidates, technical proposals, recovery material and research.
+- [history](history/) — archived standalone 50-module master; historical and noncanonical.
 
-- [canonical/current](canonical/current/) — **Garden v15.5 / GSL v45.1**, the only canonical five-file source.
-- [history](history/) — archived text rendition of the August 21 standalone 50-module master, explicitly historical and noncanonical.
-- [canonical/candidates/v15.6](canonical/candidates/v15.6/) — retained full five-file v15.6 candidate.
-- [canonical/candidates/v15.7](canonical/candidates/v15.7/) — retained full five-file v15.7 candidate.
-- [design_deltas/README.md](design_deltas/README.md) — full navigation for v15.6–v15.11, recovery ledgers, ownership and future-v16 notes.
-- [design_deltas/v15.6](design_deltas/v15.6/) and [design_deltas/v15.7](design_deltas/v15.7/) — supporting candidate/delta material.
-- [design_deltas/v15.8](design_deltas/v15.8/), [v15.9](design_deltas/v15.9/) and [v15.9.1](design_deltas/v15.9.1/) — **source-extracted incremental recovery**, not full five-file releases; exact no-loss comparison remains open.
-- [design_deltas/v15.10](design_deltas/v15.10/) — later abstraction/GCSC/Tree-Core working design.
-- [design_deltas/v15.11](design_deltas/v15.11/) — focused noncanonical successor candidates and recovered technical directions.
-- [15.x noncanonical consolidation index](design_deltas/GARDEN_15X_NONCANONICAL_CONSOLIDATION_INDEX.md) and [future-v16 design note](design_deltas/FUTURE_V16_NONCANONICAL_DESIGN_NOTE.md) — navigation and evaluation plans, **not** releases.
-- [USM-001 — Universal Situation Mapping](design_deltas/v15.11/GARDEN_USM_001_CANDIDATE.md) — source-bound fact ledger and deterministic GSL compiler; noncanonical.
-- [MCC-001 — Material Context Closure](design_deltas/v15.11/GARDEN_MCC_001_CANDIDATE.md) — bounded nested-context closure and anti-obstruction; noncanonical.
-- [LICENSE](LICENSE) — current use terms.
+## Current design status
 
-## Status
+v15.5 / GSL v45.1 remains canonical. Later versions and proposals are candidates or research, not admitted releases. A newer version number, generated output, model agreement or passing local test does not by itself change that status.
 
-| Version | Repository status |
-| --- | --- |
-| v15.5 / GSL v45.1 | **CANONICAL** |
-| v15.6 | retained full candidate, noncanonical |
-| v15.7 | retained full candidate, noncanonical |
-| v15.8 | historical full candidate exists outside this repository; retained added-clause extracts are incomplete comparison |
-| v15.9 | historical reviewed full candidate exists outside this repository; P001–P037 consolidation and selected closure extracts retained |
-| v15.9.1 | historical complete GCSC source lineage; retained earlier-edition clause extracts, COMPLETE suffix not fully recovered |
-| v15.10 | working-design / abstraction lineage, noncanonical |
-| v15.11 | additive candidate set, noncanonical |
+For detailed candidate navigation, see the [15.x consolidation index](design_deltas/GARDEN_15X_NONCANONICAL_CONSOLIDATION_INDEX.md) and [future-v16 design note](design_deltas/FUTURE_V16_NONCANONICAL_DESIGN_NOTE.md). The [scientific research register](design_deltas/v15.10/GARDEN_SCIENCE_ALL_2026-10-09.txt) tracks research directions.
 
-No later candidate becomes canonical merely by being present here, generated by a model, supported by model agreement, passing a local test, or appearing in a later-numbered directory.
-
-## v15.10 — abstraction and generative coverage
-
-v15.10 moves Garden toward a compact typed/generative representation while preserving predecessor meaning.
-
-The retained technical material includes:
-
-- [full compact v15.10 Technical delta](design_deltas/v15.10/GARDEN_TECHNICAL_v15.10_FULL_DELTA.txt)
-- [abstraction/GCSC delta](design_deltas/v15.10/V15_10_ABSTRACTION_GCSC_DELTA.md)
-- [GSL combinatorial semantic coverage](design_deltas/v15.10/GSL_COMBINATORIAL_SEMANTIC_COVERAGE_v0.1.md)
-- [GCSC relation-signature candidate](design_deltas/v15.10/GCSC_RELATION_SIGNATURE_CANDIDATE.json)
-- [Tree Core v0.8.1](design_deltas/v15.10/TREE_CORE_v0.8.1_2026-09-23.txt)
-- [15.x retention-recovery addendum](design_deltas/v15.10/V15X_RETENTION_RECOVERY_ADDENDUM_2026-09-20.md)
-- [generative semantic kernel / future abstraction candidate](design_deltas/v15.10/GENERATIVE_SEMANTIC_KERNEL_AND_DERIVED_GARDEN_CANDIDATE.md) — tests whether a frozen explicit kernel can reconstruct held-out Garden semantics; no explicit item is retired without passing the candidate's reconstruction/compression checklist.
-- [Invariant-Driven Theory Discovery (IDTD-001)](design_deltas/v15.10/INVARIANT_DRIVEN_THEORY_DISCOVERY_IDTD_001.md) — noncanonical candidate for deriving and independently testing explanatory theories from seed-justified invariants and SAC artifacts.
-- [Recursive Semantic Discovery & Compression (RSDC-001)](design_deltas/v15.10/RECURSIVE_SEMANTIC_DISCOVERY_COMPRESSION_RSDC_001.md) — noncanonical coordinated extension for obligation fixed points, adversarial motifs, theory/invariant feedback, independent reconstruction and semantic change receipts.
-
-The core abstraction uses six GSL Pillars, ten Core Objects, twenty-four Core Relations, seven Design Forms and cross-cutting inspection facets. GCSC/SAL/SAC explore bounded semantic combinations, test admissibility and produce candidate artifacts. Generated material cannot self-admit, create authority or erase specialist predecessor meaning.
-
-Large generated catalogues, HTML retention editions, hash-only bindings and old review/status artifacts are intentionally not retained merely for archival bulk.
-
-## v15.11 — focused technical candidates
-
-v15.11 is a candidate set, not an admitted release.
-
-Full retained technical candidates include:
-
-- [Recursive Control Closure (RCC)](design_deltas/v15.11/rcc/)
-- [Representation Escape & Independence Hardening (REP)](design_deltas/v15.11/rep/GARDEN_v15.11_REP_RECONCILED_CANDIDATE.md)
-- [Search-History Resilience (SHR)](design_deltas/v15.11/shr/)
-- [Evaluation Reachability Closure (ERC)](design_deltas/v15.11/erc/)
-- [Rev-2 meta-epistemic / QSE hardening](design_deltas/v15.11/rev2/)
-- [Verified Execution Integrity (VEI)](design_deltas/v15.11/vei/)
-- [Coupled Transitions and Responsibility Preservation](design_deltas/v15.11/GARDEN_v15.11_TRANSITION_AND_RESPONSIBILITY_CANDIDATE.md)
-- [Cross-Model Capability Measurement](design_deltas/v15.11/MODEL_CAPABILITY_COMPARISON_CANDIDATE_2026-10-05.md)
-- [Deterministic Semantic Compilation & Auditable Coverage (DSC-001 Rev 2)](design_deltas/v15.11/dsc/README.md) — bounded reproducible compilation/obligation audit, 17 candidate invariants and 24 specified tests; noncanonical, not implemented.
-- [Continuous Epistemic Assimilation (CEA / V1511-KR-001)](design_deltas/v15.11/cea/README.md) — full candidate specification, 14 invariants and 12 proposed tests; no execution or certification.
-- [Universal Situation Mapping (USM-001)](design_deltas/v15.11/GARDEN_USM_001_CANDIDATE.md) and [Material Context Closure (MCC-001)](design_deltas/v15.11/GARDEN_MCC_001_CANDIDATE.md) — full noncanonical candidate sources.
-
-The [technical review projection](design_deltas/v15.11/GARDEN_TECHNICAL_v15.11_REVIEW_PROJECTION_2026-09-20.txt) retains additional exact technical rules from the v15.11 integration lineage. Candidate directions for which no separate full source was recoverable are retained with their recoverable technical requirements in [RECOVERED_TECHNICAL_CANDIDATE_DIRECTIONS.md](design_deltas/v15.11/RECOVERED_TECHNICAL_CANDIDATE_DIRECTIONS.md). The [candidate retention ledger](design_deltas/v15.11/CANDIDATE_RETENTION_LEDGER.md) is an index/status map, not an admission mechanism.
-
-## Design and admission boundary
-
-The current repository deliberately does **not** contain the old implementation, deployment, review-automation or work-package machinery.
-
-Future design work can propose or improve candidates directly against the retained source corpus. A future canonical promotion would require a separately defined review/admission process appropriate to that change; the absence of the former repository automation does not silently admit any candidate.
-
-At minimum, consequential promotion claims should preserve the existing Garden distinctions:
-
-- specification != proof != implementation != empirical validation != certification;
-- capability != authority;
-- generated artifacts and model consensus do not create authority;
-- material predecessor semantics must not be silently lost;
-- unresolved conflicts, unknowns and counterexamples remain visible;
-- applicable rights, consent, privacy, safety, authority and Human-Effect constraints remain binding.
-
-## Repository integrity
-
-The repository contains source and candidate documents, not a certified implementation. Relative Markdown navigation and JSON parsing have been reviewed, but that does not establish semantic no-loss, executable tests, independent admission or verification of every embedded source hash. Historical/closed-branch references must not be interpreted as missing current-tree dependencies. See [design-delta retention audit](design_deltas/v15.6/RETENTION_AUDIT_2026-10-09.md) and [recovery ledger](design_deltas/V15_8_TO_15_9_1_RECOVERY_LEDGER.md). No earlier process version is safely deletable merely because v1.4 exists.
-
-## Cleanup status
-
-The current tree intentionally excludes obsolete runtime implementations, deployment experiments, browser/mobile council code, old work packages, review automation, retired archives, stale receipts/workstreams and derived GSL implementation profiles.
-
-## License / economic governance
-
-The canonical [LICENSE](LICENSE) contains the Garden rights-sale terms: ₹20 crore net to the owner after Indian taxes, a first-completed-purchaser rule, and transfer only after execution of a definitive agreement and completion of required closing steps. The repository LICENSE is the current published use-terms text; changes require the owner's express approval.
-
+**Evidence boundary:** specification, proof, implementation, empirical validation and certification are distinct. Source hashes verify file identity, not semantic completeness or correctness.
