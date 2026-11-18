@@ -228,7 +228,7 @@
       "status": "HISTORICAL_NONCANONICAL_SOURCE",
       "source_date": "2026-08-21",
       "path": "history/2026-08-21/GARDEN_COMPLETE_STANDALONE_DESIGN_MASTER_2026-08-21_R2.txt",
-      "archive_note": "Complete 14,470-line text snapshot added from the uploaded source. Text extraction may normalize trailing whitespace; byte-for-byte identity is not asserted. The recorded SHA-256 identifies the original upload, not the repository copy. The source's internal canonical-status wording is historical and confers no current authority.",
+      "archive_note": "Text-extracted historical rendition of the uploaded source. The Files extraction path may normalize whitespace and line boundaries; byte-for-byte identity is not asserted. The recorded SHA-256 identifies the original upload, not the repository copy. The source's internal canonical-status wording is historical and confers no current authority.",
       "original_upload_size_bytes": 707192,
       "original_upload_sha256": "71fd75db07e9acc52b623b2c1fb6907e84e8b1d0a24281aefb26f49d189873c5",
       "current_canonical_reference": "canonical/current/ (Garden v15.5 / GSL v45.1)",
