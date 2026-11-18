@@ -1,4 +1,4 @@
-# Historical source archive — 2026-08-21
+# Historical Garden design archive
 
 **Repository status: HISTORICAL / NONCANONICAL / NOT CURRENT AUTHORITY**
 
@@ -14,7 +14,7 @@ This folder archives a text-extracted rendition of the uploaded source as a hist
 
 The source describes itself as a complete standalone canonical design, with a frozen 50-module topology and GSL v45.1. Those statements are preserved as part of the historical document and describe its own declared status on 2026-08-21.
 
-They do **not** make this document the current canonical authority. The repository's current canonical source remains [Garden v15.5 / GSL v45.1](../../canonical/current/). The archived document is retained for provenance, comparison, recovery and historical research only.
+They do **not** make this document the current canonical authority. The repository's current canonical source remains [Garden v15.5 / GSL v45.1](../canonical/current/). The archived document is retained for provenance, comparison, recovery and historical research only.
 
 No attempt has been made in this archival action to reconcile its 50-module architecture with later Garden structures, migrate its clauses, validate its proofs, or promote any of its contents. Historical preservation is not semantic admission.
 
