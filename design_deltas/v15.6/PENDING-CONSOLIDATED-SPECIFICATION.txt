@@ -1268,7 +1268,7 @@ tests:
 EXT-1 — 1. Normalize emergency source-independence semantics
 Owner: Technical / existing Emergency, Consent, Event and review owners
 Disposition: INCORPORATE_CANDIDATE
-Source: legacy external source:NEXT_RELEASE_HARDENING.md#1. Normalize emergency source-independence semantics
+Source: historical review material Normalize emergency source-independence semantics
 complete_specification: 1. Normalize emergency source-independence semantics
 
 ### Problem
@@ -1301,7 +1301,7 @@ Additional hardening:
 EXT-2 — 2. Typed consent-validity assessment
 Owner: Technical / existing Emergency, Consent, Event and review owners
 Disposition: INCORPORATE_CANDIDATE
-Source: legacy external source:NEXT_RELEASE_HARDENING.md#2. Typed consent-validity assessment
+Source: historical review material Typed consent-validity assessment
 complete_specification: 2. Typed consent-validity assessment
 
 ### Problem
@@ -1354,7 +1354,7 @@ Suggested semantic fields:
 EXT-3 — 3. External-review regression bundle
 Owner: Technical / existing Emergency, Consent, Event and review owners
 Disposition: INCORPORATE_CANDIDATE
-Source: legacy external source:NEXT_RELEASE_HARDENING.md#3. External-review regression bundle
+Source: historical review material External-review regression bundle
 complete_specification: 3. External-review regression bundle
 
 Preserve these scenarios even when the current design already contains the intended safeguard:
@@ -1374,7 +1374,7 @@ A successor should add these as executable tests where the runtime/security harn
 EXT-5 — 5. Mechanically derived ReviewPacket and reviewer-ordering hardening
 Owner: Technical / existing Emergency, Consent, Event and review owners
 Disposition: INCORPORATE_CANDIDATE
-Source: legacy external source:NEXT_RELEASE_HARDENING.md#5. Mechanically derived ReviewPacket and reviewer-ordering hardening
+Source: historical review material Mechanically derived ReviewPacket and reviewer-ordering hardening
 complete_specification: 5. Mechanically derived ReviewPacket and reviewer-ordering hardening
 
 Status: **CANDIDATE / NOT RATIFIED / NEEDS REQUIRED REVIEW**
@@ -1389,7 +1389,7 @@ This is review-assurance infrastructure only. Recording it here does not ratify 
 
 ### Candidate owner/bindings
 
-Prefer a review-orchestration/evidence owner in `legacy external workspace`; do not create a new authority source.
+Prefer the existing review-orchestration/evidence owner; do not create a new authority source.
 
 A packet should bind, at minimum:
 
@@ -2036,7 +2036,7 @@ Source: https://github.com/ankitdcx/garden-main/issues/54
     "observed_gap": "No exact current canonical/public implementation match was found for a deployment invariant/test that treats every shared mutable service reachable by separate tenants/sessions as a potential covert channel and proves cross-tenant write->read non-interference plus runtime denial of management/annotation write APIs."
   },
   "observed_repo_shas": {
-    "ankitdcx/legacy external workspace": "2aebb9aa92f200149869179092d454ab90c5593c",
+    "historical_external_source": "2aebb9aa92f200149869179092d454ab90c5593c",
     "ankitdcx/garden-main": "9ce9e1179aa41d6ab26be0ee7079668c6719cc75"
   },
   "design_epoch": {
@@ -2119,7 +2119,7 @@ Source: https://github.com/ankitdcx/garden-main/issues/55
     "observed_gap": "Current repository searches found no explicit equivariance, opaque-identifier renaming, or temporal-logic verification contract/test corresponding to this property. This is therefore an alternative proof/testing technique candidate, not evidence that Garden's current identity model is defective."
   },
   "observed_repo_shas": {
-    "ankitdcx/legacy external workspace": "2aebb9aa92f200149869179092d454ab90c5593c",
+    "historical_external_source": "2aebb9aa92f200149869179092d454ab90c5593c",
     "ankitdcx/garden-main": "9ce9e1179aa41d6ab26be0ee7079668c6719cc75"
   },
   "design_epoch": {
