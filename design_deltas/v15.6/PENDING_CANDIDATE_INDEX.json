@@ -48,7 +48,7 @@
       "candidate_id": "CAND-EXTERNAL-HARDENING",
       "kind": "SOURCE_DESIGN_HARDENING_QUEUE",
       "status": "CANDIDATE_NOT_RATIFIED",
-      "public_source": "legacy external source:NEXT_RELEASE_HARDENING.md",
+      "public_source": "historical review material",
       "summary": "Emergency-source independence normalization, typed consent-validity assessment, external regression bundle, and ConstitutionalEvent typed-boundary/observability hardening. Must be reconciled into the private candidate materialization before any daily successor release."
     },
     {
