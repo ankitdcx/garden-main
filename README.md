@@ -2,7 +2,7 @@
 
 **Canonical use terms — Garden rights sale.** The canonical [LICENSE](LICENSE) records the owner's terms for a complete transfer of all Garden rights the owner legally owns and can transfer, for consideration that delivers **₹20 crore net after Indian taxes**. The first-completed-purchaser criteria and closing requirements are specified in the LICENSE. It is not an executed assignment: transfer occurs only after the owner signs the definitive agreement and all required closing steps are complete.
 
-**Navigation:** [Candidate release guide](canonical/candidates/README.md) · [Version changelog](CHANGELOG.md) · [Scientific research register](design_deltas/v15.10/GARDEN_SCIENCE_ALL_2026-10-09.txt). These are documentation and research records, not canonical admission or runtime automation.
+**Navigation:** [Candidate release guide](canonical/candidates/README.md) · [Scientific research register](design_deltas/v15.10/GARDEN_SCIENCE_ALL_2026-10-09.txt). These are documentation and research records, not canonical admission or runtime automation.
 
 ## Repository purpose
 
@@ -11,7 +11,7 @@ This repository intentionally contains **Garden design source and successor desi
 Current structure:
 
 - [canonical/current](canonical/current/) — **Garden v15.5 / GSL v45.1**, the only canonical five-file source.
-- [history/2026-08-21](history/2026-08-21/) — archived text rendition of the August 21 standalone 50-module master, explicitly historical and noncanonical.
+- [history](history/) — archived text rendition of the August 21 standalone 50-module master, explicitly historical and noncanonical.
 - [canonical/candidates/v15.6](canonical/candidates/v15.6/) — retained full five-file v15.6 candidate.
 - [canonical/candidates/v15.7](canonical/candidates/v15.7/) — retained full five-file v15.7 candidate.
 - [design_deltas/README.md](design_deltas/README.md) — full navigation for v15.6–v15.11, recovery ledgers, ownership and future-v16 notes.
@@ -20,10 +20,8 @@ Current structure:
 - [design_deltas/v15.10](design_deltas/v15.10/) — later abstraction/GCSC/Tree-Core working design.
 - [design_deltas/v15.11](design_deltas/v15.11/) — focused noncanonical successor candidates and recovered technical directions.
 - [15.x noncanonical consolidation index](design_deltas/GARDEN_15X_NONCANONICAL_CONSOLIDATION_INDEX.md) and [future-v16 design note](design_deltas/FUTURE_V16_NONCANONICAL_DESIGN_NOTE.md) — navigation and evaluation plans, **not** releases.
-- [CORPUS_INDEX.json](CORPUS_INDEX.json) — machine-readable repository index; candidate presence does not confer admission.
 - [USM-001 — Universal Situation Mapping](design_deltas/v15.11/GARDEN_USM_001_CANDIDATE.md) — source-bound fact ledger and deterministic GSL compiler; noncanonical.
 - [MCC-001 — Material Context Closure](design_deltas/v15.11/GARDEN_MCC_001_CANDIDATE.md) — bounded nested-context closure and anti-obstruction; noncanonical.
-- [CONTRIBUTING.md](CONTRIBUTING.md) — contribution guidance.
 - [LICENSE](LICENSE) — current use terms.
 
 ## Status
