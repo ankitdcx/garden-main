@@ -104,5 +104,5 @@ The current tree intentionally excludes obsolete runtime implementations, deploy
 
 ## License / economic governance
 
-The canonical [LICENSE](LICENSE) contains the Garden rights-sale terms: ₹20 crore net to the owner after Indian taxes, a first-completed-purchaser rule, and transfer only after execution of a definitive agreement and completion of required closing steps. The same canonical text is maintained in Garden Swarm. See [LICENSE_CHANGE_POLICY.md](LICENSE_CHANGE_POLICY.md) for future changes.
+The canonical [LICENSE](LICENSE) contains the Garden rights-sale terms: ₹20 crore net to the owner after Indian taxes, a first-completed-purchaser rule, and transfer only after execution of a definitive agreement and completion of required closing steps. The repository LICENSE is the current published use-terms text; changes require the owner's express approval.
 
