@@ -71,3 +71,8 @@ For every candidate: recover exact source/problem/intent; compare with the curre
 | V1511-KR-001 — Continuous Epistemic Assimilation | [cea/README.md](cea/README.md) | New candidate package; not canonically admitted |
 
 These are retained **sources**, not merely directions; their exact implementation and certification remain separately unverified.
+
+## November 2026 design corrections
+
+- [SCT paired-error dependence](SCT_PAIRED_ERROR_DEPENDENCE.md) proposes a correction to the dependence estimator in TH-SCT. Synthetic arithmetic controls are available. Empirical qualification and admission remain pending.
+- [Appointment-reminder composition fixture](REMINDER_COMPOSITION.md) binds the USM/MCC/DSC, authority, VEI and transition expectations for one synthetic workflow.

@@ -24,3 +24,5 @@ The following non-canonical amendments are now part of the active v15.7 candidat
 These amendments preserve existing topology and authority boundaries. They explicitly do not authorize universal surveillance, collective guilt, forced Garden adoption, AI political sovereignty, operational weapon disablement, or publication of private complaints. Exact five-file materialization, registry allocation, semantic closure, independent-family review and protected admission remain required before any promotion claim.
 
 No claim of complete GSL semantic closure, independent qualification or implementation follows from these candidate amendments.
+
+The [edition manifest](EDITION_MANIFEST.json) binds the five current files and identifies the historical edition. Its role-sorted root uses the canonical source-manifest encoding. Only the Theories file differs from the pinned historical set.
