@@ -1,0 +1,63 @@
+{
+  "release_id": "Garden-v15.5-2026-09-12",
+  "receipt_id": "RCR-GARDEN-v15.5-2026-09-12",
+  "scanner_version": "garden_reference_closure_v15_5.py ruleset 1.0",
+  "scan_boundary": "five current v15.5 UTF-8 source files; current normative anchors/SchemaIDs/registries/invariant-test IDs plus catalogue identity lint; external bibliographic URLs and historical non-current source files excluded",
+  "document_hashes": {
+    "Garden_Annexure_v15.5_FULL_2026-09-12.txt": "56aa88e3c63e8ec8540175c0fad7d9d06ead021c49756cb281f4276a5c8bd084",
+    "Garden_System_v15.5_FULL_2026-09-12.txt": "6ead73f66c878caa6d1e419ad82afbc7f0f2a243e5de2cf1477e9c0ee4d93fe1",
+    "Garden_Technical_v15.5_FULL_2026-09-12.txt": "865f5ded862cb30d51ad213fa05cdc342983a31fb6a23bb9aad5b25a84d1cb9b",
+    "Garden_Theories_v15.5_FULL_2026-09-12.txt": "26624ffa482e898ca30d7ef8eb147b17a07fa7a007fea3662169f23426207a93",
+    "Garden_User_v15.5_FULL_2026-09-12.txt": "55aa9b58be6b0b6f0f02f845dc8b5d4ca692ddc50a8f50841374b599d1356435"
+  },
+  "results": {
+    "semantic_anchors": {
+      "referenced": 284,
+      "defined": 284,
+      "unresolved": []
+    },
+    "numeric_annexure_refs": {
+      "referenced": 2,
+      "defined": 94,
+      "unresolved": []
+    },
+    "schema_ids": {
+      "referenced": 721,
+      "resolved_identifiers": 721,
+      "unresolved": []
+    },
+    "registries": {
+      "referenced": 62,
+      "defined": 73,
+      "unresolved": []
+    },
+    "invariant_test_ids": {
+      "referenced": 1288,
+      "owned_or_mapped": 2195,
+      "unresolved": []
+    },
+    "catalogue_lint": {
+      "cat_rows": 688,
+      "unique_schema_ids": 688,
+      "schema_id_to_multiple_names": {},
+      "duplicate_bare_names": 20,
+      "duplicate_bare_names_unresolved": [],
+      "qualified_disambiguation_entries": 40
+    },
+    "headers": {
+      "expected": "GARDEN — FULL FIVE-FILE INTEGRATED DESIGN v15.5 — 2026-09-12",
+      "files": {
+        "Garden_Annexure_v15.5_FULL_2026-09-12.txt": "GARDEN — FULL FIVE-FILE INTEGRATED DESIGN v15.5 — 2026-09-12",
+        "Garden_System_v15.5_FULL_2026-09-12.txt": "GARDEN — FULL FIVE-FILE INTEGRATED DESIGN v15.5 — 2026-09-12",
+        "Garden_Technical_v15.5_FULL_2026-09-12.txt": "GARDEN — FULL FIVE-FILE INTEGRATED DESIGN v15.5 — 2026-09-12",
+        "Garden_Theories_v15.5_FULL_2026-09-12.txt": "GARDEN — FULL FIVE-FILE INTEGRATED DESIGN v15.5 — 2026-09-12",
+        "Garden_User_v15.5_FULL_2026-09-12.txt": "GARDEN — FULL FIVE-FILE INTEGRATED DESIGN v15.5 — 2026-09-12"
+      },
+      "mismatches": []
+    }
+  },
+  "unresolved_references": [],
+  "status": "PASS",
+  "provenance": "deterministic local structural scan; no semantic/behavioral/physical certification",
+  "signature": null
+}

@@ -15,3 +15,5 @@
 - [ ] Complete source-span retention, independent falsification and explicit governed admission decision before any canonical claim.
 
 Failure, skipped review or missing evidence = UNKNOWN/NOT_TESTED, never PASS.
+
+The [reminder composition fixture](../REMINDER_COMPOSITION.md) exercises logical checkpoints and effect-time permission in a small reference model. DSC-T01–T24 integrated qualification remains pending.

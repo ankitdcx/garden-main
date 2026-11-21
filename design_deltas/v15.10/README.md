@@ -28,7 +28,7 @@ The **two primary consolidated documents** above contain the research synthesis,
 ## Supporting artifacts
 
 - [Technical full delta](GARDEN_TECHNICAL_v15.10_FULL_DELTA.txt) — supporting working-candidate technical edition; retains operational semantics not necessarily reconstructible from the short abstraction delta (GSL typing/grammar, effect/result families, COMPARE/REASON, source ownership). Overlap does not imply safe deletion; no lossless equivalence or canonical admission established.
-- [Relation signatures](GCSC_RELATION_SIGNATURE_CANDIDATE.json) — candidate plausibility typing, **not** an admitted registry. Known gaps: `PROCESS_PLACEHOLDER` is not a Core Object, and binary `delegates` omits scope. SAL still determines admissibility; matching broad relation signatures is insufficient.
+- [Relation signatures](GCSC_RELATION_SIGNATURE_CANDIDATE.json) — candidate plausibility typing, **not** an admitted registry. The controls relation records unresolved process-form mappings. Delegation requires scope, validity and an authority reference beyond its two endpoints. SAL still determines admissibility; matching broad relation signatures is insufficient.
 
 ## Document consolidation rules
 

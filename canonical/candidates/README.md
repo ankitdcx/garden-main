@@ -7,7 +7,7 @@
 - [v15.6](v15.6/README.md) — complete five-file successor working candidate.
 - [v15.7](v15.7/README.md) — complete five-file successor working candidate.
 
-Each candidate directory contains five source texts. Candidate-level `SOURCE_MANIFEST.json` files are not retained in the current repository. Read each README, then inspect all five source files; do not infer cryptographic source binding from the directory listing.
+Each candidate directory contains five source texts. Each edition manifest binds the current file bytes and identifies the original manifest in Git history. Additional amendments have their own source boundaries.
 
 ## How to use a candidate
 

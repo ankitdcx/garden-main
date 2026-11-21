@@ -96,3 +96,7 @@ BOUNDED_FIXED_POINT means no new material class after complete declared expansio
 ## Admission
 
 Existing GSL Context/Frame owns structure; SAL admissibility; Materiality relevance; GCSC bounded search; SAC candidate artifacts; RSDC obligation closure; REP independence; RCC/ActionGate/VEI actual authority and effects. All outputs remain noncanonical until existing independent admission. No claims of executed tests or universal completeness.
+
+## DSC composition of time and work limits
+
+Use logical work units for reproducible semantic checkpoints under DSC-T20. A wall-clock cutoff may interrupt an attempt and preserve its last committed logical checkpoint and frontier. Include elapsed time only in operational metadata. Resume against the same frozen inputs or reopen affected obligations after material changes. A timeout cannot establish closure. See the [bounded composition fixture](REMINDER_COMPOSITION.md).

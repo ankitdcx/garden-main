@@ -13,11 +13,11 @@
     "obeys":{"source":["AGENCY","ACTION","THING"],"target":["RULE"],"mode":"conformance"},
     "assesses":{"source":["AGENCY","RULE","CLAIM","CONTEXT"],"target":["THING","EVENT","ACTION","AGENCY","RULE","VALUE","CLAIM"],"mode":"assessment"},
     "contextualizes":{"source":["CONTEXT"],"target":["TIME","SPACE","THING","EVENT","ACTION","AGENCY","RULE","VALUE","CLAIM"],"mode":"scope"},
-    "controls":{"source":["AGENCY","RULE","THING"],"target":["THING","ACTION","PROCESS_PLACEHOLDER","AGENCY"],"mode":"control"},
+    "controls":{"source":["AGENCY","RULE","THING"],"target":["THING","ACTION","AGENCY"],"mode":"control","process_form_without_qualified_object_binding":"UNRESOLVED"},
     "partOf":{"source":["TIME","SPACE","THING","EVENT","ACTION","AGENCY","RULE","VALUE","CONTEXT","CLAIM"],"target":["TIME","SPACE","THING","EVENT","ACTION","AGENCY","RULE","VALUE","CONTEXT","CLAIM"],"mode":"mereological"},
     "dependsOn":{"source":["TIME","SPACE","THING","EVENT","ACTION","AGENCY","RULE","VALUE","CONTEXT","CLAIM"],"target":["TIME","SPACE","THING","EVENT","ACTION","AGENCY","RULE","VALUE","CONTEXT","CLAIM"],"mode":"dependency"},
     "owns":{"source":["AGENCY","THING"],"target":["THING","CLAIM","ACTION","VALUE"],"mode":"ownership_not_authority"},
-    "delegates":{"source":["AGENCY"],"target":["AGENCY"],"mode":"delegation_requires_scope_object_outside_binary_edge"},
+    "delegates":{"source":["AGENCY"],"target":["AGENCY"],"mode":"delegation_requires_scope_object_outside_binary_edge","required_qualifiers":["scope","validity","authority_ref"],"missing_qualifier":"UNRESOLVED"},
     "references":{"source":["THING","RULE","CONTEXT","CLAIM"],"target":["TIME","SPACE","THING","EVENT","ACTION","AGENCY","RULE","VALUE","CONTEXT","CLAIM"],"mode":"reference"},
     "derivedFrom":{"source":["THING","VALUE","RULE","CLAIM","CONTEXT"],"target":["THING","VALUE","RULE","CLAIM","CONTEXT","EVENT","ACTION"],"mode":"derivation"},
     "equivalentTo":{"source":["TIME","SPACE","THING","EVENT","ACTION","AGENCY","RULE","VALUE","CONTEXT","CLAIM"],"target":["TIME","SPACE","THING","EVENT","ACTION","AGENCY","RULE","VALUE","CONTEXT","CLAIM"],"mode":"typed_equivalence_requires_compatibility"},
@@ -30,7 +30,7 @@
     "originatesFrom":{"source":["THING","EVENT","ACTION","CLAIM","RULE","VALUE"],"target":["AGENCY","THING","EVENT","ACTION","CONTEXT","CLAIM"],"mode":"origin_provenance"}
   },
   "notes":[
-    "PROCESS_PLACEHOLDER is not a Core Object and must be removed before admission; it flags that binary Core Object typing may be insufficient for controls.",
+    "A PROCESS form requires a qualified mapping to a registered Core Object endpoint for controls. Keep an unresolved mapping on the frontier.",
     "Broad signatures are intentionally permissive at L0. Facet/Form/context constraints narrow them later.",
     "Same-type restrictions for equivalentTo/conflictsWith/supersedes are deferred to compatibility predicates rather than encoded as Cartesian source/target sets.",
     "delegates cannot fully express delegated scope/authority in one binary edge; L2/L4 motifs must add RULE/CONTEXT/ACTION and authority checks."

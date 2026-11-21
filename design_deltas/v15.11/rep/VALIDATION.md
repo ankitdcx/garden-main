@@ -21,3 +21,5 @@ The candidate incorporates the adversarial corrections from the originating revi
 **Duplicate-semantics audit:** REQUIRED before canonical admission, especially against BRIDGE, Compare, ReasoningStrategyPortfolio, GCL, CDDT, Research Frontier, and existing independence contracts.
 
 No absence of a known unregistered representation is treated as proof that none exists.
+
+Revision 1.1 specifies nine REPESC rules and eleven named TEST-REPESC cases. Section 11 of the [controlling candidate](GARDEN_v15.11_REP_RECONCILED_CANDIDATE.md#11-source-qualified-migration-and-preservation) owns the source-qualified aliases. The source reports synthetic replays. The companion replay receipt is unavailable in this package. Integrated conformance remains unverified.

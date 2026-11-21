@@ -41,3 +41,5 @@ Compare each digest and byte count with the corresponding role in the manifest. 
 ## Authority boundary
 
 Later material under [`canonical/candidates/`](../candidates/) and [`design_deltas/`](../../design_deltas/) is noncanonical unless separately admitted. Do not replace these files in place as part of candidate work. Preserve this source set as the immutable predecessor baseline.
+
+Run `python3 verification/check_design.py` from the repository root to verify the five required roles, sizes, hashes, source root and complete structural verdict against the [recorded receipt](../../verification/v15.5/Garden_v15.5_ReferenceClosureReceipt_2026-09-12.json). The [archived scanner](../../verification/v15.5/garden_reference_closure_v15_5.py) emits its verdict as JSON. The wrapper makes any failed check return a nonzero exit status.

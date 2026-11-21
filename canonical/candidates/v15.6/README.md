@@ -10,8 +10,10 @@ Read in order:
 4. [Annexure](Garden_Annexure_v15.6_FULL_CANDIDATE_2026-09-15.txt)
 5. [Theories](Garden_Theories_v15.6_FULL_CANDIDATE_2026-09-15.txt)
 
-The five source texts are retained in this directory. A candidate-level `SOURCE_MANIFEST.json` is not retained in the current repository, so this guide does not claim a manifest-bound byte identity. Each source preserves the predecessor layer followed by candidate refinements. Embedded old release banners describe that preserved historical layer; the first banner states this candidate's actual status.
+The five source texts are retained in this directory. The original candidate manifest is available at the historical commit recorded below. Each source preserves the predecessor layer followed by candidate refinements. Embedded old release banners describe that preserved historical layer; the first banner states this candidate's actual status.
 
 All 15 corrected engineering patterns and all 38 additional work items are covered by 20 profiles. Prior pending work has 174 disposition records. Deferred definitions and product choices are explicit; specified tests are not executed tests.
 
 The current canonical source remains [v15.5](../../current/README.md). This candidate does not weaken the required independent-family, semantic closure, enforcement or promotion gates.
+
+The [edition manifest](EDITION_MANIFEST.json) binds the five current files and identifies the historical edition. Its role-sorted root uses the canonical source-manifest encoding. Only the Theories file differs from the pinned historical set.
