@@ -1,6 +1,6 @@
-# Future Garden v16 — noncanonical design path
+# Garden v16 — noncanonical complete-successor design path
 
-**STATUS: NONCANONICAL EXPERIMENTAL PLANNING NOTE.** No v16 release exists by virtue of this note. No candidate is admitted; canonical/current v15.5, LICENSE and economic terms remain unchanged.
+**STATUS: NONCANONICAL EXPERIMENTAL PLANNING NOTE.** A [partial v16.0 working candidate](v16/README.md) now exists (initial applied home-design profile HOME-001), but **no complete v16 successor release exists by virtue of this note or that candidate**, and no candidate is canonically admitted. Canonical/current v15.5, LICENSE and economic terms remain unchanged.
 
 **Goal:** a coherent possible successor built by selectively integrating independently qualified candidates while retaining every material predecessor obligation, exception, scope and unknown. Document format (five-file or equivalent structured form) is a design choice, not an admission rule.
 
@@ -25,7 +25,7 @@ Run GSK reconstruction on held-out predecessor obligations and exceptions. Requi
 This order is an evaluation preference, not a schedule or permission to skip prerequisite controls.
 
 ## Stage 4 — draft successor only
-A future proposal may use `canonical/candidates/v16-draft/` or equivalent noncanonical workspace. Each candidate change must carry: exact source candidate ID/edition/hash, owner, applicability, ObligationDiff, reconstruction/no-loss evidence, failure and fallback, tests/receipts, UNKNOWN/CONFLICT/INCOMPLETE items and source→successor links. Mark **NONCANONICAL EXPERIMENTAL**. Do not create the directory until there is a substantive source-bound draft.
+A future **complete-source** v16 proposal may use `canonical/candidates/v16-draft/` or equivalent noncanonical workspace. The partial [v16 candidate workspace](v16/README.md) already exists for a substantive application-level HOME-001 candidate and should not be mistaken for a complete release. Each candidate change must carry: exact source candidate ID/edition/hash, owner, applicability, ObligationDiff, reconstruction/no-loss evidence, failure and fallback, tests/receipts, UNKNOWN/CONFLICT/INCOMPLETE items and source→successor links. Mark **NONCANONICAL EXPERIMENTAL**. Do not create a *full successor-source* directory until there is a substantive source-bound whole-release draft.
 
 ## Stage 5 — independent admission
 Separate proposer, falsifier and admission authority. Apply REP independence discipline, rights/consent/privacy/safety/Human-Effect/authority/law reviews, external verification where required, and the explicit legitimate human admission boundary. Independent review and evidence do not themselves promote a release.
@@ -38,4 +38,4 @@ Separate proposer, falsifier and admission authority. Apply REP independence dis
 - Rights, consent, privacy, safety and Human-Effect constraints remain applicable.
 - Specification ≠ formal proof ≠ implementation ≠ empirical validation ≠ external certification.
 
-**Non-effects:** This note does not create Garden v16, merge prior versions, promote candidates, authorize execution, alter LICENSE or economic terms, or supersede v15.5.
+**Non-effects:** This note and the partial v16 working candidate do not create a **canonical or complete Garden v16 release**, merge prior versions, promote candidates, authorize execution, alter LICENSE or economic terms, or supersede v15.5.
