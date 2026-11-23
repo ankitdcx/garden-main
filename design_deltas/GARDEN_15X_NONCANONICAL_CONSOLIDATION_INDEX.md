@@ -67,4 +67,4 @@ Do not silently resurrect: normative Tool→Assistant→Delegate→Sovereign lad
 
 ## C. Future v16
 
-See [noncanonical future-v16 design note](FUTURE_V16_NONCANONICAL_DESIGN_NOTE.md). This index does **not** create v16, consolidate full releases, change canonical/current, or grant admission.
+A [partial v16.0 working candidate](v16/README.md), beginning with [HOME-001](v16/GARDEN_HOME_001_CANDIDATE.md), was opened on 2026-11-23. Its creation does not make it a complete successor or alter earlier 15.x statuses. See [noncanonical complete-v16 evaluation plan](FUTURE_V16_NONCANONICAL_DESIGN_NOTE.md). This index does **not** create a canonical v16 release, consolidate full releases, change canonical/current, or grant admission.
