@@ -16,7 +16,7 @@
 | HOME-T08 | Compare historical all-door, current interchangeable open/thin/thick/wall-with-door/wall-without-door, fixed-corridor, conventional masonry and other movable-partition baselines at matched usable area, repeat-change effort, safety, costs and labor | NOT EXECUTED |
 | HOME-T09 | Independent novelty/inventive-step / prior-art claim chart for hardware, method and algorithmic directions | NOT EXECUTED — NOVELTY UNKNOWN |
 | HOME-T10 | Record public-disclosure authorization, inventorship evidence and any filing decision without implying GitHub disclosure is a patent filing | USER AUTHORIZED REPO PUBLICATION; NO PATENT FILING |
-| HOME-T11 | Structural-engineering feasibility of P0 + P1..P4 with load path, soil, lateral/wind/seismic stability, long spans; require explicit comparison to six-plus supports | NOT EXECUTED — DO NOT BUILD |
+| HOME-T11 | Engineer-check **variable number and sizes of columns** and full structural schemes, including fewer and more than five supports; validate load paths, soil, lateral/wind/seismic stability, long spans and independent comparison to the historical five-column design | NOT EXECUTED — DO NOT BUILD |
 | HOME-T12 | Independently validate lift, stair, slide, landing, opening, fire/guarding and child-use constraints for multiple core shapes | NOT EXECUTED |
 | HOME-T13 | Two legal alternate bedroom locations including eligible corners + at least two interior style profiles with fixed core; also cover wet-room relocation denial | NOT EXECUTED |
 | HOME-T14 | Structural-edge accounting: `232` is theoretical; count fixed/protected versus freely reconfigurable edges, installed wall/door modes and edge-specific service/egress exceptions independently | NOT EXECUTED |
@@ -25,7 +25,11 @@
 | HOME-T17 | Safely remove and re-add a thin partition and an engineered thick non-load-bearing wall at the same edge repeatedly, with measured time, personnel, tools, damage, waste and cost; exclude structural and ordinary load-bearing masonry | NOT EXECUTED |
 | HOME-T18 | Reject any optional solid no-door wall that destroys safe access/egress, fire compartment performance, maintenance access or ventilation, including during the construction transition | NOT EXECUTED |
 | HOME-T19 | Validate door configurations NONE / hinged / sliding / pocket / folding / rated where compatible, including privacy, accessibility, clear opening, hinges, power and child safety | NOT EXECUTED |
-| HOME-T20 | Show a three-stage *occupied-life* reconfiguration from open cells → solid thick wall without door → thin wall with door, while keeping five-support proposal unchanged and independently rechecking services, authority, fire and evacuation | NOT EXECUTED |
+| HOME-T20 | Show a three-stage *occupied-life* reconfiguration from open cells → solid thick wall without door → thin wall with door, while keeping the **engineer-approved selected structural scheme** unchanged and independently rechecking services, authority, fire and evacuation | NOT EXECUTED |
+| HOME-T21 | Compare a scoped set of feasible column counts (including fewer than five, five and more than five), variable cross-sections, locations and structural systems with full foundation/beam/slab/lateral cost and independent design verification | NOT EXECUTED — NO COST OPTIMUM CLAIM |
+| HOME-T22 | Recompute quantity takeoffs and compare matched local prices for columns, foundations, beams, slabs, lateral bracing, connections, reinforcement, labor and structural effects on services/fit-out; quantify usable-area impact | NOT EXECUTED |
+| HOME-T23 | Falsify cheapest-column-only metrics: test cases where more narrow columns increase foundation cost or fewer wide columns increase slab/beam spans; reject cost wins that fail engineering feasibility | NOT EXECUTED |
+| HOME-T24 | Demonstrate that the algorithm does not hard-code a center column or five columns; document finite search coverage, uncertainty, globality limits and all blocked cells/door interfaces | NOT EXECUTED |
 
 ## Evidence rules
 
@@ -34,7 +38,8 @@
 - **Latest requirement precedence (2026-11-23):** optional walls and optional doors supersede the historical all-neighbour installed-door mandate. Preserve both descriptions in provenance; do not silently enforce historical requirements as current.
 - "Easily removable at any time" is an engineering/user-experience target, never permission to alter load-bearing/shear walls, protected shafts or rated fire separations or to skip required permits and inspection. A visually thick wall must still have a qualified nonstructural, lightweight/demountable construction.
 - For egress test, consider doors locked at night, power failure, smoke, inaccessible lift and an occupant needing assisted evacuation.
-- For physical proof, use independent structural/fire/accessibility professionals and relevant building authority approval; the five-principal-column design is **only a concept**.
+- For physical proof, use independent structural/fire/accessibility professionals and relevant building authority approval; the **number, size and placement of supports remain unengineered**. The earlier five-column concept is merely a historical comparator.
+- **Latest user requirement precedence (2026-11-23):** variable number/width/positions of structural columns for lowest feasible total structural cost supersede the fixed five-column proposal. Minimum `N × width` alone is not proof of minimum cost.
 - For rights/novelty, compare actual claim elements with substantive prior art; a patent-style title in GitHub does not create patent rights.
 - Garden source/admission must preserve version epochs, source lineage, nonclaims, human authority and evidence provenance.
 
