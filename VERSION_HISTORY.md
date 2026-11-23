@@ -23,7 +23,8 @@ This page is a navigation summary. It does not itself admit, supersede or certif
 | v15.9.1 | [design_deltas/v15.9.1/](design_deltas/v15.9.1/) | GCSC, SAL and SAC source extracts and semantic patches | Historical/noncanonical |
 | v15.10 | [design_deltas/v15.10/](design_deltas/v15.10/README.md) | Generative design, abstraction, technical candidates and scientific research | Noncanonical working design/research |
 | v15.11 | [design_deltas/v15.11/](design_deltas/v15.11/CANDIDATE_RETENTION_LEDGER.md) | Focused additive candidate directions and review material | Noncanonical candidate set |
-| Future v16 | [evaluation note](design_deltas/FUTURE_V16_NONCANONICAL_DESIGN_NOTE.md) | Possible successor evaluation and reconstruction plan | Planning only |
+| v16.0 working candidate | [candidate workspace](design_deltas/v16/README.md) | **Partial** applied human-systems candidate, beginning with HOME-001; not a full five-file successor | Noncanonical candidate |
+| Future complete v16 | [evaluation note](design_deltas/FUTURE_V16_NONCANONICAL_DESIGN_NOTE.md) | Possible complete successor evaluation/reconstruction plan | Planning only |
 | 2026-08-21 historical design master | [history/](history/README.md) | Preserved text-extracted historical snapshot | Historical; not current authority |
 
 ## How to interpret the lineage
@@ -44,4 +45,5 @@ Garden v15.5 / GSL v45.1 remains canonical unless a successor is separately revi
 - [Overview](OVERVIEW.md)
 - [Design-delta index](design_deltas/README.md)
 - [15.x noncanonical consolidation index](design_deltas/GARDEN_15X_NONCANONICAL_CONSOLIDATION_INDEX.md)
-- [Future v16 noncanonical design note](design_deltas/FUTURE_V16_NONCANONICAL_DESIGN_NOTE.md)
+- [v16 candidate workspace](design_deltas/v16/README.md)
+- [Future complete v16 noncanonical design note](design_deltas/FUTURE_V16_NONCANONICAL_DESIGN_NOTE.md)
