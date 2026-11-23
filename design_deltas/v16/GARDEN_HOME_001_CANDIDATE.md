@@ -2,18 +2,19 @@
 
 **Artifact type:** Garden v16 applied human-systems invention-design candidate (NOT a filed patent)  
 **Date:** 2026-11-23  
-**Revision:** 1.2 — public candidate extracted/reconciled from private revision 1.1  
+**Revision:** 1.3 — universal replaceable wall-interface refinement (2026-11-23), building on public revision 1.2  
 **Status:** `NONCANONICAL / NOVELTY_UNKNOWN / ENGINEERING_UNVALIDATED`  
-**Source provenance:** User's November 20–23, 2026 home-design discussions and private HOME-001 rev 1.1; the user supplied the foundational grid, adjacency-door, flexible room/path, central support, four additional supports, central lift/stairs/slide, location and design-freedom requirements. Formal graph rules, alternatives, tests and safety qualifications are assistant elaborations.
+**Source provenance:** User's November 20–23, 2026 home-design discussions and private HOME-001 rev 1.1; the user supplied the foundational grid, the initial every-neighbour-door proposal, flexible room/path, central support, four additional supports, central lift/stairs/slide, location and design-freedom requirements; the latest 2026-11-23 user refinement requires **easily addable/removable walls of any suitable kind, including partitions or thicker walls, with a door, without a door, or with different door types**, superseding the literal every-edge-installed-door baseline. Formal graph rules, alternatives, tests and safety qualifications are assistant elaborations.
 
 ## A. User-originated invariant / invention intent
 
 1. **Universal 25-sq-ft lattice:** divide the **whole home** into regular **5 ft × 5 ft** planning cells, including zones that later become rooms, corridors, open spaces or service areas. Treat 10 × 10 ft / 100 sq ft as a four-cell macro-block, not the primitive unit.
-2. **Every-neighbour doorway:** any two cells that share an internal orthogonal 5-ft edge have a **doorway/door** between them, except where a permanent safety/structure/shaft constraint makes a doorway impermissible. This *literal all-door baseline* must not quietly be replaced by merely 'door-ready' cells.
+2. **Universal neighbour-edge reconfiguration interface (latest requirement):** for any two cells sharing an eligible orthogonal 5-ft edge, the edge must support a compatible choice among **open connection/no wall; thin demountable partition; modular thick non-load-bearing wall; wall with door; wall with no door**, and permitted types of doorway/door, without modifying the permanent structural skeleton. The user's earlier *literal installed door on every available edge* is retained as a historical proposal **explicitly superseded by the latest optional-wall/optional-door requirement**, not silently erased. Boundary edges blocked by fixed structure, fire/shaft separation or legal limits remain exceptions.
 3. **Role interchangeability:** a connected set of cells can become a room, path or shared area; cells can be reassigned to make larger, smaller, irregular, or relocated rooms over time, subject to building constraints.
 4. **Five principal supports as design hypothesis:** one thick central column plus four additional main columns support a proposed three-storey building skeleton; the intention is to free non-structural interior partitions. Exactly five main supports, their sizes and locations **have not been engineered and cannot be assumed sufficient**.
 5. **Central circulation/play space:** an appropriately sized flexible area **around** the centre is reserved for lift, stair and slide, with user choice of shapes and visual arrangement, subject to safe separate shafts, stairs/landings/clearances, emergency egress and accessibility. Slide is recreational, not an emergency exit.
 6. **User-selectable everywhere else:** assign bedrooms or other functions in a preferred eligible corner/location; move and combine rooms; independently choose interior style, finish and furniture. Wet rooms, daylight, legal room sizes and utility availability still constrain the choice.
+7. **Wall as replaceable component:** occupants may reconfigure eligible non-load-bearing walls **later**, not just during original construction: add, remove, relocate or swap a wall/partition/door assembly. A thick-looking wall is a specially engineered **non-load-bearing modular assembly**, not a license to remove masonry or an actual shear/load-bearing wall. Safety review, assembly handling, services and any required permits are prerequisites to physical changes.
 
 **Purpose:** a reusable physical/digital building-design interface where the basic shell endures and room boundaries/paths change over a building's lifetime. It does not claim every possible arrangement is physically or legally feasible.
 
@@ -32,7 +33,7 @@
 | Bedroom options | 150 / 175 / 200 sq ft | 6 / 7 / 8 |
 | Studio/services example | 300 sq ft | 12 |
 
-**Geometry invariants:** on the unobstructed complete 16 × 8 grid the number of undirected interior orthogonal adjacency interfaces is `(16−1)×8 + 16×(8−1) = 232` per level. A 16 × 4 wing has `(16−1)×4 + 16×(4−1) = 108` edges; the 16 edges along the boundary between two wings bring the total to 232, assuming uninterrupted traversability. Across three unconstrained levels: `696` potential same-level edges, **not 696 valid installed doors**.
+**Geometry invariants:** on the unobstructed complete 16 × 8 grid the number of undirected interior orthogonal adjacency interfaces is `(16−1)×8 + 16×(8−1) = 232` per level. A 16 × 4 wing has `(16−1)×4 + 16×(4−1) = 108` edges; the 16 edges along the boundary between two wings bring the total to 232, assuming uninterrupted traversability. Across three unconstrained levels: `696` potential same-level edges, **not 696 mandatory doors or physically modifiable boundaries**.
 
 The earlier 81-block idea depends on what 'block' means. In the 25-sq-ft scheme 81 cells = 2,025 sq ft; this exceeds one 1,600-sq-ft wing, while 64 cells exactly fill that wing's nominal footprint. A garden, open parking bay, terrace, lift, stair, structural member, void or shaft occupies nominal grid sites but is not necessarily habitable or door-traversable. Three levels × 3,200 sq ft gross is **not** a claim of 9,600 sq ft of enclosed or permitted floor area.
 
@@ -44,11 +45,21 @@ Historic project constraints include the frontage along the 40-ft road side, oth
 
 **Central region:** reserve `CENTRAL_CORE_ZONE` around `P0` for `STAIR`, `LIFT`, `SLIDE`, landings and service passages. Its shape can vary, but enforce dimensions, shafts, fire separation, guards, accessible entrances, child protections, permitted floor openings and safe crossings. Neither stair nor lift capacity is established by naming it.
 
-**Flexible remainder:** nonstructural room partitions and compatible door assemblies permit connected room groups and a movable corridor network. User selection changes `room-use`, `room shape`, `room location`, `edge mode` and `interior style`; it may not change safety-critical fixed infrastructure without additional approval. Bathrooms and kitchens require service connections, sound control, and ventilation/drainage feasibility.
+**Flexible remainder:** non-load-bearing room partitions, engineered thick wall assemblies, open connections and compatible doors permit connected room groups and a movable corridor network. User selection changes `room-use`, `room shape`, `room location`, `edge mode`, `wall type`, `door type` and `interior style`; it may not change safety-critical fixed infrastructure without additional approval. Bathrooms and kitchens require service connections, sound control, and ventilation/drainage feasibility. Reconfiguration must be possible **after initial occupation** at eligible interfaces, without affecting the approved structure.
 
-**Door interface:** a four-sided cell has up to four orthogonal neighbours. Baseline: physically install a closable door at every **permitted** interior adjacency edge. Candidate engineering alternative: install a consistent interface capable of later receiving a door or blank panel instead; **retain the baseline for comparison and do not treat the alternative as the same requirement**. Door swing, privacy, simultaneous openings, locking, accessibility, fire doors and partition acoustics need a concrete hardware design.
+**Universal replaceable edge assembly:** a four-sided cell has up to four orthogonal neighbours. At each **eligible** internal edge, specify a reusable interface/anchoring/service-safe connection to accept these states:
+- `OPEN` — no wall, free connection between cells.
+- `THIN_PARTITION` — removable lightweight non-load-bearing panel; `door=NONE` or permitted door/portal.
+- `THICK_MODULAR_WALL` — removable engineered non-load-bearing assembly, e.g. acoustic/fire-rated layered panels as qualified; `door=NONE` or permitted door/portal.
+- `OPENING_ONLY` — partial wall/border/open doorway without a door leaf, where appropriate.
+- `FIXED_PROTECTED` — shaft, egress, structural, fire or other boundary outside occupant reconfiguration.
+**Door choice:** `NONE`, `HINGED`, `SLIDING`, `POCKET`, `FOLDING`, `RATED` or another qualified door assembly. A "thick wall" must meet load, handling, fixing, acoustic/fire and safe removal requirements; **ordinary thick masonry is not assumed easily removable**. Hinged-door swings, simultaneous openings, wall-joint air/acoustics, services, anchorage, accessibility and rated assemblies must each be validated. **Not all door types fit all 5-ft edges.**
 
-**Edge-exception register:** every blocked neighbour edge must record its reason (`COLUMN`, `SHAFT`, `FIRE_SEPARATION`, `BOUNDARY`, `STRUCTURAL`, `OTHER`), evidence, effect on connectivity and reviewer status. No silent exception.
+**Reconfiguration protocol:** disconnect or isolate any services → secure the work site → confirm partition/nonstructural classification from an as-built register → remove or install approved wall/door modules without cutting structural members → inspect edge connections, fire/acoustic/service continuity and waste handling → independently recheck affected access, egress, privacy and accessibility → record a new version/approval before occupied use. User-requested "anytime easily" is a **design goal** (quick, low-disruption, reversible exchange), not unconditional permission to demolish walls or bypass inspection. An engineering prototype must establish whether repeated change is actually easy and affordable.
+
+**Historical requirement transition:** the initial Nov 23 idea proposed doors on all permitted edges; the latest user input replaces it with **freely selectable wall-or-no-wall, door-or-no-door** at every eligible edge. Both remain in provenance for audit, but the latest rule controls this candidate.
+
+**Edge-exception register:** every blocked or non-reconfigurable neighbour edge must record its reason (`COLUMN`, `SHAFT`, `FIRE_SEPARATION`, `BOUNDARY`, `STRUCTURAL`, `EGRESS`, `FIXED_SERVICES`, `OTHER`), evidence, effect on connectivity and reviewer status. A closed, intentionally solid removable partition is **not** an exception: it is an eligible edge in a `WALL_NO_DOOR` configuration. No silent exceptions.
 
 ## D. GSL-style formal representation (candidate profile, not a GSL syntax amendment)
 
@@ -67,22 +78,39 @@ Cell {
        PARKING | STAIR | LIFT | SLIDE | SHAFT | VOID | OPEN | UNRESOLVED
 }
 Edge {
-  EdgeID, CellA, CellB, PermittedDoor, ExceptionRef?,
-  PhysicalDoorProvided?, Mode: OPEN | CLOSED | LOCKED |
-       OPEN_CONNECTION | PANEL | FIRE_SEPARATION | BLOCKED
+  EdgeID, CellA, CellB, Reconfigurable: boolean, FixedExceptionRef?,
+  AssemblyID?, WallState: OPEN | THIN_PARTITION |
+             THICK_MODULAR_WALL | OPENING_ONLY | FIXED_PROTECTED,
+  DoorKind: NONE | HINGED | SLIDING | POCKET | FOLDING |
+            RATED | OTHER_QUALIFIED,
+  PassageState: OPEN | CLOSED | LOCKED | NOT_APPLICABLE,
+  StructuralInterferenceCheckRef, FireCheckRef, ServiceCheckRef
+}
+WallAssembly {
+  AssemblyID, Version, StructuralClass=NON_LOAD_BEARING,
+  Thickness, MassPerArea, Materials[], ConnectionSystem,
+  RemovabilityProcedureRef, RequiredTools[], CrewPlan,
+  FireAndAcousticRatings?, ServiceInterfaces[], CompatibilityRefs[],
+  QualificationEvidenceRefs[], Status
 }
 StyleProfile { RoomID, FinishTheme, Fixtures, Lighting, Furnishing, Constraints }
 ConfigurationReceipt {
   SourceEpoch, BuildingModelRef, LayoutID, AssignedCells[],
-  RoomGroups[], AccessGraph, DoorEdgeStates[], StyleRefs[],
+  RoomGroups[], AccessGraph, EdgeAssemblyStates[], StyleRefs[],
   SafetyCheckRefs[], ExceptionRefs[], RejectedAlternatives[],
   ApprovalRefs[], Status
+}
+ReconfigurationReceipt {
+  FromLayoutID, ToLayoutID, ChangedEdges[], WallAssemblyVersions[],
+  BeforeAfterAccessGraphs, ServiceIsolationRefs[],
+  StructuralNonLoadBearingEvidenceRefs[], InspectionRefs[],
+  MaterialHandlingRefs[], AuthorityRefs[], ResultStatus
 }
 ```
 
 Map these into existing GSL objects/relations/context through a frozen mapping profile; do **not** declare them new canonical GSL Core Objects. An unapproved plan is a candidate claim; drawing a column or connecting a door does not establish physical or legal feasibility.
 
-A connected `ROOM(r)` assignment denotes a *grouping*, not a guarantee of habitable legal room dimensions. An admissible configuration must pass **area consistency; room/path connectivity; qualified exit access; fire/shaft/structural limits; service routing; daylight/ventilation; mobility/accessibility; acoustic/privacy; door hardware/clearance** before being labeled buildable. If any material check is unknown, emit `UNKNOWN` or `REJECTED`, not `PASS`.
+A connected `ROOM(r)` assignment denotes a *grouping*, not a guarantee of habitable legal room dimensions. An admissible configuration must pass **area consistency; room/path connectivity after each optional wall/no-door change; qualified exit access; fire/shaft/structural limits; service routing; daylight/ventilation; mobility/accessibility; acoustic/privacy; demountable wall anchoring/weight/load; door hardware/clearance** before being labeled buildable. If any material check is unknown, emit `UNKNOWN` or `REJECTED`, not `PASS`.
 
 Pseudo-process:
 
@@ -92,24 +120,27 @@ overlay 5 proposed supports plus all actually required permanent members
 reserve central lift/stair/slide zone and lawful exit/service routes
 map occupant's room sizes, preferred corners, functions and styles
 generate connected sets of 25-sq-ft cells for rooms / pathway / shared uses
-assign a door to each legally/physically permitted neighbour edge
-record every excluded connection, and why it was excluded
+assign each eligible neighbour edge OPEN, THIN_PARTITION,
+  THICK_MODULAR_WALL or OPENING_ONLY; select door kind or NONE
+verify each selected removable wall module is engineered non-load-bearing
+record fixed/protected exceptions, and why reconfiguration is forbidden
 check structural + room-area + egress + access + fire + wet-service + privacy constraints
 if unresolved: return UNKNOWN and alternatives; do not authorize construction
 if valid: compare competing layouts and style profiles, retain versioned receipt
-if occupant changes a layout: revalidate the *whole affected access network*
+if occupant changes a layout: use safe install/remove protocol and
+  revalidate the *whole affected access network* before occupied use
 ```
 
 ## E. Illustrative alternatives and falsification
 
-Compare with a conventional column/beam frame and adjustable partitions; room-scale modular systems; alternate non-square pitch; permanent corridors; a no-slide conventional lift/stair core; fully installed all-door edges versus universal **door-ready** edges; fewer/more structural support locations based on cost; and a non-grid bespoke layout. Match floor area, safety requirements, actual costs and usable room volume before claiming any benefit.
+Compare with a conventional column/beam frame and adjustable partitions; room-scale modular systems; alternate non-square pitch; permanent corridors; a no-slide conventional lift/stair core; fully installed all-door edges (historical) versus **optional modular wall/door interfaces** (current), traditional masonry versus qualified demountable thick panels; fewer/more structural support locations based on cost; and a non-grid bespoke layout. Match floor area, safety requirements, actual costs and usable room volume before claiming any benefit.
 
-A graph layout that is geometrically valid but traps a bedroom after a corridor is converted is a negative test. A 5-ft cell whose four doors conflict with usable swing space is a negative test. A five-column option failing seismic/span analysis is a negative test, even if it leaves more nominal cells unoccupied. A cheap modular system that performs better on practical change cost is evidence **against**, not for, HOME-001.
+A graph layout that is geometrically valid but traps a bedroom after a corridor is converted is a negative test. A 5-ft cell whose proposed doors conflict with usable swing space is a negative test. Closing a previously open access edge with a solid wall, leaving an occupied room with no safe exit, is a negative test. A purported removable thick wall exceeding slab or handling loads is a negative test. A five-column option failing seismic/span analysis is a negative test, even if it leaves more nominal cells unoccupied. A cheap modular system that performs better on practical change cost is evidence **against**, not for, HOME-001.
 
 ## F. Patent research directions — NOT patent claims
 
-1. A physically specified four-neighbour standardized door/partition assembly compatible with reconfiguration while respecting sound, fire and accessibility constraints.
-2. A reconfiguration protocol for assigning connected cells between rooms and corridors while preserving an independently validated access network and service constraints.
+1. A physically specified four-neighbour interchangeable interface accepting no wall, thin panel, qualified removable thick non-load-bearing wall, doorless opening, and multiple compatible door types while respecting structural anchoring, sound, fire and accessibility constraints.
+2. An approved repeated wall-removal/installation protocol for assigning connected cells between rooms and corridors while preserving an independently validated access network and service constraints.
 3. A layered structural/core/flexible-cell construction method with a tested economic or material improvement relative to strong existing systems.
 4. A versioned layout planning interface with retained safety/engineering evidence, change-impact receipts and separate occupant styling choices.
 
@@ -123,7 +154,7 @@ Prior work covers broad modular rooms and changing floor plans; **mere regular 5
 - RCC / VEI / ActionGate: construction authorization, inspections and physical changes remain under legitimate human authorities; simulation receipts do not permit building.
 - IDTD / RSDC: retain negative novelty comparisons; seek measurable physical improvement over competing techniques.
 
-**Known nominal arithmetic:** PASS by inspection. **Every-neighbour design intent:** CAPTURED. **Five-column physical sufficiency:** UNKNOWN. **Core lift/stair/slide legality:** UNKNOWN. **Actual flexible room feasibility and construction costs:** UNKNOWN. **Patent novelty:** UNKNOWN. **Application filed:** NO. **Canonical admission:** NO.
+**Known nominal arithmetic:** PASS by inspection. **Universal optional-wall/optional-door interface:** CAPTURED AS NEWEST USER REQUIREMENT; PHYSICAL FEASIBILITY UNKNOWN. **Five-column physical sufficiency:** UNKNOWN. **Core lift/stair/slide legality:** UNKNOWN. **Actual flexible room feasibility and construction costs:** UNKNOWN. **Patent novelty:** UNKNOWN. **Application filed:** NO. **Canonical admission:** NO.
 
 **Validation plan:** [HOME_001_VERIFICATION.md](HOME_001_VERIFICATION.md).
 
