@@ -169,7 +169,7 @@ compute total feasible structure costs (columns, beams, slabs, foundations,
 freeze selected engineer-approved structure and permanent elements
 reserve central lift/stair/slide zone and lawful exit/service routes
 map occupant's room sizes, preferred corners, functions and styles
-generate connected sets of 25-sq-ft cells for rooms / pathway / shared uses
+generate connected sets of 16-sq-ft (4x4 ft) cells for rooms / pathway / shared uses
 assign each eligible neighbour edge OPEN, THIN_PARTITION,
   THICK_MODULAR_WALL or OPENING_ONLY; select door kind or NONE
 verify each selected removable wall module is engineered non-load-bearing
