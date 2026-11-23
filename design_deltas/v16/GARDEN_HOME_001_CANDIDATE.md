@@ -2,16 +2,16 @@
 
 **Artifact type:** Garden v16 applied human-systems invention-design candidate (NOT a filed patent)  
 **Date:** 2026-11-23  
-**Revision:** 1.3 — universal replaceable wall-interface refinement (2026-11-23), building on public revision 1.2  
+**Revision:** 1.4 — variable-column structural-cost optimization (2026-11-23), building on revision 1.3  
 **Status:** `NONCANONICAL / NOVELTY_UNKNOWN / ENGINEERING_UNVALIDATED`  
-**Source provenance:** User's November 20–23, 2026 home-design discussions and private HOME-001 rev 1.1; the user supplied the foundational grid, the initial every-neighbour-door proposal, flexible room/path, central support, four additional supports, central lift/stairs/slide, location and design-freedom requirements; the latest 2026-11-23 user refinement requires **easily addable/removable walls of any suitable kind, including partitions or thicker walls, with a door, without a door, or with different door types**, superseding the literal every-edge-installed-door baseline. Formal graph rules, alternatives, tests and safety qualifications are assistant elaborations.
+**Source provenance:** User's November 20–23, 2026 home-design discussions and private HOME-001 rev 1.1; the user supplied the foundational grid, initial every-neighbour-door proposal, flexible room/path, earlier central-plus-four-support suggestion, central lift/stairs/slide, location and design freedom. The latest 2026-11-23 revisions require optional, easily replaceable nonstructural walls **and any feasible number, width and placement of columns that minimizes total construction cost**, superseding the mandatory-door and fixed-five-column starting concepts. Formal graph rules, alternatives, tests and safety qualifications are assistant elaborations.
 
 ## A. User-originated invariant / invention intent
 
 1. **Universal 25-sq-ft lattice:** divide the **whole home** into regular **5 ft × 5 ft** planning cells, including zones that later become rooms, corridors, open spaces or service areas. Treat 10 × 10 ft / 100 sq ft as a four-cell macro-block, not the primitive unit.
 2. **Universal neighbour-edge reconfiguration interface (latest requirement):** for any two cells sharing an eligible orthogonal 5-ft edge, the edge must support a compatible choice among **open connection/no wall; thin demountable partition; modular thick non-load-bearing wall; wall with door; wall with no door**, and permitted types of doorway/door, without modifying the permanent structural skeleton. The user's earlier *literal installed door on every available edge* is retained as a historical proposal **explicitly superseded by the latest optional-wall/optional-door requirement**, not silently erased. Boundary edges blocked by fixed structure, fire/shaft separation or legal limits remain exceptions.
 3. **Role interchangeability:** a connected set of cells can become a room, path or shared area; cells can be reassigned to make larger, smaller, irregular, or relocated rooms over time, subject to building constraints.
-4. **Five principal supports as design hypothesis:** one thick central column plus four additional main columns support a proposed three-storey building skeleton; the intention is to free non-structural interior partitions. Exactly five main supports, their sizes and locations **have not been engineered and cannot be assumed sufficient**.
+4. **Variable columns for minimum feasible total construction cost (latest requirement):** optimize column count `N`, column width/depth/cross-section, material and position together with beams, slabs, foundations and lateral-resisting system. **Any engineering-feasible column count may be evaluated**; a thick central column and four other columns are no longer mandatory, but the historical five-column concept remains as one comparison candidate. Accept only designs meeting structural and legal requirements while retaining as much safe interior reconfigurability as practical.
 5. **Central circulation/play space:** an appropriately sized flexible area **around** the centre is reserved for lift, stair and slide, with user choice of shapes and visual arrangement, subject to safe separate shafts, stairs/landings/clearances, emergency egress and accessibility. Slide is recreational, not an emergency exit.
 6. **User-selectable everywhere else:** assign bedrooms or other functions in a preferred eligible corner/location; move and combine rooms; independently choose interior style, finish and furniture. Wet rooms, daylight, legal room sizes and utility availability still constrain the choice.
 7. **Wall as replaceable component:** occupants may reconfigure eligible non-load-bearing walls **later**, not just during original construction: add, remove, relocate or swap a wall/partition/door assembly. A thick-looking wall is a specially engineered **non-load-bearing modular assembly**, not a license to remove masonry or an actual shear/load-bearing wall. Safety review, assembly handling, services and any required permits are prerequisites to physical changes.
@@ -41,9 +41,42 @@ Historic project constraints include the frontage along the 40-ft road side, oth
 
 ## C. Two overlays: permanent structure and reconfigurable space
 
-**Permanent spatial constraints:** establish at most a *proposed* `P0` (thick near-centre principal column) and `P1..P4` (four other proposed support locations). An engineer must define foundation, soil, member sizes, reinforcement, beam/slab spans and deflection, lateral-load resistance, fire design, seismic/wind actions and code compliance. The grid may be interrupted by columns, shear walls/braces, perimeter structure and shafts. If additional supports are needed, report the conflict with exactly five; do not disguise them as decorative walls.
+**Permanent spatial constraints:** the structural support scheme is an *optimization variable*, not a five-column prescription. Enumerate and cost candidate counts, widths/depths, materials, positions and support schemes (including other lateral members or structural walls where required); retain only verified feasible designs. A central column is optional; a central lift/stair/slide core remains a functional allocation. An engineer must determine the foundation/soil, load path, spans, deflection, story drift, lateral seismic/wind resistance, fire robustness and applicable approvals. Every column, shear wall, shaft and protected element that interrupts a 5 × 5 ft planning cell or eligible wall edge must be registered as permanent, not falsely treated as moveable.
 
-**Central region:** reserve `CENTRAL_CORE_ZONE` around `P0` for `STAIR`, `LIFT`, `SLIDE`, landings and service passages. Its shape can vary, but enforce dimensions, shafts, fire separation, guards, accessible entrances, child protections, permitted floor openings and safe crossings. Neither stair nor lift capacity is established by naming it.
+### HOME-OPT-001 — Structural cost-minimization contract
+
+**Primary design objective:** choose the cheapest structurally and legally feasible combination of **number of columns × sizes/cross-sections × placements**, while preserving the adaptable 5 × 5 ft space layout and functioning central stair/lift/slide zone.
+
+Column cost is **not** proportional to `N × width` alone: column width is a linear dimension, while material volumes depend on width × depth × story height; reinforcement, foundations, beam spans, slab thickness, shear system and labor also change when support positions/count change.
+
+```text
+StructuralCandidate {
+  CandidateID, N, ColumnLocations[], CrossSections[], Materials[],
+  ColumnHeightAndReinforcement[], FoundationDesign[], BeamDesign[],
+  SlabDesign, LateralResistingDesign, FixedCoreAndProtectedElements,
+  OccupiedCellsAndEdges[], StructuralEvidenceRefs[], CostEvidenceRefs[],
+  SafetyStatus, DesignStatus
+}
+
+C_total = C_columns + C_foundations + C_beams_and_transfer_members
+        + C_slabs + C_lateral_system + C_connections
+        + C_reinforcement_formwork_and_labor + C_required_protections
+        + C_structural_effects_on_services_and_fitout
+
+Optimize:  min C_total(candidate)
+Subject to: independently checked gravity/lateral loads, seismic/wind,
+  soil/settlement, span/deflection/vibration, fire, robustness,
+  code/permit, lift/stair/slide clearance, structural constructability
+  and minimum usable room/circulation/function requirements.
+```
+
+- The 5-ft grid is a **planning lattice**, not a requirement to place columns at every 5-ft intersection; columns may occupy or obstruct cells/edges, which must be recorded.
+- Compare fewer and more columns, narrower and wider cross-sections, and alternative layouts/materials. More columns may shorten spans and cheapen slabs/beams but cost more in footings and occupy floor area; fewer columns can make heavier/long-span systems costly.
+- For every candidate, report bill of quantities, actual location-specific unit prices, buildability, blocked-cell count, net usable area, fire/egress impacts, and a breakdown of total cost. Cost per gross area and cost per **usable** area are both useful comparators.
+- A proposed minimum is **minimum among evaluated feasible candidates** unless the optimizer has independently justified global coverage/bounds. If prices, soil or loads are missing, status is UNKNOWN, not 'cheapest'. No invented cost or optimal number is permitted.
+- The earlier five-column arrangement is only one historical benchmark; it cannot be hardcoded as the preferred design. A qualified structural engineer/authority must verify the selected scheme before physical construction. Users may later move nonstructural partitions; **not structural columns**.
+
+**Central region:** reserve `CENTRAL_CORE_ZONE` for `STAIR`, `LIFT`, `SLIDE`, landings and service passages, with a central column only if the optimized and engineered structure calls for one. Its shape can vary, but enforce dimensions, shafts, fire separation, guards, accessible entrances, child protections, permitted floor openings and safe crossings. Neither stair nor lift capacity is established by naming it.
 
 **Flexible remainder:** non-load-bearing room partitions, engineered thick wall assemblies, open connections and compatible doors permit connected room groups and a movable corridor network. User selection changes `room-use`, `room shape`, `room location`, `edge mode`, `wall type`, `door type` and `interior style`; it may not change safety-critical fixed infrastructure without additional approval. Bathrooms and kitchens require service connections, sound control, and ventilation/drainage feasibility. Reconfiguration must be possible **after initial occupation** at eligible interfaces, without affecting the approved structure.
 
@@ -68,9 +101,9 @@ Let `V` be the set of nominal cells and `E = {(u,v): u,v ∈ V, u and v share an
 ```text
 BuildingModel {
   SourceRef, DesignEpoch, Levels, GridPitch=5ft,
-  PlotEnvelope, StructuralOverlay(P0..P4,OtherRequiredMembers),
+  PlotEnvelope, StructuralOptimizationRef, StructuralOverlay,
   CentralCoreZone, Perimeter, ServiceRoutes, ApplicableRuleRefs,
-  GridCells[], NeighbourEdges[], Exceptions[], EvidenceRefs[], Status
+  GridCells[], NeighbourEdges[], Exceptions[], CostEvidenceRefs[], EvidenceRefs[], Status
 }
 Cell {
   CellID, Level, Row, Column, Bounds, FixedFlags[],
@@ -115,8 +148,11 @@ A connected `ROOM(r)` assignment denotes a *grouping*, not a guarantee of habita
 Pseudo-process:
 
 ```text
-freeze source evidence and approved structural envelope
-overlay 5 proposed supports plus all actually required permanent members
+freeze source evidence, floor geometry and safety requirements
+vary column count, width/depth, position, materials, spans and support system
+compute total feasible structure costs (columns, beams, slabs, foundations,
+  lateral systems, connections and labor); reject unverified candidates
+freeze selected engineer-approved structure and permanent elements
 reserve central lift/stair/slide zone and lawful exit/service routes
 map occupant's room sizes, preferred corners, functions and styles
 generate connected sets of 25-sq-ft cells for rooms / pathway / shared uses
@@ -133,15 +169,15 @@ if occupant changes a layout: use safe install/remove protocol and
 
 ## E. Illustrative alternatives and falsification
 
-Compare with a conventional column/beam frame and adjustable partitions; room-scale modular systems; alternate non-square pitch; permanent corridors; a no-slide conventional lift/stair core; fully installed all-door edges (historical) versus **optional modular wall/door interfaces** (current), traditional masonry versus qualified demountable thick panels; fewer/more structural support locations based on cost; and a non-grid bespoke layout. Match floor area, safety requirements, actual costs and usable room volume before claiming any benefit.
+Compare with a conventional column/beam frame and adjustable partitions; room-scale modular systems; alternate non-square pitch; permanent corridors; a no-slide conventional lift/stair core; fully installed all-door edges (historical) versus **optional modular wall/door interfaces** (current), traditional masonry versus qualified demountable thick panels; variable column count/size/placement/whole-frame cost, including the historical five-column comparator; and a non-grid bespoke layout. Match floor area, safety requirements, actual costs and usable room volume before claiming any benefit.
 
-A graph layout that is geometrically valid but traps a bedroom after a corridor is converted is a negative test. A 5-ft cell whose proposed doors conflict with usable swing space is a negative test. Closing a previously open access edge with a solid wall, leaving an occupied room with no safe exit, is a negative test. A purported removable thick wall exceeding slab or handling loads is a negative test. A five-column option failing seismic/span analysis is a negative test, even if it leaves more nominal cells unoccupied. A cheap modular system that performs better on practical change cost is evidence **against**, not for, HOME-001.
+A graph layout that is geometrically valid but traps a bedroom after a corridor is converted is a negative test. A 5-ft cell whose proposed doors conflict with usable swing space is a negative test. Closing a previously open access edge with a solid wall, leaving an occupied room with no safe exit, is a negative test. A purported removable thick wall exceeding slab or handling loads is a negative test. A candidate of any column count failing seismic/span/load-path analysis is a negative test, even if its columns alone cost less. Compare feasible full-frame costs, not just support counts. A cheap modular system that performs better on practical change cost is evidence **against**, not for, HOME-001.
 
 ## F. Patent research directions — NOT patent claims
 
 1. A physically specified four-neighbour interchangeable interface accepting no wall, thin panel, qualified removable thick non-load-bearing wall, doorless opening, and multiple compatible door types while respecting structural anchoring, sound, fire and accessibility constraints.
 2. An approved repeated wall-removal/installation protocol for assigning connected cells between rooms and corridors while preserving an independently validated access network and service constraints.
-3. A layered structural/core/flexible-cell construction method with a tested economic or material improvement relative to strong existing systems.
+3. A layered structural/core/flexible-cell construction method with jointly optimized support count, cross-sections and locations and a measured overall structural-cost improvement against comparable safe systems.
 4. A versioned layout planning interface with retained safety/engineering evidence, change-impact receipts and separate occupant styling choices.
 
 Prior work covers broad modular rooms and changing floor plans; **mere regular 5-ft cells, the idea of all-side access or movable partitions cannot currently be represented as proved novel**. Initial reference leads from the private draft: US20160145853A1; US20200320229A1; WO2024057004A1; US20220198080A1. These are **not** a completed prior-art search or claim chart. Patentability, inventor rights, filing/priority, patent subject-matter eligibility and freedom to operate remain **UNKNOWN**. The user expressly requested public GitHub publication on 2026-11-23; this repository record is a *public disclosure, not a patent application*, and may affect later patent rights.
@@ -154,7 +190,7 @@ Prior work covers broad modular rooms and changing floor plans; **mere regular 5
 - RCC / VEI / ActionGate: construction authorization, inspections and physical changes remain under legitimate human authorities; simulation receipts do not permit building.
 - IDTD / RSDC: retain negative novelty comparisons; seek measurable physical improvement over competing techniques.
 
-**Known nominal arithmetic:** PASS by inspection. **Universal optional-wall/optional-door interface:** CAPTURED AS NEWEST USER REQUIREMENT; PHYSICAL FEASIBILITY UNKNOWN. **Five-column physical sufficiency:** UNKNOWN. **Core lift/stair/slide legality:** UNKNOWN. **Actual flexible room feasibility and construction costs:** UNKNOWN. **Patent novelty:** UNKNOWN. **Application filed:** NO. **Canonical admission:** NO.
+**Known nominal arithmetic:** PASS by inspection. **Universal optional-wall/optional-door interface:** CAPTURED AS NEWEST USER REQUIREMENT; PHYSICAL FEASIBILITY UNKNOWN. **Variable-column structural feasibility and optimum:** UNKNOWN; five columns retained only as a historical comparator. **Core lift/stair/slide legality:** UNKNOWN. **Actual flexible room feasibility, structural costs and global optimality:** UNKNOWN. **Patent novelty:** UNKNOWN. **Application filed:** NO. **Canonical admission:** NO.
 
 **Validation plan:** [HOME_001_VERIFICATION.md](HOME_001_VERIFICATION.md).
 
