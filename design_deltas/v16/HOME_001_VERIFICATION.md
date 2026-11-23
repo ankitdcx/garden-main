@@ -9,7 +9,7 @@
 | HOME-T01 | Recompute 80×40 ft / 4×4 ft as `20×10=200` cells/full floor; an 80×20 ft wing as `20×5=100`; 3 full levels `600` sites and 3 above + 1 basement `800`; horizontal edges `19×10+20×9=370` per full level; wing `19×5+20×4=175` | PASS — nominal arithmetic only |
 | HOME-T02 | For every eligible shared edge, verify configuration choices OPEN / THIN_PARTITION / THICK_MODULAR_WALL / OPENING_ONLY; each accepts compatible door kind or NONE; enumerate protected structural/fire/shaft edges and the impact of excluded interfaces | NOT EXECUTED |
 | HOME-T03 | Show connected 4×4 cell groups nearest to requested 100/150/175/200/300 sq ft and disclose area quantization (multiples of 16), usable wall losses, access/ventilation failures; never assert exact 150 or 200 sq ft from whole cells | NOT EXECUTED |
-| HOME-T04 | Exchange a 25-sq-ft corridor cell and a room cell without losing occupied-room egress, accessibility or emergency response | NOT EXECUTED |
+| HOME-T04 | Exchange a 16-sq-ft corridor cell and a room cell without losing occupied-room egress, accessibility or emergency response | NOT EXECUTED |
 | HOME-T05 | Prototype a four-neighbour junction using open, lightweight partition, thick *removable non-load-bearing* panel, and allowed door types; verify anchor strength, weight, fire/acoustic continuity, accessibility and hardware clash | NOT EXECUTED |
 | HOME-T06 | Reconcile gross/net area, open voids, garden, terrace, service spaces and actual permitted floor-area ratio | NOT EXECUTED |
 | HOME-T07 | Validate shaft and wet-service connectivity, plumbing slopes, ventilation, electricity, fire compartment and maintenance access | NOT EXECUTED |
