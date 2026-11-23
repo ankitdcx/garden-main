@@ -20,6 +20,7 @@ Start with:
 | [v15.9.1](v15.9.1/) | GCSC, SAL and SAC source extracts and semantic patches; already text-based | [Folder index](v15.9.1/README.md) |
 | [v15.10](v15.10/) | Generative design, semantic-kernel and reconstruction ideas, theory discovery, Tree Core, retention and scientific research | [Guide](v15.10/README.md) |
 | [v15.11](v15.11/) | Focused candidate directions and review material, including RCC, REP, VEI, ERC, SHR, QSE/Rev 2, DSC, CEA, MCC and USM | [Candidate retention ledger](v15.11/CANDIDATE_RETENTION_LEDGER.md) |
+| [v16](v16/README.md) | New **partial, noncanonical** working candidate: HOME-001 modular reconfigurable home and integration gates | [v16 candidate workspace](v16/README.md) |
 
 ## Suggested reading order
 
@@ -38,5 +39,7 @@ Start with:
 - Specification, proof, implementation, empirical validation, certification and deployment are distinct.
 - Generated projections and summaries do not replace controlling source text.
 - Do not infer semantic preservation from a navigation index or a successful parse.
+
+The new [v16 working candidate](v16/README.md) is a partial applied-systems proposal, not a canonically admitted successor; the [future complete-v16 plan](FUTURE_V16_NONCANONICAL_DESIGN_NOTE.md) remains a separate evaluation path.
 
 The v15.10 scientific research corpus is indexed in [GARDEN_SCIENCE_ALL_2026-10-09.txt](v15.10/GARDEN_SCIENCE_ALL_2026-10-09.txt). The v15.11 candidate set begins with its [retention ledger](v15.11/CANDIDATE_RETENTION_LEDGER.md).

@@ -15,5 +15,6 @@
 | VEI-001 | Runtime/ActionGate/authorization owners | Verifies generated plans' real effects | v15.7 Human-Effect Closure | Candidate |
 | Rev2 / QSE | Engine.Reason, Compare, ClaimValidationPlan | Question-space exploration and meta-epistemic hardening | v15.7 cognitive qualification | Candidate |
 | Transition/Responsibility | Transition/Continuity and authority owners | Preserves obligations across Garden versions and institutional transitions | v15.7 continuity and migration | Candidate |
+| v16 HOME-001 | Applied housing-design profile over GSL/USM, Compare/Reason/Proof, Materiality, Human-Effect and runtime authorization | 25-sq-ft rooms/corridors/door graph with proposed five supports and central lift/stair/slide core; no new owner or authority | User's Nov 20–23, 2026 home design and private HOME-001 rev 1.1 | Noncanonical invention candidate; structural, safety and novelty unknown |
 
 **Ownership rule:** semantic authority stays with the named qualified source owner. An extension cannot create a new engine, right or source of authority through a link. Supersession requires an exact scoped owner decision, source hashes, impact closure and review. This map is not an atomic retention register.
