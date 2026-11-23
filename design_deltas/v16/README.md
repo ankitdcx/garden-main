@@ -15,7 +15,7 @@ Garden v16 now has a substantive, version-numbered candidate workspace. This is 
 
 ## First candidate: HOME-001
 
-A user-originated residential building design with a 5 ft × 5 ft (25 sq ft) planning lattice, a literal doorway between every structurally permitted orthogonally adjacent pair of cells, reconfigurable room/path groupings, a five-principal-column **hypothesis** (one enlarged central support plus four further supports), a central stair/lift/slide region, and user-selected room locations and interior styles. The prior 10 × 10 ft concept remains as a 2 × 2 cell macro-block.
+A user-originated residential building design with a 5 ft × 5 ft (25 sq ft) planning lattice, an exchangeable wall/door interface on each eligible orthogonal adjacency edge: open/no wall, thin partition, removable engineered thick non-load-bearing wall, with or without a compatible door, reconfigurable room/path groupings, a five-principal-column **hypothesis** (one enlarged central support plus four further supports), a central stair/lift/slide region, and user-selected room locations and interior styles. The prior 10 × 10 ft concept remains as a 2 × 2 cell macro-block. The original all-neighbour installed-door idea is retained in provenance but replaced by the user's newer optional-wall/optional-door rule. Full reversibility and low-effort later replacement are design goals subject to safety and engineering qualification.
 
 **Publication:** The user explicitly requested updating the Garden repository and making this a v16 candidate on 2026-11-23. Publication in this public GitHub repository is a public disclosure. **This is not a patent filing and does not establish priority, patentability, ownership or engineering safety.** No changes are made to the repo LICENSE.
 
