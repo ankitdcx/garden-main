@@ -1,6 +1,6 @@
 # GARDEN-BIZ-001 — Universal Modular Business Design Framework
 
-**Date:** 2026-11-24. **Revision:** 1.1 — reusable template and owner-directed portfolio sequence. **Status:** NONCANONICAL / PROPRIETARY BUSINESS-DESIGN CANDIDATE / NOVELTY AND COMMERCIAL VALIDATION UNKNOWN.
+**Date:** 2026-11-24. **Revision:** 1.2 — portfolio templates and evidence-gated franchise expansion. **Status:** NONCANONICAL / PROPRIETARY BUSINESS-DESIGN CANDIDATE / NOVELTY AND COMMERCIAL VALIDATION UNKNOWN.
 **Rights:** All legally owned or controlled rights reserved under the [v16 proprietary-business notice](README.md#proprietary-business-assets) and [Garden LICENSE](../../LICENSE). No free-use or commercial license is granted. Applicable law, prior grants, third-party rights and independently developed unprotected ideas remain unaffected. Public disclosure is not patent filing or trade-secret protection. No alteration of sale offer or deployment authorization.
 **Provenance:** User's 2026-11-24 request to generalize HOME-001 and FOOD-001 across hand cream, fashion, perfume and other consumer industries. Existing source profiles: [HOME-001](GARDEN_HOME_001_CANDIDATE.md) and [FOOD-001](GARDEN_FOOD_001_CANDIDATE.md). The framework, industry examples and proposed gates below are assistant elaborations at the user's direction, not established operating businesses or validated formulas.
 
@@ -45,6 +45,10 @@ Include actual variable costs once, exclude refundable deposits; account separat
 8. Inspect, label, deliver, record lot and work receipts; offer appropriate repairs, refills or exchanges.
 9. Track cost, customer feedback, returns, worker time, wastage and safety; approve monthly or seasonal new releases using existing inventory; retire weak variants without waste dumping or misleading scarcity.
 10. Compare pilots against standard businesses and replicate in independently verified outlets/manufacturers; update and roll back versioned designs with appropriate authority.
+
+### Franchise / independent-operator expansion option
+
+After proven operations and independent replication, compare company-owned outlets, licensed manufacture and independently financed franchise units. A qualified franchisor supplies authorized brand, product specifications, modular inventory standards, training, operating manual, quality assurance and support; franchisee funds local setup and bears agreed local responsibilities. Use full-cost outlet accounts, transparent reporting and a written settlement basis, with independently verified unit economics and protections for consumers and workers. Define fees, profit or revenue share, costs, loss treatment, capital recovery, reporting, audit, territorial scope, renewal and termination before launch. No automatic license to use Garden; prior written permission, applicable approvals and existing deployment boundaries remain controlling. FOOD-001 records the owner's initial 50% net-margin target and 25% proposed Garden share, with 50:50 actual profit sharing as a working interpretation awaiting denominator confirmation. Other industries use their own terms only when designed; no blanket franchise royalty or claim of proven returns.
 
 ## 5. Illustrative industry templates (not owner-finalized designs)
 

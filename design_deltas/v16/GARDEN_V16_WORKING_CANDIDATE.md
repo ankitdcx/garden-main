@@ -67,3 +67,7 @@ For HOME-001 specifically, map conceptual objects through existing GSL forms and
 ## 8. Portfolio development sequence and templates
 
 Owner-directed sequence: HOME-001 and FOOD-001 have detailed designs; FASHION-001 and PERFUME-001 are reserved next projects, still templates; other 36 industry rows remain templates. See the [common template and lifecycle](GARDEN_BIZ_001_TEMPLATE.md). No assistant-generated illustration is a finalized design. Preserve profile-specific requirements, rights and evidence boundaries. No launch or admission by a status label.
+
+## 9. Franchise expansion policy
+
+FOOD-001 rev 1.4 adds the owner-proposed post-proof franchise model: independent franchisee funds its own outlet; 50% target net operating margin, proposed 25% Garden share (denominator unresolved; 50:50 positive profit share is a working interpretation). Keep the employee wage model separate. BIZ-001 and its common template carry the generic evidence-gated franchise option without imposing FOOD-specific terms on other industries. Existing rights, authorization and canonical boundaries preserved; no launch, contract or commercial validation.
