@@ -20,9 +20,9 @@ Start with:
 | [v15.9.1](v15.9.1/) | GCSC, SAL and SAC source extracts and semantic patches; already text-based | [Folder index](v15.9.1/README.md) |
 | [v15.10](v15.10/) | Generative design, semantic-kernel and reconstruction ideas, theory discovery, Tree Core, retention and scientific research | [Guide](v15.10/README.md) |
 | [v15.11](v15.11/) | Focused candidate directions and review material, including RCC, REP, VEI, ERC, SHR, QSE/Rev 2, DSC, CEA, MCC and USM | [Candidate retention ledger](v15.11/CANDIDATE_RETENTION_LEDGER.md) |
-| [v16](v16/README.md) | New **partial, noncanonical** working candidate: HOME-001 modular housing and FOOD-001 modular food chain; proprietary business assets, all rights reserved; integration gates | [v16 candidate workspace](v16/README.md) |
+| [v16](v16/README.md) | New **partial, noncanonical** working candidate: BIZ-001 universal modular business framework and 40-industry register, HOME-001 modular housing and FOOD-001 modular food chain; proprietary business assets, all rights reserved; integration gates | [v16 candidate workspace](v16/README.md) |
 
-The two v16 business designs are reserved proprietary assets; see the [v16 rights notice](v16/README.md#proprietary-business-assets) and [controlling LICENSE](../LICENSE). Public access does not grant reuse rights.
+The v16 business framework and designs are reserved proprietary assets; see the [v16 rights notice](v16/README.md#proprietary-business-assets) and [controlling LICENSE](../LICENSE). Public access does not grant reuse rights.
 
 ## Suggested reading order
 

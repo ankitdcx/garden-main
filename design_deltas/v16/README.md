@@ -11,6 +11,7 @@ Garden v16 now has a substantive, version-numbered candidate workspace. This is 
 
 | Business asset | Scope | Rights status |
 |---|---|---|
+| BIZ-001 | Universal modular business framework and 40 industry applications | Proprietary; no free-use license |
 | HOME-001 | Modular housing, configurable buildings and associated documented systems | Proprietary; no free-use license |
 | FOOD-001 | Modular food outlets, configurable menus, recipe systems and chain operating processes | Proprietary; no free-use license |
 
@@ -18,12 +19,18 @@ The owner treats these as established business-design assets reserved for the ow
 
 All legally owned or controlled rights in the associated original documents, plans, drawings, specifications, recipes as documented, process manuals, software, marks and inventions are reserved. No permission is granted for third-party copying, reproduction, modification, distribution, implementation, manufacture, operation, franchising, licensing, sale or other commercial exploitation of protected assets without prior written permission from the rights holder. This reservation is subject to applicable law, lawful exceptions, third-party rights and binding pre-existing grants. Public availability is disclosure, not an open-source, free-use or commercial license. No patent grant or exclusive right over unprotectable abstract ideas, independently developed methods or ordinary business activities is asserted by this notice.
 
-The controlling [Garden LICENSE](../../LICENSE), including its existing sale offer and transfer procedure, remains unchanged. This notice neither completes a transfer nor excludes either asset from the sale offer; any future agreement must expressly identify included assets. Earlier public disclosures remain public; this notice cannot revoke rights already lawfully granted. No legal determination of ownership, infringement or patentability is made here. Copyright protects eligible expression, not ideas or methods as such; see [IP India copyright guidance](https://ipindia.gov.in/pages/copyright/learn/faqs) and [Patents Act section 3](https://www.ipindia.gov.in/acts/patent-act-1970/section-3).
+The controlling [Garden LICENSE](../../LICENSE), including its existing sale offer and transfer procedure, remains unchanged. This notice neither completes a transfer nor excludes any asset from the sale offer; any future agreement must expressly identify included assets. Earlier public disclosures remain public; this notice cannot revoke rights already lawfully granted. No legal determination of ownership, infringement or patentability is made here. Copyright protects eligible expression, not ideas or methods as such; see [IP India copyright guidance](https://ipindia.gov.in/pages/copyright/learn/faqs) and [Patents Act section 3](https://www.ipindia.gov.in/acts/patent-act-1970/section-3).
 
-Technical and canonical statuses remain separate: both are noncanonical v16 applied-system designs, with independent validation and patent assessment still pending.
+Technical and canonical statuses remain separate: the framework and detailed profiles are noncanonical v16 designs, with independent validation and patent assessment still pending.
+
+## Universal modular business framework
+
+[BIZ-001](GARDEN_BIZ_001_FRAMEWORK.md) generalizes HOME-001 and FOOD-001 into a common platform, qualified modules, curated and custom configurations, periodic product release and evidence-gated production/replication. The [40-industry register](GARDEN_BIZ_001_INDUSTRY_REGISTER.md) covers cosmetics, perfume, fashion, consumer goods and selected adjacent industries. Only HOME-001 and FOOD-001 are existing detailed profiles; the new rows are exploratory, not patents or proven businesses.
 
 ## Source map
 
+- [BIZ-001 universal framework](GARDEN_BIZ_001_FRAMEWORK.md)
+- [BIZ-001 industry register](GARDEN_BIZ_001_INDUSTRY_REGISTER.md)
 - [Garden v16 candidate scope, lineage and admission plan](GARDEN_V16_WORKING_CANDIDATE.md)
 - [HOME-001 — Modular reconfigurable house invention / applied-system candidate](GARDEN_HOME_001_CANDIDATE.md)
 - [FOOD-001 — modular food outlet and chain business process](GARDEN_FOOD_001_CANDIDATE.md)
