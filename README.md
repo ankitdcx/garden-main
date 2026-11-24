@@ -44,8 +44,10 @@ The Garden owner designates the universal modular business framework, its indust
 | Asset | Business design |
 |---|---|
 | [BIZ-001](design_deltas/v16/GARDEN_BIZ_001_FRAMEWORK.md) | Universal modular business design · [40-industry register](design_deltas/v16/GARDEN_BIZ_001_INDUSTRY_REGISTER.md) |
-| [HOME-001](design_deltas/v16/GARDEN_HOME_001_CANDIDATE.md) | Modular housing and construction systems |
-| [FOOD-001](design_deltas/v16/GARDEN_FOOD_001_CANDIDATE.md) | Modular food outlet and chain operating systems |
+| [HOME-001](design_deltas/v16/GARDEN_HOME_001_CANDIDATE.md) | Modular housing and construction systems — detailed design |
+| [FOOD-001](design_deltas/v16/GARDEN_FOOD_001_CANDIDATE.md) | Modular food outlet and chain operating systems — detailed design |
+| FASHION-001 / PERFUME-001 | Next user-directed business designs; reserved identifiers, templates only |
+| [Industry templates](design_deltas/v16/GARDEN_BIZ_001_TEMPLATE.md) | Common template plus 38 non-detailed industry seeds (including fashion and perfume) |
 
 None of these protected assets is offered for free use, open-source licensing, independent commercial implementation or franchising. Prior written authorization is required for use of the owner's protected rights, subject to applicable law and binding existing rights. See the [v16 proprietary-business rights notice](design_deltas/v16/README.md#proprietary-business-assets) and [LICENSE](LICENSE). Business-asset designation is distinct from technical validation, patent grants, company registration and canonical admission. The existing sale offer is unchanged.
 
