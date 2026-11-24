@@ -1,5 +1,7 @@
 # GARDEN-HOME-001 — Verification and admission checklist
 
+**Proprietary business asset — all rights reserved.** The Garden rights holder reserves all legally owned or controlled rights. No third-party permission is granted to copy, reproduce, adapt, distribute, implement, operate, franchise, license or commercialize the protected materials or designs without prior written authorization, except as permitted by applicable law or binding pre-existing rights. Public disclosure is not a license. See the [v16 business asset rights notice](README.md#proprietary-business-assets) and the controlling [Garden LICENSE](../../LICENSE). This designation does not assert a patent grant, legal monopoly over unprotected ideas, registered company, operating business or technical certification.
+
 **Scope:** v16 candidate `GARDEN-HOME-001`; **current state:** design arithmetic checked, physical/legal/patent evidence absent. Noncanonical, non-admitting.
 
 ## Invariants and test obligations

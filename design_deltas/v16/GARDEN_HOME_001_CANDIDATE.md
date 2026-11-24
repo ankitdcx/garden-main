@@ -1,5 +1,7 @@
 # GARDEN-HOME-001 — 4 × 4 ft Land Assembly and Reconfigurable Multi-Level Building Grid
 
+**Proprietary business asset — all rights reserved.** The Garden rights holder reserves all legally owned or controlled rights. No third-party permission is granted to copy, reproduce, adapt, distribute, implement, operate, franchise, license or commercialize the protected materials or designs without prior written authorization, except as permitted by applicable law or binding pre-existing rights. Public disclosure is not a license. See the [v16 business asset rights notice](README.md#proprietary-business-assets) and the controlling [Garden LICENSE](../../LICENSE). This designation does not assert a patent grant, legal monopoly over unprotected ideas, registered company, operating business or technical certification.
+
 **Artifact type:** Garden v16 applied human-systems invention-design candidate (NOT a filed patent)  
 **Date:** 2026-11-23  
 **Revision:** 1.5 — 4 × 4 ft site assembly, variable basement and floor counts (2026-11-23), building on revision 1.4  

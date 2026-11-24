@@ -6,6 +6,10 @@
 **Canonical base:** Garden v15.5 / GSL v45.1 (2026-09-12)  
 **Version intent:** New v16 candidate direction opened at the user's request; not an approved v16 release.
 
+## Business asset status
+
+HOME-001 and FOOD-001 are owner-designated proprietary business assets, all rights reserved to the extent legally owned or controlled. Neither is offered for free third-party reuse or commercial adoption. See the [rights notice](README.md#proprietary-business-assets) and controlling [LICENSE](../../LICENSE). This is a business/rights classification independent of noncanonical technical status, not evidence of incorporation, commercial operation, patent grant or engineering qualification. The existing sale offer is unchanged.
+
 ## 1. What changes in this candidate
 
 The first concrete new candidate is **`GARDEN-HOME-001`**, an applied architecture/housing-system concept. It models the whole assembled lawful site and building footprints as standardized **16-sq-ft 4 × 4 ft cells**, with eligible shared edges accepting an easily replaceable open/partition/thick non-load-bearing wall/optional-door interface. Users can combine contiguous land planning cells and request any number of basements and above-ground levels, subject to independently checked legal, structural, excavation and access limits. Walls may be added, removed or exchanged after construction with controlled safety checks; adjacency connections can be reassigned to produce changing rooms, corridors and functions; a **variable-count, variable-width, cost-optimized engineered structural support overlay** and configurable central circulation zone coexist with the user-selected interior. The earlier five-column arrangement is preserved only as a historical comparator.
