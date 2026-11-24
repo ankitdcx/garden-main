@@ -51,3 +51,7 @@ For HOME-001 specifically, map conceptual objects through existing GSL forms and
 **Added/updated:** `design_deltas/v16/` with HOME-001's **latest 4 × 4 ft / 16-sq-ft grid, adjoining land-planning cells and user-requested multi-level/basement assembly**, interchangeable wall/door refinement, cost-optimized variable columns, v16 working candidate context and review/testing obligations.  
 **Unchanged:** `canonical/current/`, all v15.x source texts and candidate statuses, `LICENSE`, GSL v45.1 and core Garden authority boundaries.  
 **Open items:** Full v16 synthesis, actual registered site acquisition/merger rights, upper-floor and basement feasibility, registry/owner collisions, independently qualified evaluation, verified cost/engineering optimality and patent novelty.
+
+## 6. Second applied-system candidate — FOOD-001
+
+[GARDEN-FOOD-001 / G16-BP-FOOD-001](GARDEN_FOOD_001_CANDIDATE.md) records the user's November 23–24, 2026 modular food outlet and replicable chain business-process concept. It adds a bounded reference menu, prep/assembly workflow, unit-economic model, food safety and operator/worker controls, prior-art screen and independent replication gates. Existing GSL/KR, Reason/Compare, Proof, Materiality, Human-Effect, ActionGate and assurance owners remain controlling; upstream candidates remain noncanonical. No patent filing, novelty claim, realized profitability, operational approval, commercial Garden authorization or canonical change. See FOOD-001's embedded verification obligations.
