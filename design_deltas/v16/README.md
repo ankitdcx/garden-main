@@ -27,6 +27,8 @@ Technical and canonical statuses remain separate: the framework and detailed pro
 
 [BIZ-001](GARDEN_BIZ_001_FRAMEWORK.md) generalizes HOME-001 and FOOD-001 into a common platform, qualified modules, curated and custom configurations, periodic product release and evidence-gated production/replication. The [40-industry register](GARDEN_BIZ_001_INDUSTRY_REGISTER.md) covers cosmetics, perfume, fashion, consumer goods and selected adjacent industries. Only HOME-001 and FOOD-001 are existing detailed profiles. FASHION-001 and PERFUME-001 are the next owner-directed design projects; their identifiers are reserved. The other 36 rows remain industry templates. All 38 non-detailed rows use the [standard business-design template](GARDEN_BIZ_001_TEMPLATE.md); detailed documents are developed only when the owner undertakes the design. No patent grant or proven business is implied.
 
+The reusable framework includes evidence-gated independent franchise expansion; the FOOD-001 profile records the proposed 50% net-margin target and 25% Garden share with the payment denominator still unresolved. Other industries remain templates until designed.
+
 ## Source map
 
 - [BIZ-001 universal framework](GARDEN_BIZ_001_FRAMEWORK.md)
@@ -55,4 +57,4 @@ A user-originated **4 ft × 4 ft / 16 sq ft** land-assembly and building plannin
 
 ## Second candidate: FOOD-001
 
-User-originated low-capital modular food outlet and chain business-process design; the latest Nov 24 menu, daily prep, unit economics, safety gates and replication tests are consolidated in [FOOD-001](GARDEN_FOOD_001_CANDIDATE.md). Noncanonical, no actual food safety, profitability or patent novelty certification; no deployment authorization.
+User-originated low-capital modular food outlet and chain business-process design; the latest Nov 24 menu, daily prep, unit economics, safety gates, replication tests and owner-proposed franchise model are consolidated in [FOOD-001](GARDEN_FOOD_001_CANDIDATE.md). Noncanonical, no actual food safety, profitability or patent novelty certification; no deployment authorization.

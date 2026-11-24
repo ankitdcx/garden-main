@@ -32,7 +32,7 @@ Each of the 38 non-detailed rows in the [industry register](GARDEN_BIZ_001_INDUS
 | Staffing | Roles, training, wages, paid preparation/cleanup, shift and capacity constraints |
 | Marketing and brand | Original identity, samples/display, monthly/seasonal collections if useful; rights clearance |
 | Business economics | Assumption ledger, per-product margin, full profit and cash-flow model, sensitivity, break-even |
-| Replication | Supplier and quality standards, independent pilot, scale stages, chain/franchise approach if authorized |
+| Replication / franchise | Proven own operations, independent replication, local investment and responsibilities, brand/product/process license, training, quality and supplier controls; explicit fee or profit-share denominator, eligible expenses, loss treatment, reporting/audit, support, termination, written authorization and qualified pilot; terms UNKNOWN until designed |
 | Verification | Industry-specific hard gates, measurable quality/safety, comparator, pilot, falsifiers, unresolved questions |
 | Rights / publication | Protected original assets, authorship and sources, third-party rights, applicable patent/trademark/design/copyright options, confidential information and prior-disclosure record; no grant inferred |
 | Governance | GSL conceptual mapping, Reason/Compare/Proof, Materiality/Human-Effect, Production/ActionGate, assurance, authority and revision history |

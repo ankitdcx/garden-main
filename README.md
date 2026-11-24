@@ -45,7 +45,7 @@ The Garden owner designates the universal modular business framework, its indust
 |---|---|
 | [BIZ-001](design_deltas/v16/GARDEN_BIZ_001_FRAMEWORK.md) | Universal modular business design · [40-industry register](design_deltas/v16/GARDEN_BIZ_001_INDUSTRY_REGISTER.md) |
 | [HOME-001](design_deltas/v16/GARDEN_HOME_001_CANDIDATE.md) | Modular housing and construction systems — detailed design |
-| [FOOD-001](design_deltas/v16/GARDEN_FOOD_001_CANDIDATE.md) | Modular food outlet and chain operating systems — detailed design |
+| [FOOD-001](design_deltas/v16/GARDEN_FOOD_001_CANDIDATE.md) | Modular food outlet, chain operating systems and proposed franchise expansion — detailed design |
 | FASHION-001 / PERFUME-001 | Next user-directed business designs; reserved identifiers, templates only |
 | [Industry templates](design_deltas/v16/GARDEN_BIZ_001_TEMPLATE.md) | Common template plus 38 non-detailed industry seeds (including fashion and perfume) |
 
