@@ -8,6 +8,8 @@
 **Status:** `NONCANONICAL / NOVELTY_UNKNOWN / ENGINEERING_UNVALIDATED`  
 **Source provenance:** User's November 20–23, 2026 home-design discussions and private HOME-001 rev 1.1; the user supplied the foundational grid, initial every-neighbour-door proposal, flexible room/path, earlier central-plus-four-support suggestion, central lift/stairs/slide, location and design freedom. The latest 2026-11-23 revisions require optional, easily replaceable nonstructural walls **and any feasible number, width and placement of columns that minimizes total construction cost**, superseding the mandatory-door and fixed-five-column starting concepts. The newest user direction supersedes 5 × 5 ft with **4 × 4 ft (16 sq ft) cells**, suggests acquiring adjacent land cells, and generalizes to any requested number of basements and above-ground floors. Formal graph rules, alternatives, tests and safety qualifications are assistant elaborations.
 
+**Framework lineage:** Detailed reference profile of [BIZ-001](GARDEN_BIZ_001_FRAMEWORK.md); this document retains its own engineering obligations and takes precedence for HOME-specific design.
+
 ## A. User-originated invariant / invention intent
 
 1. **Universal 16-sq-ft lattice (latest rule):** divide the assembled site and building level footprints into **4 ft × 4 ft = 16 sq ft** planning cells, including rooms, paths, open space, structure and services. The earlier 5 × 5 ft / 25 sq ft grid and 10 × 10 ft / 100 sq ft grid are superseded; a 10 × 10 ft room is not an integer multiple of 4-ft cell widths. The new 2 × 2 cell macro-block is **8 × 8 ft = 64 sq ft**.

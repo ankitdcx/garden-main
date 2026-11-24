@@ -8,7 +8,7 @@
 
 ## Business asset status
 
-HOME-001 and FOOD-001 are owner-designated proprietary business assets, all rights reserved to the extent legally owned or controlled. Neither is offered for free third-party reuse or commercial adoption. See the [rights notice](README.md#proprietary-business-assets) and controlling [LICENSE](../../LICENSE). This is a business/rights classification independent of noncanonical technical status, not evidence of incorporation, commercial operation, patent grant or engineering qualification. The existing sale offer is unchanged.
+BIZ-001, its industry application designs, HOME-001 and FOOD-001 are owner-designated proprietary business assets, all rights reserved to the extent legally owned or controlled. None is offered for free third-party reuse or commercial adoption. See the [rights notice](README.md#proprietary-business-assets) and controlling [LICENSE](../../LICENSE). This is a business/rights classification independent of noncanonical technical status, not evidence of incorporation, commercial operation, patent grant or engineering qualification. The existing sale offer is unchanged.
 
 ## 1. What changes in this candidate
 
@@ -59,3 +59,7 @@ For HOME-001 specifically, map conceptual objects through existing GSL forms and
 ## 6. Second applied-system candidate — FOOD-001
 
 [GARDEN-FOOD-001 / G16-BP-FOOD-001](GARDEN_FOOD_001_CANDIDATE.md) records the user's November 23–24, 2026 modular food outlet and replicable chain business-process concept. It adds a bounded reference menu, prep/assembly workflow, unit-economic model, food safety and operator/worker controls, prior-art screen and independent replication gates. Existing GSL/KR, Reason/Compare, Proof, Materiality, Human-Effect, ActionGate and assurance owners remain controlling; upstream candidates remain noncanonical. No patent filing, novelty claim, realized profitability, operational approval, commercial Garden authorization or canonical change. See FOOD-001's embedded verification obligations.
+
+## 7. Cross-industry business-design umbrella — BIZ-001
+
+[BIZ-001](GARDEN_BIZ_001_FRAMEWORK.md) and the [40-industry register](GARDEN_BIZ_001_INDUSTRY_REGISTER.md) generalize existing HOME-001 and FOOD-001 while preserving their separate technical contracts. Common base, qualified component/recipe registry, late differentiation, preset/custom catalog, cost gates, periodic release and matched-baseline verification. Known mass-customization and postponement prior art; no generic patentability claim. No new semantic owner, operational authority or canonical admission.
