@@ -9,6 +9,7 @@ Garden v16 now has a substantive, version-numbered candidate workspace. This is 
 
 - [Garden v16 candidate scope, lineage and admission plan](GARDEN_V16_WORKING_CANDIDATE.md)
 - [HOME-001 — Modular reconfigurable house invention / applied-system candidate](GARDEN_HOME_001_CANDIDATE.md)
+- [FOOD-001 — modular food outlet and chain business process](GARDEN_FOOD_001_CANDIDATE.md)
 - [HOME-001 validation, counterexamples and checks](HOME_001_VERIFICATION.md)
 - [Pre-existing v16 evaluation and successor-planning note](../FUTURE_V16_NONCANONICAL_DESIGN_NOTE.md)
 - [Garden canonical v15.5](../../canonical/current/README.md)
@@ -26,3 +27,7 @@ A user-originated **4 ft × 4 ft / 16 sq ft** land-assembly and building plannin
 - No new Core Object, GSL relation, Design Form, top-level engine, authority, human-rights rule or certification is introduced.
 - Unknown engineering, patent novelty, fire/accessibility and independent verification remain UNKNOWN, not PASS.
 - Follow [v16 working candidate](GARDEN_V16_WORKING_CANDIDATE.md) and [verification](HOME_001_VERIFICATION.md) before any proposed promotion.
+
+## Second candidate: FOOD-001
+
+User-originated low-capital modular food outlet and chain business-process design; the latest Nov 24 menu, daily prep, unit economics, safety gates and replication tests are consolidated in [FOOD-001](GARDEN_FOOD_001_CANDIDATE.md). Noncanonical, no actual food safety, profitability or patent novelty certification; no deployment authorization.
