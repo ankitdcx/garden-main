@@ -63,3 +63,7 @@ For HOME-001 specifically, map conceptual objects through existing GSL forms and
 ## 7. Cross-industry business-design umbrella — BIZ-001
 
 [BIZ-001](GARDEN_BIZ_001_FRAMEWORK.md) and the [40-industry register](GARDEN_BIZ_001_INDUSTRY_REGISTER.md) generalize existing HOME-001 and FOOD-001 while preserving their separate technical contracts. Common base, qualified component/recipe registry, late differentiation, preset/custom catalog, cost gates, periodic release and matched-baseline verification. Known mass-customization and postponement prior art; no generic patentability claim. No new semantic owner, operational authority or canonical admission.
+
+## 8. Portfolio development sequence and templates
+
+Owner-directed sequence: HOME-001 and FOOD-001 have detailed designs; FASHION-001 and PERFUME-001 are reserved next projects, still templates; other 36 industry rows remain templates. See the [common template and lifecycle](GARDEN_BIZ_001_TEMPLATE.md). No assistant-generated illustration is a finalized design. Preserve profile-specific requirements, rights and evidence boundaries. No launch or admission by a status label.

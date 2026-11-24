@@ -25,11 +25,12 @@ Technical and canonical statuses remain separate: the framework and detailed pro
 
 ## Universal modular business framework
 
-[BIZ-001](GARDEN_BIZ_001_FRAMEWORK.md) generalizes HOME-001 and FOOD-001 into a common platform, qualified modules, curated and custom configurations, periodic product release and evidence-gated production/replication. The [40-industry register](GARDEN_BIZ_001_INDUSTRY_REGISTER.md) covers cosmetics, perfume, fashion, consumer goods and selected adjacent industries. Only HOME-001 and FOOD-001 are existing detailed profiles; the new rows are exploratory, not patents or proven businesses.
+[BIZ-001](GARDEN_BIZ_001_FRAMEWORK.md) generalizes HOME-001 and FOOD-001 into a common platform, qualified modules, curated and custom configurations, periodic product release and evidence-gated production/replication. The [40-industry register](GARDEN_BIZ_001_INDUSTRY_REGISTER.md) covers cosmetics, perfume, fashion, consumer goods and selected adjacent industries. Only HOME-001 and FOOD-001 are existing detailed profiles. FASHION-001 and PERFUME-001 are the next owner-directed design projects; their identifiers are reserved. The other 36 rows remain industry templates. All 38 non-detailed rows use the [standard business-design template](GARDEN_BIZ_001_TEMPLATE.md); detailed documents are developed only when the owner undertakes the design. No patent grant or proven business is implied.
 
 ## Source map
 
 - [BIZ-001 universal framework](GARDEN_BIZ_001_FRAMEWORK.md)
+- [BIZ-001 standard business-design template and development sequence](GARDEN_BIZ_001_TEMPLATE.md)
 - [BIZ-001 industry register](GARDEN_BIZ_001_INDUSTRY_REGISTER.md)
 - [Garden v16 candidate scope, lineage and admission plan](GARDEN_V16_WORKING_CANDIDATE.md)
 - [HOME-001 — Modular reconfigurable house invention / applied-system candidate](GARDEN_HOME_001_CANDIDATE.md)
