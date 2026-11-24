@@ -31,11 +31,22 @@ Later version numbers, candidate folders, generated documents, reviews or passin
 | v15.8–v15.9.1 | [Versioned deltas](design_deltas/README.md) | Historical/noncanonical |
 | v15.10 | [Working design and research](design_deltas/v15.10/README.md) | Noncanonical working design |
 | v15.11 | [Candidate set](design_deltas/v15.11/CANDIDATE_RETENTION_LEDGER.md) | Noncanonical candidate work |
-| v16.0 (working candidate) | [Candidate workspace](design_deltas/v16/README.md) · [HOME-001](design_deltas/v16/GARDEN_HOME_001_CANDIDATE.md) | Noncanonical partial candidate; **not** a full successor release |
+| v16.0 (working candidate) | [Candidate workspace](design_deltas/v16/README.md) · [HOME-001](design_deltas/v16/GARDEN_HOME_001_CANDIDATE.md) · [FOOD-001](design_deltas/v16/GARDEN_FOOD_001_CANDIDATE.md) | Noncanonical partial candidate; two proprietary business assets; **not** a full successor release |
 | Future v16 full successor | [Evaluation note](design_deltas/FUTURE_V16_NONCANONICAL_DESIGN_NOTE.md) | Planning only |
 | Earlier design master | [Historical archive](history/README.md) | Historical; not current authority |
 
 For the complete lineage and status distinctions, see [VERSION_HISTORY.md](VERSION_HISTORY.md).
+
+## Garden v16 — proprietary business assets
+
+The Garden owner designates two business ventures and their documented designs as proprietary assets, with all legally available rights reserved:
+
+| Asset | Business design |
+|---|---|
+| [HOME-001](design_deltas/v16/GARDEN_HOME_001_CANDIDATE.md) | Modular housing and construction systems |
+| [FOOD-001](design_deltas/v16/GARDEN_FOOD_001_CANDIDATE.md) | Modular food outlet and chain operating systems |
+
+Neither is offered for free use, open-source licensing, independent commercial implementation or franchising. Prior written authorization is required for use of the owner's protected rights, subject to applicable law and binding existing rights. See the [v16 proprietary-business rights notice](design_deltas/v16/README.md#proprietary-business-assets) and [LICENSE](LICENSE). Business-asset designation is distinct from technical validation, patent grants, company registration and canonical admission. The existing sale offer is unchanged.
 
 ## Repository map
 

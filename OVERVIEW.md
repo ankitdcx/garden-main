@@ -33,6 +33,10 @@ This repository is primarily a **specification and research repository**, not an
 | Historical archive | Earlier source material preserved for comparison and provenance |
 | Reader guides | Explanations and navigation aids; they do not replace controlling source text |
 
+## Proprietary business assets
+
+Garden v16 includes two owner-designated proprietary business designs: [HOME-001](design_deltas/v16/GARDEN_HOME_001_CANDIDATE.md) (modular housing/construction) and [FOOD-001](design_deltas/v16/GARDEN_FOOD_001_CANDIDATE.md) (modular food chain). All legally available rights reserved; no free-use or commercial-use permission is granted by publication. See the [v16 rights notice](design_deltas/v16/README.md#proprietary-business-assets) and [LICENSE](LICENSE). Their business designation does not establish operational, legal or patent status or make v16 canonical.
+
 ## The current canonical baseline
 
 The current canonical release is **Garden v15.5 / GSL v45.1**, dated 2026-09-12. The five source texts are:

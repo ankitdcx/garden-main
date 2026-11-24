@@ -5,6 +5,23 @@
 
 Garden v16 now has a substantive, version-numbered candidate workspace. This is a new candidate **workstream**, not an admission or replacement of Garden v15.5 / GSL v45.1. No complete v16 User/System/Technical/Annexure/Theories source set has been independently reconstructed or approved.
 
+## Proprietary business assets
+
+**Owner designation — 2026-11-24: proprietary business ventures; all rights reserved.**
+
+| Business asset | Scope | Rights status |
+|---|---|---|
+| HOME-001 | Modular housing, configurable buildings and associated documented systems | Proprietary; no free-use license |
+| FOOD-001 | Modular food outlets, configurable menus, recipe systems and chain operating processes | Proprietary; no free-use license |
+
+The owner treats these as established business-design assets reserved for the owner's business interests, rather than proposals offered to third parties for adoption. This classification does not certify that a company is incorporated, a building constructed, an outlet operating or a business profitable.
+
+All legally owned or controlled rights in the associated original documents, plans, drawings, specifications, recipes as documented, process manuals, software, marks and inventions are reserved. No permission is granted for third-party copying, reproduction, modification, distribution, implementation, manufacture, operation, franchising, licensing, sale or other commercial exploitation of protected assets without prior written permission from the rights holder. This reservation is subject to applicable law, lawful exceptions, third-party rights and binding pre-existing grants. Public availability is disclosure, not an open-source, free-use or commercial license. No patent grant or exclusive right over unprotectable abstract ideas, independently developed methods or ordinary business activities is asserted by this notice.
+
+The controlling [Garden LICENSE](../../LICENSE), including its existing sale offer and transfer procedure, remains unchanged. This notice neither completes a transfer nor excludes either asset from the sale offer; any future agreement must expressly identify included assets. Earlier public disclosures remain public; this notice cannot revoke rights already lawfully granted. No legal determination of ownership, infringement or patentability is made here. Copyright protects eligible expression, not ideas or methods as such; see [IP India copyright guidance](https://ipindia.gov.in/pages/copyright/learn/faqs) and [Patents Act section 3](https://www.ipindia.gov.in/acts/patent-act-1970/section-3).
+
+Technical and canonical statuses remain separate: both are noncanonical v16 applied-system designs, with independent validation and patent assessment still pending.
+
 ## Source map
 
 - [Garden v16 candidate scope, lineage and admission plan](GARDEN_V16_WORKING_CANDIDATE.md)
