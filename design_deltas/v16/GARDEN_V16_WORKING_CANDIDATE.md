@@ -8,7 +8,7 @@
 
 ## Business asset status
 
-BIZ-001, its industry application designs, HOME-001 and FOOD-001 are owner-designated proprietary business assets, all rights reserved to the extent legally owned or controlled. None is offered for free third-party reuse or commercial adoption. See the [rights notice](README.md#proprietary-business-assets) and controlling [LICENSE](../../LICENSE). This is a business/rights classification independent of noncanonical technical status, not evidence of incorporation, commercial operation, patent grant or engineering qualification. The owner-directed [YAHAPAR sale exclusion](YAHAPAR_BRAND_AND_RIGHTS.md) is proposed in LICENSE §1A on this branch; other terms remain unchanged and canonical adoption is pending.
+BIZ-001, its industry application designs, HOME-001 and FOOD-001 are owner-designated proprietary business assets, all rights reserved to the extent legally owned or controlled. None is offered for free third-party reuse or commercial adoption. See the [rights notice](README.md#proprietary-business-assets) and controlling [LICENSE](../../LICENSE). This is a business/rights classification independent of noncanonical technical status, not evidence of incorporation, commercial operation, patent grant or engineering qualification. The owner-directed [YAHAPAR sale exclusion](YAHAPAR_BRAND_AND_RIGHTS.md) is adopted in LICENSE §1A on 2026-11-25; other terms remain unchanged.
 
 ## 1. What changes in this candidate
 
