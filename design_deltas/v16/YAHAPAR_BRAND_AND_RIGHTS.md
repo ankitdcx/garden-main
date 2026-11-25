@@ -13,10 +13,10 @@ YAHAPAR is the common brand, not limited to a single product or industry. Food a
 
 ## Sale exclusion
 
-The owner's offer to sell Garden for ₹20 crore net expressly excludes YAHAPAR and its associated owner-held brand and business rights. See the proposed [LICENSE §1A](../../LICENSE#1a-yahapar--expressly-excluded-from-the-garden-sale-offer). A purchaser of Garden does not receive YAHAPAR rights under that sale. Other terms of the sale offer remain unchanged, including the existing succession provision. Shared Garden/YAHAPAR rights require explicit allocation in the definitive transfer agreement.
+The owner's offer to sell Garden for ₹20 crore net expressly excludes YAHAPAR and its associated owner-held brand and business rights. See the approved [LICENSE §1A](../../LICENSE#1a-yahapar--expressly-excluded-from-the-garden-sale-offer). A purchaser of Garden does not receive YAHAPAR rights under that sale. Other terms of the sale offer remain unchanged, including the existing succession provision. Shared Garden/YAHAPAR rights require explicit allocation in the definitive transfer agreement.
 
 All rights are reserved to the extent legally owned or controlled, subject to applicable law, third-party rights and existing binding grants. No claim to registered marks, patent rights, or exclusive ownership of unprotectable ideas is made.
 
 ## Publication and approval
 
-Branch: `candidate/v16-yahapar`. The exact proposed license wording remains subject to owner approval before merging into the default branch, as required by the existing canonical LICENSE. The canonical Garden technical release remains unchanged.
+Origin branch: `candidate/v16-yahapar`. The owner approved publication to the default branch on 2026-11-25. The canonical Garden technical release remains unchanged.
