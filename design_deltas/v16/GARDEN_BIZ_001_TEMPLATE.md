@@ -41,7 +41,7 @@ Each of the 38 non-detailed rows in the [industry register](GARDEN_BIZ_001_INDUS
 
 TEMPLATE → USER-DIRECTED DESIGN IN PROGRESS → DETAILED DESIGN → PROTOTYPE / QUALIFICATION → INDEPENDENT COMMERCIAL VALIDATION (only when actually supported).
 
-NEXT DESIGN is a scheduling designation, not a maturity level; it remains TEMPLATE until design work actually occurs. Each advancement records evidence and explicit scope; no automatic launch, patent filing, rights transfer, commercial authorization, or canonical admission. Templates and design documents are proprietary only to the extent rights are legally owned or controlled. The existing Garden sale and authorization conditions apply. Future confidential formulas, manuals, drawings or potentially patentable technical details should be reviewed before public disclosure; public material cannot be made secret retroactively.
+NEXT DESIGN is a scheduling designation, not a maturity level; it remains TEMPLATE until design work actually occurs. Each advancement records evidence and explicit scope; no automatic launch, patent filing, rights transfer, commercial authorization, or canonical admission. Templates and design documents are proprietary only to the extent rights are legally owned or controlled. Garden sale and authorization conditions apply, subject to the approved [YAHAPAR exclusion](YAHAPAR_BRAND_AND_RIGHTS.md). Future confidential formulas, manuals, drawings or potentially patentable technical details should be reviewed before public disclosure; public material cannot be made secret retroactively.
 
 ## Next two template pointers
 
