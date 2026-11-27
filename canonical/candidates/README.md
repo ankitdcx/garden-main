@@ -22,6 +22,6 @@ Each candidate directory contains five source texts. Each edition manifest binds
 
 The similarly named [`design_deltas/v15.6`](../../design_deltas/v15.6/) and [`design_deltas/v15.7`](../../design_deltas/v15.7/) folders contain supporting incremental work. They are not duplicate five-file releases.
 
-Unlike `canonical/current/`, the v15.6 and v15.7 candidate directories do not currently contain source manifests. Any byte-identity or semantic comparison must therefore establish and record its own exact inputs. Hash equality alone would not prove semantic equivalence, completeness, correctness or admission.
+Unlike `canonical/current/`, the v15.6 and v15.7 directories use edition manifests ([v15.6](v15.6/EDITION_MANIFEST.json), [v15.7](v15.7/EDITION_MANIFEST.json)) that bind current bytes and identify their original source manifests. The older filenames embedded in candidate texts are historical references; resolve consolidated v15.6/v15.7 JSON records through the [source crosswalk](../../design_deltas/v15.6/CONSOLIDATION_AUDIT_2026-11-18.md), and removed implementation paths through the [historical implementation tree](https://github.com/ankitdcx/garden-main/tree/93dc24d34c8eb5f3f68da3f096792c0b963524e8/implementation). Any semantic comparison must record its exact inputs. Hash equality alone would not prove semantic equivalence, completeness, correctness or admission.
 
 A later version number, a selected-candidate pointer, positive review or successful local check does not make a candidate canonical.

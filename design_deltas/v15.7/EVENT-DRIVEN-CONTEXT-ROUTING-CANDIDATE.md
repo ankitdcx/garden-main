@@ -125,7 +125,7 @@ The optimization objective is not minimum spend alone. It is lower repeated comp
 
 ## 9. Repo-wide applicability
 
-The same pattern applies to post-merge verification, canonical design review, public research intake, ReviewPacket construction, blind review, cross-examination, branch/PR hygiene, implementation/integration, pipeline health, repo reconciliation, protocol/pipeline simplification, successor composition and knowledge refresh. The executable applicability profile is `governance/EVENT_DRIVEN_WORK_POLICY_v1.json`.
+The same pattern applies to post-merge verification, canonical design review, public research intake, ReviewPacket construction, blind review, cross-examination, branch/PR hygiene, implementation/integration, pipeline health, repo reconciliation, protocol/pipeline simplification, successor composition and knowledge refresh. The historical executable applicability profile is [`governance/EVENT_DRIVEN_WORK_POLICY_v1.json`](https://github.com/ankitdcx/garden-main/blob/93dc24d34c8eb5f3f68da3f096792c0b963524e8/governance/EVENT_DRIVEN_WORK_POLICY_v1.json); it is not part of the current design-only tree.
 
 Delta-first processing is only the default. Wider/full context is mandatory when dependency closure is unknown/incomplete, DesignEpoch or source root changed, HIGH/CRITICAL semantics cross owners/files, affected contracts/invariants cannot be bounded, whole-source Compare/Proof/Evidence/Tier-A closure is required, an assurance/audit obligation explicitly requires full revalidation, or contradiction/contamination cannot be resolved from the compact packet.
 

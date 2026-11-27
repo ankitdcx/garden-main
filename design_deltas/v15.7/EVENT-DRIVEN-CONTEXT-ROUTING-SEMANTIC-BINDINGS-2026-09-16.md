@@ -9,9 +9,9 @@ This amendment closes the semantic-integration gaps identified during review of 
 
 The seven concerns are valid, but their underlying semantics already exist in the v15.6 gap-closure candidate and executable reference kernel. EDCR therefore **inherits and consumes those owners** rather than defining parallel authority, bootstrap, provenance, causality, reasoning, language or catalogue systems.
 
-Source owner set: `design_deltas/v15.6/DELTASET-2026-09-13-GSL-GAP-CLOSURE.json`.
-Catalogue bindings: `design_deltas/v15.6/CATALOG_ADDITIONS.json`.
-Executable conformance: `implementation/tests/test_gap_closure_v156.py` and its referenced kernel modules.
+Source owner set: [DELTASET-2026-09-13-GSL-GAP-CLOSURE.json](../v15.6/V15.6_DESIGN_DELTA_AND_CATALOGUE_RECORDS.md#deltaset-2026-09-13-gsl-gap-closurejson).
+Catalogue bindings: [CATALOG_ADDITIONS.json](../v15.6/V15.6_DESIGN_DELTA_AND_CATALOGUE_RECORDS.md#catalog_additionsjson).
+Historical executable conformance reference: [`implementation/tests/test_gap_closure_v156.py`](https://github.com/ankitdcx/garden-main/blob/93dc24d34c8eb5f3f68da3f096792c0b963524e8/implementation/tests/test_gap_closure_v156.py) and its referenced [kernel modules](https://github.com/ankitdcx/garden-main/tree/93dc24d34c8eb5f3f68da3f096792c0b963524e8/implementation/garden_kernel). These were removed from the current design-only tree; the historical code is not evidence of current execution or conformance.
 
 These remain successor-candidate semantics until separately admitted/promoted. Binding them here does not turn v15.6/v15.7 candidates into canonical v15.5 semantics.
 
@@ -23,7 +23,7 @@ EDCR does not create `AuthorityCompositionProof/v1`. The existing owner is:
 
 - `AuthorityProvenanceChain` — `SCHEMA-29C6CEDD2A`;
 - `ActionEligibleClaimBinding` — `SCHEMA-8A6F0B6EA4`;
-- executable owner: `implementation/garden_kernel/authority_path.py`.
+- historical executable owner: [`implementation/garden_kernel/authority_path.py`](https://github.com/ankitdcx/garden-main/blob/93dc24d34c8eb5f3f68da3f096792c0b963524e8/implementation/garden_kernel/authority_path.py).
 
 A shared-state/context handoff never resets authority. If an EDCR-derived artifact later becomes action-eligible, effective authority is the intersection of the acting authority and every controlling authority in the artifact's provenance chain. Insufficient/empty effective authority rejects the action.
 

@@ -36,7 +36,7 @@ The mechanism is not limited to OpenRouter review. It applies wherever repeated 
 - knowledge refresh: revalidate the affected dependency subtree rather than rebuilding fresh unaffected knowledge;
 - ChatGPT frontier review: only after a reason-coded materiality receipt.
 
-The executable applicability profile is `governance/EVENT_DRIVEN_WORK_POLICY_v1.json`.
+The historical executable applicability profile is [`governance/EVENT_DRIVEN_WORK_POLICY_v1.json`](https://github.com/ankitdcx/garden-main/blob/93dc24d34c8eb5f3f68da3f096792c0b963524e8/governance/EVENT_DRIVEN_WORK_POLICY_v1.json); it is not part of the current design-only tree.
 
 ## Whole-context fallback is mandatory when needed
 

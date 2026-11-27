@@ -23,7 +23,7 @@ Implementation, proof, empirical, external and deployment certification remain s
 
 ### B1. v15.6 GSL gap-closure delta set
 
-Canonical candidate file: `design_deltas/v15.6/DELTASET-2026-09-13-GSL-GAP-CLOSURE.json`.
+Historical candidate source (not a canonical release): [DELTASET-2026-09-13-GSL-GAP-CLOSURE.json](v15.6/V15.6_DESIGN_DELTA_AND_CATALOGUE_RECORDS.md#deltaset-2026-09-13-gsl-gap-closurejson). The [original JSON](https://github.com/ankitdcx/garden-main/blob/82c348c2e59ca08c9605d253dd173bca391ab43e/design_deltas/v15.6/DELTASET-2026-09-13-GSL-GAP-CLOSURE.json) is retained in history.
 
 Preserve all nine candidate deltas without duplicating owners:
 
