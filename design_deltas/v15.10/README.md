@@ -23,7 +23,7 @@ The original 70 toy passes do not validate physical-domain hypotheses. No candid
 
 8. [PHY-XFER-003 technical specification](G15_10_PHY_XFER_003_CONSOLIDATED_CANDIDATE.md) — optional transfer adapter/operator details, not a validated discovery.
 
-The **two primary consolidated documents** above contain the research synthesis, all 132 indexed candidate entries, and the negative/null evidence ledger and lessons. Superseded preliminary reports, duplicated grids, synthetic screening notes and standalone Python scripts were removed from this *design-only* folder; their earlier versions remain recoverable through Git history. The 70 surrogate passes were withdrawn as domain evidence. No validated scientific novelty or Garden advantage is claimed.
+The **two primary consolidated documents** above contain the research synthesis, all 132 indexed candidate entries, and the negative/null evidence ledger and lessons. Superseded preliminary reports, duplicated grids, synthetic screening notes and standalone Python scripts were removed from this *design-only* folder; their earlier versions remain recoverable through Git history. The nine historical science scripts referenced in `GARDEN_SCIENCE_ALL_2026-10-09.txt` are present in the [verified pre-removal science directory](https://github.com/ankitdcx/garden-main/tree/9c9b462a76a8736fccc6d06089e76cecd014cfc4/design_deltas/v15.10). They are historical research artifacts, not current executables or proof of physical novelty. The 70 surrogate passes were withdrawn as domain evidence. No validated scientific novelty or Garden advantage is claimed.
 
 ## Supporting artifacts
 

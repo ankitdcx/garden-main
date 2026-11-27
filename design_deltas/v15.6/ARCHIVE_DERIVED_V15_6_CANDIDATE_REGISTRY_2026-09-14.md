@@ -8,7 +8,7 @@ This registry is an index, not a new semantic owner. The authoritative candidate
 
 ## A. Historical-chat recovery candidates
 
-Source: `design_deltas/v15.6/DELTASET-2026-09-14-HISTORICAL-CHAT-RECOVERY.json`
+Source: [DELTASET-2026-09-14-HISTORICAL-CHAT-RECOVERY.json](V15.6_DESIGN_DELTA_AND_CATALOGUE_RECORDS.md#deltaset-2026-09-14-historical-chat-recoveryjson) ([original JSON](https://github.com/ankitdcx/garden-main/blob/82c348c2e59ca08c9605d253dd173bca391ab43e/design_deltas/v15.6/DELTASET-2026-09-14-HISTORICAL-CHAT-RECOVERY.json))
 
 All eight recovered items are registered for v15.6 consideration:
 
@@ -25,7 +25,7 @@ Some are semantic candidates; some are definition-recovery, implementation-profi
 
 ## B. Continuous epistemic assimilation candidate set
 
-Source: `design_deltas/v15.6/DELTASET-2026-09-14-KR-CEA.json`
+Source: [DELTASET-2026-09-14-KR-CEA.json](V15.6_DESIGN_DELTA_AND_CATALOGUE_RECORDS.md#deltaset-2026-09-14-kr-ceajson) ([original JSON](https://github.com/ankitdcx/garden-main/blob/82c348c2e59ca08c9605d253dd173bca391ab43e/design_deltas/v15.6/DELTASET-2026-09-14-KR-CEA.json))
 
 9. **KR-CEA v1.0 — GSL-KR Continuous Epistemic Assimilation & Consolidation**
 
@@ -35,7 +35,7 @@ It does **not** allow knowledge, repetition, confidence or model consensus to cr
 
 ## C. Literal multi-agent archive residual candidates
 
-Source: `design_deltas/v15.6/DELTASET-2026-09-14-MULTI-AGENT-ARCHIVE-RECOVERY.json`
+Source: [DELTASET-2026-09-14-MULTI-AGENT-ARCHIVE-RECOVERY.json](V15.6_DESIGN_DELTA_AND_CATALOGUE_RECORDS.md#deltaset-2026-09-14-multi-agent-archive-recoveryjson) ([original JSON](https://github.com/ankitdcx/garden-main/blob/82c348c2e59ca08c9605d253dd173bca391ab43e/design_deltas/v15.6/DELTASET-2026-09-14-MULTI-AGENT-ARCHIVE-RECOVERY.json))
 
 All five surviving residual mechanisms are registered for v15.6 consideration:
 

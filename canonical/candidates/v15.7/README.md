@@ -26,3 +26,7 @@ These amendments preserve existing topology and authority boundaries. They expli
 No claim of complete GSL semantic closure, independent qualification or implementation follows from these candidate amendments.
 
 The [edition manifest](EDITION_MANIFEST.json) binds the five current files and identifies the historical edition. Its role-sorted root uses the canonical source-manifest encoding. Only the Theories file differs from the pinned historical set.
+
+## Historical reference resolution
+
+The original [source manifest](https://github.com/ankitdcx/garden-main/blob/bd796e61681f8bf52128e4321497d5447888666d/canonical/candidates/v15.7/SOURCE_MANIFEST.json) remains available at the pinned historical commit; the current [edition manifest](EDITION_MANIFEST.json) identifies this edition. The embedded historical JSON paths resolve through the [consolidation crosswalk](../../../design_deltas/v15.6/CONSOLIDATION_AUDIT_2026-11-18.md), which links the exact pre-consolidation files and current readable sections. Historical implementation references refer to the [pre-removal implementation tree](https://github.com/ankitdcx/garden-main/tree/93dc24d34c8eb5f3f68da3f096792c0b963524e8/implementation) and [governance tree](https://github.com/ankitdcx/garden-main/tree/93dc24d34c8eb5f3f68da3f096792c0b963524e8/governance), not current executable dependencies. Original candidate bytes are preserved; none of these links confers implementation, proof or admission status.
