@@ -1,62 +1,30 @@
-# Garden v16 — noncanonical candidate workspace
+# Garden v16 — HOME-001 working candidate
 
 **Opened:** 2026-11-23  
-**Status:** `V16 WORKING CANDIDATE — NOT CANONICAL; NOT A COMPLETE SUCCESSOR RELEASE`
+**Scope revised:** 2026-11-27  
+**Status:** NONCANONICAL PARTIAL CANDIDATE — NOT A COMPLETE SUCCESSOR RELEASE.
 
-Garden v16 now has a substantive, version-numbered candidate workspace. This is a new candidate **workstream**, not an admission or replacement of Garden v15.5 / GSL v45.1. No complete v16 User/System/Technical/Annexure/Theories source set has been independently reconstructed or approved.
+Garden v16 retains the applied modular housing-system design, HOME-001. It does not replace Garden v15.5 / GSL v45.1 or admit any earlier candidates.
+
+## Documents
+
+- [HOME-001 — Modular reconfigurable housing design](GARDEN_HOME_001_CANDIDATE.md): controlling candidate specification.
+- [HOME-001 verification](HOME_001_VERIFICATION.md): 31 test obligations, counterexamples, evidence and admission requirements.
+
+The design uses 4 × 4 ft (16 sq ft) planning cells, optional interchangeable walls and doors on eligible edges, adaptable rooms and paths, adjoining site-planning cells, variable requested floors and basements, a central stair/lift/slide zone, and variable-count/size/placement structural supports optimized for feasible total construction cost. Earlier 5 × 5 ft cells, mandatory installed doors and fixed-five-column proposals are historical comparators only. Legal site rights, structural engineering, physical interfaces, safety and cost superiority remain unverified. See the detailed design for constraints and exceptions.
 
 ## Proprietary business assets
 
-**Owner designation — 2026-11-24: proprietary business ventures; all rights reserved.**
+HOME-001 remains an owner-designated proprietary asset, all legally owned or controlled rights reserved. No free-use or commercial license is granted by publication. Prior written authorization is required for copying, adaptation, implementation or commercialization of protected assets, subject to applicable law, lawful exceptions, third-party rights and binding existing grants. Public disclosure does not establish a patent grant, engineering safety or exclusive ownership of unprotectable ideas. See the controlling [LICENSE](../../LICENSE).
 
-| Business asset | Scope | Rights status |
-|---|---|---|
-| BIZ-001 | Universal modular business framework and 40 industry applications | Proprietary; no free-use license |
-| HOME-001 | Modular housing, configurable buildings and associated documented systems | Proprietary; no free-use license |
-| FOOD-001 | Modular food outlets, configurable menus, recipe systems and chain operating processes | Proprietary; no free-use license |
+The owner's November 27 scope reduction removes the other commercial records from the active workspace; their earlier versions remain in [Git history](https://github.com/ankitdcx/garden-main/tree/8f4ce0231665c5a330cedd71e34538ef434d4b84/design_deltas/v16). No rights are waived, no transfer is completed, and previous public disclosure is not reversed. The YAHAPAR exclusion in [LICENSE §1A](../../LICENSE#1a-yahapar--expressly-excluded-from-the-garden-sale-offer) remains unchanged.
 
-The owner treats these as established business-design assets reserved for the owner's business interests, rather than proposals offered to third parties for adoption. This classification does not certify that a company is incorporated, a building constructed, an outlet operating or a business profitable.
+## Integration and admission boundaries
 
-All legally owned or controlled rights in the associated original documents, plans, drawings, specifications, recipes as documented, process manuals, software, marks and inventions are reserved. No permission is granted for third-party copying, reproduction, modification, distribution, implementation, manufacture, operation, franchising, licensing, sale or other commercial exploitation of protected assets without prior written permission from the rights holder. This reservation is subject to applicable law, lawful exceptions, third-party rights and binding pre-existing grants. Public availability is disclosure, not an open-source, free-use or commercial license. No patent grant or exclusive right over unprotectable abstract ideas, independently developed methods or ordinary business activities is asserted by this notice.
+- Map the housing design using existing GSL/KR and qualified candidate owners; add no Core Object, relation, form, engine or authority.
+- Compare and reason about feasible layouts, support structures, costs and alternatives; verify arithmetic separately from structural or legal feasibility. Include Materiality, Human-Effect, REP, MCC, RCC, VEI, ActionGate, RSDC, IDTD, GCSC, Transition and assurance obligations where applicable. These are conceptual owner mappings, not executed modules or admitted upstream candidates.
+- Freeze source versions and evidence; compare against the [cross-version ownership map](../CROSS_VERSION_OWNERSHIP_MAP.md); preserve source obligations, exceptions, negative cases and unknowns. Verify legal land and building rights, structural and excavation feasibility, fire, egress, services, accessibility, demountable interfaces, full costs and independent novelty assessment.
+- Require independent engineering, legal, safety, prior-art and matched-baseline evaluation before any claim of construction readiness or technical advantage. Publication is not a patent application or approval to construct.
+- Canonical remains [v15.5 / GSL v45.1](../../canonical/current/README.md). The [future complete v16 evaluation note](../FUTURE_V16_NONCANONICAL_DESIGN_NOTE.md) is separate planning. Any canonical successor requires a complete independently reviewed five-file source set, no-loss reconciliation and explicit authorized admission.
 
-The owner directs that [YAHAPAR (यहाँ पर)](YAHAPAR_BRAND_AND_RIGHTS.md), including its food and fashion chains and associated rights, be excluded from the ₹20 crore Garden sale offer. The exclusion is recorded in [LICENSE §1A](../../LICENSE#1a-yahapar--expressly-excluded-from-the-garden-sale-offer) and approved by the owner on 2026-11-25. Other sale terms remain unchanged; no transfer is completed. Earlier public disclosures remain public; this notice cannot revoke rights already lawfully granted. No legal determination of ownership, infringement or patentability is made here. Copyright protects eligible expression, not ideas or methods as such; see [IP India copyright guidance](https://ipindia.gov.in/pages/copyright/learn/faqs) and [Patents Act section 3](https://www.ipindia.gov.in/acts/patent-act-1970/section-3).
-
-Technical and canonical statuses remain separate: the framework and detailed profiles are noncanonical v16 designs, with independent validation and patent assessment still pending.
-
-## Universal modular business framework
-
-[BIZ-001](GARDEN_BIZ_001_FRAMEWORK.md) generalizes HOME-001 and FOOD-001 into a common platform, qualified modules, curated and custom configurations, periodic product release and evidence-gated production/replication. The [40-industry register](GARDEN_BIZ_001_INDUSTRY_REGISTER.md) covers cosmetics, perfume, fashion, consumer goods and selected adjacent industries. Only HOME-001 and FOOD-001 are existing detailed profiles. FASHION-001 and PERFUME-001 are the next owner-directed design projects; their identifiers are reserved. The other 36 rows remain industry templates. All 38 non-detailed rows use the [standard business-design template](GARDEN_BIZ_001_TEMPLATE.md); detailed documents are developed only when the owner undertakes the design. No patent grant or proven business is implied.
-
-The reusable framework includes evidence-gated independent franchise expansion; the FOOD-001 profile records the proposed 50% net-margin target and 25% Garden share with the payment denominator still unresolved. Other industries remain templates until designed.
-
-## Source map
-
-- [YAHAPAR — umbrella brand and sale exclusion](YAHAPAR_BRAND_AND_RIGHTS.md)
-
-- [BIZ-001 universal framework](GARDEN_BIZ_001_FRAMEWORK.md)
-- [BIZ-001 standard business-design template and development sequence](GARDEN_BIZ_001_TEMPLATE.md)
-- [BIZ-001 industry register](GARDEN_BIZ_001_INDUSTRY_REGISTER.md)
-- [Garden v16 candidate scope, lineage and admission plan](GARDEN_V16_WORKING_CANDIDATE.md)
-- [HOME-001 — Modular reconfigurable house invention / applied-system candidate](GARDEN_HOME_001_CANDIDATE.md)
-- [FOOD-001 — modular food outlet and chain business process](GARDEN_FOOD_001_CANDIDATE.md)
-- [HOME-001 validation, counterexamples and checks](HOME_001_VERIFICATION.md)
-- [Pre-existing v16 evaluation and successor-planning note](../FUTURE_V16_NONCANONICAL_DESIGN_NOTE.md)
-- [Garden canonical v15.5](../../canonical/current/README.md)
-
-## First candidate: HOME-001
-
-A user-originated **4 ft × 4 ft / 16 sq ft** land-assembly and building planning grid (superseding the former 5 × 5 ft pitch), an exchangeable wall/door interface on each eligible orthogonal adjacency edge: open/no wall, thin partition, removable engineered thick non-load-bearing wall, with or without a compatible door, reconfigurable room/path groupings, a **variable-count/variable-size structural support optimizer** (the old central-plus-four-column scheme remains a historical comparator), a central stair/lift/slide region, and user-selected room locations and interior styles. The prior 10 × 10 ft concept is historical and **not** a 2 × 2 block under the 4-ft pitch; 2 × 2 now means **8 × 8 ft = 64 sq ft**. The original all-neighbour installed-door idea is retained in provenance but replaced by the user's newer optional-wall/optional-door rule. Full reversibility and low-effort later replacement are design goals subject to safety and engineering qualification. Adjoining planning cells can be assembled into variable contiguous site footprints subject to actual land-title/development rights. The user may request any count of above-ground floors and basements, with the allowable count decided separately by engineering, law, site and excavation feasibility. Column count, widths, locations, beams, slabs and foundations are jointly evaluated for **minimum feasible total structural cost**, not fixed at five or selected by raw column material alone.
-
-**Publication:** The user explicitly requested updating the Garden repository and making this a v16 candidate on 2026-11-23. Publication in this public GitHub repository is a public disclosure. **This is not a patent filing and does not establish priority, patentability, ownership or engineering safety.** The HOME-001 publication itself made no changes to the LICENSE; the separate YAHAPAR amendment was approved on 2026-11-25.
-
-## Version and authority discipline
-
-- Canonical remains **v15.5 / GSL v45.1**; v15.6–v15.11 work retains its own original status.
-- HOME-001 is one **applied human-systems design candidate**. Its presence does not claim that all v15.x candidates were incorporated, that v16 has all five full source texts, or that its design is constructible.
-- No new Core Object, GSL relation, Design Form, top-level engine, authority, human-rights rule or certification is introduced.
-- Unknown engineering, patent novelty, fire/accessibility and independent verification remain UNKNOWN, not PASS.
-- Follow [v16 working candidate](GARDEN_V16_WORKING_CANDIDATE.md) and [verification](HOME_001_VERIFICATION.md) before any proposed promotion.
-
-## Second candidate: FOOD-001
-
-User-originated low-capital modular food outlet and chain business-process design; the latest Nov 24 menu, daily prep, unit economics, safety gates, replication tests and owner-proposed franchise model are consolidated in [FOOD-001](GARDEN_FOOD_001_CANDIDATE.md). Noncanonical, no actual food safety, profitability or patent novelty certification; no deployment authorization.
+No canonical release, prior-version semantics, LICENSE, deployment restrictions or economic terms are changed by the workspace cleanup.

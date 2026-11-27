@@ -23,11 +23,11 @@ This page is a navigation summary. It does not itself admit, supersede or certif
 | v15.9.1 | [design_deltas/v15.9.1/](design_deltas/v15.9.1/) | GCSC, SAL and SAC source extracts and semantic patches | Historical/noncanonical |
 | v15.10 | [design_deltas/v15.10/](design_deltas/v15.10/README.md) | Generative design, abstraction, technical candidates and scientific research | Noncanonical working design/research |
 | v15.11 | [design_deltas/v15.11/](design_deltas/v15.11/CANDIDATE_RETENTION_LEDGER.md) | Focused additive candidate directions and review material | Noncanonical candidate set |
-| v16.0 working candidate | [candidate workspace](design_deltas/v16/README.md) | **Partial** applied human-systems candidate, including BIZ-001 universal modular business framework and 40-industry register, HOME-001 and FOOD-001, proprietary business assets (all rights reserved); not a full five-file successor | Noncanonical candidate |
+| v16.0 working candidate | [candidate workspace](design_deltas/v16/README.md) | **Partial** applied housing-system candidate HOME-001 and verification plan; not a full five-file successor | Noncanonical candidate |
 | Future complete v16 | [evaluation note](design_deltas/FUTURE_V16_NONCANONICAL_DESIGN_NOTE.md) | Possible complete successor evaluation/reconstruction plan | Planning only |
 | 2026-08-21 historical design master | [history/](history/README.md) | Preserved text-extracted historical snapshot | Historical; not current authority |
 
-**2026-11-24 rights designation:** BIZ-001, HOME-001 and FOOD-001 are reserved proprietary business assets, not freely licensed designs. See [v16 rights notice](design_deltas/v16/README.md#proprietary-business-assets). The repository LICENSE and canonical baseline are unchanged.
+**2026-11-24 rights designation:** HOME-001, FOOD-001 and BIZ-001 were designated proprietary assets, not freely licensed designs. **2026-11-27 scope reduction:** the active v16 workspace retains HOME-001 only. The former business records are recoverable from [the preceding repository edition](https://github.com/ankitdcx/garden-main/tree/8f4ce0231665c5a330cedd71e34538ef434d4b84/design_deltas/v16). This removal does not waive rights, undo public disclosure or change the LICENSE (including the 2026-11-25 YAHAPAR exclusion).
 
 ## How to interpret the lineage
 

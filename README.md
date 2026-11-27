@@ -31,25 +31,15 @@ Later version numbers, candidate folders, generated documents, reviews or passin
 | v15.8–v15.9.1 | [Versioned deltas](design_deltas/README.md) | Historical/noncanonical |
 | v15.10 | [Working design and research](design_deltas/v15.10/README.md) | Noncanonical working design |
 | v15.11 | [Candidate set](design_deltas/v15.11/CANDIDATE_RETENTION_LEDGER.md) | Noncanonical candidate work |
-| v16.0 (working candidate) | [Candidate workspace](design_deltas/v16/README.md) · [HOME-001](design_deltas/v16/GARDEN_HOME_001_CANDIDATE.md) · [FOOD-001](design_deltas/v16/GARDEN_FOOD_001_CANDIDATE.md) | Noncanonical partial candidate; proprietary modular business framework and two detailed assets; **not** a full successor release |
+| v16.0 (working candidate) | [Candidate workspace](design_deltas/v16/README.md) · [HOME-001](design_deltas/v16/GARDEN_HOME_001_CANDIDATE.md) | Noncanonical partial housing-system candidate; **not** a full successor release |
 | Future v16 full successor | [Evaluation note](design_deltas/FUTURE_V16_NONCANONICAL_DESIGN_NOTE.md) | Planning only |
 | Earlier design master | [Historical archive](history/README.md) | Historical; not current authority |
 
 For the complete lineage and status distinctions, see [VERSION_HISTORY.md](VERSION_HISTORY.md).
 
-## Garden v16 — proprietary business assets
+## Garden v16 — modular housing
 
-The Garden owner designates the universal modular business framework, its industry applications and the two detailed business designs as proprietary assets, with all legally available rights reserved:
-
-| Asset | Business design |
-|---|---|
-| [BIZ-001](design_deltas/v16/GARDEN_BIZ_001_FRAMEWORK.md) | Universal modular business design · [40-industry register](design_deltas/v16/GARDEN_BIZ_001_INDUSTRY_REGISTER.md) |
-| [HOME-001](design_deltas/v16/GARDEN_HOME_001_CANDIDATE.md) | Modular housing and construction systems — detailed design |
-| [FOOD-001](design_deltas/v16/GARDEN_FOOD_001_CANDIDATE.md) | Modular food outlet, chain operating systems and proposed franchise expansion — detailed design |
-| FASHION-001 / PERFUME-001 | Next user-directed business designs; reserved identifiers, templates only |
-| [Industry templates](design_deltas/v16/GARDEN_BIZ_001_TEMPLATE.md) | Common template plus 38 non-detailed industry seeds (including fashion and perfume) |
-
-None of these protected assets is offered for free use, open-source licensing, independent commercial implementation or franchising. Prior written authorization is required for use of the owner's protected rights, subject to applicable law and binding existing rights. See the [v16 proprietary-business rights notice](design_deltas/v16/README.md#proprietary-business-assets) and [LICENSE](LICENSE). Business-asset designation is distinct from technical validation, patent grants, company registration and canonical admission. Owner-approved amendment: [YAHAPAR (यहाँ पर)](design_deltas/v16/YAHAPAR_BRAND_AND_RIGHTS.md), including its food and fashion chains, is expressly excluded from the proposed Garden sale. The exclusion is in [LICENSE §1A](LICENSE#1a-yahapar--expressly-excluded-from-the-garden-sale-offer); approved by the owner on 2026-11-25.
+[HOME-001](design_deltas/v16/GARDEN_HOME_001_CANDIDATE.md) is a proprietary modular, reconfigurable housing design; all legally owned or controlled rights are reserved. See the [rights notice](design_deltas/v16/README.md#proprietary-business-assets), [verification plan](design_deltas/v16/HOME_001_VERIFICATION.md) and [LICENSE](LICENSE). It remains an unvalidated, noncanonical candidate. Other commercial designs were removed from the active v16 workspace on 2026-11-27, without changing their rights or the owner-approved YAHAPAR exclusion in [LICENSE §1A](LICENSE#1a-yahapar--expressly-excluded-from-the-garden-sale-offer).
 
 ## Repository map
 

@@ -17,12 +17,7 @@
 | Transition/Responsibility | Transition/Continuity and authority owners | Preserves obligations across Garden versions and institutional transitions | v15.7 continuity and migration | Candidate |
 | v16 HOME-001 | Applied housing-design profile over GSL/USM, Compare/Reason/Proof, Materiality, Human-Effect and runtime authorization | 16-sq-ft 4×4 ft land-planning and room/corridor cells, optional wall-door interfaces, **variable adjoining site parcels and requested basement/upper floors**, variable-count/width cost-optimized structural supports and lift/stair/slide core; no new owner or authority | User's Nov 20–23, 2026 home design and private HOME-001 rev 1.1 | Proprietary business asset, all rights reserved; noncanonical invention candidate; structural, safety and novelty unknown |
 
-| v16 FOOD-001 | Applied food-outlet/chain profile over GSL/KR/USM, Compare/Reason/Proof, Materiality/Human-Effect, ActionGate and assurance | Standardized modular menu, prep, audited costs, food safety and evidence-gated replication; no new owner or authority | User's Nov 23–24, 2026 Shop discussions | Proprietary business asset, all rights reserved; noncanonical business-process candidate; operational, market, and novelty verification pending |
-
-| v16 BIZ-001 | Applied business-design profile over GSL/KR, Reason/Compare/Proof, Materiality/Human-Effect, Production/ActionGate and assurance | Shared platform, qualified modules, late differentiation, configurable catalog, economic gates, periodic release and independent replication; no new authority | HOME-001, FOOD-001 and user's Nov 24 generalization request | Proprietary umbrella and 40 industry rows (two detailed, 38 templates); noncanonical, novelty/market validation unknown |
-
 **Business/IP rights are separate from semantic ownership:** see [v16 rights notice](v16/README.md#proprietary-business-assets) and [LICENSE](../LICENSE); no reuse license or technical admission follows from a navigation link.
 
 **Ownership rule:** semantic authority stays with the named qualified source owner. An extension cannot create a new engine, right or source of authority through a link. Supersession requires an exact scoped owner decision, source hashes, impact closure and review. This map is not an atomic retention register.
 
-Portfolio development: [BIZ-001 template policy](v16/GARDEN_BIZ_001_TEMPLATE.md) reserves FASHION-001 and PERFUME-001 as the next user-directed design projects. No new semantic owner or legal authority follows.
