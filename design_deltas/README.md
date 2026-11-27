@@ -20,9 +20,9 @@ Start with:
 | [v15.9.1](v15.9.1/) | GCSC, SAL and SAC source extracts and semantic patches; already text-based | [Folder index](v15.9.1/README.md) |
 | [v15.10](v15.10/) | Generative design, semantic-kernel and reconstruction ideas, theory discovery, Tree Core, retention and scientific research | [Guide](v15.10/README.md) |
 | [v15.11](v15.11/) | Focused candidate directions and review material, including RCC, REP, VEI, ERC, SHR, QSE/Rev 2, DSC, CEA, MCC and USM | [Candidate retention ledger](v15.11/CANDIDATE_RETENTION_LEDGER.md) |
-| [v16](v16/README.md) | **Partial, noncanonical** working candidate: HOME-001 modular housing and its verification plan; all legally owned or controlled rights reserved | [v16 candidate workspace](v16/README.md) |
+| [v16](v16/README.md) | **Partial, noncanonical** working candidate: HOME-001 modular housing, its verification plan and BIZ-001 universal framework; all legally owned or controlled rights reserved | [v16 candidate workspace](v16/README.md) |
 
-HOME-001 is a reserved proprietary asset; see the [v16 rights notice](v16/README.md#proprietary-business-assets) and [controlling LICENSE](../LICENSE). Public access does not grant reuse rights.
+HOME-001 and BIZ-001 are reserved proprietary assets; see the [v16 rights notice](v16/README.md#proprietary-business-assets) and [controlling LICENSE](../LICENSE). Public access does not grant reuse rights.
 
 ## Suggested reading order
 

@@ -8,7 +8,7 @@
 **Status:** `NONCANONICAL / NOVELTY_UNKNOWN / ENGINEERING_UNVALIDATED`  
 **Source provenance:** User's November 20–23, 2026 home-design discussions and private HOME-001 rev 1.1; the user supplied the foundational grid, initial every-neighbour-door proposal, flexible room/path, earlier central-plus-four-support suggestion, central lift/stairs/slide, location and design freedom. The latest 2026-11-23 revisions require optional, easily replaceable nonstructural walls **and any feasible number, width and placement of columns that minimizes total construction cost**, superseding the mandatory-door and fixed-five-column starting concepts. The newest user direction supersedes 5 × 5 ft with **4 × 4 ft (16 sq ft) cells**, suggests acquiring adjacent land cells, and generalizes to any requested number of basements and above-ground floors. Formal graph rules, alternatives, tests and safety qualifications are assistant elaborations.
 
-**Framework lineage:** HOME-001 is retained as a standalone applied housing-system candidate. Its own engineering obligations remain controlling within the candidate; the former cross-industry framework is outside the active v16 scope.
+**Framework lineage:** HOME-001 is retained as a standalone applied housing-system candidate alongside the [BIZ-001 universal framework](GARDEN_BIZ_001_FRAMEWORK.md). Its own engineering obligations remain controlling within the candidate.
 
 ## A. User-originated invariant / invention intent
 

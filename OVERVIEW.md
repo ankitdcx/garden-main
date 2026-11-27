@@ -33,9 +33,9 @@ This repository is primarily a **specification and research repository**, not an
 | Historical archive | Earlier source material preserved for comparison and provenance |
 | Reader guides | Explanations and navigation aids; they do not replace controlling source text |
 
-## Applied housing-design candidate
+## Universal design and applied housing candidate
 
-Garden v16 retains [HOME-001](design_deltas/v16/GARDEN_HOME_001_CANDIDATE.md), a proprietary modular and reconfigurable housing design. All legally owned or controlled rights are reserved; see the [v16 rights notice](design_deltas/v16/README.md#proprietary-business-assets) and [LICENSE](LICENSE). This does not establish engineering feasibility, legal approval, patent status or canonical admission.
+Garden v16 retains the [BIZ-001 universal modular business design and optimization framework](design_deltas/v16/GARDEN_BIZ_001_FRAMEWORK.md) and [HOME-001](design_deltas/v16/GARDEN_HOME_001_CANDIDATE.md), a proprietary modular and reconfigurable housing design. All legally owned or controlled rights are reserved; see the [v16 rights notice](design_deltas/v16/README.md#proprietary-business-assets) and [LICENSE](LICENSE). This does not establish engineering feasibility, legal approval, patent status or canonical admission.
 
 ## The current canonical baseline
 
