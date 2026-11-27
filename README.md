@@ -31,15 +31,15 @@ Later version numbers, candidate folders, generated documents, reviews or passin
 | v15.8–v15.9.1 | [Versioned deltas](design_deltas/README.md) | Historical/noncanonical |
 | v15.10 | [Working design and research](design_deltas/v15.10/README.md) | Noncanonical working design |
 | v15.11 | [Candidate set](design_deltas/v15.11/CANDIDATE_RETENTION_LEDGER.md) | Noncanonical candidate work |
-| v16.0 (working candidate) | [Candidate workspace](design_deltas/v16/README.md) · [HOME-001](design_deltas/v16/GARDEN_HOME_001_CANDIDATE.md) | Noncanonical partial housing-system candidate; **not** a full successor release |
+| v16.0 (working candidate) | [Candidate workspace](design_deltas/v16/README.md) · [HOME-001](design_deltas/v16/GARDEN_HOME_001_CANDIDATE.md) · [BIZ-001](design_deltas/v16/GARDEN_BIZ_001_FRAMEWORK.md) | Noncanonical partial housing and universal optimization framework candidate; **not** a full successor release |
 | Future v16 full successor | [Evaluation note](design_deltas/FUTURE_V16_NONCANONICAL_DESIGN_NOTE.md) | Planning only |
 | Earlier design master | [Historical archive](history/README.md) | Historical; not current authority |
 
 For the complete lineage and status distinctions, see [VERSION_HISTORY.md](VERSION_HISTORY.md).
 
-## Garden v16 — modular housing
+## Garden v16 — universal design and modular housing
 
-[HOME-001](design_deltas/v16/GARDEN_HOME_001_CANDIDATE.md) is a proprietary modular, reconfigurable housing design; all legally owned or controlled rights are reserved. See the [rights notice](design_deltas/v16/README.md#proprietary-business-assets), [verification plan](design_deltas/v16/HOME_001_VERIFICATION.md) and [LICENSE](LICENSE). It remains an unvalidated, noncanonical candidate. Other commercial designs were removed from the active v16 workspace on 2026-11-27, without changing their rights or the owner-approved YAHAPAR exclusion in [LICENSE §1A](LICENSE#1a-yahapar--expressly-excluded-from-the-garden-sale-offer).
+[HOME-001](design_deltas/v16/GARDEN_HOME_001_CANDIDATE.md) is a proprietary modular, reconfigurable housing design. [BIZ-001](design_deltas/v16/GARDEN_BIZ_001_FRAMEWORK.md) retains the universal modular design and optimization framework as a research candidate, not a proven optimizer. All legally owned or controlled rights are reserved. See the [rights notice](design_deltas/v16/README.md#proprietary-business-assets), [verification plan](design_deltas/v16/HOME_001_VERIFICATION.md) and [LICENSE](LICENSE). It remains an unvalidated, noncanonical candidate. Other commercial designs were removed from the active v16 workspace on 2026-11-27, without changing their rights or the owner-approved YAHAPAR exclusion in [LICENSE §1A](LICENSE#1a-yahapar--expressly-excluded-from-the-garden-sale-offer).
 
 ## Repository map
 
