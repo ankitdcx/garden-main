@@ -33,9 +33,9 @@ This repository is primarily a **specification and research repository**, not an
 | Historical archive | Earlier source material preserved for comparison and provenance |
 | Reader guides | Explanations and navigation aids; they do not replace controlling source text |
 
-## Proprietary business assets
+## Applied housing-design candidate
 
-Garden v16 includes an owner-designated [universal modular business framework](design_deltas/v16/GARDEN_BIZ_001_FRAMEWORK.md), [40-industry application register](design_deltas/v16/GARDEN_BIZ_001_INDUSTRY_REGISTER.md) and two detailed proprietary business designs: [HOME-001](design_deltas/v16/GARDEN_HOME_001_CANDIDATE.md) (modular housing/construction) and [FOOD-001](design_deltas/v16/GARDEN_FOOD_001_CANDIDATE.md) (modular food chain). All legally available rights reserved; no free-use or commercial-use permission is granted by publication. See the [v16 rights notice](design_deltas/v16/README.md#proprietary-business-assets) and [LICENSE](LICENSE). Their business designation does not establish operational, legal or patent status or make v16 canonical.
+Garden v16 retains [HOME-001](design_deltas/v16/GARDEN_HOME_001_CANDIDATE.md), a proprietary modular and reconfigurable housing design. All legally owned or controlled rights are reserved; see the [v16 rights notice](design_deltas/v16/README.md#proprietary-business-assets) and [LICENSE](LICENSE). This does not establish engineering feasibility, legal approval, patent status or canonical admission.
 
 ## The current canonical baseline
 
